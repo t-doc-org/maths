@@ -3,5 +3,5 @@
 
 # Mathématiques
 
-Bienvenue sur le site du cours de mathématieuqs du collège Sainte-Croix, donné
+Bienvenue sur le site du cours de mathématiques du collège Sainte-Croix, donné
 par Caroline Blank.
