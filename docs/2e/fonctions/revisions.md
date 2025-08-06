@@ -89,7 +89,6 @@ $p = -1 + \dfrac{6}{5} = -\dfrac{5}{5} + \dfrac{6}{5} = \dfrac{1}{5}$
 
 L'expression algébrique de cette fonction est donc $f(x)=\dfrac{3}{5}x+\dfrac{1}{5}$
 
-
 ## Fonctions constantes
 
 ```{admonition} Définition
@@ -151,7 +150,8 @@ $x_1 = \dfrac{12}{8} = \dfrac{3}{2}$ et $x_2 = \dfrac{-8}{8} = -1$
 
 $f$ a donc deux zéros et coupe l'axe des $x$ en $-1$ et en $\dfrac{3}{2}$.
 
-La forme factorisée est $f(x) = 4(x - (-1))(x - \dfrac{3}{2}) = 4(x + 1)(x - \dfrac{3}{2})$
+La forme factorisée est
+$f(x) = 4(x - (-1))(x - \dfrac{3}{2}) = 4(x + 1)(x - \dfrac{3}{2})$
 
 ```{admonition} Théorème
 :class: note

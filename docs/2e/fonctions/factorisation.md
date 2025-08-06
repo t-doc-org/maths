@@ -26,7 +26,7 @@ produit de ce facteur avec le reste du polynôme.
 
 ### Exemple {num1}`exemple`
 
-{.lower-alpha-paren .hsep-1}
+{.lower-alpha-paren}
 1.  $x^2y+xy^5-x^2y^2=xy(x+y^4 - xy)$
 2.  $4a^2b+12az^6-8a=4a(ab+3z^6-2)$
 3.  $5nm^2-25n^2m^3+20m^5=5m^2(n-5n^2m+4m^3)$
@@ -37,7 +37,7 @@ cela devient faisable en les regroupant judicieusement.
 
 ### Exemple {num1}`exemple`
 
-{.lower-alpha-paren .hsep-1}
+{.lower-alpha-paren}
 1.  $3(x+1)+y(x+1)=(3+y)(x+1)$
 2.  $a(x-y)-2(x-y)=(a-2)(x-y)$
 3.  $x^2y-xy^2+x-y=(x^2y-xy^2)+(x-y)=xy(x-y)+1(x-y) = (xy+1)(x-y)$
@@ -65,7 +65,7 @@ $a^2+b^2$ n'est pas factorisable.
 
 ### Exemple {num1}`exemple`
 
-{.lower-alpha-paren .hsep-1}
+{.lower-alpha-paren}
 1.  $a^2+8a+16=(a+4)^2$ en utilisant $a^2+2ab+b^2 = (a+b)^2$
 2.  $4x^2-12x+9=(2x-3)^2$ en utilisant $a^2+-ab+b^2 = (a-b)^2$
 3.  $25x^2-y^2=(5x+y)(5x-y)$ en utilisant $a^2-b^2 = (a+b)(a-b)$
@@ -91,7 +91,7 @@ Si $c < 0$, alors les deux nombres cherchés sont de signes différents.
 
 ### Exemple {num1}`exemple`
 
-{.lower-alpha-paren .hsep-1}
+{.lower-alpha-paren}
 1.  $x^2+7x+12=$\
     Il faut trouver les deux nombres tel que:
     $$ \dots \:\: \cdot \:\, \dots &= 12\\
@@ -121,7 +121,7 @@ Si $a \neq 1$, la méthode est la suivante:
 
 ### Exemple {num1}`exemple`
 
-{.lower-alpha-paren .hsep-1}
+{.lower-alpha-paren}
 1.  $2x^2 + 13x - 7=$
     Il faut trouver les deux nombres tel que:
     $$ \dots \:\: \cdot \:\, \dots &= -14\\
@@ -155,7 +155,7 @@ Si $a \neq 1$, la méthode est la suivante:
 
 ### Exemple {num1}`exemple`
 
-{.lower-alpha-paren .hsep-1}
+{.lower-alpha-paren}
 1.  Posons $x^2 = y$.\
     $x^4-5x^2-6=y^2-5y-6=(y+1)(y-6)=(x^2+1)(x^2-6)$
 2.  Posons $x^3 = y$.\
@@ -168,7 +168,7 @@ méthodes à la suite.
 
 ### Exemple {num1}`exemple`
 
-{.lower-alpha-paren .hsep-1}
+{.lower-alpha-paren}
 1.  $$
     5x^2 - 10x + 5 &= 5(x^2-2x+1) \qquad && \textrm{mise en évidence}\\
     &= 5(x-2)^2 && \textrm{identités algébriques}
