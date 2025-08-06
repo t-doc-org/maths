@@ -1,0 +1,171 @@
+% Copyright 2025 Caroline Blank <caro@c-space.org>
+% SPDX-License-Identifier: CC-BY-NC-SA-4.0
+
+# Fonctions - Révisions
+
+```{metadata}
+subject: "Mathématiques 2e année"
+```
+
+## Fonctions, domaine de définition, ordonnées à l'origine et zéros
+
+```{admonition} Définition
+:class: note
+Une **fonction** $f: A \longrightarrow B$ d'un ensemble $A$ dans un ensemble $B$
+est une relation qui associe à chaque élément de $A$ au plus un élément de $B$.
+
+$$
+f: A & \to B\\
+   x & \mapsto f(x)
+$$
+
+$A$ est appelé l'**ensemble de départ** de $f$ et $B$ est appelé l'**ensemble
+d'arrivée** de $f$.
+```
+
+```{admonition} Définition
+:class: note
+Soit la **fonction** $f: x  \mapsto f(x)$, si $x$ est un élément de $A$, alors
+$f(x)$, si elle existe, est unique et est appelée l'**image** de $x$ par $f$.
+$f(x)$ est un élément de $B$.
+
+Inversement $x$ est appelé la **préimage** ou l'**antécédent** de $f(x)$. Une
+valeur $f(x)$ peut avoir plusieurs préimages.
+
+L'**ensemble image** par $f$, noté $Im_f$, est l'ensemble des images de
+l'ensemble de départ.
+```
+
+```{admonition} Définition
+:class: note
+Le **domaine de définition** d'une fonction réelle $f$, noté $D_f$, est
+l'ensemble des éléments de l'ensemble de départ qui ont une image par $f$,
+c'est-à-dire l'ensemble des $x$ pour lesquels $f(x)$ est définie.
+```
+
+```{admonition} Définition
+:class: note
+L'**ordonnée à l'origine** d'une fonction $f$ est la valeur de $f$ lorsque
+$x=0$, c'est-à-dire $f(0)$.\
+Graphiquement l'ordonnée à l'origine représente l'intersection du graphe de $f$
+avec l'axe des $y$.
+```
+
+```{admonition} Définition
+:class: note
+Les **zéros** d'une fonction $f$ sont les valeurs $x$ pour lesquelles la
+fonction s'annule, c'est-à-dire pour lesquelles nous avons $f(x)=0$.\
+Graphiquement les zéros représentent les intersections du graphe de $f$ avec
+l'axe des $x$.
+```
+
+## Fonctions du premier degré
+
+```{admonition} Définition
+:class: note
+Une **fonction du premier degré** est une fonction dont l'expression
+algébrique peut s'écrire sous la forme d'un polynôme du premier degré
+$f(x) = mx +p$ où les coefficients $m \neq 0$ et $p$ sont des nombres réels.\
+La représentation graphique d'une fonction du premier degré est une droite.
+
+Une **fonction linéaire** est une fonction dont $p = 0$. Elle est de la forme
+$f(x) = mx$ et sa représentation graphique est une droite qui passe par
+l'origine. Alors qu'une fonction dont $p \neq 0$ est une **fonction affine.**
+```
+
+## Exemple {num1}`exemple`
+
+Déterminons l'expressions algébrique de la droite $f = mx + p$ qui passe par les points
+$P(-2;-1)$ et $Q(3;2)$.
+
+Pente:
+$$m=\dfrac{y_q-y_p}{x_q-x_p}=\dfrac{2 - (-1)}{3 - (-2)} = \dfrac{3}{5}$$\
+$f(x)= \dfrac{3}{5}x + p$.\
+Ordonnée à l'origine:
+$$P \in f \quad\quad \Rightarrow \quad\quad\quad\quad f(-2) & = -1\\
+\dfrac{3}{5} \cdot (-2) + p & = -1\\
+-\dfrac{6}{5} + p & = -1$$
+$p = -1 + \dfrac{6}{5} = -\dfrac{5}{5} + \dfrac{6}{5} = \dfrac{1}{5}$
+
+L'expression algébrique de cette fonction est donc $f(x)=\dfrac{3}{5}x+\dfrac{1}{5}$
+
+
+## Fonctions constantes
+
+```{admonition} Définition
+:class: note
+Une **fonction constante** est une fonction dont l'expression algébrique peut
+s'écrire sous la forme $f(x) = p$, ce qui signifie que l'image de $x$ par $f$
+est toujours la même. Sa représentation graphique est une droite parallèle à
+l'axe des $x$.
+```
+
+## Fonctions quadratiques
+
+```{admonition} Définition
+:class: note
+Une **fonction quadratique** ou **fonction du deuxième degré** est une fonction
+dont l'expression algébrique peut s'écrire sous la forme d'un polynôme du
+deuxième degré $f(x) = ax^2 + bx + c$ où les coefficients $a \neq 0$, $b$ et $c$
+sont des nombres réels.\
+La représentation graphique d'une fonction quadratique est une parabole.
+
+Si $a > 0$, la parabole est **convexe** (elle "sourit").\
+Si $a < 0$, la parabole est **concave** (elle "fait la tête").
+```
+
+## Exemple {num1}`exemple`
+
+$f(x) = 4x^2 - 2x - 6$ est une fonction quadratique dont les coefficients sont
+$a = 4$, $b = -2$ et $c = -6$.
+Commme $a > 0$, la représentation graphique de $f$ sera une parabole convexe.
+
+```{admonition} Théorème
+:class: note
+Soit la fonction $f(x) = ax^2 + bx + c$ une fonction du deuxième degré.\
+Le **discriminant** est $\Delta = b^2-4ac$
+
+Si $\Delta > 0$:
+: $f$ possède deux zéros: $x_{1,2}=\dfrac{-b \pm \sqrt{\Delta}}{2a}$\
+Forme factorisée: $f(x) = a(x - x_1)(x - x_2).$\
+$f$ coupe l'axe des $x$ en $x_1$ et $x_2$.
+
+Si $\Delta = 0$:
+: $f$ possède un seul zéro: $x_1=-\dfrac{b}{2a}$\
+Forme factorisée: $f(x) = a(x - x_1)^2$.\
+f coupe l'axe des $x$ en $x_1$.
+
+Si $\Delta < 0$:
+: $f$ ne possède pas de zéro. Forme factorisée n'existe pas. f ne
+coupe pas l'axe des $x$.
+```
+
+## Exemple {num1}`exemple`
+
+Reprenons $f(x) = 4x^2 - 2x - 6$ et calculons les zéros, c'est-à-dire résolvons
+$4x^2 - 2x - 6 = 0$.
+
+$\Delta = (-2)^2 - 4 \cdot 4 \cdot (-6) = 4 + 96 = 100$\
+$x_{1,2}=\dfrac{2 \pm \sqrt{100}}{2 \cdot 4} = \dfrac{2 \pm 10}{8}$\
+$x_1 = \dfrac{12}{8} = \dfrac{3}{2}$ et $x_2 = \dfrac{-8}{8} = -1$
+
+$f$ a donc deux zéros et coupe l'axe des $x$ en $-1$ et en $\dfrac{3}{2}$.
+
+La forme factorisée est $f(x) = 4(x - (-1))(x - \dfrac{3}{2}) = 4(x + 1)(x - \dfrac{3}{2})$
+
+```{admonition} Théorème
+:class: note
+Le point **maximum** ou **minimum** d'une parabole est appelé **sommet**.
+Les coordonnées du sommet $S(x_s;y_s)$ d'une fonction quadratique $f$ sont
+$$x_s=-\frac{b}{2a} \text{ et } y_s=f(x_s)=- \dfrac{\Delta}{4a}$$
+```
+
+## Exemple {num1}`exemple`
+
+Comme la parabole est convexe, le sommet est un minimum. Calculons ses
+coordonnées.
+
+$x_s = -\dfrac{b}{2a} = -\dfrac{-2}{2 \cdot 4} = \dfrac{2}{8} = \dfrac{1}{4}$\
+$y_s = f(x_s) = f(\frac{1}{4}) = 4 \cdot (\frac{1}{4})^2 - 2 \cdot \dfrac{1}{4} - 6 = 4 \cdot \dfrac{1}{16} - \dfrac{2}{4} - 6 = \dfrac{4}{16} - \dfrac{2}{4} - 6$
+$ = \dfrac{1}{4} - \dfrac{2}{4} - \dfrac{24}{4} = -\dfrac{25}{4}$\
+Sommet: $S(\frac{1}{4}, -\frac{25}{4})$
