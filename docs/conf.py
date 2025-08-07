@@ -17,3 +17,5 @@ html_theme_options = {
 }
 
 tdoc_solutions = 'dynamic'
+
+mathjax3_config['chtml'] = {'displayAlign': 'left'}
