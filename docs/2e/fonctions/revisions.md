@@ -9,19 +9,20 @@ subject: "Mathématiques 2e année"
 
 ## Fonctions, domaine de définition, ordonnées à l'origine et zéros
 
-```{admonition} Définition
+````{admonition} Définition
 :class: note
 Une **fonction** $f: A \longrightarrow B$ d'un ensemble $A$ dans un ensemble $B$
 est une relation qui associe à chaque élément de $A$ au plus un élément de $B$.
 
-$$
+```{math}
+:class: align-center
 f: A & \to B\\
    x & \mapsto f(x)
-$$
+```
 
 $A$ est appelé l'**ensemble de départ** de $f$ et $B$ est appelé l'**ensemble
 d'arrivée** de $f$.
-```
+````
 
 ```{admonition} Définition
 :class: note
@@ -42,6 +43,42 @@ Le **domaine de définition** d'une fonction réelle $f$, noté $D_f$, est
 l'ensemble des éléments de l'ensemble de départ qui ont une image par $f$,
 c'est-à-dire l'ensemble des $x$ pour lesquels $f(x)$ est définie.
 ```
+
+Le domaine de définition des fonctions du premier et du deuxième degré est
+$\mathbb{R}$, car leur expression algébrique est un polynôme et pour toutes
+valeurs de $x$, $f(x)$ existe.
+
+Le domaine de définition d'une fonction rationnelle de la forme
+$f(x) = \dfrac{A(x)}{B(x)}$ est $\mathbb{R}$ auquel il faut enlever les valeurs
+de $x$ qui posent problème, c'est-à-dire les valeurs pour lesquels $B(x)$
+s'annule.
+
+### Exemple {num1}`exemple`
+
+Calculez le domaine de définition de $f(x) = \dfrac{2x + 1}{4x + 3}$.
+
+Le dénominateur **ne doit pas être nul**:
+
+$4x + 3 \neq 0 \Longleftrightarrow 4x \neq -3 \Longleftrightarrow x = -\frac{3}{4}$
+
+$\Longrightarrow D_f = \mathbb{R} \setminus \{-\frac{3}{4}\}$
+
+### Exemple {num1}`exemple`
+
+Calculez le domaine de définition de $f(x) = \sqrt{7-x}$.
+
+La partie sous la racine **doit être positive ou nulle**:
+
+$$
+7 - x &\geq 0 \qquad &&| -7\\
+   -x &\geq -7 \qquad &&| \cdot (-1)\\
+    x &\leq 7
+$$
+
+:Remarque: Lorsqu'on multiplie ou divise une inéquation par un nombre négatif,
+le signe d'inégalité change de sens.
+
+$\Longrightarrow D_f = ] -\infty; 7 ]$
 
 ```{admonition} Définition
 :class: note
@@ -75,19 +112,23 @@ l'origine. Alors qu'une fonction dont $p \neq 0$ est une **fonction affine.**
 
 ## Exemple {num1}`exemple`
 
-Déterminons l'expressions algébrique de la droite $f = mx + p$ qui passe par les points
-$P(-2;-1)$ et $Q(3;2)$.
+Déterminez l'expressions algébrique de la droite $f = mx + p$ qui passe par les
+points $P(-2;-1)$ et $Q(3;2)$.
 
 Pente:
-$$m=\dfrac{y_q-y_p}{x_q-x_p}=\dfrac{2 - (-1)}{3 - (-2)} = \dfrac{3}{5}$$\
-$f(x)= \dfrac{3}{5}x + p$.\
+
+$m=\dfrac{y_p-y_q}{x_p-x_q}=\dfrac{-1 - 2}{-2 - 3} = \dfrac{-3}{-5} =\dfrac{3}{5}$\
+$f(x)= \dfrac{3}{5}x + p$.
+
 Ordonnée à l'origine:
+
 $$P \in f \quad\quad \Rightarrow \quad\quad\quad\quad f(-2) & = -1\\
 \dfrac{3}{5} \cdot (-2) + p & = -1\\
 -\dfrac{6}{5} + p & = -1$$
 $p = -1 + \dfrac{6}{5} = -\dfrac{5}{5} + \dfrac{6}{5} = \dfrac{1}{5}$
 
-L'expression algébrique de cette fonction est donc $f(x)=\dfrac{3}{5}x+\dfrac{1}{5}$
+L'expression algébrique de cette fonction est donc
+$f(x)=\dfrac{3}{5}x+\dfrac{1}{5}$
 
 ## Fonctions constantes
 
@@ -124,24 +165,24 @@ Commme $a > 0$, la représentation graphique de $f$ sera une parabole convexe.
 Soit la fonction $f(x) = ax^2 + bx + c$ une fonction du deuxième degré.\
 Le **discriminant** est $\Delta = b^2-4ac$
 
-Si $\Delta > 0$:
+Si $\Delta > 0$
 : $f$ possède deux zéros: $x_{1,2}=\dfrac{-b \pm \sqrt{\Delta}}{2a}$\
 Forme factorisée: $f(x) = a(x - x_1)(x - x_2).$\
 $f$ coupe l'axe des $x$ en $x_1$ et $x_2$.
 
-Si $\Delta = 0$:
+Si $\Delta = 0$
 : $f$ possède un seul zéro: $x_1=-\dfrac{b}{2a}$\
 Forme factorisée: $f(x) = a(x - x_1)^2$.\
 f coupe l'axe des $x$ en $x_1$.
 
-Si $\Delta < 0$:
+Si $\Delta < 0$
 : $f$ ne possède pas de zéro. Forme factorisée n'existe pas. f ne
 coupe pas l'axe des $x$.
 ```
 
 ## Exemple {num1}`exemple`
 
-Reprenons $f(x) = 4x^2 - 2x - 6$ et calculons les zéros, c'est-à-dire résolvons
+Reprenez $f(x) = 4x^2 - 2x - 6$ et calculez les zéros, c'est-à-dire résolvez
 $4x^2 - 2x - 6 = 0$.
 
 $\Delta = (-2)^2 - 4 \cdot 4 \cdot (-6) = 4 + 96 = 100$\
@@ -153,19 +194,28 @@ $f$ a donc deux zéros et coupe l'axe des $x$ en $-1$ et en $\dfrac{3}{2}$.
 La forme factorisée est
 $f(x) = 4(x - (-1))(x - \dfrac{3}{2}) = 4(x + 1)(x - \dfrac{3}{2})$
 
-```{admonition} Théorème
+````{admonition} Théorème
 :class: note
 Le point **maximum** ou **minimum** d'une parabole est appelé **sommet**.
 Les coordonnées du sommet $S(x_s;y_s)$ d'une fonction quadratique $f$ sont
-$$x_s=-\frac{b}{2a} \text{ et } y_s=f(x_s)=- \dfrac{\Delta}{4a}$$
+
+```{math}
+:class: align-center
+x_s=-\frac{b}{2a} \text{ et } y_s=f(x_s)=- \dfrac{\Delta}{4a}
 ```
+````
 
 ## Exemple {num1}`exemple`
 
-Comme la parabole est convexe, le sommet est un minimum. Calculons ses
+Comme la parabole est convexe, le sommet est un minimum. Calculez ses
 coordonnées.
 
-$x_s = -\dfrac{b}{2a} = -\dfrac{-2}{2 \cdot 4} = \dfrac{2}{8} = \dfrac{1}{4}$\
-$y_s = f(x_s) = f(\frac{1}{4}) = 4 \cdot (\frac{1}{4})^2 - 2 \cdot \dfrac{1}{4} - 6 = 4 \cdot \dfrac{1}{16} - \dfrac{2}{4} - 6 = \dfrac{4}{16} - \dfrac{2}{4} - 6$
-$ = \dfrac{1}{4} - \dfrac{2}{4} - \dfrac{24}{4} = -\dfrac{25}{4}$\
-Sommet: $S(\frac{1}{4}, -\frac{25}{4})$
+$x_s = -\dfrac{b}{2a} = -\dfrac{-2}{2 \cdot 4} = \dfrac{2}{8} = \dfrac{1}{4}$
+$$
+y_s = f(x_s) = f(\frac{1}{4}) &= 4 \cdot (\frac{1}{4})^2 - 2 \cdot \dfrac{1}{4} - 6\\
+                              &= 4 \cdot \dfrac{1}{16} - \dfrac{2}{4} - 6 \\
+                              &= \dfrac{4}{16} - \dfrac{2}{4} - 6\\
+                              &= \dfrac{1}{4} - \dfrac{2}{4} - \dfrac{24}{4}\\
+                              &= -\dfrac{25}{4}
+$$
+Sommet: $S\left(\dfrac{1}{4}, -\dfrac{25}{4}\right)$
