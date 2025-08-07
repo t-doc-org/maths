@@ -17,7 +17,7 @@ un monôme se compose de deux parties: son **coefficient** et sa **partie
 littérale**.
 ```
 
-```{admonition} Définition
+````{admonition} Définition
 :class: note
 Un **polynôme** est un monôme ou une somme de monômes. Les monômes qui composent
 le polynôme sont les termes du polynôme. On peut réduire un polynôme en
@@ -25,11 +25,15 @@ additionnant les **monômes semblables** (de même partie littérale) qui le
 composent.
 
 Un polynôme composé d'une seule lettre, appelée variable, s'écrit sous la forme:
-$$a_n \cdot x^n + a_{n-1} \cdot x^{n-1} + \cdots + a_1x + a_0$$
+
+```{math}
+:class: align-center
+a_n \cdot x^n + a_{n-1} \cdot x^{n-1} + \cdots + a_1x + a_0
+```
 
 où les coefficients $a_n$, $a_{n-1}$, $\dots$, $a_1$, $a_0$ sont des nombres réels
 avec $a_n \neq 0$ et $n \in \mathbb{N}$.
-```
+````
 
 ```{admonition} Définition
 :class: note
@@ -65,25 +69,32 @@ coefficients sont des nombres entiers, alors les zéros potentiels entiers de $f
 sont des diviseurs du terme constant de la fonction.
 ```
 
-```{admonition} Définition
+````{admonition} Définition
 :class: note
 Une fonction dont la représentation graphique est symétrique par rapport à l'axe
 des $y$ est appelée **fonction paire**.
 
 Les fonctions paires satisfont, pour tout $x \in D_f$, l'égalité
 
-$$f(-x) = f(x).$$
+```{math}
+:class: align-center
+f(-x) = f(x).
+```
 
 Une fonction dont la représentation graphique est symétrique par rapport à
 l'origine $O$ est appelée **fonction impaire**.
 
 Les fonctions impaires satisfont, pour tout $x \in D_f$, l'égalité
-$$f(-x) = -f(x).$$
+
+```{math}
+:class: align-center
+f(-x) = -f(x).
 ```
+````
 
 ```{admonition} Théorème
 :class: note
-Une fonction polynomiale dont les exposants sont tous pairs est paire.
+Une fonction polynomiale dont tous les exposants sont pairs est paire.
 
-Une fonction polynomiale dont les exposants sont tous impairs est impaire.
+Une fonction polynomiale dont tous les exposants sont impairs est impaire.
 ```
