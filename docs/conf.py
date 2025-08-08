@@ -4,7 +4,7 @@
 from tdoc.common.defaults import *
 
 project = "Mathématiques"
-copyright = "%Y Caroline Blank"
+author = "Caroline Blank"
 license = 'CC-BY-NC-SA-4.0'
 language = 'fr'
 
@@ -16,6 +16,7 @@ html_theme_options = {
     'show_toc_level': 2,
 }
 
-tdoc_solutions = 'dynamic'
+update(mathjax3_config).chtml.displayAlign = 'left'
+update(mathjax3_config).svg.displayAlign = 'left'
 
-mathjax3_config['chtml'] = {'displayAlign': 'left'}
+tdoc_solutions = 'dynamic'
