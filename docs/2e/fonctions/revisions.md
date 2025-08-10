@@ -7,7 +7,7 @@
 subject: "Mathématiques 2e année"
 ```
 
-## Fonctions, domaine de définition, ordonnées à l'origine et zéros
+## Fonctions, domaine de définition, ordonnée à l'origine et zéros
 
 ````{admonition} Définition
 :class: note
@@ -23,6 +23,41 @@ f: A & \to B\\
 $A$ est appelé l'**ensemble de départ** de $f$ et $B$ est appelé l'**ensemble
 d'arrivée** de $f$.
 ````
+
+### Exemple {num1}`exemple`
+
+{.columns-2 .lower-alpha-paren}
+1.  La représentation graphique suivante est une fonction.
+    ```{jsxgraph} fonction
+    :style: width: 80%;
+    ```
+2.  La représentation graphique suivante n'est pas une fonction.
+    ```{jsxgraph} non-fonction
+    :style: width: 80%;
+    ```
+
+<script type="module">
+const [{initBoard, JXG}] = await tdoc.imports('tdoc/jsxgraph.js');
+
+const attrs = {
+    boundingBox: [-7, 11, 7, -2], axis: true, grid: true,
+    defaultAxes: {
+        x: {ticks: {drawLabels: false}},
+        y: {ticks: {drawLabels: false}},
+    },
+    defaults: {
+        circle: {strokeWidth: 2},
+        functiongraph: {strokeWidth: 2},
+    },
+};
+initBoard('fonction', attrs, board => {
+    board.create('functiongraph', [x => x ** 3 / 2 - 3 * x + 5]);
+});
+initBoard('non-fonction', attrs, board => {
+    const c = board.create('point', [0, 4], {visible: false});
+    board.create('circle', [c, 3.5]);
+});
+</script>
 
 ```{admonition} Définition
 :class: note
