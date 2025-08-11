@@ -7,7 +7,7 @@
 subject: "Mathématiques 2e année"
 ```
 
-## Théorie
+## Monômes, polynômes, degré
 
 ```{admonition} Définition
 :class: note
@@ -80,6 +80,8 @@ est un polynôme.
 Le domaine de définition d'une telle fonction est $D_f = \mathbb{R}$.
 ```
 
+## Zéros d'une fonction polynomiale
+
 ```{admonition} Théorème
 :class: note
 Une fonction polynomiale de degré $n$ possède au plus $n$ zéros.
@@ -145,6 +147,8 @@ $$\begin{array}
                 &        &       &    0   &               \\
 \end{array}$$
 $f(x)=x^3+6x^2+3x−10=(x+5)(x^2+x-2)=(x+5)(x+2)(x-1)$
+
+## Fonctions paires et impaires
 
 ````{admonition} Définition
 :class: note
@@ -215,16 +219,23 @@ const attrs = {
     },
     grid: {majorStep: 1},
     defaults: {
-        functiongraph: {strokeWidth: 2},
+        functiongraph: {strokeColor: JXG.palette.blue, strokeWidth: 2},
+        label: {strokeColor: JXG.palette.blue},
     },
 };
 initBoard('fct-paire', attrs, board => {
     const f = x => x ** 4 - 2 * x ** 2 - 2;
-    board.create('functiongraph', [f]);
+    board.create('functiongraph', [f], {
+        name: `\\(f\\)`, withLabel: true,
+        label: {position: '0.65fr right'}
+    });
 });
 initBoard('fct-impaire', attrs, board => {
     const g = x => x ** 5 - 2 * x ** 3 - 3 * x;
-    board.create('functiongraph', [g]);
+    board.create('functiongraph', [g], {
+        name: `\\(g\\)`, withLabel: true,
+        label: {position: '0.65fr right'}
+    });
 });
 </script>
 
