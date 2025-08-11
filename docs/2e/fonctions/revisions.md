@@ -254,3 +254,35 @@ y_s = f(x_s) = f(\frac{1}{4}) &= 4 \cdot (\frac{1}{4})^2 - 2 \cdot \dfrac{1}{4} 
                               &= -\dfrac{25}{4}
 $$
 Sommet: $S\left(\dfrac{1}{4}, -\dfrac{25}{4}\right)$
+
+Représentation graphique de la fonction $f(x) = 4x^2 - 2x - 6$ avec les points
+calculés précédemment.
+
+```{jsxgraph} fct-f
+:style: width: 60%;
+```
+
+<script type="module">
+const [{initBoard, JXG}] = await tdoc.imports('tdoc/jsxgraph.js');
+
+const attrs = {
+    boundingBox: [-5, 2.5, 5, -7], axis: true, grid: true,
+    defaultAxes: {
+        x: {ticks: {drawLabels: true, insertTicks: false, ticksDistance: 1, minorTicks: 1}},
+        y: {ticks: {drawLabels: true, insertTicks: false, ticksDistance: 1, minorTicks: 1}},
+    },
+    grid: {majorStep: 1},
+    defaults: {
+        functiongraph: {strokeWidth: 2},
+        point: {visible: true, withLabel: true,
+                fillColor: JXG.palette.black, strokeColor: JXG.palette.black}
+    },
+};
+initBoard('fct-f', attrs, board => {
+    const f1 = x => 4 * x ** 2 - 2 * x -6;
+    board.create('functiongraph', [f1]);
+    board.create('point', [0.25, f1(0.25)], {name: `\\(S\\)`});
+    board.create('point', [-1, f1(-1)], {name: `\\(x_1\\)`});
+    board.create('point', [3/2, f1(3/2)], {name: `\\(x_2\\)`});
+});
+</script>
