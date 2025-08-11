@@ -169,6 +169,66 @@ f(-x) = -f(x).
 ```
 ````
 
+```{admonition} Rappel
+:class: tip
+$$(-a)^n=
+\begin{cases}
+  \phantom{-}a^n & \text{si n est pair} \\ \\
+  -a^n   & \text{si n est impair}
+\end{cases}
+\qquad \forall n \in \mathbb N
+$$
+```
+
+### Exemple {num1}`exemple`
+
+$f(x) = x^4-2x^2-2$ est une fonction paire:
+
+$f(-x) = (-x)^4-2\cdot(-x)^2-2 = (x)^4-2\cdot(x)^2-2=f(x)$
+
+La fonction $f$ est symétrique par rapport à l'axe des $y$.
+
+```{jsxgraph} fct-paire
+:style: width: 50%;
+```
+
+### Exemple {num1}`exemple`
+
+$g(x) = x^5-2x^3-3x$ est une fonction impaire:
+
+$g(-x) = (-x)^5-2\cdot(-x)^3-3\cdot(-x)=-x^5+2\cdot x^3+3\cdot x=-(x^5-2\cdot x^3-3\cdot x)=-g(x)$
+
+La fonction $g$ est symétrique par rapport à l'origine $O$.
+
+```{jsxgraph} fct-impaire
+:style: width: 50%;
+```
+
+<script type="module">
+const [{initBoard, JXG}] = await tdoc.imports('tdoc/jsxgraph.js');
+
+const attrs = {
+    boundingBox: [-5.2, 5.2, 5.2, -5.2], axis: true, grid: true,
+    defaultAxes: {
+        x: {ticks: {drawLabels: true, insertTicks: false, ticksDistance: 1, minorTicks: 1}},
+        y: {ticks: {drawLabels: true, insertTicks: false, ticksDistance: 1, minorTicks: 1}},
+    },
+    grid: {majorStep: 1},
+    defaults: {
+        functiongraph: {strokeWidth: 2},
+    },
+};
+initBoard('fct-paire', attrs, board => {
+    const f = x => x ** 4 - 2 * x ** 2 - 2;
+    board.create('functiongraph', [f]);
+});
+initBoard('fct-impaire', attrs, board => {
+    const g = x => x ** 5 - 2 * x ** 3 - 3 * x;
+    board.create('functiongraph', [g]);
+});
+</script>
+
+
 ```{admonition} Théorème
 :class: note
 Une fonction polynomiale dont tous les exposants sont pairs est paire.
