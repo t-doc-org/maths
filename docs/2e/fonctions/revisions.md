@@ -274,14 +274,23 @@ const attrs = {
     grid: {majorStep: 1},
     defaults: {
         functiongraph: {strokeWidth: 2},
-        point: {visible: true, withLabel: true,
-                fillColor: JXG.palette.black, strokeColor: JXG.palette.black}
+        label: {strokeColor: JXG.palette.blue},
+        point: {visible: true, withLabel: true, size: 1.5,
+                fillColor: JXG.palette.black, strokeColor: JXG.palette.black,
+                label: {strokeColor: JXG.palette.black, position: '0.5fr left',
+                        anchorX: 'right', anchorY: 'bottom', distance: 0,
+                        offset: [-7, 0],}},
     },
 };
 initBoard('fct-f', attrs, board => {
     const f1 = x => 4 * x ** 2 - 2 * x -6;
-    board.create('functiongraph', [f1]);
-    board.create('point', [0.25, f1(0.25)], {name: `\\(S\\)`});
+    board.create('functiongraph', [f1], {
+        name: `\\(f\\)`, withLabel: true,
+        label: {position: '0.635fr left'}
+    });
+    board.create('point', [0.25, f1(0.25)], {name: `\\(S\\)`, label: {
+        anchorX: 'left',anchorY: 'top'}
+    });
     board.create('point', [-1, f1(-1)], {name: `\\(x_1\\)`});
     board.create('point', [3/2, f1(3/2)], {name: `\\(x_2\\)`});
 });
