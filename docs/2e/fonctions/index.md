@@ -9,4 +9,5 @@ factorisation
 revisions
 polynomiales
 rationnelles
+reciproques-composees
 ```
