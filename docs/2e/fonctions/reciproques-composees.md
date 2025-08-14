@@ -591,6 +591,31 @@ x &\mapsto g \bigl(f(x) \bigr)
 et donc $\bigl( g \circ f \bigr)(x) = g\bigl(f(x)\bigr)$.
 ````
 
+### Exemple {num1}`exemple`
+
+1.  Soient les fonctions $f(x) = x + 1$ et $g(x) = 3x$, calculez $(f \circ g)(x)$.
+    $$
+    (f \circ g)(x)  &= f(g(x))  \qquad \qquad &&\text{remplacez } g(x) \text{ par sa valeur} \\
+                    &= f({\color{red}3x})  \qquad \qquad &&\text{remplacez la valeur de } x \text{ de } f(x) \text{ par } 3x\\
+                    &= {\color{red}3x} + 1
+    $$
+2.  Soient les fonctions $f(x) = x^2 + 2$ et $g(x) = 2x - 3$, calculez $(f \circ g)(x)$.
+    $$
+    (f \circ g)(x)  &= f(g(x))  \qquad \qquad &&\text{remplacez } g(x) \text{ par sa valeur} \\
+                    &= f({\color{red}2x - 3})  \qquad \qquad &&\text{remplacez la valeur de } x \text{ de } f(x) \text{ par } 2x-3\\
+                    &= ({\color{red}2x - 3})^2 + 2\\
+                    &= 4x^2-12x+9 + 2\\
+                    &= 4x^2-12x+11
+    $$
+2.  Soient les fonctions $f(x) = \dfrac{1}{2}x$ et $g(x) = \sqrt{x}$, calculez $(f \circ g)(x)$.
+    $$
+    (f \circ g)(x)  &= f(g(x))  \qquad \qquad &&\text{remplacez } g(x) \text{ par sa valeur} \\
+                    &= f({\color{red}\sqrt{x}})  \qquad \qquad &&\text{remplacez la valeur de } x \text{ de } f(x) \text{ par } \sqrt{x}\\
+                    &= \dfrac{1}{2}{\color{red}\sqrt{x}}\\
+                    &= \dfrac{\sqrt{x}}{2}
+    $$
+
+
 ````{admonition} Propriétés
 :class: note
 -   De manière générale,
@@ -606,6 +631,69 @@ et donc $\bigl( g \circ f \bigr)(x) = g\bigl(f(x)\bigr)$.
     ```
 ````
 
+### Exemple {num1}`exemple`
+
+Soient les fonctions $f(x) = 3x+5$ et $g(x) = (x+1)^2$, calculez $(f \circ g)(x)$.
+$$
+(f \circ g)(x)  &= f(g(x))  \\
+                &= f({\color{red}(x+1)^2})\\
+                &= 3{\color{red}(x+1)^2} + 5\\
+                &=3(x^2+2x+1)+5\\
+                &=3x^2+6x+3+5\\
+                &=3x^2+6x+8
+$$
+$$
+(g \circ f)(x)  &= g(f(x))  \\
+                &= g({\color{red}3x+5})\\
+                &= (({\color{red}3x+5}) + 1)^2\\
+                &=(3x+6)^2\\
+                &=9x^2+36x+36
+$$
+$\Rightarrow (f \circ g)(x) \neq (g \circ f)(x)$
+
+### Exemple {num1}`exemple`
+
+Soient les fonctions $f(x) = x^2$, $g(x) = 3x$ et $h(x) =x-1$, calculez $(f \circ g \circ h)(x)$,
+$(f \circ (g \circ h))(x)$ et $((f \circ g) \circ h)(x)$.
+$$
+(f \circ g \circ h)(x)  &= f(g(h(x)))  \\
+                        &= f(g(x-1))\\
+                        &= f(3(x-1))\\
+                        &=(3(x-1))^2\\
+                        &=(3x-3)^2\\
+                        &=9x^2-18x+9
+$$
+
+$$
+(g \circ h)(x)  &= g(h(x))  \\
+                &= g(x-1)\\
+                &= 3(x-1)\\
+                &=3x-3
+$$
+
+$$
+(f \circ (g \circ h))(x)    &= f((g \circ h)(x))\\
+                            &= f(3x-3)  \\
+                            &=(3x-3)^2\\
+                            &=9x^2-18x+9
+$$
+
+$$
+(f \circ g)(x)  &= f(g(x))  \\
+                &= f(3x)\\
+                &= (3x)^2\\
+                &= 9x^2
+$$
+
+$$
+((f \circ g) \circ h)(x)    &= (f \circ g)(h(x)) \\
+                            &= (f \circ g)(x-1)\\
+                            &= 9(x-1)^2\\
+                            &=9(x^2-2x+1)\\
+                            &=9x^2-18x+9
+$$
+$\Rightarrow (f \circ g \circ h)(x) = (f \circ (g \circ h))(x) = ((f \circ g) \circ h)(x)$
+
 ````{admonition} Théorème
 :class: note
 Soient deux fonctions réelles $f \colon A \to B$ et $g \colon B \to A$, la
@@ -617,3 +705,47 @@ composées $f \circ g$ et $g \circ f$ sont égale à la fonction identité:
 g(x) = f^{-1}(x) \Longleftrightarrow f\bigl(g(x)\bigr) = g\bigl(f(x)\bigr) = x.
 ```
 ````
+
+### Exemple {num1}`exemple`
+
+1.  Soient les fonctions $f(x) = 3x+1$ et $g(x) = \dfrac{1}{3}x-\dfrac{1}{3}$.\
+    $g$ est-elle la fonction réciproque de $f$?
+
+    $$
+    (f \circ g)(x)  &= f(g(x))  \\
+                    &= f(\dfrac{1}{3}x-\dfrac{1}{3})\\
+                    &= 3(\dfrac{1}{3}x-\dfrac{1}{3})+1\\
+                    &=x-1+1\\
+                    &=x
+    $$
+
+    $$
+    (g \circ f)(x)  &= g(f(x))  \\
+                    &= g(3x+1)\\
+                    &= \dfrac{1}{3}(3x+1)-\dfrac{1}{3}\\
+                    &=x+\dfrac{1}{3}-\dfrac{1}{3}\\
+                    &=x
+    $$
+    $(f \circ g)(x) = (g \circ f)(x) = x \Longleftrightarrow g$ est la
+    fonction réciproque de $f$ et donc $g(x)=f^{-1}(x)$..
+
+2.  Soient les fonctions $f(x) = \dfrac{1}{2}x+1$ et $g(x) = -2x-2$.\
+    $g$ est-elle la fonction réciproque de $f$?
+
+    $$
+    (f \circ g)(x)  &= f(g(x))  \\
+                    &= f(-2x-2)\\
+                    &= \dfrac{1}{2}(-2x-2)+1\\
+                    &=-x-1+1\\
+                    &=-x
+    $$
+
+    $$
+    (g \circ f)(x)  &= g(f(x))  \\
+                    &= g(\dfrac{1}{2}x+1)\\
+                    &= -2(\dfrac{1}{2}x+1)-2\\
+                    &=-x-2-2\\
+                    &=-x-4
+    $$
+    $(f \circ g)(x) \neq (g \circ f)(x) = x \Longleftrightarrow g$ n'est pas la
+    fonction réciproque de $f$.
