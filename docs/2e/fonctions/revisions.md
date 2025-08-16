@@ -37,24 +37,21 @@ d'arrivée** de $f$.
     ```
 
 <script type="module">
-const [{initBoard, JXG}] = await tdoc.imports('tdoc/jsxgraph.js');
-
-const attrs = {
-    boundingBox: [-7, 11, 7, -2], axis: true, grid: true,
+const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+const attrs = [defaults, {
+    boundingBox: [-7, 11, 7, -2],
     defaultAxes: {
         x: {ticks: {drawLabels: false}},
         y: {ticks: {drawLabels: false}},
     },
-    defaults: {
-        circle: {strokeWidth: 2},
-        functiongraph: {strokeWidth: 2},
-    },
-};
+}];
 initBoard('fonction', attrs, board => {
     board.create('functiongraph', [x => x ** 3 / 2 - 3 * x + 5]);
 });
 initBoard('non-fonction', attrs, board => {
-    const c = board.create('point', [0, 4], {visible: false});
+    const c = board.create('point', [0, 4], {
+        visible: false, withLabel: false,
+    });
     board.create('circle', [c, 3.5]);
 });
 </script>
@@ -263,35 +260,25 @@ calculés précédemment.
 ```
 
 <script type="module">
-const [{initBoard, JXG}] = await tdoc.imports('tdoc/jsxgraph.js');
-
-const attrs = {
-    boundingBox: [-5, 2.5, 5, -7], axis: true, grid: true,
-    defaultAxes: {
-        x: {ticks: {drawLabels: true, insertTicks: false, ticksDistance: 1, minorTicks: 1}},
-        y: {ticks: {drawLabels: true, insertTicks: false, ticksDistance: 1, minorTicks: 1}},
-    },
-    grid: {majorStep: 1},
+const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+initBoard('fct-f', [defaults, {
+    boundingBox: [-5, 2.5, 5, -7],
     defaults: {
-        functiongraph: {strokeWidth: 2},
-        label: {strokeColor: JXG.palette.blue},
-        point: {visible: true, withLabel: true, size: 1.5,
-                fillColor: JXG.palette.black, strokeColor: JXG.palette.black,
-                label: {strokeColor: JXG.palette.black, position: '0.5fr left',
-                        anchorX: 'right', anchorY: 'bottom', distance: 0,
-                        offset: [-7, 0],}},
+        point: {
+            label: {anchorX: 'right', anchorY: 'bottom', offset: [-7, 0]},
+        },
     },
-};
-initBoard('fct-f', attrs, board => {
-    const f1 = x => 4 * x ** 2 - 2 * x -6;
-    board.create('functiongraph', [f1], {
+}], board => {
+    const f = x => 4 * x ** 2 - 2 * x -6;
+    board.create('functiongraph', [f], {
         name: `\\(f\\)`, withLabel: true,
-        label: {position: '0.635fr left'}
+        label: {position: '0.635fr right'},
     });
-    board.create('point', [0.25, f1(0.25)], {name: `\\(S\\)`, label: {
-        anchorX: 'left',anchorY: 'top'}
+    board.create('point', [0.25, f(0.25)], {
+        name: `\\(S\\)`,
+        label: {anchorX: 'middle', anchorY: 'top', offset: [0, -7]},
     });
-    board.create('point', [-1, f1(-1)], {name: `\\(x_1\\)`});
-    board.create('point', [3/2, f1(3/2)], {name: `\\(x_2\\)`});
+    board.create('point', [-1, f(-1)], {name: `\\(x_1\\)`});
+    board.create('point', [3 / 2, f(3 / 2)], {name: `\\(x_2\\)`});
 });
 </script>

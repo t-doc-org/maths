@@ -149,37 +149,23 @@ La représentation graphique de $f(x) = \dfrac{x^2-7x+10}{x^2-9}$ est:
 ```
 
 <script type="module">
-const [{initBoard, JXG}] = await tdoc.imports('tdoc/jsxgraph.js');
-
-const attrs = {
-    boundingBox: [-10.5, 10.5, 10.5, -10.5], axis: true, grid: true,
-    defaultAxes: {
-        x: {ticks: {drawLabels: true, insertTicks: false, ticksDistance: 1, minorTicks: 1}},
-        y: {ticks: {drawLabels: true, insertTicks: false, ticksDistance: 1, minorTicks: 1}},
-    },
+const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+initBoard('fonction-rationnelle', [defaults, {
+    boundingBox: [-10.5, 10.5, 10.5, -10.5],
     grid: {majorStep: 1},
     defaults: {
-        functiongraph: {strokeColor: JXG.palette.blue, strokeWidth: 2},
-        label: {strokeColor: JXG.palette.blue},
-        point: {visible: true, withLabel: true, size: 1.5,
-                fillColor: JXG.palette.black, strokeColor: JXG.palette.black,
-                label: {strokeColor: JXG.palette.black, position: '0.5fr left',
-                        anchorX: 'right', anchorY: 'bottom', distance: 0,
-                        offset: [-7, 0],}},
-        curve:  {strokeColor: JXG.palette.black, strokeWidth: 1.5},
+        line: {dash: 2},
+        point: {label: {anchorX: 'right', anchorY: 'bottom', offset: [-7, 0]}},
     },
-};
-initBoard('fonction-rationnelle', attrs, board => {
-    const f = x => (x ** 2 - 7 * x + 10)/(x ** 2 -9);
+}], board => {
+    const f = x => (x ** 2 - 7 * x + 10) / (x ** 2 - 9);
     board.create('functiongraph', [f], {
         name: `\\(f\\)`, withLabel: true,
         label: {position: '0.1fr left'}
     });
     board.create('point', [2, f(2)], {name: `\\(x_1\\)`});
     board.create('point', [5, f(5)], {name: `\\(x_2\\)`});
-    board.create('curve', [t => 3, t => t, -1000, 1100], {dash: 2});
-    board.create('curve', [t => -3, t => t, -1100, 1100], {dash: 2});
+    board.create('line', [3, 1, 0]);
+    board.create('line', [-3, 1, 0]);
 });
 </script>
-
-

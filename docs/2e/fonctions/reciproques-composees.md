@@ -23,88 +23,6 @@ que  si $f(x) = y$, alors $g(y) = x$.
 
 Soit la fonction $f(x) = 2x - 1$.
 
-<script type="module">
-const [{initBoard, JXG}] = await tdoc.imports('tdoc/jsxgraph.js');
-
-const attrs = {
-    boundingBox: [-7.5, 7.5, 7.5, -7.5], axis: true, grid: true,
-    defaultAxes: {
-        x: {ticks: {
-            drawLabels: true, insertTicks: false, ticksDistance: 1,
-            minorTicks: 0,
-            // TODO: Trouver comment utiliser "labels"
-            generateLabelText: function(tick, zero) {
-                const v = this.formatLabelText(tick.usrCoords[1]
-                                               - zero.usrCoords[1]);
-                if (v !== '1') return '';
-                return `\\(${v}\\)`;
-            },
-        }},
-        y: {ticks: {
-            drawLabels: true, insertTicks: false, ticksDistance: 1,
-            minorTicks: 0,
-            generateLabelText: function(tick, zero) {
-                const v = this.formatLabelText(tick.usrCoords[2]
-                                               - zero.usrCoords[2]);
-                if (v !== '1') return '';
-                return `\\(${v}\\)`;
-            },
-        }},
-    },
-    grid: {majorStep: 1},
-    defaults: {
-        functiongraph: {strokeColor: JXG.palette.blue, strokeWidth: 2},
-        label: {strokeColor: JXG.palette.blue},
-        point: {visible: true, withLabel: false, size: 0.5,
-                fillColor: JXG.palette.black, strokeColor: JXG.palette.black,
-                label: {strokeColor: JXG.palette.black, position: '0.5fr left',
-                        anchorX: 'right', anchorY: 'bottom', distance: 0,
-                        offset: [-7, 0],}},
-        curve:  {strokeColor: JXG.palette.black, strokeWidth: 1.5},
-    },
-};
-initBoard('droite-theorie', attrs, board => {
-    const f = x => 2 * x - 1;
-    board.create('functiongraph', [f], {
-        name: `\\(f\\)`, withLabel: true,
-        label: {position: '0.35fr right'}
-    });
-    board.create('point', [-3, f(-3)]);
-    board.create('point', [-2, f(-2)]);
-    board.create('point', [-1, f(-1)]);
-    board.create('point', [0, f(0)]);
-    board.create('point', [1, f(1)]);
-    board.create('point', [2, f(2)]);
-    board.create('point', [3, f(3)]);
-});
-
-initBoard('reciproque-theorie', attrs, board => {
-    const g = x => x / 2 + 1 / 2;
-    board.create('functiongraph', [g], {
-        name: `\\(g\\)`, withLabel: true,
-        label: {position: '0.1fr left'}
-    });
-    board.create('point', [-7, g(-7)]);
-    board.create('point', [-5, g(-5)]);
-    board.create('point', [-3, g(-3)]);
-    board.create('point', [-1, g(-1)]);
-    board.create('point', [1, g(1)]);
-    board.create('point', [3, g(3)]);
-    board.create('point', [5, g(5)]);
-    board.create('functiongraph', [x => 2*x-1], {
-        strokeOpacity: 0.3,
-        name: `\\(f\\)`, withLabel: true,
-        label: {position: '0.35fr right'}
-    });
-    board.create('functiongraph', [x => x], {
-        strokeOpacity: 0.3,
-        strokeColor: JXG.palette.black,
-        dash: 3,
-    });
-});
-
-</script>
-
 ````{list-grid}
 :style: grid-template-columns: 4fr 3fr;
 -   # Tableau de valeurs
@@ -137,6 +55,48 @@ rapport à la droite identité $y = x$.
     ```
 ````
 
+<script type="module">
+const {defaults, initBoard, JXG, withAxesLabels} =
+    await tdoc.import('jsxgraph.js');
+const attrs = [defaults, withAxesLabels(['1'], ['1']), {
+    boundingBox: [-7.5, 7.5, 7.5, -7.5],
+    defaultAxes: {
+        x: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0}},
+        y: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0}},
+    },
+    defaults: {
+        line: {dash: 2, strokeOpacity: 0.3},
+        point: {size: 0.5, withLabel: false},
+    },
+}];
+initBoard('droite-theorie', attrs, board => {
+    const f = x => 2 * x - 1;
+    board.create('functiongraph', [f], {
+        name: `\\(f\\)`, withLabel: true,
+        label: {position: '0.35fr right'}
+    });
+    for (const x of [-3, -2, -1, 0, 1, 2, 3]) {
+        board.create('point', [x, f(x)]);
+    }
+});
+initBoard('reciproque-theorie', attrs, board => {
+    const g = x => x / 2 + 1 / 2;
+    board.create('functiongraph', [g], {
+        name: `\\(g\\)`, withLabel: true, strokeColor: JXG.palette.red,
+        label: {position: '0.1fr left', strokeColor: JXG.palette.red}
+    });
+    for (const x of [-7, -5, -3, -1, 1, 3, 5]) {
+        board.create('point', [x, g(x)]);
+    }
+    board.create('functiongraph', [x => 2 * x - 1], {
+        strokeOpacity: 0.3,
+        name: `\\(f\\)`, withLabel: true,
+        label: {position: '0.35fr right'}
+    });
+    board.create('line', [0, 1, -1]);
+});
+</script>
+
 ### Exemple {num1}`exemple`
 
 Déterminez la réciproque de $f(x)=\dfrac{x}{3}+1$.
@@ -152,84 +112,6 @@ y-1&= \dfrac{x}{3} \qquad \qquad &&| \cdot 3\\
 $$
 
 La réciproque de $f$ est $g(x) = 3x-3$. Dans ce cas, $g$ est une aussi fonction.
-
-<script type="module">
-const [{initBoard, JXG}] = await tdoc.imports('tdoc/jsxgraph.js');
-
-const attrs = {
-    boundingBox: [-4.5, 4.5, 4.5, -4.5], axis: true, grid: true,
-    defaultAxes: {
-        x: {ticks: {
-            drawLabels: true, insertTicks: false, ticksDistance: 1,
-            minorTicks: 0,
-            // TODO: Trouver comment utiliser "labels"
-            generateLabelText: function(tick, zero) {
-                const v = this.formatLabelText(tick.usrCoords[1]
-                                               - zero.usrCoords[1]);
-                if (v !== '1') return '';
-                return `\\(${v}\\)`;
-            },
-        }},
-        y: {ticks: {
-            drawLabels: true, insertTicks: false, ticksDistance: 1,
-            minorTicks: 0,
-            generateLabelText: function(tick, zero) {
-                const v = this.formatLabelText(tick.usrCoords[2]
-                                               - zero.usrCoords[2]);
-                if (v !== '1') return '';
-                return `\\(${v}\\)`;
-            },
-        }},
-    },
-    grid: {majorStep: 1},
-    defaults: {
-        functiongraph: {strokeColor: JXG.palette.blue, strokeWidth: 2},
-        label: {strokeColor: JXG.palette.blue},
-        point: {visible: true, withLabel: false, size: 0.5,
-                fillColor: JXG.palette.black, strokeColor: JXG.palette.black,
-                label: {strokeColor: JXG.palette.black, position: '0.5fr left',
-                        anchorX: 'right', anchorY: 'bottom', distance: 0,
-                        offset: [-7, 0],}},
-        curve:  {strokeColor: JXG.palette.black, strokeWidth: 1.5},
-    },
-};
-initBoard('reciproque-ex1', attrs, board => {
-    const f = x => x /3 + 1;
-    board.create('functiongraph', [f], {
-        name: `\\(f\\)`, withLabel: true,
-        label: {position: '0.1fr left'}
-    });
-    board.create('functiongraph', [x => 3 * x-3], {
-        strokeColor: JXG.palette.red,
-        name: `\\(g\\)`, withLabel: true,
-        label: {position: '0.5fr right', strokeColor: JXG.palette.red}
-    });
-    board.create('functiongraph', [x => x], {
-        strokeOpacity: 0.3,
-        strokeColor: JXG.palette.black,
-        dash: 3,
-    });
-});
-initBoard('reciproque-ex2', attrs, board => {
-    const f = x => x ** 2 - 3;
-    board.create('functiongraph', [f], {
-        name: `\\(f\\)`, withLabel: true,
-        label: {position: '0.27fr right'}
-    });
-    board.create('curve', [t => t ** 2 - 3, t => t, -100, 100], {
-        strokeColor: JXG.palette.red,
-    });
-    board.create('text', [1, -3, `réciproque de \\(f\\)`], {
-        strokeColor: JXG.palette.red,
-    });
-    board.create('functiongraph', [x => x], {
-        strokeOpacity: 0.3,
-        strokeColor: JXG.palette.black,
-        dash: 3,
-    });
-});
-
-</script>
 
 ```{jsxgraph} reciproque-ex1
 :style: width: 40%;
@@ -254,6 +136,47 @@ La réciproque de $f$ est $\pm \sqrt{x+3}$. Ce n'est pas une fonction!
 :style: width: 40%;
 ```
 
+<script type="module">
+const {defaults, initBoard, JXG, withAxesLabels} =
+    await tdoc.import('jsxgraph.js');
+const attrs = [defaults, withAxesLabels(['1'], ['1']), {
+    boundingBox: [-4.5, 4.5, 4.5, -4.5],
+    defaultAxes: {
+        x: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0}},
+        y: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0}},
+    },
+    defaults: {
+        line: {dash: 2, strokeOpacity: 0.3},
+    },
+}];
+initBoard('reciproque-ex1', attrs, board => {
+    board.create('functiongraph', [x => x / 3 + 1], {
+        name: `\\(f\\)`, withLabel: true,
+        label: {position: '0.1fr left'}
+    });
+    board.create('functiongraph', [x => 3 * x - 3], {
+        strokeColor: JXG.palette.red,
+        name: `\\(g\\)`, withLabel: true,
+        label: {position: '0.5fr right', strokeColor: JXG.palette.red}
+    });
+    board.create('line', [0, 1, -1]);
+});
+initBoard('reciproque-ex2', attrs, board => {
+    const f = x => x ** 2 - 3;
+    board.create('functiongraph', [f], {
+        name: `\\(f\\)`, withLabel: true,
+        label: {position: '0.27fr right'}
+    });
+    board.create('curve', [t => f(t), t => t, -100, 100], {
+        strokeColor: JXG.palette.red,
+    });
+    board.create('text', [1, -3, `réciproque de \\(f\\)`], {
+        strokeColor: JXG.palette.red,
+    });
+    board.create('line', [0, 1, -1]);
+});
+</script>
+
 ````{admonition} Définition
 :class: note
 Une **fonction bijective** ou **bijection**, $f$, est une fonction telle que
@@ -268,91 +191,6 @@ $f$, c'est-à-dire:
 ````
 
 ### Exemple {num1}`exemple`
-
-<script type="module">
-const [{initBoard, JXG}] = await tdoc.imports('tdoc/jsxgraph.js');
-
-const attrs = {
-    boundingBox: [-4, 5.5, 4, -2.5], axis: true, grid: true,
-    defaultAxes: {
-        x: {ticks: {
-            drawLabels: true, insertTicks: false, ticksDistance: 1,
-            minorTicks: 0,
-            // TODO: Trouver comment utiliser "labels"
-            generateLabelText: function(tick, zero) {
-                const v = this.formatLabelText(tick.usrCoords[1]
-                                               - zero.usrCoords[1]);
-                if (v !== '1') return '';
-                return `\\(${v}\\)`;
-            },
-        }},
-        y: {ticks: {
-            drawLabels: true, insertTicks: false, ticksDistance: 1,
-            minorTicks: 0,
-            generateLabelText: function(tick, zero) {
-                const v = this.formatLabelText(tick.usrCoords[2]
-                                               - zero.usrCoords[2]);
-                if (v !== '1') return '';
-                return `\\(${v}\\)`;
-            },
-        }},
-    },
-    grid: {majorStep: 1},
-    defaults: {
-        functiongraph: {strokeColor: JXG.palette.blue, strokeWidth: 2},
-        label: {strokeColor: JXG.palette.blue},
-        point: {visible: true, withLabel: false, size: 0.5,
-                fillColor: JXG.palette.black, strokeColor: JXG.palette.black,
-                label: {strokeColor: JXG.palette.black, position: '0.5fr left',
-                        anchorX: 'right', anchorY: 'bottom', distance: 0,
-                        offset: [-7, 0],}},
-        curve:  {strokeColor: JXG.palette.black, strokeWidth: 1.5},
-    },
-};
-initBoard('non-bijection', attrs, board => {
-    const f = x => -1 * x ** 2 + 4;
-    board.create('functiongraph', [f], {
-        name: `\\(f\\)`, withLabel: true,
-        label: {position: '0.75fr right'}
-    });
-    board.create('functiongraph', [x => 3, -1, 1], {
-        strokeColor: JXG.palette.black, dash: 3, strokeWidth: 1
-    });
-    board.create('curve', [t => -1, t => t, 0, 3], {
-        strokeColor: JXG.palette.black, dash: 3, strokeWidth: 1
-    });
-    board.create('curve', [t => 1, t => t, 0, 3], {
-        strokeColor: JXG.palette.black, dash: 3, strokeWidth: 1
-    });
-});
-initBoard('bijection1', attrs, board => {
-    const f = x => -1 * x ** 2 + 4;
-    board.create('functiongraph', [f, 0], {
-        name: `\\(f\\)`, withLabel: true,
-        label: {position: '0.5fr right'}
-    });
-    board.create('functiongraph', [x => 3, 0, 1], {
-        strokeColor: JXG.palette.black, dash: 3, strokeWidth: 1
-    });
-    board.create('curve', [t => 1, t => t, 0, 3], {
-        strokeColor: JXG.palette.black, dash: 3, strokeWidth: 1
-    });
-});
-initBoard('bijection2', attrs, board => {
-    const f = x => -1 * x ** 2 + 4;
-    board.create('functiongraph', [f, undefined, 0], {
-        name: `\\(f\\)`, withLabel: true,
-        label: {position: '0.5fr left'}
-    });
-    board.create('functiongraph', [x => 3, -1, 0], {
-        strokeColor: JXG.palette.black, dash: 3, strokeWidth: 1
-    });
-    board.create('curve', [t => -1, t => t, 0, 3], {
-        strokeColor: JXG.palette.black, dash: 3, strokeWidth: 1
-    });
-});
-
-</script>
 
 ````{list-grid}
 :style: grid-template-columns: 3fr 3fr;
@@ -372,6 +210,47 @@ initBoard('bijection2', attrs, board => {
     ```
 ````
 
+<script type="module">
+const {defaults, initBoard, JXG, withAxesLabels} =
+    await tdoc.import('jsxgraph.js');
+const attrs = [defaults, withAxesLabels(['1'], ['1']), {
+    boundingBox: [-4, 5.5, 4, -2.5],
+    defaultAxes: {
+        x: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0}},
+        y: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0}},
+    },
+    defaults: {
+        segment: {dash: 2},
+    },
+}];
+const f = x => -1 * x ** 2 + 4;
+initBoard('non-bijection', attrs, board => {
+    board.create('functiongraph', [f], {
+        name: `\\(f\\)`, withLabel: true,
+        label: {position: '0.75fr right'}
+    });
+    board.create('segment', [[-1, 0], [-1, 3]]);
+    board.create('segment', [[1, 0], [1, 3]]);
+    board.create('segment', [[-1, 3], [1, 3]]);
+});
+initBoard('bijection1', attrs, board => {
+    board.create('functiongraph', [f, 0], {
+        name: `\\(f\\)`, withLabel: true,
+        label: {position: '0.5fr right'}
+    });
+    board.create('segment', [[1, 0], [1, 3]]);
+    board.create('segment', [[0, 3], [1, 3]]);
+});
+initBoard('bijection2', attrs, board => {
+    board.create('functiongraph', [f, undefined, 0], {
+        name: `\\(f\\)`, withLabel: true,
+        label: {position: '0.5fr right'}
+    });
+    board.create('segment', [[-1, 0], [-1, 3]]);
+    board.create('segment', [[-1, 3], [0, 3]]);
+});
+</script>
+
 ````{admonition} Définition
 :class: note
 La **fonction réciproque**  de la fonction bijective $f: A \to B$ est la
@@ -382,67 +261,6 @@ $f^{-1}$ est parfois notée ${}^r\!f$
 ````
 
 ### Exemple {num1}`exemple`
-
-<script type="module">
-const [{initBoard, JXG}] = await tdoc.imports('tdoc/jsxgraph.js');
-
-const attrs = {
-    boundingBox: [-4.5, 4.5, 4.5, -4.5], axis: true, grid: true,
-    defaultAxes: {
-        x: {ticks: {
-            drawLabels: true, insertTicks: false, ticksDistance: 1,
-            minorTicks: 0,
-            // TODO: Trouver comment utiliser "labels"
-            generateLabelText: function(tick, zero) {
-                const v = this.formatLabelText(tick.usrCoords[1]
-                                               - zero.usrCoords[1]);
-                if (v !== '1') return '';
-                return `\\(${v}\\)`;
-            },
-        }},
-        y: {ticks: {
-            drawLabels: true, insertTicks: false, ticksDistance: 1,
-            minorTicks: 0,
-            generateLabelText: function(tick, zero) {
-                const v = this.formatLabelText(tick.usrCoords[2]
-                                               - zero.usrCoords[2]);
-                if (v !== '1') return '';
-                return `\\(${v}\\)`;
-            },
-        }},
-    },
-    grid: {majorStep: 1},
-    defaults: {
-        functiongraph: {strokeColor: JXG.palette.blue, strokeWidth: 2},
-        label: {strokeColor: JXG.palette.blue},
-        point: {visible: true, withLabel: false, size: 0.5,
-                fillColor: JXG.palette.black, strokeColor: JXG.palette.black,
-                label: {strokeColor: JXG.palette.black, position: '0.5fr left',
-                        anchorX: 'right', anchorY: 'bottom', distance: 0,
-                        offset: [-7, 0],}},
-        curve:  {strokeColor: JXG.palette.black, strokeWidth: 1.5},
-    },
-};
-
-initBoard('bijection3', attrs, board => {
-    const f = x => x ** 2 - 3;
-    board.create('functiongraph', [f, 0], {
-        name: `\\(f\\)`, withLabel: true,
-        label: {position: '0.1fr right'}
-    });
-    board.create('functiongraph', [x => Math.sqrt(x+3)], {
-        strokeColor: JXG.palette.red,
-        name: `\\(f^{-1}\\)`, withLabel: true,
-        label: {position: '0.24fr left', strokeColor: JXG.palette.red}
-    });
-    board.create('functiongraph', [x => x], {
-        strokeOpacity: 0.3,
-        strokeColor: JXG.palette.black,
-        dash: 3,
-    });
-});
-
-</script>
 
 ````{list-grid}
 :style: grid-template-columns: 3fr 3fr;
@@ -460,71 +278,33 @@ initBoard('bijection3', attrs, board => {
     ```
 ````
 
-### Exemple {num1}`exemple`
-
 <script type="module">
-const [{initBoard, JXG}] = await tdoc.imports('tdoc/jsxgraph.js');
-
-const attrs = {
-    boundingBox: [-7.5, 7.5, 7.5, -7.5], axis: true, grid: true,
+const {defaults, initBoard, JXG, withAxesLabels} =
+    await tdoc.import('jsxgraph.js');
+initBoard('bijection3', [defaults, withAxesLabels(['1'], ['1']), {
+    boundingBox: [-4.5, 4.5, 4.5, -4.5],
     defaultAxes: {
-        x: {ticks: {
-            drawLabels: true, insertTicks: false, ticksDistance: 1,
-            minorTicks: 0,
-        }},
-        y: {ticks: {
-            drawLabels: true, insertTicks: false, ticksDistance: 1,
-            minorTicks: 0,
-        }},
+        x: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0}},
+        y: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0}},
     },
-    grid: {majorStep: 1},
     defaults: {
-        functiongraph: {strokeColor: JXG.palette.blue, strokeWidth: 2},
-        label: {strokeColor: JXG.palette.blue},
-        point: {visible: true, withLabel: false, size: 0.5,
-                fillColor: JXG.palette.black, strokeColor: JXG.palette.black,
-                label: {strokeColor: JXG.palette.black, position: '0.5fr left',
-                        anchorX: 'right', anchorY: 'bottom', distance: 0,
-                        offset: [-7, 0],}},
-        curve:  {strokeColor: JXG.palette.black, strokeWidth: 1.5},
+        line: {dash: 2, strokeOpacity: 0.3},
     },
-};
-
-initBoard('bijection3', attrs, board => {
-    const f = x => x ** 2 - 3;
-    board.create('functiongraph', [f, 0], {
+}], board => {
+    board.create('functiongraph', [x => x ** 2 - 3, 0], {
         name: `\\(f\\)`, withLabel: true,
         label: {position: '0.1fr right'}
     });
-    board.create('functiongraph', [x => Math.sqrt(x+3)], {
+    board.create('functiongraph', [x => Math.sqrt(x + 3)], {
         strokeColor: JXG.palette.red,
         name: `\\(f^{-1}\\)`, withLabel: true,
         label: {position: '0.24fr left', strokeColor: JXG.palette.red}
     });
-    board.create('functiongraph', [x => x], {
-        strokeOpacity: 0.3,
-        strokeColor: JXG.palette.black,
-        dash: 3,
-    });
+    board.create('line', [0, 1, -1]);
 });
-initBoard('bijection4', attrs, board => {
-    board.create('functiongraph', [x => (3*x)/(2*x+1)], {
-        name: `\\(f\\)`, withLabel: true,
-        label: {position: '0.1fr left'}
-    });
-    board.create('functiongraph', [x => (-1*x)/(2*x-3)], {
-        strokeColor: JXG.palette.red,
-        name: `\\(f^{-1}\\)`, withLabel: true,
-        label: {position: '0.1fr left', strokeColor: JXG.palette.red}
-    });
-    board.create('functiongraph', [x => x], {
-        strokeOpacity: 0.3,
-        strokeColor: JXG.palette.black,
-        dash: 3,
-    });
-});
-
 </script>
+
+### Exemple {num1}`exemple`
 
 Déterminez la fonction réciproque de $f(x) = \dfrac{3x}{2x + 1}$.
 
@@ -546,6 +326,31 @@ $f(x)^{-1}=-\dfrac{x}{2x-3}$
 :style: width: 70%;
 ```
 
+<script type="module">
+const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+const attrs = [defaults, {
+    boundingBox: [-7.5, 7.5, 7.5, -7.5],
+    defaultAxes: {
+        x: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0}},
+        y: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0}},
+    },
+    defaults: {
+        line: {dash: 2, strokeOpacity: 0.3},
+    },
+}];
+initBoard('bijection4', attrs, board => {
+    board.create('functiongraph', [x => (3*x)/(2*x+1)], {
+        name: `\\(f\\)`, withLabel: true,
+        label: {position: '0.1fr left'}
+    });
+    board.create('functiongraph', [x => (-1*x)/(2*x-3)], {
+        strokeColor: JXG.palette.red,
+        name: `\\(f^{-1}\\)`, withLabel: true,
+        label: {position: '0.1fr left', strokeColor: JXG.palette.red}
+    });
+    board.create('line', [0, 1, -1]);
+});
+</script>
 
 ````{admonition} Propriétés
 :class: note

@@ -131,8 +131,8 @@ Soit la fonction $f(x)=x^3+6x^2+3x−10$.
 Comme le coefficient dominant de $f$ est $1$, les zéros potentiels sont des
 diviseurs de $-10$:\
 $2$ et $-5$, $-2$ et $5$, $1$ et $-10$, $-1$ et $10$\
-$f(2)=2^3+6\dot2^2+3\cdot2−10=8+24+6-10=28$\
-$f(-5)=(-5)^3+6\dot(-5)^2+3\cdot(-5)−10=-125+150-15-10=0$\
+$f(2)=2^3+6\cdot2^2+3\cdot2−10=8+24+6-10=28$\
+$f(-5)=(-5)^3+6\cdot(-5)^2+3\cdot(-5)−10=-125+150-15-10=0$\
 $-5$ est un zéro de $f$. Divisez $f$ par $x-(-5)=x+6$
 
 
@@ -209,36 +209,24 @@ La fonction $g$ est symétrique par rapport à l'origine $O$.
 ```
 
 <script type="module">
-const [{initBoard, JXG}] = await tdoc.imports('tdoc/jsxgraph.js');
-
-const attrs = {
-    boundingBox: [-5.2, 5.2, 5.2, -5.2], axis: true, grid: true,
-    defaultAxes: {
-        x: {ticks: {drawLabels: true, insertTicks: false, ticksDistance: 1, minorTicks: 1}},
-        y: {ticks: {drawLabels: true, insertTicks: false, ticksDistance: 1, minorTicks: 1}},
-    },
-    grid: {majorStep: 1},
+const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+const attrs = [defaults, {
+    boundingBox: [-5.2, 5.2, 5.2, -5.2],
     defaults: {
-        functiongraph: {strokeColor: JXG.palette.blue, strokeWidth: 2},
-        label: {strokeColor: JXG.palette.blue},
+        functiongraph: {withLabel: true, label: {position: '0.65fr right'}},
     },
-};
+}];
 initBoard('fct-paire', attrs, board => {
-    const f = x => x ** 4 - 2 * x ** 2 - 2;
-    board.create('functiongraph', [f], {
-        name: `\\(f\\)`, withLabel: true,
-        label: {position: '0.65fr right'}
+    board.create('functiongraph', [x => x ** 4 - 2 * x ** 2 - 2], {
+        name: `\\(f\\)`,
     });
 });
 initBoard('fct-impaire', attrs, board => {
-    const g = x => x ** 5 - 2 * x ** 3 - 3 * x;
-    board.create('functiongraph', [g], {
-        name: `\\(g\\)`, withLabel: true,
-        label: {position: '0.65fr right'}
+    board.create('functiongraph', [x => x ** 5 - 2 * x ** 3 - 3 * x], {
+        name: `\\(g\\)`,
     });
 });
 </script>
-
 
 ```{admonition} Théorème
 :class: note
