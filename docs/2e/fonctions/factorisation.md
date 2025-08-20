@@ -42,6 +42,12 @@ Exercices résolus:
 ```{youtube} WXNLyUjQvCo
 ```
 
+### Exercices
+
+[Série d'exercices de mise en évidence](mathelot.eu-mise-en-evidence.pdf)
+
+source: (<https://www.mathelot.eu/>)
+
 La mise en évidence simultanée de tous les termes est parfois impossible, mais
 cela devient faisable en les regroupant judicieusement.
 
@@ -122,6 +128,12 @@ Théorie:
 ```{youtube} T9T4IeYGEe4
 ```
 
+### Exercices
+
+[Série d'exercices de factorisation avec les identités remarquables](gomaths.ch-produits-remarquables.pdf)
+
+source: (<https://gomaths.edu-vd.ch/alg_calc_litt.php>)
+
 ## Décomposition du trinôme de deuxième degré
 
 Un **trinôme** est un polynôme composé de trois monômes. Des trinômes du type
@@ -155,6 +167,12 @@ Si $c < 0$, alors les deux nombres cherchés sont de signes différents.
     $$ \dots \:\: \cdot \:\, \dots &= -18\\
     \dots \: + \: \dots &= 3$$
     $x^2+3x-18=(x+6)(x-3)$
+
+### Exercices
+
+[Série d'exercices de factorisation de trinômes 1](gomaths.ch-trinomes-simples.pdf)
+
+source: (<https://gomaths.edu-vd.ch/alg_calc_litt.php>)
 
 ```{admonition} Trinômes avec $a \neq 1$
 :class: tip
@@ -195,6 +213,12 @@ Si $a \neq 1$, la méthode est la suivante:
                     &=3x(x-2)+4(x-2)\\
                     &=(3x+4)(x-2)
     $$
+
+### Exercices
+
+[Série d'exercices de factorisation de trinômes 2](gomaths.ch-trinomes-complexes.pdf)
+
+source: (<https://gomaths.edu-vd.ch/alg_calc_litt.php>)
 
 
 ## Substitution
@@ -247,3 +271,9 @@ méthodes à la suite.
     &= 3x(x+1)^2-(x+1)^2 && \textrm{identités algébriques}\\
     &= (3x-1)(x+1)^2 && \textrm{mise en évidence}
     $$
+
+### Exercices
+
+[Série d'exercices de factorisation](gomaths.ch-factorisation-melange.pdf)
+
+source: (<https://gomaths.edu-vd.ch/alg_calc_litt.php>)
