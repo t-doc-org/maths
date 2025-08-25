@@ -14,5 +14,3 @@ jobs:
     name: Publish
     uses: t-doc-org/common/.github/workflows/deploy-github-pages.yml@main
     secrets: inherit
-    with:
-      dev: true
