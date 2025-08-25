@@ -205,7 +205,7 @@ $f$ coupe l'axe des $x$ en $x_1$ et $x_2$.
 Si $\Delta = 0$
 : $f$ possède un seul zéro: $x_1=-\dfrac{b}{2a}$\
 Forme factorisée: $f(x) = a(x - x_1)^2$.\
-f coupe l'axe des $x$ en $x_1$.
+$f$ coupe l'axe des $x$ en $x_1$.
 
 Si $\Delta < 0$
 : $f$ ne possède pas de zéro. Forme factorisée n'existe pas. f ne
