@@ -257,7 +257,7 @@ méthodes à la suite.
 1.  Appliquez plusieurs méthodes en commençant par la mise en évidence.
     $$
     5x^2 - 10x + 5 &= 5(x^2-2x+1) \qquad && \textrm{mise en évidence}\\
-    &= 5(x-2)^2 && \textrm{identités algébriques}
+    &= 5(x-1)^2 && \textrm{identités algébriques}
     $$
 2.  Appliquez plusieurs méthodes en commençant par la mise en évidence.
     $$
