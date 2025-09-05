@@ -95,8 +95,8 @@ const attrs = [defaults, {
 }];
 initBoard('quadrillage1', attrs);
 initBoard('quadrillage2', attrs);
-initBoard('quadrillage3', [attrs, {boundingbox: [-16, 16, 16, 0]}]);
-initBoard('quadrillage4', [attrs, {boundingbox: [-16, 16, 16, -4]}]);
+initBoard('quadrillage3', [attrs, {boundingbox: [-16, 14, 16, 0]}]);
+initBoard('quadrillage4', [attrs, {boundingbox: [-16, 14, 16, -4]}]);
 </script>
 
 ## Question {nump}`exercice` (4 pts)
