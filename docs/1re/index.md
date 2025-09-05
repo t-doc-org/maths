@@ -6,4 +6,5 @@
 ```{toctree}
 :maxdepth: 1
 objectifs/index
+evaluations-formatives/index
 ```
