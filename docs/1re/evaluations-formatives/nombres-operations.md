@@ -1,17 +1,24 @@
 % Copyright 2025 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-```{metadata}
-subject: "Mathématiques 1re année"
-print-styles: tdoc/print.css
-page-break-force: 1
-page-break-avoid: 2
-solutions: dynamic
-```
-
 # Nombres et opérations
 
-## Question {nump}`exercice` (2 pts)
+```{metadata}
+subject: "Mathématiques 1re année"
+print-styles: tdoc/print-exam.css
+page-break-force: 1
+page-break-avoid: 2
+```
+
+```{include} ../../entete-examen.md
+```
+```{class} align-center
+**Détails des calculs obligatoires. Attention au soin. Calculatrice non
+autorisée.**
+```
+---
+
+## Question {nump}`question`{points}`2`
 
 Répondez aux questions suivantes:
 
@@ -32,7 +39,7 @@ Répondez aux questions suivantes:
 3.  $\sqrt{2}$, $\pi$, etc.
 ```
 
-## Question {nump}`exercice` (3 pts)
+## Question {nump}`question`{points}`3`
 
 Écrivez les ensembles suivants:
 
@@ -51,7 +58,7 @@ Répondez aux questions suivantes:
 3.  $C = [-5; 4[$
 ```
 
-## Question {nump}`exercice` (3 pts)
+## Question {nump}`question`{points}`3`
 
 Soient les ensembles $A= \{1; 2; 3; 4; 5; 6\}$, $B = \{2; 5, 12\}$ et $C = \{-1; 0; 4 ; 7; 12\}$.
 
@@ -70,7 +77,7 @@ Soient les ensembles $A= \{1; 2; 3; 4; 5; 6\}$, $B = \{2; 5, 12\}$ et $C = \{-1;
 3.  $(A \cup C) \setminus (B \cap C) = \{-1; 0; 1; 2; 3; 4; 5; 6 ;7\}$
 ```
 
-## Question {nump}`exercice` (2 pts)
+## Question {nump}`question`{points}`2`
 
 Soient $A$, $B$ et $C$ des sous-ensembles de l'ensemble $M$. Représentez
 $\overline{(A \cup B)\setminus C}$ au moyen d'un diagramme de Venn.
@@ -99,7 +106,7 @@ initBoard('quadrillage3', [attrs, {boundingbox: [-16, 14, 16, 0]}]);
 initBoard('quadrillage4', [attrs, {boundingbox: [-16, 14, 16, -4]}]);
 </script>
 
-## Question {nump}`exercice` (4 pts)
+## Question {nump}`question`{points}`4`
 
 Répondez aux questions en faisant un diagramme de Venn.
 
@@ -125,7 +132,7 @@ lunettes et des baskets. 3 élèves n'ont ni lunettes, ni baskets, ni casquette.
 2.  19 élèves portent des baskets.
 ```
 
-## Question {nump}`exercice` (3 pts)
+## Question {nump}`question`{points}`3`
 
 Écrivez $4.21\overline{8}$ comme fraction. Pas besoin de réduire la fraction.
 
@@ -142,10 +149,9 @@ $$
 9x &= 37.97
 $$
 $x = \dfrac{37.97}{9} = \dfrac{3797}{900}$
-
 ```
 
-## Question {nump}`exercice` (5 pts)
+## Question {nump}`question`{points}`5`
 
 Calculez en simplifiant au maximum. Rédaction sous forme d'un seul calcul.
 

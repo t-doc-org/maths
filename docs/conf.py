@@ -19,4 +19,9 @@ html_theme_options = {
 update(mathjax3_config).chtml.displayAlign = 'left'
 update(mathjax3_config).svg.displayAlign = 'left'
 
-tdoc_solutions = 'dynamic'
+metadata = {
+    'points': {
+        'text': [" ({0} pt)", " ({0} pts)"],
+    },
+    'solutions': 'dynamic',
+}
