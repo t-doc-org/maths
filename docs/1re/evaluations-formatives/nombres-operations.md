@@ -37,6 +37,7 @@ Répondez aux questions suivantes:
 1.  $\mathbb{Z}$, $\mathbb{Q}$ et $\mathbb{R}$
 2.  Vrai
 3.  $\sqrt{2}$, $\pi$, etc.
+4.  $\mathbb{N} = \{0; 1; 2; 3; 4; 5; ...\}$
 ```
 
 ## Question {nump}`question`{points}`3`
