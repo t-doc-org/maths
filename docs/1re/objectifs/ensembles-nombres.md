@@ -5,7 +5,7 @@
 subject: "Mathématiques 1re année"
 ```
 
-# Nombres et opérations
+# Ensembles et nombres
 
 - Savoir ce qu'est un ensemble.
 - Savoir définir un ensemble donné en extension, en compréhension et sous forme d'intervalle.
