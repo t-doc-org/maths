@@ -300,14 +300,16 @@ x &{\,\color{red}>\,} \dfrac{11}{-3}\\
 x &> -\dfrac{11}{3}
 $$
 
+$S = ]-\dfrac{11}{3}; +\infty[$
+
 Pour résoudre une inéquation du 2<sup>e</sup> degré ou plus, il faut faire un
 tableau de signes.
 
 ### Exemple {num1}`exemple`
 
 $$
-x^2 + 4x  + 12 &\leq 0 \qquad &&| \text{factorisation}\\
-(x - 2)(x - 6) &\leq 0 \qquad &&| +7\\
+x^2 + 4x - 12 &\leq 0 \qquad &&| \text{factorisation}\\
+(x - 2)(x + 6) &\leq 0
 $$
 
 Zéros:\
@@ -318,7 +320,7 @@ $x - 2 = 0  \quad \text{ou}  \quad x - 6 = 0 \qquad \Rightarrow \qquad x = 2  \q
 |$x$|{.l .w}$\tiny-\;\infty$|$-6$|{.w}|$2$|{.r .w}$\tiny+\;\infty$
 |$x-2$|$-$||$-$|$0$|$+$
 |$x+6$|$-$|$0$|$+$||$+$
-|$(x - 2)(x - 6) \leq 0$|$+$|$0$|$-$|$0$|$+$
+|$(x - 2)(x + 6) \leq 0$|$+$|$0$|$-$|$0$|$+$
 ```
 $S = [-6; 2]$
 
