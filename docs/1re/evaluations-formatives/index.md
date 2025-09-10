@@ -5,5 +5,5 @@
 
 ```{toctree}
 :maxdepth: 1
-nombres-operations
+ensembles-nombres
 ```
