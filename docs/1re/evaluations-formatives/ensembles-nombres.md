@@ -91,6 +91,7 @@ $\overline{(A \cup B)\setminus C}$ au moyen d'un diagramme de Venn.
 ```{figure} images/diagramme1.png
 :width: 50%
 :align: center
+```
 ````
 
 <script type="module">
