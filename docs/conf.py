@@ -16,6 +16,7 @@ html_theme_options = {
     'show_toc_level': 2,
 }
 
+# TODO(common-0.61): Remove
 update(mathjax3_config).chtml.displayAlign = 'left'
 update(mathjax3_config).svg.displayAlign = 'left'
 
@@ -25,4 +26,8 @@ metadata = {
     },
     'solutions': 'dynamic',
     'styles': ['styles.css'],
+    'mathjax': {
+        'chtml': {'displayAlign': 'left'},
+        'svg': {'displayAlign': 'left'},
+    },
 }
