@@ -24,4 +24,5 @@ metadata = {
         'text': [" ({0} pt)", " ({0} pts)"],
     },
     'solutions': 'dynamic',
+    'styles': ['styles.css'],
 }
