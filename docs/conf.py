@@ -16,10 +16,6 @@ html_theme_options = {
     'show_toc_level': 2,
 }
 
-# TODO(common-0.61): Remove
-update(mathjax3_config).chtml.displayAlign = 'left'
-update(mathjax3_config).svg.displayAlign = 'left'
-
 metadata = {
     'points': {
         'text': [" ({0} pt)", " ({0} pts)"],

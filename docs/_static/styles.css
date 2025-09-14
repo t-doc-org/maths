@@ -1,9 +1,2 @@
 /* Copyright 2025 Caroline Blank <caro@c-space.org> */
 /* SPDX-License-Identifier: CC-BY-NC-SA-4.0 */
-
-/* Adjust the stroke width for SVG character paths. */
-/* TODO(common-0.61): Remove */
-mjx-container[jax="SVG"]:not(#¶) path[data-c],
-mjx-container[jax="SVG"]:not(#¶) use[data-c] {
-  stroke-width: 0;
-}
