@@ -23,14 +23,10 @@ autorisée.**
 Répondez aux questions suivantes:
 
 {.lower-alpha-paren}
-1.  À quels ensembles de nombres appartient $-7$?
-    $\dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots$
-2.  Vrai ou faux, $1.\overline{7}$ est un nombre rationnel?
-    $\dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots$
-3.  Donnez un exemple de nombre irrationnel:
-    $\dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots$
-4.  Écrivez l'ensemble $\mathbb{N}$ en extension:
-    $\dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots$
+1.  À quels ensembles de nombres appartient $-7$? {leader}`.`
+2.  Vrai ou faux, $1.\overline{7}$ est un nombre rationnel? {leader}`.`
+3.  Donnez un exemple de nombre irrationnel: {leader}`.`
+4.  Écrivez l'ensemble $\mathbb{N}$ en extension: {leader}`.`
 
 ```{solution}
 {.lower-alpha-paren}
@@ -45,12 +41,11 @@ Répondez aux questions suivantes:
 Écrivez les ensembles suivants:
 
 {.lower-alpha-paren}
-1.  en compréhension, $A = \{0; 1; 2; 3; 4; 5\} =$
-    $\dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots$
+1.  en compréhension, $A = \{0; 1; 2; 3; 4; 5\} =$ {leader}`.`
 2.  en extension, $B = \{x \in \mathbb{N} | x \textrm{ est un multiple de 5}\} =$
-    $\dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots$
+    {leader}`.`
 3.  sous forme d'intervalle, $C = \{x \in \mathbb{R} | -5 \leq x < 4\} =$
-    $\dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots$
+    {leader}`.`
 
 ```{solution}
 {.lower-alpha-paren}
@@ -61,15 +56,13 @@ Répondez aux questions suivantes:
 
 ## Question {nump}`question`{points}`3`
 
-Soient les ensembles $A= \{1; 2; 3; 4; 5; 6\}$, $B = \{2; 5, 12\}$ et $C = \{-1; 0; 4 ; 7; 12\}$.
+Soient les ensembles $A= \{1; 2; 3; 4; 5; 6\}$, $B = \{2; 5, 12\}$ et
+$C = \{-1; 0; 4 ; 7; 12\}$.
 
 {.lower-alpha-paren}
-1.  Énumérez l'ensemble $A \cap C =$
-    $\dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots$
-2.  Énumérez l'ensemble $A \setminus B =$
-    $\dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots$
-3.  Énumérez l'ensemble $(A \cup C) \setminus (B \cap C) =$
-    $\dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots$
+1.  Énumérez l'ensemble $A \cap C =$ {leader}`.`
+2.  Énumérez l'ensemble $A \setminus B =$ {leader}`.`
+3.  Énumérez l'ensemble $(A \cup C) \setminus (B \cap C) =$ {leader}`.`
 
 ```{solution}
 {.lower-alpha-paren}
@@ -83,8 +76,8 @@ Soient les ensembles $A= \{1; 2; 3; 4; 5; 6\}$, $B = \{2; 5, 12\}$ et $C = \{-1;
 Soient $A$, $B$ et $C$ des sous-ensembles de l'ensemble $M$. Représentez
 $\overline{(A \cup B)\setminus C}$ au moyen d'un diagramme de Venn.
 
-```{jsxgraph} quadrillage1
-:style: width: 100%;
+```{jsxgraph}
+:template: grid(35, 35)
 ```
 
 ````{solution}
@@ -93,20 +86,6 @@ $\overline{(A \cup B)\setminus C}$ au moyen d'un diagramme de Venn.
 :align: center
 ```
 ````
-
-<script type="module">
-const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
-
-const attrs = [defaults, {
-    boundingbox: [-16, 16, 16, -16],
-    axis: false,
-    grid: { theme: 1 },
-}];
-initBoard('quadrillage1', attrs);
-initBoard('quadrillage2', attrs);
-initBoard('quadrillage3', [attrs, {boundingbox: [-16, 14, 16, 0]}]);
-initBoard('quadrillage4', [attrs, {boundingbox: [-16, 14, 16, -4]}]);
-</script>
 
 ## Question {nump}`question`{points}`4`
 
@@ -119,13 +98,11 @@ baskets. 1 élève ne porte que des lunettes. Aucun élève ne porte que des
 lunettes et des baskets. 3 élèves n'ont ni lunettes, ni baskets, ni casquette.
 
 {.lower-alpha-paren}
-1.  Combien d'élèves portent seulement une casquette?
-    $\dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots$
-2.  Combien d'élèves portent des baskets?
-    $\dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots$
+1.  Combien d'élèves portent seulement une casquette? {leader}`.`
+2.  Combien d'élèves portent des baskets? {leader}`.`
 
-```{jsxgraph} quadrillage2
-:style: width: 100%;
+```{jsxgraph}
+:template: grid(35, 35)
 ```
 
 ```{solution}
@@ -138,8 +115,8 @@ lunettes et des baskets. 3 élèves n'ont ni lunettes, ni baskets, ni casquette.
 
 Écrivez $4.21\overline{8}$ comme fraction. Pas besoin de réduire la fraction.
 
-```{jsxgraph} quadrillage3
-:style: width: 100%;
+```{jsxgraph}
+:template: grid(35, 15)
 ```
 
 ```{solution}
@@ -159,8 +136,8 @@ Calculez en simplifiant au maximum. Rédaction sous forme d'un seul calcul.
 
 $\dfrac{\dfrac{3}{4} - \dfrac{7}{24} \cdot \dfrac{8}{21}}{\dfrac{1}{5} \cdot \left( \dfrac{1}{2} - 3\right)} = $
 
-```{jsxgraph} quadrillage4
-:style: width: 100%;
+```{jsxgraph}
+:template: grid(35, 20)
 ```
 
 ```{solution}

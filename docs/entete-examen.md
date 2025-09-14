@@ -7,22 +7,6 @@
   grid-template-columns: 5fr 1fr;
   gap: 4rem;
 }
-.exam-header > :nth-child(1) {
-  position: relative;
-  overflow: hidden;
-}
-.exam-header > :nth-child(1) > p {
-  display: contents;
-}
-.exam-header > :nth-child(1)::after {
-  position: absolute;
-  padding-left: 0.5rem;
-  text-align: right;
-  content: "................................................................"
-           "................................................................"
-           "................................................................"
-           "................................................................";
-}
 table.points > thead > tr > th {
   min-width: 3rem;
 }
@@ -30,7 +14,7 @@ table.points > thead > tr > th {
 
 ````{list-grid}
 :class: exam-header
-- Nom, prénom:
+- Nom, prénom: {leader}`.`
 - Note:
 ````
 ```{flex-table}

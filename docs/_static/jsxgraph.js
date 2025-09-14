@@ -1,8 +1,9 @@
 /* Copyright 2025 Caroline Blank <caro@c-space.org> */
 /* SPDX-License-Identifier: CC-BY-NC-SA-4.0 */
 
-export const [{initBoard, JXG, merge, nonInteractive, withAxesLabels}] =
-    await tdoc.imports('tdoc/jsxgraph.js');
+export const [{
+    initBoard, JXG, merge, nonInteractive, template, withAxesLabels,
+}] = await tdoc.imports('tdoc/jsxgraph.js');
 
 export const defaults = [{
     axis: true, grid: true,
