@@ -103,9 +103,9 @@ où $g(x)$ est un polynôme de degré $n-1$.
 ### Exemple {num1}`exemple`
 
 Soit la fonction $f(x)=x^3+x^2+x-3$.\
-$f(1)=1^3+1^2+1-3=1+1+1-3=0 \Longrightarrow$ $1$ est un zéro de $f$.
+$f(1)=1^3+1^2+1-3=1+1+1-3=0 \Rightarrow$ $1$ est un zéro de $f \Rightarrow f(x) = (x-1) \cdot g(x)$.
 
-Effectuez la division polynomiale de $x^3+x^2+x+1$ par $x-1=x-1$
+Pour trouvez $g(x)$, effectuez la division polynomiale de $x^3+x^2+x+1$ par $x-1$
 $$\begin{array}
  {rrrr|l}  x^3  & +x^2  &  +x   &  -3   &  x - 1\\
  \hline
