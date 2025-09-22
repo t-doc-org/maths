@@ -26,9 +26,9 @@ Les expressions suivantes ne sont pas des fractions rationnelles:
 $\dfrac{5^x}{4}$, $\qquad\dfrac{\sqrt{x-1} + 2}{6x^2-2x+1}\qquad$ et
 $\qquad\dfrac{sin(x)}{3x^2}$
 
-### Plus petit multiple commun d'un polynôme
+### Plus petit multiple commun de deux polynômes
 
-Pour trouver le ppmc d'un polynôme, il faut:
+Pour trouver le ppmc de deux polynômes, il faut:
 
 1.  factoriser chacun des polynômes en facteurs irréductibles;
 2.  prendre chaque facteurs irréductibles distincts avec l'exposant le plus
