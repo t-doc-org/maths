@@ -146,8 +146,9 @@ $$
 = \dfrac{\dfrac{3}{4} - \dfrac{1}{9}}{\dfrac{1}{5} \cdot \left( \dfrac{1}{2} - \dfrac{6}{2}\right)}
 =  \dfrac{\dfrac{27}{36} - \dfrac{4}{36}}{\dfrac{1}{5} \cdot \left( -\dfrac{5}{2}\right)}
 =  \dfrac{\dfrac{23}{36}}{-\dfrac{1}{2}}
+=  -\dfrac{23}{36} : \dfrac{1}{2}
 $$
 $$
-=  -\dfrac{23}{36} \cdot \dfrac{1}{2}= -\dfrac{23}{18}
+= -\dfrac{23}{36} \cdot \dfrac{2}{1}= -\dfrac{23}{18}
 $$
 ```
