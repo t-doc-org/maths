@@ -73,13 +73,14 @@ $$
 &= \dfrac{b^2}{(a+b)(a-b)}
 $$
 
-Pour calculer $\dfrac{\dfrac{c^2-c}{c^2+c}}{\dfrac{c^2-2c+1}{c+1}}$:
+Pour calculer $\dfrac{\dfrac{c^2-c}{c^2+c}}{\dfrac{c^2-2c+1}{c+1}}$
 1.  Transformez la division en multiplication;
 2.  Factoriser au maximum;
 3.  Simpifiez.
 
 $$
 \dfrac{\dfrac{c^2-c}{c^2+c}}{\dfrac{c^2-2c+1}{c+1}}
+&=\dfrac{c^2-c}{c^2+c} : \dfrac{c^2-2c+1}{c+1}\\
 &=\dfrac{c^2-c}{c^2+c} \cdot \dfrac{c+1}{c^2-2c+1}\\
 &=\dfrac{c(c-1)}{c(c+1)} \cdot  \dfrac{c+1}{(c-1)^2}\\
 &=\dfrac{1}{c-1}
