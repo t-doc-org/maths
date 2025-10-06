@@ -47,7 +47,7 @@ Soit la fonction $f(x) = 4x^2 - 28x + 48$.
     |$4(x-3)(x-4) > 0$|$+$|$0$|$-$|$0$|$+$
     ```
 
-    $S = ]-\infty; 3[ \;\cup\; ]4; +\infty]$
+    $S = ]-\infty; 3[ \;\cup\; ]4; +\infty[$
 ````
 
 ## Question {nump}`question`{points}`10`
