@@ -111,7 +111,7 @@ y-1&= \dfrac{x}{3} \qquad \qquad &&| \cdot 3\\
 \text{ en remplaçant } y \text{ par } x
 $$
 
-La réciproque de $f$ est $g(x) = 3x-3$. Dans ce cas, $g$ est une aussi fonction.
+La réciproque de $f$ est $g(x) = 3x-3$. Dans ce cas, $g$ est aussi une fonction.
 
 ```{jsxgraph} reciproque-ex1
 :style: width: 40%;
@@ -125,7 +125,7 @@ $$
 f(x)&=x^2-3 \qquad \qquad &&\text{remplacez } f(x) \text{ par } y
 \text{ et isolez } x\\
 y&= x^2-3 \qquad \qquad &&|+3\\
-y+3&= x^2 \qquad \qquad &&| \cdot 3\\
+y+3&= x^2 \qquad \qquad &&| \text{prendre la racine carré de chaque côté}\\
 \pm \sqrt{y+3} &=x \qquad \qquad &&\text{la réciproque est le membre qui
 contient le } y \text{ en remplaçant } y \text{ par } x
 $$
@@ -320,7 +320,7 @@ x(2y-3)&= -y \qquad \qquad &&| \div (2y-3)\\
 x&= -\dfrac{y}{2y-3}
 $$
 
-$f(x)^{-1}=-\dfrac{x}{2x-3}$
+$f^{-1}(x)=-\dfrac{x}{2x-3}$
 
 ```{jsxgraph} bijection4
 :style: width: 70%;
@@ -503,7 +503,7 @@ $\Rightarrow (f \circ g \circ h)(x) = (f \circ (g \circ h))(x) = ((f \circ g) \c
 :class: note
 Soient deux fonctions réelles $f \colon A \to B$ et $g \colon B \to A$, la
 fonction $g$ est la réciproque de $f$ si et seulement si les fonctions
-composées $f \circ g$ et $g \circ f$ sont égale à la fonction identité:
+composées $f \circ g$ et $g \circ f$ sont égales à la fonction identité:
 
 ```{math}
 :class: align-center
