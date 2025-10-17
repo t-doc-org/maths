@@ -40,7 +40,6 @@ Soit la fonction $f(x) = 2x - 1$.
 La réciproque de $f$, notée ici $g(x)$, est le symétrique de $f$ par
 rapport à la droite identité $y = x$.
 
-
 ````{list-grid}
 :style: grid-template-columns: 4fr 3fr;
 -   # Tableau de valeurs
@@ -58,7 +57,7 @@ rapport à la droite identité $y = x$.
 <script type="module">
 const {defaults, initBoard, JXG, withAxesLabels} =
     await tdoc.import('jsxgraph.js');
-const attrs = [defaults, withAxesLabels(['1'], ['1']), {
+const attrs = [defaults, withAxesLabels([1], [1]), {
     boundingBox: [-7.5, 7.5, 7.5, -7.5],
     defaultAxes: {
         x: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0}},
@@ -139,7 +138,7 @@ La réciproque de $f$ est $\pm \sqrt{x+3}$. Ce n'est pas une fonction!
 <script type="module">
 const {defaults, initBoard, JXG, withAxesLabels} =
     await tdoc.import('jsxgraph.js');
-const attrs = [defaults, withAxesLabels(['1'], ['1']), {
+const attrs = [defaults, withAxesLabels([1], [1]), {
     boundingBox: [-4.5, 4.5, 4.5, -4.5],
     defaultAxes: {
         x: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0}},
@@ -213,7 +212,7 @@ $f$, c'est-à-dire:
 <script type="module">
 const {defaults, initBoard, JXG, withAxesLabels} =
     await tdoc.import('jsxgraph.js');
-const attrs = [defaults, withAxesLabels(['1'], ['1']), {
+const attrs = [defaults, withAxesLabels([1], [1]), {
     boundingBox: [-4, 5.5, 4, -2.5],
     defaultAxes: {
         x: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0}},
@@ -281,7 +280,7 @@ $f^{-1}$ est parfois notée ${}^r\!f$
 <script type="module">
 const {defaults, initBoard, JXG, withAxesLabels} =
     await tdoc.import('jsxgraph.js');
-initBoard('bijection3', [defaults, withAxesLabels(['1'], ['1']), {
+initBoard('bijection3', [defaults, withAxesLabels([1], [1]), {
     boundingBox: [-4.5, 4.5, 4.5, -4.5],
     defaultAxes: {
         x: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0}},
@@ -419,7 +418,6 @@ et donc $\bigl( g \circ f \bigr)(x) = g\bigl(f(x)\bigr)$.
                     &= \dfrac{1}{2}{\color{red}\sqrt{x}}\\
                     &= \dfrac{\sqrt{x}}{2}
     $$
-
 
 ````{admonition} Propriétés
 :class: note
