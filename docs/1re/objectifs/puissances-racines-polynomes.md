@@ -14,6 +14,7 @@ subject: "Mathématiques 1re année"
 - Savoir effectuer des calculs en notation scientifique.
 - Savoir représenter un racine sous forme de puissance à exposants rationnels et vice-versa.
 - Savoir effectuer des calculs avec des puissances et des racines mélangées.
+- Savoir rationnaliser un dénominateur.
 
 # Polynômes et fractions rationnelles
 
