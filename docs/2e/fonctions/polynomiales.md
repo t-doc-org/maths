@@ -34,7 +34,7 @@ où les coefficients $a_n$, $a_{n-1}$, $\dots$, $a_1$, $a_0$ sont des nombres r�
 avec $a_n \neq 0$ et $n \in \mathbb{N}$.
 ````
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
 1.  Simplifiez au maximum.\
@@ -61,7 +61,7 @@ terme dominant. Le coefficient du terme dominant est le **coefficient
 dominant**.
 ```
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
 1.  Le degré de $-3x^2-8x+6$ est $2$ et son coefficient dominant est $-3$.
@@ -100,7 +100,7 @@ f(x) = (x - a) \cdot g(x)
 où $g(x)$ est un polynôme de degré $n-1$.
 ````
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 Soit la fonction $f(x)=x^3+x^2+x-3$.\
 $f(1)=1^3+1^2+1-3=1+1+1-3=0 \Rightarrow$ $1$ est un zéro de $f \Rightarrow f(x) = (x-1) \cdot g(x)$.
@@ -125,7 +125,7 @@ coefficients sont des nombres entiers, alors les zéros potentiels entiers de $f
 sont des diviseurs du terme constant de la fonction.
 ```
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 Soit la fonction $f(x)=x^3+6x^2+3x−10$.
 Comme le coefficient dominant de $f$ est $1$, les zéros potentiels sont des
@@ -184,7 +184,7 @@ $$(-a)^n=
 $$
 ```
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 $f(x) = x^4-2x^2-2$ est une fonction paire:
 
@@ -196,7 +196,7 @@ La fonction $f$ est symétrique par rapport à l'axe des $y$.
 :style: width: 50%;
 ```
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 $g(x) = x^5-2x^3-3x$ est une fonction impaire:
 

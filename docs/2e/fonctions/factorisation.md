@@ -23,7 +23,7 @@ Pour la mise en évidence, il faut trouver le facteur commun à chaque monôme q
 compose le polynôme. Ce facteur commun est mis en évidence. On obtient ainsi le
 produit de ce facteur avec le reste du polynôme.
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
 1.  $x^2y+xy^5-x^2y^2=xy(x+y^4 - xy)$
@@ -51,7 +51,7 @@ source: (<https://www.mathelot.eu/>)
 La mise en évidence simultanée de tous les termes est parfois impossible, mais
 cela devient faisable en les regroupant judicieusement.
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
 
@@ -104,7 +104,7 @@ a^3+b^3 &= (a+b)(a^2-ab+b^2)
 Remarque: $a^2+b^2$ n'est pas factorisable.
 ````
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 ```{list-grid}
 :style: grid-template-columns: 4fr 1fr 4fr; gap: 0.3rem; padding-left: 1rem;
@@ -152,7 +152,7 @@ Si $c > 0$ et $b < 0$, alors les deux nombres cherchés sont négatifs.
 Si $c < 0$, alors les deux nombres cherchés sont de signes différents.
 ```
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
 1.  Pour factoriser $x^2+7x+12$, il faut trouver les deux nombres tel que:
@@ -185,7 +185,7 @@ Si $a \neq 1$, la méthode est la suivante:
 3.  Mettez en évidence en regroupant les termes deux par deux.
 ```
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
 1.  Pour factoriser $2x^2 + 13x - 7$, il faut trouver les deux nombres tel que:
@@ -230,7 +230,7 @@ source: (<https://gomaths.edu-vd.ch/alg_calc_litt.php>)
 3.  Remplacez $y$ par $x^2$ (ou $x^3$).
 ```
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
 1.  Posons $x^2 = y$.
@@ -251,7 +251,7 @@ source: (<https://gomaths.edu-vd.ch/alg_calc_litt.php>)
 Pour factoriser complètement un polynôme, il faut parfois appliquer plusieurs
 méthodes à la suite.
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
 1.  Appliquez plusieurs méthodes en commençant par la mise en évidence.

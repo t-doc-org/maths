@@ -24,7 +24,7 @@ $A$ est appelé l'**ensemble de départ** de $f$ et $B$ est appelé l'**ensemble
 d'arrivée** de $f$.
 ````
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 {.columns-2 .lower-alpha-paren}
 1.  La représentation graphique suivante est une fonction.
@@ -85,7 +85,7 @@ $f(x) = \dfrac{A(x)}{B(x)}$ est $\mathbb{R}$ auquel il faut enlever les valeurs
 de $x$ qui posent problème, c'est-à-dire les valeurs pour lesquels $B(x)$
 s'annule.
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 Calculez le domaine de définition de $f(x) = \dfrac{2x + 1}{4x + 3}$.
 
@@ -95,7 +95,7 @@ $4x + 3 \neq 0 \Longleftrightarrow 4x \neq -3 \Longleftrightarrow x = -\frac{3}{
 
 $\Longrightarrow D_f = \mathbb{R} \setminus \{-\frac{3}{4}\}$
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 Calculez le domaine de définition de $f(x) = \sqrt{7-x}$.
 
@@ -142,7 +142,7 @@ $f(x) = mx$ et sa représentation graphique est une droite qui passe par
 l'origine. Alors qu'une fonction dont $p \neq 0$ est une **fonction affine.**
 ```
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 Déterminez l'expressions algébrique de la droite $f = mx + p$ qui passe par les
 points $P(-2;-1)$ et $Q(3;2)$.
@@ -186,7 +186,7 @@ Si $a > 0$, la parabole est **convexe** (elle "sourit").\
 Si $a < 0$, la parabole est **concave** (elle "fait la tête").
 ```
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 $f(x) = 4x^2 - 2x - 6$ est une fonction quadratique dont les coefficients sont
 $a = 4$, $b = -2$ et $c = -6$.
@@ -212,7 +212,7 @@ Si $\Delta < 0$
 coupe pas l'axe des $x$.
 ```
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 Reprenez $f(x) = 4x^2 - 2x - 6$ et calculez les zéros, c'est-à-dire résolvez
 $4x^2 - 2x - 6 = 0$.
@@ -237,7 +237,7 @@ x_s=-\frac{b}{2a} \text{ et } y_s=f(x_s)=- \dfrac{\Delta}{4a}
 ```
 ````
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 Comme la parabole est convexe, le sommet est un minimum. Calculez ses
 coordonnées.
@@ -290,7 +290,7 @@ d'équation à l'exception de la multiplication ou la division par un nombre
 négatif qui change le sens de l'inégalité.
 
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 $$
 2x - 7 &< 5x + 4 \qquad &&| -5x\\
@@ -305,7 +305,7 @@ $S = ]-\dfrac{11}{3}; +\infty[$
 Pour résoudre une inéquation du 2<sup>e</sup> degré ou plus, il faut faire un
 tableau de signes.
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 $$
 x^2 + 4x - 12 &\leq 0 \qquad &&| \text{factorisation}\\
@@ -327,7 +327,7 @@ $S = [-6; 2]$
 Pour résoudre une inéquation avec une fraction rationnelle, il faut faire un
 tableau de signes.
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 $\dfrac{2x-1}{2-3x} \leq 0$
 

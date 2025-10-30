@@ -15,7 +15,7 @@ Une **fraction rationnelle** est expression algébrique qui peut être transform
 en une fraction où le numérateur et le dénominateur sont des polynômes.
 ```
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 Les expressions suivantes sont des fractions rationnelles:
 
@@ -35,7 +35,7 @@ Pour trouver le ppmc de deux polynômes, il faut:
     élevé;
 3.  le ppmc est le produit de ces facteurs.
 
-#### Exemple {num1}`exemple`
+#### Exemple {num2}`exemple`
 
 Déterminez le ppmc de $2x^3 - 4x^2$ et $x^3-3x^2+2x$.
 
@@ -51,7 +51,7 @@ Déterminez le ppmc de $2x^3 - 4x^2$ et $x^3-3x^2+2x$.
 Le ppmc permet d'effectuer des opérations sur les fractions rationnelles et de
 les simplifier.
 
-#### Exemple {num1}`exemple`
+#### Exemple {num2}`exemple`
 
 Pour calculer $\dfrac{a}{a+b}-\dfrac{a^2}{a^2-b^2}+\dfrac{b}{a-b}$, il faut
 trouver le dénominteur commun.
@@ -94,7 +94,7 @@ Une **fonction rationnelle** est une fonction $f$ dont l'expression algébrique
 est une fraction rationnelle.
 ```
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 Déterminez le domaine de définition de $f(x) = \dfrac{x^2-7x+10}{x^2-9}$.
 
@@ -108,7 +108,7 @@ $\Longrightarrow D_f = \mathbb{R} \setminus \{-3; 3\}$
 Pour résoudre une inéquation du deuxième degré, utilisez un tableau de signes:
 
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 Pour déterminer les zéros de $f(x) = \dfrac{x^2-7x+10}{x^2-9}$, résolvez
 $f(x)=0$.
@@ -124,7 +124,7 @@ x-2 &= 0 \quad &&\text{ou} \quad x-5&=0\\
 x_1 &= 2 \quad &&\text{ou} \quad \quad\: x_2&=5
 $$
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 Pour faire un tableau de signes de $f(x) = \dfrac{x^2-7x+10}{x^2-9}$, utilisez
 le domaine de définition et les zéros calculés dans les exemples précédents.

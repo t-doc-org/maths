@@ -19,7 +19,7 @@ La **réciproque** de la fonction $f: A \to B$ est la relation $g: B \to A$ tell
 que  si $f(x) = y$, alors $g(y) = x$.
 ```
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 Soit la fonction $f(x) = 2x - 1$.
 
@@ -96,7 +96,7 @@ initBoard('reciproque-theorie', attrs, board => {
 });
 </script>
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 Déterminez la réciproque de $f(x)=\dfrac{x}{3}+1$.
 
@@ -116,7 +116,7 @@ La réciproque de $f$ est $g(x) = 3x-3$. Dans ce cas, $g$ est aussi une fonction
 :style: width: 40%;
 ```
 
-### Exemple {num1}`exemple:reciproque`
+### Exemple {num2}`exemple:reciproque`
 
 Déterminez la réciproque de $f(x)=x^2-3$.
 
@@ -189,7 +189,7 @@ $f$, c'est-à-dire:
 ```
 ````
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 ````{list-grid}
 :style: grid-template-columns: 3fr 3fr;
@@ -259,7 +259,7 @@ Remarque:
 $f^{-1}$ est parfois notée ${}^r\!f$
 ````
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 ````{list-grid}
 :style: grid-template-columns: 3fr 3fr;
@@ -303,7 +303,7 @@ initBoard('bijection3', [defaults, withAxesLabels([1], [1]), {
 });
 </script>
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 Déterminez la fonction réciproque de $f(x) = \dfrac{3x}{2x + 1}$.
 
@@ -395,7 +395,7 @@ x &\mapsto g \bigl(f(x) \bigr)
 et donc $\bigl( g \circ f \bigr)(x) = g\bigl(f(x)\bigr)$.
 ````
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 1.  Soient les fonctions $f(x) = x + 1$ et $g(x) = 3x$, calculez $(f \circ g)(x)$.
     $$
@@ -434,7 +434,7 @@ et donc $\bigl( g \circ f \bigr)(x) = g\bigl(f(x)\bigr)$.
     ```
 ````
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 Soient les fonctions $f(x) = 3x+5$ et $g(x) = (x+1)^2$, calculez $(f \circ g)(x)$.
 $$
@@ -454,7 +454,7 @@ $$
 $$
 $\Rightarrow (f \circ g)(x) \neq (g \circ f)(x)$
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 Soient les fonctions $f(x) = x^2$, $g(x) = 3x$ et $h(x) =x-1$, calculez $(f \circ g \circ h)(x)$,
 $(f \circ (g \circ h))(x)$ et $((f \circ g) \circ h)(x)$.
@@ -509,7 +509,7 @@ g(x) = f^{-1}(x) \Longleftrightarrow f\bigl(g(x)\bigr) = g\bigl(f(x)\bigr) = x.
 ```
 ````
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 1.  Soient les fonctions $f(x) = 3x+1$ et $g(x) = \dfrac{1}{3}x-\dfrac{1}{3}$.\
     $g$ est-elle la fonction réciproque de $f$?
