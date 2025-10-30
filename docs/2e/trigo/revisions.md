@@ -120,7 +120,7 @@ Par rapport à l'angle $\alpha$, $a$ est le **côté opposé**, $b$ et $c$ sont 
 
 ## Trigonométrie dans le triangle rectangle
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 ```{jsxgraph} triangle-rectangle
 :style: width: 50%; border: none;
@@ -158,7 +158,7 @@ Dans un triangle rectangle, l'**hypoténuse** est le côté opposé à l'angle d
 mesure de tous ses angles.
 ```
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 Dans un triangle rectangle en $C$, $\alpha = 28^\circ$ et $c = 8$ cm.\
 Résolvez ce triangle.
@@ -173,7 +173,7 @@ $\sin(\alpha) = \dfrac{\text{opp}}{\text{hyp}} \implies \sin(27^\circ) = \dfrac{
 
 $\cos(\alpha) = \dfrac{\text{adj}}{\text{hyp}} \implies \cos(27^\circ) = \dfrac{b}{8} \implies b = 8 \cdot \cos(27^\circ)= 7.13$ cm
 
-### Exemple {num1}`exemple`
+### Exemple {num2}`exemple`
 
 Dans un triangle rectangle en $C$, $a = 3.4$ cm et $b = 7.6$ cm.\
 Résolvez ce triangle.
