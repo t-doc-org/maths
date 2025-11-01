@@ -9,110 +9,86 @@ subject: "Mathématiques 2e année"
 ## Radian
 
 <script type="module">
-const {defaults, initBoard, JXG} =
-    await tdoc.import('jsxgraph.js');
-const attrs = [defaults, {
+const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+initBoard('trig-circle', [defaults, {
     boundingBox: [-1.5, 1.5, 1.5, -1.5],
-    axis: false, grid: false,
+    axis: true, grid: false,
+    pan: {enabled: true}, zoom: {enabled: true}, showFullscreen: true,
     defaults: {
         segment: {strokeColor: JXG.palette.black, strokeWidth: 1},
-        point: {size: 0, label: {anchorY:'top'}, withLabel: false},
+        point: {strokeWidth: 0, size: 2, label: {anchorY:'top'}, withLabel: false},
         angle: {strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
                 fillOpacity: 0.2, strokeWidth: 1,
                 label: {
                     strokeColor: JXG.palette.black,
                     anchorX: 'middle', anchorY: 'middle'}},
         circle: {strokeColor: JXG.palette.black, strokeWidth: 1},
+        arc: {strokeColor: JXG.palette.red, strokeWidth: 3}
     },
-}];
+}], board => {
+    const r = 1;
+    board.create('segment', [[0,0], [r, 0]])
+    // Place the circle.
+    const c = board.create('circle', [[0, 0], r], {
+        strokeColor: JXG.palette.black,
+    });
 
-initBoard('radian-1', attrs, board => {
-    const r = 1;
-    const p1 = board.create('point', [0, 0]);
-    const p2 = board.create('point', [r, 0]);
-    const p3 = board.create('point', [r * Math.cos(1), r * Math.sin(1)]);
-    const r1 = board.create('segment', [p1, p2], {
-        name: '\\(r\\)', withLabel: true,
-        label: {anchorX: 'middle', anchorY: 'top', offset: [0, 4]}
+    // Place the glider point and everything related to the angle.
+    const alphaColor = JXG.palette.green;
+    const attractors = [];
+    for (let i = 0; i < 4; ++i) {
+        for (const a of [0, Math.PI / 6, Math.PI / 4, Math.PI / 3]) {
+            const b = i * Math.PI / 2 + a;
+            attractors.push(board.create('point', [Math.cos(b), Math.sin(b)], {
+                fixed: true, visible: false, withLabel: false,
+            }));
+        }
+    }
+    const p = board.create('glider', [Math.cos(1), Math.sin(1), c], {
+        name: '\\(P\\)', label: {strokeColor: alphaColor},
+        fillColor: alphaColor, attractors, attractorDistance: 0.1,
     });
-    const r2 = board.create('segment', [p1, p3], {withLabel: false});
-    board.create('circle', [p1, p2]);
-    board.create('arc', [p1, p2, p3], {
-        name: '\\(r\\)', withLabel: true,
-        label: {anchorX: 'middle', anchorY: 'middle', offset: [3, 3],
-            strokeColor: JXG.palette.blue},
-        strokeWidth: 3,
+    const alpha = () => {
+        const a = Math.atan2(p.Y(), p.X());
+        return a >= 0 ? a : a + 2 * Math.PI;
+    };
+    const ax1 = board.create('point', [1, 0], {
+        fixed: true, visible: false, withLabel: false,
     });
-    board.create('angle', [p2, p1, p3], {
-        name: '\\(\\alpha\\)', withLabel: true,
-        label: {offset: [-5, -2]}
+    board.create('angle', [ax1, [0, 0], p], {
+        name: '\\(\\alpha\\)', label: {strokeColor: alphaColor},
+        radius: 0.2, orthoType: 'none',
+        strokeColor: alphaColor, fillColor: alphaColor, fillOpacity: 0.3,
     });
-});
-initBoard('radian-2', attrs, board => {
-    const r = 1;
-    const p1 = board.create('point', [0, 0]);
-    const p2 = board.create('point', [r, 0]);
-    const p3 = board.create('point', [r * Math.cos(2), r * Math.sin(2)]);
-    const r1 = board.create('segment', [p1, p2], {
-        name: '\\(r\\)', withLabel: true,
-        label: {anchorX: 'middle', anchorY: 'top', offset: [0, 4]}
+    board.create('segment', [[0, 0], p], {strokeColor: alphaColor});
+
+    // Project the glider point onto the axes.
+    const px = [() => p.X(), 0];
+    const py = [0, () => p.Y()];
+    const arc = board.create('arc', [[0,0], [r, 0], p], {
+        name: '\\(l\\)', label: {strokeColor: JXG.palette.red}, withLabel: true,
     });
-    const r2 = board.create('segment', [p1, p3], {withLabel: false});
-    board.create('circle', [p1, p2]);
-    board.create('arc', [p1, p2, p3], {
-        name: '\\(2r\\)', withLabel: true,
-        label: {anchorX: 'middle', anchorY: 'middle', offset: [3, 3],
-            strokeColor: JXG.palette.blue},
-        strokeWidth: 3,
+
+// Il faut encore affiche pi au lieu des valeurs numériques.
+/*    function display(angle) {
+        if (3.1 <= angle <= 3.15) {
+            return "'\\(\\alpha\\)'";
+        } else {
+            return "\\(\\alpha=${alpha().toFixed(1)}\\;rad\=${(alpha() * 180 / Math.PI).toFixed(1)}\\degree\\)`";
+        }
+    }*/
+
+    // Display values
+    board.create('text',
+        [0.2, 1.3, () => `\
+\\(\\alpha=${alpha().toFixed(1)}\\;rad\
+=${(alpha() * 180 / Math.PI).toFixed(1)}\\degree\\)`], {
+            strokeColor: alphaColor, fixed: true,
     });
-    board.create('angle', [p2, p1, p3], {
-        name: '\\(\\beta\\)', withLabel: true,
-        label: {offset: [-5, -2]}
+    const t = board.create('text', [0.2, 1.2, () => `\\(l=${alpha().toFixed(1)}r\\)`], {
+        strokeColor: JXG.palette.red, fixed: true,
     });
-});
-initBoard('radian-5', attrs, board => {
-    const r = 1;
-    const p1 = board.create('point', [0, 0]);
-    const p2 = board.create('point', [r, 0]);
-    const p3 = board.create('point', [r * Math.cos(5), r * Math.sin(5)]);
-    const r1 = board.create('segment', [p1, p2], {
-        name: '\\(r\\)', withLabel: true,
-        label: {anchorX: 'middle', anchorY: 'top', offset: [0, 4]}
-    });
-    const r2 = board.create('segment', [p1, p3], {withLabel: false});
-    board.create('circle', [p1, p2]);
-    board.create('arc', [p1, p2, p3], {
-        name: '\\(5r\\)', withLabel: true,
-        label: {anchorX: 'middle', anchorY: 'middle', offset: [3, 3],
-            strokeColor: JXG.palette.blue},
-        strokeWidth: 3,
-    });
-    board.create('angle', [p2, p1, p3], {
-        name: '\\(\\gamma\\)', withLabel: true,
-        label: {offset: [7, 0]}
-    });
-});
-initBoard('radian-2pi', attrs, board => {
-    const r = 1;
-    const p1 = board.create('point', [0, 0]);
-    const p2 = board.create('point', [r, 0]);
-    const p3 = board.create('point', [r * Math.cos(2 * Math.PI), r * Math.sin(2 * Math.PI)]);
-    const r1 = board.create('segment', [p1, p2], {
-        name: '\\(r\\)', withLabel: true,
-        label: {anchorX: 'middle', anchorY: 'top', offset: [0, 4]}
-    });
-    const r2 = board.create('segment', [p1, p3], {withLabel: false});
-    board.create('circle', [p1, p2]);
-    board.create('arc', [p1, p2, p3], {
-        name: '\\(2\\pi r\\)', withLabel: true,
-        label: {anchorX: 'middle', anchorY: 'middle', offset: [-8, 10],
-            strokeColor: JXG.palette.blue},
-        strokeWidth: 3,
-    });
-    board.create('angle', [p2, p1, p3], {
-        name: '\\(360^\\circ\\)', withLabel: true,
-        label: {offset: [-5, -2]}
-    });
+
 });
 </script>
 
@@ -123,39 +99,9 @@ d'une longueur égale au rayon.
 
 ### Exemple {num2}`exemple`
 
-````{list-grid}
-:style: grid-template-columns:1fr 1fr;
--   ```{jsxgraph} radian-1
-    :style: width: 50%; border: none;
-    ```
--   Par définition:
-
-    $\alpha = \dfrac{r}{r} = 1$ rad
-
--   ```{jsxgraph} radian-2
-    :style: width: 50%; border: none;
-    ```
--   L'arc de cerlce intercepté par un angle est proportionnel à l'angle.<br>
-    En doublant l'arc de cercle, l'angle double aussi.
-
-    $\beta = \dfrac{2r}{r} = 2$ rad
-
--   ```{jsxgraph} radian-5
-    :style: width: 50%; border: none;
-    ```
--   De même au multipliant par 5.
-
-    $\gamma = \dfrac{5r}{r} = 5$ rad
-
--   ```{jsxgraph} radian-2pi
-    :style: width: 50%; border: none;
-    ```
--   Tour complet:<br>
-    La circonférence d'un cercle vaut $2\pi r$.
-
-    $360^\circ= \dfrac{2 \pi r}{r} = 2\pi$ rad
-
-````
+```{jsxgraph} trig-circle
+:style: width: 100%; border: none;
+```
 
 ````{admonition} Théorème
 **Transformation des angles entre radians et degrés**
