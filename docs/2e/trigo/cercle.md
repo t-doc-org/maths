@@ -9,7 +9,7 @@ subject: "Mathématiques 2e année"
 ## Radian
 
 <script type="module">
-const {defaults, initBoard} =
+const {defaults, initBoard, JXG} =
     await tdoc.import('jsxgraph.js');
 const attrs = [defaults, {
     boundingBox: [-1.5, 1.5, 1.5, -1.5],
