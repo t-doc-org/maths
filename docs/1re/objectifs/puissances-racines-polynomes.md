@@ -4,8 +4,9 @@
 ```{metadata}
 subject: "Mathématiques 1re année"
 ```
+# Puissance, racine, polynômes et fractions rationnelles
 
-# Puissances et racines
+## Puissances et racines
 
 - Connaître les propriétés des puissances (règles de calcul).
 - Connaître les propriétés des racines (règles de calcul).
@@ -16,7 +17,7 @@ subject: "Mathématiques 1re année"
 - Savoir effectuer des calculs avec des puissances et des racines mélangées.
 - Savoir rationnaliser un dénominateur.
 
-# Polynômes et fractions rationnelles
+## Polynômes et fractions rationnelles
 
 - Connaître les définitions (monôme, polynôme, degré).
 - Savoir addition, soustraire, multiplier et diviser deux polynômes.
