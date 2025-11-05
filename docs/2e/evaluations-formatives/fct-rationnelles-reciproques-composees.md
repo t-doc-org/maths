@@ -56,7 +56,7 @@ Ordonnée à l'origine: $f(0) = \dfrac{0^2 - 7 \cdot 0 + 12}{0^3+27} = \dfrac{12
 ```
 ````
 
-## Question {nump}`question`{points}`5`
+## Question {nump}`question`{points}`6`
 
 Effectuez le calcul suivant et répondez sous forme simplifiée:
 
@@ -66,7 +66,7 @@ $\dfrac{\dfrac{1}{x} + 1}{\dfrac{1}{x}} \cdot \dfrac{\dfrac{1}{x}+x-1}{x^2-x+1}$
 $\dfrac{\dfrac{1}{x} + 1}{\dfrac{1}{x}} \cdot \dfrac{\dfrac{1}{x}+x-1}{x^2-x+1}=\dfrac{1+x}{x}$
 ```
 
-## Question {nump}`question`{points}`5`
+## Question {nump}`question`{points}`8`
 
 Soient les fonctions $f(x) = 3x -4$ et $g(x) = (x + 1)^2$
 
@@ -76,10 +76,10 @@ Soient les fonctions $f(x) = 3x -4$ et $g(x) = (x + 1)^2$
     restreignant le domaine si nécessaire.
 3.  Calculez $f \circ g$ et $g \circ f$.
 
-```{solution}
+````{solution}
 {.lower-alpha-paren}
 1.  $f(x) = 3x -4$ est une droite, elle est donc bijective, car à chaque valeur
-    de y correspond exactement une image.
+    de y correspond exactement une préimage.
 
     $g(x) = (x + 1)^2$ est une parabole, elle n'est donc pas bijective, car
     $g(1) = g(-3) = 4$.
@@ -87,9 +87,51 @@ Soient les fonctions $f(x) = 3x -4$ et $g(x) = (x + 1)^2$
 
     $g^{-1}(x) = \sqrt{x} - 1$ pour $D_f = ]-1; \infty[$ ou
     $g^{-1}(x) = -\sqrt{x} - 1$ pour $D_f = ]-\infty; -1[$
+
+    ```{jsxgraph} fct-bij-sol
+    :style: width: 70%;
+    ```
+
+<script type="module">
+const {defaults, initBoard, JXG, withAxesLabels} =
+    await tdoc.import('jsxgraph.js');
+const attrs = [defaults, withAxesLabels([1], [1]), {
+    boundingBox: [-4.8, 4.8, 4.8, -4.8],
+    defaults: {
+        functiongraph: {
+            withLabel: true,
+            label: {distance: 1},
+        },
+    },
+}];
+initBoard('fct-bij-sol', attrs, board => {
+    board.create('functiongraph', [x => 3*x-4], {
+        name: "\\(f\\)",
+        label: {position: '0.55fr right', strokeOpacity: 0.4},
+        strokeOpacity: 0.4,
+    });
+    board.create('functiongraph', [x => (x+4)/3], {
+        name: "\\(f^{-1}\\)",
+        label: {position: '0.25fr left'}
+    });
+    board.create('functiongraph', [x => (x+1) ** 2, -1, 5], {
+        name: "\\(g\\)",
+        label: {position: '0.25fr right', strokeOpacity: 0.4, strokeColor: JXG.palette.purple},
+        strokeOpacity: 0.4,
+        strokeColor: JXG.palette.purple
+    });
+    board.create('functiongraph', [x => Math.sqrt(x) -1], {
+        name: "\\(g^{-1}\\)",
+        label: {position: '0.75fr left', strokeColor: JXG.palette.purple},
+        strokeColor: JXG.palette.purple
+    });
+});
+</script>
+
+
 3.  $(f \circ g)(x) = f(g(x)) = 3(x + 1)^2 - 4 = 3x^2 + 6x -1$
 
     $(g \circ f)(x) = g(f(x)) = (3x-3)^2 = 9x^2 -18x + 9$
-```
+````
 
 
