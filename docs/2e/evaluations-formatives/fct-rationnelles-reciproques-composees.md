@@ -78,12 +78,17 @@ Soient les fonctions $f(x) = 3x -4$ et $g(x) = (x + 1)^2$
 
 ```{solution}
 {.lower-alpha-paren}
-1.  $f(x) = 3x -4$ est une droite, elle est donc bijective.
-    $g(x) = (x + 1)^2$ est une parabole, elle n'est donc pas bijective.
+1.  $f(x) = 3x -4$ est une droite, elle est donc bijective, car à chaque valeur
+    de y correspond exactement une image.
+
+    $g(x) = (x + 1)^2$ est une parabole, elle n'est donc pas bijective, car
+    $g(1) = g(-3) = 4$.
 2.  $f^{-1}(x) = \dfrac{x+4}{3}$
+
     $g^{-1}(x) = \sqrt{x} - 1$ pour $D_f = ]-1; \infty[$ ou
     $g^{-1}(x) = -\sqrt{x} - 1$ pour $D_f = ]-\infty; -1[$
 3.  $(f \circ g)(x) = f(g(x)) = 3(x + 1)^2 - 4 = 3x^2 + 6x -1$
+
     $(g \circ f)(x) = g(f(x)) = (3x-3)^2 = 9x^2 -18x + 9$
 ```
 
