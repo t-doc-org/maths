@@ -6,4 +6,5 @@
 ```{toctree}
 :maxdepth: 1
 revisions-fct-polyn
+fct-rationnelles-reciproques-composees
 ```
