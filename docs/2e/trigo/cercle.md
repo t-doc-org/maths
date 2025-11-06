@@ -9,9 +9,9 @@ subject: "Mathématiques 2e année"
 ## Radian
 
 <script type="module">
-const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
-initBoard('trig-circle', [defaults, {
-    boundingBox: [-1.5, 1.5, 1.5, -1.5],
+const {defaults, initBoard, JXG, withAxesLabels} = await tdoc.import('jsxgraph.js');
+initBoard('trig-circle', [defaults, withAxesLabels([-1, 1], [-1, 1]), {
+    boundingBox: [-1.2, 1.5, 1.2, -1.2],
     axis: true, grid: false,
     pan: {enabled: true}, zoom: {enabled: true}, showFullscreen: true,
     defaults: {
@@ -27,26 +27,41 @@ initBoard('trig-circle', [defaults, {
     },
 }], board => {
     const r = 1;
-    board.create('segment', [[0,0], [r, 0]])
+    board.create('segment', [[0,0], [r, 0]], {
+        name: '\\(r\\)', withLabel: true
+    });
     // Place the circle.
     const c = board.create('circle', [[0, 0], r], {
         strokeColor: JXG.palette.black,
     });
 
-    // Place the glider point and everything related to the angle.
-    const alphaColor = JXG.palette.green;
-    const attractors = [];
+    function gcd(a, b) {
+        while (b != 0) {
+            [a, b] = [b, a % b]
+        }
+        return a;
+    }
+
+    const angles = [];
     for (let i = 0; i < 4; ++i) {
-        for (const a of [0, Math.PI / 6, Math.PI / 4, Math.PI / 3]) {
-            const b = i * Math.PI / 2 + a;
-            attractors.push(board.create('point', [Math.cos(b), Math.sin(b)], {
-                fixed: true, visible: false, withLabel: false,
-            }));
+        for (const [n, d] of [[0, 1], [1, 6], [1, 4], [1, 3]]) {
+            const a = i * d + 2 * n, b = 2 * d;
+            const cd = gcd(a, b);
+            angles.push([a / cd, b / cd]);
         }
     }
+
+    // Place the glider point and everything related to the angle.
+    const alphaColor = JXG.palette.green;
+    const attractors = angles.map(([n, d]) => {
+        const a = n * Math.PI / d;
+        return board.create('point', [Math.cos(a), Math.sin(a)], {
+            fixed: true, visible: false, withLabel: false,
+        });
+    });
     const p = board.create('glider', [Math.cos(1), Math.sin(1), c], {
         name: '\\(P\\)', label: {strokeColor: alphaColor},
-        fillColor: alphaColor, attractors, attractorDistance: 0.1,
+        fillColor: alphaColor, attractors, attractorDistance: 0.04,
     });
     const alpha = () => {
         const a = Math.atan2(p.Y(), p.X());
@@ -65,27 +80,38 @@ initBoard('trig-circle', [defaults, {
     // Project the glider point onto the axes.
     const px = [() => p.X(), 0];
     const py = [0, () => p.Y()];
-    const arc = board.create('arc', [[0,0], [r, 0], p], {
-        name: '\\(l\\)', label: {strokeColor: JXG.palette.red}, withLabel: true,
+    const ox = board.create('point', [r, 0], {
+        visible: false,
+    });
+    const arc = board.create('arc', [[0,0], ox, p], {
+        name: '\\(l\\)',
+        label: {anchorX: 'right', offset: [0, -4], strokeColor: JXG.palette.red},
+        withLabel: true,
     });
 
-// Il faut encore affiche pi au lieu des valeurs numériques.
-/*    function display(angle) {
-        if (3.1 <= angle <= 3.15) {
-            return "'\\(\\alpha\\)'";
-        } else {
-            return "\\(\\alpha=${alpha().toFixed(1)}\\;rad\=${(alpha() * 180 / Math.PI).toFixed(1)}\\degree\\)`";
+    function almostEqual(a, b) { return Math.abs(a - b) < 1e-6; }
+
+    function display(angle) {
+        for (const [n, d] of angles) {
+            if (Math.abs(angle - n * Math.PI / d) < 1e-6) {
+                if (n === 0) return 0;
+                const ns = `${n > 1 ? n : ''}\\pi`;
+                if (d == 1) return ns;
+                return `\\dfrac{${ns}}{${d}}`;
+            }
         }
-    }*/
+        return alpha().toFixed(2);
+    }
 
     // Display values
     board.create('text',
-        [0.2, 1.3, () => `\
-\\(\\alpha=${alpha().toFixed(1)}\\;rad\
+        [-1, 1.3, () => `\
+\\(\\alpha=${display(alpha())}\\;rad\
 =${(alpha() * 180 / Math.PI).toFixed(1)}\\degree\\)`], {
             strokeColor: alphaColor, fixed: true,
     });
-    const t = board.create('text', [0.2, 1.2, () => `\\(l=${alpha().toFixed(1)}r\\)`], {
+
+    board.create('text', [-1, 1.15, () => `\\(l=${alpha().toFixed(2)}r\\)`], {
         strokeColor: JXG.palette.red, fixed: true,
     });
 
@@ -93,14 +119,19 @@ initBoard('trig-circle', [defaults, {
 </script>
 
 ````{admonition} Définition
-Un angle d'un **radian** intercepte sur la circonférence de ce cercle un arc
-d'une longueur égale au rayon.
+Un angle $\alpha$ d'un **radian** intercepte sur la circonférence d'un cercle de
+rayon $r$ un arc d'une longueur égale au rayon.
+
+```{math}
+:class: align-center
+\alpha = \dfrac{l}{r}
+```
 ````
 
 ### Exemple {num2}`exemple`
 
 ```{jsxgraph} trig-circle
-:style: width: 100%; border: none;
+:style: width: 80%; border: none;
 ```
 
 ````{admonition} Théorème
@@ -114,6 +145,21 @@ Soient $x$ un angle exprimé en radians et $\varphi$ le même angle exprimé en
 x = \frac{\varphi}{360^\circ} \cdot 2\pi \quad \text{et} \quad \varphi = \frac{x}{2\pi} \cdot 360^\circ.
 ```
 ````
+
+### Exemple {num2}`exemple`
+
+La mesure d'un angle en radians est proportionnelle à sa mesure en degrés.
+
+```{flex-table}
+:class: angle
+| degrés  | $360^\circ$ | $1$ | $\varphi$
+| radians | $2\pi$ | $x$ | $1$
+```
+{vspace}`0.5lh`
+1 degré correspond à: $\quad x = \dfrac{2\pi}{360^\circ} \approx 0.0175^\circ$
+
+1 radian correspond à: $\quad \varphi = \dfrac{360^\circ}{2\pi} \approx 57.3$
+
 
 ````{admonition} Propriétés
 **Table d'équivalence des angles remarquables:**
@@ -137,9 +183,9 @@ x = \frac{\varphi}{360^\circ} \cdot 2\pi \quad \text{et} \quad \varphi = \frac{x
 
 ### Exemple {num2}`exemple`
 
-En radians, un angle de $37^\circ$ vaut $\dfrac{37^\circ}{360^\circ} \cdot 2\pi = \dfrac{37\pi}{180} \approx 0.2056$
+En radians, un angle de $37^\circ$ vaut $\qquad \dfrac{37^\circ}{360^\circ} \cdot 2\pi = \dfrac{37\pi}{180} \approx 0.2056$
 
-Un angle de 5.13 rad vaut en degré $\dfrac{5.13}{2\pi} \cdot 360^\circ \approx 293.93^\circ$
+Un angle de 5.13 rad vaut en degré $\qquad \dfrac{5.13}{2\pi} \cdot 360^\circ \approx 293.93^\circ$
 
 ### Remarques
 
@@ -150,76 +196,125 @@ Un angle de 5.13 rad vaut en degré $\dfrac{5.13}{2\pi} \cdot 360^\circ \approx 
     radians.
 
 <script type="module">
-const {defaults, initBoard} =
-    await tdoc.import('jsxgraph.js');
-const attrs = [defaults, {
-    boundingBox: [-1.5, 1.5, 1.5, -1.5],
-    axis: true, grid: false,
+const {defaults, initBoard, withAxesLabels} = await tdoc.import('jsxgraph.js');
+initBoard('cercle-trigo', [defaults, withAxesLabels([-1, 1], [-1, 1]), {
+    boundingBox: [-1.75, 1.75, 1.75, -1.75], grid: false,
+    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
     defaults: {
         segment: {strokeColor: JXG.palette.black, strokeWidth: 1},
         line: {strokeColor: JXG.palette.black, strokeWidth: 1},
-        point: {size: 0, label: {anchorY:'top'}},
+        point: {size: 0, withLabel: false, label: {anchorY:'top'}},
         angle: {strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
                 fillOpacity: 0.2, strokeWidth: 1,
                 label: {strokeColor: JXG.palette.black}},
         circle: {strokeColor: JXG.palette.black, strokeWidth: 1},
     },
-}];
+}], board => {
+    // Place the circle.
+    const c = board.create('circle', [[0, 0], 1], {
+        strokeColor: JXG.palette.black,
+    });
 
-initBoard('cercle-trigo', attrs, board => {
-    const phi = Math.PI/5;
-    const ox = board.create('point', [1,0]);
-    const xp = board.create('point', [Math.cos(Math.PI/5), 0], {
-        size: 1,
-        name: '\\(X_p\\)', withLabel: true,
-        label: {anchorX: 'middle', anchorY: 'top', offset: [0, -5]}
+    // Place the glider point and everything related to the angle.
+    const alphaColor = JXG.palette.green;
+    const attractors = [];
+    for (let i = 0; i < 4; ++i) {
+        for (const a of [0, Math.PI / 6, Math.PI / 4, Math.PI / 3]) {
+            const b = i * Math.PI / 2 + a;
+            attractors.push(board.create('point', [Math.cos(b), Math.sin(b)], {
+                fixed: true, visible: false, withLabel: false,
+            }));
+        }
+    }
+    const p = board.create('glider', [0.8, 0.6, c], {
+        name: '\\(P\\)', label: {strokeColor: alphaColor}, size: 3,
+        withLabel: true,
+        fillColor: alphaColor, attractors, attractorDistance: 0.1,
     });
-    const yp = board.create('point', [0, Math.sin(phi)], {
-        size: 1,
-        name: '\\(Y_p\\)', withLabel: true,
-        label: {anchorX: 'right', anchorY: 'middle', offset: [-5, 0]}
+    const alpha = () => {
+        const a = Math.atan2(p.Y(), p.X());
+        return a >= 0 ? a : a + 2 * Math.PI;
+    };
+    const ax1 = board.create('point', [1, 0], {
+        fixed: true, visible: false, withLabel: false,
     });
-    const o = board.create('point', [0, 0], {
-        name: '\\(O\\)', withLabel: true,
-        label: {anchorX: 'right', anchorY: 'top', offset: [-2, -2]}
+    board.create('angle', [ax1, [0, 0], p], {
+        name: '\\(\\alpha\\)', label: {strokeColor: alphaColor},
+        radius: 0.2, orthoType: 'none',
+        strokeColor: alphaColor, fillColor: alphaColor, fillOpacity: 0.3,
     });
-    const p2 = board.create('point', [1, 0]);
-    const p = board.create('point', [Math.cos(phi), Math.sin(phi)], {
-        size: 1,
-        name: '\\(P\\)', withLabel: true,
-        label: {anchorX: 'middle', anchorY: 'middle', offset: [6, 10]}
+    board.create('segment', [[0, 0], [1, () => Math.tan(alpha())]], {strokeColor: alphaColor});
+    board.create('segment', [[0, 0], p], {strokeColor: alphaColor});
+    board.create('text',
+        [2, 6, () => `\
+\\(\\alpha=${alpha().toFixed(2)}\\;rad\
+=${(alpha() * 180 / Math.PI).toFixed(1)}\\degree\\)`], {
+            strokeColor: alphaColor, fixed: true,
     });
-    const t = board.create('point', [1, Math.tan(phi)], {
-        size: 1,
-        name: '\\(T\\)', withLabel: true,
-        label: {anchorX: 'left', anchorY: 'top', offset: [5, 0]}
+
+    // Project the glider point onto the axes.
+    const px = board.create('point', [() => p.X(), 0], {
+        name: '\\(\X_p\\)',
+        label: {anchorX: 'middle', offset: [0, -3], strokeColor: JXG.palette.black},
+        withLabel: true,
     });
-    const cos = board.create('segment', [o, xp], {
-        strokeWidth: 3,
-        name: '\\(cos(\\varphi)\\)', withLabel: true,
-        label: {anchorX: 'middle', anchorY: 'top', offset: [0, -3]}
+    const py = board.create('point', [0, () => p.Y()], {
+        name: '\\(\Y_p\\)',
+        label: {anchorX: 'right', anchorY: 'middle', offset: [-5, 0]},
+        withLabel: true,
     });
-    const sin = board.create('segment', [o, yp], {
-        strokeWidth: 3,
-        name: '\\(sin(\\varphi)\\)', withLabel: true,
-        label: {anchorX: 'right', anchorY: 'middle', offset: [-5, 0]}
+    board.create('segment', [p, px], {dash: 2, strokeColor: JXG.palette.black});
+    board.create('segment', [p, py], {dash: 2, strokeColor: JXG.palette.black});
+    board.create('line', [[1,0], [1, Math.tan(alpha())]], {dash: 2, strokeColor: JXG.palette.black});
+
+    // Place the elements related to the sine.
+    const sinColor = JXG.palette.blue;
+    board.create('arrow', [[0, 0], py], {
+        name: '\\(sin(\\alpha)\\)', withLabel: true,
+        label: {
+            position: '0.5fr left', anchorX: 'right', anchorY: 'middle',
+            distance: 0, offset: [-7, 0], strokeColor: sinColor,
+        },
+        strokeWidth: 2, strokeColor: sinColor,
     });
-    const tan = board.create('segment', [ox, t], {
-        strokeWidth: 3,
-        name: '\\(tan(\\varphi)\\)', withLabel: true,
-        label: {anchorX: 'left', anchorY: 'middle', offset: [5, 0]}
+    board.create('text',
+        [2, 5.7, () => `\\(sin(\\alpha)=${Math.sin(alpha()).toFixed(3)}\\)`], {
+        strokeColor: sinColor, fixed: true,
     });
-    const r2 = board.create('segment', [o, p], {withLabel: false});
-    board.create('circle', [o, p2]);
-    board.create('angle', [p2, o, p], {
-        name: '\\(\\varphi\\)', withLabel: true,
-        label: {anchorX: 'middle', anchorY: 'middle', offset: [2, 2]}
+
+    // Place the elments related to the cosine.
+    const cosColor = JXG.palette.red;
+    board.create('arrow', [[0, 0], px], {
+        name: '\\(cos(\\alpha)\\)', withLabel: true,
+        label: {
+            position: '0.5fr right', anchorX: 'middle', anchorY: 'top',
+            distance: 0, offset: [0, -7], strokeColor: cosColor,
+        },
+        strokeWidth: 2, strokeColor: cosColor,
     });
-    board.create('segment', [yp, p], {dash: 3});
-    board.create('segment', [xp, p], {dash: 3});
-    board.create('line', [ox, t], {dash: 3});
-    board.create('line', [o, t], {
-        straightFirst: false,
+    board.create('text',
+        [2, 5.4, () => `\\(cos(\\alpha)=${Math.cos(alpha()).toFixed(3)}\\)`], {
+        strokeColor: cosColor, fixed: true,
+    });
+
+    // Place the elments related to the tan.
+    const t = board.create('point', [1, () => Math.tan(alpha())], {
+        size: 0,
+        name: '\\(T(X_T; Y_T)\\)', withLabel: true,
+        label: {anchorX: 'left', anchorY: 'middle', offset: [8, 0]}
+    });
+    const tanColor = JXG.palette.purple;
+    board.create('arrow', [[1, 0], t], {
+        name: '\\(tan(\\alpha)\\)', withLabel: true,
+        label: {
+            position: '0.5fr right', anchorX: 'left', anchorY: 'middle',
+            distance: 0, offset: [7, 0], strokeColor: tanColor,
+        },
+        strokeWidth: 2, strokeColor: tanColor,
+    });
+    board.create('text',
+        [2, 5.4, () => `\\(tan(\\alpha)=${Math.tan(alpha()).toFixed(3)}\\)`], {
+        strokeColor: tanColor, fixed: true,
     });
 
 });
@@ -233,21 +328,49 @@ trigonométrique**.
 **Sinus, cosinus et tangente dans le cercle trigonométrique**
 
 ```{jsxgraph} cercle-trigo
-:style: width: 80%; border: none;
+:style: width: 100%; border: none;
 ```
 
-Soient $\varphi$ un angle reporté dans le cercle trigonométrique, $P$ le point
+Soient $\alpha$ un angle reporté dans le cercle trigonométrique, $P$ le point
 d'intersection de la demi-droite de l'angle avec le cercle et $T$ le point
 d'intersection de cette demi-droite avec l'axe des tangentes, comme dans la
 figure ci-dessus.
 
-Le **cosinus** de l'angle $\varphi$, noté $\cos(\varphi)$, est l'abscisse $X_P$
+Le **cosinus** de l'angle $\alpha$, noté $\cos(\alpha)$, est l'abscisse $X_P$
 du point $P$.
 
-Le **sinus** de l'angle $\varphi$, noté $\sin(\varphi)$, est l'ordonnée $Y_P$ du
+Le **sinus** de l'angle $\alpha$, noté $\sin(\alpha)$, est l'ordonnée $Y_P$ du
 point$P$.
 
-La **tangente** de l'angle $\varphi$, notée $\tan(\varphi)$, est l'ordonnée
+La **tangente** de l'angle $\alpha$, notée $\tan(\alpha)$, est l'ordonnée
 $Y_T$ du point $T$.
 
 ````
+
+````{admonition} Propriétés
+:class: note
+-   La tangente n'est pas définie si $\varphi = \dfrac{\pi}{2} = 90^\circ$ et si
+    $\varphi = \dfrac{3\pi}{2} = 270^\circ$.
+-   Pour déterminer la tangente de l'ange $\varphi$ situé dans le deuxième ou le
+    troisième quadrant, il faut prolonger la demi-droite $OP$ dans l'autre
+    direction pour trouver l'intersection T de l'angle avec l'axe des tangentes.
+-   Pour les angles plus grands qu'un tour complet ($2\pi$ ou $360^\circ$),
+    ```{math}
+    :class: align-center
+    sin(\varphi) = sin(\varphi + k \cdot 2\pi) = sin(\varphi + k \cdot 360^\circ)\\
+    cos(\varphi) = cos(\varphi + k \cdot 2\pi) = cos(\varphi + k \cdot 360^\circ)\\
+    tan(\varphi) = tan(\varphi + k \cdot \pi) = cos(\varphi + k \cdot 180^\circ)\\
+    ```
+````
+
+```{tip}
+**Changement de degrés en radians (et vice-versa) sur la calculatrice**
+
+1.  Pressez la touche {kbd}`mode`.
+2.  Dans le menu qui s'affiche, choisissez {kbd}`DEGREE` ou {kbd}`RADIAN` au
+    moyen du curseur (gros bouton).
+3.  Validez le mode désiré en appuyant sur {kbd}`enter`.
+4.  Sortez du menu en appuyant sur {kbd}`2nd` suivi de {kbd}`quit`.
+
+Le mode **DEG** ou **RAD** est affiché en haut de l'écran.
+```
