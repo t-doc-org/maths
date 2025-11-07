@@ -215,21 +215,34 @@ initBoard('cercle-trigo', [defaults, withAxesLabels([-1, 1], [-1, 1]), {
         strokeColor: JXG.palette.black,
     });
 
-    // Place the glider point and everything related to the angle.
-    const alphaColor = JXG.palette.green;
-    const attractors = [];
+    function gcd(a, b) {
+        while (b != 0) {
+            [a, b] = [b, a % b]
+        }
+        return a;
+    }
+
+    const angles = [];
     for (let i = 0; i < 4; ++i) {
-        for (const a of [0, Math.PI / 6, Math.PI / 4, Math.PI / 3]) {
-            const b = i * Math.PI / 2 + a;
-            attractors.push(board.create('point', [Math.cos(b), Math.sin(b)], {
-                fixed: true, visible: false, withLabel: false,
-            }));
+        for (const [n, d] of [[0, 1], [1, 6], [1, 4], [1, 3]]) {
+            const a = i * d + 2 * n, b = 2 * d;
+            const cd = gcd(a, b);
+            angles.push([a / cd, b / cd]);
         }
     }
+
+    // Place the glider point and everything related to the angle.
+    const alphaColor = JXG.palette.green;
+    const attractors = angles.map(([n, d]) => {
+        const a = n * Math.PI / d;
+        return board.create('point', [Math.cos(a), Math.sin(a)], {
+            fixed: true, visible: false, withLabel: false,
+        });
+    });
     const p = board.create('glider', [0.8, 0.6, c], {
         name: '\\(P\\)', label: {strokeColor: alphaColor}, size: 3,
         withLabel: true,
-        fillColor: alphaColor, attractors, attractorDistance: 0.1,
+        fillColor: alphaColor, attractors, attractorDistance: 0.04,
     });
     const alpha = () => {
         const a = Math.atan2(p.Y(), p.X());
@@ -245,12 +258,7 @@ initBoard('cercle-trigo', [defaults, withAxesLabels([-1, 1], [-1, 1]), {
     });
     board.create('segment', [[0, 0], [1, () => Math.tan(alpha())]], {strokeColor: alphaColor});
     board.create('segment', [[0, 0], p], {strokeColor: alphaColor});
-    board.create('text',
-        [2, 6, () => `\
-\\(\\alpha=${alpha().toFixed(2)}\\;rad\
-=${(alpha() * 180 / Math.PI).toFixed(1)}\\degree\\)`], {
-            strokeColor: alphaColor, fixed: true,
-    });
+
 
     // Project the glider point onto the axes.
     const px = board.create('point', [() => p.X(), 0], {
@@ -317,9 +325,58 @@ initBoard('cercle-trigo', [defaults, withAxesLabels([-1, 1], [-1, 1]), {
         strokeColor: tanColor, fixed: true,
     });
 
+    function almostEqual(a, b) { return Math.abs(a - b) < 1e-6; }
+
+    function display(angle) {
+        for (const [n, d] of angles) {
+            if (Math.abs(angle - n * Math.PI / d) < 1e-6) {
+                if (n === 0) return 0;
+                const ns = `${n > 1 ? n : ''}\\pi`;
+                if (d == 1) return ns;
+                return `\\dfrac{${ns}}{${d}}`;
+            }
+        }
+        return alpha().toFixed(2);
+    }
+
+    function display_value(value) {
+        if (Math.abs(Math.abs(value) - 0.5) < 1e-6) {
+            return `${value < 0 ? '-' : ''}\\dfrac{1}{2}`;
+        } else if (Math.abs(Math.abs(value) - Math.sqrt(2)/2) < 1e-6) {
+            return `${value < 0 ? '-' : ''}\\dfrac{\\sqrt{2}}{2}`;
+        } else if (Math.abs(Math.abs(value) - Math.sqrt(3)/2) < 1e-6) {
+            return `${value < 0 ? '-' : ''}\\dfrac{\\sqrt{3}}{2}`;
+        } else if (Math.abs(Math.abs(value) - Math.sqrt(3)/3) < 1e-6) {
+            return `${value < 0 ? '-' : ''}\\dfrac{\\sqrt{3}}{3}`;
+        } else if (Math.abs(Math.abs(value) - Math.sqrt(3)) < 1e-6) {
+            return `${value < 0 ? '-' : ''}\\sqrt{3}`;
+        } else {
+            return value.toFixed(2);
+        }
+    }
+
+    // Display values
+    board.create('text',
+        [-1.5, 1.6, () => `\
+\\(\\alpha=${display(alpha())}\\;rad\
+=${(alpha() * 180 / Math.PI).toFixed(1)}\\degree\\)`], {
+            strokeColor: alphaColor, fixed: true,
+    });
+
+    board.create('text', [-1.5, 1.35, () => `\\(\\sin(\\alpha)=${display_value(Math.sin(alpha()))}\\)`], {
+        strokeColor: JXG.palette.blue, fixed: true,
+    });
+    board.create('text', [-1.5, 1.1, () => `\\(\\cos(\\alpha)=${display_value(Math.cos(alpha()))}\\)`], {
+        strokeColor: JXG.palette.red, fixed: true,
+    });
+    board.create('text', [-1.5, 0.85, () => `\\(\\tan(\\alpha)=${Math.tan(alpha()) > 100 ? `indéfini` : display_value(Math.tan(alpha()))}\\)`], {
+        strokeColor: JXG.palette.purple, fixed: true,
+    });
+
 });
 </script>
 
+## Cercle trigonométrique
 
 ````{admonition} Définition
 Le cercle de rayon 1 et centré sur l'origine est appelé **cercle
