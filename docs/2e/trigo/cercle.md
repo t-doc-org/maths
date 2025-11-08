@@ -256,7 +256,7 @@ initBoard('cercle-trigo', [defaults, withAxesLabels([-1, 1], [-1, 1]), {
         radius: 0.2, orthoType: 'none',
         strokeColor: alphaColor, fillColor: alphaColor, fillOpacity: 0.3,
     });
-    board.create('segment', [[0, 0], [1, () => Math.tan(alpha())]], {strokeColor: alphaColor});
+    board.create('segment', [[0, 0], [1, () => Math.tan(alpha())]], {strokeColor: alphaColor, dash: 2});
     board.create('segment', [[0, 0], p], {strokeColor: alphaColor});
 
 
