@@ -68,13 +68,13 @@ const {defaults, initBoard, JXG, withAxesLabels} = await tdoc.import('jsxgraph.j
 initBoard('sin', [defaults, withAxesLabels(undefined, [-1, 1]), {
     boundingBox: [-1.5, 1.5, 6.5, -1.5],
     axis: true, grid: false,
-    pan: {enabled: true}, zoom: {enabled: true}, showFullscreen: true,
-        defaultAxes: {
+    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
+    defaultAxes: {
         x: {
             name: '\\(x, \\alpha\\)',
             ticks: {
-                scale: Math.PI, scaleSymbol: 'π',
-                insertTicks: false, ticksDistance: 1, minorTicks: 0},
+                insertTicks: false, scale: Math.PI, scaleSymbol: 'π',
+            },
         },
         y: {
             name: '\\(y\\)',
@@ -212,7 +212,7 @@ const {defaults, initBoard, JXG, withAxesLabels} = await tdoc.import('jsxgraph.j
 initBoard('cos', [defaults, withAxesLabels([-1, 1], undefined), {
     boundingBox: [-3, 6.5, 2.5, -1.5],
     axis: true, grid: false,
-    pan: {enabled: true}, zoom: {enabled: true}, showFullscreen: true,
+    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
         defaultAxes: {
         x: {
             name: '\\(x\\)',
@@ -226,7 +226,7 @@ initBoard('cos', [defaults, withAxesLabels([-1, 1], undefined), {
         },
     },
     defaults: {
-        point: {strokeWidth: 0},
+        point: {strokeWidth: 0, size: 0},
         line: {strokeWidth: 1},
     },
 }], board => {
@@ -303,7 +303,7 @@ initBoard('cos', [defaults, withAxesLabels([-1, 1], undefined), {
         strokeColor: cosColor,
     });
     const pcos = board.create('point', [() => p.X(), alpha], {
-        withLabel: false, fillColor: cosColor,
+        withLabel: false, fillColor: cosColor, size: 2
     });
     board.create('segment', [p, pcos], {
         dash: 2, strokeColor: JXG.palette.black,
@@ -356,8 +356,8 @@ const {defaults, initBoard, JXG, withAxesLabels} = await tdoc.import('jsxgraph.j
 initBoard('tan', [defaults, withAxesLabels(undefined, [-1, 1]), {
     boundingBox: [-1.5, 6.5, 6.5, -6.5],
     axis: true, grid: false,
-    pan: {enabled: true}, zoom: {enabled: true}, showFullscreen: true,
-        defaultAxes: {
+    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
+    defaultAxes: {
         x: {
             name: '\\(x, \\alpha\\)',
             ticks: {
@@ -370,7 +370,7 @@ initBoard('tan', [defaults, withAxesLabels(undefined, [-1, 1]), {
         },
     },
     defaults: {
-        point: {strokeWidth: 0},
+        point: {strokeWidth: 0, size: 0},
         line: {strokeWidth: 1},
     },
 }], board => {
@@ -435,13 +435,13 @@ initBoard('tan', [defaults, withAxesLabels(undefined, [-1, 1]), {
     // Place the elements related to the tan.
     const tanColor = JXG.palette.purple;
     const ptan = board.create('point', [alpha, () => Math.tan(alpha())], {
-        withLabel: false, fillColor: tanColor,
+        withLabel: false, fillColor: tanColor, size: 2
     });
     board.create('arrow', [[1, 0], [1, () => Math.tan(alpha())]], {
         name: '\\(tan(\\alpha)\\)', withLabel: true,
         label: {
-            position: '0.5fr right', anchorX: 'middle', anchorY: 'top',
-            distance: 0, offset: [0, -7], strokeColor: tanColor,
+            position: '0.5fr right', anchorX: 'middle', anchorY: 'middle',
+            distance: 0, offset: [7, 0], strokeColor: tanColor,
         },
         strokeWidth: 2, strokeColor: tanColor,
     });
@@ -459,6 +459,15 @@ initBoard('tan', [defaults, withAxesLabels(undefined, [-1, 1]), {
     });
     board.create('segment', [ptan, ax], {
         dash: 2, strokeColor: JXG.palette.black,
+    });
+    board.create('line', [[1,0], [1, 1]], {
+        dash: 2, strokeColor: JXG.palette.black
+    });
+    board.create('line', [[Math.PI/2, 0], [Math.PI/2, 1]], {
+        dash: 2, strokeColor: JXG.palette.black, strokeOpacity: 0.2,
+    });
+    board.create('line', [[3 * Math.PI/2, 0], [3 * Math.PI/2, 1]], {
+        dash: 2, strokeColor: JXG.palette.black, strokeOpacity: 0.2,
     });
     board.create('text',
         [2, 5.5, () => `\\(tan(\\alpha)=${display_value(Math.tan(alpha()))}\\)`], {
