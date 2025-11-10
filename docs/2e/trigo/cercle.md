@@ -13,10 +13,14 @@ const {defaults, initBoard, JXG, withAxesLabels} = await tdoc.import('jsxgraph.j
 initBoard('trig-circle', [defaults, withAxesLabels([-1, 1], [-1, 1]), {
     boundingBox: [-1.2, 1.5, 1.2, -1.2],
     axis: true, grid: false,
-    pan: {enabled: true}, zoom: {enabled: true}, showFullscreen: true,
+    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
+    defaultAxes: {
+        x: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0},},
+        y: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0},},
+    },
     defaults: {
         segment: {strokeColor: JXG.palette.black, strokeWidth: 1},
-        point: {strokeWidth: 0, size: 2, label: {anchorY:'top'}, withLabel: false},
+        point: {strokeWidth: 0, size: 0, label: {anchorY:'top'}, withLabel: false},
         angle: {strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
                 fillOpacity: 0.2, strokeWidth: 1,
                 label: {
@@ -61,7 +65,7 @@ initBoard('trig-circle', [defaults, withAxesLabels([-1, 1], [-1, 1]), {
     });
     const p = board.create('glider', [Math.cos(1), Math.sin(1), c], {
         name: '\\(P\\)', label: {strokeColor: alphaColor},
-        fillColor: alphaColor, attractors, attractorDistance: 0.04,
+        fillColor: alphaColor, attractors, attractorDistance: 0.04, size: 3
     });
     const alpha = () => {
         const a = Math.atan2(p.Y(), p.X());
@@ -200,10 +204,14 @@ const {defaults, initBoard, withAxesLabels} = await tdoc.import('jsxgraph.js');
 initBoard('cercle-trigo', [defaults, withAxesLabels([-1, 1], [-1, 1]), {
     boundingBox: [-1.75, 1.75, 1.75, -1.75], grid: false,
     pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
+    defaultAxes: {
+        x: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0},},
+        y: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0},},
+    },
     defaults: {
         segment: {strokeColor: JXG.palette.black, strokeWidth: 1},
         line: {strokeColor: JXG.palette.black, strokeWidth: 1},
-        point: {size: 0, withLabel: false, label: {anchorY:'top'}},
+        point: {strokeWidth: 0, size: 0, label: {anchorY:'top'}, withLabel: false},
         angle: {strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
                 fillOpacity: 0.2, strokeWidth: 1,
                 label: {strokeColor: JXG.palette.black}},
@@ -240,9 +248,8 @@ initBoard('cercle-trigo', [defaults, withAxesLabels([-1, 1], [-1, 1]), {
         });
     });
     const p = board.create('glider', [0.8, 0.6, c], {
-        name: '\\(P\\)', label: {strokeColor: alphaColor}, size: 3,
-        withLabel: true,
-        fillColor: alphaColor, attractors, attractorDistance: 0.04,
+        name: '\\(P\\)', label: {strokeColor: alphaColor},
+        fillColor: alphaColor, attractors, attractorDistance: 0.04, size: 3
     });
     const alpha = () => {
         const a = Math.atan2(p.Y(), p.X());
