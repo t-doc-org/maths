@@ -19,50 +19,6 @@ f(x + k \cdot p) = f(x).
 Le nombre $p$ est alors appelé la **période** de la fonction.
 ````
 
-<style>
-.angle td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding: 10px;
-    text-align: center;
-    width: 100px;
-}
-</style>
-
-````{admonition} Propriétés
-**Fonctions sinus, cosinus et tangente**
-
-Pour $k \in \mathbb{Z}$.
-
-```{flex-table}
-:class: angle
-|   | **sin** | **cos** | **tan**
-| **Dom. de déf.**  | $\mathbb{R}$ | $\mathbb{R}$ | $\mathbb{R} \setminus \{\dfrac{\pi}{2} + k \cdot \pi\}$
-| **Images** | $[-1; 1]$ | $[-1; 1]$ | $\mathbb{R}$
-| **Période** | $2\pi$ | $2\pi$ | $\pi$
-| **Zéros** | $k \cdot \pi$ | $\dfrac{\pi}{2} + k \cdot \pi$ | $k \cdot \pi$
-| **Parité** | impaire | paire | impaire
-```
-````
-
-## Représentation graphique de la fonction sinus:
-
-```{jsxgraph} sin
-:style: width: 100%; border: none;
-```
-
-## Représentation graphique de la fonction cosinus:
-
-```{jsxgraph} cos
-:style: width: 60%; border: none;
-```
-
-## Représentation graphique de la fonction tangente:
-
-```{jsxgraph} tan
-:style: width: 80%; border: none;
-```
-
 <script type="module">
 const {defaults, initBoard, JXG, withAxesLabels} = await tdoc.import('jsxgraph.js');
 initBoard('sin', [defaults, withAxesLabels(undefined, [-1, 1]), {
@@ -470,7 +426,7 @@ initBoard('tan', [defaults, withAxesLabels(undefined, [-1, 1]), {
         dash: 2, strokeColor: JXG.palette.black, strokeOpacity: 0.2,
     });
     board.create('text',
-        [2, 5.5, () => `\\(tan(\\alpha)=${display_value(Math.tan(alpha()))}\\)`], {
+        [2, 5.5, () => `\\(\\tan(\\alpha)=${Math.tan(alpha()) > 100 ? `indéfini` : display_value(Math.tan(alpha()))}\\)`], {
         strokeColor: tanColor, fixed: true,
     });
 
@@ -507,6 +463,87 @@ initBoard('tan', [defaults, withAxesLabels(undefined, [-1, 1]), {
 });
 </script>
 
+## Fonction $\sin(x)$
+
+
+```{jsxgraph} sin
+:style: width: 100%; border: none;
+```
+
+$$
+\sin: \mathbb{R} & \to [-1; 1]\\
+         x & \mapsto \sin(x)
+$$
+$\sin(x) = \sin(x + k \cdot 2\pi)$, la période de $\sin(x)$ est $2\pi$.
+
+$\sin(-x) = -\sin(x)$, la fonction $\sin(x)$ est donc impaire.
+
+zéros: $\{k \cdot \pi \; | \; k \in \mathbb{Z}\}$
+
+
+## Fonction $\cos(x)$
+
+```{jsxgraph} cos
+:style: width: 60%; border: none;
+```
+
+$$
+\cos: \mathbb{R} & \to [-1; 1]\\
+         x & \mapsto \cos(x)
+$$
+$\cos(x) = \cos(x + k \cdot 2\pi)$, la période de $\cos(x)$ est $2\pi$.
+
+$\cos(-x) = \cos(x)$, la fonction $\cos(x)$ est donc paire.
+
+zéros: $\left\{\dfrac{\pi}{2} + k \cdot \pi \; | \; k \in \mathbb{Z}\right\}$
+
+
+## Fonction $\tan(x)$
+
+```{jsxgraph} tan
+:style: width: 80%; border: none;
+```
+
+$$
+\tan: \mathbb{R} \setminus \left\{\dfrac{\pi}{2} + k \cdot \pi\right\} \ & \to \mathbb{R}\\
+         x & \mapsto \tan(x)
+$$
+$\tan(x) = \tan(x + k \cdot \pi)$, la période de $\tan(x)$ est $\pi$.
+
+$\tan(-x) = -\tan(x)$, la fonction $\tan(x)$ est donc impaire.
+
+zéros: $\{k \cdot \pi \; | \; k \in \mathbb{Z}\}$
+
+
+<style>
+.angle td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+    width: 100px;
+}
+</style>
+
+````{admonition} Propriétés
+**Fonctions sinus, cosinus et tangente**
+
+Pour $k \in \mathbb{Z}$.
+
+```{flex-table}
+:class: angle
+|   | **sin** | **cos** | **tan**
+| **Dom. de déf.**  | $\mathbb{R}$ | $\mathbb{R}$ | $\mathbb{R} \setminus \left\{\dfrac{\pi}{2} + k \cdot \pi\right\}$
+| **Images** | $[-1; 1]$ | $[-1; 1]$ | $\mathbb{R}$
+| **Période** | $2\pi$ | $2\pi$ | $\pi$
+| **Zéros** | $k \cdot \pi$ | $\dfrac{\pi}{2} + k \cdot \pi$ | $k \cdot \pi$
+| **Parité** | impaire | paire | impaire
+```
+````
+
+
+
+
 ````{admonition} Définition
 La fonction réciproque de la fonction sinus restreinte à
 $\left[ -\dfrac{\pi}{2};\dfrac{\pi}{2} \right]$ est appelée **arc sinus**, notée $\arcsin$:
@@ -535,3 +572,84 @@ $\left] -\dfrac{\pi}{2};\dfrac{\pi}{2} \right[$ est appelée **arc tangente**, n
             x & \mapsto \arctan(x)
 ```
 ````
+
+<script type="module">
+const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+const attrs = [defaults, {
+    boundingBox: [-4, 3.5, 4, -1.5],
+    grid: {majorStep: [Math.PI / 4, 0.5]},
+    defaultAxes: {
+        x: {ticks: {scale: Math.PI, scaleSymbol: 'π'}},
+        y: {ticks: {minorTicks: 1}},
+    },
+}];
+initBoard('arcsin', attrs, board => {
+    board.create('functiongraph', [x => Math.sin(x)], {
+        strokeOpacity: 0.3,
+    });
+    board.create('functiongraph', [x => Math.asin(x), -1, 1], {
+        name: '\\(arcsin\\)', withLabel: true,
+        label: {position: '1fr right', offset: [-30, 0]},
+    });
+});
+initBoard('arccos', attrs, board => {
+    board.create('functiongraph', [x => Math.cos(x)], {
+        strokeOpacity: 0.3,
+    });
+    board.create('functiongraph', [x => Math.acos(x), -1, 1], {
+        name: '\\(arccos\\)', withLabel: true,
+        label: {position: '0fr right', offset: [-20, 0]},
+    });
+});
+initBoard('arctan', attrs, board => {
+    board.create('functiongraph', [x => Math.tan(x)], {
+        strokeOpacity: 0.3,
+    });
+    board.create('functiongraph', [x => Math.atan(x)], {
+        name: '\\(arctan\\)', withLabel: true,
+        label: {position: '0.8fr right', offset: [-30, 0]},
+    });
+});
+</script>
+
+## Représentation de la fonction $\arcsin(x)$
+
+```{jsxgraph} arcsin
+:style: width: 100%; border: none;
+```
+
+## Représentation de la fonction $\arccos(x)$
+
+```{jsxgraph} arccos
+:style: width: 100%; border: none;
+```
+
+## Représentation de la fonction $\arctan(x)$
+
+```{jsxgraph} arctan
+:style: width: 100%; border: none;
+```
+
+## Exemple {num2}`exemple`
+
+Déterminez tous les angles $\alpha$ en degrés tels que $\tan(\alpha) = 0.8$.
+
+Une solution possible est $\quad \alpha = \arctan(0.8) \approx 38.66^\circ$
+
+Comme la tangente a une période de $180^\circ$, l'ensemble des solutions est:
+
+$S = \{ 38.66^\circ + k \cdot 180^\circ \Bigm| k \in \mathbb{Z}\}$.
+
+## Exemple {num2}`exemple`
+
+Déterminez tous les angles $\alpha$ en randians tels que $\sin(x) = \dfrac{\sqrt{2}}{2}$.
+
+Une solution possible est $\quad x_1 = \arcsin(\dfrac{\sqrt{2}}{2}) = \dfrac{\pi}{4}$
+
+Par symétrie dans le cercle trigonométrique, une autre solution possible est
+$x_2 = \pi - x_1 = \pi - \dfrac{\pi}{4} = \dfrac{3\pi}{4}$.
+
+Comme le sinus a une période de $2\pi$, l'ensemble des solutions est:
+
+$S = \left\{\dfrac{\pi}{4} + k \cdot 2\pi\Bigm| k \in \mathbb{Z}\right\} \cup
+\left\{\dfrac{3\pi}{4} + k \cdot 2\pi\Bigm| k \in \mathbb{Z}\right\}$
