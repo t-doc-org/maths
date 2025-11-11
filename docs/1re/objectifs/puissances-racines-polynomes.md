@@ -28,5 +28,5 @@ subject: "Mathématiques 1re année"
     - Décomposition des trinômes.
 - Savoir simplifier des fractions algébriques grâce à la factorisation.
 - Savoir résoudre des équations à l’aide de la factorisation.
-- Savoir trouver le plus petit dénominateur commun de fractions algébrique pour pouvoir
-les additionner ou les soustraire.
+- Savoir trouver le plus petit dénominateur commun de fractions algébriques pour
+    pouvoir les additionner ou les soustraire.
