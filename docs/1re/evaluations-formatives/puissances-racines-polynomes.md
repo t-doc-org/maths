@@ -39,7 +39,7 @@ Calculez et répondez en notation scientifique:
 $400\,000\,000 \cdot 0,000\,000\,6=$
 
 ```{solution}
-$4 \cdot 10^8 \cdot 6 \cdot 10^{-7}=(4 \cdot 6) \cdot (10^8 \cdot 10^{-7})= 24 \cdot 10^{8-7}=24 \cdot 10^1=2.4 \cdot 10^1 \cdot 10^2=2.4 \cdot 10^2$
+$4 \cdot 10^8 \cdot 6 \cdot 10^{-7}=(4 \cdot 6) \cdot (10^8 \cdot 10^{-7})= 24 \cdot 10^{8-7}=24 \cdot 10^1=2.4 \cdot 10^1 \cdot 10=2.4 \cdot 10^2$
 ```
 
 ## Question {nump}`question`{points}`6`
@@ -57,7 +57,7 @@ Effectuez les calculs suivants (réponses simplifiées et sans exposants négati
 ```{solution}
 {.lower-alpha-paren}
 1.  $\dfrac{x^{2} \cdot x^{5}}{x^{9}} = x^{2+5-9}=x^{-2}=\dfrac{1}{x^2}$
-2.  $(-5)^4 \cdot (-2)^4 =(-10)^4= 10\,000$
+2.  $(-5)^4 \cdot (-2)^4 =10^4= 10\,000$
 3.  $(-3xy^3)^{3} =-27x^3y^9$
 4.  $\left (-\dfrac{7}{8} \right)^{-2} =\left (-\dfrac{8}{7} \right)^{2} =\dfrac{64}{49}$
 5.  $\sqrt{\dfrac{4}{15}} \cdot \sqrt{\dfrac{6}{10}}=\sqrt{\dfrac{4 \cdot 6}{15 \cdot 10}}=\dfrac{\sqrt{4}}{\sqrt{25}}=\dfrac{2}{5}$
