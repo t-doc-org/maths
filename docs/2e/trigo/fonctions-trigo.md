@@ -396,14 +396,6 @@ initBoard('tan', [defaults, withAxesLabels(undefined, [-1, 1]), {
     const ptan = board.create('point', [alpha, () => Math.tan(alpha())], {
         withLabel: false, fillColor: tanColor, size: 2
     });
-    board.create('arrow', [[1, 0], [1, () => Math.tan(alpha())]], {
-        name: '\\(tan(\\alpha)\\)', withLabel: true,
-        label: {
-            position: '0.5fr right', anchorX: 'middle', anchorY: 'middle',
-            distance: 0, offset: [7, 0], strokeColor: tanColor,
-        },
-        strokeWidth: 2, strokeColor: tanColor,
-    });
     board.create('curve', [a => a, a => Math.tan(a), 0, 2 * Math.PI], {
         strokeColor: tanColor,
     });
@@ -421,6 +413,14 @@ initBoard('tan', [defaults, withAxesLabels(undefined, [-1, 1]), {
     });
     board.create('line', [[1,0], [1, 1]], {
         dash: 2, strokeColor: JXG.palette.black
+    });
+    board.create('arrow', [[1, 0], [1, () => Math.tan(alpha())]], {
+        name: '\\(tan(\\alpha)\\)', withLabel: true,
+        label: {
+            position: '0.5fr right', anchorX: 'middle', anchorY: 'middle',
+            distance: 0, offset: [7, 0], strokeColor: tanColor,
+        },
+        strokeWidth: 2, strokeColor: tanColor,
     });
     board.create('text',
         [2, 5.5, () => `\\(\\tan(\\alpha)=${Math.tan(alpha()) > 100 ? `indéfini` : display_value(Math.tan(alpha()))}\\)`], {
@@ -706,23 +706,34 @@ const attrs = [defaults, {
         },
     },
 }];
-initBoard('sinus', attrs, board => {
-    const a = board.create('slider', [[-6, 3.5] , [-2, 3.5], [0, 1, 4], {
-        name: '\\(a= \\)',
-    }]);
-    const b = board.create('slider', [[-6, 3] , [-2, 3], [0, 1, 4], {
-        name: '\\(b = \\)',
-    }]);
-    const c = board.create('slider', [[-6, 2.5] , [-2, 2.5], [- 2*Math.PI, 0, 2 * Math.PI], {
-        name: '\\(c = \\)',
-        /*snapWidth: Math.PI/4,
-        snapValues: [- 2 * Math.PI,- 3 * Math.PI/2, - Math.PI, - 3 * Math.PI/4, - Math.PI/2, -Math.PI/4, 0, Math.PI/4, Math.PI/2, 3 * Math.PI/4, Math.PI, 3 * Math.PI/2, 2 * Math.PI]*/
-    }]);
-        const d = board.create('slider', [[-6, 2] , [-2, 2], [-3, 0, 3], {
-        name: '\\(b = \\)',
-    }]);
+initBoard('sinus', attrs, board => {    const a = board.create('slider', [[-6, 3.5] , [-2, 3.5], [0, 1, 4]], {
+        name: '\\(a\\)', size: 4,
+    });
+    const b = board.create('slider', [[-6, 3] , [-2, 3], [0, 1, 4]], {
+        name: '\\(b\\)',  size: 4,
+    });
+    const snaps = [];
+    for (let i = -4; i <= 4; ++i) snaps.push(i * Math.PI / 2);
+    const c = board.create('slider', [[-6, 2.5] , [-2, 2.5], [- 2*Math.PI, 0, 2 * Math.PI]], {
+        name: '\\(c\\)',  size: 4,
+        snapValues: snaps,
+        snapValueDistance: Math.PI / 12,
+    });
+        const d = board.create('slider', [[-6, 2] , [-2, 2], [-3, 0, 3]], {
+        name: '\\(d\\)',  size: 4,
+    });
     board.create('functiongraph', [function(x) {
         return a.Value() * Math.sin(b.Value() * x + c.Value()) + d.Value();
     }]);
+    board.create('text', [1, 3, () => {
+        const sc = c.Value() >= 0 ? '+' : '-';
+        const vc = Math.abs(c.Value()).toFixed(2);
+        const sd = d.Value() >= 0 ? '+' : '-';
+        const vd = Math.abs(d.Value()).toFixed(2);
+        return `\\(${a.Value().toFixed(2)} \\cdot sin(${b.Value().toFixed(2)} \\cdot x ${sc} ${vc}) ${sd} ${vd}\\)`;
+        },
+    ], {
+        strokeColor: JXG.palette.blue, fixed: true,
+    });
 });
 </script>
