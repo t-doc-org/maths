@@ -164,18 +164,21 @@ initBoard('sin', [defaults, withAxesLabels(undefined, [-1, 1]), {
 const {defaults, initBoard, JXG, withAxesLabels} = await tdoc.import('jsxgraph.js');
 initBoard('cos', [defaults, withAxesLabels([-1, 1], undefined), {
     boundingBox: [-3, 6.5, 2.5, -1.5],
-    axis: true, grid: false,
+    axis: true, grid: {majorStep: [1, Math.PI / 2]},
     pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
         defaultAxes: {
         x: {
-            name: '\\(x\\)',
+            name: '\\(x, \\alpha\\)',
             ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0},
         },
         y: {
             name: '\\(y, \\alpha\\)',
             ticks: {
+                insertTicks: false,
+                ticksDistance: 1/2, minorTicks: 1, ticksPerLabel: 1,
                 scale: Math.PI, scaleSymbol: 'π',
-                insertTicks: false, ticksDistance: 1, minorTicks: 0},
+                label: { toFraction: true, useMathJax: true },
+            },
         },
     },
     defaults: {
@@ -571,37 +574,59 @@ $\left] -\dfrac{\pi}{2};\dfrac{\pi}{2} \right[$ est appelée **arc tangente**, n
 const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
 const attrs = [defaults, {
     boundingBox: [-4, 3.5, 4, -1.5],
-    grid: {majorStep: [Math.PI / 4, 0.5]},
+    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
+    grid: {majorStep: [1, Math.PI / 4]},
     defaultAxes: {
-        x: {ticks: {scale: Math.PI, scaleSymbol: 'π'}},
-        y: {ticks: {minorTicks: 1}},
+        x: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0}},
+        y: {
+            ticks: {
+                insertTicks: false,
+                ticksDistance: 1/2, minorTicks: 1, ticksPerLabel: 1,
+                scale: Math.PI, scaleSymbol: 'π',
+                label: { toFraction: true, useMathJax: true },
+            },
+        },
     },
 }];
 initBoard('arcsin', attrs, board => {
     board.create('functiongraph', [x => Math.sin(x)], {
         strokeOpacity: 0.3,
     });
+    board.create('functiongraph', [x => Math.sin(x), -Math.PI/2, Math.PI/2]);
     board.create('functiongraph', [x => Math.asin(x), -1, 1], {
         name: '\\(arcsin\\)', withLabel: true,
-        label: {position: '1fr right', offset: [-30, 0]},
+        label: {
+            position: '1fr right', offset: [-30, 0],
+            strokeColor: JXG.palette.red,
+        },
+        strokeColor: JXG.palette.red,
     });
 });
 initBoard('arccos', attrs, board => {
     board.create('functiongraph', [x => Math.cos(x)], {
         strokeOpacity: 0.3,
     });
+    board.create('functiongraph', [x => Math.cos(x),0, Math.PI]);
     board.create('functiongraph', [x => Math.acos(x), -1, 1], {
         name: '\\(arccos\\)', withLabel: true,
-        label: {position: '0fr right', offset: [-20, 0]},
+        label: {
+            position: '0fr right', offset: [-20, 0],
+            strokeColor: JXG.palette.red,
+        },
+        strokeColor: JXG.palette.red,
     });
 });
 initBoard('arctan', attrs, board => {
     board.create('functiongraph', [x => Math.tan(x)], {
         strokeOpacity: 0.3,
     });
+        board.create('functiongraph', [x => Math.tan(x), -Math.PI/2, Math.PI/2]);
     board.create('functiongraph', [x => Math.atan(x)], {
         name: '\\(arctan\\)', withLabel: true,
-        label: {position: '0.8fr right', offset: [-30, 0]},
+        label: {position: '0.8fr right', offset: [-30, 0],
+        strokeColor: JXG.palette.red,
+        },
+        strokeColor: JXG.palette.red,
     });
 });
 </script>
@@ -650,8 +675,8 @@ $S = \left\{\dfrac{\pi}{4} + k \cdot 2\pi\Bigm| k \in \mathbb{Z}\right\} \cup
 
 ## Exemple {num2}`exemple`
 
-Comment la représentation de la fonction $a \cdot \sin(b \cdot x + c)$ change en
-fonction des coefficients $a$, $b$ et $c$?
+Comment la représentation de la fonction $a \cdot \sin(b \cdot x + c) + d$ change en
+fonction des coefficients $a$, $b$, $c$ et $d$?
 
 ```{jsxgraph} sinus
 :style: width: 100%; border: none;
@@ -661,9 +686,17 @@ fonction des coefficients $a$, $b$ et $c$?
 const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
 const attrs = [defaults, {
     boundingBox: [-7, 4.2, 7, -4.2],
-    grid: false,
+    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
+    grid: {majorStep: [Math.PI / 2, 1]},
     defaultAxes: {
-        x: {ticks: {scale: Math.PI, scaleSymbol: 'π'}},
+        x: {
+            ticks: {
+                insertTicks: false,
+                ticksDistance: 1/2, minorTicks: 1,
+                scale: Math.PI, scaleSymbol: 'π',
+                label: { toFraction: true, useMathJax: true },
+            },
+        },
         y: {ticks: {minorTicks: 1}},
     },
     defaults: {
@@ -685,8 +718,11 @@ initBoard('sinus', attrs, board => {
         /*snapWidth: Math.PI/4,
         snapValues: [- 2 * Math.PI,- 3 * Math.PI/2, - Math.PI, - 3 * Math.PI/4, - Math.PI/2, -Math.PI/4, 0, Math.PI/4, Math.PI/2, 3 * Math.PI/4, Math.PI, 3 * Math.PI/2, 2 * Math.PI]*/
     }]);
+        const d = board.create('slider', [[-6, 2] , [-2, 2], [-3, 0, 3], {
+        name: '\\(b = \\)',
+    }]);
     board.create('functiongraph', [function(x) {
-        return a.Value() * Math.sin(b.Value() * x + c.Value());
+        return a.Value() * Math.sin(b.Value() * x + c.Value()) + d.Value();
     }]);
 });
 </script>
