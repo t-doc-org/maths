@@ -29,7 +29,8 @@ initBoard('sin', [defaults, withAxesLabels(undefined, [-1, 1]), {
         x: {
             name: '\\(x, \\alpha\\)',
             ticks: {
-                insertTicks: false, scale: Math.PI, scaleSymbol: 'π',
+                insertTicks: false,
+                scale: Math.PI, scaleSymbol: 'π',
             },
         },
         y: {
@@ -653,3 +654,46 @@ Comme le sinus a une période de $2\pi$, l'ensemble des solutions est:
 
 $S = \left\{\dfrac{\pi}{4} + k \cdot 2\pi\Bigm| k \in \mathbb{Z}\right\} \cup
 \left\{\dfrac{3\pi}{4} + k \cdot 2\pi\Bigm| k \in \mathbb{Z}\right\}$
+
+## Exemple {num2}`exemple`
+
+Comment la représentation de la fonction $a \cdot \sin(b \cdot x + c)$ change en
+fonction des coefficients $a$, $b$ et $c$?
+
+```{jsxgraph} sinus
+:style: width: 100%; border: none;
+```
+
+<script type="module">
+const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+const attrs = [defaults, {
+    boundingBox: [-7, 4.2, 7, -4.2],
+    grid: false,
+    defaultAxes: {
+        x: {ticks: {scale: Math.PI, scaleSymbol: 'π'}},
+        y: {ticks: {minorTicks: 1}},
+    },
+    defaults: {
+        slider: {
+            withLabel: true,
+            label: {distance: 1},
+        },
+    },
+}];
+initBoard('sinus', attrs, board => {
+    const a = board.create('slider', [[-6, 3.5] , [-2, 3.5], [0, 1, 4], {
+        name: '\\(a= \\)',
+    }]);
+    const b = board.create('slider', [[-6, 3] , [-2, 3], [0, 1, 4], {
+        name: '\\(b = \\)',
+    }]);
+    const c = board.create('slider', [[-6, 2.5] , [-2, 2.5], [- 2*Math.PI, 0, 2 * Math.PI], {
+        name: '\\(c = \\)',
+        /*snapWidth: Math.PI/4,
+        snapValues: [- 2 * Math.PI,- 3 * Math.PI/2, - Math.PI, - 3 * Math.PI/4, - Math.PI/2, -Math.PI/4, 0, Math.PI/4, Math.PI/2, 3 * Math.PI/4, Math.PI, 3 * Math.PI/2, 2 * Math.PI]*/
+    }]);
+    board.create('functiongraph', [function(x) {
+        return a.Value() * Math.sin(b.Value() * x + c.Value());
+    }]);
+});
+</script>
