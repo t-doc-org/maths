@@ -20,17 +20,20 @@ Le nombre $p$ est alors appelé la **période** de la fonction.
 ````
 
 <script type="module">
-const {defaults, initBoard, JXG, withAxesLabels} = await tdoc.import('jsxgraph.js');
+const {defaults, gcd, initBoard, JXG, withAxesLabels} =
+    await tdoc.import('jsxgraph.js');
 initBoard('sin', [defaults, withAxesLabels(undefined, [-1, 1]), {
     boundingBox: [-1.5, 1.5, 6.5, -1.5],
-    axis: true, grid: false,
+    axis: true, grid: {majorStep: [Math.PI / 2, 1]},
     pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
     defaultAxes: {
         x: {
             name: '\\(x, \\alpha\\)',
             ticks: {
                 insertTicks: false,
+                ticksDistance: 1/2, minorTicks: 1, ticksPerLabel: 1,
                 scale: Math.PI, scaleSymbol: 'π',
+                label: { toFraction: true, useMathJax: true },
             },
         },
         y: {
@@ -47,13 +50,6 @@ initBoard('sin', [defaults, withAxesLabels(undefined, [-1, 1]), {
     const c = board.create('circle', [[0, 0], 1], {
         strokeColor: JXG.palette.black,
     });
-
-    function gcd(a, b) {
-        while (b != 0) {
-            [a, b] = [b, a % b]
-        }
-        return a;
-    }
 
     const angles = [];
     for (let i = 0; i < 4; ++i) {
@@ -312,14 +308,17 @@ initBoard('cos', [defaults, withAxesLabels([-1, 1], undefined), {
 const {defaults, initBoard, JXG, withAxesLabels} = await tdoc.import('jsxgraph.js');
 initBoard('tan', [defaults, withAxesLabels(undefined, [-1, 1]), {
     boundingBox: [-1.5, 6.5, 6.5, -6.5],
-    axis: true, grid: false,
+    axis: true, grid: {majorStep: [Math.PI / 4, 1]},
     pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
     defaultAxes: {
         x: {
             name: '\\(x, \\alpha\\)',
             ticks: {
+                insertTicks: false,
+                ticksDistance: 1, minorTicks: 3, ticksPerLabel: 1,
                 scale: Math.PI, scaleSymbol: 'π',
-                insertTicks: false, ticksDistance: 1, minorTicks: 0},
+                label: { toFraction: true, useMathJax: true },
+            },
         },
         y: {
             name: '\\(y\\)',
@@ -419,12 +418,6 @@ initBoard('tan', [defaults, withAxesLabels(undefined, [-1, 1]), {
     });
     board.create('line', [[1,0], [1, 1]], {
         dash: 2, strokeColor: JXG.palette.black
-    });
-    board.create('line', [[Math.PI/2, 0], [Math.PI/2, 1]], {
-        dash: 2, strokeColor: JXG.palette.black, strokeOpacity: 0.2,
-    });
-    board.create('line', [[3 * Math.PI/2, 0], [3 * Math.PI/2, 1]], {
-        dash: 2, strokeColor: JXG.palette.black, strokeOpacity: 0.2,
     });
     board.create('text',
         [2, 5.5, () => `\\(\\tan(\\alpha)=${Math.tan(alpha()) > 100 ? `indéfini` : display_value(Math.tan(alpha()))}\\)`], {
