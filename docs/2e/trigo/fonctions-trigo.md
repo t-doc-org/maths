@@ -714,7 +714,7 @@ initBoard('sinus', attrs, board => {    const a = board.create('slider', [[-6, 3
     });
     const snaps = [];
     for (let i = -4; i <= 4; ++i) snaps.push(i * Math.PI / 2);
-    const c = board.create('slider', [[-6, 2.5] , [-2, 2.5], [- 2*Math.PI, 0, 2 * Math.PI]], {
+    const c = board.create('slider', [[-6, 2.5] , [-2, 2.5], [- 2*Math.PI, 0, 2*Math.PI]], {
         name: '\\(c\\)',  size: 4,
         snapValues: snaps,
         snapValueDistance: Math.PI / 12,
@@ -727,7 +727,7 @@ initBoard('sinus', attrs, board => {    const a = board.create('slider', [[-6, 3
     }]);
     board.create('text', [1, 3, () => {
         const sc = c.Value() >= 0 ? '+' : '-';
-        const vc = Math.abs(c.Value()).toFixed(2);
+        const vc = display(Math.abs(c.Value()));
         const sd = d.Value() >= 0 ? '+' : '-';
         const vd = Math.abs(d.Value()).toFixed(2);
         return `\\(${a.Value().toFixed(2)} \\cdot sin(${b.Value().toFixed(2)} \\cdot x ${sc} ${vc}) ${sd} ${vd}\\)`;
@@ -736,4 +736,32 @@ initBoard('sinus', attrs, board => {    const a = board.create('slider', [[-6, 3
         strokeColor: JXG.palette.blue, fixed: true,
     });
 });
+
+function gcd(a, b) {
+    while (b != 0) {
+        [a, b] = [b, a % b]
+    }
+    return a;
+}
+
+const angles = [];
+    for (let i = 0; i < 5; ++i) {
+        for (const [n, d] of [[0, 1], [1, 6], [1, 4], [1, 3]]) {
+            const a = i * d + 2 * n, b = 2 * d;
+            const cd = gcd(a, b);
+            angles.push([a / cd, b / cd]);
+        }
+    }
+
+function display(angle) {
+    for (const [n, d] of angles) {
+        if (Math.abs(angle - n * Math.PI / d) < 1e-6) {
+            if (n === 0) return 0;
+            const ns = `${n > 1 ? n : ''}\\pi`;
+            if (d == 1) return ns;
+            return `\\dfrac{${ns}}{${d}}`;
+        }
+    }
+    return angle.toFixed(2);
+}
 </script>
