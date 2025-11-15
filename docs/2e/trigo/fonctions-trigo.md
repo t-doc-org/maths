@@ -675,15 +675,62 @@ $S = \left\{\dfrac{\pi}{4} + k \cdot 2\pi\Bigm| k \in \mathbb{Z}\right\} \cup
 
 ## Exemple {num2}`exemple`
 
-Comment la représentation de la fonction $a \cdot \sin(b \cdot x + c) + d$ change en
-fonction des coefficients $a$, $b$, $c$ et $d$?
+Comment la représentation de la fonction $a \cdot \sin(b \cdot x + c) + d$
+change-t-elle en fonction des coefficients $a$, $b$, $c$ et $d$?
 
 ```{jsxgraph} sinus
 :style: width: 100%; border: none;
 ```
 
+## Exemple {num2}`exemple`
+
+Comment la représentation de la fonction $a \cdot \cos(b \cdot x + c) + d$
+change-t-elle en fonction des coefficients $a$, $b$, $c$ et $d$?
+
+```{jsxgraph} cosinus
+:style: width: 100%; border: none;
+```
+
+## Exemple {num2}`exemple`
+
+Comment la représentation de la fonction $a \cdot \tan(b \cdot x + c) + d$
+change-t-elle en fonction des coefficients $a$, $b$, $c$ et $d$?
+
+```{jsxgraph} tangente
+:style: width: 100%; border: none;
+```
+
 <script type="module">
 const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+
+function sliders(board) {
+    const a = board.create('slider', [[-6.8, 4] , [-3.8, 4], [0, 1, 4]], {
+        name: '\\(a\\)', size: 4, withTicks: false,
+    });
+    const b = board.create('slider', [[-6.8, 3.7] , [-3.8, 3.7], [0, 1, 4]], {
+        name: '\\(b\\)',  size: 4, withTicks: false,
+    });
+    const snaps = [];
+    for (let i = -4; i <= 4; ++i) snaps.push(i * Math.PI / 2);
+    const c = board.create('slider', [[-6.8, 3.4] , [-3.8, 3.4], [- 2*Math.PI, 0, 2*Math.PI]], {
+        name: '\\(c\\)',  size: 4, withTicks: false,
+        snapValues: snaps,
+        snapValueDistance: Math.PI / 12,
+    });
+        const d = board.create('slider', [[-6.8, 3.1] , [-3.8, 3.1], [-3, 0, 3]], {
+        name: '\\(d\\)',  size: 4, withTicks: false,
+    });
+    const sliders = [a, b, c, d];
+    const def = sliders.map(s => s.getParents()[2][1]);
+    const btn = board.create('button', [-2.2, 3.9, "Réinitialiser", () => {
+        for (const [i, s] of sliders.entries()) s.setValue(def[i]);
+        board.update();
+    }]);
+    btn.rendNodeButton.classList.add('tdoc');
+    return sliders;
+}
+
+
 const attrs = [defaults, {
     boundingBox: [-7, 4.2, 7, -4.2],
     pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
@@ -706,31 +753,51 @@ const attrs = [defaults, {
         },
     },
 }];
-initBoard('sinus', attrs, board => {    const a = board.create('slider', [[-6, 3.5] , [-2, 3.5], [0, 1, 4]], {
-        name: '\\(a\\)', size: 4,
-    });
-    const b = board.create('slider', [[-6, 3] , [-2, 3], [0, 1, 4]], {
-        name: '\\(b\\)',  size: 4,
-    });
-    const snaps = [];
-    for (let i = -4; i <= 4; ++i) snaps.push(i * Math.PI / 2);
-    const c = board.create('slider', [[-6, 2.5] , [-2, 2.5], [- 2*Math.PI, 0, 2*Math.PI]], {
-        name: '\\(c\\)',  size: 4,
-        snapValues: snaps,
-        snapValueDistance: Math.PI / 12,
-    });
-        const d = board.create('slider', [[-6, 2] , [-2, 2], [-3, 0, 3]], {
-        name: '\\(d\\)',  size: 4,
-    });
+initBoard('sinus', attrs, board => {
+    const [a, b, c, d] = sliders(board);
     board.create('functiongraph', [function(x) {
         return a.Value() * Math.sin(b.Value() * x + c.Value()) + d.Value();
     }]);
-    board.create('text', [1, 3, () => {
+    board.create('text', [1, 3.8, () => {
         const sc = c.Value() >= 0 ? '+' : '-';
         const vc = display(Math.abs(c.Value()));
         const sd = d.Value() >= 0 ? '+' : '-';
         const vd = Math.abs(d.Value()).toFixed(2);
         return `\\(${a.Value().toFixed(2)} \\cdot sin(${b.Value().toFixed(2)} \\cdot x ${sc} ${vc}) ${sd} ${vd}\\)`;
+        },
+    ], {
+        strokeColor: JXG.palette.blue, fixed: true,
+    });
+});
+
+initBoard('cosinus', attrs, board => {
+    const [a, b, c, d] = sliders(board);
+    board.create('functiongraph', [function(x) {
+        return a.Value() * Math.cos(b.Value() * x + c.Value()) + d.Value();
+    }]);
+    board.create('text', [1, 3.8, () => {
+        const sc = c.Value() >= 0 ? '+' : '-';
+        const vc = display(Math.abs(c.Value()));
+        const sd = d.Value() >= 0 ? '+' : '-';
+        const vd = Math.abs(d.Value()).toFixed(2);
+        return `\\(${a.Value().toFixed(2)} \\cdot cos(${b.Value().toFixed(2)} \\cdot x ${sc} ${vc}) ${sd} ${vd}\\)`;
+        },
+    ], {
+        strokeColor: JXG.palette.blue, fixed: true,
+    });
+});
+
+initBoard('tangente', attrs, board => {
+    const [a, b, c, d] = sliders(board);
+    board.create('functiongraph', [function(x) {
+        return a.Value() * Math.tan(b.Value() * x + c.Value()) + d.Value();
+    }]);
+    board.create('text', [1, 3.8, () => {
+        const sc = c.Value() >= 0 ? '+' : '-';
+        const vc = display(Math.abs(c.Value()));
+        const sd = d.Value() >= 0 ? '+' : '-';
+        const vd = Math.abs(d.Value()).toFixed(2);
+        return `\\(${a.Value().toFixed(2)} \\cdot tan(${b.Value().toFixed(2)} \\cdot x ${sc} ${vc}) ${sd} ${vd}\\)`;
         },
     ], {
         strokeColor: JXG.palette.blue, fixed: true,
