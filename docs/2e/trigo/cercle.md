@@ -20,7 +20,10 @@ initBoard('trig-circle', [defaults, withAxesLabels([-1, 1], [-1, 1]), {
     },
     defaults: {
         segment: {strokeColor: JXG.palette.black, strokeWidth: 1},
-        point: {strokeWidth: 0, size: 0, label: {anchorY:'top'}, withLabel: false},
+        point: {
+            strokeWidth: 0, size: 0, label: {anchorY:'top'},
+            withLabel: false, showInfobox: false,
+        },
         angle: {strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
                 fillOpacity: 0.2, strokeWidth: 1,
                 label: {
@@ -31,11 +34,17 @@ initBoard('trig-circle', [defaults, withAxesLabels([-1, 1], [-1, 1]), {
     },
 }], board => {
     const r = 1;
-    board.create('segment', [[0,0], [r, 0]], {
+    const ax1 = board.create('point', [1, 0], {
+        fixed: true, visible: false, withLabel: false,
+    });
+    const o = board.create('point', [0, 0], {
+        fixed: true, visible: false, withLabel: false,
+    });
+    board.create('segment', [o, ax1], {
         name: '\\(r\\)', withLabel: true
     });
     // Place the circle.
-    const c = board.create('circle', [[0, 0], r], {
+    const c = board.create('circle', [o, r], {
         strokeColor: JXG.palette.black,
     });
 
@@ -71,15 +80,12 @@ initBoard('trig-circle', [defaults, withAxesLabels([-1, 1], [-1, 1]), {
         const a = Math.atan2(p.Y(), p.X());
         return a >= 0 ? a : a + 2 * Math.PI;
     };
-    const ax1 = board.create('point', [1, 0], {
-        fixed: true, visible: false, withLabel: false,
-    });
-    board.create('angle', [ax1, [0, 0], p], {
+    board.create('angle', [ax1, o, p], {
         name: '\\(\\alpha\\)', label: {strokeColor: alphaColor},
         radius: 0.2, orthoType: 'none',
         strokeColor: alphaColor, fillColor: alphaColor, fillOpacity: 0.3,
     });
-    board.create('segment', [[0, 0], p], {strokeColor: alphaColor});
+    board.create('segment', [o, p], {strokeColor: alphaColor});
 
     // Project the glider point onto the axes.
     const px = [() => p.X(), 0];
@@ -87,7 +93,7 @@ initBoard('trig-circle', [defaults, withAxesLabels([-1, 1], [-1, 1]), {
     const ox = board.create('point', [r, 0], {
         visible: false,
     });
-    const arc = board.create('arc', [[0,0], ox, p], {
+    const arc = board.create('arc', [o, ox, p], {
         name: '\\(l\\)',
         label: {anchorX: 'right', offset: [0, -4], strokeColor: JXG.palette.red},
         withLabel: true,
@@ -211,15 +217,24 @@ initBoard('cercle-trigo', [defaults, withAxesLabels([-1, 1], [-1, 1]), {
     defaults: {
         segment: {strokeColor: JXG.palette.black, strokeWidth: 1},
         line: {strokeColor: JXG.palette.black, strokeWidth: 1},
-        point: {strokeWidth: 0, size: 0, label: {anchorY:'top'}, withLabel: false},
+        point: {
+            strokeWidth: 0, size: 0, label: {anchorY:'top'},
+            withLabel: false,  showInfobox: false,
+        },
         angle: {strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
                 fillOpacity: 0.2, strokeWidth: 1,
                 label: {strokeColor: JXG.palette.black}},
         circle: {strokeColor: JXG.palette.black, strokeWidth: 1},
     },
 }], board => {
+    const ax1 = board.create('point', [1, 0], {
+        fixed: true, visible: false, withLabel: false,
+    });
+    const o = board.create('point', [0, 0], {
+        fixed: true, visible: false, withLabel: false,
+    });
     // Place the circle.
-    const c = board.create('circle', [[0, 0], 1], {
+    const c = board.create('circle', [o, 1], {
         strokeColor: JXG.palette.black,
     });
 
@@ -255,16 +270,13 @@ initBoard('cercle-trigo', [defaults, withAxesLabels([-1, 1], [-1, 1]), {
         const a = Math.atan2(p.Y(), p.X());
         return a >= 0 ? a : a + 2 * Math.PI;
     };
-    const ax1 = board.create('point', [1, 0], {
-        fixed: true, visible: false, withLabel: false,
-    });
-    board.create('angle', [ax1, [0, 0], p], {
+    board.create('angle', [ax1, o, p], {
         name: '\\(\\alpha\\)', label: {strokeColor: alphaColor},
         radius: 0.2, orthoType: 'none',
         strokeColor: alphaColor, fillColor: alphaColor, fillOpacity: 0.3,
     });
-    board.create('segment', [[0, 0], [1, () => Math.tan(alpha())]], {strokeColor: alphaColor, dash: 2});
-    board.create('segment', [[0, 0], p], {strokeColor: alphaColor});
+    board.create('segment', [o, [1, () => Math.tan(alpha())]], {strokeColor: alphaColor, dash: 2});
+    board.create('segment', [o, p], {strokeColor: alphaColor});
 
 
     // Project the glider point onto the axes.
@@ -284,7 +296,7 @@ initBoard('cercle-trigo', [defaults, withAxesLabels([-1, 1], [-1, 1]), {
 
     // Place the elements related to the sine.
     const sinColor = JXG.palette.blue;
-    board.create('arrow', [[0, 0], py], {
+    board.create('arrow', [o, py], {
         name: '\\(sin(\\alpha)\\)', withLabel: true,
         label: {
             position: '0.5fr left', anchorX: 'right', anchorY: 'middle',
@@ -299,7 +311,7 @@ initBoard('cercle-trigo', [defaults, withAxesLabels([-1, 1], [-1, 1]), {
 
     // Place the elments related to the cosine.
     const cosColor = JXG.palette.red;
-    board.create('arrow', [[0, 0], px], {
+    board.create('arrow', [o, px], {
         name: '\\(cos(\\alpha)\\)', withLabel: true,
         label: {
             position: '0.5fr right', anchorX: 'middle', anchorY: 'top',
@@ -319,7 +331,7 @@ initBoard('cercle-trigo', [defaults, withAxesLabels([-1, 1], [-1, 1]), {
         label: {anchorX: 'left', anchorY: 'middle', offset: [8, 0]}
     });
     const tanColor = JXG.palette.purple;
-    board.create('arrow', [[1, 0], t], {
+    board.create('arrow', [ax1, t], {
         name: '\\(tan(\\alpha)\\)', withLabel: true,
         label: {
             position: '0.5fr right', anchorX: 'left', anchorY: 'middle',
