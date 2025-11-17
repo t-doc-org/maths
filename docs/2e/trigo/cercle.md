@@ -297,7 +297,7 @@ initBoard('cercle-trigo', [defaults, withAxesLabels([-1, 1], [-1, 1]), {
     // Place the elements related to the sine.
     const sinColor = JXG.palette.blue;
     board.create('arrow', [o, py], {
-        name: '\\(sin(\\alpha)\\)', withLabel: true,
+        name: '\\(\\sin(\\alpha)\\)', withLabel: true,
         label: {
             position: '0.5fr left', anchorX: 'right', anchorY: 'middle',
             distance: 0, offset: [-7, 0], strokeColor: sinColor,
@@ -312,7 +312,7 @@ initBoard('cercle-trigo', [defaults, withAxesLabels([-1, 1], [-1, 1]), {
     // Place the elments related to the cosine.
     const cosColor = JXG.palette.red;
     board.create('arrow', [o, px], {
-        name: '\\(cos(\\alpha)\\)', withLabel: true,
+        name: '\\(\\cos(\\alpha)\\)', withLabel: true,
         label: {
             position: '0.5fr right', anchorX: 'middle', anchorY: 'top',
             distance: 0, offset: [0, -7], strokeColor: cosColor,
@@ -332,7 +332,7 @@ initBoard('cercle-trigo', [defaults, withAxesLabels([-1, 1], [-1, 1]), {
     });
     const tanColor = JXG.palette.purple;
     board.create('arrow', [ax1, t], {
-        name: '\\(tan(\\alpha)\\)', withLabel: true,
+        name: '\\(\\tan(\\alpha)\\)', withLabel: true,
         label: {
             position: '0.5fr right', anchorX: 'left', anchorY: 'middle',
             distance: 0, offset: [7, 0], strokeColor: tanColor,
