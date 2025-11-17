@@ -8,4 +8,5 @@
 revisions
 cercle
 fonctions-trigo
+equations-trigo
 ```
