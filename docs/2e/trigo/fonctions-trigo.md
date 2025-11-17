@@ -104,7 +104,7 @@ initBoard('sin', [defaults, withAxesLabels(undefined, [-1, 1]), {
     // Place the elements related to the sine.
     const sinColor = JXG.palette.blue;
     board.create('arrow', [o, py], {
-        name: '\\(sin(\\alpha)\\)', withLabel: true,
+        name: '\\(\\sin(\\alpha)\\)', withLabel: true,
         label: {
             position: '0.5fr left', anchorX: 'right', anchorY: 'middle',
             distance: 0, offset: [-7, 0], strokeColor: sinColor,
@@ -127,7 +127,7 @@ initBoard('sin', [defaults, withAxesLabels(undefined, [-1, 1]), {
         dash: 2, strokeColor: JXG.palette.black,
     });
     board.create('text',
-        [4, 1.2, () => `\\(sin(\\alpha)=${display_value(Math.sin(alpha()))}\\)`], {
+        [4, 1.2, () => `\\(\\sin(\\alpha)=${display_value(Math.sin(alpha()))}\\)`], {
         strokeColor: sinColor, fixed: true,
     });
 
@@ -254,7 +254,7 @@ initBoard('cos', [defaults, withAxesLabels([-1, 1], undefined), {
     // Place the elements related to the cosine.
     const cosColor = JXG.palette.red;
     board.create('arrow', [o, px], {
-        name: '\\(cos(\\alpha)\\)', withLabel: true,
+        name: '\\(\\cos(\\alpha)\\)', withLabel: true,
         label: {
             position: '0.5fr right', anchorX: 'middle', anchorY: 'top',
             distance: 0, offset: [0, -7], strokeColor: cosColor,
@@ -277,7 +277,7 @@ initBoard('cos', [defaults, withAxesLabels([-1, 1], undefined), {
         dash: 2, strokeColor: JXG.palette.black,
     });
     board.create('text',
-        [-2.5, 5.2, () => `\\(cos(\\alpha)=${display_value(Math.cos(alpha()))}\\)`], {
+        [-2.5, 5.2, () => `\\(\\cos(\\alpha)=${display_value(Math.cos(alpha()))}\\)`], {
         strokeColor: cosColor, fixed: true,
     });
 
@@ -425,7 +425,7 @@ initBoard('tan', [defaults, withAxesLabels(undefined, [-1, 1]), {
         dash: 2, strokeColor: JXG.palette.black
     });
     board.create('arrow', [ax1, [1, () => Math.tan(alpha())]], {
-        name: '\\(tan(\\alpha)\\)', withLabel: true,
+        name: '\\(\\tan(\\alpha)\\)', withLabel: true,
         label: {
             position: '0.5fr right', anchorX: 'middle', anchorY: 'middle',
             distance: 0, offset: [7, 0], strokeColor: tanColor,
