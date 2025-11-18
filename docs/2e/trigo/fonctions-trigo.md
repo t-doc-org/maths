@@ -604,7 +604,7 @@ initBoard('arcsin', attrs, board => {
     });
     board.create('functiongraph', [x => Math.sin(x), -Math.PI/2, Math.PI/2]);
     board.create('functiongraph', [x => Math.asin(x), -1, 1], {
-        name: '\\(arcsin\\)', withLabel: true,
+        name: '\\(\\arcsin\\)', withLabel: true,
         label: {
             position: '1fr right', offset: [-30, 0],
             strokeColor: JXG.palette.red,
@@ -618,7 +618,7 @@ initBoard('arccos', attrs, board => {
     });
     board.create('functiongraph', [x => Math.cos(x),0, Math.PI]);
     board.create('functiongraph', [x => Math.acos(x), -1, 1], {
-        name: '\\(arccos\\)', withLabel: true,
+        name: '\\(\\arccos\\)', withLabel: true,
         label: {
             position: '0fr right', offset: [-20, 0],
             strokeColor: JXG.palette.red,
@@ -632,7 +632,7 @@ initBoard('arctan', attrs, board => {
     });
         board.create('functiongraph', [x => Math.tan(x), -Math.PI/2, Math.PI/2]);
     board.create('functiongraph', [x => Math.atan(x)], {
-        name: '\\(arctan\\)', withLabel: true,
+        name: '\\(\\arctan\\)', withLabel: true,
         label: {position: '0.8fr right', offset: [-30, 0],
         strokeColor: JXG.palette.red,
         },
