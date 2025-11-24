@@ -188,6 +188,23 @@ $\sin(\alpha) = \dfrac{\text{opp}}{\text{hyp}} \implies \sin(24.1^\circ) = \dfra
 
 Remarque: Le côté $c$ peut aussi être calculé avec le théorème de Pythagore.
 
+### Vidéos
+
+Théorie:
+```{youtube} DfgUYXB5_jg
+```
+
+Exercices résolus:
+```{youtube} 4cWj2-ko6lQ
+```
+
+### Exercices
+
+[Série d'exercices supplémentaires](gomaths-trigo.pdf)
+
+générer une nouvelle série d'exercices: [Cliquez ici!](<https://gomaths.edu-vd.ch/print/print_trigo.php?find=3&nb_calcul=10>)
+
+source: (<https://gomaths.edu-vd.ch>)
 
 
 ## Rapports trigonométriques des angles remarquables
