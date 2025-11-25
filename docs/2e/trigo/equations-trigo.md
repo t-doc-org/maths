@@ -136,8 +136,61 @@ initBoard('exemple-sin-2', [attrs, {boundingBox: [-6, 1.5, 6, -1.5],
             fillColor: 'darkgreen', withLabel: false, size: 3,
         });
     }
-    console.log(JXG.palette);
     board.create('segment', [[Math.PI / 6, 0],[Math.PI / 6, Math.sin(2 * Math.PI/6)]], {dash: 2});
+});
+initBoard('exemple-sin-3', [attrs, {boundingBox: [-6, 1.5, 6, -1.5],
+}], board => {
+
+    board.create('functiongraph', [x => Math.sin(2 *x + Math.PI/4)], {
+        name: '\\(\\sin(2x - \\dfrac{\\pi}{2})\\)', withLabel: true,
+        label: {
+            position: '0.75fr left', offset: [-40, -10],
+        },
+    });
+    board.create('functiongraph', [x => Math.cos(x)], {
+        name: '\\(\\cos(x)\\)', withLabel: true,
+        label: {
+            position: '0.44fr left', offset: [-20, 0],
+            strokeColor: JXG.palette.red,
+        },
+        strokeColor: JXG.palette.red,
+    });
+    for (let k = 0; k < 7; ++k) {
+        board.create('point', [Math.PI / 12 - 2 * Math.PI + k * 2 * Math.PI/3, Math.cos(Math.PI / 12 - 2 * Math.PI + k * 2 * Math.PI/3)], {
+            fillColor: 'darkmagenta', withLabel: false, size: 3,
+        });
+        board.create('point', [Math.PI / 4 - 2 * Math.PI + k * 2 * Math.PI, Math.cos(Math.PI / 4 - 2 * Math.PI + k * 2 * Math.PI)], {
+            fillColor: 'darkgreen', withLabel: false, size: 3,
+        });
+    }
+    board.create('segment', [[Math.PI / 12, 0],[Math.PI / 12, Math.cos(Math.PI/12)]], {dash: 2});
+    board.create('segment', [[Math.PI / 4, 0],[Math.PI / 4, Math.cos(Math.PI/4)]], {dash: 2});
+});
+initBoard('exemple-sin-cos', [attrs, {boundingBox: [-6, 2.8, 6, -1.5],
+}], board => {
+
+    board.create('functiongraph', [x => 2*(Math.cos(x))**2+ Math.sin(x)], {
+        name: '\\(2\\cos^2(x)+ \\sin(x)\\)', withLabel: true,
+        label: {
+            position: '0.7fr left', offset: [-40, 0],
+        },
+    });
+    board.create('functiongraph', [x => 1], {strokeColor: JXG.palette.red,});
+    for (let k = 0; k < 7; ++k) {
+        board.create('point', [-1 * Math.PI / 6 - 2 * Math.PI + k * 2 * Math.PI, 1], {
+            fillColor: 'darkmagenta', withLabel: false, size: 3,
+        });
+        board.create('point', [7 * Math.PI / 6 - 2 * Math.PI + k * 2 * Math.PI, 1], {
+            fillColor: 'darkgreen', withLabel: false, size: 3,
+        });
+        board.create('point', [Math.PI / 2 - 2 * Math.PI + k * 2 * Math.PI, 1], {
+            fillColor: 'skyblue', withLabel: false, size: 3,
+        });
+    }
+    board.create('segment', [[-1 * Math.PI / 6, 0],[-1 * Math.PI / 6, 1]], {dash: 2});
+    board.create('segment', [[7 * Math.PI / 6 , 0],[7 * Math.PI / 6 , 1]], {dash: 2});
+    board.create('segment', [[Math.PI / 2 , 0],[Math.PI / 2 , 1]], {dash: 2});
+    console.log(JXG.palette);
 });
 </script>
 
@@ -332,10 +385,10 @@ deux équations possibles:
     x_1 &= \dfrac{\pi}{6} + k \cdot \dfrac{2\pi}{3}
     $$
 -   $$
-    2x_2 = \pi - (\dfrac{\pi}{2} - x_2) + k \cdot 2\pi \qquad &|& \text{CL}\\
-    2x_2 = \pi - \dfrac{\pi}{2} + x_2 + k \cdot 2\pi &|& \text{CL}\\
-    2x_2 = \dfrac{\pi}{2} + x_2 + k \cdot 2\pi &|& -x_2\\
-    x_2 = \dfrac{\pi}{2} + k \cdot 2\pi
+    2x_2 &= \pi - (\dfrac{\pi}{2} - x_2) + k \cdot 2\pi \qquad &|& \text{CL}\\
+    2x_2 &= \pi - \dfrac{\pi}{2} + x_2 + k \cdot 2\pi &|& \text{CL}\\
+    2x_2 &= \dfrac{\pi}{2} + x_2 + k \cdot 2\pi &|& -x_2\\
+    x_2 &= \dfrac{\pi}{2} + k \cdot 2\pi
     $$
 ```
 
@@ -346,4 +399,103 @@ $S = {\color{darkmagenta}\left\{\dfrac{\pi}{6} + k \cdot \dfrac{2\pi}{3} \bigm| 
 ```{jsxgraph} exemple-sin-2
 :style: width: 100%; border: none;
 ```
+
+## Exemple {num2}`exemple`
+
+Résolvez $\sin(2x + \dfrac{\pi}{4}) - \cos(x)= 0$.
+
+$$
+\sin(2x + \dfrac{\pi}{4}) - \cos(x)  &= 0 \qquad \qquad \qquad &|& + \cos(x)\\
+\sin(2x + \dfrac{\pi}{4}) &= \cos(x) &|& \cos(x) = \sin(\dfrac{\pi}{2} - x) \\
+\sin(2x + \dfrac{\pi}{4}) &= sin(\dfrac{\pi}{2} - x) &|& \arcsin(...) \\
+$$
+
+Comme $\sin(x) = \sin(\pi - x)$ et que le $\sin(x)$ a une période de $2\pi$, il y a
+deux équations possibles:
+
+```{list-grid}
+:style: grid-template-columns: 1fr 1fr;
+
+-   $$
+    2x_1 + \dfrac{\pi}{4} &= \dfrac{\pi}{2} - x_1 + k \cdot 2\pi  \qquad &|& +x_1\\
+    3x_1 + \dfrac{\pi}{4} &= \dfrac{\pi}{2} + k \cdot 2\pi &|& -\dfrac{\pi}{4}\\
+    3x_1 &= \dfrac{\pi}{2} - \dfrac{\pi}{4} + k \cdot 2\pi &|& \text{CL}\\
+    3x_1 &= \dfrac{\pi}{4} + k \cdot 2\pi &|& :3\\
+    x_1 &= \dfrac{\pi}{12} + k \cdot \dfrac{2\pi}{3}
+    $$
+-   $$
+    2x_2 + \dfrac{\pi}{4} &= \pi - (\dfrac{\pi}{2} - x_2) + k \cdot 2\pi \qquad &|& \text{CL}\\
+    2x_2 + \dfrac{\pi}{4} &= \pi - \dfrac{\pi}{2} + x_2 + k \cdot 2\pi &|& \text{CL}\\
+    2x_2 + \dfrac{\pi}{4} &= \dfrac{\pi}{2} + x_2 + k \cdot 2\pi &|& -x_2\\
+    x_2 + \dfrac{\pi}{4} &= \dfrac{\pi}{2} + k \cdot 2\pi &|& -\dfrac{\pi}{4}\\
+    x_2 &= \dfrac{\pi}{2} - \dfrac{\pi}{4} + k \cdot 2\pi &|& \text{CL}\\
+    x_2 &= \dfrac{\pi}{4} + k \cdot 2\pi
+    $$
+```
+
+$S = {\color{darkmagenta}\left\{\dfrac{\pi}{12} + k \cdot \dfrac{2\pi}{3} \bigm| k \in \mathbb{Z}\right\}} \cup
+{\color{darkgreen}\left\{\dfrac{\pi}{4} + k \cdot 2\pi \bigm| k \in \mathbb{Z}\right\}}$
+
+```{jsxgraph} exemple-sin-3
+:style: width: 100%; border: none;
+```
+
+## Exemple {num2}`exemple`
+
+Résolvez $2\cos^2(x)+ \sin(x) = 1$.
+
+$$
+2\cos^2(x) + \sin(x) &= 1 \qquad  &|& -1\\
+2\cos^2(x) + \sin(x) - 1 &= 0 &|& \cos^2(x) = (1-\sin^2(x)) \\
+2(1 - \sin^2(x) + \sin(x) - 1 &= 0 &|& \text{CL} \\
+2 - 2\sin^2(x) + \sin(x) - 1 &= 0 &|& \text{CL} \\
+- 2\sin^2(x) + \sin(x) + 1 &= 0 &|&  \cdot (-1) \\
+2\sin^2(x) - \sin(x) - 1 &= 0\\
+$$
+
+En posant $t = \sin(x)$, l'équation se transforme en une équation du deuxième
+degré:
+
+$$
+2t^2 - t - 1 &= 0 \qquad &|&  \text{factorisation} \\
+2t^2 - 2t + t - 1 &= 0 \\
+2t(t - 1) + (t - 1) &= 0\\
+(2t + 1)(t - 1) &= 0 \\
+$$
+
+$t = -\dfrac{1}{2}$ ou $t = 1$ et  $t = \sin(x)$, il y a deux équations possibles:
+
+````{list-grid}
+:style: grid-template-columns: 2fr 1fr;
+
+-   # $\sin(x) = -\dfrac{1}{2}$
+    ```{list-grid}
+    :style: grid-template-columns: 1fr 1fr;
+    -   $$
+        x_1 &= -\dfrac{\pi}{6} + k \cdot 2\pi\\
+        $$
+    -   $$
+        x_2 &= \pi - (-\dfrac{\pi}{6}) + k \cdot 2\pi\\
+        x_2 &= \pi + \dfrac{\pi}{6} + k \cdot 2\pi\\
+        x_2 &= \dfrac{7\pi}{6} + k \cdot 2\pi\\
+        $$
+    ```
+-   # $\sin(x) = 1$
+    $$
+    x_3 &= \dfrac{\pi}{2} + k \cdot 2\pi\\
+    $$
+````
+
+$S = {\color{darkmagenta}\left\{-\dfrac{\pi}{6} + k \cdot 2\pi \bigm| k \in \mathbb{Z}\right\}} \cup
+{\color{darkgreen}\left\{\dfrac{7\pi}{6} + k \cdot 2\pi \bigm| k \in \mathbb{Z}\right\}} \cup
+{\color{skyblue}\left\{\dfrac{\pi}{2} + k \cdot 2\pi \bigm| k \in \mathbb{Z}\right\}} =
+\left\{\dfrac{\pi}{2} + k \cdot \dfrac{2\pi}{3} \bigm| k \in \mathbb{Z}\right\}$
+
+
+```{jsxgraph} exemple-sin-cos
+:style: width: 100%; border: none;
+```
+
+
+
 
