@@ -7,4 +7,5 @@
 :maxdepth: 1
 revisions-fct-poly
 fct-rationnnelles-reciproques-composees
+trigo-1
 ```
