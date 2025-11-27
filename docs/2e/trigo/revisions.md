@@ -10,9 +10,9 @@ subject: "Mathématiques 2e année"
 ## Notation des triangles
 
 <script type="module">
-const {defaults, initBoard} =
+const {defaults, initBoard, nonInteractive} =
     await tdoc.import('jsxgraph.js');
-const attrs = [defaults, {
+const attrs = [defaults, nonInteractive, {
     boundingBox: [-3.5, 3.5, 3.5, -0.5],
     axis: false, grid: false,
     defaults: {
@@ -212,9 +212,9 @@ source: (<https://gomaths.edu-vd.ch>)
 ### Triangle rectangle isocèle
 
 <script type="module">
-const {defaults, initBoard} =
+const {defaults, initBoard, nonInteractive} =
     await tdoc.import('jsxgraph.js');
-const attrs = [defaults, {
+const attrs = [defaults, nonInteractive, {
     boundingBox: [-0.5, 4.5, 4.5, -0.5],
     axis: false, grid: false,
     defaults: {
@@ -282,9 +282,9 @@ initBoard('triangle-iso-rect', attrs, board => {
 ### Demi-triangle équilatéral
 
 <script type="module">
-const {defaults, initBoard} =
+const {defaults, initBoard, nonInteractive} =
     await tdoc.import('jsxgraph.js');
-const attrs = [defaults, {
+const attrs = [defaults, nonInteractive, {
     boundingBox: [-0.5, 4.5, 4.5, -1],
     axis: false, grid: false,
     defaults: {

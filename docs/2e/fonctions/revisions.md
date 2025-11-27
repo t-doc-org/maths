@@ -37,8 +37,9 @@ d'arrivée** de $f$.
     ```
 
 <script type="module">
-const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
-const attrs = [defaults, {
+const {defaults, initBoard, JXG, nonInteractive} =
+    await tdoc.import('jsxgraph.js');
+const attrs = [defaults, nonInteractive, {
     boundingBox: [-7, 11, 7, -2],
     defaultAxes: {
         x: {ticks: {drawLabels: false}},
@@ -260,8 +261,9 @@ calculés précédemment.
 ```
 
 <script type="module">
-const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
-initBoard('fct-f', [defaults, {
+const {defaults, initBoard, JXG, nonInteractive} =
+    await tdoc.import('jsxgraph.js');
+initBoard('fct-f', [defaults, nonInteractive, {
     boundingBox: [-5, 2.5, 5, -7],
     defaults: {
         point: {

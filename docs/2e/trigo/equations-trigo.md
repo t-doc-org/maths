@@ -27,8 +27,9 @@ d'équations:
 ````
 
 <script type="module">
-const {defaults, initBoard, JXG, withAxesLabels} = await tdoc.import('jsxgraph.js');
-const attrs = [defaults, {
+const {defaults, initBoard, JXG, withAxesLabels, nonInteractive} =
+    await tdoc.import('jsxgraph.js');
+const attrs = [defaults, nonInteractive, {
     boundingBox: [-6, 5.5, 6, -2.5],
     pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
     grid: {majorStep: [Math.PI / 4, 1]},

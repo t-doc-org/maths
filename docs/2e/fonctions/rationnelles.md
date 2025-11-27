@@ -150,8 +150,9 @@ La représentation graphique de $f(x) = \dfrac{x^2-7x+10}{x^2-9}$ est:
 ```
 
 <script type="module">
-const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
-initBoard('fonction-rationnelle', [defaults, {
+const {defaults, initBoard, JXG, nonInteractive} =
+    await tdoc.import('jsxgraph.js');
+initBoard('fonction-rationnelle', [defaults, nonInteractive, {
     boundingBox: [-10.5, 10.5, 10.5, -10.5],
     grid: {majorStep: 1},
     defaults: {
