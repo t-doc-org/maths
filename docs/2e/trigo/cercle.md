@@ -9,7 +9,8 @@ subject: "Mathématiques 2e année"
 ## Radian
 
 <script type="module">
-const {defaults, initBoard, JXG, withAxesLabels} = await tdoc.import('jsxgraph.js');
+const {defaults, gcd, initBoard, JXG, withAxesLabels} =
+    await tdoc.import('jsxgraph.js');
 initBoard('trig-circle', [defaults, withAxesLabels([-1, 1], [-1, 1]), {
     boundingBox: [-1.2, 1.5, 1.2, -1.2],
     axis: true, grid: false,
@@ -47,13 +48,6 @@ initBoard('trig-circle', [defaults, withAxesLabels([-1, 1], [-1, 1]), {
     const c = board.create('circle', [o, r], {
         strokeColor: JXG.palette.black,
     });
-
-    function gcd(a, b) {
-        while (b != 0) {
-            [a, b] = [b, a % b]
-        }
-        return a;
-    }
 
     const angles = [];
     for (let i = 0; i < 4; ++i) {
@@ -206,7 +200,8 @@ Un angle de 5.13 rad vaut en degré $\qquad \dfrac{5.13}{2\pi} \cdot 360^\circ \
     radians.
 
 <script type="module">
-const {defaults, initBoard, withAxesLabels} = await tdoc.import('jsxgraph.js');
+const {defaults, gcd, initBoard, withAxesLabels} =
+    await tdoc.import('jsxgraph.js');
 initBoard('cercle-trigo', [defaults, withAxesLabels([-1, 1], [-1, 1]), {
     boundingBox: [-1.75, 1.75, 1.75, -1.75], grid: false,
     pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
@@ -237,13 +232,6 @@ initBoard('cercle-trigo', [defaults, withAxesLabels([-1, 1], [-1, 1]), {
     const c = board.create('circle', [o, 1], {
         strokeColor: JXG.palette.black,
     });
-
-    function gcd(a, b) {
-        while (b != 0) {
-            [a, b] = [b, a % b]
-        }
-        return a;
-    }
 
     const angles = [];
     for (let i = 0; i < 4; ++i) {
@@ -292,7 +280,10 @@ initBoard('cercle-trigo', [defaults, withAxesLabels([-1, 1], [-1, 1]), {
     });
     board.create('segment', [p, px], {dash: 2, strokeColor: JXG.palette.black});
     board.create('segment', [p, py], {dash: 2, strokeColor: JXG.palette.black});
-    board.create('line', [[1,0], [1, Math.tan(alpha())]], {dash: 2, strokeColor: JXG.palette.black});
+    board.create('line', [[1,0], [1, 1]], {
+        dash: 2, strokeColor: JXG.palette.black,
+        point1: {fixed: true}, point2: {fixed: true},
+    });
 
     // Place the elements related to the sine.
     const sinColor = JXG.palette.blue;

@@ -164,7 +164,8 @@ initBoard('sin', [defaults, withAxesLabels(undefined, [-1, 1]), {
 </script>
 
 <script type="module">
-const {defaults, initBoard, JXG, withAxesLabels} = await tdoc.import('jsxgraph.js');
+const {defaults, gcd, initBoard, JXG, withAxesLabels} =
+    await tdoc.import('jsxgraph.js');
 initBoard('cos', [defaults, withAxesLabels([-1, 1], undefined), {
     boundingBox: [-3, 6.5, 2.5, -1.5],
     axis: true, grid: {majorStep: [1, Math.PI / 2]},
@@ -199,13 +200,6 @@ initBoard('cos', [defaults, withAxesLabels([-1, 1], undefined), {
     const c = board.create('circle', [o, 1], {
         strokeColor: JXG.palette.black,
     });
-
-    function gcd(a, b) {
-        while (b != 0) {
-            [a, b] = [b, a % b]
-        }
-        return a;
-    }
 
     const angles = [];
     for (let i = 0; i < 4; ++i) {
@@ -314,7 +308,8 @@ initBoard('cos', [defaults, withAxesLabels([-1, 1], undefined), {
 </script>
 
 <script type="module">
-const {defaults, initBoard, JXG, withAxesLabels} = await tdoc.import('jsxgraph.js');
+const {defaults, gcd, initBoard, JXG, withAxesLabels} =
+    await tdoc.import('jsxgraph.js');
 initBoard('tan', [defaults, withAxesLabels(undefined, [-1, 1]), {
     boundingBox: [-1.5, 6.5, 6.5, -6.5],
     axis: true, grid: {majorStep: [Math.PI / 4, 1]},
@@ -349,13 +344,6 @@ initBoard('tan', [defaults, withAxesLabels(undefined, [-1, 1]), {
     const c = board.create('circle', [o, 1], {
         strokeColor: JXG.palette.black,
     });
-
-    function gcd(a, b) {
-        while (b != 0) {
-            [a, b] = [b, a % b]
-        }
-        return a;
-    }
 
     const angles = [];
     for (let i = 0; i < 4; ++i) {
@@ -583,7 +571,6 @@ $\left] -\dfrac{\pi}{2};\dfrac{\pi}{2} \right[$ est appelée **arc tangente**, n
 <script type="module">
 const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
 const attrs = [defaults, {
-    boundingBox: [-4, 3.5, 4, -1.5],
     pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
     grid: {majorStep: [1, Math.PI / 4]},
     defaultAxes: {
@@ -598,7 +585,7 @@ const attrs = [defaults, {
         },
     },
 }];
-initBoard('arcsin', attrs, board => {
+initBoard('arcsin', [attrs, {boundingBox: [-4, 2, 4, -2]}], board => {
     board.create('functiongraph', [x => Math.sin(x)], {
         strokeOpacity: 0.3,
     });
@@ -612,7 +599,7 @@ initBoard('arcsin', attrs, board => {
         strokeColor: JXG.palette.red,
     });
 });
-initBoard('arccos', attrs, board => {
+initBoard('arccos', [attrs, {boundingBox: [-4, 3.5, 4, -1.5]}], board => {
     board.create('functiongraph', [x => Math.cos(x)], {
         strokeOpacity: 0.3,
     });
@@ -626,7 +613,7 @@ initBoard('arccos', attrs, board => {
         strokeColor: JXG.palette.red,
     });
 });
-initBoard('arctan', attrs, board => {
+initBoard('arctan', [attrs, {boundingBox: [-4, 3, 4, -3]}], board => {
     board.create('functiongraph', [x => Math.tan(x)], {
         strokeOpacity: 0.3,
     });
@@ -711,7 +698,7 @@ change-t-elle en fonction des coefficients $a$, $b$, $c$ et $d$?
 ```
 
 <script type="module">
-const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+const {defaults, gcd, initBoard, JXG} = await tdoc.import('jsxgraph.js');
 
 function sliders(board) {
     const a = board.create('slider', [[-6.8, 4] , [-3.8, 4], [0, 1, 4]], {
@@ -813,13 +800,6 @@ initBoard('tangente', attrs, board => {
         strokeColor: JXG.palette.blue, fixed: true,
     });
 });
-
-function gcd(a, b) {
-    while (b != 0) {
-        [a, b] = [b, a % b]
-    }
-    return a;
-}
 
 const angles = [];
     for (let i = 0; i < 5; ++i) {
