@@ -538,138 +538,6 @@ Pour $k \in \mathbb{Z}$.
 
 
 
-
-````{admonition} Définition
-La fonction réciproque de la fonction sinus restreinte à
-$\left[ -\dfrac{\pi}{2};\dfrac{\pi}{2} \right]$ est appelée **arc sinus**, notée $\arcsin$:
-
-```{math}
-:class: align-center
-\arcsin: \left[-1;1\right] & \to \left[ -\dfrac{\pi}{2};\dfrac{\pi}{2} \right]\\
-         x & \mapsto \arcsin(x)
-```
-
-La fonction réciproque de la fonction cosinus restreinte à
-$\left[ 0;\pi \right]$ est appelée **arc cosinus**, notée $\arccos$:
-
-```{math}
-:class: align-center
-\arccos: \left[-1;1\right] & \to \left[ 0;\pi \right]\\
-            x & \mapsto \arccos(x)
-```
-
-La fonction réciproque de la fonction tangente restreinte à
-$\left] -\dfrac{\pi}{2};\dfrac{\pi}{2} \right[$ est appelée **arc tangente**, notée $\arctan$:
-
-```{math}
-:class: align-center
-\arctan: \mathbb{R} & \to \left] -\dfrac{\pi}{2};\dfrac{\pi}{2} \right[\\
-            x & \mapsto \arctan(x)
-```
-````
-
-<script type="module">
-const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
-const attrs = [defaults, {
-    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
-    grid: {majorStep: [1, Math.PI / 4]},
-    defaultAxes: {
-        x: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0}},
-        y: {
-            ticks: {
-                insertTicks: false,
-                ticksDistance: 1/2, minorTicks: 1, ticksPerLabel: 1,
-                scale: Math.PI, scaleSymbol: 'π',
-                label: { toFraction: true, useMathJax: true },
-            },
-        },
-    },
-}];
-initBoard('arcsin', [attrs, {boundingBox: [-4, 2, 4, -2]}], board => {
-    board.create('functiongraph', [x => Math.sin(x)], {
-        strokeOpacity: 0.3,
-    });
-    board.create('functiongraph', [x => Math.sin(x), -Math.PI/2, Math.PI/2]);
-    board.create('functiongraph', [x => Math.asin(x), -1, 1], {
-        name: '\\(\\arcsin\\)', withLabel: true,
-        label: {
-            position: '1fr right', offset: [-30, 0],
-            strokeColor: JXG.palette.red,
-        },
-        strokeColor: JXG.palette.red,
-    });
-});
-initBoard('arccos', [attrs, {boundingBox: [-4, 3.5, 4, -1.5]}], board => {
-    board.create('functiongraph', [x => Math.cos(x)], {
-        strokeOpacity: 0.3,
-    });
-    board.create('functiongraph', [x => Math.cos(x),0, Math.PI]);
-    board.create('functiongraph', [x => Math.acos(x), -1, 1], {
-        name: '\\(\\arccos\\)', withLabel: true,
-        label: {
-            position: '0fr right', offset: [-20, 0],
-            strokeColor: JXG.palette.red,
-        },
-        strokeColor: JXG.palette.red,
-    });
-});
-initBoard('arctan', [attrs, {boundingBox: [-4, 3, 4, -3]}], board => {
-    board.create('functiongraph', [x => Math.tan(x)], {
-        strokeOpacity: 0.3,
-    });
-        board.create('functiongraph', [x => Math.tan(x), -Math.PI/2, Math.PI/2]);
-    board.create('functiongraph', [x => Math.atan(x)], {
-        name: '\\(\\arctan\\)', withLabel: true,
-        label: {position: '0.8fr right', offset: [-30, 0],
-        strokeColor: JXG.palette.red,
-        },
-        strokeColor: JXG.palette.red,
-    });
-});
-</script>
-
-## Représentation de la fonction $\arcsin(x)$
-
-```{jsxgraph} arcsin
-:style: width: 100%; border: none;
-```
-
-## Représentation de la fonction $\arccos(x)$
-
-```{jsxgraph} arccos
-:style: width: 100%; border: none;
-```
-
-## Représentation de la fonction $\arctan(x)$
-
-```{jsxgraph} arctan
-:style: width: 100%; border: none;
-```
-
-## Exemple {num2}`exemple`
-
-Déterminez tous les angles $\alpha$ en degrés tels que $\tan(\alpha) = 0.8$.
-
-Une solution possible est $\quad \alpha = \arctan(0.8) \approx 38.66^\circ$
-
-Comme la tangente a une période de $180^\circ$, l'ensemble des solutions est:
-
-$S = \{ 38.66^\circ + k \cdot 180^\circ \Bigm| k \in \mathbb{Z}\}$.
-
-## Exemple {num2}`exemple`
-
-Déterminez tous les angles $\alpha$ en randians tels que $\sin(x) = \dfrac{\sqrt{2}}{2}$.
-
-Une solution possible est $\quad x_1 = \arcsin(\dfrac{\sqrt{2}}{2}) = \dfrac{\pi}{4}$
-
-Par symétrie dans le cercle trigonométrique, une autre solution possible est
-$x_2 = \pi - x_1 = \pi - \dfrac{\pi}{4} = \dfrac{3\pi}{4}$.
-
-Comme le sinus a une période de $2\pi$, l'ensemble des solutions est:
-
-$S = \left\{\dfrac{\pi}{4} + k \cdot 2\pi\Bigm| k \in \mathbb{Z}\right\} \cup
-\left\{\dfrac{3\pi}{4} + k \cdot 2\pi\Bigm| k \in \mathbb{Z}\right\}$
-
 ## Exemple {num2}`exemple`
 
 Comment la représentation de la fonction $a \cdot \sin(b \cdot x + c) + d$
@@ -822,3 +690,135 @@ function display(angle) {
     return angle.toFixed(2);
 }
 </script>
+
+````{admonition} Définition
+La fonction réciproque de la fonction sinus restreinte à
+$\left[ -\dfrac{\pi}{2};\dfrac{\pi}{2} \right]$ est appelée **arc sinus**, notée $\arcsin$:
+
+```{math}
+:class: align-center
+\arcsin: \left[-1;1\right] & \to \left[ -\dfrac{\pi}{2};\dfrac{\pi}{2} \right]\\
+         x & \mapsto \arcsin(x)
+```
+
+La fonction réciproque de la fonction cosinus restreinte à
+$\left[ 0;\pi \right]$ est appelée **arc cosinus**, notée $\arccos$:
+
+```{math}
+:class: align-center
+\arccos: \left[-1;1\right] & \to \left[ 0;\pi \right]\\
+            x & \mapsto \arccos(x)
+```
+
+La fonction réciproque de la fonction tangente restreinte à
+$\left] -\dfrac{\pi}{2};\dfrac{\pi}{2} \right[$ est appelée **arc tangente**, notée $\arctan$:
+
+```{math}
+:class: align-center
+\arctan: \mathbb{R} & \to \left] -\dfrac{\pi}{2};\dfrac{\pi}{2} \right[\\
+            x & \mapsto \arctan(x)
+```
+````
+
+<script type="module">
+const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+const attrs = [defaults, {
+    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
+    grid: {majorStep: [1, Math.PI / 4]},
+    defaultAxes: {
+        x: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0}},
+        y: {
+            ticks: {
+                insertTicks: false,
+                ticksDistance: 1/2, minorTicks: 1, ticksPerLabel: 1,
+                scale: Math.PI, scaleSymbol: 'π',
+                label: { toFraction: true, useMathJax: true },
+            },
+        },
+    },
+}];
+initBoard('arcsin', [attrs, {boundingBox: [-4, 2, 4, -2]}], board => {
+    board.create('functiongraph', [x => Math.sin(x)], {
+        strokeOpacity: 0.3,
+    });
+    board.create('functiongraph', [x => Math.sin(x), -Math.PI/2, Math.PI/2]);
+    board.create('functiongraph', [x => Math.asin(x), -1, 1], {
+        name: '\\(\\arcsin\\)', withLabel: true,
+        label: {
+            position: '1fr right', offset: [-30, 0],
+            strokeColor: JXG.palette.red,
+        },
+        strokeColor: JXG.palette.red,
+    });
+});
+initBoard('arccos', [attrs, {boundingBox: [-4, 3.5, 4, -1.5]}], board => {
+    board.create('functiongraph', [x => Math.cos(x)], {
+        strokeOpacity: 0.3,
+    });
+    board.create('functiongraph', [x => Math.cos(x),0, Math.PI]);
+    board.create('functiongraph', [x => Math.acos(x), -1, 1], {
+        name: '\\(\\arccos\\)', withLabel: true,
+        label: {
+            position: '0fr right', offset: [-20, 0],
+            strokeColor: JXG.palette.red,
+        },
+        strokeColor: JXG.palette.red,
+    });
+});
+initBoard('arctan', [attrs, {boundingBox: [-4, 3, 4, -3]}], board => {
+    board.create('functiongraph', [x => Math.tan(x)], {
+        strokeOpacity: 0.3,
+    });
+        board.create('functiongraph', [x => Math.tan(x), -Math.PI/2, Math.PI/2]);
+    board.create('functiongraph', [x => Math.atan(x)], {
+        name: '\\(\\arctan\\)', withLabel: true,
+        label: {position: '0.8fr right', offset: [-30, 0],
+        strokeColor: JXG.palette.red,
+        },
+        strokeColor: JXG.palette.red,
+    });
+});
+</script>
+
+## Représentation de la fonction $\arcsin(x)$
+
+```{jsxgraph} arcsin
+:style: width: 100%; border: none;
+```
+
+## Représentation de la fonction $\arccos(x)$
+
+```{jsxgraph} arccos
+:style: width: 100%; border: none;
+```
+
+## Représentation de la fonction $\arctan(x)$
+
+```{jsxgraph} arctan
+:style: width: 100%; border: none;
+```
+
+## Exemple {num2}`exemple`
+
+Déterminez tous les angles $\alpha$ en degrés tels que $\tan(\alpha) = 0.8$.
+
+Une solution possible est $\quad \alpha = \arctan(0.8) \approx 38.66^\circ$
+
+Comme la tangente a une période de $180^\circ$, l'ensemble des solutions est:
+
+$S = \{ 38.66^\circ + k \cdot 180^\circ \Bigm| k \in \mathbb{Z}\}$.
+
+## Exemple {num2}`exemple`
+
+Déterminez tous les angles $\alpha$ en randians tels que $\sin(x) = \dfrac{\sqrt{2}}{2}$.
+
+Une solution possible est $\quad x_1 = \arcsin(\dfrac{\sqrt{2}}{2}) = \dfrac{\pi}{4}$
+
+Par symétrie dans le cercle trigonométrique, une autre solution possible est
+$x_2 = \pi - x_1 = \pi - \dfrac{\pi}{4} = \dfrac{3\pi}{4}$.
+
+Comme le sinus a une période de $2\pi$, l'ensemble des solutions est:
+
+$S = \left\{\dfrac{\pi}{4} + k \cdot 2\pi\Bigm| k \in \mathbb{Z}\right\} \cup
+\left\{\dfrac{3\pi}{4} + k \cdot 2\pi\Bigm| k \in \mathbb{Z}\right\}$
+
