@@ -36,8 +36,9 @@ subject: "Mathématiques 2e année"
 ## Fonctions trigonométriques
 
 -   Connaître les propriétés des fonctions $\sin(x)$, $\cos(x)$ et $\tan(x)$
-    (domaine de définition, image, période, zéros et parité).
--   Savoir représenter graphiquement les fonctions trigonométriques.
+    (domaine de définition, images, période, zéros et parité).
+-   Savoir représenter graphiquement les fonctions trigonométriques (simples
+    et/ou avec les coefficients $a$, $b$, $c$ et $d$ qui changent).
 -   Connaître les fonctions réciproques, $\arcsin$, $\arccos$ et $\arctan$, et
     pouvoir les représenter graphiquement.
 -   Savoir déterminer **tous les angles** d'un rapport trigonométrique donné en
