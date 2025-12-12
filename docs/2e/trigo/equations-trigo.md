@@ -203,7 +203,8 @@ Résolvez $\tan(x) - 2 = 3$.
 $$
 \tan(x) - 2 &= 3 \qquad \qquad \qquad &|& +2\\
 \tan(x) &= 5 &|& \arctan(...)\\
-\tan(x) &= \arctan(5)
+\arctan(\tan(x)) &= \arctan(5)\\
+x &= \arctan(5)
 $$
 
 Comme $\tan(x)$ a une période de $\pi$:
@@ -223,7 +224,8 @@ Résolvez $\tan(\alpha) - 2 = 3$.
 $$
 \tan(\alpha) - 2 &= 3 \qquad \qquad \qquad &|& +2\\
 \tan(\alpha) &= 5 &|& \arctan(...)\\
-\tan(\alpha) &= \arctan(5)
+\arctan(\tan(\alpha)) &= \arctan(5)\\
+\alpha &= \arctan(5)
 $$
 
 Comme $\tan(\alpha)$ a une période de $180^\circ$:
@@ -240,7 +242,8 @@ Résolvez $\cos(3x) = \dfrac{\sqrt{2}}{2}$.
 
 $$
 \cos(3x) &= \dfrac{\sqrt{2}}{2} \qquad \qquad \qquad &|& \arccos(...)\\
-\cos(3x) &= \arccos\left(\dfrac{\sqrt{2}}{2}\right)
+\arccos(\cos(3x)) &= \arccos\left(\dfrac{\sqrt{2}}{2}\right)\\
+3x &= \arccos\left(\dfrac{\sqrt{2}}{2}\right)
 $$
 
 Par symétrie dans le cercle trigonométrique, $\cos(x)=\cos(-x)$ et, de plus,
@@ -274,11 +277,12 @@ Résolvez $\cos(3\alpha) = \dfrac{\sqrt{2}}{2}$.
 
 $$
 \cos(3\alpha) &= \dfrac{\sqrt{2}}{2} \qquad \qquad \qquad &|& \arccos(...)\\
-\cos(3\alpha) &= \arccos\left(\dfrac{\sqrt{2}}{2}\right)
+\arccos(\cos(3\alpha)) &= \arccos\left(\dfrac{\sqrt{2}}{2}\right)\\
+3\alpha &= \arccos\left(\dfrac{\sqrt{2}}{2}\right)
 $$
 
 Par symétrie dans le cercle trigonométrique, $\cos(\alpha)=\cos(-\alpha)$ et, de plus,
-$\cos(\alpha)$ a une période de $2\pi$, il y a donc deux équations possibles:
+$\cos(\alpha)$ a une période de $360^\circ$, il y a donc deux équations possibles:
 
 ```{list-grid}
 :style: grid-template-columns: 1fr 1fr;
@@ -298,45 +302,13 @@ $S = {\color{darkmagenta}\left\{15^\circ + k \cdot 120^\circ \bigm| k \in \mathb
 
 ## Exemple {num2}`exemple`
 
-Même exemple que le précédent, mais en travaillant en degrés.
-
-Résolvez $\sin(\alpha - 90^\circ) + 1 = \dfrac{1}{2}$.
-
-$$
-\sin(\alpha - 90^\circ) + 1 &= 0.5 \qquad \qquad \qquad &|& -1\\
-\sin(\alpha - 90^\circ) &= -0.5 &|& \arcsin(...)\\
-\alpha - \dfrac{\pi}{2}  &= \arcsin(-0.5)
-$$
-
-Par symétrie dans le cercle trigonométrique, $\sin(\alpha)=\sin(\pi-\alpha)$ et, de plus,
-$\sin(\alpha)$ a une période de $2\pi$, il y a donc deux équations possibles:
-
-```{list-grid}
-:style: grid-template-columns: 1fr 1fr;
-
--   $$
-    \alpha_1 - 90^\circ  &= -30^\circ {\color{red} + \, k \, \cdot 360^\circ} \qquad &|& +90^\circ \\
-    \alpha_1  &= 60^\circ + k \cdot 360^\circ
-    $$
-
--   $$
-    \alpha_2 - 90^\circ &= {\color{red}\, 180^\circ \,- }(-30^\circ) {\color{red} + \, k \, \cdot 360^\circ} \qquad &|& \text{CL}\\
-    \alpha_2 - 90^\circ &= 210^\circ + k \cdot 360^\circ &|& +90^\circ\\
-    \alpha_2  &= 300^\circ + k \cdot 360^\circ
-    $$
-```
-
-$S = {\color{darkmagenta}\left\{60^\circ + k \cdot 360^\circ \bigm| k \in \mathbb{Z} \right\}} \cup
-{\color{darkgreen}\left\{300^\circ + k \cdot 360^\circ \bigm| k \in \mathbb{Z} \right\}}$
-
-## Exemple {num2}`exemple`
-
 Résolvez $\sin(x - \dfrac{\pi}{2}) + 1 = \dfrac{1}{2}$.
 
 $$
-\sin(x - \dfrac{\pi}{2}) + 1 &= 0.5 \qquad \qquad \qquad &|& -1\\
-\sin(x - \dfrac{\pi}{2}) &= -0.5 &|& \arcsin(...)\\
-x - \dfrac{\pi}{2}  &= \arcsin(-0.5)
+\sin(x - \dfrac{\pi}{2}) + 1 &= \dfrac{1}{2} \qquad \qquad \qquad &|& -1\\
+\sin(x - \dfrac{\pi}{2}) &= -\dfrac{1}{2} &|& \arcsin(...)\\
+\arcsin(\sin(x - \dfrac{\pi}{2}))  &= \arcsin(-\dfrac{1}{2})\\
+x - \dfrac{\pi}{2}  &= \arcsin(-\dfrac{1}{2})
 $$
 
 Par symétrie dans le cercle trigonométrique, $\sin(x)=\sin(\pi-x)$ et, de plus,
@@ -367,11 +339,46 @@ $S = {\color{darkmagenta}\left\{\dfrac{\pi}{3} + k \cdot 2\pi \bigm| k \in \math
 
 ## Exemple {num2}`exemple`
 
+Même exemple que le précédent, mais en travaillant en degrés.
+
+Résolvez $\sin(\alpha - 90^\circ) + 1 = \dfrac{1}{2}$.
+
+$$
+\sin(\alpha - 90^\circ) + 1 &= \dfrac{1}{2} \qquad \qquad \qquad &|& -1\\
+\sin(\alpha - 90^\circ) &= -\dfrac{1}{2} &|& \arcsin(...)\\
+\arcsin(\sin(\alpha - 90^\circ)) &= \arcsin(-\dfrac{1}{2})\\
+\alpha - 90^\circ  &= \arcsin(-\dfrac{1}{2})
+$$
+
+Par symétrie dans le cercle trigonométrique, $\sin(\alpha)=\sin(180^\circ-\alpha)$ et, de plus,
+$\sin(\alpha)$ a une période de $360^\circ$, il y a donc deux équations possibles:
+
+```{list-grid}
+:style: grid-template-columns: 1fr 1fr;
+
+-   $$
+    \alpha_1 - 90^\circ  &= -30^\circ {\color{red} + \, k \, \cdot 360^\circ} \qquad &|& +90^\circ \\
+    \alpha_1  &= 60^\circ + k \cdot 360^\circ
+    $$
+
+-   $$
+    \alpha_2 - 90^\circ &= {\color{red}\, 180^\circ \,- }(-30^\circ) {\color{red} + \, k \, \cdot 360^\circ} \qquad &|& \text{CL}\\
+    \alpha_2 - 90^\circ &= 210^\circ + k \cdot 360^\circ &|& +90^\circ\\
+    \alpha_2  &= 300^\circ + k \cdot 360^\circ
+    $$
+```
+
+$S = {\color{darkmagenta}\left\{60^\circ + k \cdot 360^\circ \bigm| k \in \mathbb{Z} \right\}} \cup
+{\color{darkgreen}\left\{300^\circ + k \cdot 360^\circ \bigm| k \in \mathbb{Z} \right\}}$
+
+## Exemple {num2}`exemple`
+
 Résolvez $\sin(2x) - \sin(\dfrac{\pi}{2} - x) = 0$.
 
 $$
 \sin(2x) - \sin(\dfrac{\pi}{2} - x) &= 0 \qquad \qquad \qquad &|& + \sin(\dfrac{\pi}{2} - x)\\
 \sin(2x) &= \sin(\dfrac{\pi}{2} - x) &|& \arcsin(...) \\
+\arcsin(\sin(2x)) &= \arcsin(\sin(\dfrac{\pi}{2} - x))
 $$
 
 Comme $\sin(x) = \sin(\pi - x)$ et que le $\sin(x)$ a une période de $2\pi$, il y a
@@ -408,7 +415,8 @@ Résolvez $\sin(2x + \dfrac{\pi}{4}) - \cos(x)= 0$.
 $$
 \sin(2x + \dfrac{\pi}{4}) - \cos(x)  &= 0 \qquad \qquad \qquad &|& + \cos(x)\\
 \sin(2x + \dfrac{\pi}{4}) &= \cos(x) &|& \cos(x) = \sin(\dfrac{\pi}{2} - x) \\
-\sin(2x + \dfrac{\pi}{4}) &= sin(\dfrac{\pi}{2} - x) &|& \arcsin(...) \\
+\sin(2x + \dfrac{\pi}{4}) &= \sin(\dfrac{\pi}{2} - x) &|& \arcsin(...) \\
+\arcsin(\sin(2x + \dfrac{\pi}{4})) &= \arcsin(\sin(\dfrac{\pi}{2} - x))
 $$
 
 Comme $\sin(x) = \sin(\pi - x)$ et que le $\sin(x)$ a une période de $2\pi$, il y a
@@ -447,8 +455,8 @@ Résolvez $2\cos^2(x)+ \sin(x) = 1$.
 
 $$
 2\cos^2(x) + \sin(x) &= 1 \qquad  &|& -1\\
-2\cos^2(x) + \sin(x) - 1 &= 0 &|& \cos^2(x) = (1-\sin^2(x)) \\
-2(1 - \sin^2(x) + \sin(x) - 1 &= 0 &|& \text{CL} \\
+2\cos^2(x) + \sin(x) - 1 &= 0 &|& \cos^2(x) = 1-\sin^2(x) \\
+2(1 - \sin^2(x)) + \sin(x) - 1 &= 0 &|& \text{CL} \\
 2 - 2\sin^2(x) + \sin(x) - 1 &= 0 &|& \text{CL} \\
 - 2\sin^2(x) + \sin(x) + 1 &= 0 &|&  \cdot (-1) \\
 2\sin^2(x) - \sin(x) - 1 &= 0\\
@@ -458,13 +466,13 @@ En posant $t = \sin(x)$, l'équation se transforme en une équation du deuxième
 degré:
 
 $$
-2t^2 - t - 1 &= 0 \qquad &|&  \text{factorisation} \\
+2t^2 - t - 1 &= 0 \qquad &|&  \text{factorisation du trinôme} \\
 2t^2 - 2t + t - 1 &= 0 \\
 2t(t - 1) + (t - 1) &= 0\\
 (2t + 1)(t - 1) &= 0 \\
 $$
 
-$t = -\dfrac{1}{2}$ ou $t = 1$ et  $t = \sin(x)$, il y a deux équations possibles:
+$t = -\dfrac{1}{2}$ ou $t = 1$ avec  $t = \sin(x)$ donnent:
 
 ````{list-grid}
 :style: grid-template-columns: 2fr 1fr;
