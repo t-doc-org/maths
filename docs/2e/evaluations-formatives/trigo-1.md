@@ -137,12 +137,12 @@ initBoard('trian', attrs, board => {
     });
     board.create('angle', [D, B, A], {
         radius: 0.6,
-        name: '\\(\\alpha\\)', withLabel: true,
+        name: '\\(\\gamma\\)', withLabel: true,
         label: {anchorX: 'middle', anchorY: 'middle'}
     });
     board.create('angle', [A, D, B], {
         radius: 0.6,
-        name: '\\(\\gamma\\)', withLabel: true,
+        name: '\\(\\alpha\\)', withLabel: true,
         label: {anchorX: 'middle', anchorY: 'middle', offset: [0, 0]}
     });
     board.create('angle', [B, A, D], {
@@ -214,7 +214,7 @@ Transformez les angles suivants en degrés.
 :style: grid-template-columns: 1fr 1fr;
 - $\pi = 180^\circ$
 - $\dfrac{\pi}{3} = 60^\circ$
-- $\dfrac{5\pi}{4} = 405^\circ$
+- $\dfrac{5\pi}{4} = 225^\circ$
 - $\dfrac{7\pi}{2} = 630^\circ$
 ```
 ````
