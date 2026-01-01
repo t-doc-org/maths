@@ -219,6 +219,8 @@ $S = {\color{darkmagenta}\{1.3734 + k\pi \bigm| k \in \mathbb{Z}\}}$
 
 ## Exemple {num2}`exemple`
 
+Même exemple que le précédent, mais en travaillant en degrés.
+
 Résolvez $\tan(\alpha) - 2 = 3$.
 
 $$
@@ -235,8 +237,6 @@ $\alpha = 78.69^\circ {\color{red} \,+\, k \cdot 180^\circ}$
 $S = {\color{darkmagenta}\{78.69^\circ + k \cdot 180^\circ \bigm| k \in \mathbb{Z}\}}$
 
 ## Exemple {num2}`exemple`
-
-Même exemple que le précédent, mais en travaillant en degrés.
 
 Résolvez $\cos(3x) = \dfrac{\sqrt{2}}{2}$.
 
