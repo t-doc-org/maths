@@ -9,4 +9,5 @@ revisions
 cercle
 fonctions-trigo
 equations-trigo
+triangle-quelconque
 ```
