@@ -180,9 +180,65 @@ initBoard('utilisation-sinus', [defaults, {
 });
 </script>
 
+<script type="module">
+const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+initBoard('sinus-exemple-1', [defaults, {
+    boundingbox: [-0.5, 3.5, 5.5, -0.5],
+    axis: false, grid: false,
+    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: false,
+    defaults: {
+        segment: {strokeColor: JXG.palette.black, strokeWidth: 1,
+                  name: {withLabel: false}
+                },
+        line: {strokeColor: JXG.palette.black, strokeWidth: 1},
+        point: {size: 0, withLabel: true, fixed: true, showInfobox: false,
+                withLabel: false
+              },
+        angle: {strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
+                fillOpacity: 0.2, strokeWidth: 1, withLabel: false, radius: 0.5,
+                label: {strokeColor: JXG.palette.black,
+                        anchorX: 'middle',
+                        anchorY: 'middle'},
+                },
+    },
+}], board => {
+  const A = board.create('point', [0, 0], {
+    name: '\\(A\\)', withLabel: true,
+    label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]}
+  });
+  const B = board.create('point', [5, 0], {
+    name: '\\(B\\)', withLabel: true,
+    label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]}
+  });
+  const C = board.create('point', [2, 3], {
+    name: '\\(C\\)', withLabel: true,
+    label: {anchorX: 'middle', anchorY: 'bottom', offset: [0, 0]}
+  });
+
+  board.create('segment', [A, C], {
+    name: '\\(5.3\\)', withLabel: true,
+    label: {anchorX:'right', anchorY:'middle', offset: [-5, 0]}
+  });
+  board.create('segment', [A, B]);
+  board.create('segment', [C, B]);
+
+  board.create('angle', [B, A, C], {
+    name: '\\(35^\\circ\\)', withLabel: true,
+  });
+  board.create('angle', [A, C, B], {
+    name: '\\(60^\\circ\\)', withLabel: true,
+  });
+});
+</script>
+
+
 ### Exemple {num2}`exemple`
 
 Soit le triangle ABC avec $b = 5.3$, $\alpha = 35^\circ$ et $\gamma = 60^\circ$.
+
+```{jsxgraph} sinus-exemple-1
+:style: width: 40%; border: none;
+```
 
 Un côté et deux angles sont connus, le théorème du sinus peut être utilisé.
 
@@ -198,10 +254,64 @@ $$
 \implies c &= \dfrac{5.3 \cdot \sin(60^\circ)}{\sin(85^\circ} = 4.6
 $$
 
+<script type="module">
+const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+initBoard('sinus-exemple-2', [defaults, {
+    boundingbox: [-0.5, 3.5, 5.5, -0.5],
+    axis: false, grid: false,
+    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: false,
+    defaults: {
+        segment: {strokeColor: JXG.palette.black, strokeWidth: 1,
+                  name: {withLabel: false}
+                },
+        line: {strokeColor: JXG.palette.black, strokeWidth: 1},
+        point: {size: 0, withLabel: true, fixed: true, showInfobox: false,
+                withLabel: false
+              },
+        angle: {strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
+                fillOpacity: 0.2, strokeWidth: 1, withLabel: false, radius: 0.5,
+                label: {strokeColor: JXG.palette.black,
+                        anchorX: 'middle',
+                        anchorY: 'middle'},
+                },
+    },
+}], board => {
+  const A = board.create('point', [0, 0], {
+    name: '\\(A\\)', withLabel: true,
+    label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]}
+  });
+  const B = board.create('point', [5, 0], {
+    name: '\\(B\\)', withLabel: true,
+    label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]}
+  });
+  const C = board.create('point', [2, 3], {
+    name: '\\(C\\)', withLabel: true,
+    label: {anchorX: 'middle', anchorY: 'bottom', offset: [0, 0]}
+  });
+
+  board.create('segment', [A, C], {
+    name: '\\(6.8\\)', withLabel: true,
+    label: {anchorX:'right', anchorY:'middle', offset: [-5, 0]}
+  });
+  board.create('segment', [A, B]);
+  board.create('segment', [C, B], {
+    name: '\\(4.5\\)', withLabel: true,
+    label: {anchorX:'left', anchorY:'middle', offset: [5, 0]}
+  });
+
+  board.create('angle', [B, A, C], {
+    name: '\\(23^\\circ\\)', withLabel: true,
+  });
+});
+</script>
 
 ### Exemple {num2}`exemple`
 
 Soit le triangle $ABC$ avec $a = 4.5$, $b = 6.8$ et $\alpha = 23^\circ$.
+
+```{jsxgraph} sinus-exemple-2
+:style: width: 40%; border: none;
+```
 
 Deux côtés et l'angle opposé à un des côtés sont connus, le théorème du sinus
 peut être utilisé.
@@ -449,12 +559,135 @@ initBoard('demo-cosinus', [defaults, {
 
 ### Utilisation
 
-
-
-
-````{admonition} Cas d'utilisation du théorème du cosinus
+```{admonition} Cas d'utilisation du théorème du cosinus
 Le théorème du cosinus peut être utilisé si dans un triangle, sont connus:
 - la longueur de deux côtés et l'angle formé par ces deux côtés, ou
 - la longueur de ses trois côtés.
-````
+```
+
+```{jsxgraph} utilisation-cosinus
+:style: width: 60%; border: none;
+```
+
+<script type="module">
+const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+initBoard('utilisation-cosinus', [defaults, {
+    boundingbox: [-5, 4, 5, -1],
+    axis: false, grid: false,
+    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: false,
+    defaults: {
+        segment: {strokeColor: JXG.palette.black, strokeWidth: 1,
+                  name: {withLabel: false}
+                },
+        line: {strokeColor: JXG.palette.black, strokeWidth: 1},
+        point: {size: 0, withLabel: true, fixed: true,
+                showInfobox: false, withLabel: false},
+        angle: {strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
+                fillOpacity: 0.2, strokeWidth: 1, withLabel: false, radius: 0.5,
+                },
+    },
+}], board => {
+  const A = board.create('point', [-4, 0]);
+  const B = board.create('point', [-4.5, 3]);
+  const C = board.create('point', [-1, 1.5]);
+
+  board.create('segment', [A, C], {strokeWidth: 2});
+  board.create('segment', [A, B], {strokeWidth: 2});
+  board.create('segment', [B, C], {dash: 2});
+
+  board.create('angle', [C, A, B]);
+
+  const D = board.create('point', [1.5, 0]);
+  const E = board.create('point', [2.5, 3]);
+  const F = board.create('point', [4.5, 0.5]);
+
+  board.create('segment', [E, F], {strokeWidth: 2});
+  board.create('segment', [D, E], {strokeWidth: 2});
+  board.create('segment', [F, D], {strokeWidth: 2});
+
+});
+</script>
+
+
+<script type="module">
+const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+initBoard('cosinus-exemple-1', [defaults, {
+    boundingbox: [-0.5, 3.5, 5.5, -0.5],
+    axis: false, grid: false,
+    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: false,
+    defaults: {
+        segment: {strokeColor: JXG.palette.black, strokeWidth: 1,
+                  name: {withLabel: false}
+                },
+        line: {strokeColor: JXG.palette.black, strokeWidth: 1},
+        point: {size: 0, withLabel: true, fixed: true, showInfobox: false,
+                withLabel: false
+              },
+        angle: {strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
+                fillOpacity: 0.2, strokeWidth: 1, withLabel: false, radius: 0.5,
+                label: {strokeColor: JXG.palette.black,
+                        anchorX: 'middle',
+                        anchorY: 'middle'},
+                },
+    },
+}], board => {
+  const A = board.create('point', [0, 0], {
+    name: '\\(A\\)', withLabel: true,
+    label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]}
+  });
+  const B = board.create('point', [5, 0], {
+    name: '\\(B\\)', withLabel: true,
+    label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]}
+  });
+  const C = board.create('point', [2, 3], {
+    name: '\\(C\\)', withLabel: true,
+    label: {anchorX: 'middle', anchorY: 'bottom', offset: [0, 0]}
+  });
+
+  board.create('segment', [A, C], {
+    name: '\\(5\\)', withLabel: true,
+    label: {anchorX:'right', anchorY:'middle', offset: [-5, 0]}
+  });
+  board.create('segment', [A, B], {
+    name: '\\(7\\)', withLabel: true,
+    label: {anchorX:'middle', anchorY:'top', offset: [0, 0]}
+  });
+  board.create('segment', [C, B]);
+
+  board.create('angle', [B, A, C], {
+    name: '\\(34^\\circ\\)', withLabel: true,
+  });
+});
+</script>
+
+### Exemple {num2}`exemple`
+
+Soit le triangle $ABC$ avec $b = 5$, $c = 7$ et $\alpha = 34^\circ$.
+
+```{jsxgraph} cosinus-exemple-1
+:style: width: 40%; border: none;
+```
+
+Deux côtés et l'angle par ces deux côtés sont connus, le théorème du cosinus
+peut être utilisé.
+
+Utilisez le théorème du cosinus pour calculer $a$:
+$$
+a^2 &= b^2 + c^2 - 2bc \cdot \cos(\alpha)\\
+a^2 &= 5^2 + 7^2 - 2 \cdot 5 \cdot 7 \cdot \cos(34^\circ)\\
+a^2 &= 25 + 49 - 70 \cdot 0.83\\
+a^2 &= 15.97\\
+a &= \sqrt{15.97} = 4
+$$
+
+Utilisez le théorème du cosinus pour calculer $\beta$:
+$$
+b^2 &= a^2 + c^2 - 2ac \cdot \cos(\beta) \\
+\cos(\beta) &= \dfrac{a^2 + c^2 - b^2}{2ac}\\
+\cos(\beta) &= \dfrac{4^2 + 7^2 - 5^2}{2 \cdot 4 \cdot 7} = 0.71\\
+\beta &= \arccos(0.71) = 44.4^\circ
+$$
+
+Remarque: Le théorème du sinus aurait pu être utilisé pour calculer $\beta$.
+
 
