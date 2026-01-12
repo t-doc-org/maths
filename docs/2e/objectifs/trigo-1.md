@@ -9,8 +9,6 @@ subject: "Mathématiques 2e année"
 
 -   Comprendre un problème et savoir le résoudre à l'aide des outils
     mathématiques acquis pendant le cours.
--   Utiliser correctement la calculatrice (changement de mode entre `DEG` et
-    `RAD`, arrondis, utilisation de valeurs exactes, ...)
 
 ## Révisons
 

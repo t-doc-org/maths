@@ -8,4 +8,5 @@
 revisions-fct-polyn
 fct-rationnelles-reciproques-composees
 trigo-1
+trigo-equations
 ```

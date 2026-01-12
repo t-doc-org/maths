@@ -18,11 +18,11 @@ d'équations:
 
 ```{math}
 :class: align-center
-\cos(\alpha) &= \cos(-\alpha)\\
-\sin(\alpha) &= \sin(\pi - \alpha)\\
-\cos^2(\alpha) + \sin^2(\alpha) &= 1\\
-\sin(\alpha) &= \cos\left(\dfrac{\pi}{2} - \alpha\right)\\
-\cos(\alpha) &= \sin\left(\dfrac{\pi}{2} - \alpha\right) = \sin\left(\dfrac{\pi}{2} + \alpha\right)\\
+\cos(x) &= \cos(-x)\\
+\sin(x) &= \sin(\pi - x)\\
+\cos^2(x) + \sin^2(x) &= 1\\
+\sin(x) &= \cos\left(\dfrac{\pi}{2} - x\right)\\
+\cos(x) &= \sin\left(\dfrac{\pi}{2} - x\right) = \sin\left(\dfrac{\pi}{2} + x\right)\\
 ```
 ````
 
