@@ -23,6 +23,7 @@ d'équations:
 \cos^2(x) + \sin^2(x) &= 1\\
 \sin(x) &= \cos\left(\dfrac{\pi}{2} - x\right)\\
 \cos(x) &= \sin\left(\dfrac{\pi}{2} - x\right) = \sin\left(\dfrac{\pi}{2} + x\right)\\
+\tan(x) &= \dfrac{\sin(x)}{\cos(x)}\\
 ```
 ````
 
