@@ -182,7 +182,7 @@ dessinées.
 Quel est le prix de chaque article?
 
 ````{solution}
-Soient x le prix d'un DVD et y le prix de BD.
+Soient x le prix d'un DVD et y le prix d'une BD.
 
 $\begin{cases}
 \begin{aligned}
@@ -206,7 +206,9 @@ $5y = 40 \implies y = 8$
 
 $x + 4 \cdot 8 = 52.5 \implies x + 32 = 52.5 \implies x = 20.5$
 
-Un DVD coûte 10.50 CHF et une BD 8 CHF.
+$S = \{(20.5; 8)\}$
+
+Un DVD coûte 20.50 CHF et une BD 8 CHF.
 ````
 
 ## Question {nump}`question`{points}`5`

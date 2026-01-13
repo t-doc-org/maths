@@ -24,6 +24,7 @@ d'équations:
 \sin(x) &= \cos\left(\dfrac{\pi}{2} - x\right)\\
 \cos(x) &= \sin\left(\dfrac{\pi}{2} - x\right) = \sin\left(\dfrac{\pi}{2} + x\right)\\
 \tan(x) &= \dfrac{\sin(x)}{\cos(x)}\\
+-\cos(x) &= \cos(\pi-x)\\
 ```
 ````
 
