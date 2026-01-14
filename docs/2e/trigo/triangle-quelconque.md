@@ -471,7 +471,7 @@ Des équations précédentes découle:
 a^2 = h_c^2 + a_1^2 = (b^2 - b_1^2) + (c^2 - 2cb_1 + b_1^2) = b^2 + c^2 - 2cb_1
 ```
 
-La trigonométrie appliquée dans le triangle rectangle $ACH$ donne:
+La trigonométrie appliquée dans le triangle rectangle $AHC$ donne:
 ```{math}
 :class: align-center
 \cos(\alpha) = \dfrac{b_1}{b} \implies b_1 = b \cdot \cos(\alpha)\\
