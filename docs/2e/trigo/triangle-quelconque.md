@@ -29,7 +29,7 @@ Dans un triangle quelconque, la hauteur $h_c$ issue de sommet C est abaissée.
 :style: width: 60%; border: none;
 ```
 
-La trigonométrie appliquée dans le triangle rectangle $BHC$:
+La trigonométrie appliquée dans le triangle rectangle $BCH$:
 ```{math}
 :class: align-center
 \sin(\beta) = \dfrac{h_c}{a} \iff h_c = a \cdot \sin(\beta)
@@ -448,7 +448,7 @@ $a_1 = \overline{HB}$ et $b_1 = \overline{AH}$
 :style: width: 60%; border: none;
 ```
 
-Le théorème de Pythagore appliqué au triangle $ACH$ donne:
+Le théorème de Pythagore appliqué au triangle $AHC$ donne:
 ```{math}
 :class: align-center
 h_c^2 = b^2 -b_1^2
