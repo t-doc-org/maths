@@ -10,4 +10,5 @@ revisions
 polynomiales
 rationnelles
 reciproques-composees
+exponentielles-logarithmes
 ```
