@@ -13,8 +13,7 @@ page-break-avoid: 2
 ```{include} ../../entete-examen.md
 ```
 ```{class} align-center
-**Détails des calculs obligatoires. Attention au soin. Calculatrice non
-autorisée.\
+**Détails des calculs obligatoires. Attention au soin.\
 Réponse sous forme de valeur exacte simplifiée.**
 ```
 ---
