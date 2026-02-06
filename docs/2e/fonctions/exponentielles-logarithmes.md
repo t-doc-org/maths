@@ -306,6 +306,21 @@ S &= \{0.76\}$$
 
 ### Exemple {num2}`exemple`
 
+$$2^{x+2} + 3 \cdot 2^x &= 5^{3x} \qquad \qquad \qquad \qquad \qquad &|& a^{n+m} = a^n \cdot a^m\\
+2^x \cdot 2^2 + 3 \cdot 2^x &= 5^{3x}  &|& \text{mise en évidence de }2^x\\
+2^x (2^2 + 3) &= 5^{3x} &|& \text{CL}\\
+2^x \cdot 7 &= 5^{3x} &|& \log(...)\\
+\log(2^x \cdot 7) &= \log(5^{3x}) &|& \log(x \cdot y) = \log(x) + \log(y)\\
+\log(2^x) + \log(7) &= \log(5^{3x}) &|& \log(x^n) = n \cdot \log(x)\\
+x\log(2) + \log(7) &= 3x\log(5) &|& -3x\log(5) - \log(7)\\
+x\log(2) -3x\log(5) &= -\log(7) &|& \text{mise en évidence de }x\\
+x(\log(2) -3\log(5)) &= -\log(7) &|& :(\log(2) -3\log(5))\\
+x &= \dfrac{-\log(7)}{\log(2) -3\log(5)} \approx 0.47 &\\
+S &= \{0.47\}$$
+
+
+### Exemple {num2}`exemple`
+
 Résolvez l'équation logarithmique suivante $\log(x) = \log(3) + 2 \cdot \log(4)$
 
 Comme le logarithme n'est défini que pour les valeurs strictement positives, il
@@ -376,13 +391,61 @@ $S = \{4\}$
 
 ````{admonition} Définition
 :class: note
-Le **nombre d'Euler** $e$ est le nombre réel défini par
+Le **nombre d'Euler** $e$ est le nombre réel (irrationnel) défini par
 
 ```{math}
 :class: align-center
-e = \lim_{n\to \infty} \left( 1 + \dfrac{1}{n} \right)^n.
+e = \lim_{n\to \infty} \left( 1 + \dfrac{1}{n} \right)^n = 2.718281828459\dots
 ```
 ````
+
+````{admonition} Définition
+:class: note
+Le **logarithme naturel** est le logarithme de base $e$. Il est noté:
+
+```{math}
+:class: align-center
+\log_e(x) = \ln(x)
+```
+````
+
+````{admonition} Propriétés
+:class: note
+- $\ln(e) = 1$
+- $\ln(e^x) = x$
+- $e^{\ln(x)} = x$
+````
+
+### Exemple {num2}`exemple`
+
+Résolvez l'équation exponentielle suivante: $1 + e^{2x} = 7$
+
+
+$$1 + e^{2x} &= 7 \qquad \qquad \qquad &|& -1 \text{ (isolez l'exponentielle)}\\
+e^{2x} &= 6 &|& \ln(\dots)\\
+\ln(e^{2x}) &= \ln(6) &|& \ln(e^x) = x\\
+2x &= \ln(6) &|& :2\\
+x &= \dfrac{\ln(6)}{2}\approx 0.896 &\\
+S &= \{0.896\}$$
+
+
+### Exemple {num2}`exemple`
+
+Résolvez l'équation logarithmique suivante: $2 + \ln(x - 1) = 5$
+
+Domaine de définition:
+
+$x - 1 > 0 \implies x > 1 \implies D_f = ]1; +\infty[$
+
+Résolution:
+
+$$2 + \ln(x - 1) &= 5 \qquad \qquad \qquad &|& -2 \text{ (isolez le logarithme)}\\
+\ln(x - 1) &= 3 &|& e^{\dots}\\
+e^{\ln(x - 1)} &= e^3  &|& e^{\ln(x)} = x\\
+x - 1 &= e^3 &|& + 1\\
+x &= e^3 + 1\approx 21.086 &\\
+S &= \{21.086\}$$
+
 
 ````{admonition} Définition
 :class: note
@@ -392,7 +455,69 @@ Une **fonction exponentielle** est une fonction de la forme
 f(x) = P_0 \cdot b^x
 ```
 avec $P_0 \in \mathbb{R^*_+}$ et $b \in \mathbb{R^*_+} \setminus \{ 1 \}$.
+
+Cette fonction peut aussi s'écrire en utilisant la base $e$
+```{math}
+:class: align-center
+f(x) = P_0 \cdot e^{kx}
+```
+avec $P_0 \in \mathbb{R^*_+}$ et $k \neq 0$
+
+Si $k > 0$, le processus modélisé est croissant, si $k < 0$, ce processus est
+décroissant.
 ````
+
+### Exemple {num2}`exemple`
+
+La croissance d'un capital est donné par la fonction exponentielle
+$C(n) = C_0 \cdot (1 + I)^n$ avec
+
+$C_0$: capital initial\
+$I$: taux d'intérêt\
+$n$: durée en années
+
+{.lower-alpha-paren}
+1.  Quel capital aurez-vous si vous placer $1\,500$ CHF à un taux d'intérêt
+    annuel de $0.5\%$ pendant $2$ ans?
+
+    $C_0 = 1500$, $I = 0.5\% = 0.005$ et $n = 2$
+
+    $C(2) = 1500 \cdot (1 + 0.005)^2 = 1515.0475$
+
+    Le capital sera de $1515.0475$ CHF, le gain sera de $15.0475$ CHF.
+
+2.  Pendant combien de temps faut-il placer un capital de $1\,000$ CHF à un taux de
+    $1\%$ pour obtenir $1220.19$ CHF?
+
+    $C_0 = 1000$ et $I = 1\% = 0.01$
+
+    $$
+    C(n) &= 1220.19\\
+    1000 \cdot (1 + 0.01)^n &= 1220.19\\
+    1000 \cdot (1.01)^n &= 1220.19\\
+    (1.01)^n &= 1.22019\\
+    \log((1.01)^n) &= \log(1.22019)\\
+    n \log(1.01) &= \log(1.22019)\\
+    n &= \dfrac{\log(1.22019)}{\log(1.01)} \approx 20
+    $$
+
+    Il faudra 20 ans.
+
+3.  Quel est le taux d'intérêt annuel si une somme de $2\,000$ CHF est placée à
+    la banque pendant $5$ ans et que le bénéfice est de $154.568$ CHF?
+
+    $C_0 = 2000$ et $n = 5$
+
+    $$
+    C(5) &= 2000 + 154.568\\
+    2000 \cdot (1 + I)^5 &= 2154.568\\
+    (1 + I)^5&= \dfrac{2154.568}{2000}\\
+    (1 + I)^5&= 1.077284\\
+    1 + I&= \sqrt[5]{1.077284}\\
+    I&= \sqrt[5]{1.077284} - 1 = 0.014999999 = 0.015\\
+    $$
+
+    La taux d'intérêt annuel est de $15\%$.
 
 ```{admonition} Définition
 :class: note
