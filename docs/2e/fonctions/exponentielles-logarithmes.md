@@ -469,6 +469,36 @@ décroissant.
 
 ### Exemple {num2}`exemple`
 
+La croissance d'une population de 1000 batéries qui double chaque jour est
+donnée par la fonction exponentielle $C(t) = 1000 \cdot 2^t$ avec $t$ en jours.
+
+1.  Exprimez cette fonction en utilisant la base $e$:
+
+    $C(t) = 1000 \cdot 2^t = 1000 \cdot e^{\ln(2^t)} = 1000 \cdot e^{t \cdot \ln(2)} \approx 1000 \cdot e^{0.6931t}$
+
+2.  Combien de bactéries y aura-t-il après 6 jours?
+
+    $C(6) = 1000 \cdot 2^6 = 64000$ bactéries
+
+    Après 6 jours, il y aura 64'000 bactéries.
+
+3.  Après combien de jour la population de batéries atteindra-t-elle un million
+    d'individus?
+
+    Il faut résoudre: $C(t) = 1\,000\,000$
+
+    $$1000 \cdot 2^t &= 1\,000\,000\\
+    2^t &= 1\,000\\
+    \log(2^t) &= \log(1\,000)\\
+    t \cdot \log(2) &= \log(1\,000)\\
+    t &= \dfrac{\log(1\,000)}{\log(2)} = 9.97 \text{ jours}$$
+
+    Il faudra ~10 jours.
+
+
+(exemple-capital)=
+### Exemple {num2}`exemple:capital`
+
 La croissance d'un capital est donné par la fonction exponentielle
 $C(n) = C_0 \cdot (1 + I)^n$ avec
 
@@ -477,8 +507,8 @@ $I$: taux d'intérêt\
 $n$: durée en années
 
 {.lower-alpha-paren}
-1.  Quel capital aurez-vous si vous placer $1\,500$ CHF à un taux d'intérêt
-    annuel de $0.5\%$ pendant $2$ ans?
+1.  Quel capital final obtiendrez-vous si vous placez $1\,500$ CHF à un taux
+    d'intérêt annuel de $0.5\%$ pendant $2$ ans?
 
     $C_0 = 1500$, $I = 0.5\% = 0.005$ et $n = 2$
 
@@ -486,8 +516,8 @@ $n$: durée en années
 
     Le capital sera de $1515.0475$ CHF, le gain sera de $15.0475$ CHF.
 
-2.  Pendant combien de temps faut-il placer un capital de $1\,000$ CHF à un taux de
-    $1\%$ pour obtenir $1220.19$ CHF?
+2.  Pendant combien de temps faut-il placer un capital de $1\,000$ CHF à un taux
+    de $1\%$ pour obtenir $1220.19$ CHF?
 
     $C_0 = 1000$ et $I = 1\% = 0.01$
 
@@ -519,6 +549,9 @@ $n$: durée en années
 
     La taux d'intérêt annuel est de $15\%$.
 
+
+
+
 ```{admonition} Définition
 :class: note
 Si dans un processus une quantité croît de façon exponentielle, on appelle
@@ -528,3 +561,21 @@ doubler.
 Lorsque la quantité décroît de façon exponentielle, la **demi-vie** du processus
 est le temps qu'il faut à la quantité pour qu'elle soit divisée par $2$.
 ```
+
+### Exemple {num2}`exemple`
+
+Reprenons l'{numref}`exemple %s<exemple:capital>`. Après combien de temps, la
+capital aura-t-il doublé avec un taux de $1\%$?
+
+$$2 \cdot C(n) &= C(n + d)\\
+2 \cdot C_0 \cdot (1 + 0.01)^n &= C_0 \cdot (1 + 0.01)^{n+d}\\
+2 \cdot C_0 \cdot (1.01)^n &= C_0 \cdot (1.01)^{n+d} \qquad\qquad &|&: C_0\\
+2 \cdot (1.01)^n &= (1.01)^{n+d} \qquad\qquad &|& a^{n+m} = a^n \cdot a^m\\
+2 \cdot (1.01)^n &= (1.01)^n \cdot (1.01)^d \qquad\qquad &|& : (1.01)^n\\
+2 &= (1.01)^d \qquad\qquad &|& \log(\dots)\\
+\log(2) &= \log((1.01)^d) \qquad\qquad &|& \log(a^n) = n\log(a)\\
+\log(2) &= d \cdot \log(1.01)\\
+d &= \dfrac{\log(2)}{\log(1.01)} = 69.66\\
+$$
+
+Il faudra presque 70 ans pour doubler son capital avec un taux de 1 %.
