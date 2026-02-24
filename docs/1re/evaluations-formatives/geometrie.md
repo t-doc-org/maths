@@ -70,7 +70,7 @@ Soit le triangle $ABC$ rectangle en $A$ et $\overline{AH}$ la hauteur.
 4.  $\overline{AH}^2 = \overline{BH} \cdot \overline{HC}$\
     $$6^2 &= 2 \cdot \overline{HC}\\
     \overline{HC} &= \dfrac{36}{2} = 18\,cm\\
-    \overline{HC} &= 18 + 2 = 20 \,cm
+    \overline{BC} &= 18 + 2 = 20 \,cm
     $$
 ```
 
@@ -90,7 +90,7 @@ tableau.
 | | $a$ | $b$ | $c$ | $\beta$ | $\gamma$ |
 | :---: | :---: | :---: | :---: | :---: | :---: |
 | a) | $49\,cm$ | $31\,cm$ | $37.9\,cm$ | $39.2^\circ$ | $50.8^\circ$ |
-| b) | $67\,cm$ | $42.1\,cm$ | $52\,cm$ | $39^\circ$ | $51^\circ$ |
+| b) | $66.9\,cm$ | $42.1\,cm$ | $52\,cm$ | $39^\circ$ | $51^\circ$ |
 
 ```
 
@@ -134,7 +134,7 @@ mètres de fil?
     :align: center
     ```
 -   $\sin(50^\circ) = \dfrac{x}{150} \implies x = 150 \cdot \sin(50^\circ) = 114.9\,m$
-    $h = 114.9 + 1.5 = 116.4\,m$
+    $h = 114.9 + 1.5 = 116.4\,m$<br>
     Le cerf-volant se trouve à 116.4 m du sol.
 ````
 `````
@@ -162,12 +162,12 @@ Par Pythagore:\
 $\overline{EH} = \sqrt{12.1^2-11^2} = 5.1\,cm$
 
 Par le thm de la hauteur:\
-$EH^2 = AH \cdot HB$\
-$AH = \dfrac{EH^2}{HB} = \dfrac{5.1^2}{11} = 2.4\,cm$
+$\overline{EH}^2 = \overline{AH} \cdot \overline{HB}$\
+$\overline{AH} = \dfrac{\overline{EH}^2}{HB} = \dfrac{5.1^2}{11} = 2.4\,cm$
 
 Par Pythagore:\
-$AB = AH + HB = 2.4 + 11 = 13.4\,cm$\
-$AE = \sqrt{13.4^2 - 12.1^2} = 5.7\,cm$
+$\overline{AB} = \overline{AH} + \overline{HB} = 2.4 + 11 = 13.4\,cm$\
+$\overline{AE} = \sqrt{13.4^2 - 12.1^2} = 5.7\,cm$
 
 Aire:\
 $A = \dfrac{13.4 \cdot 5.1}{2} = 34.3\,cm^2$
