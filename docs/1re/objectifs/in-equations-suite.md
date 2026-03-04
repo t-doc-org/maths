@@ -6,6 +6,8 @@ subject: "Mathématiques 1re année"
 ```
 # Équations et inéquations 2
 
+Les objectifs de l'évaluation [](#eval-equation-1) sont considérés comme acquis.
+
 ## Fractions algébriques
 
 - Savoir définir le domaine de définition.

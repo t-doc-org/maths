@@ -4,6 +4,8 @@
 ```{metadata}
 subject: "Mathématiques 1re année"
 ```
+
+(eval-equation-1)=
 # Équations et inéquations du premier et du deuxième degré
 
 ## Équations et inéquations du premier degré
