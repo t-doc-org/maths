@@ -12,7 +12,7 @@ myst_links_external_new_tab = True
 
 html_css_files = ['site-styles.css']
 html_theme_options = {
-    # 'repository_url': 'https://github.com/t-doc-org/maths',
+    'repository_url': 'https://github.com/t-doc-org/maths',
     'show_navbar_depth': 2,
     'show_toc_level': 2,
 }
