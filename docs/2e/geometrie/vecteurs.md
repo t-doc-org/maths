@@ -332,7 +332,102 @@ Soient trois points $A$, $B$ et $c$ du plan.
 
 ### Exemple {num2}`exemple`
 
-Ajouter un exemple visuel
+````{list-grid}
+:style: grid-template-columns: 1fr 1fr 1fr;
+-   # $\overrightarrow{AB} + \overrightarrow{BC} = \overrightarrow{AC} \quad$
+    ```{jsxgraph} chasle
+    :style: width: 80%;
+    ```
+
+-   # $\overrightarrow{AB} = -\overrightarrow{BA}$
+    ```{jsxgraph} oppose
+    :style: width: 80%;
+    ```
+-   # $\overrightarrow{AB} = \overrightarrow{AO} + \overrightarrow{OB}$
+    ```{jsxgraph} vecteur
+    :style: width: 80%;
+    ```
+````
+
+<script type="module">
+const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+const attrs = [defaults, {
+    boundingBox: [-1, 8, 8, -1],
+    axis: false,
+    defaults: {
+        arrow: {highlight: false, fixed: true, withLabel: true, strokeWidth: 2,
+                label: {anchorX: 'middle', anchorY: 'middle',
+                        position: '0.5fr left', distance: 1.2},
+        },
+        point: {size: 8, strokewidth: 0, fillOpacity: 0, highlightStrokeWidth: 0,
+                withLabel: false, highlightFillOpacity: 0.5},
+    }
+}];
+initBoard('chasle', attrs, board => {
+    const p1 = board.create('point', [0, 1]);
+    const p2 = board.create('point', [4, 7]);
+    const p3 = board.create('point', [6, 0]);
+    board.create('arrow', [p1, p2], {
+        name: `\\(\\overrightarrow{AB}\\)`, label: {offset: [0, 0]}
+    });
+    board.create('arrow', [p2, p3], {
+        name: `\\(\\overrightarrow{BC}\\)`, label: {offset: [0, 0]}
+    });
+    board.create('arrow', [p1, p3], {
+        name: `\\(\\overrightarrow{AC}\\)`, label: {offset: [0, 0]}
+    });
+});
+initBoard('oppose', attrs, board => {
+    const p1 = board.create('point', [0, 3]);
+    const p2 = board.create('point', [6, 7]);
+    board.create('arrow', [p1, p2], {
+        name: `\\(\\overrightarrow{AB}\\)`, label: {offset: [0, 0]}
+    });
+    const d = [1, -2];
+    board.create('arrow', [() => [p2.X() + d[0], p2.Y() + d[1]],
+                           () => [p1.X() + d[0], p1.Y() + d[1]]], {
+        name: `\\(\\overrightarrow{BA}\\)`, label: {offset: [0, 0]}
+    });
+});
+</script>
+<script type="module">
+const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+const attrs = [defaults, {
+    boundingBox: [-1, 8, 8, -1],
+    defaultAxes: {
+        x: {withLabel: false,
+            ticks: {drawLabels: false, insertTicks: false, ticksDistance: 1,
+            minorTicks: 0}
+        },
+        y: {withlabel: false,
+            ticks: {drawLabels: false, insertTicks: false, ticksDistance: 1,
+             minorTicks: 0}
+        },
+    },
+    defaults: {
+        arrow: {highlight: false, fixed: true, withLabel: true, strokeWidth: 2,
+                label: {anchorX: 'middle', anchorY: 'middle',
+                        position: '0.5fr right', distance: 1.2},
+        },
+        point: {size: 8, strokewidth: 0, fillOpacity: 0, highlightStrokeWidth: 0,
+                withLabel: false, highlightFillOpacity: 0.5},
+    }
+}];
+initBoard('vecteur', attrs, board => {
+    const p1 = board.create('point', [0, 0], {size: 0, fixed: true});
+    const p2 = board.create('point', [7, 1]);
+    const p3 = board.create('point', [3, 6]);
+    board.create('arrow', [p2, p1], {
+        name: `\\(\\overrightarrow{AO}\\)`, label: {offset: [0, 0]}
+    });
+    board.create('arrow', [p1, p3], {
+        name: `\\(\\overrightarrow{OB}\\)`, label: {offset: [0, 0]}
+    });
+    board.create('arrow', [p2, p3], {
+        name: `\\(\\overrightarrow{AB}\\)`, label: {offset: [0, 0]}
+    });
+});
+</script>
 
 ````{admonition} Théorème
 :class: note
