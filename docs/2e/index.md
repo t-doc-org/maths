@@ -7,6 +7,7 @@
 :maxdepth: 1
 fonctions/index
 trigo/index
+geometrie/index
 objectifs/index
 evaluations-formatives/index
 ```
