@@ -456,6 +456,9 @@ f(x) = P_0 \cdot b^x
 ```
 avec $P_0 \in \mathbb{R^*_+}$ et $b \in \mathbb{R^*_+} \setminus \{ 1 \}$.
 
+Si $b > 1$, le processus modélisé est croissant, si $0 < b < 1$, ce processus
+est décroissant.
+
 Cette fonction peut aussi s'écrire en utilisant la base $e$
 ```{math}
 :class: align-center
