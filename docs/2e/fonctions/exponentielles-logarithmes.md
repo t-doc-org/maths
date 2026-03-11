@@ -262,7 +262,7 @@ ceux en base $10$, dans ce cas, il faut effectuer un changement de base:
 :class: note
 **Règles de calcul des logarithmes**
 
-Pour $b$, $x$, $y \in \mathbb{R*_+}$ avec $b \neq 1$ et $n \in \mathbb{R}$,
+Pour $b$, $x$, $y \in \mathbb{R^*_+}$ avec $b \neq 1$ et $n \in \mathbb{R}$,
 
 1. $\log_b(x \cdot y) = \log_b(x) + \log_b(y)$
 2. $\log_b(x^n) = n \cdot \log_b(x)$
