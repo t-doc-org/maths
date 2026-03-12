@@ -10,4 +10,5 @@ fct-rationnnelles-reciproques-composees
 trigo-1
 trigo-equations
 trigo-thm-sin-cos
+exp-log
 ```
