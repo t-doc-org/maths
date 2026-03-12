@@ -9,4 +9,6 @@ revisions-fct-polyn
 fct-rationnelles-reciproques-composees
 trigo-1
 trigo-equations
+exp-log-1
+exp-log-2
 ```
