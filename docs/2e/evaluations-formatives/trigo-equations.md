@@ -4,7 +4,7 @@
 # Équations trigonométriques
 
 ```{metadata}
-subject: "Mathématiques 1re année"
+subject: "Mathématiques 2e année"
 print-styles: tdoc/print-exam.css
 page-break-force: 1
 page-break-avoid: 2
