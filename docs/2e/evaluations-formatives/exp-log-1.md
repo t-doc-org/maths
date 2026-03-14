@@ -29,7 +29,7 @@ Calculez:
 3.  $\log_3(27) = $ {leader}`.`
 4.  $\log_2(\sqrt{2}) = $ {leader}`.`
 5.  $\log(\dfrac{1}{1000}) = $ {leader}`.`
-6.  $4^{\log_3(5)} = $ {leader}`.`
+6.  $4^{\log_4(5)} = $ {leader}`.`
 
 
 
