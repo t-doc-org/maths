@@ -12,7 +12,7 @@ Les objectifs des autres thèmes sur les fonctions sont considérés comme acqui
 ## Prérequis du programme de 1re année
 
 - Connaître les règles de calculs des puissances.
-- Savoir exprimer une racine sous forme de puissance à exposants rationnel.
+- Savoir exprimer une racine sous forme de puissance à exposants rationnels.
 
 ## Fonctions exponentielles
 
