@@ -135,30 +135,30 @@ l'axe des $x$.
 :class: note
 Une **fonction du premier degré** est une fonction dont l'expression
 algébrique peut s'écrire sous la forme d'un polynôme du premier degré
-$f(x) = mx +p$ où les coefficients $m \neq 0$ et $p$ sont des nombres réels.\
+$f(x) = mx + h$ où les coefficients $m \neq 0$ et $h$ sont des nombres réels.\
 La représentation graphique d'une fonction du premier degré est une droite.
 
-Une **fonction linéaire** est une fonction dont $p = 0$. Elle est de la forme
+Une **fonction linéaire** est une fonction dont $h = 0$. Elle est de la forme
 $f(x) = mx$ et sa représentation graphique est une droite qui passe par
-l'origine. Alors qu'une fonction dont $p \neq 0$ est une **fonction affine.**
+l'origine. Alors qu'une fonction dont $h \neq 0$ est une **fonction affine.**
 ```
 
 ### Exemple {num2}`exemple`
 
-Déterminez l'expressions algébrique de la droite $f = mx + p$ qui passe par les
+Déterminez l'expressions algébrique de la droite $f = mx + h$ qui passe par les
 points $P(-2;-1)$ et $Q(3;2)$.
 
 Pente:
 
 $m=\dfrac{y_p-y_q}{x_p-x_q}=\dfrac{-1 - 2}{-2 - 3} = \dfrac{-3}{-5} =\dfrac{3}{5}$\
-$f(x)= \dfrac{3}{5}x + p$.
+$f(x)= \dfrac{3}{5}x + h$.
 
 Ordonnée à l'origine:
 
 $$P \in f \quad\quad \Rightarrow \quad\quad\quad\quad f(-2) & = -1\\
-\dfrac{3}{5} \cdot (-2) + p & = -1\\
--\dfrac{6}{5} + p & = -1$$
-$p = -1 + \dfrac{6}{5} = -\dfrac{5}{5} + \dfrac{6}{5} = \dfrac{1}{5}$
+\dfrac{3}{5} \cdot (-2) + h & = -1\\
+-\dfrac{6}{5} + h & = -1$$
+$h = -1 + \dfrac{6}{5} = -\dfrac{5}{5} + \dfrac{6}{5} = \dfrac{1}{5}$
 
 L'expression algébrique de cette fonction est donc
 $f(x)=\dfrac{3}{5}x+\dfrac{1}{5}$
