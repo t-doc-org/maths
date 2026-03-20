@@ -233,6 +233,34 @@ initBoard('base-orthonormée', attrs, board => {
 });
 </script>
 
+````{admonition} Théorème
+:class: note
+Soient un repère $(O;\vec{e_1};\vec{e_2})$ du plan et deux points $A(a_1;a_2)$
+et $B(b_1;b_2)$. Les composantes du vecteur $\overrightarrow{AB}$ sont
+
+```{math}
+:class: align-center
+\overrightarrow{AB} = \overrightarrow{OB} - \overrightarrow{OA} =
+\begin{pmatrix} b_1\\ b_2\\ \end{pmatrix} - \begin{pmatrix} a_1\\ a_2\\ \end{pmatrix} &= \begin{pmatrix} b_1 - a_1\\ b_2 - a_2\\ \end{pmatrix}\\
+```
+````
+
+### Exemple {num2}`exemple`
+
+Soient les points $A(4;-3)$ et $B(0;7)$.
+
+$\overrightarrow{OA} = \begin{pmatrix} 4\\ -3\\ \end{pmatrix}$
+
+$\overrightarrow{OB} = \begin{pmatrix} 0\\ 7\\ \end{pmatrix}$
+
+$\overrightarrow{AB} = \overrightarrow{OB} - \overrightarrow{OA} = \begin{pmatrix} 0\\ 7\\ \end{pmatrix} - \begin{pmatrix} 4\\ -3\\ \end{pmatrix} = \begin{pmatrix} 0 - 4\\ 7 - (-3)\\ \end{pmatrix} = \begin{pmatrix} -4\\ 10\\ \end{pmatrix}$
+
+$\overrightarrow{BA} = \overrightarrow{OA} - \overrightarrow{OB} = \begin{pmatrix} 4\\ -3\\ \end{pmatrix} - \begin{pmatrix} 0\\ 7\\ \end{pmatrix} = \begin{pmatrix} 4 - 0\\ -3 - 7\\ \end{pmatrix} = \begin{pmatrix} 4\\ -10\\ \end{pmatrix}$
+
+$\overrightarrow{AB} = - \overrightarrow{BA}$
+
+
+
 ```{admonition} Définition
 :class: note
 La longueur d'un vecteur $\vec{v}$ est appelée la **norme** du vecteur
@@ -323,7 +351,7 @@ Soient $\vec{u}$ et $\vec{v}$ des vecteurs, $\lambda$ et $\mu \in \mathbb{R}$.
 
 ````{admonition} Théorème
 :class: note
-Soient trois points $A$, $B$ et $c$ du plan.
+Soient trois points $A$, $B$ et $C$ du plan.
 
 1.  $\overrightarrow{AB} + \overrightarrow{BC} = \overrightarrow{AC} \quad$ (relation de Chasles)
 2.  $\overrightarrow{AB} = -\overrightarrow{BA}$
@@ -429,30 +457,5 @@ initBoard('vecteur', attrs, board => {
 });
 </script>
 
-````{admonition} Théorème
-:class: note
-Soient un repère $(O;\vec{e_1};\vec{e_2})$ du plan et deux points $A(a_1;a_2)$
-et $B(b_1;b_2)$. Les composantes du vecteur $\overrightarrow{AB}$ sont
-
-```{math}
-:class: align-center
-\overrightarrow{AB} = \overrightarrow{OB} - \overrightarrow{OA} =
-\begin{pmatrix} b_1\\ b_2\\ \end{pmatrix} - \begin{pmatrix} a_1\\ a_2\\ \end{pmatrix} &= \begin{pmatrix} b_1 - a_1\\ b_2 - a_2\\ \end{pmatrix}\\
-```
-````
-
-### Exemple {num2}`exemple`
-
-Soient les points $A(4;-3)$ et $B(0;7)$.
-
-$\overrightarrow{OA} = \begin{pmatrix} 4\\ -3\\ \end{pmatrix}$
-
-$\overrightarrow{OB} = \begin{pmatrix} 0\\ 7\\ \end{pmatrix}$
-
-$\overrightarrow{AB} = \overrightarrow{OB} - \overrightarrow{OA} = \begin{pmatrix} 0\\ 7\\ \end{pmatrix} - \begin{pmatrix} 4\\ -3\\ \end{pmatrix} = \begin{pmatrix} 0 - 4\\ 7 - (-3)\\ \end{pmatrix} = \begin{pmatrix} -4\\ 10\\ \end{pmatrix}$
-
-$\overrightarrow{BA} = \overrightarrow{OA} - \overrightarrow{OB} = \begin{pmatrix} 4\\ -3\\ \end{pmatrix} - \begin{pmatrix} 0\\ 7\\ \end{pmatrix} = \begin{pmatrix} 4 - 0\\ -3 - 7\\ \end{pmatrix} = \begin{pmatrix} 4\\ -10\\ \end{pmatrix}$
-
-$\overrightarrow{AB} = - \overrightarrow{BA}$
 
 
