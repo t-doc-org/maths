@@ -18,10 +18,10 @@ html_theme_options = {
 }
 
 metadata = {
+    'solutions': 'dynamic',
     'points': {
         'text': [" ({0} pt)", " ({0} pts)"],
     },
-    'solutions': 'dynamic',
     'mathjax': {
         'chtml': {'displayAlign': 'left'},
         'svg': {'displayAlign': 'left'},
