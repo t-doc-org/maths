@@ -382,5 +382,5 @@ $$
   \end{aligned}
 \right.
 $$
-LE point d'intersection est $I(\dfrac{22}{7}; \dfrac{4}{7})$
+Le point d'intersection est $I(\dfrac{22}{7}; \dfrac{4}{7})$
 
