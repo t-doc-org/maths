@@ -230,8 +230,6 @@ sur un autre vecteur $\vec{v}$ est le vecteur $\vec{u}'$ donné par
 
 ### Exemple {num2}`exemple`
 
-<!-- Ajouter un schéma -->
-
 Soient $A(-3;2)$, $B(4;-1)$ et $P(1;5)$ trois points du plan.
 
 Calculez la projection orthogonale $P'$ de $P$ sur la droite $AB$.
@@ -249,16 +247,68 @@ Calculez $\overrightarrow{AP'}$ avec le théorème ci-dessus:
 
 ```{math}
 \overrightarrow{AP'} &= \dfrac{\overrightarrow{AB} \cdot \overrightarrow{AP}}{\| AP \|^2} \cdot \overrightarrow{AB}\\
-&= \dfrac{6 \cdot 1 + 4 \cdot 5}{(\sqrt{6^2 + 4^2})^2} \cdot \overrightarrow{AB} \\
-&= \dfrac{6 + 20}{6^2 + 4^2} \cdot \overrightarrow{AB} \\
-&= \dfrac{26}{52} \cdot \overrightarrow{AB} \\
-&= \dfrac{1}{2} \cdot \overrightarrow{AB}  \\
-&= \dfrac{1}{2} \cdot \begin{pmatrix} 7\\ -3 \end{pmatrix}  \\
-&= \begin{pmatrix} \frac{7}{2}\\ -\frac{3}{2} \end{pmatrix}
+&= \dfrac{7 \cdot 4 + (-3) \cdot 3}{(\sqrt{7^2 + (-3)^2})^2} \cdot \overrightarrow{AB} \\
+&= \dfrac{28 - 9}{49 + 9} \cdot \overrightarrow{AB} \\
+&= \dfrac{19}{58} \cdot \overrightarrow{AB} \\
+&= \dfrac{19}{58} \cdot \begin{pmatrix} 7\\ -3 \end{pmatrix}  \\
+&= \begin{pmatrix} \frac{133}{58}\\ -\frac{57}{58} \end{pmatrix}
 ```
 
 Trouvez les coordonnées de $P'$:
 
-$\overrightarrow{OP'} = \overrightarrow{OA} + \overrightarrow{AP'} = \begin{pmatrix} -3\\ 2 \end{pmatrix} + \begin{pmatrix} \frac{7}{2}\\ -\frac{3}{2} \end{pmatrix} = \begin{pmatrix} \frac{1}{2}\\ \frac{1}{2} \end{pmatrix}$
+$\overrightarrow{OP'} = \overrightarrow{OA} + \overrightarrow{AP'} = \begin{pmatrix} -3\\ 2 \end{pmatrix} + \begin{pmatrix} \frac{133}{58}\\ -\frac{57}{58} \end{pmatrix} = \begin{pmatrix} -\frac{41}{58}\\ \frac{59}{58} \end{pmatrix}$
 
-$\implies P'(\frac{1}{2};\frac{1}{2})$
+$\implies P'(-\frac{41}{58};\frac{59}{58})$
+
+```{jsxgraph} exemple
+:style: width: 100%; border: none;
+```
+
+<script type="module">
+const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+const attrs = [defaults, {
+    boundingbox: [-8, 10, 10, -2],
+    axis: false, grid: true,
+    defaults: {
+        arrow: {highlight: false, fixed: true,
+                withLabel: true,  strokeColor: JXG.palette.black,
+                label: {anchorX: 'middle', anchorY: 'middle',
+                        position: '0.5fr left', offset: [5, -10]}},
+        segment: {highlight: false, withLabel: false, dash: 2,
+                strokeColor: JXG.palette.black},
+        line: {highlight: false, fixed: true,
+              withLabel: false,  strokeColor: JXG.palette.black},
+        point: {size: 8, strokewidth: 0, fillOpacity: 0, highlightStrokeWidth: 0,
+                withLabel: true, highlightFillOpacity: 0.5},
+        angle: {withLabel: false, strokewidth: 1, radius: 0.3, strokeColor: JXG.palette.black,
+                fillColor: JXG.palette.black, fillOpacity: 0},
+
+    },
+}];
+initBoard('exemple', attrs, board => {
+  const O = board.create('point', [0,0], {name: `\\(0\\)`, fixed: true,
+            size: 1, strokewidth: 1, fillOpacity: 1, label: {offset: [-10, 10]}});
+  const A = board.create('point', [-3,2], {name: `\\(A\\)`, label: {offset: [-10, 10]}});
+  const B = board.create('point', [4, -1], {name: `\\(B\\)`, label: {offset: [-10, 10]}});
+  const P = board.create('point', [1, 5], {name: `\\(P\\)`, label: {offset: [0,10]}});
+  board.create('line', [A, B], {dash: 3});
+  const AB = board.create('arrow', [A, B], {name: `\\(\\overrightarrow{AB}\\)`});
+  const AP = board.create('arrow', [A, P], {name: `\\(\\overrightarrow{AP}\\)`, strokeColor: JXG.palette.red,
+    label: {strokeColor: JXG.palette.red}});
+  const OA = board.create('arrow', [O, A], {name: `\\(\\overrightarrow{OA}\\)`, strokeColor: JXG.palette.red,
+    label: {strokeColor: JXG.palette.red}});
+  const Pd = board.create('orthogonalprojection', [P, AB], {
+    whithLabel: true, name: '\\(P\'\\)', fixed: true,
+    size: 1, strokewidth: 1, fillOpacity: 1,  label: {offset: [-5, -15]}
+  });
+  const APd = board.create('arrow', [A, Pd], {name: `\\(\\overrightarrow{AP'}\\)`, strokeColor: JXG.palette.red,
+    label: {strokeColor: JXG.palette.red}});
+  const OPd = board.create('arrow', [O, Pd], {name: `\\(\\overrightarrow{OP'}\\)`, strokeColor: JXG.palette.red,
+    label: {strokeColor: JXG.palette.red}});
+  board.create('segment', [P, Pd], {
+    dash: 3, withLabel: false
+  });
+  board.create('angle', [P, Pd, A]);
+});
+</script>
+
