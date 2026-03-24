@@ -197,21 +197,23 @@ const attrs = [defaults, {
     boundingbox: [-1, 6, 8, -0.5],
     axis: false, grid: false,
     defaults: {
-        line: {withLabel: true, strokeColor: JXG.palette.black, strokeWidth: 2},
+        line: {highlight: false, withLabel: true, fixed: true,
+              strokeColor: JXG.palette.black, strokeWidth: 2},
         point: {withLabel: true, size: 1, label: {anchorY:'top'}},
-        angle: {withLabel: false, radius: 0.3, strokeColor: JXG.palette.black,
+        angle: {highlight: false, withLabel: false, radius: 0.3,
+                strokeColor: JXG.palette.black,
                 fillColor: JXG.palette.black, fillOpacity: 0},
     },
 }];
 initBoard('projection', attrs, board => {
-  const O = board.create('point', [0,0], {size: 0});
+  const O = board.create('point', [0,0], {size: 0, withLabel: false});
   const P = board.create('point', [2, 5], {name: `\\(P\\)`});
   const d = board.create('line', [[0, 0], [3,1]], {name: `\\(d\\)`});
   const Pd = board.create('orthogonalprojection', [P, d], {
     whithLabel: true, name: '\\(P\'\\)', label: {offset: [0, -5]}
   });
   board.create('segment', [P, Pd], {
-    dash: 3, withLabel: false
+    dash: 3, withLabel: false, fixed: false
   });
   board.create('angle', [P, Pd, O]);
 });
