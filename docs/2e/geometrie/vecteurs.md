@@ -46,6 +46,7 @@ Les vecteurs suivants sont colinéaires, car ils ont tous la même direction.
 const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
 const attrs = [defaults, {
     boundingBox: [-5, 5, 4, -2],
+    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
     defaults: {
         arrow: {withLabel: true,
                 label: {anchorX: 'middle', anchorY: 'middle', offset: [-60, -20]}
@@ -146,12 +147,12 @@ $\vec{v} = 3 \cdot \vec{e_1} + 2 \cdot \vec{e_2} = \begin{pmatrix} 3\\ 2\\ \end{
 :style: grid-template-columns: 1fr 1fr;
 -   # Base du plan
     ```{jsxgraph} base
-    :style: width: 60%;
+    :style: width: 80%;
     ```
 
 -   # Base orthonormée du plan
     ```{jsxgraph} base-orthonormée
-    :style: width: 60%;
+    :style: width: 80%;
     ```
 ````
 
@@ -160,6 +161,7 @@ const {defaults, initBoard, JXG, nonInteractive} =
     await tdoc.import('jsxgraph.js');
 const attrs = [defaults, nonInteractive, {
     boundingBox: [-2, 4, 4, -2],
+    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
     axis: false, grid: false,
     defaults: {
         arrow: {withLabel: true, strokeWidth: 2,
@@ -206,6 +208,7 @@ const {defaults, initBoard, JXG, nonInteractive} =
     await tdoc.import('jsxgraph.js');
 const attrs = [defaults, nonInteractive, {
     boundingBox: [-2, 4, 4, -2],
+    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
     defaultAxes: {
         x: {withLabel: false,
             ticks: {drawLabels: false, insertTicks: false,
@@ -381,6 +384,7 @@ Soient trois points $A$, $B$ et $C$ du plan.
 const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
 const attrs = [defaults, {
     boundingBox: [-1, 8, 8, -1],
+    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
     axis: false,
     defaults: {
         arrow: {highlight: false, fixed: true, withLabel: true, strokeWidth: 2,
@@ -422,6 +426,7 @@ initBoard('oppose', attrs, board => {
 const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
 const attrs = [defaults, {
     boundingBox: [-1, 8, 8, -1],
+    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
     defaultAxes: {
         x: {withLabel: false,
             ticks: {drawLabels: false, insertTicks: false, ticksDistance: 1,

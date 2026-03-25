@@ -42,6 +42,7 @@ l'origine**.
 const {defaults, initBoard, JXG, nonInteractive} = await tdoc.import('jsxgraph.js');
 const attrs = [defaults, {
     boundingBox: [-5, 5, 5, -5],
+    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
 }];
 initBoard('droite', attrs, board => {
     board.create('functiongraph', [x => - 2 / 3 * x + 1] , {
