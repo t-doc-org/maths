@@ -251,7 +251,7 @@ $\overrightarrow{AP} = \begin{pmatrix} 1\\ 5 \end{pmatrix} - \begin{pmatrix} -3\
 Calculez $\overrightarrow{AP'}$ avec le théorème ci-dessus:
 
 ```{math}
-\overrightarrow{AP'} &= \dfrac{\overrightarrow{AB} \cdot \overrightarrow{AP}}{\| AP \|^2} \cdot \overrightarrow{AB}\\
+\overrightarrow{AP'} &= \dfrac{\overrightarrow{AB} \cdot \overrightarrow{AP}}{\| \overrightarrow{AP}\|^2} \cdot \overrightarrow{AB}\\
 &= \dfrac{7 \cdot 4 + (-3) \cdot 3}{(\sqrt{7^2 + (-3)^2})^2} \cdot \overrightarrow{AB} \\
 &= \dfrac{28 - 9}{49 + 9} \cdot \overrightarrow{AB} \\
 &= \dfrac{19}{58} \cdot \overrightarrow{AB} \\
