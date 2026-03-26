@@ -66,7 +66,7 @@ Résolvez les équations suivantes:
 
 ```{solution}
 {.lower-alpha-paren .vsep-2}
-1.  $S = \left\{\dfrac{2}{1 + \log_5(7)}\right\}$
+1.  $S = \left\{\dfrac{2 \log(5)}{\log(5) + \log(7)}\right\} = \{0.905\}$
 2.  $S = \{0; 1\}$
 3.  $D = ]0;6[ \qquad S = \left\{\dfrac{6}{5}\right\}$
 4.  $D = \left]\dfrac{1}{3};+\infty\right[ \qquad S = \left\{\dfrac{4}{3}\right\}$
