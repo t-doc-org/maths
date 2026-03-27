@@ -93,7 +93,7 @@ y &= \dfrac{3}{4}x - \dfrac{1}{2}$$
 ```{admonition} Définition
 :class: note
 Un **vecteur directeur** d'une droite $d$ est tout vecteur $\overrightarrow{AB}$
-avec $A$ et $B$ sont deux points distincts de $d$.
+tels que $A$ et $B$ sont deux points distincts de $d$.
 ```
 
 ### Exemple {num2}`exemple`
@@ -108,7 +108,7 @@ $\begin{pmatrix} 3\\ -2\\ \end{pmatrix}$ est un vecteur directeur de $d$.
 
 ````{admonition} Définition
 :class: note
-Pour tout point $P$ de la droite $d$ donnée par le point $A$ et le vecteur
+Pour tout point $P$ de la droite $d$ donnée par le point $A \in d$ et le vecteur
 directeur $\vec{d}$, l'**équation vectorielle** de la droite $d$ du plan est
 donnée par
 ```{math}
