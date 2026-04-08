@@ -10,4 +10,5 @@ puissances-racines-polynomes
 in-equations-1-2
 geometrie
 in-equations-suite
+geometrie-vectorielle
 ```
