@@ -53,7 +53,6 @@ avec $a_n \neq 0$ et $n \in \mathbb{N}$.
     &= -x^2+6x+5
     $$
 
-
 ```{admonition} Définition
 :class: note
 Le **degré** d'un polynôme est le degré de son terme de plus haut degré, appelé
@@ -103,7 +102,8 @@ où $g(x)$ est un polynôme de degré $n-1$.
 ### Exemple {num2}`exemple`
 
 Soit la fonction $f(x)=x^3+x^2+x-3$.\
-$f(1)=1^3+1^2+1-3=1+1+1-3=0 \Rightarrow$ $1$ est un zéro de $f \Rightarrow f(x) = (x-1) \cdot g(x)$.
+$f(1)=1^3+1^2+1-3=1+1+1-3=0 \Rightarrow$ $1$ est un zéro de
+$f \Rightarrow f(x) = (x-1) \cdot g(x)$.
 
 Pour trouvez $g(x)$, effectuez la division polynomiale de $x^3+x^2+x+1$ par $x-1$
 $$\begin{array}
@@ -209,8 +209,8 @@ La fonction $g$ est symétrique par rapport à l'origine $O$.
 ```
 
 <script type="module">
-const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
-const attrs = [defaults, {
+const {initBoard, JXG, screen} = await tdoc.import('jsxgraph.js');
+const attrs = [screen, {
     boundingBox: [-5.2, 5.2, 5.2, -5.2],
     defaults: {
         functiongraph: {withLabel: true, label: {position: '0.65fr right'}},

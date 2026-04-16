@@ -39,8 +39,9 @@ l'origine**.
 ````
 
 <script type="module">
-const {defaults, initBoard, JXG, nonInteractive} = await tdoc.import('jsxgraph.js');
-const attrs = [defaults, {
+const {initBoard, JXG, nonInteractive, screen} =
+    await tdoc.import('jsxgraph.js');
+const attrs = [screen, {
     boundingBox: [-5, 5, 5, -5],
     pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
 }];
@@ -50,9 +51,7 @@ initBoard('droite', attrs, board => {
         label: {position: '0.2fr right', offset: [15, 15]},
     });
 });
-
 </script>
-
 
 ````{admonition} Définition
 :class: note
@@ -88,7 +87,6 @@ En isolant $y$, nous obtenons l'équation cartésienne explicite.
 $$ -3x + 4y + 2 &= 0 \qquad \qquad &|& +3x - 2\\
 4y &= 3x - 2 &|& :4\\
 y &= \dfrac{3}{4}x - \dfrac{1}{2}$$
-
 
 ```{admonition} Définition
 :class: note
@@ -189,7 +187,6 @@ $d : \begin{pmatrix} x\\ y\\ \end{pmatrix} = \begin{pmatrix} 2\\ -5\\ \end{pmatr
     Comme les deux valeurs de $\lambda$ sont les mêmes, $R$ appartient à la droite
     $d$.
 
-
 ````{admonition} Définition
 :class: note
 Les **équations paramétriques** de la droite $d$ du plan sont données par
@@ -231,7 +228,8 @@ Soit l'équation vectorielle d'une droite
 
 $d : \begin{pmatrix} x\\ y\\ \end{pmatrix} = \begin{pmatrix} -3\\ 4\\ \end{pmatrix} + \lambda \cdot \begin{pmatrix} 5\\ -1\\ \end{pmatrix} \text{ avec } \lambda \in \mathbb{R}$
 
-La pente de la droite: $m = \dfrac{\Delta y}{\Delta x} = \dfrac{-1}{5} = -\dfrac{1}{5}$
+La pente de la droite:
+$m = \dfrac{\Delta y}{\Delta x} = \dfrac{-1}{5} = -\dfrac{1}{5}$
 
 $d: y = -\dfrac{1}{5}x + h$
 
@@ -251,7 +249,6 @@ x + 5y - 17 &= 0$$
 
 Remarque: Le coefficient du $x$ est l'opposé de la deuxième composante du
 vecteur directeur et celui du $y$ correspond à la première.
-
 
 ````{admonition} Théorème
 :class: note
@@ -340,7 +337,6 @@ $$\left \{
 $$
 $(2; 2) \notin d_2$, les deux droites sont donc parallèles.
 
-
 ### Exemple {num2}`exemple`
 
 Soient deux droites $d_1 : \begin{pmatrix} x\\ y\\ \end{pmatrix} = \begin{pmatrix} 0\\ 1\\ \end{pmatrix} + \lambda \cdot \begin{pmatrix} 4\\ -2\\ \end{pmatrix}$ et $d_2 : \begin{pmatrix} x\\ y\\ \end{pmatrix} = \begin{pmatrix} 3\\ -1\\ \end{pmatrix} + \mu \cdot \begin{pmatrix} -1\\ -3\\ \end{pmatrix}$
@@ -384,4 +380,3 @@ $$
 \right.
 $$
 Le point d'intersection est $I(\dfrac{22}{7}; \dfrac{4}{7})$
-

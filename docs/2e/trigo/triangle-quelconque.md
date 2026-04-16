@@ -63,22 +63,25 @@ Le théorème du sinus peut être utilisé si dans un triangle, sont connus:
 ```
 
 <script type="module">
-const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
-initBoard('utilisation-sinus', [defaults, {
-    boundingbox: [-5, 4, 7, -1],
-    axis: false, grid: false,
-    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: false,
-    defaults: {
-        segment: {strokeColor: JXG.palette.black, strokeWidth: 1,
-                  name: {withLabel: false}
-                },
-        line: {strokeColor: JXG.palette.black, strokeWidth: 1},
-        point: {size: 0, withLabel: true, fixed: true,
-                showInfobox: false, withLabel: false},
-        angle: {strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
-                fillOpacity: 0.2, strokeWidth: 1, withLabel: false, radius: 0.5,
-                },
+const {initBoard, JXG, screen} = await tdoc.import('jsxgraph.js');
+initBoard('utilisation-sinus', [screen, {
+  boundingbox: [-5, 4, 7, -1],
+  axis: false, grid: false,
+  pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: false,
+  defaults: {
+    segment: {
+      strokeColor: JXG.palette.black, strokeWidth: 1, name: {withLabel: false},
     },
+    line: {strokeColor: JXG.palette.black, strokeWidth: 1},
+    point: {
+      size: 0, withLabel: true, fixed: true, showInfobox: false,
+      withLabel: false,
+    },
+    angle: {
+      strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
+      fillOpacity: 0.2, strokeWidth: 1, withLabel: false, radius: 0.5,
+    },
+  },
 }], board => {
   const A = board.create('point', [-4, 0]);
   const B = board.create('point', [-4.5, 3]);
@@ -111,65 +114,67 @@ initBoard('utilisation-sinus', [defaults, {
   board.create('segment', [G, H], {dash: 2});
 
   board.create('angle', [I, G, H]);
-
 });
 </script>
 
 <script type="module">
-const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+const {initBoard, JXG, screen} = await tdoc.import('jsxgraph.js');
 
 function hauteur(name, fn) {
-  initBoard(name, [defaults, {
+  initBoard(name, [screen, {
     boundingbox: [-1.5, 2, 5, -1],
     axis: false, grid: false,
     pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: false,
     defaults: {
-        segment: {strokeColor: JXG.palette.black, strokeWidth: 1,
-                  label: {anchorX: 'middle',offset: [0, 0]}
-                },
-        line: {strokeColor: JXG.palette.black, strokeWidth: 1},
-        point: {size: 0, withLabel: true, fixed: true, showInfobox: false,
-                label: {anchorX: 'middle', anchorY:'top' ,offset: [0, 0]}
-              },
-        angle: {strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
-                fillOpacity: 0.2, strokeWidth: 1,
-                label: {strokeColor: JXG.palette.black,
-                        anchorX: 'middle',
-                        anchorY: 'middle'},
-                name: {withLabel: true},
-                },
+      segment: {
+        strokeColor: JXG.palette.black, strokeWidth: 1,
+        label: {anchorX: 'middle',offset: [0, 0]},
+      },
+      line: {strokeColor: JXG.palette.black, strokeWidth: 1},
+      point: {
+        size: 0, withLabel: true, fixed: true, showInfobox: false,
+        label: {anchorX: 'middle', anchorY:'top' ,offset: [0, 0]},
+      },
+      angle: {
+        strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
+        fillOpacity: 0.2, strokeWidth: 1,
+        label: {
+          strokeColor: JXG.palette.black, anchorX: 'middle', anchorY: 'middle',
+        },
+        name: {withLabel: true},
+      },
     },
     }], board => {
-    const A = board.create('point', [-1, 0], {name: '\\(A\\)', withLabel: true});
-    const B = board.create('point', [3, 0], {name: '\\(B\\)', withLabel: true});
+    const A = board.create('point', [-1, 0], {
+      name: '\\(A\\)', withLabel: true,
+    });
+    const B = board.create('point', [3, 0], {
+      name: '\\(B\\)', withLabel: true,
+    });
     const C = board.create('point', [1.5, 1.5], {
-          name: '\\(C\\)', withLabel: true,
-          label: {anchorY: 'bottom'}
-      });
+        name: '\\(C\\)', withLabel: true, label: {anchorY: 'bottom'},
+    });
     const H = board.create('point', [1.5, 0], {
-          name: '\\(H\\)', withLabel: true,
-          label: {anchorY: 'top'}
-      });
+      name: '\\(H\\)', withLabel: true, label: {anchorY: 'top'},
+    });
 
     board.create('segment', [A, C], {
-      name: '\\(b\\)', withLabel: true,
-      label: {anchorY:'bottom'}
+      name: '\\(b\\)', withLabel: true, label: {anchorY:'bottom'},
     });
     board.create('segment', [B, C], {
       name: '\\(a\\)', withLabel: true,
-      label: {anchorY:'bottom', offset: [2, 0]}
+      label: {anchorY:'bottom', offset: [2, 0]},
     });
     board.create('segment', [H, C], {
       name: '\\(h_c\\)', withLabel: true,
-      label: {anchorX: 'right', anchorY:'middle', offset: [-5, 0]}
+      label: {anchorX: 'right', anchorY:'middle', offset: [-5, 0]},
     });
 
     board.create('angle', [B, A, C], {
-          name: '\\(\\alpha\\)',
-          label: {offset: [-23, -5]}
+      name: '\\(\\alpha\\)', label: {offset: [-23, -5]},
     });
     board.create('angle', [B, H, C], {
-      withLabel: false, fillOpacity: 0, radius: 0.2
+      withLabel: false, fillOpacity: 0, radius: 0.2,
     });
     fn(board, A, B, C, H);
   });
@@ -177,79 +182,76 @@ function hauteur(name, fn) {
 
 hauteur('demo-sinus', (board, A, B, C, H) => {
   board.create('segment', [A, B], {
-    name: '\\(c\\)', withLabel: true,
-    label: {anchorY:'top'}
+    name: '\\(c\\)', withLabel: true, label: {anchorY:'top'},
   });
   board.create('angle', [C, B, A], {
-        name: '\\(\\beta\\)',
-        label: {offset: [23, -12]}
+    name: '\\(\\beta\\)', label: {offset: [23, -12]},
   });
 });
 
 hauteur('demo-cosinus', (board, A, B, C, H) => {
   board.create('segment', [A, H], {
-    name: '\\(b_1\\)', withLabel: true,
-    label: {anchorY:'top'}
-    });
+    name: '\\(b_1\\)', withLabel: true, label: {anchorY:'top'},
+  });
   board.create('segment', [H, B], {
-    name: '\\(a_1\\)', withLabel: true,
-    label: {anchorY:'top'}
-    });
+    name: '\\(a_1\\)', withLabel: true, label: {anchorY:'top'},
+  });
 });
 
-
 function triangle_exemple(name, {a, b, c, alpha, beta, gamma}) {
-  initBoard(name, [defaults, {
-      boundingbox: [-0.5, 3.5, 5.5, -0.5],
-      axis: false, grid: false,
-      pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: false,
-      defaults: {
-          segment: {strokeColor: JXG.palette.black, strokeWidth: 1,
-                    name: {withLabel: false}
-                  },
-          line: {strokeColor: JXG.palette.black, strokeWidth: 1},
-          point: {size: 0, withLabel: true, fixed: true, showInfobox: false,
-                  withLabel: false
-                },
-          angle: {strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
-                  fillOpacity: 0.2, strokeWidth: 1, withLabel: false,
-                  radius: 0.5,
-                  label: {strokeColor: JXG.palette.black,
-                          anchorX: 'middle',
-                          anchorY: 'middle'},
-                  },
+  initBoard(name, [screen, {
+    boundingbox: [-0.5, 3.5, 5.5, -0.5],
+    axis: false, grid: false,
+    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: false,
+    defaults: {
+      segment: {
+        strokeColor: JXG.palette.black, strokeWidth: 1,
+        name: {withLabel: false},
       },
+      line: {strokeColor: JXG.palette.black, strokeWidth: 1},
+      point: {
+        size: 0, withLabel: true, fixed: true, showInfobox: false,
+        withLabel: false,
+      },
+      angle: {
+        strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
+        fillOpacity: 0.2, strokeWidth: 1, withLabel: false,
+        radius: 0.5,
+        label: {
+          strokeColor: JXG.palette.black, anchorX: 'middle', anchorY: 'middle'},
+        },
+    },
   }], board => {
     const A = board.create('point', [0, 0], {
       name: '\\(A\\)', withLabel: true,
-      label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]}
+      label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]},
     });
     const B = board.create('point', [5, 0], {
       name: '\\(B\\)', withLabel: true,
-      label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]}
+      label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]},
     });
     const C = board.create('point', [2, 3], {
       name: '\\(C\\)', withLabel: true,
-      label: {anchorX: 'middle', anchorY: 'bottom', offset: [0, 0]}
+      label: {anchorX: 'middle', anchorY: 'bottom', offset: [0, 0]},
     });
 
     board.create('segment', [A, C], {
       name: `\\(${b ?? ''}\\)`, withLabel: true,
-      label: {anchorX:'right', anchorY:'middle', offset: [-8, 0]}
+      label: {anchorX:'right', anchorY:'middle', offset: [-8, 0]},
     });
     board.create('segment', [A, B], {
       name: `\\(${c ?? ''}\\)`, withLabel: true,
-      label: {anchorX:'middle', anchorY:'top', offset: [0, 0]}
+      label: {anchorX:'middle', anchorY:'top', offset: [0, 0]},
     });
     board.create('segment', [C, B], {
       name: `\\(${a ?? ''}\\)`, withLabel: true,
-      label: {anchorX:'left', anchorY:'middle', offset: [10, 0]}
+      label: {anchorX:'left', anchorY:'middle', offset: [10, 0]},
     });
 
     if (alpha !== undefined) {
       board.create('angle', [B, A, C], {
         name: `\\(${alpha}\\)`, withLabel: true,
-        label: {offset: [3, 0]}
+        label: {offset: [3, 0]},
       });
     }
     if (beta !== undefined) {
@@ -270,7 +272,6 @@ triangle_exemple('sinus-exemple-1',
 triangle_exemple('sinus-exemple-2', {a: '4.5', b: '6.8', alpha: '23^\\circ'});
 triangle_exemple('cosinus-exemple-1', {b: '5', c: '7', alpha: '34^\\circ'});
 </script>
-
 
 ### Exemple {num2}`exemple`
 
@@ -339,91 +340,95 @@ $$
 \implies c_2 &= \dfrac{4.5 \cdot \sin(13.2^\circ)}{\sin(23^\circ)} = 2.6
 $$
 
-
 <script type="module">
-const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
-initBoard('sinus-2-sol', [defaults, {
-    boundingbox: [-4.5, 5, 7.5, -1],
-    axis: false, grid: false,
-    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: false,
-    defaults: {
-        segment: {strokeColor: JXG.palette.black, strokeWidth: 1,
-                  name: {withLabel: false}
-                },
-        line: {strokeColor: JXG.palette.black, strokeWidth: 1},
-        point: {size: 0, withLabel: true, fixed: true, showInfobox: false,
-                withLabel: false
-              },
-        angle: {strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
-                fillOpacity: 0.2, strokeWidth: 1, withLabel: false, radius: 0.5,
-                label: {strokeColor: JXG.palette.black,
-                        anchorX: 'middle',
-                        anchorY: 'middle'},
-                },
+const {initBoard, JXG, screen} = await tdoc.import('jsxgraph.js');
+initBoard('sinus-2-sol', [screen, {
+  boundingbox: [-4.5, 5, 7.5, -1],
+  axis: false, grid: false,
+  pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: false,
+  defaults: {
+    segment: {
+      strokeColor: JXG.palette.black, strokeWidth: 1, name: {withLabel: false},
     },
+    line: {strokeColor: JXG.palette.black, strokeWidth: 1},
+    point: {
+      size: 0, withLabel: true, fixed: true, showInfobox: false,
+      withLabel: false,
+    },
+    angle: {
+      strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
+      fillOpacity: 0.2, strokeWidth: 1, withLabel: false, radius: 0.5,
+      label: {
+        strokeColor: JXG.palette.black, anchorX: 'middle', anchorY: 'middle',
+      },
+    },
+  },
 }], board => {
   const A = board.create('point', [6.8, 0], {
     name: '\\(A\\)', withLabel: true,
-    label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]}
+    label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]},
   });
   const B = board.create('point', [0, Math.tan(23 / 360 * 2 * Math.PI) * 6.8]);
   const C = board.create('point', [0, 0], {
     name: '\\(C\\)', withLabel: true,
-    label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]}
+    label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]},
   });
   const D = board.create('point', [4.5, 0]);
   const E = board.create('point', [-4.5, 0]);
 
   board.create('segment', [A, C], {
     name: '\\(6.8\\)', withLabel: true,
-    label: {anchorX:'middle', anchorY:'top', offset: [0, -5]}
+    label: {anchorX:'middle', anchorY:'top', offset: [0, -5]},
   });
   const l = board.create('line', [A, B], {straightFirst: false});
   board.create('angle', [B, A, C], {
-    name: '\\(23^\\circ\\)', withLabel: true, label: {offset: [0, -2]}
+    name: '\\(23^\\circ\\)', withLabel: true, label: {offset: [0, -2]},
   });
   const c1 = board.create('arc', [C, D, E], {dash: 2, strokeWidth: 1});
   const B1 = board.create('intersection', [c1, l, 0], {
     size: 2, strokeColor: JXG.palette.red, fillColor: JXG.palette.red,
     name: '\\(B_1\\)', withLabel: true,
-    label: {strokeColor: JXG.palette.red,
-            anchorX: 'middle', anchorY: 'bottom', offset: [0, 1]
-          }
+    label: {
+      strokeColor: JXG.palette.red,
+      anchorX: 'middle', anchorY: 'bottom', offset: [0, 1],
+    },
   });
   const B2 = board.create('intersection', [c1, l, 1], {
     size: 2, strokeColor: JXG.palette.red, fillColor: JXG.palette.red,
     name: '\\(B_2\\)', withLabel: true,
-    label: {strokeColor: JXG.palette.red,
-            anchorX: 'left', anchorY: 'bottom', offset: [0, 1]
-          }
+    label: {
+      strokeColor: JXG.palette.red,
+      anchorX: 'left', anchorY: 'bottom', offset: [0, 1],
+    },
   });
   board.create('segment', [C, B1], {
     dash: 2, strokeColor: JXG.palette.red, strokeWidth: 2,
     name: '\\(a\\)', withLabel: true,
-    label: {strokeColor: JXG.palette.red,
-            anchorX: 'left', anchorY: 'middle', offset: [8, 0]
-          }
+    label: {
+      strokeColor: JXG.palette.red,
+      anchorX: 'left', anchorY: 'middle', offset: [8, 0],
+    },
   });
   board.create('segment', [C, B2], {
     dash: 2, strokeColor: JXG.palette.red, strokeWidth: 2,
     name: '\\(a\\)', withLabel: true,
-    label: {strokeColor: JXG.palette.red,
-            anchorX: 'middle', anchorY: 'bottom', offset: [0, 0]
-          }
+    label: {
+      strokeColor: JXG.palette.red,
+      anchorX: 'middle', anchorY: 'bottom', offset: [0, 0],
+    },
   });
   board.create('angle', [C, B1, A], {
     name: '\\(\\beta_1\\)', withLabel: true,
     strokeColor: JXG.palette.red, fillColor: JXG.palette.red,
-    label: {strokeColor: JXG.palette.red}
+    label: {strokeColor: JXG.palette.red},
   });
   board.create('angle', [C, B2, A], {
     name: '\\(\\beta_2\\)', withLabel: true,
     strokeColor: JXG.palette.red, fillColor: JXG.palette.red,
-    label: {strokeColor: JXG.palette.red}
+    label: {strokeColor: JXG.palette.red},
   });
 });
 </script>
-
 
 ## Théorème du cosinus
 
@@ -481,7 +486,6 @@ La trigonométrie appliquée dans le triangle rectangle $AHC$ donne:
 Les autres relations du thèorème s'obtiennent avec le même raisonnement appliqué
 aux deux autres hauteurs.
 
-
 ### Utilisation
 
 ```{admonition} Cas d'utilisation du théorème du cosinus
@@ -495,22 +499,25 @@ Le théorème du cosinus peut être utilisé si dans un triangle, sont connus:
 ```
 
 <script type="module">
-const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
-initBoard('utilisation-cosinus', [defaults, {
-    boundingbox: [-5, 4, 5, -1],
-    axis: false, grid: false,
-    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: false,
-    defaults: {
-        segment: {strokeColor: JXG.palette.black, strokeWidth: 1,
-                  name: {withLabel: false}
-                },
-        line: {strokeColor: JXG.palette.black, strokeWidth: 1},
-        point: {size: 0, withLabel: true, fixed: true,
-                showInfobox: false, withLabel: false},
-        angle: {strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
-                fillOpacity: 0.2, strokeWidth: 1, withLabel: false, radius: 0.5,
-                },
+const {initBoard, JXG, screen} = await tdoc.import('jsxgraph.js');
+initBoard('utilisation-cosinus', [screen, {
+  boundingbox: [-5, 4, 5, -1],
+  axis: false, grid: false,
+  pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: false,
+  defaults: {
+    segment: {
+      strokeColor: JXG.palette.black, strokeWidth: 1, name: {withLabel: false},
     },
+    line: {strokeColor: JXG.palette.black, strokeWidth: 1},
+    point: {
+      size: 0, withLabel: true, fixed: true, showInfobox: false,
+      withLabel: false,
+    },
+    angle: {
+      strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
+      fillOpacity: 0.2, strokeWidth: 1, withLabel: false, radius: 0.5,
+    },
+  },
 }], board => {
   const A = board.create('point', [-4, 0]);
   const B = board.create('point', [-4.5, 3]);
@@ -529,7 +536,6 @@ initBoard('utilisation-cosinus', [defaults, {
   board.create('segment', [E, F], {strokeWidth: 2});
   board.create('segment', [D, E], {strokeWidth: 2});
   board.create('segment', [F, D], {strokeWidth: 2});
-
 });
 </script>
 

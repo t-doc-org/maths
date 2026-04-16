@@ -10,7 +10,7 @@ page-break-force: 1
 page-break-avoid: 2
 ```
 
-```{include} /_include/entete-examen.md
+```{include} /_cache/entete-examen.md
 ```
 ```{class} align-center
 **Détails des calculs obligatoires. Attention au soin. Calculatrice non
@@ -91,11 +91,15 @@ Soient les fonctions $f(x) = 3x -4$ et $g(x) = (x + 1)^2$
     ```{jsxgraph} fct-bij-sol
     :style: width: 70%;
     ```
+3.  $(f \circ g)(x) = f(g(x)) = 3(x + 1)^2 - 4 = 3x^2 + 6x -1$
+
+    $(g \circ f)(x) = g(f(x)) = (3x-3)^2 = 9x^2 -18x + 9$
+````
 
 <script type="module">
-const {defaults, initBoard, JXG, withAxesLabels} =
+const {initBoard, JXG, withAxesLabels, screen} =
     await tdoc.import('jsxgraph.js');
-const attrs = [defaults, withAxesLabels([1], [1]), {
+const attrs = [screen, withAxesLabels([1], [1]), {
     boundingBox: [-4.8, 4.8, 4.8, -4.8],
     defaults: {
         functiongraph: {
@@ -127,11 +131,3 @@ initBoard('fct-bij-sol', attrs, board => {
     });
 });
 </script>
-
-
-3.  $(f \circ g)(x) = f(g(x)) = 3(x + 1)^2 - 4 = 3x^2 + 6x -1$
-
-    $(g \circ f)(x) = g(f(x)) = (3x-3)^2 = 9x^2 -18x + 9$
-````
-
-

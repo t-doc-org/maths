@@ -10,96 +10,80 @@ subject: "Mathématiques 2e année"
 ## Notation des triangles
 
 <script type="module">
-const {defaults, initBoard, nonInteractive} =
-    await tdoc.import('jsxgraph.js');
-const attrs = [defaults, nonInteractive, {
-    boundingBox: [-3.5, 3.5, 3.5, -0.5],
-    axis: false, grid: false,
-    defaults: {
-        segment: {strokeColor: JXG.palette.black, strokeWidth: 2},
-        point: {size: 0, label: {anchorY:'top'}},
-        angle: {strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
-                fillOpacity: 0.2, strokeWidth: 1,
-                label: {strokeColor: JXG.palette.black}},
+const {initBoard, nonInteractive, screen} = await tdoc.import('jsxgraph.js');
+const attrs = [screen, nonInteractive, {
+  boundingBox: [-3.5, 3.5, 3.5, -0.5],
+  axis: false, grid: false,
+  defaults: {
+    point: {size: 0, withLabel: true, label: {anchorY:'top'}},
+    segment: {strokeColor: JXG.palette.black, strokeWidth: 2, withLabel: true},
+    angle: {
+      strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
+      fillOpacity: 0.2, strokeWidth: 1, withLabel: true,
+      label: {strokeColor: JXG.palette.black},
     },
+  },
 }];
-
 initBoard('triangle', attrs, board => {
-    const A = board.create('point', [-3, 0], {
-        name: '\\(A\\)', withLabel: true,
-        label: {anchorX: 'right', offset: [-8, 0]}
-    });
-    const B = board.create('point', [3, 0], {
-        name: '\\(B\\)', withLabel: true,
-        label: {anchorX: 'left', offset: [4, 0]}
-    });
-    const C = board.create('point', [1, 3], {
-        name: '\\(C\\)', withLabel: true,
-        label: {anchorX: 'middle', offset: [0, 24]}
-    });
-    const c = board.create('segment', [A, B], {
-        name: '\\(c\\)', withLabel: true,
-        label: {anchorX: 'right', offset: [0, -8]}
-    });
-    const b = board.create('segment', [A, C], {
-        name: '\\(b\\)', withLabel: true,
-        label: {anchorX: 'right', offset: [-8, 8]}
-    });
-    const a = board.create('segment', [B, C], {
-        name: '\\(a\\)', withLabel: true,
-        label: {anchorX: 'left', offset: [8, 8]}
-    });
-    const alpha = board.create('angle', [B, A, C], {
-        name: '\\(\\alpha\\)', withLabel: true,
-        label: {anchorX: 'middle', offset: [-28, -6]}
-    });
-    const beta = board.create('angle', [C, B, A], {
-        name: '\\(\\beta\\)', withLabel: true,
-        label: {anchorX: 'middle', offset: [30, -26]}
-    });
-    const gamma = board.create('angle', [A, C, B], {
-        name: '\\(\\gamma\\)', withLabel: true,
-        label: {anchorX: 'middle', offset: [4, 24]}
-    });
+  const A = board.create('point', [-3, 0], {
+    name: '\\(A\\)', label: {anchorX: 'right', offset: [-8, 0]}
+  });
+  const B = board.create('point', [3, 0], {
+    name: '\\(B\\)', label: {anchorX: 'left', offset: [4, 0]}
+  });
+  const C = board.create('point', [1, 3], {
+    name: '\\(C\\)', label: {anchorX: 'middle', offset: [0, 24]}
+  });
+  const c = board.create('segment', [A, B], {
+    name: '\\(c\\)', label: {anchorX: 'right', offset: [0, -8]}
+  });
+  const b = board.create('segment', [A, C], {
+    name: '\\(b\\)', label: {anchorX: 'right', offset: [-8, 8]}
+  });
+  const a = board.create('segment', [B, C], {
+    name: '\\(a\\)', label: {anchorX: 'left', offset: [8, 8]}
+  });
+  const alpha = board.create('angle', [B, A, C], {
+    name: '\\(\\alpha\\)', label: {anchorX: 'middle', offset: [-28, -6]}
+  });
+  const beta = board.create('angle', [C, B, A], {
+    name: '\\(\\beta\\)', label: {anchorX: 'middle', offset: [30, -26]}
+  });
+  const gamma = board.create('angle', [A, C, B], {
+    name: '\\(\\gamma\\)', label: {anchorX: 'middle', offset: [4, 24]}
+  });
 });
 initBoard('triangle-rectangle', attrs, board => {
-    const A = board.create('point', [3, 0], {
-        name: '\\(A\\)', withLabel: true,
-        label: {anchorX: 'left', offset: [4, 0]}
-    });
-    const B = board.create('point', [-1, 3], {
-        name: '\\(B\\)', withLabel: true,
-        label: {anchorX: 'middle', offset: [0, 24]}
-    });
-    const C = board.create('point', [-1, 0], {
-        name: '\\(C\\)', withLabel: true,
-        label: {anchorX: 'right', offset: [-12, 0]}
-    });
-    const c = board.create('segment', [A, B], {
-        name: '\\(c\\)', withLabel: true,
-        label: {anchorX: 'middle', anchorY: 'middle', offset: [8, 8]}
-    });
-    const b = board.create('segment', [A, C], {
-        name: '\\(b\\)', withLabel: true,
-        label: {anchorX: 'right', offset: [0, -12]}
-    });
-    const a = board.create('segment', [B, C], {
-        name: '\\(a\\)', withLabel: true,
-        label: {anchorX: 'right', anchorY: 'middle', offset: [-8, 0]}
-    });
-    const alpha = board.create('angle', [B, A, C], {
-        name: '\\(\\alpha\\)', withLabel: true,
-        label: {anchorX: 'middle', offset: [25, -16]}
-    });
-    const beta = board.create('angle', [C, B, A], {
-        name: '\\(\\beta\\)', withLabel: true,
-        label: {anchorX: 'middle', offset: [-18, 32]}
-    });
-    const gamma = board.create('angle', [A, C, B], {
-        radius: 0.6,
-        name: '\\(\\gamma\\)', withLabel: true,
-        label: {anchorX: 'middle', offset: [-15, -15]}
-    });
+  const A = board.create('point', [3, 0], {
+    name: '\\(A\\)', label: {anchorX: 'left', offset: [4, 0]}
+  });
+  const B = board.create('point', [-1, 3], {
+    name: '\\(B\\)', label: {anchorX: 'middle', offset: [0, 24]}
+  });
+  const C = board.create('point', [-1, 0], {
+    name: '\\(C\\)', label: {anchorX: 'right', offset: [-12, 0]}
+  });
+  const c = board.create('segment', [A, B], {
+    name: '\\(c\\)',
+    label: {anchorX: 'middle', anchorY: 'middle', offset: [8, 8]}
+  });
+  const b = board.create('segment', [A, C], {
+      name: '\\(b\\)', label: {anchorX: 'right', offset: [0, -12]}
+  });
+  const a = board.create('segment', [B, C], {
+    name: '\\(a\\)',
+    label: {anchorX: 'right', anchorY: 'middle', offset: [-8, 0]}
+  });
+  const alpha = board.create('angle', [B, A, C], {
+    name: '\\(\\alpha\\)', label: {anchorX: 'middle', offset: [25, -16]}
+  });
+  const beta = board.create('angle', [C, B, A], {
+    name: '\\(\\beta\\)', label: {anchorX: 'middle', offset: [-18, 32]}
+  });
+  const gamma = board.create('angle', [A, C, B], {
+    name: '\\(\\gamma\\)', radius: 0.6,
+    label: {anchorX: 'middle', offset: [-15, -15]}
+  });
 });
 </script>
 
@@ -134,7 +118,6 @@ et $c$ est l'hypoténuse.
 
 Par rapport à l'angle $\beta$, $b$ est le côté opposé, $a$ est le côté adjacent
 et $c$ est l'hypoténuse.
-
 
 ````{admonition} Définition
 :class: note
@@ -206,64 +189,59 @@ générer une nouvelle série d'exercices: [Cliquez ici!](<https://gomaths.edu-v
 
 source: (<https://gomaths.edu-vd.ch>)
 
-
 ## Rapports trigonométriques des angles remarquables
 
 ### Triangle rectangle isocèle
 
 <script type="module">
-const {defaults, initBoard, nonInteractive} =
-    await tdoc.import('jsxgraph.js');
-const attrs = [defaults, nonInteractive, {
-    boundingBox: [-0.5, 4.5, 4.5, -0.5],
-    axis: false, grid: false,
-    defaults: {
-        segment: {strokeColor: JXG.palette.black, strokeWidth: 2},
-        point: {size: 0, withLabel: false},
-        angle: {strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
-                fillOpacity: 0.2, strokeWidth: 1,
-                label: {strokeColor: JXG.palette.black}},
+const {initBoard, nonInteractive, screen} = await tdoc.import('jsxgraph.js');
+const attrs = [screen, nonInteractive, {
+  boundingBox: [-0.5, 4.5, 4.5, -0.5],
+  axis: false, grid: false,
+  defaults: {
+    segment: {strokeColor: JXG.palette.black, strokeWidth: 2},
+    point: {size: 0, withLabel: false},
+    angle: {
+      strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
+      fillOpacity: 0.2, strokeWidth: 1, label: {strokeColor: JXG.palette.black},
     },
+  },
 }];
-
 initBoard('triangle-iso-rect', attrs, board => {
-    const A = board.create('point', [0, 0]);
-    const B = board.create('point', [4, 0]);
-    const C = board.create('point', [4, 4]);
-    const D = board.create('point', [0, 4]);
-    board.create('segment', [A, B], {
-        name: '\\(x\\)', withLabel: true,
-        label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]}
-    });
-    board.create('segment', [D, A], {
-        name: '\\(x\\)', withLabel: true,
-        label: {anchorX: 'right', anchorY: 'middle', offset: [-8, 0]}
-    });
-    board.create('segment', [B, D], {
-        name: '\\(c\\)', withLabel: true,
-        label: {anchorX: 'middle', anchorY: 'middle', offset: [8, 8]}
-    });
-    board.create('segment', [B, C], {dash: 3});
-    board.create('segment', [C, D], {dash: 3});
-    board.create('angle', [D, B, A], {
-        radius: 0.6,
-        name: '\\(45^\\circ\\)', withLabel: true,
-        label: {anchorX: 'middle', anchorY: 'middle'}
-    });
-    board.create('angle', [A, D, B], {
-        radius: 0.6,
-        name: '\\(45^\\circ\\)', withLabel: true,
-        label: {anchorX: 'middle', anchorY: 'middle', offset: [0, 0]}
-    });
-    board.create('angle', [B, A, D], {
-        radius: 0.4, fillOpacity: 0,  withLabel: false,
-    });
-    board.create('angle', [D, C, B], {
-        radius: 0.4, fillOpacity: 0,  withLabel: false,
-    });
+  const A = board.create('point', [0, 0]);
+  const B = board.create('point', [4, 0]);
+  const C = board.create('point', [4, 4]);
+  const D = board.create('point', [0, 4]);
+  board.create('segment', [A, B], {
+    name: '\\(x\\)', withLabel: true,
+    label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]},
+  });
+  board.create('segment', [D, A], {
+    name: '\\(x\\)', withLabel: true,
+    label: {anchorX: 'right', anchorY: 'middle', offset: [-8, 0]},
+  });
+  board.create('segment', [B, D], {
+    name: '\\(c\\)', withLabel: true,
+    label: {anchorX: 'middle', anchorY: 'middle', offset: [8, 8]},
+  });
+  board.create('segment', [B, C], {dash: 3});
+  board.create('segment', [C, D], {dash: 3});
+  board.create('angle', [D, B, A], {
+    name: '\\(45^\\circ\\)', radius: 0.6, withLabel: true,
+    label: {anchorX: 'middle', anchorY: 'middle'},
+  });
+  board.create('angle', [A, D, B], {
+    name: '\\(45^\\circ\\)', radius: 0.6, withLabel: true,
+    label: {anchorX: 'middle', anchorY: 'middle', offset: [0, 0]},
+  });
+  board.create('angle', [B, A, D], {
+    radius: 0.4, fillOpacity: 0,  withLabel: false,
+  });
+  board.create('angle', [D, C, B], {
+    radius: 0.4, fillOpacity: 0,  withLabel: false,
+  });
 });
 </script>
-
 
 ````{list-grid}
 :style: grid-template-columns: 5fr 3fr;
@@ -282,55 +260,51 @@ initBoard('triangle-iso-rect', attrs, board => {
 ### Demi-triangle équilatéral
 
 <script type="module">
-const {defaults, initBoard, nonInteractive} =
-    await tdoc.import('jsxgraph.js');
-const attrs = [defaults, nonInteractive, {
-    boundingBox: [-0.5, 4.5, 4.5, -1],
-    axis: false, grid: false,
-    defaults: {
-        segment: {strokeColor: JXG.palette.black, strokeWidth: 2},
-        point: {size: 0, withLabel: false},
-        angle: {strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
-                fillOpacity: 0.2, strokeWidth: 1,
-                label: {strokeColor: JXG.palette.black}},
+const {initBoard, nonInteractive, screen} = await tdoc.import('jsxgraph.js');
+const attrs = [screen, nonInteractive, {
+  boundingBox: [-0.5, 4.5, 4.5, -1],
+  axis: false, grid: false,
+  defaults: {
+    segment: {strokeColor: JXG.palette.black, strokeWidth: 2},
+    point: {size: 0, withLabel: false},
+    angle: {
+      strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
+      fillOpacity: 0.2, strokeWidth: 1, label: {strokeColor: JXG.palette.black},
     },
+  },
 }];
-
 initBoard('triangle-equi', attrs, board => {
-    const A = board.create('point', [0, 0]);
-    const B = board.create('point', [4, 0]);
-    const C = board.create('point', [2, 4 * Math.sqrt(3) /2 ]);
-    const D = board.create('point', [2, 0]);
-    board.create('segment', [A,C], {
-        name: '\\(x\\)', withLabel: true,
-        label: {anchorX: 'middle', anchorY: 'middle', offset: [-8, 8]}
-    });
-    board.create('segment', [A, D], {
-        name: '\\(\\frac{x}{2}\\)', withLabel: true,
-        label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]}
-    });
-    board.create('segment', [C, D], {
-        name: '\\(h\\)', withLabel: true,
-        label: {anchorX: 'left', anchorY: 'middle', offset: [8, 0]}
-    });
-    board.create('segment', [D, B], {dash: 3});
-    board.create('segment', [B, C], {dash: 3});
-    board.create('angle', [D, A, C], {
-        radius: 0.6,
-        name: '\\(60^\\circ\\)', withLabel: true,
-        label: {anchorX: 'middle', anchorY: 'middle'}
-    });
-    board.create('angle', [A, C, D], {
-        radius: 0.6,
-        name: '\\(30^\\circ\\)', withLabel: true,
-        label: {anchorX: 'middle', anchorY: 'middle', offset: [0.5, -6]}
-    });
-    board.create('angle', [C, D, A], {
-        radius: 0.4, fillOpacity: 0,  withLabel: false,
-    });
+  const A = board.create('point', [0, 0]);
+  const B = board.create('point', [4, 0]);
+  const C = board.create('point', [2, 4 * Math.sqrt(3) /2 ]);
+  const D = board.create('point', [2, 0]);
+  board.create('segment', [A,C], {
+    name: '\\(x\\)', withLabel: true,
+    label: {anchorX: 'middle', anchorY: 'middle', offset: [-8, 8]},
+  });
+  board.create('segment', [A, D], {
+    name: '\\(\\frac{x}{2}\\)', withLabel: true,
+    label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]},
+  });
+  board.create('segment', [C, D], {
+    name: '\\(h\\)', withLabel: true,
+    label: {anchorX: 'left', anchorY: 'middle', offset: [8, 0]},
+  });
+  board.create('segment', [D, B], {dash: 3});
+  board.create('segment', [B, C], {dash: 3});
+  board.create('angle', [D, A, C], {
+    name: '\\(60^\\circ\\)', radius: 0.6, withLabel: true,
+    label: {anchorX: 'middle', anchorY: 'middle'},
+  });
+  board.create('angle', [A, C, D], {
+    name: '\\(30^\\circ\\)', radius: 0.6, withLabel: true,
+    label: {anchorX: 'middle', anchorY: 'middle', offset: [0.5, -6]},
+  });
+  board.create('angle', [C, D, A], {
+    radius: 0.4, fillOpacity: 0,  withLabel: false,
+  });
 });
 </script>
-
 
 ````{list-grid}
 :style: grid-template-columns: 5fr 3fr;
@@ -352,7 +326,6 @@ initBoard('triangle-equi', attrs, board => {
     :style: width: 100%; border: none;
     ```
 ````
-
 
 ````{admonition} Théorème
 :class: note
@@ -377,7 +350,3 @@ initBoard('triangle-equi', attrs, board => {
 
 ```
 ````
-
-
-
-

@@ -20,9 +20,9 @@ Le nombre $p$ est alors appelé la **période** de la fonction.
 ````
 
 <script type="module">
-const {defaults, gcd, initBoard, JXG, withAxesLabels} =
+const {gcd, initBoard, JXG, screen, withAxesLabels} =
     await tdoc.import('jsxgraph.js');
-initBoard('sin', [defaults, withAxesLabels(undefined, [-1, 1]), {
+initBoard('sin', [screen, withAxesLabels(undefined, [-1, 1]), {
     boundingBox: [-1.5, 1.5, 6.5, -1.5],
     axis: true, grid: {majorStep: [Math.PI / 2, 1]},
     pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
@@ -42,7 +42,7 @@ initBoard('sin', [defaults, withAxesLabels(undefined, [-1, 1]), {
         },
     },
     defaults: {
-        point: {strokeWidth: 0, showInfobox: false,},
+        point: {strokeWidth: 0, showInfobox: false},
         line: {strokeWidth: 1},
     },
 }], board => {
@@ -164,9 +164,9 @@ initBoard('sin', [defaults, withAxesLabels(undefined, [-1, 1]), {
 </script>
 
 <script type="module">
-const {defaults, gcd, initBoard, JXG, withAxesLabels} =
+const {gcd, initBoard, JXG, screen, withAxesLabels} =
     await tdoc.import('jsxgraph.js');
-initBoard('cos', [defaults, withAxesLabels([-1, 1], undefined), {
+initBoard('cos', [screen, withAxesLabels([-1, 1], undefined), {
     boundingBox: [-3, 6.5, 2.5, -1.5],
     axis: true, grid: {majorStep: [1, Math.PI / 2]},
     pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
@@ -186,7 +186,7 @@ initBoard('cos', [defaults, withAxesLabels([-1, 1], undefined), {
         },
     },
     defaults: {
-        point: {strokeWidth: 0, size: 0, showInfobox: false,},
+        point: {strokeWidth: 0, size: 0, showInfobox: false},
         line: {strokeWidth: 1},
     },
 }], board => {
@@ -308,9 +308,9 @@ initBoard('cos', [defaults, withAxesLabels([-1, 1], undefined), {
 </script>
 
 <script type="module">
-const {defaults, gcd, initBoard, JXG, withAxesLabels} =
+const {gcd, initBoard, JXG, screen, withAxesLabels} =
     await tdoc.import('jsxgraph.js');
-initBoard('tan', [defaults, withAxesLabels(undefined, [-1, 1]), {
+initBoard('tan', [screen, withAxesLabels(undefined, [-1, 1]), {
     boundingBox: [-1.5, 6.5, 6.5, -6.5],
     axis: true, grid: {majorStep: [Math.PI / 4, 1]},
     pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
@@ -330,7 +330,7 @@ initBoard('tan', [defaults, withAxesLabels(undefined, [-1, 1]), {
         },
     },
     defaults: {
-        point: {strokeWidth: 0, size: 0, showInfobox: false,},
+        point: {strokeWidth: 0, size: 0, showInfobox: false},
         line: {strokeWidth: 1},
     },
 }], board => {
@@ -566,8 +566,7 @@ change-t-elle en fonction des coefficients $a$, $b$, $c$ et $d$?
 ```
 
 <script type="module">
-const {defaults, gcd, initBoard, JXG} = await tdoc.import('jsxgraph.js');
-
+const {gcd, initBoard, JXG, screen} = await tdoc.import('jsxgraph.js');
 function sliders(board) {
     const a = board.create('slider', [[-6.8, 4] , [-3.8, 4], [0, 1, 4]], {
         name: '\\(a\\)', size: 4, withTicks: false,
@@ -595,8 +594,7 @@ function sliders(board) {
     return sliders;
 }
 
-
-const attrs = [defaults, {
+const attrs = [screen, {
     boundingBox: [-7, 4.2, 7, -4.2],
     pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
     grid: {majorStep: [Math.PI / 2, 1]},
@@ -612,10 +610,7 @@ const attrs = [defaults, {
         y: {ticks: {minorTicks: 1}},
     },
     defaults: {
-        slider: {
-            withLabel: true,
-            label: {distance: 1},
-        },
+        slider: {withLabel: true, label: {distance: 1}},
     },
 }];
 initBoard('sinus', attrs, board => {
@@ -721,8 +716,8 @@ $\left] -\dfrac{\pi}{2};\dfrac{\pi}{2} \right[$ est appelée **arc tangente**, n
 ````
 
 <script type="module">
-const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
-const attrs = [defaults, {
+const {initBoard, JXG, screen} = await tdoc.import('jsxgraph.js');
+const attrs = [screen, {
     pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
     grid: {majorStep: [1, Math.PI / 4]},
     defaultAxes: {

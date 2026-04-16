@@ -10,7 +10,7 @@ page-break-force: 1
 page-break-avoid: 2
 ```
 
-```{include} /_include/entete-examen.md
+```{include} /_cache/entete-examen.md
 ```
 ```{class} align-center
 **Détails des calculs obligatoires. Attention au soin. Calculatrice non
@@ -25,9 +25,8 @@ Soit un triangle rectangle isocèle en A, faites un schéma de la situation et
 déterminez le $\sin(45^\circ)$.
 
 <script type="module">
-const {defaults, initBoard, nonInteractive} =
-    await tdoc.import('jsxgraph.js');
-const attrs = [defaults, nonInteractive, {
+const {initBoard, nonInteractive, screen} = await tdoc.import('jsxgraph.js');
+const attrs = [screen, nonInteractive, {
     boundingBox: [-0.5, 4.5, 4.5, -0.5],
     axis: false, grid: false,
     defaults: {
@@ -99,9 +98,8 @@ initBoard('trian-iso-rect', attrs, board => {
 `````
 
 <script type="module">
-const {defaults, initBoard, nonInteractive} =
-    await tdoc.import('jsxgraph.js');
-const attrs = [defaults, nonInteractive, {
+const {initBoard, nonInteractive, screen} = await tdoc.import('jsxgraph.js');
+const attrs = [screen, nonInteractive, {
     boundingBox: [-1.5, 5, 5.5, -1],
     axis: false, grid: false,
     defaults: {
@@ -151,12 +149,10 @@ initBoard('trian', attrs, board => {
 });
 </script>
 
-
 ## Question {nump}`question`{points}`4`
 
 Résolvez le triangle $ABC$ rectangle en $B$, sachant que $c = \sqrt{2}$ et
 $b = 2$.
-
 
 `````{solution}
 ````{list-grid}
@@ -185,7 +181,6 @@ Transformez les angles suivants en radians.
 - $22.5^\circ =$
 ```
 
-
 ````{solution}
 ```{list-grid}
 :style: grid-template-columns: 1fr 1fr;
@@ -207,7 +202,6 @@ Transformez les angles suivants en degrés.
 - $\dfrac{5\pi}{4} =$
 - $\dfrac{7\pi}{2} =$
 ```
-
 
 ````{solution}
 ```{list-grid}
@@ -233,20 +227,20 @@ Les égalités suivantes sont-elles vraies? Justifiez.
 4.  $\tan(x) = -\tan(-x)$
     {vspace}`3lh`
 
-
 ```{solution}
 {.lower-alpha-paren .vsep-2}
-1.  $\sin(\dfrac{5\pi}{4}) = \cos(\dfrac{5\pi}{4}) = -\dfrac{\sqrt{2}}{2}$ est vraie.
-2.  $\cos(x) = \cos(-x)$ est vraie, par symétrie du $\cos(x)$ par rapport à l'axe $x$.
-3.  $\sin(x + \pi) = \sin(x)$ est fausse, car $\sin(\dfrac{\pi}{4}) = -\sin(\dfrac{5\pi}{4})$
+1.  $\sin(\dfrac{5\pi}{4}) = \cos(\dfrac{5\pi}{4}) = -\dfrac{\sqrt{2}}{2}$ est
+    vraie.
+2.  $\cos(x) = \cos(-x)$ est vraie, par symétrie du $\cos(x)$ par rapport à
+    l'axe $x$.
+3.  $\sin(x + \pi) = \sin(x)$ est fausse, car
+    $\sin(\dfrac{\pi}{4}) = -\sin(\dfrac{5\pi}{4})$
 4.  $\tan(x) = -\tan(-x)$ est vraie.
 ```
-
 
 ## Question {nump}`question`{points}`4`
 
 La fonction $\cos(x)$ est représentée ci-dessous.
-
 
 {.lower-alpha-paren}
 1.  Représentez le plus précisément possible $g(x) = \cos(\dfrac{x}{2})$.
@@ -259,19 +253,18 @@ La fonction $\cos(x)$ est représentée ci-dessous.
 3.  Déterminez l'ensemble des zéros de $g(x)$.
     {vspace}`2lh`
 
-
-```{solution}
+````{solution}
 {.lower-alpha-paren}
 1.  ```{jsxgraph} ex-cos-sol
     :style: width: 100%; border: none;
     ```
 2.  La période de $f(x)$ est $4\pi$.
 3.  $S = \left\{\pi + k \cdot 2\pi \mid k \in \mathbb{Z} \right\}$
-```
+````
 
 <script type="module">
-const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
-const attrs = [defaults, {
+const {initBoard, JXG, screen} = await tdoc.import('jsxgraph.js');
+const attrs = [screen, {
     boundingBox: [-10, 3.5, 10, -3.5],
     grid: {majorStep: [Math.PI / 4, 0.5]},
     defaultAxes: {

@@ -43,43 +43,34 @@ Les vecteurs suivants sont colinéaires, car ils ont tous la même direction.
 ```
 
 <script type="module">
-const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
-const attrs = [defaults, {
-    boundingBox: [-5, 5, 4, -2],
-    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
-    defaults: {
-        arrow: {withLabel: true,
-                label: {anchorX: 'middle', anchorY: 'middle', offset: [-60, -20]}
-        },
+const {initBoard, JXG, screen} = await tdoc.import('jsxgraph.js');
+const attrs = [screen, {
+  boundingBox: [-5, 5, 4, -2],
+  pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
+  defaults: {
+    arrow: {
+      withLabel: true,
+      label: {anchorX: 'middle', anchorY: 'middle', offset: [-60, -20]},
     },
+  },
 }];
 initBoard('vecteurs-1', attrs, board => {
-    board.create('arrow', [[0, 0], [3,2]], {
-        name: `\\(\\vec{v_1}\\)`,
-    });
-    board.create('arrow', [[-4,-1], [-1,1]], {
-        name: `\\(\\vec{v_2}\\)`,
-    });
-    board.create('arrow', [[-5, 1], [-2,3]], {
-        name: `\\(\\vec{v_3}\\)`,
-    });
-    board.create('arrow', [[-2,2], [1,4]], {
-        name: `\\(\\vec{v_4}\\)`,
-    });
+  board.create('arrow', [[0, 0], [3,2]], {name: `\\(\\vec{v_1}\\)`});
+  board.create('arrow', [[-4,-1], [-1,1]], {name: `\\(\\vec{v_2}\\)`});
+  board.create('arrow', [[-5, 1], [-2,3]], {name: `\\(\\vec{v_3}\\)`});
+  board.create('arrow', [[-2,2], [1,4]], {name: `\\(\\vec{v_4}\\)`});
 });
 initBoard('vecteurs-2', attrs, board => {
-    board.create('arrow', [[0, 0], [3,2]], {
-        name: `\\(\\vec{v_1}\\)`,
-    });
-    board.create('arrow', [[-4,1], [-2.5,2]], {
-        name: `\\(\\vec{v_2}\\)`, label: {offset: [-35, -5]}
-    });
-    board.create('arrow', [[3, 3], [-3,-1]], {
-        name: `\\(\\vec{v_3}\\)`, label: {offset: [-130, -60]}
-    });
-    board.create('arrow', [[-2,4], [-3.5,3]], {
-        name: `\\(\\vec{v_4}\\)`, label: {offset: [-35, -5]}
-    });
+  board.create('arrow', [[0, 0], [3,2]], {name: `\\(\\vec{v_1}\\)`});
+  board.create('arrow', [[-4,1], [-2.5,2]], {
+      name: `\\(\\vec{v_2}\\)`, label: {offset: [-35, -5]},
+  });
+  board.create('arrow', [[3, 3], [-3,-1]], {
+      name: `\\(\\vec{v_3}\\)`, label: {offset: [-130, -60]},
+  });
+  board.create('arrow', [[-2,4], [-3.5,3]], {
+      name: `\\(\\vec{v_4}\\)`, label: {offset: [-35, -5]},
+  });
 });
 </script>
 
@@ -113,7 +104,6 @@ $\vec{v} = \begin{pmatrix} -6 \\-4 \\ \end{pmatrix}$.
 $Det(\vec{u}, \vec{v}) = \begin{vmatrix} 3 & -6 \\ 2 & -4 \end{vmatrix} = 3 \cdot (-4) - 2 \cdot (-6) = -12 - (-12) = 0$
 
 Les deux vecteurs sont donc colinéaires.
-
 
 ```{admonition} Définition
 :class: note
@@ -157,82 +147,92 @@ $\vec{v} = 3 \cdot \vec{e_1} + 2 \cdot \vec{e_2} = \begin{pmatrix} 3\\ 2\\ \end{
 ````
 
 <script type="module">
-const {defaults, initBoard, JXG, nonInteractive} =
+const {initBoard, JXG, nonInteractive, screen} =
     await tdoc.import('jsxgraph.js');
-const attrs = [defaults, nonInteractive, {
-    boundingBox: [-2, 4, 4, -2],
-    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
-    axis: false, grid: false,
-    defaults: {
-        arrow: {withLabel: true, strokeWidth: 2,
-                label: {anchorX: 'middle', anchorY: 'middle',
-                        position: '0.3fr left'},
-        },
-        point: {visible: false},
-        parallel: {strokeOpacity: 0.1},
+const attrs = [screen, nonInteractive, {
+  boundingBox: [-2, 4, 4, -2],
+  pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
+  axis: false, grid: false,
+  defaults: {
+    arrow: {
+      withLabel: true,
+      label: {anchorX: 'middle', anchorY: 'middle', position: '0.3fr left'},
     },
+    point: {visible: false},
+    parallel: {strokeOpacity: 0.1},
+  },
 }];
 initBoard('base', attrs, board => {
-    const incl = 6;
-    const Ox = board.create('axis', [[0, 0], [incl, 1]], {
-        ticks: {drawLabels: false, insertTicks: false, ticksDistance: 0, minorTicks: 0},
-    });
-    const Oy = board.create('axis', [[0, 0], [1, incl]], {
-        ticks: {drawLabels: false, insertTicks: false, ticksDistance: 0, minorTicks: 0},
-    });
-    const alpha = Math.atan(1/incl);
-    const beta = Math.PI/2 - alpha;
-    const a = 1;
-    const b = 1;
-    const e1 = [a * Math.cos(alpha), a * Math.sin(alpha)];
-    const e2 = [b * Math.cos(beta), b * Math.sin(beta)];
+  const incl = 6;
+  const Ox = board.create('axis', [[0, 0], [incl, 1]], {
+    ticks: {
+      drawLabels: false, insertTicks: false, ticksDistance: 0, minorTicks: 0,
+    },
+  });
+  const Oy = board.create('axis', [[0, 0], [1, incl]], {
+    ticks: {
+      drawLabels: false, insertTicks: false, ticksDistance: 0, minorTicks: 0},
+  });
+  const alpha = Math.atan(1/incl);
+  const beta = Math.PI/2 - alpha;
+  const a = 1;
+  const b = 1;
+  const e1 = [a * Math.cos(alpha), a * Math.sin(alpha)];
+  const e2 = [b * Math.cos(beta), b * Math.sin(beta)];
 
-    for (let i = -3; i < 5; i ++) {
-        board.create('parallel', [Ox, [e1[0] + i * e2[0], e1[1] + i * e2[1]]]);
-        board.create('parallel', [Oy, [i * e1[0] + e2[0], i * e1[1] +e2[1]]]);
-    }
+  for (let i = -3; i < 5; i ++) {
+    board.create('parallel', [Ox, [e1[0] + i * e2[0], e1[1] + i * e2[1]]]);
+    board.create('parallel', [Oy, [i * e1[0] + e2[0], i * e1[1] +e2[1]]]);
+  }
 
-    board.create('arrow', [[0, 0], [e1[0],e1[1]]], {
-        name: `\\(\\vec{e_1}\\)`, label: {position: '0.4fr right', offset: [0, -3]}
-    });
-    board.create('arrow', [[0,0], [e2[0], e2[1]]], {
-        name: `\\(\\vec{e_2}\\)`, label: {offset: [-3, 0]}
-    });
-    board.create('arrow', [[0,0], [3*e1[0]+2*e2[0], 3*e1[1]+2*e2[1]]], {
-        name: `\\(\\vec{v}\\)`});
-     });
+  board.create('arrow', [[0, 0], [e1[0],e1[1]]], {
+    name: `\\(\\vec{e_1}\\)`,
+    label: {position: '0.4fr right', offset: [0, -3]},
+  });
+  board.create('arrow', [[0,0], [e2[0], e2[1]]], {
+    name: `\\(\\vec{e_2}\\)`, label: {offset: [-3, 0]},
+  });
+  board.create('arrow', [[0,0], [3*e1[0]+2*e2[0], 3*e1[1]+2*e2[1]]], {
+    name: `\\(\\vec{v}\\)`});
+   });
 </script>
 
 <script type="module">
-const {defaults, initBoard, JXG, nonInteractive} =
+const {initBoard, JXG, nonInteractive, screen} =
     await tdoc.import('jsxgraph.js');
-const attrs = [defaults, nonInteractive, {
-    boundingBox: [-2, 4, 4, -2],
-    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
-    defaultAxes: {
-        x: {withLabel: false,
-            ticks: {drawLabels: false, insertTicks: false,
-                    ticksDistance: 1, minorTicks: 0}},
-        y: {withLabel: false,
-            ticks: {drawLabels: false, insertTicks: false, ticksDistance: 1,
-                    minorTicks: 0}},
+const attrs = [screen, nonInteractive, {
+  boundingBox: [-2, 4, 4, -2],
+  pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
+  defaultAxes: {
+    x: {
+      withLabel: false,
+      ticks: {
+        drawLabels: false, insertTicks: false, ticksDistance: 1, minorTicks: 0,
+      },
     },
-    defaults: {
-        arrow: {withLabel: true, strokeWidth: 2,
-                label: {anchorX: 'middle', anchorY: 'middle',
-                        position: '0.3fr left'},
-        },
+    y: {
+      withLabel: false,
+      ticks: {
+        drawLabels: false, insertTicks: false, ticksDistance: 1, minorTicks: 0,
+      },
     },
+  },
+  defaults: {
+    arrow: {
+      withLabel: true,
+      label: {anchorX: 'middle', anchorY: 'middle', position: '0.3fr left'},
+    },
+  },
 }];
 initBoard('base-orthonormée', attrs, board => {
-    board.create('arrow', [[0, 0], [1,0]], {
-        name: `\\(\\vec{e_1}\\)`, label: {position: '0.4fr right', offset: [0, -3]}
-    });
-    board.create('arrow', [[0,0], [0,1]], {
-        name: `\\(\\vec{e_2}\\)`, label: {offset: [-3, 0]}
-    });
-    board.create('arrow', [[0,0], [3,2]], {name: `\\(\\vec{v}\\)`});
-
+  board.create('arrow', [[0, 0], [1,0]], {
+    name: `\\(\\vec{e_1}\\)`,
+    label: {position: '0.4fr right', offset: [0, -3]},
+  });
+  board.create('arrow', [[0,0], [0,1]], {
+    name: `\\(\\vec{e_2}\\)`, label: {offset: [-3, 0]},
+  });
+  board.create('arrow', [[0,0], [3,2]], {name: `\\(\\vec{v}\\)`});
 });
 </script>
 
@@ -262,8 +262,6 @@ $\overrightarrow{BA} = \overrightarrow{OA} - \overrightarrow{OB} = \begin{pmatri
 
 $\overrightarrow{AB} = - \overrightarrow{BA}$
 
-
-
 ```{admonition} Définition
 :class: note
 La longueur d'un vecteur $\vec{v}$ est appelée la **norme** du vecteur
@@ -287,7 +285,6 @@ Soit le vecteur $\vec{v} = \begin{pmatrix} -4\\ 7\\ \end{pmatrix}$
 
 $\| \vec{v} \| = \sqrt{(-4)^2 + 7^2} = \sqrt{16 + 49} = \sqrt{65} \simeq 8.1$
 
-
 ```{admonition} Définition
 :class: note
 Un **vecteur unitaire** est un vecteur de norme 1.
@@ -304,7 +301,6 @@ $\vec{u}$ est un vecteur unitaire: $\| \vec{u} \| = \sqrt{1^2 + 0^2} = \sqrt{1} 
 $\vec{v}$ est un vecteur unitaire: $\|\vec{v}\| = \sqrt{\left(\dfrac{1}{2}\right)^2 + \left(\dfrac{\sqrt{3}}{2}\right)^2} = \sqrt{\dfrac{1}{4} + \dfrac{3}{4}} = \sqrt{\dfrac{4}{4}} = \sqrt{1} = 1$
 
 $\vec{w}$ n'est pas un vecteur unitaire: $\|\vec{w}\| = \sqrt{2^2 + (-3)^2} = \sqrt{4 + 9} = \sqrt{13} \neq 1$
-
 
 ````{admonition} Définition
 :class: note
@@ -327,7 +323,6 @@ $\vec{v} = \begin{pmatrix} -2\\ -3\\ \end{pmatrix}$.
 $\vec{u} + \vec{v} = \begin{pmatrix} 4\\ -5\\ \end{pmatrix} + \begin{pmatrix} -2\\ -3\\ \end{pmatrix} = \begin{pmatrix} 4 + (-2)\\ -5 + (-3)\\ \end{pmatrix} = \begin{pmatrix} 2\\ -8\\ \end{pmatrix}$
 
 $-2 \cdot \vec{u} = -2 \cdot \begin{pmatrix} 4\\ -5\\ \end{pmatrix} = \begin{pmatrix} -8\\ 10\\ \end{pmatrix}$
-
 
 ```{admonition} Propriétés de l'addition vectorielle
 :class: note
@@ -369,7 +364,6 @@ Soient trois points $A$, $B$ et $C$ du plan.
     ```{jsxgraph} chasle
     :style: width: 80%;
     ```
-
 -   # $\overrightarrow{AB} = -\overrightarrow{BA}$
     ```{jsxgraph} oppose
     :style: width: 80%;
@@ -381,86 +375,80 @@ Soient trois points $A$, $B$ et $C$ du plan.
 ````
 
 <script type="module">
-const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
-const attrs = [defaults, {
-    boundingBox: [-1, 8, 8, -1],
-    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
-    axis: false,
-    defaults: {
-        arrow: {highlight: false, fixed: true, withLabel: true, strokeWidth: 2,
-                label: {anchorX: 'middle', anchorY: 'middle',
-                        position: '0.5fr left', distance: 1.2},
-        },
-        point: {size: 8, strokewidth: 0, fillOpacity: 0, highlightStrokeWidth: 0,
-                withLabel: false, highlightFillOpacity: 0.5},
-    }
+const {initBoard, JXG, screen} = await tdoc.import('jsxgraph.js');
+const attrs = [screen, {
+  boundingBox: [-1, 8, 8, -1],
+  pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
+  axis: false,
+  defaultAxes: {
+    x: {
+      withLabel: false,
+      ticks: {
+        drawLabels: false, insertTicks: false, ticksDistance: 1, minorTicks: 0,
+      },
+    },
+    y: {
+      withlabel: false,
+      ticks: {
+        drawLabels: false, insertTicks: false, ticksDistance: 1, minorTicks: 0,
+      }
+    },
+  },
+  defaults: {
+    arrow: {
+      highlight: false, fixed: true, withLabel: true,
+      label: {
+        anchorX: 'middle', anchorY: 'middle', position: '0.5fr left',
+        distance: 1.2,
+      },
+    },
+    point: {
+      size: 8, strokewidth: 0, fillOpacity: 0, highlightStrokeWidth: 0,
+      withLabel: false, highlightFillOpacity: 0.5,
+    },
+  },
 }];
 initBoard('chasle', attrs, board => {
-    const p1 = board.create('point', [0, 1]);
-    const p2 = board.create('point', [4, 7]);
-    const p3 = board.create('point', [6, 0]);
-    board.create('arrow', [p1, p2], {
-        name: `\\(\\overrightarrow{AB}\\)`, label: {offset: [0, 0]}
-    });
-    board.create('arrow', [p2, p3], {
-        name: `\\(\\overrightarrow{BC}\\)`, label: {offset: [0, 0]}
-    });
-    board.create('arrow', [p1, p3], {
-        name: `\\(\\overrightarrow{AC}\\)`, label: {offset: [0, 0]}
-    });
+  const p1 = board.create('point', [0, 1]);
+  const p2 = board.create('point', [4, 7]);
+  const p3 = board.create('point', [6, 0]);
+  board.create('arrow', [p1, p2], {
+    name: `\\(\\overrightarrow{AB}\\)`, label: {offset: [0, 0]},
+  });
+  board.create('arrow', [p2, p3], {
+    name: `\\(\\overrightarrow{BC}\\)`, label: {offset: [0, 0]},
+  });
+  board.create('arrow', [p1, p3], {
+    name: `\\(\\overrightarrow{AC}\\)`, label: {offset: [0, 0]},
+  });
 });
 initBoard('oppose', attrs, board => {
-    const p1 = board.create('point', [0, 3]);
-    const p2 = board.create('point', [6, 7]);
-    board.create('arrow', [p1, p2], {
-        name: `\\(\\overrightarrow{AB}\\)`, label: {offset: [0, 0]}
-    });
-    const d = [1, -2];
-    board.create('arrow', [() => [p2.X() + d[0], p2.Y() + d[1]],
-                           () => [p1.X() + d[0], p1.Y() + d[1]]], {
-        name: `\\(\\overrightarrow{BA}\\)`, label: {offset: [0, 0]}
-    });
+  const p1 = board.create('point', [0, 3]);
+  const p2 = board.create('point', [6, 7]);
+  board.create('arrow', [p1, p2], {
+    name: `\\(\\overrightarrow{AB}\\)`, label: {offset: [0, 0]},
+  });
+  const d = [1, -2];
+  board.create('arrow', [() => [p2.X() + d[0], p2.Y() + d[1]],
+                         () => [p1.X() + d[0], p1.Y() + d[1]]], {
+    name: `\\(\\overrightarrow{BA}\\)`, label: {offset: [0, 0]},
+  });
+});
+initBoard('vecteur', [attrs, {
+  axis: true,
+  defaults: {arrow: {label: {position: '0.5fr right'}}},
+}], board => {
+  const p1 = board.create('point', [0, 0], {size: 0, fixed: true});
+  const p2 = board.create('point', [7, 1]);
+  const p3 = board.create('point', [3, 6]);
+  board.create('arrow', [p2, p1], {
+    name: `\\(\\overrightarrow{AO}\\)`, label: {offset: [0, 0]},
+  });
+  board.create('arrow', [p1, p3], {
+    name: `\\(\\overrightarrow{OB}\\)`, label: {offset: [0, 0]},
+  });
+  board.create('arrow', [p2, p3], {
+    name: `\\(\\overrightarrow{AB}\\)`, label: {offset: [0, 0]},
+  });
 });
 </script>
-<script type="module">
-const {defaults, initBoard, JXG} = await tdoc.import('jsxgraph.js');
-const attrs = [defaults, {
-    boundingBox: [-1, 8, 8, -1],
-    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
-    defaultAxes: {
-        x: {withLabel: false,
-            ticks: {drawLabels: false, insertTicks: false, ticksDistance: 1,
-            minorTicks: 0}
-        },
-        y: {withlabel: false,
-            ticks: {drawLabels: false, insertTicks: false, ticksDistance: 1,
-             minorTicks: 0}
-        },
-    },
-    defaults: {
-        arrow: {highlight: false, fixed: true, withLabel: true, strokeWidth: 2,
-                label: {anchorX: 'middle', anchorY: 'middle',
-                        position: '0.5fr right', distance: 1.2},
-        },
-        point: {size: 8, strokewidth: 0, fillOpacity: 0, highlightStrokeWidth: 0,
-                withLabel: false, highlightFillOpacity: 0.5},
-    }
-}];
-initBoard('vecteur', attrs, board => {
-    const p1 = board.create('point', [0, 0], {size: 0, fixed: true});
-    const p2 = board.create('point', [7, 1]);
-    const p3 = board.create('point', [3, 6]);
-    board.create('arrow', [p2, p1], {
-        name: `\\(\\overrightarrow{AO}\\)`, label: {offset: [0, 0]}
-    });
-    board.create('arrow', [p1, p3], {
-        name: `\\(\\overrightarrow{OB}\\)`, label: {offset: [0, 0]}
-    });
-    board.create('arrow', [p2, p3], {
-        name: `\\(\\overrightarrow{AB}\\)`, label: {offset: [0, 0]}
-    });
-});
-</script>
-
-
-
