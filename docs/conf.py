@@ -27,7 +27,3 @@ metadata = {
         'svg': {'displayAlign': 'left'},
     },
 }
-
-import_files = {
-    'informatique': '../../informatique/docs',
-}

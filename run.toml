@@ -1,4 +1,0 @@
-[defaults]
-command_20 = [
-    "--watch=../informatique/docs",
-]
