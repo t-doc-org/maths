@@ -8,10 +8,9 @@ author = "Caroline Blank"
 license = 'CC-BY-NC-SA-4.0'
 language = 'fr'
 
-exclude_patterns = ['_cache/**']
 myst_links_external_new_tab = True
 
-html_static_path = ['_cache/_static']
+html_static_path = ['_import/informatique/_static.export']
 html_css_files = ['site-styles.css']
 html_theme_options = {
     'repository_url': 'https://github.com/t-doc-org/maths',
@@ -29,13 +28,6 @@ metadata = {
     },
 }
 
-def _srcs(path, repo='informatique'):
-    return [
-        f'../../{repo}/docs/{path}',
-        f'https://github.com/t-doc-org/{repo}/raw/refs/heads/main/docs/{path}',
-    ]
-
-cached_files = {
-    '_cache/_static/jsxgraph.js': _srcs('_static/jsxgraph.js'),
-    '_cache/entete-examen.md': _srcs('_include/entete-examen.md'),
+import_files = {
+    'informatique': '../../informatique/docs',
 }

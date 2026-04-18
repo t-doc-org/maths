@@ -10,7 +10,7 @@ page-break-force: 1
 page-break-avoid: 2
 ```
 
-```{include} /_cache/entete-examen.md
+```{include} /_import/informatique/_include/entete-examen.export.md
 ```
 ```{class} align-center
 **Détails des calculs obligatoires. Attention au soin.\
