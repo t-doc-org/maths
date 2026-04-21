@@ -142,7 +142,7 @@ u_1v_1 + u_2v_2 &= 0 \\
 10 &= z
 ```
 
-## Vecteur orthognonal
+## Vecteur orthogonal
 
 ````{admonition} Théorème
 :class: note
