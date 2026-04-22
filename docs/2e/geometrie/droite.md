@@ -292,7 +292,7 @@ $
   \end{aligned}
 \right.$
 
-## Position relaive de deux droites
+## Position relative de deux droites
 
 ```{admonition} Propriétés
 Deux droites sont **parallèles** si leurs vecteurs directeurs sont colinéaires
