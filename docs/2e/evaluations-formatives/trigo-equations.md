@@ -14,7 +14,8 @@ page-break-avoid: 2
 ```
 ```{class} align-center
 **Détails des calculs obligatoires. Attention au soin.\
-Réponse sous forme de valeur exacte simplifiée.**
+Réponse sous forme de valeur exacte simplifiée.\
+Calculatrice et formulaires et tables autorisés.**
 ```
 ---
 
