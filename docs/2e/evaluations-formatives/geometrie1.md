@@ -95,7 +95,7 @@ Soient l'équation cartésienne $d_1: x + 2y - 9 = 0$
 
 ## Question {nump}`question`{points}`10`
 
-Soient trois points $A(6, -10)$, $B(8, 16)$ et C(-2, 6)$.
+Soient trois points $A(6, -10)$, $B(8, 16)$ et $C(-2, 6)$.
 
 {.lower-alpha-paren .vsep-2}
 1.  Déterminez l'angle $\alpha$ formé par les vecteurs $\overrightarrow{AB}$ et
