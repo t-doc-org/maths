@@ -21,7 +21,7 @@ Calculatrice et formulaires et tables autorisés.**
 
 ## Question {nump}`question`{points}`8`
 
-Soient l'équation cartésienne $d_1: x + 2y - 9 = 0$
+Soit l'équation cartésienne $d_1: x + 2y - 9 = 0$
 
 {.lower-alpha-paren .vsep-2}
 1.  Déterminez l'équation vectorielle de $d_1$.
