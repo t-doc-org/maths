@@ -126,8 +126,8 @@ Soient trois points $A(6, -10)$, $B(8, 16)$ et $C(-2, 6)$.
     $$
 3.  $\overrightarrow{CA} = \begin{pmatrix} 8\\ -16 \end{pmatrix}$
     $$
-    \overrightarrow{CB'} &= \dfrac{\overrightarrow{CA} \cdot \overrightarrow{CB}}{||\overrightarrow{CA}||} \cdot \overrightarrow{CA}\\
-    &= \dfrac{8 \cdot 10 + (-16) \cdot 10}{\sqrt{8^2 + (-16)^2}^2} \cdot \overrightarrow{CA}\\
+    \overrightarrow{CB'} &= \dfrac{\overrightarrow{CA} \cdot \overrightarrow{CB}}{||\overrightarrow{CA}||} \cdot \overrightarrow{CA}^2\\
+    &= \dfrac{8 \cdot 10 + (-16) \cdot 10}{(\sqrt{8^2 + (-16)^2})^2} \cdot \overrightarrow{CA}\\
     &= \dfrac{-80}{320} \cdot \overrightarrow{CA} = -\dfrac{1}{4} \cdot \overrightarrow{CA}\\
     &= -\dfrac{1}{4} \cdot \begin{pmatrix} 8\\ -16 \end{pmatrix} = \begin{pmatrix} -2\\ 4 \end{pmatrix}
     $$
