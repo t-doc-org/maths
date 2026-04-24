@@ -8,4 +8,5 @@
 vecteurs
 droite
 produit-scalaire
+metrique-plan
 ```
