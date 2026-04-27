@@ -33,7 +33,7 @@ Dans un repère orthonormé,
 
 ```{math}
 :class: align-center
-\vec{u} \cdot \vec{v} = \| \vec{u} \| \cdot \| \vec{v} \| \cdot \cos(\varphi)
+\cos(\varphi) = \dfrac{\vec{u} \cdot \vec{v}}{\| \vec{u} \| \cdot \| \vec{v} \|}
 ```
 ```{jsxgraph} angle-vect
 :style: width: 50%; border: none;
@@ -84,27 +84,16 @@ $\vec{v} = \begin{pmatrix} 3\\ 5 \end{pmatrix}$.
 
 Déterminez l'angle aigu $\varphi$ formé par les deux vecteurs.
 
-D'après la définition du produit scalaire:
-
-$\vec{u} \cdot \vec{v} = u_1v_1 + u_2v_2 = 7 \cdot 3 + 2 \cdot 5 = 21 + 10 = 31$
-
 D'après le théorème précédent:
 
-````{math}
-\vec{u} \cdot \vec{v} &= \| \vec{u} \| \cdot \| \vec{v} \| \cdot \cos(\varphi) \\
-&= \sqrt{7^2 + 2^2} \cdot \sqrt{3^2 + 5^2} \cdot \cos(\varphi) \\
-&= \sqrt{49 + 4} \cdot \sqrt{9 + 25} \cdot \cos(\varphi) \\
-&= \sqrt{53} \cdot \sqrt{34} \cdot \cos(\varphi) \\
-&= \sqrt{53  \cdot 34} \cdot \cos(\varphi) \\
-&= \sqrt{1802} \cdot \cos(\varphi)
-````
-
-Des deux égalités ci-dessus, nous déduisons:
-
 ```{math}
- \sqrt{1802} \cdot \cos(\varphi) &= 31 \\
- \cos(\varphi) &= \dfrac{31}{\sqrt{1802}} \\
- \varphi &= cos^{-1}\left(\dfrac{31}{\sqrt{1802}}\right) \simeq 43.1^\circ
+\cos(\varphi) &= \dfrac{\vec{u} \cdot \vec{v}}{\| \vec{u} \| \cdot \| \vec{v} \|}\\
+&= \dfrac{7 \cdot 3 + 2 \cdot 5}{\sqrt{7^2 + 2^2} \cdot \sqrt{3^2 + 5^2}}\\
+&= \dfrac{21 + 10}{\sqrt{49 + 4} \cdot \sqrt{9 + 25}}\\
+&= \dfrac{31}{\sqrt{53} \cdot \sqrt{34}}\\
+&= \dfrac{31}{\sqrt{53  \cdot 34}}\\
+&= \dfrac{31}{\sqrt{1802}}\\
+\varphi &= cos^{-1}\left(\dfrac{31}{\sqrt{1802}}\right) \simeq 43.1^\circ
 ````
 
 ````{admonition} Théorème
