@@ -87,6 +87,41 @@ Les équations des bissectrices de $d_1$ et $d_2$ sont données par
 :style: width: 50%; border: none;
 ```
 
+## Exemple {num2}`exemple`
+
+Soient deux droites $d_1: 4x + 3y + 2 = 0$ et $d_2: y = -\dfrac{3}{4}x + \dfrac{1}{8}$,
+déterminez les équations des bissectrices $b_1$ et $b_2$ de ces deux droites.
+
+Pour appliquer le théorème précédent, il est nécessaire d'utiliser les équations
+cartésiennes implicites.
+
+$$
+d_2: \quad &y = -\dfrac{3}{4}x + \dfrac{1}{8}\\
+&8y = -6x + 1\\
+&6x + 8y - 1 = 0
+$$
+
+L'équation $b_1$:
+$$
+\dfrac{4x + 3y + 2}{\sqrt{4^2+3^2}} &= \dfrac{6x + 8y - 1}{\sqrt{6^2+8^2}}\\
+\dfrac{4x + 3y + 2}{\sqrt{25}} &= \dfrac{6x + 8y - 1}{\sqrt{100}}\\
+\dfrac{4x + 3y + 2}{5} &= \dfrac{6x + 8y - 1}{10}\\
+2(4x + 3y + 2) &= 6x + 8y - 1\\
+8x + 6y + 4 &= 6x + 8y - 1\\
+b_1: \quad\quad 2x - 2y + 5 &= 0
+$$
+
+L'équation $b_2$:
+$$
+\dfrac{4x + 3y + 2}{\sqrt{4^2+3^2}} &= -\dfrac{6x + 8y - 1}{\sqrt{6^2+8^2}}\\
+\dfrac{4x + 3y + 2}{\sqrt{25}} &= -\dfrac{6x + 8y - 1}{\sqrt{100}}\\
+\dfrac{4x + 3y + 2}{5} &= -\dfrac{6x + 8y - 1}{10}\\
+2(4x + 3y + 2) &= -(6x + 8y - 1)\\
+8x + 6y + 4 &= -6x - 8y + 1\\
+b_2: \quad\quad 14x + 14y + 3 &= 0
+$$
+
+
 
 <script type="module">
 const {initBoard, JXG, nonInteractive, screen} =
