@@ -93,7 +93,7 @@ D'après le théorème précédent:
 &= \dfrac{31}{\sqrt{53} \cdot \sqrt{34}}\\
 &= \dfrac{31}{\sqrt{53  \cdot 34}}\\
 &= \dfrac{31}{\sqrt{1802}}\\
-\varphi &= cos^{-1}\left(\dfrac{31}{\sqrt{1802}}\right) \simeq 43.1^\circ
+\varphi &= \cos^{-1}\left(\dfrac{31}{\sqrt{1802}}\right) \simeq 43.1^\circ
 ````
 
 ````{admonition} Théorème
