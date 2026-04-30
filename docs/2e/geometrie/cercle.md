@@ -19,7 +19,7 @@ $r$ du centre $C$.
 
 ```{math}
 :class: align-center
-P \in \Gamma \iff \| \vec{CP} \| = r.
+P \in \Gamma \iff \| \overrightarrow{CP} \| = r.
 ```
 
 L'équation cartésienne canonique du cercle est de la forme:
