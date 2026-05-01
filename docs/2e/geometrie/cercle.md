@@ -28,6 +28,12 @@ L'équation cartésienne canonique du cercle est de la forme:
 :class: align-center
 \Gamma: (x - x_0)^2 + (y-y_0)^2 = r^2
 ```
+
+L'équation développée est de la forme:
+```{math}
+:class: align-center
+\Gamma: x^2 + y^2 + ax + by + c = 0
+```
 ````
 
 ```{jsxgraph} def-cercle
