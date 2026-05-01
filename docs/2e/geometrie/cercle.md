@@ -226,6 +226,9 @@ const attrs = [screen, {
 }];
 initBoard('def-cercle', [nonInteractive, attrs], board => {
   const c = cercle(board);
+  board.create('point', [3, 0], {
+    name: `\\(P\\)`, label: {offset: [10, 10]},
+  });
 });
 initBoard('intersection1', [nonInteractive, attrs], board => {
   const c = cercle(board);
