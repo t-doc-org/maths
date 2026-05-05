@@ -74,7 +74,7 @@ $$
 
 Le centre est $C({\color{blue}-3}; {\color{green}1})$ et le rayon est de ${\color{violet}2}$.
 
-## Position relative d'une droit et d'un cercle
+## Position relative d'une droite et d'un cercle
 
 ```{admonition} Propriétés
 - Si $\delta(C,d) < r$, la droite $d$ coupe le cercle $\Gamma$ et il y a deux
