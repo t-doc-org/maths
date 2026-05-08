@@ -347,6 +347,5 @@ initBoard('triangle-equi', attrs, board => {
 |$\sin(\varphi)$ | $\dfrac{1}{2}$        | $\dfrac{\sqrt{2}}{2}$ | $\dfrac{\sqrt{3}}{2}$
 |$\cos(\varphi)$ | $\dfrac{\sqrt{3}}{2}$ | $\dfrac{\sqrt{2}}{2}$ | $\dfrac{1}{2}$
 |$\tan(\varphi)$ | $\dfrac{\sqrt{3}}{3}$ | $1$                  | $\sqrt{3}$
-
 ```
 ````
