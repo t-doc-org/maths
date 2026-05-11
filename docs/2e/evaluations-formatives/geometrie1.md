@@ -35,20 +35,20 @@ Soit l'équation cartésienne $d_1: x + 2y - 9 = 0$.
 {.lower-alpha-paren .vsep-2}
 1.  $\vec{d_1} = \begin{pmatrix} -b\\ a \end{pmatrix} = \begin{pmatrix} -2\\ 1 \end{pmatrix}$ et
     $A(0, \dfrac{9}{2}) \in d_1$ (ordonnée à l'origine)<br>
-    $d_1: \begin{pmatrix} x\\ y \end{pmatrix} = \begin{pmatrix} 0\\ \frac{9}{2} \end{pmatrix} + \lambda \cdot \begin{pmatrix} -2\\ 1 \end{pmatrix}$ avec $\lambda \in \mathbb{R}$
+    $d_1: \begin{pmatrix} x\\ y \end{pmatrix} = \begin{pmatrix} 0\\ \frac{9}{2} \end{pmatrix} + \lambda \cdot \begin{pmatrix} -2\\ 1 \end{pmatrix}$ avec $\lambda \in \mathbb{R^*}$
 2.  $d_1$ et $d_2$ sont perpendiculaires, $\vec{d_2} = \begin{pmatrix} -1\\ -2 \end{pmatrix}$<br>
-    $d_2: \begin{pmatrix} x\\ y \end{pmatrix} = \mu \cdot \begin{pmatrix} -1\\ -2 \end{pmatrix}$ avec $\mu \in \mathbb{R}$
+    $d_2: \begin{pmatrix} x\\ y \end{pmatrix} = \mu \cdot \begin{pmatrix} -1\\ -2 \end{pmatrix}$ avec $\mu \in \mathbb{R^*}$
 3.  $\vec{d_1} \cdot \vec{d_2} = -2 \cdot (-1) + 1 \cdot (-2) = 2 - 2 = 0$
 4.  $\left\{
     \begin{aligned}
          -2 &=  \lambda \cdot (-1)   \\
-         -3 &=  \lambda \cdot (-3)
+         -3 &=  \lambda \cdot (-2)
     \end{aligned}
     \right.
     \Longleftrightarrow \left\{
     \begin{aligned}
          \lambda &=  2   \\
-         \lambda &=  1
+         \lambda &=  \dfrac{3}{2}
     \end{aligned}
     \right.$<br>
     Le point $B(-2, -3)$ n'appartient pas à la droite $d_2$.
