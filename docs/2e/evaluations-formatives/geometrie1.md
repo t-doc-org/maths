@@ -62,13 +62,13 @@ Soit l'équation cartésienne $d_1: x + 2y - 9 = 0$.
     \left \{
       \begin{aligned}
          -2\lambda + \mu &= 0\\
-         \lambda + 2\mu &= \frac{9}{2}
+         \lambda + 2\mu &= -\frac{9}{2}
       \end{aligned}
     \right. \Longleftrightarrow
     \left \{
       \begin{aligned}
          -2\lambda + \mu &= 0\\
-         2\lambda + 4\mu &= 9
+         2\lambda + 4\mu &= -9
       \end{aligned}
     \right.$$
     $$
@@ -76,19 +76,19 @@ Soit l'équation cartésienne $d_1: x + 2y - 9 = 0$.
     \left \{
       \begin{aligned}
         \mu &= 2\lambda\\
-        5\mu &= 9
+        5\mu &= -9
       \end{aligned}
     \right. \Longleftrightarrow
-    \mu = \frac{9}{5} \quad \text{ et } \quad \lambda = \dfrac{9}{10}
+    \mu = -\frac{9}{5} \quad \text{ et } \quad \lambda = -\dfrac{9}{10}
     $$
     $$
     \left \{
       \begin{aligned}
-         x &= -1\mu = -1 \cdot \frac{9}{5} = - \frac{9}{5}\\
-         y &= -2\mu = -2 \cdot \frac{9}{5} = - \frac{18}{5}
+         x &= -1\mu = -1 \cdot \left(-\frac{9}{5}\right) = \frac{9}{5}\\
+         y &= -2\mu = -2 \cdot \left(-\frac{9}{5}\right) = \frac{18}{5}
       \end{aligned}
     \right. \Longleftrightarrow
-    I(- \frac{9}{5}; - \frac{18}{5})
+    I(\frac{9}{5}; \frac{18}{5})
     $$
 
 ```
