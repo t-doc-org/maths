@@ -11,5 +11,6 @@ trigo-1
 trigo-equations
 trigo-thm-sin-cos
 exp-log
-geometrie1
+geometrie-1
+geometrie-2
 ```
