@@ -21,7 +21,7 @@ subject: "Mathématiques 1re année"
 - Savoir déterminer l'angle aigu entre deux droites.
 
 
-## Fonctions quadratiques}
+## Fonctions quadratiques
 
 - Connaître la définition d'une fonction quadratique et ses différentes formes.
 - Savoir transformer une fonction quadratique sous forme générale en forme
