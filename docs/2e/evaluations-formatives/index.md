@@ -11,5 +11,6 @@ trigo-1
 trigo-equations
 exp-log-1
 exp-log-2
-geometrie1
+geometrie-1
+geometrie-2
 ```
