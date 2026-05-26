@@ -8,6 +8,7 @@
 fonctions/index
 trigo/index
 geometrie/index
+statistique/index
 objectifs/index
 evaluations-formatives/index
 ```
