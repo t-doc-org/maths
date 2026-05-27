@@ -191,6 +191,8 @@ $$
 L'équation de la tangente au cercle au point $T(2; 1)$ est $4x - 3y - 5 = 0$.
 
 <script type="module">
+const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+
 function cercle(board) {
   const r = 3;
   const O = board.create('point', [0, 0], {
@@ -206,10 +208,7 @@ function cercle(board) {
   return c;
 }
 
-
-const {initBoard, JXG, nonInteractive, screen} =
-  await tdoc.import('jsxgraph.js');
-const attrs = [screen, {
+attrs.page = [attrs.screen, {
     boundingbox: [-4.5, 4.5, 4.5, -4.5],
     pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
     axis: false, grid: false,
@@ -230,13 +229,15 @@ const attrs = [screen, {
               },
     },
 }];
-initBoard('def-cercle', [nonInteractive, attrs], board => {
+
+initBoard('def-cercle', [attrs.nonInteractive, attrs.page], board => {
   const c = cercle(board);
   board.create('point', [3, 0], {
     name: `\\(P\\)`, label: {offset: [10, 10]},
   });
 });
-initBoard('intersection1', [nonInteractive, attrs], board => {
+
+initBoard('intersection1', [attrs.nonInteractive, attrs.page], board => {
   const c = cercle(board);
   const d = board.create('line', [[-2, 1.5], [3, -1]], {
     name: `\\(d\\)`, label: {offset: [0, 0]},
@@ -248,7 +249,8 @@ initBoard('intersection1', [nonInteractive, attrs], board => {
     name: `\\(I_2\\)`, label: {offset: [5, -5]},
   });
 });
-initBoard('intersection2', [nonInteractive, attrs], board => {
+
+initBoard('intersection2', [attrs.nonInteractive, attrs.page], board => {
   const c = cercle(board);
   const x = -1;
   const y = Math.sqrt(3 * 3 - x * x);
@@ -263,12 +265,15 @@ initBoard('intersection2', [nonInteractive, attrs], board => {
   });
   board.create('angle', [d, r, [-3,2.5], [0,0]]);
 });
-initBoard('intersection3', [nonInteractive, attrs], board => {
+
+initBoard('intersection3', [attrs.nonInteractive, attrs.page], board => {
   const c = cercle(board);
   const d = board.create('line', [[-3, 2], [0, 4]], {
     name: `\\(d\\)`, label: {offset: [0, 0]},
   });
-initBoard('def-tangente', [attrs, {
+});
+
+initBoard('def-tangente', [attrs.page, {
   boundingbox: [-8, 5, 8, -4],
 }], board => {
   const rayon = 3;
@@ -292,7 +297,6 @@ initBoard('def-tangente', [attrs, {
     name: `\\(d\\)`, label: {position: '0.1fr left', offset: [0, 0]},
   });
   board.create('angle', [d, r, [-3,2.5], [0,0]]);
-  });
 });
 </script>
 

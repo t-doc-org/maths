@@ -43,8 +43,8 @@ Les vecteurs suivants sont colinéaires, car ils ont tous la même direction.
 ```
 
 <script type="module">
-const {initBoard, JXG, screen} = await tdoc.import('jsxgraph.js');
-const attrs = [screen, {
+const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+const battrs = [attrs.screen, {
   boundingBox: [-5, 5, 4, -2],
   pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
   defaults: {
@@ -54,13 +54,13 @@ const attrs = [screen, {
     },
   },
 }];
-initBoard('vecteurs-1', attrs, board => {
+initBoard('vecteurs-1', battrs, board => {
   board.create('arrow', [[0, 0], [3,2]], {name: `\\(\\vec{v_1}\\)`});
   board.create('arrow', [[-4,-1], [-1,1]], {name: `\\(\\vec{v_2}\\)`});
   board.create('arrow', [[-5, 1], [-2,3]], {name: `\\(\\vec{v_3}\\)`});
   board.create('arrow', [[-2,2], [1,4]], {name: `\\(\\vec{v_4}\\)`});
 });
-initBoard('vecteurs-2', attrs, board => {
+initBoard('vecteurs-2', battrs, board => {
   board.create('arrow', [[0, 0], [3,2]], {name: `\\(\\vec{v_1}\\)`});
   board.create('arrow', [[-4,1], [-2.5,2]], {
       name: `\\(\\vec{v_2}\\)`, label: {offset: [-35, -5]},
@@ -147,9 +147,8 @@ $\vec{v} = 3 \cdot \vec{e_1} + 2 \cdot \vec{e_2} = \begin{pmatrix} 3\\ 2\\ \end{
 ````
 
 <script type="module">
-const {initBoard, JXG, nonInteractive, screen} =
-    await tdoc.import('jsxgraph.js');
-const attrs = [screen, nonInteractive, {
+const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+const battrs = [attrs.screen, attrs.nonInteractive, {
   boundingBox: [-2, 4, 4, -2],
   pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
   axis: false, grid: false,
@@ -162,7 +161,7 @@ const attrs = [screen, nonInteractive, {
     parallel: {strokeOpacity: 0.1},
   },
 }];
-initBoard('base', attrs, board => {
+initBoard('base', battrs, board => {
   const incl = 6;
   const Ox = board.create('axis', [[0, 0], [incl, 1]], {
     ticks: {
@@ -198,9 +197,8 @@ initBoard('base', attrs, board => {
 </script>
 
 <script type="module">
-const {initBoard, JXG, nonInteractive, screen} =
-    await tdoc.import('jsxgraph.js');
-const attrs = [screen, nonInteractive, {
+const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+const battrs = [attrs.screen, attrs.nonInteractive, {
   boundingBox: [-2, 4, 4, -2],
   pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
   defaultAxes: {
@@ -224,7 +222,7 @@ const attrs = [screen, nonInteractive, {
     },
   },
 }];
-initBoard('base-orthonormée', attrs, board => {
+initBoard('base-orthonormée', battrs, board => {
   board.create('arrow', [[0, 0], [1,0]], {
     name: `\\(\\vec{e_1}\\)`,
     label: {position: '0.4fr right', offset: [0, -3]},
@@ -375,8 +373,8 @@ Soient trois points $A$, $B$ et $C$ du plan.
 ````
 
 <script type="module">
-const {initBoard, JXG, screen} = await tdoc.import('jsxgraph.js');
-const attrs = [screen, {
+const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+const battrs = [attrs.screen, {
   boundingBox: [-1, 8, 8, -1],
   pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
   axis: false,
@@ -408,7 +406,7 @@ const attrs = [screen, {
     },
   },
 }];
-initBoard('chasle', attrs, board => {
+initBoard('chasle', battrs, board => {
   const p1 = board.create('point', [0, 1]);
   const p2 = board.create('point', [4, 7]);
   const p3 = board.create('point', [6, 0]);
@@ -422,7 +420,7 @@ initBoard('chasle', attrs, board => {
     name: `\\(\\overrightarrow{AC}\\)`, label: {offset: [0, 0]},
   });
 });
-initBoard('oppose', attrs, board => {
+initBoard('oppose', battrs, board => {
   const p1 = board.create('point', [0, 3]);
   const p2 = board.create('point', [6, 7]);
   board.create('arrow', [p1, p2], {
@@ -434,7 +432,7 @@ initBoard('oppose', attrs, board => {
     name: `\\(\\overrightarrow{BA}\\)`, label: {offset: [0, 0]},
   });
 });
-initBoard('vecteur', [attrs, {
+initBoard('vecteur', [battrs, {
   axis: true,
   defaults: {arrow: {label: {position: '0.5fr right'}}},
 }], board => {

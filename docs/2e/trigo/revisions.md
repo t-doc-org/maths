@@ -10,21 +10,29 @@ subject: "Mathématiques 2e année"
 ## Notation des triangles
 
 <script type="module">
-const {initBoard, nonInteractive, screen} = await tdoc.import('jsxgraph.js');
-const attrs = [screen, nonInteractive, {
-  boundingBox: [-3.5, 3.5, 3.5, -0.5],
+const {attrs, initBoard} = await tdoc.import('jsxgraph.js');
+attrs.page = [attrs.screen, attrs.nonInteractive, {
   axis: false, grid: false,
   defaults: {
-    point: {size: 0, withLabel: true, label: {anchorY:'top'}},
-    segment: {strokeColor: JXG.palette.black, strokeWidth: 2, withLabel: true},
+    point: {size: 0, withLabel: false, label: {anchorY: 'top'}},
+    segment: {strokeWidth: 2, strokeColor: JXG.palette.black},
     angle: {
-      strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
-      fillOpacity: 0.2, strokeWidth: 1, withLabel: true,
+      strokeWidth: 1, strokeColor: JXG.palette.black,
+      fillColor: JXG.palette.black, fillOpacity: 0.2,
       label: {strokeColor: JXG.palette.black},
     },
   },
 }];
-initBoard('triangle', attrs, board => {
+const withLabels = {
+  defaults: {
+    point: {withLabel: true},
+    segment: {withLabel: true},
+    angle: {withLabel: true},
+  },
+};
+initBoard('triangle', [attrs.page, withLabels, {
+  boundingBox: [-3.5, 3.5, 3.5, -0.5],
+}], board => {
   const A = board.create('point', [-3, 0], {
     name: '\\(A\\)', label: {anchorX: 'right', offset: [-8, 0]}
   });
@@ -53,7 +61,9 @@ initBoard('triangle', attrs, board => {
     name: '\\(\\gamma\\)', label: {anchorX: 'middle', offset: [4, 24]}
   });
 });
-initBoard('triangle-rectangle', attrs, board => {
+initBoard('triangle-rectangle', [attrs.page, withLabels, {
+  boundingBox: [-3.5, 3.5, 3.5, -0.5],
+}], board => {
   const A = board.create('point', [3, 0], {
     name: '\\(A\\)', label: {anchorX: 'left', offset: [4, 0]}
   });
@@ -194,20 +204,10 @@ source: (<https://gomaths.edu-vd.ch>)
 ### Triangle rectangle isocèle
 
 <script type="module">
-const {initBoard, nonInteractive, screen} = await tdoc.import('jsxgraph.js');
-const attrs = [screen, nonInteractive, {
+const {attrs, initBoard} = await tdoc.import('jsxgraph.js');
+initBoard('triangle-iso-rect', [attrs.page, {
   boundingBox: [-0.5, 4.5, 4.5, -0.5],
-  axis: false, grid: false,
-  defaults: {
-    segment: {strokeColor: JXG.palette.black, strokeWidth: 2},
-    point: {size: 0, withLabel: false},
-    angle: {
-      strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
-      fillOpacity: 0.2, strokeWidth: 1, label: {strokeColor: JXG.palette.black},
-    },
-  },
-}];
-initBoard('triangle-iso-rect', attrs, board => {
+}], board => {
   const A = board.create('point', [0, 0]);
   const B = board.create('point', [4, 0]);
   const C = board.create('point', [4, 4]);
@@ -260,20 +260,10 @@ initBoard('triangle-iso-rect', attrs, board => {
 ### Demi-triangle équilatéral
 
 <script type="module">
-const {initBoard, nonInteractive, screen} = await tdoc.import('jsxgraph.js');
-const attrs = [screen, nonInteractive, {
+const {attrs, initBoard} = await tdoc.import('jsxgraph.js');
+initBoard('triangle-equi', [attrs.page, {
   boundingBox: [-0.5, 4.5, 4.5, -1],
-  axis: false, grid: false,
-  defaults: {
-    segment: {strokeColor: JXG.palette.black, strokeWidth: 2},
-    point: {size: 0, withLabel: false},
-    angle: {
-      strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
-      fillOpacity: 0.2, strokeWidth: 1, label: {strokeColor: JXG.palette.black},
-    },
-  },
-}];
-initBoard('triangle-equi', attrs, board => {
+}], board => {
   const A = board.create('point', [0, 0]);
   const B = board.create('point', [4, 0]);
   const C = board.create('point', [2, 4 * Math.sqrt(3) /2 ]);

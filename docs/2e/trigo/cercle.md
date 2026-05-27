@@ -9,9 +9,9 @@ subject: "Mathématiques 2e année"
 ## Radian
 
 <script type="module">
-const {gcd, initBoard, JXG, screen, withAxesLabels} =
+const {attrs, gcd, initBoard, JXG, withAxesLabels} =
   await tdoc.import('jsxgraph.js');
-initBoard('trig-circle', [screen, withAxesLabels([-1, 1], [-1, 1]), {
+initBoard('trig-circle', [attrs.screen, withAxesLabels([-1, 1], [-1, 1]), {
   boundingBox: [-1.2, 1.5, 1.2, -1.2],
   axis: true, grid: false,
   pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
@@ -22,7 +22,7 @@ initBoard('trig-circle', [screen, withAxesLabels([-1, 1], [-1, 1]), {
   defaults: {
     segment: {strokeColor: JXG.palette.black, strokeWidth: 1},
     point: {
-      strokeWidth: 0, size: 0, label: {anchorY:'top'},
+      strokeWidth: 0, size: 0, label: {anchorY: 'top'},
       withLabel: false, showInfobox: false,
     },
     angle: {
@@ -193,9 +193,9 @@ Un angle de 5.13 rad vaut en degré $\qquad \dfrac{5.13}{2\pi} \cdot 360^\circ \
     radians.
 
 <script type="module">
-const {gcd, initBoard, screen, withAxesLabels} =
+const {attrs, gcd, initBoard, withAxesLabels} =
   await tdoc.import('jsxgraph.js');
-initBoard('cercle-trigo', [screen, withAxesLabels([-1, 1], [-1, 1]), {
+initBoard('cercle-trigo', [attrs.screen, withAxesLabels([-1, 1], [-1, 1]), {
   boundingBox: [-1.75, 1.75, 1.75, -1.75], grid: false,
   pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
   defaultAxes: {
