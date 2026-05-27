@@ -29,9 +29,9 @@ d'équations:
 ````
 
 <script type="module">
-const {initBoard, JXG, withAxesLabels, nonInteractive, screen} =
+const {attrs, initBoard, JXG, withAxesLabels} =
   await tdoc.import('jsxgraph.js');
-const attrs = [screen, nonInteractive, {
+attrs.page = [attrs.screen, attrs.nonInteractive, {
   boundingBox: [-6, 5.5, 6, -2.5],
   pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
   grid: {majorStep: [Math.PI / 4, 1]},
@@ -50,7 +50,7 @@ const attrs = [screen, nonInteractive, {
       point: {strokeWidth: 0},
   },
 }];
-initBoard('exemple-tan', attrs, board => {
+initBoard('exemple-tan', attrs.page, board => {
   board.create('functiongraph', [x => Math.tan(x)-2], {
     name: '\\(\\tan(x)-1\\)', withLabel: true,
     label: {position: '0.5fr right', offset: [-30, 0]},
@@ -63,7 +63,7 @@ initBoard('exemple-tan', attrs, board => {
   }
   board.create('segment', [[Math.atan(5), 0],[Math.atan(5), 3]], {dash: 2});
 });
-initBoard('exemple-cos', [attrs, {boundingBox: [-6, 1.5, 6, -1.5]}], board => {
+initBoard('exemple-cos', [attrs.page, {boundingBox: [-6, 1.5, 6, -1.5]}], board => {
   board.create('functiongraph', [x => Math.cos(3 * x)], {
     name: '\\(\\cos(3x)\\)', withLabel: true,
     label: {position: '0.7fr right', offset: [-20, 0]},
@@ -84,7 +84,7 @@ initBoard('exemple-cos', [attrs, {boundingBox: [-6, 1.5, 6, -1.5]}], board => {
   board.create('segment',
     [[-Math.PI / 12, 0],[-Math.PI / 12, Math.sqrt(2) / 2]], {dash: 2});
 });
-initBoard('exemple-sin', [attrs, {boundingBox: [-6, 2.5, 6, -0.5]}], board => {
+initBoard('exemple-sin', [attrs.page, {boundingBox: [-6, 2.5, 6, -0.5]}], board => {
   board.create('functiongraph', [x => Math.sin(x - Math.PI/2)+1], {
     name: '\\(\\sin(x - \\dfrac{\\pi}{2})+1\\)', withLabel: true,
     label: {position: '0.7fr left', offset: [0, 0]},
@@ -102,7 +102,7 @@ initBoard('exemple-sin', [attrs, {boundingBox: [-6, 2.5, 6, -0.5]}], board => {
   board.create('segment',
     [[5 * Math.PI / 3, 0],[5 * Math.PI / 3, 1 / 2]], {dash: 2});
 });
-initBoard('exemple-sin-2', [attrs, {
+initBoard('exemple-sin-2', [attrs.page, {
   boundingBox: [-6, 1.5, 6, -1.5],
 }], board => {
   board.create('functiongraph', [x => Math.sin(2 *x)], {
@@ -128,7 +128,7 @@ initBoard('exemple-sin-2', [attrs, {
   board.create('segment',
     [[Math.PI / 6, 0],[Math.PI / 6, Math.sin(2 * Math.PI/6)]], {dash: 2});
 });
-initBoard('exemple-sin-3', [attrs, {
+initBoard('exemple-sin-3', [attrs.page, {
   boundingBox: [-6, 1.5, 6, -1.5],
 }], board => {
   board.create('functiongraph', [x => Math.sin(2 *x + Math.PI/4)], {
@@ -157,7 +157,7 @@ initBoard('exemple-sin-3', [attrs, {
   board.create('segment',
     [[Math.PI / 4, 0],[Math.PI / 4, Math.cos(Math.PI/4)]], {dash: 2});
 });
-initBoard('exemple-sin-cos', [attrs, {
+initBoard('exemple-sin-cos', [attrs.page, {
   boundingBox: [-6, 2.8, 6, -1.5],
 }], board => {
   board.create('functiongraph', [x => 2*(Math.cos(x))**2+ Math.sin(x)], {

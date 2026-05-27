@@ -20,9 +20,9 @@ Le nombre $p$ est alors appelé la **période** de la fonction.
 ````
 
 <script type="module">
-const {gcd, initBoard, JXG, screen, withAxesLabels} =
+const {attrs, gcd, initBoard, JXG, withAxesLabels} =
     await tdoc.import('jsxgraph.js');
-initBoard('sin', [screen, withAxesLabels(undefined, [-1, 1]), {
+initBoard('sin', [attrs.screen, withAxesLabels(undefined, [-1, 1]), {
     boundingBox: [-1.5, 1.5, 6.5, -1.5],
     axis: true, grid: {majorStep: [Math.PI / 2, 1]},
     pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
@@ -164,9 +164,9 @@ initBoard('sin', [screen, withAxesLabels(undefined, [-1, 1]), {
 </script>
 
 <script type="module">
-const {gcd, initBoard, JXG, screen, withAxesLabels} =
+const {attrs, gcd, initBoard, JXG, withAxesLabels} =
     await tdoc.import('jsxgraph.js');
-initBoard('cos', [screen, withAxesLabels([-1, 1], undefined), {
+initBoard('cos', [attrs.screen, withAxesLabels([-1, 1], undefined), {
     boundingBox: [-3, 6.5, 2.5, -1.5],
     axis: true, grid: {majorStep: [1, Math.PI / 2]},
     pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
@@ -308,9 +308,9 @@ initBoard('cos', [screen, withAxesLabels([-1, 1], undefined), {
 </script>
 
 <script type="module">
-const {gcd, initBoard, JXG, screen, withAxesLabels} =
+const {attrs, gcd, initBoard, JXG, withAxesLabels} =
     await tdoc.import('jsxgraph.js');
-initBoard('tan', [screen, withAxesLabels(undefined, [-1, 1]), {
+initBoard('tan', [attrs.screen, withAxesLabels(undefined, [-1, 1]), {
     boundingBox: [-1.5, 6.5, 6.5, -6.5],
     axis: true, grid: {majorStep: [Math.PI / 4, 1]},
     pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
@@ -566,7 +566,8 @@ change-t-elle en fonction des coefficients $a$, $b$, $c$ et $d$?
 ```
 
 <script type="module">
-const {gcd, initBoard, JXG, screen} = await tdoc.import('jsxgraph.js');
+const {attrs, gcd, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+
 function sliders(board) {
     const a = board.create('slider', [[-6.8, 4] , [-3.8, 4], [0, 1, 4]], {
         name: '\\(a\\)', size: 4, withTicks: false,
@@ -594,7 +595,7 @@ function sliders(board) {
     return sliders;
 }
 
-const attrs = [screen, {
+const battrs = [attrs.screen, {
     boundingBox: [-7, 4.2, 7, -4.2],
     pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
     grid: {majorStep: [Math.PI / 2, 1]},
@@ -613,7 +614,8 @@ const attrs = [screen, {
         slider: {withLabel: true, label: {distance: 1}},
     },
 }];
-initBoard('sinus', attrs, board => {
+
+initBoard('sinus', battrs, board => {
     const [a, b, c, d] = sliders(board);
     board.create('functiongraph', [function(x) {
         return a.Value() * Math.sin(b.Value() * x + c.Value()) + d.Value();
@@ -630,7 +632,7 @@ initBoard('sinus', attrs, board => {
     });
 });
 
-initBoard('cosinus', attrs, board => {
+initBoard('cosinus', battrs, board => {
     const [a, b, c, d] = sliders(board);
     board.create('functiongraph', [function(x) {
         return a.Value() * Math.cos(b.Value() * x + c.Value()) + d.Value();
@@ -647,7 +649,7 @@ initBoard('cosinus', attrs, board => {
     });
 });
 
-initBoard('tangente', attrs, board => {
+initBoard('tangente', battrs, board => {
     const [a, b, c, d] = sliders(board);
     board.create('functiongraph', [function(x) {
         return a.Value() * Math.tan(b.Value() * x + c.Value()) + d.Value();
@@ -716,8 +718,8 @@ $\left] -\dfrac{\pi}{2};\dfrac{\pi}{2} \right[$ est appelée **arc tangente**, n
 ````
 
 <script type="module">
-const {initBoard, JXG, screen} = await tdoc.import('jsxgraph.js');
-const attrs = [screen, {
+const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+const battrs = [attrs.screen, {
     pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
     grid: {majorStep: [1, Math.PI / 4]},
     defaultAxes: {
@@ -732,7 +734,7 @@ const attrs = [screen, {
         },
     },
 }];
-initBoard('arcsin', [attrs, {boundingBox: [-4, 2, 4, -2]}], board => {
+initBoard('arcsin', [battrs, {boundingBox: [-4, 2, 4, -2]}], board => {
     board.create('functiongraph', [x => Math.sin(x)], {
         strokeOpacity: 0.3,
     });
@@ -746,7 +748,7 @@ initBoard('arcsin', [attrs, {boundingBox: [-4, 2, 4, -2]}], board => {
         strokeColor: JXG.palette.red,
     });
 });
-initBoard('arccos', [attrs, {boundingBox: [-4, 3.5, 4, -1.5]}], board => {
+initBoard('arccos', [battrs, {boundingBox: [-4, 3.5, 4, -1.5]}], board => {
     board.create('functiongraph', [x => Math.cos(x)], {
         strokeOpacity: 0.3,
     });
@@ -760,7 +762,7 @@ initBoard('arccos', [attrs, {boundingBox: [-4, 3.5, 4, -1.5]}], board => {
         strokeColor: JXG.palette.red,
     });
 });
-initBoard('arctan', [attrs, {boundingBox: [-4, 3, 4, -3]}], board => {
+initBoard('arctan', [battrs, {boundingBox: [-4, 3, 4, -3]}], board => {
     board.create('functiongraph', [x => Math.tan(x)], {
         strokeOpacity: 0.3,
     });

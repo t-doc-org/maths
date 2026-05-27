@@ -41,8 +41,8 @@ Dans un repère orthonormé,
 ````
 
 <script type="module">
-const {initBoard, JXG, screen} = await tdoc.import('jsxgraph.js');
-const attrs = [screen, {
+const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+initBoard('angle-vect', [attrs.screen, {
   boundingbox: [-2, 6, 9, -2],
   pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
   axis: false, grid: true,
@@ -60,8 +60,7 @@ const attrs = [screen, {
       label: {strokeColor: JXG.palette.black},
     },
   },
-}];
-initBoard('angle-vect', attrs, board => {
+}], board => {
   const A = board.create('point', [7, 2]);
   const B = board.create('point', [3, 5]);
   const O = board.create('point', [0, 0], {size: 0, fixed: true});
@@ -180,8 +179,8 @@ $P'$ de $d$ tel que le segment $PP'$ soit perpendiculaire à $d$.
 ````
 
 <script type="module">
-const {initBoard, JXG, screen} = await tdoc.import('jsxgraph.js');
-const attrs = [screen, {
+const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+initBoard('projection', [attrs.screen, {
   boundingbox: [-1, 6, 8, -0.5],
   pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
   axis: false, grid: false,
@@ -199,8 +198,7 @@ const attrs = [screen, {
       fillOpacity: 0,
     },
   },
-}];
-initBoard('projection', attrs, board => {
+}], board => {
   const O = board.create('point', [0,0], {size: 0, withLabel: false});
   const P = board.create('point', [2, 5], {name: `\\(P\\)`});
   const d = board.create('line', [[0, 0], [3,1]], {name: `\\(d\\)`});
@@ -260,8 +258,8 @@ $\implies P'(-\frac{41}{58};\frac{59}{58})$
 ```
 
 <script type="module">
-const {initBoard, JXG, screen} = await tdoc.import('jsxgraph.js');
-const attrs = [screen, {
+const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+initBoard('exemple', [attrs.screen, {
   boundingbox: [-8, 10, 10, -2],
   pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
   axis: false, grid: true,
@@ -292,8 +290,7 @@ const attrs = [screen, {
       fillOpacity: 0,
     },
   },
-}];
-initBoard('exemple', attrs, board => {
+}], board => {
   const A = board.create('point', [-3,2], {
     name: `\\(A\\)`, label: {offset: [-10, 20]},
   });

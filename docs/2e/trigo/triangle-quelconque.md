@@ -63,8 +63,8 @@ Le théorème du sinus peut être utilisé si dans un triangle, sont connus:
 ```
 
 <script type="module">
-const {initBoard, JXG, screen} = await tdoc.import('jsxgraph.js');
-initBoard('utilisation-sinus', [screen, {
+const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+initBoard('utilisation-sinus', [attrs.screen, {
   boundingbox: [-5, 4, 7, -1],
   axis: false, grid: false,
   pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: false,
@@ -118,10 +118,10 @@ initBoard('utilisation-sinus', [screen, {
 </script>
 
 <script type="module">
-const {initBoard, JXG, screen} = await tdoc.import('jsxgraph.js');
+const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
 
 function hauteur(name, fn) {
-  initBoard(name, [screen, {
+  initBoard(name, [attrs.screen, {
     boundingbox: [-1.5, 2, 5, -1],
     axis: false, grid: false,
     pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: false,
@@ -199,7 +199,7 @@ hauteur('demo-cosinus', (board, A, B, C, H) => {
 });
 
 function triangle_exemple(name, {a, b, c, alpha, beta, gamma}) {
-  initBoard(name, [screen, {
+  initBoard(name, [attrs.screen, {
     boundingbox: [-0.5, 3.5, 5.5, -0.5],
     axis: false, grid: false,
     pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: false,
@@ -341,8 +341,8 @@ $$
 $$
 
 <script type="module">
-const {initBoard, JXG, screen} = await tdoc.import('jsxgraph.js');
-initBoard('sinus-2-sol', [screen, {
+const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+initBoard('sinus-2-sol', [attrs.screen, {
   boundingbox: [-4.5, 5, 7.5, -1],
   axis: false, grid: false,
   pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: false,
@@ -499,8 +499,8 @@ Le théorème du cosinus peut être utilisé si dans un triangle, sont connus:
 ```
 
 <script type="module">
-const {initBoard, JXG, screen} = await tdoc.import('jsxgraph.js');
-initBoard('utilisation-cosinus', [screen, {
+const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+initBoard('utilisation-cosinus', [attrs.screen, {
   boundingbox: [-5, 4, 5, -1],
   axis: false, grid: false,
   pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: false,

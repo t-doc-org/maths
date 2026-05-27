@@ -67,8 +67,6 @@ $$\delta(P;d) &= \dfrac{\bigl| \overrightarrow{AP} \cdot \vec{n} \bigr|}{\| \vec
 &= \dfrac{3}{\sqrt{5}} = \dfrac{3\sqrt{5}}{5} \simeq 1.34 \\
 $$
 
-
-
 ## Bissectrices de deux droites
 
 ````{admonition} Définition
@@ -121,12 +119,10 @@ $$
 b_2: \quad\quad 14x + 14y + 3 &= 0
 $$
 
-
-
 <script type="module">
-const {initBoard, JXG, nonInteractive, screen} =
-  await tdoc.import('jsxgraph.js');
-const attrs = {
+const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+
+attrs.page = [attrs.screen, {
   axis: false, grid: false,
   defaults: {
     line: {
@@ -157,8 +153,9 @@ const attrs = {
       strokeColor: JXG.palette.black,
     },
   },
-};
-initBoard('distance', [screen, attrs, {
+}];
+
+initBoard('distance', [attrs.page, {
   boundingbox: [-3, 5, 12, -2],
 }], board => {
   const A = board.create('point', [0, 0], {
@@ -186,7 +183,8 @@ initBoard('distance', [screen, attrs, {
     whithLabel: true, name: '\\(\\vec{n}\\)', label: {offset: [15, 0]},
   });
 });
-initBoard('bissectrices', [screen, nonInteractive, attrs, {
+
+initBoard('bissectrices', [attrs.page, attrs.nonInteractive, {
   boundingbox: [-3, 5, 8, -2],
   axis: false, grid: false,
   defaults: {

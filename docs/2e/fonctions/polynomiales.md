@@ -209,22 +209,22 @@ La fonction $g$ est symétrique par rapport à l'origine $O$.
 ```
 
 <script type="module">
-const {initBoard, JXG, screen} = await tdoc.import('jsxgraph.js');
-const attrs = [screen, {
-    boundingBox: [-5.2, 5.2, 5.2, -5.2],
-    defaults: {
-        functiongraph: {withLabel: true, label: {position: '0.65fr right'}},
-    },
+const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+attrs.page = [attrs.screen, {
+  boundingBox: [-5.2, 5.2, 5.2, -5.2],
+  defaults: {
+    functiongraph: {withLabel: true, label: {position: '0.65fr right'}},
+  },
 }];
-initBoard('fct-paire', attrs, board => {
-    board.create('functiongraph', [x => x ** 4 - 2 * x ** 2 - 2], {
-        name: `\\(f\\)`,
-    });
+initBoard('fct-paire', attrs.page, board => {
+  board.create('functiongraph', [x => x ** 4 - 2 * x ** 2 - 2], {
+    name: `\\(f\\)`,
+  });
 });
-initBoard('fct-impaire', attrs, board => {
-    board.create('functiongraph', [x => x ** 5 - 2 * x ** 3 - 3 * x], {
-        name: `\\(g\\)`,
-    });
+initBoard('fct-impaire', attrs.page, board => {
+  board.create('functiongraph', [x => x ** 5 - 2 * x ** 3 - 3 * x], {
+    name: `\\(g\\)`,
+  });
 });
 </script>
 

@@ -37,19 +37,18 @@ d'arrivée** de $f$.
     ```
 
 <script type="module">
-const {initBoard, JXG, nonInteractive, screen} =
-    await tdoc.import('jsxgraph.js');
-const attrs = [screen, nonInteractive, {
+const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+const battrs = [attrs.screen, attrs.nonInteractive, {
     boundingBox: [-7, 11, 7, -2],
     defaultAxes: {
         x: {ticks: {drawLabels: false}},
         y: {ticks: {drawLabels: false}},
     },
 }];
-initBoard('fonction', attrs, board => {
+initBoard('fonction', battrs, board => {
     board.create('functiongraph', [x => x ** 3 / 2 - 3 * x + 5]);
 });
-initBoard('non-fonction', attrs, board => {
+initBoard('non-fonction', battrs, board => {
     const c = board.create('point', [0, 4], {
         visible: false, withLabel: false,
     });
@@ -261,9 +260,8 @@ calculés précédemment.
 ```
 
 <script type="module">
-const {initBoard, JXG, nonInteractive, screen} =
-    await tdoc.import('jsxgraph.js');
-initBoard('fct-f', [screen, nonInteractive, {
+const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+initBoard('fct-f', [attrs.screen, attrs.nonInteractive, {
     boundingBox: [-5, 2.5, 5, -7],
     defaults: {
         point: {
