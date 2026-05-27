@@ -6,7 +6,7 @@ export const [{
 }] = await tdoc.imports('tdoc/jsxgraph.js');
 
 // Defaults for use on screen media.
-export const screen = attrs.screen = [{
+attrs.screen = [{
   axis: true, grid: true,
   defaultAxes: {
     x: {ticks: {minorTicks: 1}},
@@ -39,7 +39,7 @@ export const screen = attrs.screen = [{
 }];
 
 // Defaults for use on print media.
-export const print = attrs.print = ['nonInteractive', {
+attrs.print = [attrs.nonInteractive, {
   axis: true, grid: true,
   defaultAxes: {
     x: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0}},
@@ -56,8 +56,14 @@ export const print = attrs.print = ['nonInteractive', {
 }];
 
 templates['discrete-cumulative-distribution'] = (el, {
-  samples, frequency = true, board = {},
+  samples, classes, frequency = true, board = {},
 }) => {
+  if (samples === undefined) {
+    samples = [];
+    for (const [v, count] of classes) {
+      for (let i = 0; i < count; ++i) samples.push(v);
+    }
+  }
   samples.sort();
   let min = Infinity, max = -Infinity;
   const data = [[-Infinity, 0]];
