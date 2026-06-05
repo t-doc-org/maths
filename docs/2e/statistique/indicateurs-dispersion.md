@@ -70,5 +70,5 @@ graphique qui représente l'étendue et les différents quartiles ($Q_0$, ...
 $Q_4$).
 ````
 
-<!-- todo ajouter un exemple -->
+<!-- TODO: ajouter un exemple -->
 

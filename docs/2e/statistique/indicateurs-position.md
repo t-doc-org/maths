@@ -7,9 +7,6 @@
 
 ```{metadata}
 subject: "Mathématiques 2e année"
-scripts:
-  - src: jsxgraph.js
-    type: module
 ```
 
 {.allow-break}
@@ -72,8 +69,8 @@ Voici les notes obtenues à l'examen écrit de maturité en mathématiques.
 ```
 
 {.lower-alpha-paren}
-1.  En utilisant les données brutes ci-dessus, le calcul de la moyenne et la médiane
-    sont les suivants:
+1.  En utilisant les données brutes ci-dessus, le calcul de la moyenne et la
+    médiane sont les suivants:
 
     Moyenne:
     $$\mu &= \dfrac{3+4.5+4+3.5+5+6+6+4+4.5+5+5+4+4.5+5.5+5+6+5.5+4.5+2+4.5+
@@ -82,10 +79,10 @@ Voici les notes obtenues à l'examen écrit de maturité en mathématiques.
 
     Pour déterminer la médiane, il faut
     - ordonner l'échantillon
-    - trouver la valeur qui se trouve au milieu de l'échantillon. Soit $N$ la taille
-      de l'échantillon:
-        - si $N$ est impair, $M = x_{\frac{N+1}{2}}$
-        - si $N$ est pair, $M = \dfrac{x_{\frac{N}{2}} + x_{\frac{N}{2}+1}}{2}$
+    - trouver la valeur qui se trouve au milieu de l'échantillon. Soit $N$ la
+      taille de l'échantillon:
+      - si $N$ est impair, $M = x_{\frac{N+1}{2}}$
+      - si $N$ est pair, $M = \dfrac{x_{\frac{N}{2}} + x_{\frac{N}{2}+1}}{2}$
 
     ```{math}
     :class: align-center
@@ -99,8 +96,8 @@ Voici les notes obtenues à l'examen écrit de maturité en mathématiques.
     ```
     $N = 30 \implies M = \dfrac{x_{\frac{N}{2}} + x_{\frac{N}{2}+1}}{2} = \dfrac{x_{15} + x_{16}}{2} = \dfrac{4.5 + 4.5}{2} =4.5$
 
-    Le tableau des effectifs $n_i$, des fréquences $f_i$  et des fréquences cumulées
-    $F_i$ est le suivant.
+    Le tableau des effectifs $n_i$, des fréquences $f_i$  et des fréquences
+    cumulées $F_i$ est le suivant.
 
 2.  En utilisant les données représentées dans le tableau des effectifs cumulés.
 
@@ -129,8 +126,8 @@ Voici les notes obtenues à l'examen écrit de maturité en mathématiques.
 
     $$\mu = \dfrac{2 \cdot 1 + 2.5 \cdot 0 + 3 \cdot 2 + 3.5 \cdot 1 + 4 \cdot 7 + 4.5 \cdot 6 + 5 \cdot 6 + 5.5 \cdot 4 + 6 \cdot 3}{30} = \dfrac{136.5}{30} = 4.55$$
 
-    Pour déterminer la médiane, il faut trouver la première valeur pour laquelle la
-    fréquence cumulée dépasse $\dfrac{1}{2}$.
+    Pour déterminer la médiane, il faut trouver la première valeur pour laquelle
+    la fréquence cumulée dépasse $\dfrac{1}{2}$.
 
     $F_6 \geq \dfrac{1}{2}$, la médiane vaut $M = 4.5$.
 
@@ -164,8 +161,8 @@ suivantes.
 ```
 
 {.lower-alpha-paren}
-1.  En utilisant les données brutes ci-dessus, le calcul de la moyenne et la médiane
-    sont les suivants:
+1.  En utilisant les données brutes ci-dessus, le calcul de la moyenne et la
+    médiane sont les suivants:
 
     Moyenne:
     ```{math}
@@ -178,9 +175,9 @@ suivantes.
     ```
 
     Comme les données de l'échantillon sont notées dans l'ordre croissant, la
-    médiane est la valeur qui se trouve exactement au milieu. Ici il y a un nombre
-    pair de données (140), le milieu de l'échantillon se trouve donc entre deux
-    valeurs, il faut donc faire la moyenne de ces deux valeurs.
+    médiane est la valeur qui se trouve exactement au milieu. Ici il y a un
+    nombre pair de données (140), le milieu de l'échantillon se trouve donc
+    entre deux valeurs, il faut donc faire la moyenne de ces deux valeurs.
 
     Médiane:
 
@@ -227,16 +224,17 @@ précision.
 
 ### Comparaison des indicateurs de tendance centrale
 
-Moyenne:
+**Moyenne:**
 
 - L'indicateur de tendance centrale le plus connu.
 - La plus coûteuse à calculer, même si la formule est simple à exprimer.
 - Très influencée par les valeurs extrêmes ou aberrantes.
 - Peu influencée par le choix des classes.
-- Très stable, c'est-à-dire qu'elle varie peu selon l'échantillon choisi de la population.
+- Très stable, c'est-à-dire qu'elle varie peu selon l'échantillon choisi de la
+  population.
 - L'indicateur de tendance centrale le plus utilisé.
 
-Médiane:
+**Médiane:**
 
 - Issue d'une conception simple de la notion de centre.
 - Détermination un peu plus compliquée.
@@ -258,20 +256,20 @@ $\dfrac{1}{n}$ de ce nombre.
 
 ````{admonition} Marche à suivre
 :class: note
-Cas discret:
+**Cas discret:**
 
-Le $k$-ième quantile d'ordre $p$ est la première modalité dont la fréquence cumulée
-est plus grande ou égale à $k \cdot p$.
+Le $k$-ième quantile d'ordre $p$ est la première modalité dont la fréquence
+cumulée est plus grande ou égale à $k \cdot p$.
 
-Cas continue:
+**Cas continu:**
 
--   Trouvez la classe qui contient le quantile. La classe
-    $\left[b_{i-1} ; b_i \right[$ contenant le $k$-ième quantile d'ordre $p$ est
-    la première classe dont la fréquence cumulée est plus grande ou égale à
-    $k \cdot p$.
--   Calculez $X_{kp}$:<br>
-    ```{math}
-    :class: align-center
-    X_{kp} = b_{i-1} + L_i \cdot \frac{kp - F_{i-1}}{F_i - F_{i-1}} = b_{i-1} + L_i \cdot \frac{kp - F_{i-1}}{f_i}.
-    ```
+- Trouvez la classe qui contient le quantile. La classe
+  $\left[b_{i-1} ; b_i \right[$ contenant le $k$-ième quantile d'ordre $p$ est
+  la première classe dont la fréquence cumulée est plus grande ou égale à
+  $k \cdot p$.
+- Calculez $X_{kp}$:<br>
+  ```{math}
+  :class: align-center
+  X_{kp} = b_{i-1} + L_i \cdot \frac{kp - F_{i-1}}{F_i - F_{i-1}} = b_{i-1} + L_i \cdot \frac{kp - F_{i-1}}{f_i}.
+  ```
 ````

@@ -7,9 +7,6 @@
 
 ```{metadata}
 subject: "Mathématiques 2e année"
-scripts:
-  - src: jsxgraph.js
-    type: module
 ```
 
 {.allow-break}
@@ -68,7 +65,6 @@ La population correspond aux élèves du collège Sainte-Croix.
 La taille ou l'effectif est de $N = 200$.
 
 Les modalités sont dans l'intervalle $[140, 210]$
-
 
 ```{admonition} Définition
 :class: note
@@ -172,7 +168,6 @@ x_i & n_i & f_i \\
 \end{array}
 ```
 
-
 ````{admonition} Définition
 :class: note
 Un **diagramme en barres** ou à bâtons est un diagramme dans lequel sont
@@ -182,15 +177,15 @@ représentés les effectifs ou les fréquences des modalités.
 :style: width: 80%;
 type: 'bar',
 data: {
-  labels: ['célibataire', 'marié.e', 'divorcé.e', 'veuf / veuve'],
+  labels: ["célibataire", "marié.e", "divorcé.e", "veuf / veuve"],
   datasets: [{axis: 'y', data: [10, 20, 6, 4]}],
 },
 options: {
   indexAxis: 'y',
   borderWidth: 1, borderColor: 'black', backgroundColor: '#0005',
   scales: {
-    y: {beginAtZero: true, title: {display: true, text: 'État civil'}},
-    x: {title: {display: true, text: 'Effectif'}},
+    x: {title: {display: true, text: "Effectif"}},
+    y: {beginAtZero: true, title: {display: true, text: "État civil"}},
   },
   plugins: {
     legend: {display: false},
@@ -212,7 +207,7 @@ représentés les fréquences des modalités d'une variable statistique.
 :style: width: 60%;
 type: 'pie',
 data: {
-  labels: ['célibataire', 'marié.e', 'divorcé.e', 'veuf/veuve'],
+  labels: ["célibataire", "marié.e", "divorcé.e", "veuf/veuve"],
   datasets: [{data: [10, 20, 6, 4]}],
 },
 options: {
@@ -229,7 +224,8 @@ options: {
 :class: note
 La **fréquence cumulée** d'une modalité d'une variable statistique discrète est
 la somme des fréquences de cette modalité et des fréquences de toutes les
-modalités inférieures. La fréquence cumulée de la modalité $x_i$ est notée $F_i$.
+modalités inférieures. La fréquence cumulée de la modalité $x_i$ est notée
+$F_i$.
 ```
 
 ### Exemple {num2}`exemple:matu`
@@ -276,11 +272,18 @@ x_i & n_i & f_i & F_i \\
 Une **fonction de répartition** est une fonction discontinue, en escalier, qui
 représente les fréquences cumulées d'une variable statistique discrète.
 
-```{jsxgraph} template:discrete-cumulative-distribution
-:style: aspect-ratio: 2 / 1; width: 80%;
-board: {defaults: 'print'},
-samples: [3, 4.5, 4, 3.5, 5, 6, 6, 4, 4.5, 5, 5, 4, 4.5, 5.5, 5, 6, 5.5, 4.5, 2,
-4.5, 5.5, 4, 4, 4, 4.5, 5.5, 4, 5, 3, 5],
+```{chartjs} template:cumulative-distribution-function
+:style: width: 80%;
+options: {
+  borderColor: 'black',
+  scales: {
+    y: {title: {display: true, text: "Fréquence cumulée"}},
+  },
+},
+sample: [
+  3, 4.5, 4, 3.5, 5, 6, 6, 4, 4.5, 5, 5, 4, 4.5, 5.5, 5, 6, 5.5, 4.5, 2, 4.5,
+  5.5, 4, 4, 4, 4.5, 5.5, 4, 5, 3, 5,
+],
 ```
 ````
 
@@ -340,7 +343,6 @@ quantitative continue.
 Pour faciliter le stockage et la visualisation de ces données, il est possible
 de les regrouper par classe de largeur $L = 5$.
 
-
 ```{math}
 :class: align-center
 \begin{array} {ccccc}
@@ -362,7 +364,6 @@ x_i & c_i & n_i & f_i & F_i \\
 \end{array}
 ```
 
-
 ````{admonition} Définition
 :class: note
 Un **histogramme** est un diagramme dans lequel sont représentés les effectifs
@@ -370,19 +371,21 @@ ou les fréquences des classes d'une variable statistique continue.
 
 ```{chartjs} template:histogram
 :style: width: 80%;
-bins: {min: 40, max: 95, width: 5},
+uniform: {min: 40, max: 95, width: 5},
 options: {
   borderWidth: 0.5, borderColor: 'black', backgroundColor: '#0003',
   scales: {
-    x: {title: {display: true, text: 'Masse en kilogrammes'}},
-    y: {title: {display: true, text: 'Effectif'}},
+    x: {title: {display: true, text: "Masse en kilogrammes"}},
+    y: {title: {display: true, text: "Effectif"}},
   },
   plugins: {
     legend: {display: false},
-    title: {display: true, text: "Effectifs des étudiants en fonction de leur masse en kilogrammes"},
+    title: {
+      display: true, text: "Effectifs des étudiants en fonction de leur masse en kilogrammes",
+    },
   },
 },
-samples: [
+sample: [
   46,49,51,53,55,55,55,57,58,58,58,60,60,60,
   60,60,61,61,61,61,61,61,61,61,61,61,61,61,
   62,62,62,62,62,63,63,63,63,63,63,64,64,64,
@@ -396,4 +399,3 @@ samples: [
 ],
 ```
 ````
-
