@@ -47,8 +47,8 @@ M = b_{i-1} + L_i \cdot \dfrac{\frac{1}{2} - F_{i-1}}{F_i - F_{i-1}} = b_{i-1} +
 ```
 ````
 
-La médiane sépare la population en deux groupes: $50\%$ de la population est au
-dessous de la médiane et $50\%$ en dessus.
+La médiane sépare la population en deux groupes: $50\%$ de la population est
+au-dessous de la médiane et $50\%$ en dessus.
 
 #### Exemple {num2}`exemple`
 
