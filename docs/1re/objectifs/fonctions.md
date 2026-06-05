@@ -43,6 +43,7 @@ subject: "Mathématiques 1re année"
 ## Toutes les fonctions
 
 - Connaître la définition d'une fonction, d'une image et d'une préimage.
+- Savoir calculer l'image ou la préimage d'une fonction donnée.
 - Savoir réaliser un tableau de correspondance d'une fonction donnée et la
   tracer sur un graphique.
 - Savoir réaliser un tableau de signes.

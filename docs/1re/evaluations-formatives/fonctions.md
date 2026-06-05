@@ -37,7 +37,7 @@ Pour la fonction représentée ci-dessous,
 ```{solution}
 {.lower-alpha-paren}
 1.  L'ordonnée à l'origine vaut environ $3.8$.
-2.  Le zéros sont $x_1=-3$ et $x_2=5$.
+2.  Les zéros sont $x_1=-3$ et $x_2=5$.
 3.  $f(1)=4$
 4.  Il n'y a pas de préimage de 1.
 5.  La fonction est croissante sur $[-3; 1]$.
