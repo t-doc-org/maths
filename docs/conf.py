@@ -29,4 +29,9 @@ metadata = {
         'chtml': {'displayAlign': 'left'},
         'svg': {'displayAlign': 'left'},
     },
+    'chartjs': {
+        'plugins': {
+            'deferred': False,  # Interferes with printing
+        },
+    },
 }
