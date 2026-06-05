@@ -34,7 +34,7 @@ Calculez la distance du point $P$ à la droite $d$. Arrondissez au centième.
 ```{solution}
 $d: 2x + 3y - 7 = 0$
 
-$\delta(P, d) = \dfrac{|2 \cdot 4 + 3 \cdot (-3) - 7|}{\sqrt{2^2 + 3^3}} = \dfrac{|-8|}{\sqrt{13}} = \dfrac{8\sqrt{13}}{13} \simeq 2.22$
+$\delta(P, d) = \dfrac{|2 \cdot 4 + 3 \cdot (-3) - 7|}{\sqrt{2^2 + 3^2}} = \dfrac{|-8|}{\sqrt{13}} = \dfrac{8\sqrt{13}}{13} \simeq 2.22$
 ```
 
 ## Question {nump}`question`{points}`5`
