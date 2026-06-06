@@ -1,2 +1,24 @@
 /* Copyright 2025 Caroline Blank <caro@c-space.org> */
 /* SPDX-License-Identifier: CC-BY-NC-SA-4.0 */
+
+/* TODO(0.77): Remove */
+p.rubric {
+    display: block;
+}
+div.frame.frame {
+    margin-bottom: 1rem;
+    border: 1px solid var(--pst-color-border);
+    border-radius: 0.25rem;
+    padding: 1rem;
+}
+div.frame p.rubric {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    border-bottom: none;
+}
+div.frame > :first-child:not(#¶) {
+    margin-top: 0;
+}
+div.frame > :last-child:not(#¶) {
+    margin-bottom: 0;
+}

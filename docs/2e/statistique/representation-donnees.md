@@ -44,8 +44,8 @@ même lettre que la variable correspondante, mais minuscule, et avec un indice:
 $x_1$, $x_2$, $\dots{}$, $x_n$ désignent les $n$ modalités de la variable $X$.
 ```
 
-{.noprint}
-### Exemple {num2}`exemple:civil`
+```{container} frame noprint
+# Exemple {num2}`exemple:civil`
 
 Une enquête est effectuée auprès des 40 employés de la compagnie d'assurance
 Mondass afin de déterminer leur état civil.
@@ -55,9 +55,10 @@ La population correspond aux employés de la compagnie d'assurance Mondass.
 La taille ou l'effectif est $N = 40$.
 
 Il y a 4 modalités: "célibataire", "marié.e", "divorcé.e" et "veuf/veuve".
+```
 
-{.noprint}
-### Exemple {num2}`exemple:taille`
+```{container} frame noprint
+# Exemple {num2}`exemple:taille`
 
 Une enquête est effectuée auprès de 200 élèves du collège Sainte-Croix pour
 déterminer leur taille en centimètres.
@@ -67,22 +68,25 @@ La population correspond aux élèves du collège Sainte-Croix.
 La taille ou l'effectif est $N = 200$.
 
 Les modalités sont dans l'intervalle $[140, 210]$.
+```
 
 ```{admonition} Définition
 :class: note
-Une variable statistique est **quantitative**, si ses modalités sont des nombres.
+Une variable statistique est **quantitative**, si ses modalités sont des
+nombres.
 
 Dans le cas contraire, elle est **qualitative**.
 ```
 
-{.noprint}
-### Exemple {num2}`exemple`
+```{container} frame noprint
+# Exemple {num2}`exemple`
 
-La variable statistique de l'{numref}`exemple %s<exemple:civil>` est qualitative,
-car les modalités sont des noms.
+La variable statistique de l'{numref}`exemple %s<exemple:civil>` est
+qualitative, car les modalités sont des noms.
 
 La variable statistique de l'{numref}`exemple %s<exemple:taille>` est
 quantitative, car les modalités sont des nombres.
+```
 
 ```{admonition} Définition
 :class: note
@@ -90,19 +94,19 @@ Une variable statistique quantitative est **discrète** ou discontinue si chacun
 de ses modalités est une valeur isolée, réduite à un seul nombre.
 ```
 
-{.noprint}
-### Exemple {num2}`exemple`
+````{container} frame noprint
+# Exemple {num2}`exemple`
 
 Le nombre d'enfants d'un couple est une variable  quantitative discrète dont
 les modalités sont les nombres entiers de $0$ à $30$.
 
-{.noprint}
 ```{admonition} Le saviez-vous?
 :class: caution, dropdown
 Record historique (le plus grand nombre d'enfants) : Valentina Vassilyeva
 (Russie) a donné naissance à 69 enfants en 27 grossesses (16 paires de jumeaux,
   7 triplés et 4 quadruplés) entre 1725 et 1765.
 ```
+````
 
 ```{admonition} Définition
 :class: note
@@ -110,12 +114,13 @@ Une variable statistique quantitative est **continue**, lorsque l'ensemble ses
 modalités est un intervalle de l'ensemble des nombres réels.
 ```
 
-{.noprint}
-### Exemple {num2}`exemple`
+```{container} frame noprint
+# Exemple {num2}`exemple`
 
 La température en degrés Celsius du corps humain est une variable statistique
 continue dont les modalités sont n'importent quelle valeur réelle dans
 l'intervalle [35; 42].
+```
 
 {.allow-break}
 ## Variables statistiques discrètes ou qualitatives
@@ -137,8 +142,8 @@ f_i = \dfrac{n_i}{N}
 ```
 ````
 
-{.noprint}
-### Exemple {num2}`exemple`
+````{container} frame noprint
+# Exemple {num2}`exemple`
 
 Lors de l'enquête effectuée à l'{numref}`exemple %s<exemple:civil>`, les données
 ci-dessous ont été récoltées avec les modalités suivantes: célibataire "C",
@@ -174,6 +179,7 @@ x_i & n_i & f_i \\
 \hline
 \end{array}
 ```
+````
 
 ````{admonition} Définition
 :class: note
@@ -241,8 +247,8 @@ modalités inférieures. La fréquence cumulée de la modalité $x_i$ est notée
 $F_i$.
 ```
 
-{.noprint}
-### Exemple {num2}`exemple:matu`
+````{container} frame noprint
+# Exemple {num2}`exemple:matu`
 
 Voici les notes obtenues à l'examen écrit de maturité en mathématiques.
 
@@ -280,6 +286,7 @@ x_i & n_i & f_i & F_i \\
 \hline
 \end{array}
 ```
+````
 
 ````{admonition} Définition
 :class: note
@@ -335,8 +342,8 @@ c_i = \frac{b_{i-1} + b_i}{2}
 ```
 ````
 
-{.noprint}
-### Exemple {num2}`exemple:masse`
+````{container} frame noprint
+## Exemple {num2}`exemple:masse`
 
 La masse de $140$ étudiants de sexe masculin a été mesurée. Les données sont les
 suivantes.
@@ -385,6 +392,7 @@ x_i & c_i & n_i & f_i & F_i \\
 \hline
 \end{array}
 ```
+````
 
 ````{admonition} Définition
 :class: note
