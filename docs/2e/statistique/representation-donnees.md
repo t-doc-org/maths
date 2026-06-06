@@ -3,6 +3,7 @@
 % Copyright 2025 David Rueda
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
+{.allow-break}
 # Représentation des données
 
 ```{metadata}
@@ -17,17 +18,14 @@ subject: "Mathématiques 2e année"
 Une **population** est un ensemble fini d'objets appelés **individus** sur
 lesquels une étude se porte et dont les éléments répondent à une ou plusieurs
 caractéristiques communes.
+
+Un **échantillon** est un sous-ensemble d'une population.
 ```
 
 ```{admonition} Définition
 :class: note
 La **taille** ou l'**effectif** d'une population, notée généralement $N$
 (majuscule), est le nombre d'éléments de cette population.
-```
-
-```{admonition} Définition
-:class: note
-Un **échantillon** est un sous-ensemble d'une population.
 ```
 
 ```{admonition} Définition
@@ -187,7 +185,7 @@ Un **diagramme en barres** ou à bâtons est un diagramme dans lequel sont
 représentés les effectifs ou les fréquences des modalités.
 
 ```{chartjs} template:chart
-:style: width: 80%;
+:style: width: 60%;
 type: 'bar',
 data: {
   labels: ["célibataire", "marié.e", "divorcé.e", "veuf / veuve"],
@@ -217,7 +215,7 @@ Un **diagramme circulaire** ou à secteurs est un diagramme dans lequel sont
 représentés les fréquences des modalités d'une variable statistique.
 
 ```{chartjs} template:chart
-:style: width: 60%;
+:style: width: 40%;
 type: 'pie',
 data: {
   labels: ["célibataire", "marié.e", "divorcé.e", "veuf/veuve"],
@@ -718,7 +716,7 @@ Sainte-Croix en 2021-2022.
     ```
 5.  ```{chartjs} template:cumulative-distribution-function
     :class: align-left
-    :style: width: 80%;
+    :style: width: 70%;
     options: {
       borderColor: 'black',
       scales: {
@@ -814,7 +812,7 @@ Un groupe d'élèves sont classés selon la pointure de leurs pieds.
     ```
 6.  ```{chartjs} template:cumulative-distribution-function
     :class: align-left
-    :style: width: 80%;
+    :style: width: 70%;
     min: 31.3, max: 41.7, step: 1,
     options: {
       borderColor: 'black',

@@ -12,7 +12,7 @@ subject: "Mathématiques 2e année"
 {.allow-break}
 ## Indicateurs de tendance centrale
 
-### Moyenne arithmétique
+### Moyenne
 
 ````{admonition} Définition
 :class: note
@@ -43,7 +43,8 @@ Soit $N$ la taille de l'échantillon:
 La médiane sépare la population en deux groupes: $50\%$ de la population est
 au-dessous de la médiane et $50\%$ en dessus.
 
-#### Exemple {num2}`exemple`
+````{container} frame noprint
+# Exemple {num2}`exemple`
 
 Reprenons l'{numref}`exemple %s<exemple:matu>` qui est celui d'une variable
 statistique discrète.
@@ -126,8 +127,10 @@ Voici les notes obtenues à l'examen écrit de maturité en mathématiques.
 
 Dans le cas d'une variable statistique discrète, ces deux méthodes donnent les
 mêmes résultats.
+````
 
-#### Exemple {num2}`exemple`
+````{container} frame noprint
+# Exemple {num2}`exemple`
 
 Reprenons l'{numref}`exemple %s<exemple:masse>` qui est celui d'une variable
 statistique continue.
@@ -173,8 +176,9 @@ entre deux valeurs, il faut donc faire la moyenne de ces deux valeurs.
 Médiane:
 
 $N = 140 \implies \tilde{x} = \dfrac{x_{\frac{N}{2}} + x_{\frac{N}{2}+1}}{2} = \dfrac{x_{70} + x_{71}}{2} = \dfrac{67 + 67}{2}=67$.
+````
 
-
+{.allow-break}
 ### Comparaison des indicateurs de tendance centrale
 
 **Moyenne:**
@@ -196,6 +200,7 @@ $N = 140 \implies \tilde{x} = \dfrac{x_{\frac{N}{2}} + x_{\frac{N}{2}+1}}{2} = \
 - Assez stable, mais moins que la moyenne arithmétique.
 - Moins utilisée que la moyenne.
 
+{.allow-break}
 ## Quantiles
 
 ```{admonition} Définition
@@ -206,16 +211,6 @@ intervalles de mêmes fréquences.
 Si $n$ est le nombre de ces intervalles, l'**ordre** du quantile est l'inverse
 $\dfrac{1}{n}$ de ce nombre.
 ```
-
-````{admonition} Marche à suivre
-:class: note
-**Cas discret:**
-
-Le $k$-ième quantile d'ordre $p$ est la première modalité dont la fréquence
-cumulée est plus grande ou égale à $k \cdot p$.
-````
-
-### Exemple {num2}`exemple`
 
 Le premier quartile, noté $Q_1$, est la plus petite valeur telle qu'au moins
 $25\%$ des valeurs de l'échantillon lui soient inférieures ou égales.
