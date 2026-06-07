@@ -215,14 +215,13 @@ Un **diagramme circulaire** ou à secteurs est un diagramme dans lequel sont
 représentés les fréquences des modalités d'une variable statistique.
 
 ```{chartjs} template:chart
-:style: width: 40%;
+:style: width: 40%; aspect-ratio: 3 / 2;
 type: 'pie',
 data: {
   labels: ["célibataire", "marié.e", "divorcé.e", "veuf/veuve"],
   datasets: [{data: [10, 20, 6, 4]}],
 },
 options: {
-  aspectRatio: 1.5,
   layout: {padding: 20},
   borderWidth: 1, borderColor: 'black',
   backgroundColor: ['#000F', '#000B', '#0007', '#0003'],
@@ -591,14 +590,13 @@ Reprenez la donnée de l'{numref}`exercice %s<exercice:transports>`.
     ```
 3.  ```{chartjs} template:chart
     :class: align-left
-    :style: width: 50%;
+    :style: width: 50%; aspect-ratio: 3 / 2;
     type: 'pie',
     data: {
       labels: ["Train", "Bus", "2 roues", "Vélo", "Aucun", "Voiture"],
       datasets: [{data: [72, 45, 31, 21, 16, 15]}],
     },
     options: {
-      aspectRatio: 1.5,
       layout: {padding: 20},
       borderWidth: 1, borderColor: 'black',
       backgroundColor: ['#000D', '#000B', '#0009','#0007', '#0005', '#0003'],
