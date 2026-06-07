@@ -9,7 +9,7 @@
 subject: "Mathématiques 2e année"
 ```
 
-{.allow-break}
+{.break-after-auto}
 ## Indicateurs de tendance centrale
 
 ### Moyenne
@@ -191,6 +191,7 @@ $N = 140 \implies \tilde{x} = \dfrac{x_{\frac{N}{2}} + x_{\frac{N}{2}+1}}{2} = \
   population.
 - L'indicateur de tendance centrale le plus utilisé.
 
+{.page-break}
 **Médiane:**
 
 - Issue d'une conception simple de la notion de centre.
