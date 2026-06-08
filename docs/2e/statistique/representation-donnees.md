@@ -215,7 +215,7 @@ Un **diagramme circulaire** ou à secteurs est un diagramme dans lequel sont
 représentés les fréquences des modalités d'une variable statistique.
 
 ```{chartjs} template:chart
-:style: width: 40%; aspect-ratio: 3 / 2;
+:style: width: 50%; aspect-ratio: 3 / 2;
 type: 'pie',
 data: {
   labels: ["célibataire", "marié.e", "divorcé.e", "veuf/veuve"],
@@ -224,7 +224,7 @@ data: {
 options: {
   layout: {padding: 20},
   borderWidth: 1, borderColor: 'black',
-  backgroundColor: ['#000F', '#000B', '#0007', '#0003'],
+  backgroundColor: ['#000F', '#0009', '#0005', '#0002'],
   plugins: {
     legend: {display: true, position: 'right'},
     title: {
