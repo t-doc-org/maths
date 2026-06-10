@@ -8,6 +8,19 @@
 subject: "Mathématiques 2e année"
 ```
 
+```{container} frame noprint
+# Exemple {num2}`exemple`
+Bob et Alice comparent les diamètres des arbres sur leur terrain. Ils décident
+de mesurer en centimètres les diamètres des différents arbres.
+Bob recueille les données suivantes: $\left\{ 10, 12, 14, 52, 56, 60 \right\}$
+alors qu'Alice obtient $\left\{ 28, 29, 33, 35, 38, 41 \right\}$.
+
+Les deux ensembles de données ont la même moyenne $ \overline{x} = 34$.
+
+Toutefois les deux populations sont bien différentes, car les données
+recueillies par Bob sont beaucoup plus **dispersées** que celles d'Alice.
+```
+
 {.allow-break}
 ## Définitions
 
@@ -17,6 +30,9 @@ L'**étendue** d'une variable statistique est la différence entre la plus grand
 et la plus petite modalité.
 ```
 
+L'étendue ne tient pas compte de toutes les observations.
+De plus, elle n'est pas un indicateur robuste, car elle dépend fortement de la présence de valeurs extrêmes.
+
 ````{admonition} Définition
 :class: note
 L'**écart interquartile** d'une variable statistique, noté $EI$, est la
@@ -25,6 +41,149 @@ différence entre le troisième et le premier quartiles:
 :class: align-center
 EI = Q_3 - Q_1
 ```
+````
+
+L'écart interquartile correspond à l'étendue de la variable statistique après
+élimination de $25 \%$ des valeurs les plus petites et de $25 \%$
+des valeurs les plus élevées.
+Cet indicateur est plus robuste que l'étendue, car il ne contient pas
+d'éventuelles valeurs extrêmes.
+
+````{container} frame noprint
+# Exemple {num2}`exemple:notes3`
+
+Reprenons l'{numref}`exemple %s<exemple:notes2>` du chapitre "Indicateurs de
+position".
+
+Les notes obtenues à l'examen écrit de maturité en mathématiques ordonnées.
+
+```{math}
+:class: align-center
+\begin{array} {cccccccccc}
+\hline
+2 & 3 & 3 & 3.5 & 4 & 4 & 4 & 4 & 4 & 4 \\
+4 & 4.5 & 4.5 & 4.5 & 4.5 & 4.5 & 4.5 & 5 & 5 & 5 \\
+5 & 5 & 5 & 5.5 & 5.5 & 5.5 & 5.5 & 6 & 6 & 6 \\
+\hline
+\end{array}
+```
+
+La moyenne et la médiane ont déjà été calculées: $\overline{x} = 4.55$ et
+$\tilde{x} = Q_2 = 4.5$.
+
+Reprenons le tableau des effectifs cumulés:
+
+```{math}
+:class: align-center
+\begin{array} {cccc}
+\hline
+x_i & n_i & f_i & F_i \\
+\hline
+2 & 1 & 0.033 & 0.033\\
+2.5 & 0 & 0 & 0.033 \\
+3 & 2 & 0.067 & 0.1 \\
+3.5 & 1 & 0.033 & 0.133 \\
+\rowcolor{cyan}4 & 7 & 0.233 & 0.367 \\
+4.5 & 6 & 0.2 & 0.567 \\
+\rowcolor{yellow}5 & 6 & 0.2 & 0.767 \\
+5.5 & 4 & 0.133 & 0.9 \\
+6 & 3 & 0.1 & 1 \\
+\hline
+ \text{Total} & 30 & 1 &  \\
+\hline
+\end{array}
+```
+
+L'étendue vaut: $x_9 - x_1 = 6-2 = 4$.
+
+Le premier quartile est la plus petite valeur telle qu'au moins $25\%$ des
+valeurs de l'échantillon lui soient inférieures ou égales. Cela correspond à
+$Q_1 = x_5 = 4$.
+
+Cela signifie qu'un quart des élèves ont une note inférieure ou égale à 4.
+
+Le troisième quartile est la plus petite valeur telle qu'au moins $75\%$ des
+valeurs de l'échantillon lui soient inférieures ou égales. Cela correspond à
+$Q_3 = x_7 = 5$.
+
+Cela signifie que trois quarts des élèves ont une note inférieur ou égale à 5.
+
+L'écart interquartile vaut $EI = Q_3 - Q_1 = 5 - 4 = 1$.
+````
+
+````{admonition} Définition
+:class: note
+La **boîte à moustaches** d'une variable statistique discrète ou continue est un
+graphique qui représente l'étendue et les différents quartiles:
+$Q_0 = 9$, $Q_1 = 18$, $Q_2 = 22$, $Q_3 = 27$ et $Q_4 = 33$.
+
+```{chartjs} template:chart
+:class: align-left
+:style: width: 70%;
+type: 'boxplot',
+data: {
+  labels: [''],
+  datasets: [{
+    data: [
+      {min: 9, q1: 18, median: 22, q3: 27, max: 33},
+    ],
+  }],
+},
+options: {
+  borderWidth: 1, borderColor: 'black', backgroundColor: '#0005',
+  indexAxis: 'y',
+  coef: 0,
+  scales: {
+    x: {title: {display: false}},
+    y: {beginAtZero: true, title: {display: false}},
+  },
+  plugins: {
+    legend: {display: false},
+  },
+},
+```
+````
+
+````{container} frame noprint
+# Exemple {num2}`exemple`
+
+Reprenons l'{numref}`exemple %s<exemple:notes3>` concernant les notes obtenues
+à l'examen écrit de maturité en mathématiques.
+
+$\overline{x} = Q_2 = 4.55$, $Q_1 = 4$, $Q_3 = 5$ (calculés précédemment)
+
+$Q_0 = 2$ est la note la plus basse obtenue et $Q_4 = 6$ est la note la plus
+haute obtenue.
+
+Les quartiles permettent de représenter la boîte à moustache de cet exemple:
+
+```{chartjs} template:chart
+:class: align-left
+:style: width: 70%;
+type: 'boxplot',
+data: {
+  labels: [''],
+  datasets: [{
+    data: [
+      {min: 2, q1: 4, median: 4.5, q3: 5, max: 6},
+    ],
+  }],
+},
+options: {
+  indexAxis: 'y',
+  coef: 0,
+  scales: {
+    x: {title: {display: true, text: "Note"}, min: 1, max: 6, ticks: {stepSize: 0.5}},
+    y: {beginAtZero: true, title: {display: false}},
+  },
+  plugins: {
+    legend: {display: false},
+  },
+},
+```
+
+Cette représentation montre clairement que 50% des élèves ont une note entre 4
+et 5.
 ````
 
 ````{admonition} Définition
@@ -47,6 +206,9 @@ s = \sqrt{v}
 ```
 ````
 
+L'écart type mesure l'éloignement des valeurs de l'échantillon par rapport à la
+moyenne.
+
 ````{admonition} Théorème
 :class: note
 ```{math}
@@ -55,14 +217,67 @@ v = \sum_{i=1}^k f_ix_i^2 - \overline{x}^2
 ```
 ````
 
-````{admonition} Définition
-:class: note
-La **boîte à moustaches** d'une variable statistique discrète ou continue est un
-graphique qui représente l'étendue et les différents quartiles ($Q_0$, ...
-$Q_4$).
+````{container} frame noprint
+# Exemple {num2}`exemple`
+
+Reprenons l'{numref}`exemple %s<exemple:notes3>` concernant les notes obtenues
+à l'examen écrit de maturité en mathématiques.
+
+```{math}
+:class: align-center
+\begin{array} {cccc}
+\hline
+x_i & n_i & f_i & F_i \\
+\hline
+2 & 1 & 0.033 & 0.033\\
+2.5 & 0 & 0 & 0.033 \\
+3 & 2 & 0.067 & 0.1 \\
+3.5 & 1 & 0.033 & 0.133 \\
+4 & 7 & 0.233 & 0.367 \\
+4.5 & 6 & 0.2 & 0.567 \\
+5 & 6 & 0.2 & 0.767 \\
+5.5 & 4 & 0.133 & 0.9 \\
+6 & 3 & 0.1 & 1 \\
+\hline
+ \text{Total} & 30 & 1 &  \\
+\hline
+\end{array}
+```
+La moyenne a déjà été calculée: $\overline{x} = 4.55$
+
+Calcul de la variance:
+
+$v = 0.033 \cdot 2^2 + 0 \cdot 2.5^2 + 0.067 \cdot 3^2 + 0.033 \cdot 3.5^2 + 0.233 \cdot 4^2 + 0.2 \cdot 4.5^2 + 0.2 \cdot 5^2 + 0.133 \cdot 5.5^2 + 0.1 \cdot 6^2 - 4.55^2 = 0.86$
+
+Calcul de l'écart type:
+
+$s = \sqrt{v} = \sqrt{0.86} = 0.93$
+
+```{chartjs} template:chart
+:class: align-left
+:style: width: 70%;
+type: 'bar',
+data: {
+  labels: ["2", "2.5", "3", "3.5", "4", "4.5", "5", "5.5", "6"],
+  datasets: [{data: [1, 0, 2, 1, 7, 6, 6, 4, 3]}],
+},
+options: {
+  borderWidth: 1, borderColor: 'black', backgroundColor: '#0005',
+  scales: {
+    x: {title: {display: true, text: "Note"}},
+    y: {beginAtZero: true, title: {display: true, text: "Effectif"}},
+  },
+  plugins: {
+    legend: {display: false},
+    title: {display: true, text: "Notes obtenues"},
+  },
+},
+```
 ````
 
-<!-- TODO: ajouter un exemple -->
+
+
+
 
 ## Exercices
 

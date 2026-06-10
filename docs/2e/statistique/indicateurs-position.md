@@ -44,7 +44,7 @@ La médiane sépare la population en deux groupes: $50\%$ de la population est
 au-dessous de la médiane et $50\%$ en dessus.
 
 ````{container} frame noprint
-# Exemple {num2}`exemple`
+# Exemple {num2}`exemple:notes2`
 
 Reprenons l'{numref}`exemple %s<exemple:matu>` qui est celui d'une variable
 statistique discrète.
@@ -176,6 +176,46 @@ entre deux valeurs, il faut donc faire la moyenne de ces deux valeurs.
 Médiane:
 
 $N = 140 \implies \tilde{x} = \dfrac{x_{\frac{N}{2}} + x_{\frac{N}{2}+1}}{2} = \dfrac{x_{70} + x_{71}}{2} = \dfrac{67 + 67}{2}=67$.
+
+```{chartjs} template:histogram
+uniform: {min: 40, max: 100, width: 5},
+annotations: [{
+  median: {label: 'médiane'},
+    options: {
+      borderColor: '#9966ff',
+      label: {position: '15%', backgroundColor: '#9966ffcc',
+            rotation: -90}
+    },
+}, {
+  mean: {label: 'moyenne'},
+  options: {
+    borderColor: '#ff6384',
+    label: {position: '40%', backgroundColor: '#ff6384cc', rotation: -90},
+  },
+}],
+options: {
+  borderWidth: 0.5, borderColor: '#36a2eb', hoverBorderColor: '#36a2eb',
+  backgroundColor: '#36a2eb33',
+  scales: {
+    x: {title: {display: true, text: "Masse"}},
+    y: {title: {display: true, text: "Effectif"}},
+  },
+},
+sample: [
+  46, 49, 51, 53, 55, 55, 55, 57, 58, 58, 58, 60, 60, 60,
+  60, 60, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61,
+  62, 62, 62, 62, 62, 63, 63, 63, 63, 63, 63, 64, 64, 64,
+  64, 64, 64, 65, 65, 65, 65, 65, 65, 65, 65, 65, 66, 66,
+  66, 66, 66, 66, 66, 67, 67, 67, 67, 67, 67, 67, 67, 67,
+  67, 67, 67, 67, 67, 67, 68, 68, 68, 68, 68, 68, 68, 68,
+  68, 68, 68, 68, 68, 69, 69, 69, 69, 70, 70, 70, 70, 70,
+  70, 70, 71, 71, 71, 71, 72, 72, 72, 72, 72, 72, 72, 73,
+  73, 73, 73, 73, 73, 73, 74, 74, 75, 75, 75, 76, 76, 77,
+  77, 78, 78, 79, 79, 79, 79, 81, 83, 83, 85, 86, 88, 89,
+],
+```
+
+
 ````
 
 {.allow-break}
