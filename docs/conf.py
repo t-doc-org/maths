@@ -23,7 +23,7 @@ metadata = {
         'text': [" ({0} pt)", " ({0} pts)"],
     },
     'page-break-force': 2,
-    'page-break-avoid': 3,
+    'page-break-avoid-inside': 3,
     'mathjax': {
         'chtml': {'displayAlign': 'left'},
         'svg': {'displayAlign': 'left'},

@@ -552,9 +552,6 @@ $n$: durée en années
 
     La taux d'intérêt annuel est de $15\%$.
 
-
-
-
 ```{admonition} Définition
 :class: note
 Si dans un processus une quantité croît de façon exponentielle, on appelle

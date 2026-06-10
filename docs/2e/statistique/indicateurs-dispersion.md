@@ -21,7 +21,7 @@ Toutefois les deux populations sont bien différentes, car les données
 recueillies par Bob sont beaucoup plus **dispersées** que celles d'Alice.
 ```
 
-{.allow-break}
+{.allow-break-inside}
 ## Définitions
 
 ```{admonition} Définition
@@ -511,5 +511,5 @@ croissant.
 ## Solutions
 
 ```{blocks} solution
-:class: allow-break
+:class: allow-break-inside
 ```

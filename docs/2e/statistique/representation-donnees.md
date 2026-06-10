@@ -3,14 +3,13 @@
 % Copyright 2025 David Rueda
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-{.allow-break}
 # Représentation des données
 
 ```{metadata}
 subject: "Mathématiques 2e année"
 ```
 
-{.allow-break}
+{.allow-break-inside}
 ## Introduction
 
 ```{admonition} Définition
@@ -120,7 +119,7 @@ continue dont les modalités sont n'importent quelle valeur réelle dans
 l'intervalle [35; 42].
 ```
 
-{.allow-break}
+{.allow-break-inside}
 ## Variables statistiques discrètes ou qualitatives
 
 ```{admonition} Définition
@@ -313,7 +312,7 @@ sample: [
 ```
 ````
 
-{.allow-break}
+{.allow-break-inside}
 ## Variables statistiques continues
 
 Pour représenter les données de variables statistiques continues avec un
@@ -911,5 +910,5 @@ minutes.
 ## Solutions
 
 ```{blocks} solution
-:class: allow-break
+:class: allow-break-inside
 ```

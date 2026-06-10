@@ -9,7 +9,6 @@
 subject: "Mathématiques 2e année"
 ```
 
-{.break-after-auto}
 ## Indicateurs de tendance centrale
 
 ### Moyenne
@@ -218,7 +217,7 @@ sample: [
 
 ````
 
-{.allow-break}
+{.allow-break-inside}
 ### Comparaison des indicateurs de tendance centrale
 
 **Moyenne:**
@@ -241,7 +240,7 @@ sample: [
 - Assez stable, mais moins que la moyenne arithmétique.
 - Moins utilisée que la moyenne.
 
-{.allow-break}
+{.no-force-break .allow-break-inside}
 ## Quantiles
 
 ```{admonition} Définition
@@ -645,6 +644,5 @@ $C_{77} = 8$; $D_2 = 2$; $Q_2 = \tilde{x} = 5$; $\overline{x} = 4.917$.
 ## Solutions
 
 ```{blocks} solution
-:class: allow-break
+:class: allow-break-inside
 ```
-
