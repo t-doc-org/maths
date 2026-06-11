@@ -8,4 +8,5 @@
 representation-donnees
 indicateurs-position
 indicateurs-dispersion
+calculateurs
 ```
