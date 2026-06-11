@@ -214,7 +214,6 @@ sample: [
 ],
 ```
 
-
 ````
 
 {.allow-break-inside}

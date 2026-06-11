@@ -150,7 +150,7 @@ options: {
 Reprenons l'{numref}`exemple %s<exemple:notes3>` concernant les notes obtenues
 à l'examen écrit de maturité en mathématiques.
 
-$\overline{x} = Q_2 = 4.55$, $Q_1 = 4$, $Q_3 = 5$ (calculés précédemment)
+$Q_2 = \tilde{x} = 4.5$, $Q_1 = 4$, $Q_3 = 5$ (calculés précédemment)
 
 $Q_0 = 2$ est la note la plus basse obtenue et $Q_4 = 6$ est la note la plus
 haute obtenue.
@@ -247,7 +247,8 @@ La moyenne a déjà été calculée: $\overline{x} = 4.55$
 
 Calcul de la variance:
 
-$v = 0.033 \cdot 2^2 + 0 \cdot 2.5^2 + 0.067 \cdot 3^2 + 0.033 \cdot 3.5^2 + 0.233 \cdot 4^2 + 0.2 \cdot 4.5^2 + 0.2 \cdot 5^2 + 0.133 \cdot 5.5^2 + 0.1 \cdot 6^2 - 4.55^2 = 0.86$
+$$v &= 0.033 \cdot 2^2 + 0 \cdot 2.5^2 + 0.067 \cdot 3^2 + 0.033 \cdot 3.5^2 + 0.233 \cdot 4^2 + 0.2 \cdot 4.5^2 + 0.2 \cdot 5^2 + 0.133 \cdot 5.5^2 + 0.1 \cdot 6^2 - 4.55^2\\
+ &= 0.86$$
 
 Calcul de l'écart type:
 
@@ -274,6 +275,7 @@ options: {
 },
 ```
 ````
+<!-- Changer la représentation par un diagramme en bâtons et ajouter la moyenne et l'écart type-->
 
 
 
@@ -346,7 +348,32 @@ difficulté comparable.
 {.lower-alpha-paren}
 1.  Classe 1: étendue = $3.5$; $EI = 2.5$; $\overline{x} = 4.09$, $v = 1.72$; $s = 1.31$<br>
     Classe 2: étendue = $3.5$; $EI = 2$; $\overline{x} = 4.09$, $v = 1.54$; $s = 1.24$
-2.  Sans solution <!-- Ajouter la solution -->
+2.  ```{chartjs} template:chart
+    :class: align-left
+    :style: width: 70%;
+    type: 'boxplot',
+    data: {
+      labels: ['Classe 1', 'Classe 2'],
+      datasets: [{
+        data: [
+          {min: 2.5, q1: 3, median: 3.5, q3: 5.5, max: 6},
+          {min: 2.5, q1: 3, median: 4, q3: 5, max: 6},
+        ],
+      }],
+    },
+    options: {
+      borderWidth: 1, borderColor: 'black', backgroundColor: '#0005',
+      indexAxis: 'y',
+      coef: 0,
+      scales: {
+        x: {title: {display: false}, min: 2, max: 6, ticks: {stepSize: 0.5}},
+        y: {beginAtZero: true, title: {display: false}},
+      },
+      plugins: {
+        legend: {display: false},
+      },
+    },
+    ```
 ```
 
 ### Exercice {nump}`exercice`
@@ -502,10 +529,31 @@ croissant.
 {.lower-alpha-paren}
 1. $\tilde{x} = Q_2 = 303$; $Q_1 = 289$; $Q_3 = 313$; $D_1 = 284$; $D_9 = 320$.
 2. $v = 201.81$; $s = 14.206$.
-3.  $ $
-    ```{figure} images/sol-moustaches-desintegration.png
-    :width: 60%
-    ```
+3.  ```{chartjs} template:chart
+    :class: align-left
+    :style: width: 70%;
+    type: 'boxplot',
+    data: {
+      labels: ['Désintégrations'],
+      datasets: [{
+        data: [
+          {min: 275, q1: 289, median: 303, q3: 313, max: 329},
+        ],
+      }],
+    },
+    options: {
+      maintainAspectRatio: false,
+      borderWidth: 1, borderColor: 'black', backgroundColor: '#0005',
+      indexAxis: 'y',
+      coef: 0,
+      scales: {
+        x: {title: {display: false}, min: 260, max: 340, ticks: {stepSize: 20}},
+        y: {title: {display: false}},
+      },
+      plugins: {
+        legend: {display: false},
+      },
+    },
 ```
 
 ## Solutions
