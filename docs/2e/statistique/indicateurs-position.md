@@ -421,8 +421,7 @@ Pour chacune de ces variables statistiques,
 
 {.lower-alpha-paren}
 1.  $\overline{x} = 4.089$ et $\tilde{x} = 3.5$
-2.  $ $
-    ```{math}
+2.  ```{math}
     \begin{array} {ccccccc}
     \hline
     x_i & 2.5 & 3 & 3.5 & 4 & 4.5 & 5 & 5.5 & 6 \\
@@ -453,7 +452,10 @@ Pour chacune de ces variables statistiques,
 4.  ```{chartjs} template:cumulative-distribution-function
     :class: align-left
     :style: width: 70%;
-    min: 0, max: 6.4, step: 0.5,
+    step: 0.5,
+    sample: [
+      [2.5, 5], [3, 6], [3.5, 4], [4, 1], [4.5, 1], [5, 3], [5.5, 3], [6, 5],
+    ],
     options: {
       borderColor: 'black',
       scales: {
@@ -465,18 +467,13 @@ Pour chacune de ces variables statistiques,
         title: {display: true, text: "Férquences cumulées des notes obtenues"},
       },
     },
-    distribution: [
-      [2.5, 5], [3, 6], [3.5, 4], [4, 1], [4.5, 1], [5, 3], [5.5, 3], [6, 5],
-      [6.5],
-    ],
     ```
 
 **Classe 2:**
 
 {.lower-alpha-paren}
 1.  $\overline{x} = 4.089$ et $\tilde{x} = 4$
-2.  $ $
-    ```{math}
+2.  ```{math}
     \begin{array} {ccccccc}
     \hline
     x_i & 2.5 & 3 & 3.5 & 4 & 4.5 & 5 & 5.5 & 6 \\
@@ -506,7 +503,10 @@ Pour chacune de ces variables statistiques,
 4.  ```{chartjs} template:cumulative-distribution-function
     :class: align-left
     :style: width: 70%;
-    min: 0, max: 6.4, step: 0.5,
+    step: 0.5,
+    sample: [
+      [2.5, 5], [3, 4], [3.5, 4], [4, 3], [4.5, 4], [5, 2], [5.5, 0], [6, 6],
+    ],
     options: {
       borderColor: 'black',
       scales: {
@@ -518,10 +518,6 @@ Pour chacune de ces variables statistiques,
         title: {display: true, text: "Fréquences cumulées des notes obtenues"},
       },
     },
-    distribution: [
-      [2.5, 5], [3, 4], [3.5, 4], [4, 3], [4.5, 4], [5, 2], [5.5, 0], [6, 6],
-      [6.5],
-    ],
     ```
 ````
 

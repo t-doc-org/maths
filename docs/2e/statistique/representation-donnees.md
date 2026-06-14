@@ -291,6 +291,10 @@ représente les fréquences cumulées d'une variable statistique discrète.
 
 ```{chartjs} template:cumulative-distribution-function
 :style: width: 80%;
+sample: [
+  3, 4.5, 4, 3.5, 5, 6, 6, 4, 4.5, 5, 5, 4, 4.5, 5.5, 5, 6, 5.5, 4.5, 2, 4.5,
+  5.5, 4, 4, 4, 4.5, 5.5, 4, 5, 3, 5,
+],
 options: {
   borderColor: 'black',
   scales: {
@@ -305,10 +309,6 @@ options: {
     },
   },
 },
-sample: [
-  3, 4.5, 4, 3.5, 5, 6, 6, 4, 4.5, 5, 5, 4, 4.5, 5.5, 5, 6, 5.5, 4.5, 2, 4.5,
-  5.5, 4, 4, 4, 4.5, 5.5, 4, 5, 3, 5,
-],
 ```
 ````
 
@@ -544,8 +544,7 @@ Reprenez la donnée de l'{numref}`exercice %s<exercice:transports>`.
 
 ````{block} solution
 {.lower-alpha-paren}
-1.  $ $
-    ```{math}
+1.  ```{math}
     \begin{array} {cccc}
     \hline
     x_i & n_i & f_i & \varphi \\
@@ -620,8 +619,7 @@ Reprenez la donnée de l'{numref}`exercice %s<exercice:sang>`.
 
 ````{block} solution
 {.lower-alpha-paren}
-1.  $ $
-    ```{math}
+1.  ```{math}
     \begin{array} {ccc}
     \hline
     x_i & n_i & f_i \\
@@ -691,8 +689,7 @@ Sainte-Croix en 2021-2022.
 1.  Les élèves de la classe 3F8 de l'année 2021-2022.
 2.  La note de ces élèves lors de la dernière évaluation de mathématiques.
 3.  Discrète, car les notes sont arrondies à la demie.
-4.  $ $
-    ```{math}
+4.  ```{math}
     \begin{array} {cccc}
     \hline
     x_i & n_i & f_i & F_i \\
@@ -714,6 +711,10 @@ Sainte-Croix en 2021-2022.
 5.  ```{chartjs} template:cumulative-distribution-function
     :class: align-left
     :style: width: 70%;
+    sample: [
+      3, 3.5, 4, 3, 5, 6, 6, 4, 4.5, 5, 5, 3, 2.5, 3, 5, 6, 5.5, 4.5, 2, 2.5,
+      3.5, 4, 4, 4, 4.5, 5.5, 4, 5, 3, 5,
+    ],
     options: {
       borderColor: 'black',
       scales: {
@@ -728,10 +729,6 @@ Sainte-Croix en 2021-2022.
         },
       },
     },
-    sample: [
-      3, 3.5, 4, 3, 5, 6, 6, 4, 4.5, 5, 5, 3, 2.5, 3, 5, 6, 5.5, 4.5, 2, 2.5,
-      3.5, 4, 4, 4, 4.5, 5.5, 4, 5, 3, 5,
-    ],
     ```
 ````
 
@@ -762,8 +759,7 @@ Un groupe d'élèves sont classés selon la pointure de leurs pieds.
 1.  Un groupe d'élèves.
 2.  La pointure des pieds de ces élèves.
 3.  Discrète, car la pointure est arrondie.
-4.  $ $
-    ```{math}
+4.  ```{math}
     \begin{array} {cccc}
     \hline
     x_i & n_i & f_i & F_i \\
@@ -810,7 +806,11 @@ Un groupe d'élèves sont classés selon la pointure de leurs pieds.
 6.  ```{chartjs} template:cumulative-distribution-function
     :class: align-left
     :style: width: 70%;
-    min: 31.3, max: 41.7, step: 1,
+    step: 1,
+    sample: [
+      [32, 3], [33, 5], [34, 7], [35, 10], [36, 9], [37, 14], [38, 16],
+      [39, 12], [40, 7], [41, 2],
+    ],
     options: {
       borderColor: 'black',
       scales: {
@@ -825,10 +825,6 @@ Un groupe d'élèves sont classés selon la pointure de leurs pieds.
         },
       },
     },
-    distribution: [
-      [32, 3], [33, 5], [34, 7], [35, 10], [36, 9], [37, 14], [38, 16],
-      [39, 12], [40, 7], [41, 2], [42],
-    ],
     ```
 ````
 
@@ -863,8 +859,7 @@ minutes.
 1.  Des films lors d'un festival.
 2.  La durée des films en minutes.
 3.  Continue.
-4.  $ $
-    ```{math}
+4.  ```{math}
     \begin{array} {ccccc}
     \hline
     x_i & c_i & n_i & f_i & F_i \\

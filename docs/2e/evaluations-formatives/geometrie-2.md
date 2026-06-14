@@ -72,8 +72,7 @@ d'équation  $d: x + y = 0$ et un point $T(2;4)$.
 
 ```{solution}
 {.lower-alpha-paren .vsep-2}
-1.  $ $
-    $$
+1.  $$
     x^2 + y^2 + 2x - 4y - 8 &= 0\\
     (x^2 + 2x + 1) - 1 + (y^2 - 4y + 4) -4 - 8 &= 0\\
     (x + 1)^2 - 1 + (y - 2)^2 - 4 - 8 &= 0\\
@@ -81,8 +80,7 @@ d'équation  $d: x + y = 0$ et un point $T(2;4)$.
     (x + 1)^2 + (y - 2)^2 &= 13\\
     $$
     Centre: $C(-1;2)$ Rayon: $r = \sqrt{13}$
-2.  $ $
-    $\left\{
+2.  $$\left\{
     \begin{aligned}
          x + y &= 0  \\
          x^2 + y^2 + 2x - 4y - 8 &= 0
@@ -114,12 +112,11 @@ d'équation  $d: x + y = 0$ et un point $T(2;4)$.
          y &= -x  \\
          2(x + 4)(x -1) &= 0
     \end{aligned}
-    \right.$
+    \right.$$
     $I_1(-4; 4)$ et $I_2(1; -1)$
 3.  $2^2 + 4^2 + 2 \cdot 2 - 4 \cdot 4 - 8 = 4 + 16 + 4 - 16 - 8 = 0$<br>
     L'équation est vérifiée, le point $T(2; 4)$ appartient bien au cercle.
-4.  $ $
-    $$(2 + 1)(x + 1) + (4 - 2)(y - 2) &=13 \\
+4.  $$(2 + 1)(x + 1) + (4 - 2)(y - 2) &=13 \\
     3(x + 1) + 2(y - 2) &=13 \\
     3x + 3 + 2y - 4 &=13 \\
     3x + 2y - 14 &= 0
