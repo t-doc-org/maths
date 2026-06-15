@@ -83,7 +83,7 @@ situation).
 
 ```{solution}
 {.lower-alpha-paren}
-1.  $f(x) = 7 + 98$
+1.  $f(x) = 7x + 93$
 2.  $g(x) = -\dfrac{1}{3}x + \dfrac{4}{3}$
 ```
 
