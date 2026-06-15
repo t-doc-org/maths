@@ -173,7 +173,8 @@ options: {
   indexAxis: 'y',
   coef: 0,
   scales: {
-    x: {title: {display: true, text: "Note"}, min: 1, max: 6, ticks: {stepSize: 0.5}},
+    x: {title: {display: true, text: "Note"}, min: 1, max: 6.5,
+        ticks: {stepSize: 0.5}},
     y: {beginAtZero: true, title: {display: false}},
   },
   plugins: {
@@ -254,31 +255,39 @@ Calcul de l'écart type:
 
 $s = \sqrt{v} = \sqrt{0.86} = 0.93$
 
-```{chartjs} template:chart
-:class: align-left
-:style: width: 70%;
-type: 'bar',
-data: {
-  labels: ["2", "2.5", "3", "3.5", "4", "4.5", "5", "5.5", "6"],
-  datasets: [{data: [1, 0, 2, 1, 7, 6, 6, 4, 3]}],
-},
+
+```{chartjs} template:density-function
+min: 1.5, max: 6.5, step: 0.5,
+sample: [
+  3, 4.5, 4, 3.5, 5, 6, 6, 4, 4.5, 5, 5, 4, 4.5, 5.5, 5, 6, 5.5, 4.5, 2, 4.5,
+  5.5, 4, 4, 4, 4.5, 5.5, 4, 5, 3, 5
+],
 options: {
-  borderWidth: 1, borderColor: 'black', backgroundColor: '#0005',
-  scales: {
-    x: {title: {display: true, text: "Note"}},
-    y: {beginAtZero: true, title: {display: true, text: "Effectif"}},
-  },
-  plugins: {
-    legend: {display: false},
-    title: {display: true, text: "Notes obtenues"},
-  },
+  backgroundColor: '#36a2eb',
+  scales: {y: {title: {display: true, text: "Effectif"}},
+    x: {title: {display: true, text: "Note"}}},
 },
+annotations: [{
+  mean: {label: 'moyenne'},
+  options: {
+    borderColor: '#ff6384',
+    label: {position: '40%', backgroundColor: '#ff6384cc', rotation: -90},
+  },
+}, {
+  stdDev: {f: [-1], label: '-s'},
+  options: {
+    borderColor: '#ff6384',
+    label: {position: '45%', backgroundColor: '#ff6384cc'},
+  },
+}, {
+  stdDev: {f: [1], label: '+s'},
+  options: {
+    borderColor: '#ff6384',
+    label: {position: '45%', backgroundColor: '#ff6384cc'},
+  },
+}],
 ```
 ````
-<!-- Changer la représentation par un diagramme en bâtons et ajouter la moyenne et l'écart type-->
-
-
-
 
 
 ## Exercices

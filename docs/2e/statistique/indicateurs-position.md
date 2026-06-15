@@ -117,7 +117,8 @@ Voici les notes obtenues à l'examen écrit de maturité en mathématiques.
 
     Moyenne:
 
-    $$\overline{x} = \dfrac{2 \cdot 1 + 2.5 \cdot 0 + 3 \cdot 2 + 3.5 \cdot 1 + 4 \cdot 7 + 4.5 \cdot 6 + 5 \cdot 6 + 5.5 \cdot 4 + 6 \cdot 3}{30} = \dfrac{136.5}{30} = 4.55$$
+    $$\overline{x} &= \dfrac{2 \cdot 1 + 2.5 \cdot 0 + 3 \cdot 2 + 3.5 \cdot 1 + 4 \cdot 7 + 4.5 \cdot 6 + 5 \cdot 6 + 5.5 \cdot 4 + 6 \cdot 3}{30}\\
+     &= \dfrac{136.5}{30} = 4.55$$
 
     Pour déterminer la médiane, il faut trouver la première valeur pour laquelle
     la fréquence cumulée dépasse $\dfrac{1}{2}$.
@@ -126,6 +127,34 @@ Voici les notes obtenues à l'examen écrit de maturité en mathématiques.
 
 Dans le cas d'une variable statistique discrète, ces deux méthodes donnent les
 mêmes résultats.
+
+Pour la représentation graphique, un diagramme en bâtons est utilisé:
+
+```{chartjs} template:density-function
+min: 1.5, max: 6.5, step: 0.5,
+sample: [
+  3, 4.5, 4, 3.5, 5, 6, 6, 4, 4.5, 5, 5, 4, 4.5, 5.5, 5, 6, 5.5, 4.5, 2, 4.5,
+  5.5, 4, 4, 4, 4.5, 5.5, 4, 5, 3, 5
+],
+options: {
+  backgroundColor: '#36a2eb',
+  scales: {y: {title: {display: true, text: "Effectif"}},
+    x: {title: {display: true, text: "Note"}}},
+},
+annotations: [{
+  median: {label: 'médiane'},
+  options: {
+    borderColor: '#9966ff',
+    label: {position: '15%', backgroundColor: '#9966ffcc', rotation: -90},
+  },
+}, {
+  mean: {label: 'moyenne'},
+  options: {
+    borderColor: '#ff6384',
+    label: {position: '45%', backgroundColor: '#ff6384cc', rotation: -90},
+  },
+}],
+```
 ````
 
 ````{container} frame noprint
@@ -175,6 +204,9 @@ entre deux valeurs, il faut donc faire la moyenne de ces deux valeurs.
 Médiane:
 
 $N = 140 \implies \tilde{x} = \dfrac{x_{\frac{N}{2}} + x_{\frac{N}{2}+1}}{2} = \dfrac{x_{70} + x_{71}}{2} = \dfrac{67 + 67}{2}=67$.
+
+Pour la représentation graphique, un histogramme est utilisé avec des classes de
+ largeur 5:
 
 ```{chartjs} template:histogram
 uniform: {min: 40, max: 100, width: 5},
@@ -429,25 +461,34 @@ Pour chacune de ces variables statistiques,
     \hline
     \end{array}
     ```
-3.  ```{chartjs} template:chart
-    :class: align-left
-    :style: width: 70%;
-    type: 'bar',
-    data: {
-      labels: ["2.5", "3", "3.5", "4", "4.5", "5", "5.5", "6"],
-      datasets: [{data: [5, 6, 4, 1, 1, 3, 3, 5]}],
-    },
+3.  ```{chartjs} template:density-function
+    min: 1.5, max: 6.5, step: 0.5,
+    sample: [
+      2.5, 2.5, 2.5, 2.5, 2.5, 3, 3, 3, 3, 3, 3, 3.5, 3.5, 3.5,
+      3.5, 4, 4.5, 5, 5, 5, 5.5, 5.5, 5.5, 6, 6, 6, 6, 6
+    ],
     options: {
       borderWidth: 1, borderColor: 'black', backgroundColor: '#0005',
-      scales: {
-        x: {title: {display: true, text: "Note"}},
-        y: {beginAtZero: true, title: {display: true, text: "Effectif"}},
-      },
+      scales: {y: {title: {display: true, text: "Effectif"}},
+        x: {title: {display: true, text: "Note"}}},
       plugins: {
         legend: {display: false},
         title: {display: true, text: "Notes obtenues"},
       },
     },
+    annotations: [{
+      median: {label: 'médiane'},
+      options: {
+        borderColor: '#9966ff',
+        label: {position: '25%', backgroundColor: '#9966ffcc', rotation: -90},
+      },
+    }, {
+      mean: {label: 'moyenne'},
+      options: {
+        borderColor: '#ff6384',
+        label: {position: '40%', backgroundColor: '#ff6384cc', rotation: -90},
+      },
+    }],
     ```
 4.  ```{chartjs} template:cumulative-distribution-function
     :class: align-left
@@ -481,25 +522,35 @@ Pour chacune de ces variables statistiques,
     \hline
     \end{array}
     ```
-3.  ```{chartjs} template:chart
-    :class: align-left
-    :style: width: 70%;
-    type: 'bar',
-    data: {
-      labels: ["2.5", "3", "3.5", "4", "4.5", "5", "5.5", "6"],
-      datasets: [{data: [5, 4, 4, 3, 4, 2, 0, 6]}],
-    },
+3.  ```{chartjs} template:density-function
+    min: 1.5, max: 6.5, step: 0.5,
+    sample: [
+      6, 6, 6, 6, 6, 6, 5, 5, 4.5, 4.5, 4.5, 4.5, 4, 4,
+      4, 3.5, 3.5, 3.5, 3.5, 3, 3, 3, 3, 2.5, 2.5, 2.5, 2.5, 2.5
+    ],
     options: {
       borderWidth: 1, borderColor: 'black', backgroundColor: '#0005',
-      scales: {
-        x: {title: {display: true, text: "Note"}},
-        y: {beginAtZero: true, title: {display: true, text: "Effectif"}},
-      },
+      scales: {y: {title: {display: true, text: "Effectif"}},
+        x: {title: {display: true, text: "Note"}}},
       plugins: {
         legend: {display: false},
         title: {display: true, text: "Notes obtenues"},
       },
     },
+    annotations: [{
+      median: {label: 'médiane'},
+      options: {
+        borderColor: '#9966ff',
+        label: {position: '15%', backgroundColor: '#9966ffcc', rotation: -90},
+      },
+    }, {
+      mean: {label: 'moyenne'},
+      options: {
+        borderColor: '#ff6384',
+        label: {position: '45%', backgroundColor: '#ff6384cc', rotation: -90},
+      },
+    }],
+    ```
 4.  ```{chartjs} template:cumulative-distribution-function
     :class: align-left
     :style: width: 70%;
