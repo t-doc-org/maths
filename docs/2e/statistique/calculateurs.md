@@ -178,7 +178,6 @@ temps = [152, 153, 175, 175, 175, 180, 185, 185, 188, 188, 190, 190, 190,
         222, 228, 235, 245, 245, 245, 252, 253, 260, 260, 260, 261, 265,
         265, 268, 278, 292, 292, 292]
 
-
 # Appelez la fonction moyenne et la fonction mediane pour les temps obtenus
 ```
 
@@ -217,7 +216,6 @@ temps = [152, 153, 175, 175, 175, 180, 185, 185, 188, 188, 190, 190, 190,
         222, 228, 235, 245, 245, 245, 252, 253, 260, 260, 260, 261, 265,
         265, 268, 278, 292, 292, 292]
 
-
 # Appelez la fonction variance et la fonction écart-type pour les temps obtenus
 ```
 
@@ -233,7 +231,6 @@ Calculez la médiane, la variance et l'écart-type du nombre de désintégration
 nb = [275, 283, 284, 284, 286, 287, 287, 289, 292, 292, 293, 295, 296,
      298, 303, 303, 304, 305, 309, 309, 310, 310, 313, 313, 314, 315,
      320, 324, 329, 329]
-
 
 # Appelez la fonction médiane, la fonction variance et la fonction écart-type pour le nombre de désintégrations
 ```
