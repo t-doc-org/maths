@@ -50,9 +50,9 @@ Cet indicateur est plus robuste que l'étendue, car il ne contient pas
 d'éventuelles valeurs extrêmes.
 
 ````{container} frame noprint
-# Exemple {num2}`exemple:notes3`
+# Exemple {num2}`exemple:matu3`
 
-Reprenons l'{numref}`exemple %s<exemple:notes2>` du chapitre "Indicateurs de
+Reprenons l'{numref}`exemple %s<exemple:matu2>` du chapitre "Indicateurs de
 position".
 
 Les notes obtenues à l'examen écrit de maturité en mathématiques ordonnées.
@@ -147,7 +147,7 @@ options: {
 ````{container} frame noprint
 # Exemple {num2}`exemple`
 
-Reprenons l'{numref}`exemple %s<exemple:notes3>` concernant les notes obtenues
+Reprenons l'{numref}`exemple %s<exemple:matu3>` concernant les notes obtenues
 à l'examen écrit de maturité en mathématiques.
 
 $Q_2 = \tilde{x} = 4.5$, $Q_1 = 4$, $Q_3 = 5$ (calculés précédemment)
@@ -221,7 +221,7 @@ v = \sum_{i=1}^k f_ix_i^2 - \overline{x}^2
 ````{container} frame noprint
 # Exemple {num2}`exemple`
 
-Reprenons l'{numref}`exemple %s<exemple:notes3>` concernant les notes obtenues
+Reprenons l'{numref}`exemple %s<exemple:matu3>` concernant les notes obtenues
 à l'examen écrit de maturité en mathématiques.
 
 ```{math}
@@ -292,7 +292,7 @@ annotations: [{
 
 ## Exercices
 
-### Exercice {nump}`exercice`
+### Exercice {num2}`exercice`
 
 Lors de la Coupe du Monde de football 2022, le nombre buts marqués lors de
 chaque rencontre a été répertorié.
@@ -314,7 +314,7 @@ cette variable statistique.
 Étendue = $8$; $EI = 2$; $\overline{x} = 2.685$, $v = 3.53$; $s = 1.88$
 ```
 
-### Exercice {nump}`exercice`
+### Exercice {num2}`exercice:notes2`
 
 Reprenez l'{numref}`exercice %s<exercice:notes>` du chapitre "Indicateurs de
 position".
@@ -385,7 +385,7 @@ difficulté comparable.
     ```
 ```
 
-### Exercice {nump}`exercice`
+### Exercice {num2}`exercice:course2`
 
 Reprenez l'{numref}`exercice %s<exercice:course>` du chapitre "Indicateurs de
 position".
@@ -412,12 +412,12 @@ Déterminez l'étendue, l'écart interquartile, la variance et l'écart type de
 cette variable statistique.
 
 ```{block} solution
-À corriger pour l'échantillon complet.
-Étendue = $140$; $EI = 51.55$; $\overline{x} = 218.28$, $EM = 26.42$; $v = 1120.52$;
-$s = 33.47$
+<!-- vérifiez l'EI -->
+Étendue = $140$; $EI = 51$; $\overline{x} = 218.16$, $v = 1135.86$;
+$s = 33.7$
 ```
 
-### Exercice {nump}`exercice`
+### Exercice {num2}`exercice`
 
 Après une évaluation où la moyenne de classe était mauvaise, bien qu'un élève
 ait obtenu la note de $5.5$, un professeur décide d'ajouter un demi-point à la
@@ -441,7 +441,7 @@ note de chaque élève. Déterminez l'influence de cette opération sur
 6. L'écart type reste inchangé.
 ```
 
-### Exercice {nump}`exercice`
+### Exercice {num2}`exercice`
 
 {.lower-alpha-paren}
 1.  Une série de données A représente l'âge d'une famille de cinq personnes
@@ -476,7 +476,7 @@ note de chaque élève. Déterminez l'influence de cette opération sur
     n'a pas changé (4 ans et 1 mois).
 ```
 
-### Exercice {nump}`exercice`
+### Exercice {num2}`exercice`
 
 L'illustration ci-dessous présente les boîtes à moustaches des salaires payés
 dans une université.
@@ -510,7 +510,7 @@ dans une université.
 10. $0$
 ```
 
-### Exercice {nump}`exercice`
+### Exercice {num2}`exercice:desintegration`
 
 À l'aide d'un compteur Geiger, le nombre de désintégrations radioactives d'un
 échantillon de $^{226}\text{Ra}$ est mesuré durant une minute. L'expérience est
@@ -531,13 +531,13 @@ croissant.
 {.lower-alpha-paren}
 1.  Calculez la médiane, le premier quartile, le troisième quartile, le premier
     décile et le neuvième décile de cette distribution.
-2.  Déterminez sa variance et son écart type.
+2.  Déterminez sa moyenne, sa variance et son écart type.
 3.  Dessinez la boîte à moustache correspondante.
 
 ```{block} solution
 {.lower-alpha-paren}
 1. $\tilde{x} = Q_2 = 303$; $Q_1 = 289$; $Q_3 = 313$; $D_1 = 284$; $D_9 = 320$.
-2. $v = 201.81$; $s = 14.206$.
+2. $\overline{x} = 301.7$, $v = 201.81$; $s = 14.206$.
 3.  ```{chartjs} template:chart
     :class: align-left
     :style: width: 70%;

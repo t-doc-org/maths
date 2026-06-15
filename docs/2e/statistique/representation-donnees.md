@@ -428,7 +428,7 @@ sample: [
 
 ## Exercices
 
-### Exercice {nump}`exercice:transports`
+### Exercice {num2}`exercice:transports`
 
 Dans un sondage réalisé auprès de 200 élèves du Collège Sainte-Croix âgés de
 moins de 18 ans, on a demandé avec quel moyen de transport ils parcouraient le
@@ -449,7 +449,7 @@ plus de kilomètres pour venir au Collège. 72 ont répondu le train, 45 le bus,
 4.  Qualitative
 ```
 
-### Exercice {nump}`exercice:sang`
+### Exercice {num2}`exercice:sang`
 
 Dans l'entreprise ABO, on a demandé aux employés leur groupe sanguin.
 Le tableau ci-dessous présente les données récoltées.
@@ -480,7 +480,7 @@ Le tableau ci-dessous présente les données récoltées.
 4.  Qualitative
 ```
 
-### Exercice {nump}`exercice`
+### Exercice {num2}`exercice`
 
 Soit un échantillon de $n$ oeufs.<br>
 Pour chacune des situations suivantes, dire s'il s'agit d'une variable
@@ -506,7 +506,7 @@ statistique qualitative, discrète ou continue.
 4.  Continue
 ```
 
-### Exercice {nump}`exercice`
+### Exercice {num2}`exercice`
 
 Soit l'ensemble de toutes les personnes qui ont obtenu la maturité au Collège
 Sainte-Croix.<br>
@@ -532,7 +532,7 @@ statistique qualitative, discrète ou continue.
 6.  Continue
 ```
 
-### Exercice {nump}`exercice`
+### Exercice {num2}`exercice`
 
 Reprenez la donnée de l'{numref}`exercice %s<exercice:transports>`.
 
@@ -609,7 +609,7 @@ Reprenez la donnée de l'{numref}`exercice %s<exercice:transports>`.
     ```
 ````
 
-### Exercice {nump}`exercice`
+### Exercice {num2}`exercice`
 
 Reprenez la donnée de l'{numref}`exercice %s<exercice:sang>`.
 
@@ -660,7 +660,7 @@ Reprenez la donnée de l'{numref}`exercice %s<exercice:sang>`.
     ```
 ````
 
-### Exercice {nump}`exercice`
+### Exercice {num2}`exercice`
 
 Voici les notes de la dernière évaluation de mathématiques de la classe 3F8 de
 Sainte-Croix en 2021-2022.
@@ -732,7 +732,7 @@ Sainte-Croix en 2021-2022.
     ```
 ````
 
-### Exercice {nump}`exercice`
+### Exercice {num2}`exercice`
 
 Un groupe d'élèves sont classés selon la pointure de leurs pieds.
 
@@ -828,7 +828,7 @@ Un groupe d'élèves sont classés selon la pointure de leurs pieds.
     ```
 ````
 
-### Exercice {nump}`exercice`
+### Exercice {num2}`exercice`
 
 Lors d'un festival de cinéma, les films ont été classés selon leur durée en
 minutes.

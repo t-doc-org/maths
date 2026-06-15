@@ -43,7 +43,7 @@ La médiane sépare la population en deux groupes: $50\%$ de la population est
 au-dessous de la médiane et $50\%$ en dessus.
 
 ````{container} frame noprint
-# Exemple {num2}`exemple:notes2`
+# Exemple {num2}`exemple:matu2`
 
 Reprenons l'{numref}`exemple %s<exemple:matu>` qui est celui d'une variable
 statistique discrète.
@@ -296,7 +296,7 @@ $10\%$ des valeurs de l'échantillon lui soient inférieures ou égales.
 
 ## Exercices
 
-### Exercice {nump}`exercice`
+### Exercice {num2}`exercice`
 
 {.lower-alpha-paren}
 1.  Une entreprise composée de 15 employés paye les salaires suivants:
@@ -350,7 +350,7 @@ Que constatez-vous?
 La moyenne est très sensible à la valeur extrême ($80\,000$).
 ```
 
-### Exercice {nump}`exercice`
+### Exercice {num2}`exercice`
 
 Déterminez la moyenne et la médiane de la variable statistique suivante.
 
@@ -368,7 +368,7 @@ Déterminez la moyenne et la médiane de la variable statistique suivante.
 $\overline{x} = 5.82$ et $\tilde{x} = 4$
 ```
 
-### Exercice {nump}`exercice`
+### Exercice {num2}`exercice`
 
 Pour chaque élève inscrit dans une école, le nombre de lettres de leur prénom a
 été déterminé. Les résultats varient entre 3 lettres (Ana, Zoé, Luc,…) et 13
@@ -378,7 +378,7 @@ lettres (Paul-Alexandre et Marcia-Andreia).
 :class: align-center
 \begin{array} {cccccccccccc}
 \hline
-\text{Nombre de letttres} &  3 &  4 &   5 &   6 &   7 &   8 &  9 & 10 & 11 & 12 & 13 \\
+\text{Nombre de lettres} &  3 &  4 &   5 &   6 &   7 &   8 &  9 & 10 & 11 & 12 & 13 \\
 \text{Effectif} & 10 & 52 & 155 & 198 & 156 & 102 & 45 & 17 &  7 &  2 &  2 \\
 \hline
 \end{array}
@@ -390,7 +390,7 @@ Déterminez la moyenne et la médiane de cette variable statistique.
 $\overline{x} = 6.449$ et $\tilde{x} = 6$
 ```
 
-### Exercice {nump}`exercice`
+### Exercice {num2}`exercice`
 
 Sur un parking, le pays d'origine de la marque de chaque voiture a été
 répertorié.
@@ -411,7 +411,7 @@ Déterminez la moyenne et la médiane de cette variable statistique.
 La moyenne et la médiane n'existent pas dans cette situation.
 ```
 
-### Exercice {nump}`exercice:notes`
+### Exercice {num2}`exercice:notes`
 
 Voici les notes obtenues à une évaluation par une classe durant l'année 2021-2022.
 
@@ -572,7 +572,7 @@ Pour chacune de ces variables statistiques,
     ```
 ````
 
-### Exercice {nump}`exercice:course`
+### Exercice {num2}`exercice:course`
 
 Lors d'une journée sportive, des élèves ont participé à une course de
 $800$ m, dont voici les résultats, en secondes.
@@ -595,10 +595,10 @@ Calculez les indicateurs de tendance centrale (moyenne et médiane) de cette
 série statistique
 
 ```{block} solution
-$\overline{x} = 214.45$ et $\tilde{x} = 215$
+$\overline{x} = 218.16$ et $\tilde{x} = 215$
 ```
 
-### Exercice {nump}`exercice`
+### Exercice {num2}`exercice`
 
 En 2007 en Suisse, la taille moyenne des hommes était de $175.4$ cm et celle des
 femmes de $164.0$ cm. En sachant que la population suisse, à cette date, était
@@ -610,7 +610,7 @@ avait de plus que d'hommes à cette époque.
 Il y avait $133\,143$ femmes de plus que d'hommes.
 ```
 
-### Exercice {nump}`exercice`
+### Exercice {num2}`exercice`
 
 Depuis 1919, le coureur qui mène le Tour de France cycliste au temps porte un
 maillot distinctif jaune. Le nombre de porteurs différents sur une édition d'un
@@ -652,7 +652,7 @@ x_i & n_i & f_i & F_i \\
 $C_{57} = 4$; $D_3 = 3$; $Q_3 = 5$; $\overline{x} = 4.23$; $\tilde{x} = 4$.
 ````
 
-### Exercice {nump}`exercice`
+### Exercice {num2}`exercice`
 
 Voici le nombre $\pi$ avec ses 59 premières décimales:
 ```{math}
