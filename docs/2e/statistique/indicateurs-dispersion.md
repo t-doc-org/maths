@@ -118,8 +118,7 @@ graphique qui représente l'étendue et les différents quartiles:
 $Q_0 = 9$, $Q_1 = 18$, $Q_2 = 22$, $Q_3 = 27$ et $Q_4 = 33$.
 
 ```{chartjs} template:chart
-:class: align-left
-:style: width: 70%;
+:style: width: 70%; aspect-ratio: 5;
 type: 'boxplot',
 data: {
   labels: [''],
@@ -131,8 +130,8 @@ data: {
 },
 options: {
   borderWidth: 1, borderColor: 'black', backgroundColor: '#0005',
+  coef: 0, barPercentage: 0.7,
   indexAxis: 'y',
-  coef: 0,
   scales: {
     x: {title: {display: false}},
     y: {beginAtZero: true, title: {display: false}},
@@ -158,8 +157,7 @@ haute obtenue.
 Les quartiles permettent de représenter la boîte à moustache de cet exemple:
 
 ```{chartjs} template:chart
-:class: align-left
-:style: width: 70%;
+:style: width: 70%; aspect-ratio: 4;
 type: 'boxplot',
 data: {
   labels: [''],
@@ -170,11 +168,13 @@ data: {
   }],
 },
 options: {
+  coef: 0, barPercentage: 0.7,
   indexAxis: 'y',
-  coef: 0,
   scales: {
-    x: {title: {display: true, text: "Note"}, min: 1, max: 6.5,
-        ticks: {stepSize: 0.5}},
+    x: {
+      title: {display: true, text: "Note"}, min: 1, max: 6.5,
+      ticks: {stepSize: 0.5},
+    },
     y: {beginAtZero: true, title: {display: false}},
   },
   plugins: {
@@ -264,8 +264,10 @@ sample: [
 ],
 options: {
   backgroundColor: '#36a2eb',
-  scales: {y: {title: {display: true, text: "Effectif"}},
-    x: {title: {display: true, text: "Note"}}},
+  scales: {
+    y: {title: {display: true, text: "Effectif"}},
+    x: {title: {display: true, text: "Note"}},
+  },
 },
 annotations: [{
   mean: {label: 'moyenne'},
@@ -359,7 +361,7 @@ difficulté comparable.
     Classe 2: étendue = $3.5$; $EI = 2$; $\overline{x} = 4.09$, $v = 1.54$; $s = 1.24$
 2.  ```{chartjs} template:chart
     :class: align-left
-    :style: width: 70%;
+    :style: width: 70%; aspect-ratio: 3;
     type: 'boxplot',
     data: {
       labels: ['Classe 1', 'Classe 2'],
@@ -372,8 +374,8 @@ difficulté comparable.
     },
     options: {
       borderWidth: 1, borderColor: 'black', backgroundColor: '#0005',
+      coef: 0, barPercentage: 0.7,
       indexAxis: 'y',
-      coef: 0,
       scales: {
         x: {title: {display: false}, min: 2, max: 6, ticks: {stepSize: 0.5}},
         y: {beginAtZero: true, title: {display: false}},
@@ -540,7 +542,7 @@ croissant.
 2. $\overline{x} = 301.7$, $v = 201.81$; $s = 14.206$.
 3.  ```{chartjs} template:chart
     :class: align-left
-    :style: width: 70%;
+    :style: width: 70%; aspect-ratio: 4.5;
     type: 'boxplot',
     data: {
       labels: ['Désintégrations'],
@@ -553,8 +555,8 @@ croissant.
     options: {
       maintainAspectRatio: false,
       borderWidth: 1, borderColor: 'black', backgroundColor: '#0005',
+      coef: 0, barPercentage: 0.7,
       indexAxis: 'y',
-      coef: 0,
       scales: {
         x: {title: {display: false}, min: 260, max: 340, ticks: {stepSize: 20}},
         y: {title: {display: false}},
