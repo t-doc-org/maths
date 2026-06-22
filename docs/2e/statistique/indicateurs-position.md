@@ -491,9 +491,8 @@ Pour chacune de ces variables statistiques,
     }],
     ```
 4.  ```{chartjs} template:cumulative-distribution-function
-    :class: align-left
-    :style: width: 70%;
-    step: 0.5,
+    :style: aspect-ratio: 3;
+    min: 1.5, max: 6.5, step: 0.5,
     sample: [
       [2.5, 5], [3, 6], [3.5, 4], [4, 1], [4.5, 1], [5, 3], [5.5, 3], [6, 5],
     ],
@@ -552,9 +551,8 @@ Pour chacune de ces variables statistiques,
     }],
     ```
 4.  ```{chartjs} template:cumulative-distribution-function
-    :class: align-left
-    :style: width: 70%;
-    step: 0.5,
+    :style: aspect-ratio: 3;
+    min: 1.5, max: 6.5, step: 0.5,
     sample: [
       [2.5, 5], [3, 4], [3.5, 4], [4, 3], [4.5, 4], [5, 2], [5.5, 0], [6, 6],
     ],
