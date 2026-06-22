@@ -76,7 +76,7 @@ def mediane(liste):
   if N % 2:
     med = (liste[N/2-1] + liste[N/2])/2
   else:
-    med = liste[trunc(N/2)]
+    med = liste[N//2]
   return med
 
 print(mediane(notes))
