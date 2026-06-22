@@ -8,7 +8,7 @@
 subject: "Mathématiques 2e année"
 ```
 
-```{container} frame noprint
+````{container} frame noprint
 # Exemple {num2}`exemple`
 Bob et Alice comparent les diamètres des arbres sur leur terrain. Ils décident
 de mesurer en centimètres les diamètres des différents arbres.
@@ -19,7 +19,55 @@ Les deux ensembles de données ont la même moyenne $ \overline{x} = 34$.
 
 Toutefois les deux populations sont bien différentes, car les données
 recueillies par Bob sont beaucoup plus **dispersées** que celles d'Alice.
+
+```{chartjs} template:density-function
+:style: width: 50%;
+min: 5, max: 65, step: 5,
+sample: [10, 12, 14, 52, 56, 60],
+options: {
+  backgroundColor: '#36a2eb',
+  scales: {y: {title: {display: true, text: "Effectif"}},
+    x: {title: {display: true, text: "diamètre"}}},
+  plugins: {
+    title: {
+      display: true,
+      text: "Mesures de Bob",
+    },
+  },
+},
+annotations: [{
+  mean: {label: 'moyenne'},
+  options: {
+    borderColor: '#ff6384',
+    label: {position: '45%', backgroundColor: '#ff6384cc', rotation: -90},
+  },
+}],
 ```
+
+```{chartjs} template:density-function
+:style: width: 50%;
+min: 5, max: 65, step: 5,
+sample: [28, 29, 33, 35, 38, 41],
+options: {
+  backgroundColor: '#36a2eb',
+  scales: {y: {title: {display: true, text: "Effectif"}},
+    x: {title: {display: true, text: "diamètre"}}},
+  plugins: {
+    title: {
+      display: true,
+      text: "Mesures d'Alice",
+    },
+  },
+},
+annotations: [{
+  mean: {label: 'moyenne'},
+  options: {
+    borderColor: '#ff6384',
+    label: {position: '45%', backgroundColor: '#ff6384cc', rotation: -90},
+  },
+}],
+```
+````
 
 {.allow-break-inside}
 ## Définitions
