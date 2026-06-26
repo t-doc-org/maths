@@ -25,63 +25,65 @@ Soit un triangle rectangle isocèle en A, faites un schéma de la situation et
 déterminez le $\sin(45^\circ)$.
 
 <script type="module">
-const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
-initBoard('trian-iso-rect', [attrs.screen, attrs.nonInteractive, {
-  boundingBox: [-0.5, 4.5, 4.5, -0.5],
-  axis: false, grid: false,
-  defaults: {
-    segment: {strokeColor: JXG.palette.black, strokeWidth: 2},
-    point: {size: 0, withLabel: false},
-    angle: {
-      strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
-      fillOpacity: 0.2, strokeWidth: 1, label: {strokeColor: JXG.palette.black},
+const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
+render.trianIsoRect = el => {
+  return initBoard(el, [attrs.screen, attrs.nonInteractive, {
+    boundingBox: [-0.5, 4.5, 4.5, -0.5],
+    axis: false, grid: false,
+    defaults: {
+      segment: {strokeColor: JXG.palette.black, strokeWidth: 2},
+      point: {size: 0, withLabel: false},
+      angle: {
+        strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
+        fillOpacity: 0.2, strokeWidth: 1, label: {strokeColor: JXG.palette.black},
+      },
     },
-  },
-}], board => {
+  }], board => {
     const A = board.create('point', [0, 0], {
-        name: '\\(A\\)', withLabel: true,
-        label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]}
+      name: '\\(A\\)', withLabel: true,
+      label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]}
     });
     const B = board.create('point', [4, 0], {
-        name: '\\(B\\)', withLabel: true,
-        label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]}
+      name: '\\(B\\)', withLabel: true,
+      label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]}
     });
     const C = board.create('point', [4, 4]);
     const D = board.create('point', [0, 4], {
-        name: '\\(C\\)', withLabel: true,
-        label: {anchorX: 'middle', anchorY: 'top', offset: [-10, 0]}
+      name: '\\(C\\)', withLabel: true,
+      label: {anchorX: 'middle', anchorY: 'top', offset: [-10, 0]}
     });
     board.create('segment', [A, B], {
-        name: '\\(x\\)', withLabel: true,
-        label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]}
+      name: '\\(x\\)', withLabel: true,
+      label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]}
     });
     board.create('segment', [D, A], {
-        name: '\\(x\\)', withLabel: true,
-        label: {anchorX: 'right', anchorY: 'middle', offset: [-8, 0]}
+      name: '\\(x\\)', withLabel: true,
+      label: {anchorX: 'right', anchorY: 'middle', offset: [-8, 0]}
     });
     board.create('segment', [B, D], {
-        name: '\\(a\\)', withLabel: true,
-        label: {anchorX: 'middle', anchorY: 'middle', offset: [8, 8]}
+      name: '\\(a\\)', withLabel: true,
+      label: {anchorX: 'middle', anchorY: 'middle', offset: [8, 8]}
     });
     board.create('segment', [B, C], {dash: 3});
     board.create('segment', [C, D], {dash: 3});
     board.create('angle', [D, B, A], {
-        radius: 0.6,
-        name: '\\(45^\\circ\\)', withLabel: true,
-        label: {anchorX: 'middle', anchorY: 'middle'}
+      radius: 0.6,
+      name: '\\(45^\\circ\\)', withLabel: true,
+      label: {anchorX: 'middle', anchorY: 'middle'}
     });
     board.create('angle', [A, D, B], {
-        radius: 0.6,
-        name: '\\(45^\\circ\\)', withLabel: true,
-        label: {anchorX: 'middle', anchorY: 'middle', offset: [0, 0]}
+      radius: 0.6,
+      name: '\\(45^\\circ\\)', withLabel: true,
+      label: {anchorX: 'middle', anchorY: 'middle', offset: [0, 0]}
     });
     board.create('angle', [B, A, D], {
-        radius: 0.4, fillOpacity: 0,  withLabel: false,
+      radius: 0.4, fillOpacity: 0,  withLabel: false,
     });
     board.create('angle', [D, C, B], {
-        radius: 0.4, fillOpacity: 0,  withLabel: false,
+      radius: 0.4, fillOpacity: 0,  withLabel: false,
     });
-});
+  });
+};
 </script>
 
 `````{solution}
@@ -90,61 +92,63 @@ initBoard('trian-iso-rect', [attrs.screen, attrs.nonInteractive, {
 - Par Pythagore: $a^2 = x^2 + x^2 = 2x^2 \implies a = \sqrt{2x^2} = x\sqrt{2}$
 
   $\sin(45^\circ) = \dfrac{x}{a} = \dfrac{x}{x\sqrt{2}} = \dfrac{1}{\sqrt{2}}= \dfrac{\sqrt{2}}{2}$
-- ```{jsxgraph} trian-iso-rect
+- ```{jsxgraph} trianIsoRect
   :style: width: 80%; border: none;
   ```
 ````
 `````
 
 <script type="module">
-const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
-initBoard('trian', [attrs.screen, attrs.nonInteractive, {
-  boundingBox: [-1.5, 5, 5.5, -1],
-  axis: false, grid: false,
-  defaults: {
-    segment: {strokeColor: JXG.palette.black, strokeWidth: 2},
-    point: {size: 0, withLabel: false},
-    angle: {
-      strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
-      fillOpacity: 0.2, strokeWidth: 1, label: {strokeColor: JXG.palette.black},
+const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
+render.trian = el => {
+  return initBoard(el, [attrs.screen, attrs.nonInteractive, {
+    boundingBox: [-1.5, 5, 5.5, -1],
+    axis: false, grid: false,
+    defaults: {
+      segment: {strokeColor: JXG.palette.black, strokeWidth: 2},
+      point: {size: 0, withLabel: false},
+      angle: {
+        strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
+        fillOpacity: 0.2, strokeWidth: 1, label: {strokeColor: JXG.palette.black},
+      },
     },
-  },
-}], board => {
-  const A = board.create('point', [0, 0], {
-    name: '\\(B\\)', withLabel: true,
-    label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]}
+  }], board => {
+    const A = board.create('point', [0, 0], {
+      name: '\\(B\\)', withLabel: true,
+      label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]}
+    });
+    const B = board.create('point', [5, 0], {
+      name: '\\(C\\)', withLabel: true,
+      label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]}
+    });
+    const D = board.create('point', [0, 4], {
+      name: '\\(A\\)', withLabel: true,
+      label: {anchorX: 'middle', anchorY: 'top', offset: [-10, 0]}
+    });
+    board.create('segment', [A, B]);
+    board.create('segment', [D, A], {
+      name: '\\(\\sqrt{2}\\)', withLabel: true,
+      label: {anchorX: 'right', anchorY: 'middle', offset: [-8, 0]}
+    });
+    board.create('segment', [B, D], {
+      name: '\\(2\\)', withLabel: true,
+      label: {anchorX: 'middle', anchorY: 'middle', offset: [8, 8]}
+    });
+    board.create('angle', [D, B, A], {
+      radius: 0.6,
+      name: '\\(\\gamma\\)', withLabel: true,
+      label: {anchorX: 'middle', anchorY: 'middle'}
+    });
+    board.create('angle', [A, D, B], {
+      radius: 0.6,
+      name: '\\(\\alpha\\)', withLabel: true,
+      label: {anchorX: 'middle', anchorY: 'middle', offset: [0, 0]}
+    });
+    board.create('angle', [B, A, D], {
+      radius: 0.4, fillOpacity: 0,  withLabel: false,
+    });
   });
-  const B = board.create('point', [5, 0], {
-    name: '\\(C\\)', withLabel: true,
-    label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]}
-  });
-  const D = board.create('point', [0, 4], {
-    name: '\\(A\\)', withLabel: true,
-    label: {anchorX: 'middle', anchorY: 'top', offset: [-10, 0]}
-  });
-  board.create('segment', [A, B]);
-  board.create('segment', [D, A], {
-    name: '\\(\\sqrt{2}\\)', withLabel: true,
-    label: {anchorX: 'right', anchorY: 'middle', offset: [-8, 0]}
-  });
-  board.create('segment', [B, D], {
-    name: '\\(2\\)', withLabel: true,
-    label: {anchorX: 'middle', anchorY: 'middle', offset: [8, 8]}
-  });
-  board.create('angle', [D, B, A], {
-    radius: 0.6,
-    name: '\\(\\gamma\\)', withLabel: true,
-    label: {anchorX: 'middle', anchorY: 'middle'}
-  });
-  board.create('angle', [A, D, B], {
-    radius: 0.6,
-    name: '\\(\\alpha\\)', withLabel: true,
-    label: {anchorX: 'middle', anchorY: 'middle', offset: [0, 0]}
-  });
-  board.create('angle', [B, A, D], {
-    radius: 0.4, fillOpacity: 0,  withLabel: false,
-  });
-});
+};
 </script>
 
 ## Question {nump}`question`{points}`4`
@@ -243,7 +247,7 @@ La fonction $\cos(x)$ est représentée ci-dessous.
 {.lower-alpha-paren}
 1.  Représentez le plus précisément possible $g(x) = \cos(\dfrac{x}{2})$.
 
-    ```{jsxgraph} ex-cos
+    ```{jsxgraph} exCos
     :style: width: 100%; border: none;
     ```
 2.  Déterminez la période de $g(x)$
@@ -253,7 +257,7 @@ La fonction $\cos(x)$ est représentée ci-dessous.
 
 ````{solution}
 {.lower-alpha-paren}
-1.  ```{jsxgraph} ex-cos-sol
+1.  ```{jsxgraph} exCosSol
     :style: width: 100%; border: none;
     ```
 2.  La période de $f(x)$ est $4\pi$.
@@ -261,7 +265,7 @@ La fonction $\cos(x)$ est représentée ci-dessous.
 ````
 
 <script type="module">
-const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
 const battrs = [attrs.screen, {
     boundingBox: [-10, 3.5, 10, -3.5],
     grid: {majorStep: [Math.PI / 4, 0.5]},
@@ -270,11 +274,15 @@ const battrs = [attrs.screen, {
         y: {ticks: {minorTicks: 1}},
     },
 }];
-initBoard('ex-cos', battrs, board => {
-  board.create('functiongraph', [x => Math.cos(x)]);
-});
-initBoard('ex-cos-sol', battrs, board => {
-  board.create('functiongraph', [x => Math.cos(x)], {dash: 2});
-  board.create('functiongraph', [x => Math.cos(x / 2)]);
-});
+render.exCos = el => {
+  return initBoard(el, battrs, board => {
+    board.create('functiongraph', [x => Math.cos(x)]);
+  });
+};
+render.exCosSol = el => {
+  return initBoard(el, battrs, board => {
+    board.create('functiongraph', [x => Math.cos(x)], {dash: 2});
+    board.create('functiongraph', [x => Math.cos(x / 2)]);
+  });
+};
 </script>

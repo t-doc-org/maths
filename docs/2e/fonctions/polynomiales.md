@@ -192,7 +192,7 @@ $f(-x) = (-x)^4-2\cdot(-x)^2-2 = (x)^4-2\cdot(x)^2-2=f(x)$
 
 La fonction $f$ est symétrique par rapport à l'axe des $y$.
 
-```{jsxgraph} fct-paire
+```{jsxgraph} fctPaire
 :style: width: 50%;
 ```
 
@@ -204,28 +204,32 @@ $g(-x) = (-x)^5-2\cdot(-x)^3-3\cdot(-x)=-x^5+2\cdot x^3+3\cdot x=-(x^5-2\cdot x^
 
 La fonction $g$ est symétrique par rapport à l'origine $O$.
 
-```{jsxgraph} fct-impaire
+```{jsxgraph} fctImpaire
 :style: width: 50%;
 ```
 
 <script type="module">
-const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
 attrs.page = [attrs.screen, {
   boundingBox: [-5.2, 5.2, 5.2, -5.2],
   defaults: {
     functiongraph: {withLabel: true, label: {position: '0.65fr right'}},
   },
 }];
-initBoard('fct-paire', attrs.page, board => {
-  board.create('functiongraph', [x => x ** 4 - 2 * x ** 2 - 2], {
-    name: `\\(f\\)`,
+render.fctPaire = el => {
+  return initBoard(el, attrs.page, board => {
+    board.create('functiongraph', [x => x ** 4 - 2 * x ** 2 - 2], {
+      name: `\\(f\\)`,
+    });
   });
-});
-initBoard('fct-impaire', attrs.page, board => {
-  board.create('functiongraph', [x => x ** 5 - 2 * x ** 3 - 3 * x], {
-    name: `\\(g\\)`,
+};
+render.fctImpaire = el => {
+  return initBoard(el, attrs.page, board => {
+    board.create('functiongraph', [x => x ** 5 - 2 * x ** 3 - 3 * x], {
+      name: `\\(g\\)`,
+    });
   });
-});
+};
 </script>
 
 ```{admonition} Théorème

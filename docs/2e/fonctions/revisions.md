@@ -32,28 +32,30 @@ d'arrivée** de $f$.
     :style: width: 80%;
     ```
 2.  La représentation graphique suivante n'est pas une fonction.
-    ```{jsxgraph} non-fonction
+    ```{jsxgraph} nonFonction
     :style: width: 80%;
     ```
 
 <script type="module">
-const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
 const battrs = [attrs.screen, attrs.nonInteractive, {
-    boundingBox: [-7, 11, 7, -2],
-    defaultAxes: {
-        x: {ticks: {drawLabels: false}},
-        y: {ticks: {drawLabels: false}},
-    },
+  boundingBox: [-7, 11, 7, -2],
+  defaultAxes: {
+    x: {ticks: {drawLabels: false}},
+    y: {ticks: {drawLabels: false}},
+  },
 }];
-initBoard('fonction', battrs, board => {
+render.fonction = el => {
+  return initBoard(el, battrs, board => {
     board.create('functiongraph', [x => x ** 3 / 2 - 3 * x + 5]);
-});
-initBoard('non-fonction', battrs, board => {
-    const c = board.create('point', [0, 4], {
-        visible: false, withLabel: false,
-    });
+  });
+};
+render.nonFonction = el => {
+  return initBoard(el, battrs, board => {
+    const c = board.create('point', [0, 4], {visible: false, withLabel: false});
     board.create('circle', [c, 3.5]);
-});
+  });
+};
 </script>
 
 ```{admonition} Définition
@@ -255,32 +257,34 @@ Sommet: $S\left(\dfrac{1}{4}, -\dfrac{25}{4}\right)$
 Représentation graphique de la fonction $f(x) = 4x^2 - 2x - 6$ avec les points
 calculés précédemment.
 
-```{jsxgraph} fct-f
+```{jsxgraph} fctF
 :style: width: 60%;
 ```
 
 <script type="module">
-const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
-initBoard('fct-f', [attrs.screen, attrs.nonInteractive, {
+const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
+render.fctF = el => {
+  return initBoard(el, [attrs.screen, attrs.nonInteractive, {
     boundingBox: [-5, 2.5, 5, -7],
     defaults: {
-        point: {
-            label: {anchorX: 'right', anchorY: 'bottom', offset: [-7, 0]},
-        },
+      point: {
+        label: {anchorX: 'right', anchorY: 'bottom', offset: [-7, 0]},
+      },
     },
-}], board => {
+  }], board => {
     const f = x => 4 * x ** 2 - 2 * x -6;
     board.create('functiongraph', [f], {
-        name: `\\(f\\)`, withLabel: true,
-        label: {position: '0.635fr right'},
+      name: `\\(f\\)`, withLabel: true,
+      label: {position: '0.635fr right'},
     });
     board.create('point', [0.25, f(0.25)], {
-        name: `\\(S\\)`,
-        label: {anchorX: 'middle', anchorY: 'top', offset: [0, -7]},
+      name: `\\(S\\)`,
+      label: {anchorX: 'middle', anchorY: 'top', offset: [0, -7]},
     });
     board.create('point', [-1, f(-1)], {name: `\\(x_1\\)`});
     board.create('point', [3 / 2, f(3 / 2)], {name: `\\(x_2\\)`});
-});
+  });
+};
 </script>
 
 ## Résolution d'inéquations
@@ -288,7 +292,6 @@ initBoard('fct-f', [attrs.screen, attrs.nonInteractive, {
 La résolution d'inéquation du 1<sup>er</sup> degré est identique à la résolution
 d'équation à l'exception de la multiplication ou la division par un nombre
 négatif qui change le sens de l'inégalité.
-
 
 ### Exemple {num2}`exemple`
 

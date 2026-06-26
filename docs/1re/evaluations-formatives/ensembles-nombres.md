@@ -76,7 +76,7 @@ $C = \{-1; 0; 4 ; 7; 12\}$.
 Soient $A$, $B$ et $C$ des sous-ensembles de l'ensemble $M$. Représentez
 $\overline{(A \cup B)\setminus C}$ au moyen d'un diagramme de Venn.
 
-```{jsxgraph} template:grid
+```{jsxgraph} grid
 width: 35, height: 35,
 ```
 
@@ -101,7 +101,7 @@ lunettes et des baskets. 3 élèves n'ont ni lunettes, ni baskets, ni casquette.
 1.  Combien d'élèves portent seulement une casquette? {leader}`.`
 2.  Combien d'élèves portent des baskets? {leader}`.`
 
-```{jsxgraph} template:grid
+```{jsxgraph} grid
 width: 35, height: 35,
 ```
 
@@ -115,7 +115,7 @@ width: 35, height: 35,
 
 Écrivez $4.21\overline{8}$ comme fraction. Pas besoin de réduire la fraction.
 
-```{jsxgraph} template:grid
+```{jsxgraph} grid
 width: 35, height: 15,
 ```
 
@@ -136,7 +136,7 @@ Calculez en simplifiant au maximum. Rédaction sous forme d'un seul calcul.
 
 $\dfrac{\dfrac{3}{4} - \dfrac{7}{24} \cdot \dfrac{8}{21}}{\dfrac{1}{5} \cdot \left( \dfrac{1}{2} - 3\right)} = $
 
-```{jsxgraph} template:grid
+```{jsxgraph} grid
 width: 35, height: 20,
 ```
 

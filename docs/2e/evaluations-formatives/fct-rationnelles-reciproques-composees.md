@@ -88,7 +88,7 @@ Soient les fonctions $f(x) = 3x -4$ et $g(x) = (x + 1)^2$
     $g^{-1}(x) = \sqrt{x} - 1$ pour $D_f = ]-1; \infty[$ ou
     $g^{-1}(x) = -\sqrt{x} - 1$ pour $D_f = ]-\infty; -1[$
 
-    ```{jsxgraph} fct-bij-sol
+    ```{jsxgraph} fctBijSol
     :style: width: 70%;
     ```
 3.  $(f \circ g)(x) = f(g(x)) = 3(x + 1)^2 - 4 = 3x^2 + 6x -1$
@@ -97,35 +97,37 @@ Soient les fonctions $f(x) = 3x -4$ et $g(x) = (x + 1)^2$
 ````
 
 <script type="module">
-const {attrs, initBoard, JXG, withAxesLabels} =
+const {attrs, initBoard, JXG, render, withAxesLabels} =
   await tdoc.import('jsxgraph.js');
-initBoard('fct-bij-sol', [attrs.screen, withAxesLabels([1], [1]), {
-  boundingBox: [-4.8, 4.8, 4.8, -4.8],
-  defaults: {
-    functiongraph: {withLabel: true, label: {distance: 1}},
-  },
-}], board => {
-  board.create('functiongraph', [x => 3*x-4], {
-    name: "\\(f\\)",
-    label: {position: '0.55fr right', strokeOpacity: 0.4},
-    strokeOpacity: 0.4,
-  });
-  board.create('functiongraph', [x => (x+4)/3], {
-    name: "\\(f^{-1}\\)",
-    label: {position: '0.25fr left'},
-  });
-  board.create('functiongraph', [x => (x+1) ** 2, -1, 5], {
-    name: "\\(g\\)",
-    strokeColor: JXG.palette.purple, strokeOpacity: 0.4,
-    label: {
-      position: '0.25fr right',
-      strokeColor: JXG.palette.purple, strokeOpacity: 0.4,
+render.fctBijSol = el => {
+  return initBoard(el, [attrs.screen, withAxesLabels([1], [1]), {
+    boundingBox: [-4.8, 4.8, 4.8, -4.8],
+    defaults: {
+      functiongraph: {withLabel: true, label: {distance: 1}},
     },
+  }], board => {
+    board.create('functiongraph', [x => 3*x-4], {
+      name: "\\(f\\)",
+      label: {position: '0.55fr right', strokeOpacity: 0.4},
+      strokeOpacity: 0.4,
+    });
+    board.create('functiongraph', [x => (x+4)/3], {
+      name: "\\(f^{-1}\\)",
+      label: {position: '0.25fr left'},
+    });
+    board.create('functiongraph', [x => (x+1) ** 2, -1, 5], {
+      name: "\\(g\\)",
+      strokeColor: JXG.palette.purple, strokeOpacity: 0.4,
+      label: {
+        position: '0.25fr right',
+        strokeColor: JXG.palette.purple, strokeOpacity: 0.4,
+      },
+    });
+    board.create('functiongraph', [x => Math.sqrt(x) -1], {
+      name: "\\(g^{-1}\\)",
+      strokeColor: JXG.palette.purple,
+      label: {position: '0.7fr left', strokeColor: JXG.palette.purple},
+    });
   });
-  board.create('functiongraph', [x => Math.sqrt(x) -1], {
-    name: "\\(g^{-1}\\)",
-    strokeColor: JXG.palette.purple,
-    label: {position: '0.7fr left', strokeColor: JXG.palette.purple},
-  });
-});
+};
 </script>

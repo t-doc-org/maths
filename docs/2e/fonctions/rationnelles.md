@@ -145,28 +145,30 @@ $f(x) = \dfrac{x^2-7x+10}{x^2-9}=\dfrac{(x-2)(x-5)}{(x+3)(x-3)}$
 
 La représentation graphique de $f(x) = \dfrac{x^2-7x+10}{x^2-9}$ est:
 
-```{jsxgraph} fonction-rationnelle
+```{jsxgraph} fonctionRationnelle
 :style: width: 80%;
 ```
 
 <script type="module">
-const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
-initBoard('fonction-rationnelle', [attrs.screen, attrs.nonInteractive, {
-  boundingBox: [-10.5, 10.5, 10.5, -10.5],
-  grid: {majorStep: 1},
-  defaults: {
-    line: {dash: 2},
-    point: {label: {anchorX: 'right', anchorY: 'bottom', offset: [-7, 0]}},
-  },
-}], board => {
-  const f = x => (x ** 2 - 7 * x + 10) / (x ** 2 - 9);
-  board.create('functiongraph', [f], {
-    name: `\\(f\\)`, withLabel: true,
-    label: {position: '0.1fr left'}
+const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
+render.fonctionRationnelle = el => {
+  return initBoard(el, [attrs.screen, attrs.nonInteractive, {
+    boundingBox: [-10.5, 10.5, 10.5, -10.5],
+    grid: {majorStep: 1},
+    defaults: {
+      line: {dash: 2},
+      point: {label: {anchorX: 'right', anchorY: 'bottom', offset: [-7, 0]}},
+    },
+  }], board => {
+    const f = x => (x ** 2 - 7 * x + 10) / (x ** 2 - 9);
+    board.create('functiongraph', [f], {
+      name: `\\(f\\)`, withLabel: true,
+      label: {position: '0.1fr left'}
+    });
+    board.create('point', [2, f(2)], {name: `\\(x_1\\)`});
+    board.create('point', [5, f(5)], {name: `\\(x_2\\)`});
+    board.create('line', [3, 1, 0]);
+    board.create('line', [-3, 1, 0]);
   });
-  board.create('point', [2, f(2)], {name: `\\(x_1\\)`});
-  board.create('point', [5, f(5)], {name: `\\(x_2\\)`});
-  board.create('line', [3, 1, 0]);
-  board.create('line', [-3, 1, 0]);
-});
+};
 </script>
