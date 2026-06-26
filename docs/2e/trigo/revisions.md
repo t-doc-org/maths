@@ -10,7 +10,7 @@ subject: "Mathématiques 2e année"
 ## Notation des triangles
 
 <script type="module">
-const {attrs, initBoard} = await tdoc.import('jsxgraph.js');
+const {attrs, initBoard, render} = await tdoc.import('jsxgraph.js');
 attrs.page = [attrs.screen, attrs.nonInteractive, {
   axis: false, grid: false,
   defaults: {
@@ -30,71 +30,75 @@ const withLabels = {
     angle: {withLabel: true},
   },
 };
-initBoard('triangle', [attrs.page, withLabels, {
-  boundingBox: [-3.5, 3.5, 3.5, -0.5],
-}], board => {
-  const A = board.create('point', [-3, 0], {
-    name: '\\(A\\)', label: {anchorX: 'right', offset: [-8, 0]}
+render.triangle = el => {
+  return initBoard(el, [attrs.page, withLabels, {
+    boundingBox: [-3.5, 3.5, 3.5, -0.5],
+  }], board => {
+    const A = board.create('point', [-3, 0], {
+      name: '\\(A\\)', label: {anchorX: 'right', offset: [-8, 0]}
+    });
+    const B = board.create('point', [3, 0], {
+      name: '\\(B\\)', label: {anchorX: 'left', offset: [4, 0]}
+    });
+    const C = board.create('point', [1, 3], {
+      name: '\\(C\\)', label: {anchorX: 'middle', offset: [0, 24]}
+    });
+    const c = board.create('segment', [A, B], {
+      name: '\\(c\\)', label: {anchorX: 'right', offset: [0, -8]}
+    });
+    const b = board.create('segment', [A, C], {
+      name: '\\(b\\)', label: {anchorX: 'right', offset: [-8, 8]}
+    });
+    const a = board.create('segment', [B, C], {
+      name: '\\(a\\)', label: {anchorX: 'left', offset: [8, 8]}
+    });
+    const alpha = board.create('angle', [B, A, C], {
+      name: '\\(\\alpha\\)', label: {anchorX: 'middle', offset: [-28, -6]}
+    });
+    const beta = board.create('angle', [C, B, A], {
+      name: '\\(\\beta\\)', label: {anchorX: 'middle', offset: [30, -26]}
+    });
+    const gamma = board.create('angle', [A, C, B], {
+      name: '\\(\\gamma\\)', label: {anchorX: 'middle', offset: [4, 24]}
+    });
   });
-  const B = board.create('point', [3, 0], {
-    name: '\\(B\\)', label: {anchorX: 'left', offset: [4, 0]}
+};
+render.triangleRectangle = el => {
+  return initBoard(el, [attrs.page, withLabels, {
+    boundingBox: [-3.5, 3.5, 3.5, -0.5],
+  }], board => {
+    const A = board.create('point', [3, 0], {
+      name: '\\(A\\)', label: {anchorX: 'left', offset: [4, 0]}
+    });
+    const B = board.create('point', [-1, 3], {
+      name: '\\(B\\)', label: {anchorX: 'middle', offset: [0, 24]}
+    });
+    const C = board.create('point', [-1, 0], {
+      name: '\\(C\\)', label: {anchorX: 'right', offset: [-12, 0]}
+    });
+    const c = board.create('segment', [A, B], {
+      name: '\\(c\\)',
+      label: {anchorX: 'middle', anchorY: 'middle', offset: [8, 8]}
+    });
+    const b = board.create('segment', [A, C], {
+        name: '\\(b\\)', label: {anchorX: 'right', offset: [0, -12]}
+    });
+    const a = board.create('segment', [B, C], {
+      name: '\\(a\\)',
+      label: {anchorX: 'right', anchorY: 'middle', offset: [-8, 0]}
+    });
+    const alpha = board.create('angle', [B, A, C], {
+      name: '\\(\\alpha\\)', label: {anchorX: 'middle', offset: [25, -16]}
+    });
+    const beta = board.create('angle', [C, B, A], {
+      name: '\\(\\beta\\)', label: {anchorX: 'middle', offset: [-18, 32]}
+    });
+    const gamma = board.create('angle', [A, C, B], {
+      name: '\\(\\gamma\\)', radius: 0.6,
+      label: {anchorX: 'middle', offset: [-15, -15]}
+    });
   });
-  const C = board.create('point', [1, 3], {
-    name: '\\(C\\)', label: {anchorX: 'middle', offset: [0, 24]}
-  });
-  const c = board.create('segment', [A, B], {
-    name: '\\(c\\)', label: {anchorX: 'right', offset: [0, -8]}
-  });
-  const b = board.create('segment', [A, C], {
-    name: '\\(b\\)', label: {anchorX: 'right', offset: [-8, 8]}
-  });
-  const a = board.create('segment', [B, C], {
-    name: '\\(a\\)', label: {anchorX: 'left', offset: [8, 8]}
-  });
-  const alpha = board.create('angle', [B, A, C], {
-    name: '\\(\\alpha\\)', label: {anchorX: 'middle', offset: [-28, -6]}
-  });
-  const beta = board.create('angle', [C, B, A], {
-    name: '\\(\\beta\\)', label: {anchorX: 'middle', offset: [30, -26]}
-  });
-  const gamma = board.create('angle', [A, C, B], {
-    name: '\\(\\gamma\\)', label: {anchorX: 'middle', offset: [4, 24]}
-  });
-});
-initBoard('triangle-rectangle', [attrs.page, withLabels, {
-  boundingBox: [-3.5, 3.5, 3.5, -0.5],
-}], board => {
-  const A = board.create('point', [3, 0], {
-    name: '\\(A\\)', label: {anchorX: 'left', offset: [4, 0]}
-  });
-  const B = board.create('point', [-1, 3], {
-    name: '\\(B\\)', label: {anchorX: 'middle', offset: [0, 24]}
-  });
-  const C = board.create('point', [-1, 0], {
-    name: '\\(C\\)', label: {anchorX: 'right', offset: [-12, 0]}
-  });
-  const c = board.create('segment', [A, B], {
-    name: '\\(c\\)',
-    label: {anchorX: 'middle', anchorY: 'middle', offset: [8, 8]}
-  });
-  const b = board.create('segment', [A, C], {
-      name: '\\(b\\)', label: {anchorX: 'right', offset: [0, -12]}
-  });
-  const a = board.create('segment', [B, C], {
-    name: '\\(a\\)',
-    label: {anchorX: 'right', anchorY: 'middle', offset: [-8, 0]}
-  });
-  const alpha = board.create('angle', [B, A, C], {
-    name: '\\(\\alpha\\)', label: {anchorX: 'middle', offset: [25, -16]}
-  });
-  const beta = board.create('angle', [C, B, A], {
-    name: '\\(\\beta\\)', label: {anchorX: 'middle', offset: [-18, 32]}
-  });
-  const gamma = board.create('angle', [A, C, B], {
-    name: '\\(\\gamma\\)', radius: 0.6,
-    label: {anchorX: 'middle', offset: [-15, -15]}
-  });
-});
+};
 </script>
 
 ````{admonition} Définition
@@ -116,7 +120,7 @@ Par rapport à l'angle $\alpha$, $a$ est le **côté opposé**, $b$ et $c$ sont 
 
 ### Exemple {num2}`exemple`
 
-```{jsxgraph} triangle-rectangle
+```{jsxgraph} triangleRectangle
 :style: width: 50%; border: none;
 ```
 
@@ -204,43 +208,45 @@ source: (<https://gomaths.edu-vd.ch>)
 ### Triangle rectangle isocèle
 
 <script type="module">
-const {attrs, initBoard} = await tdoc.import('jsxgraph.js');
-initBoard('triangle-iso-rect', [attrs.page, {
-  boundingBox: [-0.5, 4.5, 4.5, -0.5],
-}], board => {
-  const A = board.create('point', [0, 0]);
-  const B = board.create('point', [4, 0]);
-  const C = board.create('point', [4, 4]);
-  const D = board.create('point', [0, 4]);
-  board.create('segment', [A, B], {
-    name: '\\(x\\)', withLabel: true,
-    label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]},
+const {attrs, initBoard, render} = await tdoc.import('jsxgraph.js');
+render.triangleIsoRect = el => {
+  return initBoard(el, [attrs.page, {
+    boundingBox: [-0.5, 4.5, 4.5, -0.5],
+  }], board => {
+    const A = board.create('point', [0, 0]);
+    const B = board.create('point', [4, 0]);
+    const C = board.create('point', [4, 4]);
+    const D = board.create('point', [0, 4]);
+    board.create('segment', [A, B], {
+      name: '\\(x\\)', withLabel: true,
+      label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]},
+    });
+    board.create('segment', [D, A], {
+      name: '\\(x\\)', withLabel: true,
+      label: {anchorX: 'right', anchorY: 'middle', offset: [-8, 0]},
+    });
+    board.create('segment', [B, D], {
+      name: '\\(c\\)', withLabel: true,
+      label: {anchorX: 'middle', anchorY: 'middle', offset: [8, 8]},
+    });
+    board.create('segment', [B, C], {dash: 3});
+    board.create('segment', [C, D], {dash: 3});
+    board.create('angle', [D, B, A], {
+      name: '\\(45^\\circ\\)', radius: 0.6, withLabel: true,
+      label: {anchorX: 'middle', anchorY: 'middle'},
+    });
+    board.create('angle', [A, D, B], {
+      name: '\\(45^\\circ\\)', radius: 0.6, withLabel: true,
+      label: {anchorX: 'middle', anchorY: 'middle', offset: [0, 0]},
+    });
+    board.create('angle', [B, A, D], {
+      radius: 0.4, fillOpacity: 0,  withLabel: false,
+    });
+    board.create('angle', [D, C, B], {
+      radius: 0.4, fillOpacity: 0,  withLabel: false,
+    });
   });
-  board.create('segment', [D, A], {
-    name: '\\(x\\)', withLabel: true,
-    label: {anchorX: 'right', anchorY: 'middle', offset: [-8, 0]},
-  });
-  board.create('segment', [B, D], {
-    name: '\\(c\\)', withLabel: true,
-    label: {anchorX: 'middle', anchorY: 'middle', offset: [8, 8]},
-  });
-  board.create('segment', [B, C], {dash: 3});
-  board.create('segment', [C, D], {dash: 3});
-  board.create('angle', [D, B, A], {
-    name: '\\(45^\\circ\\)', radius: 0.6, withLabel: true,
-    label: {anchorX: 'middle', anchorY: 'middle'},
-  });
-  board.create('angle', [A, D, B], {
-    name: '\\(45^\\circ\\)', radius: 0.6, withLabel: true,
-    label: {anchorX: 'middle', anchorY: 'middle', offset: [0, 0]},
-  });
-  board.create('angle', [B, A, D], {
-    radius: 0.4, fillOpacity: 0,  withLabel: false,
-  });
-  board.create('angle', [D, C, B], {
-    radius: 0.4, fillOpacity: 0,  withLabel: false,
-  });
-});
+};
 </script>
 
 ````{list-grid}
@@ -252,7 +258,7 @@ initBoard('triangle-iso-rect', [attrs.page, {
     $\cos(45^\circ) = \dfrac{x}{x\sqrt{2}} = \dfrac{\sqrt{2}}{2}$
 
     $\tan(45^\circ) = \dfrac{x}{x} = 1$
--   ```{jsxgraph} triangle-iso-rect
+-   ```{jsxgraph} triangleIsoRect
     :style: width: 80%; border: none;
     ```
 ````
@@ -260,40 +266,42 @@ initBoard('triangle-iso-rect', [attrs.page, {
 ### Demi-triangle équilatéral
 
 <script type="module">
-const {attrs, initBoard} = await tdoc.import('jsxgraph.js');
-initBoard('triangle-equi', [attrs.page, {
-  boundingBox: [-0.5, 4.5, 4.5, -1],
-}], board => {
-  const A = board.create('point', [0, 0]);
-  const B = board.create('point', [4, 0]);
-  const C = board.create('point', [2, 4 * Math.sqrt(3) /2 ]);
-  const D = board.create('point', [2, 0]);
-  board.create('segment', [A,C], {
-    name: '\\(x\\)', withLabel: true,
-    label: {anchorX: 'middle', anchorY: 'middle', offset: [-8, 8]},
+const {attrs, initBoard, render} = await tdoc.import('jsxgraph.js');
+render.triangleEqui = el => {
+  return initBoard(el, [attrs.page, {
+    boundingBox: [-0.5, 4.5, 4.5, -1],
+  }], board => {
+    const A = board.create('point', [0, 0]);
+    const B = board.create('point', [4, 0]);
+    const C = board.create('point', [2, 4 * Math.sqrt(3) /2 ]);
+    const D = board.create('point', [2, 0]);
+    board.create('segment', [A,C], {
+      name: '\\(x\\)', withLabel: true,
+      label: {anchorX: 'middle', anchorY: 'middle', offset: [-8, 8]},
+    });
+    board.create('segment', [A, D], {
+      name: '\\(\\frac{x}{2}\\)', withLabel: true,
+      label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]},
+    });
+    board.create('segment', [C, D], {
+      name: '\\(h\\)', withLabel: true,
+      label: {anchorX: 'left', anchorY: 'middle', offset: [8, 0]},
+    });
+    board.create('segment', [D, B], {dash: 3});
+    board.create('segment', [B, C], {dash: 3});
+    board.create('angle', [D, A, C], {
+      name: '\\(60^\\circ\\)', radius: 0.6, withLabel: true,
+      label: {anchorX: 'middle', anchorY: 'middle'},
+    });
+    board.create('angle', [A, C, D], {
+      name: '\\(30^\\circ\\)', radius: 0.6, withLabel: true,
+      label: {anchorX: 'middle', anchorY: 'middle', offset: [0.5, -6]},
+    });
+    board.create('angle', [C, D, A], {
+      radius: 0.4, fillOpacity: 0,  withLabel: false,
+    });
   });
-  board.create('segment', [A, D], {
-    name: '\\(\\frac{x}{2}\\)', withLabel: true,
-    label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]},
-  });
-  board.create('segment', [C, D], {
-    name: '\\(h\\)', withLabel: true,
-    label: {anchorX: 'left', anchorY: 'middle', offset: [8, 0]},
-  });
-  board.create('segment', [D, B], {dash: 3});
-  board.create('segment', [B, C], {dash: 3});
-  board.create('angle', [D, A, C], {
-    name: '\\(60^\\circ\\)', radius: 0.6, withLabel: true,
-    label: {anchorX: 'middle', anchorY: 'middle'},
-  });
-  board.create('angle', [A, C, D], {
-    name: '\\(30^\\circ\\)', radius: 0.6, withLabel: true,
-    label: {anchorX: 'middle', anchorY: 'middle', offset: [0.5, -6]},
-  });
-  board.create('angle', [C, D, A], {
-    radius: 0.4, fillOpacity: 0,  withLabel: false,
-  });
-});
+};
 </script>
 
 ````{list-grid}
@@ -312,7 +320,7 @@ initBoard('triangle-equi', [attrs.page, {
     $\cos(60^\circ) = \dfrac{\frac{x}{2}}{x}= \dfrac{1}{2}$
 
     $\tan(60^\circ) = \dfrac{h}{\frac{x}{2}} = \dfrac{x\frac{\sqrt{3}}{2}}{\frac{x}{2}} = \sqrt{3}$
--   ```{jsxgraph} triangle-equi
+-   ```{jsxgraph} triangleEqui
     :style: width: 100%; border: none;
     ```
 ````
