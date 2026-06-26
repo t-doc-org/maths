@@ -39,16 +39,18 @@ l'origine**.
 ````
 
 <script type="module">
-const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
-initBoard('droite', [attrs.screen, {
+const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
+render.droite = el => {
+  return initBoard(el, [attrs.screen, {
     boundingBox: [-5, 5, 5, -5],
     pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
-}], board => {
+  }], board => {
     board.create('functiongraph', [x => - 2 / 3 * x + 1] , {
-        name: `\\(d\\)`, withLabel: true,
-        label: {position: '0.2fr right', offset: [15, 15]},
+      name: `\\(d\\)`, withLabel: true,
+      label: {position: '0.2fr right', offset: [15, 15]},
     });
-});
+  });
+};
 </script>
 
 ````{admonition} Définition

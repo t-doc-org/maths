@@ -29,7 +29,7 @@ d'équations:
 ````
 
 <script type="module">
-const {attrs, initBoard, JXG, withAxesLabels} =
+const {attrs, initBoard, JXG, render, withAxesLabels} =
   await tdoc.import('jsxgraph.js');
 attrs.page = [attrs.screen, attrs.nonInteractive, {
   boundingBox: [-6, 5.5, 6, -2.5],
@@ -50,135 +50,153 @@ attrs.page = [attrs.screen, attrs.nonInteractive, {
       point: {strokeWidth: 0},
   },
 }];
-initBoard('exemple-tan', attrs.page, board => {
-  board.create('functiongraph', [x => Math.tan(x)-2], {
-    name: '\\(\\tan(x)-1\\)', withLabel: true,
-    label: {position: '0.5fr right', offset: [-30, 0]},
-  });
-  board.create('functiongraph', [x => 3], {strokeColor: JXG.palette.red});
-  for (let k = 0; k < 5; ++k) {
-    board.create('point', [Math.atan(5) - 2 * Math.PI + k * Math.PI, 3], {
-      fillColor: 'darkmagenta', withLabel: false, size: 3,
+render.exempleTan = el => {
+  return initBoard(el, attrs.page, board => {
+    board.create('functiongraph', [x => Math.tan(x) - 2], {
+      name: '\\(\\tan(x)-1\\)', withLabel: true,
+      label: {position: '0.5fr right', offset: [-30, 0]},
     });
-  }
-  board.create('segment', [[Math.atan(5), 0],[Math.atan(5), 3]], {dash: 2});
-});
-initBoard('exemple-cos', [attrs.page, {boundingBox: [-6, 1.5, 6, -1.5]}], board => {
-  board.create('functiongraph', [x => Math.cos(3 * x)], {
-    name: '\\(\\cos(3x)\\)', withLabel: true,
-    label: {position: '0.7fr right', offset: [-20, 0]},
+    board.create('functiongraph', [x => 3], {strokeColor: JXG.palette.red});
+    for (let k = 0; k < 5; ++k) {
+      board.create('point', [Math.atan(5) - 2 * Math.PI + k * Math.PI, 3], {
+        fillColor: 'darkmagenta', withLabel: false, size: 3,
+      });
+    }
+    board.create('segment', [[Math.atan(5), 0],[Math.atan(5), 3]], {dash: 2});
   });
-  board.create('functiongraph', [x => Math.sqrt(2) / 2], {
-    strokeColor: JXG.palette.red,
-  });
-  for (let k = 0; k < 7; ++k) {
-    board.create('point',
-      [Math.PI / 12 - 2 * Math.PI + k * 2 * Math.PI/ 3, Math.sqrt(2) / 2],
-      {fillColor: 'darkmagenta', withLabel: false, size: 3});
-    board.create('point',
-      [-Math.PI / 12 - 2 * Math.PI + k * 2 * Math.PI/ 3, Math.sqrt(2) / 2],
-      {fillColor: 'darkgreen', withLabel: false, size: 3});
-  }
-  board.create('segment',
-    [[Math.PI / 12, 0],[Math.PI / 12, Math.sqrt(2) / 2]], {dash: 2});
-  board.create('segment',
-    [[-Math.PI / 12, 0],[-Math.PI / 12, Math.sqrt(2) / 2]], {dash: 2});
-});
-initBoard('exemple-sin', [attrs.page, {boundingBox: [-6, 2.5, 6, -0.5]}], board => {
-  board.create('functiongraph', [x => Math.sin(x - Math.PI/2)+1], {
-    name: '\\(\\sin(x - \\dfrac{\\pi}{2})+1\\)', withLabel: true,
-    label: {position: '0.7fr left', offset: [0, 0]},
-  });
-  board.create('functiongraph', [x => 1 / 2], {strokeColor: JXG.palette.red});
-  for (let k = 0; k < 2; ++k) {
-    board.create('point',
-      [Math.PI / 3 - 2 * Math.PI + k * 2 * Math.PI, 1 / 2],
-      {fillColor: 'darkmagenta', withLabel: false, size: 3});
-    board.create('point',
-      [5 * Math.PI / 3 - 2 * Math.PI + k * 2 * Math.PI, 1 / 2],
-      {fillColor: 'darkgreen', withLabel: false, size: 3});
-  }
-  board.create('segment', [[Math.PI / 3, 0],[Math.PI / 3, 1 / 2]], {dash: 2});
-  board.create('segment',
-    [[5 * Math.PI / 3, 0],[5 * Math.PI / 3, 1 / 2]], {dash: 2});
-});
-initBoard('exemple-sin-2', [attrs.page, {
-  boundingBox: [-6, 1.5, 6, -1.5],
-}], board => {
-  board.create('functiongraph', [x => Math.sin(2 *x)], {
-    name: '\\(\\sin(2x)\\)', withLabel: true,
-    label: {position: '0.75fr left', offset: [-20, 0]},
-  });
-  board.create('functiongraph', [x => Math.sin(Math.PI/2 -x)], {
-    name: '\\(\\sin(\\dfrac{\\pi}{2}-x)\\)', withLabel: true,
-    label: {
-      position: '0.44fr left', offset: [-30, 0], strokeColor: JXG.palette.red,
-    },
-    strokeColor: JXG.palette.red,
-  });
-  for (let k = 0; k < 7; ++k) {
-    board.create('point',
-      [Math.PI / 6 - 2 * Math.PI + k * 2 * Math.PI/3,
-       Math.sin(2 * (Math.PI / 6 - 2 * Math.PI + k * 2 * Math.PI/3))],
-      {fillColor: 'darkmagenta', withLabel: false, size: 3});
-    board.create('point', [Math.PI / 2 - 2 * Math.PI + k * 2 * Math.PI, 0], {
-      fillColor: 'darkgreen', withLabel: false, size: 3,
+};
+render.exempleCos = el => {
+  return initBoard(el, [attrs.page, {
+    boundingBox: [-6, 1.5, 6, -1.5],
+  }], board => {
+    board.create('functiongraph', [x => Math.cos(3 * x)], {
+      name: '\\(\\cos(3x)\\)', withLabel: true,
+      label: {position: '0.7fr right', offset: [-20, 0]},
     });
-  }
-  board.create('segment',
-    [[Math.PI / 6, 0],[Math.PI / 6, Math.sin(2 * Math.PI/6)]], {dash: 2});
-});
-initBoard('exemple-sin-3', [attrs.page, {
-  boundingBox: [-6, 1.5, 6, -1.5],
-}], board => {
-  board.create('functiongraph', [x => Math.sin(2 *x + Math.PI/4)], {
-    name: '\\(\\sin(2x - \\dfrac{\\pi}{2})\\)', withLabel: true,
-    label: {position: '0.75fr left', offset: [-40, -10]},
+    board.create('functiongraph', [x => Math.sqrt(2) / 2], {
+      strokeColor: JXG.palette.red,
+    });
+    for (let k = 0; k < 7; ++k) {
+      board.create('point',
+        [Math.PI / 12 - 2 * Math.PI + k * 2 * Math.PI / 3, Math.sqrt(2) / 2],
+        {fillColor: 'darkmagenta', withLabel: false, size: 3});
+      board.create('point',
+        [-Math.PI / 12 - 2 * Math.PI + k * 2 * Math.PI / 3, Math.sqrt(2) / 2],
+        {fillColor: 'darkgreen', withLabel: false, size: 3});
+    }
+    board.create('segment',
+      [[Math.PI / 12, 0],[Math.PI / 12, Math.sqrt(2) / 2]], {dash: 2});
+    board.create('segment',
+      [[-Math.PI / 12, 0],[-Math.PI / 12, Math.sqrt(2) / 2]], {dash: 2});
   });
-  board.create('functiongraph', [x => Math.cos(x)], {
-    name: '\\(\\cos(x)\\)', withLabel: true,
-    label: {
-      position: '0.44fr left', offset: [-20, 0], strokeColor: JXG.palette.red,
-    },
-    strokeColor: JXG.palette.red,
+};
+render.exempleSin = el => {
+  return initBoard(el, [attrs.page, {
+    boundingBox: [-6, 2.5, 6, -0.5],
+  }], board => {
+    board.create('functiongraph', [x => Math.sin(x - Math.PI / 2) + 1], {
+      name: '\\(\\sin(x - \\dfrac{\\pi}{2})+1\\)', withLabel: true,
+      label: {position: '0.7fr left', offset: [0, 0]},
+    });
+    board.create('functiongraph', [x => 1 / 2], {strokeColor: JXG.palette.red});
+    for (let k = 0; k < 2; ++k) {
+      board.create('point',
+        [Math.PI / 3 - 2 * Math.PI + k * 2 * Math.PI, 1 / 2],
+        {fillColor: 'darkmagenta', withLabel: false, size: 3});
+      board.create('point',
+        [5 * Math.PI / 3 - 2 * Math.PI + k * 2 * Math.PI, 1 / 2],
+        {fillColor: 'darkgreen', withLabel: false, size: 3});
+    }
+    board.create('segment', [[Math.PI / 3, 0],[Math.PI / 3, 1 / 2]], {dash: 2});
+    board.create('segment',
+      [[5 * Math.PI / 3, 0],[5 * Math.PI / 3, 1 / 2]], {dash: 2});
   });
-  for (let k = 0; k < 7; ++k) {
-    board.create('point',
-      [Math.PI / 12 - 2 * Math.PI + k * 2 * Math.PI/3,
-       Math.cos(Math.PI / 12 - 2 * Math.PI + k * 2 * Math.PI/3)],
-      {fillColor: 'darkmagenta', withLabel: false, size: 3});
-    board.create('point',
-      [Math.PI / 4 - 2 * Math.PI + k * 2 * Math.PI,
-       Math.cos(Math.PI / 4 - 2 * Math.PI + k * 2 * Math.PI)],
-      {fillColor: 'darkgreen', withLabel: false, size: 3});
-  }
-  board.create('segment',
-    [[Math.PI / 12, 0],[Math.PI / 12, Math.cos(Math.PI/12)]], {dash: 2});
-  board.create('segment',
-    [[Math.PI / 4, 0],[Math.PI / 4, Math.cos(Math.PI/4)]], {dash: 2});
-});
-initBoard('exemple-sin-cos', [attrs.page, {
-  boundingBox: [-6, 2.8, 6, -1.5],
-}], board => {
-  board.create('functiongraph', [x => 2*(Math.cos(x))**2+ Math.sin(x)], {
-    name: '\\(2\\cos^2(x)+ \\sin(x)\\)', withLabel: true,
-    label: {position: '0.7fr left', offset: [-40, 0]},
+};
+render.exempleSin2 = el => {
+  return initBoard(el, [attrs.page, {
+    boundingBox: [-6, 1.5, 6, -1.5],
+  }], board => {
+    board.create('functiongraph', [x => Math.sin(2 *x)], {
+      name: '\\(\\sin(2x)\\)', withLabel: true,
+      label: {position: '0.75fr left', offset: [-20, 0]},
+    });
+    board.create('functiongraph', [x => Math.sin(Math.PI / 2 - x)], {
+      name: '\\(\\sin(\\dfrac{\\pi}{2}-x)\\)', withLabel: true,
+      label: {
+        position: '0.44fr left', offset: [-30, 0], strokeColor: JXG.palette.red,
+      },
+      strokeColor: JXG.palette.red,
+    });
+    for (let k = 0; k < 7; ++k) {
+      board.create('point',
+        [Math.PI / 6 - 2 * Math.PI + k * 2 * Math.PI / 3,
+         Math.sin(2 * (Math.PI / 6 - 2 * Math.PI + k * 2 * Math.PI / 3))],
+        {fillColor: 'darkmagenta', withLabel: false, size: 3});
+      board.create('point', [Math.PI / 2 - 2 * Math.PI + k * 2 * Math.PI, 0], {
+        fillColor: 'darkgreen', withLabel: false, size: 3,
+      });
+    }
+    board.create('segment',
+      [[Math.PI / 6, 0],[Math.PI / 6, Math.sin(2 * Math.PI / 6)]], {dash: 2});
   });
-  board.create('functiongraph', [x => 1], {strokeColor: JXG.palette.red,});
-  for (let k = 0; k < 7; ++k) {
-    board.create('point', [-1 * Math.PI / 6 - 2 * Math.PI + k * 2 * Math.PI, 1],
-      {fillColor: 'darkmagenta', withLabel: false, size: 3});
-    board.create('point', [7 * Math.PI / 6 - 2 * Math.PI + k * 2 * Math.PI, 1],
-      {fillColor: 'darkgreen', withLabel: false, size: 3});
-    board.create('point', [Math.PI / 2 - 2 * Math.PI + k * 2 * Math.PI, 1],
-      {fillColor: 'skyblue', withLabel: false, size: 3});
-  }
-  board.create('segment', [[-1 * Math.PI / 6, 0],[-1 * Math.PI / 6, 1]],
-    {dash: 2});
-  board.create('segment', [[7 * Math.PI / 6 , 0],[7 * Math.PI / 6 , 1]],
-    {dash: 2});
-  board.create('segment', [[Math.PI / 2 , 0],[Math.PI / 2 , 1]], {dash: 2});
-});
+};
+render.exempleSin3 = el => {
+  return initBoard(el, [attrs.page, {
+    boundingBox: [-6, 1.5, 6, -1.5],
+  }], board => {
+    board.create('functiongraph', [x => Math.sin(2 * x + Math.PI / 4)], {
+      name: '\\(\\sin(2x - \\dfrac{\\pi}{2})\\)', withLabel: true,
+      label: {position: '0.75fr left', offset: [-40, -10]},
+    });
+    board.create('functiongraph', [x => Math.cos(x)], {
+      name: '\\(\\cos(x)\\)', withLabel: true,
+      label: {
+        position: '0.44fr left', offset: [-20, 0], strokeColor: JXG.palette.red,
+      },
+      strokeColor: JXG.palette.red,
+    });
+    for (let k = 0; k < 7; ++k) {
+      board.create('point',
+        [Math.PI / 12 - 2 * Math.PI + k * 2 * Math.PI / 3,
+         Math.cos(Math.PI / 12 - 2 * Math.PI + k * 2 * Math.PI / 3)],
+        {fillColor: 'darkmagenta', withLabel: false, size: 3});
+      board.create('point',
+        [Math.PI / 4 - 2 * Math.PI + k * 2 * Math.PI,
+         Math.cos(Math.PI / 4 - 2 * Math.PI + k * 2 * Math.PI)],
+        {fillColor: 'darkgreen', withLabel: false, size: 3});
+    }
+    board.create('segment',
+      [[Math.PI / 12, 0],[Math.PI / 12, Math.cos(Math.PI / 12)]], {dash: 2});
+    board.create('segment',
+      [[Math.PI / 4, 0],[Math.PI / 4, Math.cos(Math.PI / 4)]], {dash: 2});
+  });
+};
+render.exempleSinCos = el => {
+  return initBoard(el, [attrs.page, {
+    boundingBox: [-6, 2.8, 6, -1.5],
+  }], board => {
+    board.create('functiongraph', [x => 2 * (Math.cos(x)) ** 2 + Math.sin(x)], {
+      name: '\\(2\\cos^2(x)+ \\sin(x)\\)', withLabel: true,
+      label: {position: '0.7fr left', offset: [-40, 0]},
+    });
+    board.create('functiongraph', [x => 1], {strokeColor: JXG.palette.red,});
+    for (let k = 0; k < 7; ++k) {
+      board.create('point',
+        [-1 * Math.PI / 6 - 2 * Math.PI + k * 2 * Math.PI, 1],
+        {fillColor: 'darkmagenta', withLabel: false, size: 3});
+      board.create('point',
+        [7 * Math.PI / 6 - 2 * Math.PI + k * 2 * Math.PI, 1],
+        {fillColor: 'darkgreen', withLabel: false, size: 3});
+      board.create('point', [Math.PI / 2 - 2 * Math.PI + k * 2 * Math.PI, 1],
+        {fillColor: 'skyblue', withLabel: false, size: 3});
+    }
+    board.create('segment', [[-1 * Math.PI / 6, 0], [-1 * Math.PI / 6, 1]],
+      {dash: 2});
+    board.create('segment', [[7 * Math.PI / 6, 0], [7 * Math.PI / 6, 1]],
+      {dash: 2});
+    board.create('segment', [[Math.PI / 2, 0],[Math.PI / 2, 1]], {dash: 2});
+  });
+};
 </script>
 
 ## Exemple {num2}`exemple`
@@ -198,7 +216,7 @@ $x = 1.3734 {\color{red} \,+\, k \cdot \pi}$
 
 $S = {\color{darkmagenta}\{1.3734 + k\pi \bigm| k \in \mathbb{Z}\}}$
 
-```{jsxgraph} exemple-tan
+```{jsxgraph} exempleTan
 :style: width: 100%; border: none;
 ```
 
@@ -248,7 +266,7 @@ $\cos(x)$ a une période de $2\pi$, il y a donc deux équations possibles:
 $S = {\color{darkmagenta}\left\{\dfrac{\pi}{12} + k \cdot \dfrac{2\pi}{3} \bigm| k \in \mathbb{Z} \right\}} \cup
 {\color{green}\left\{-\dfrac{\pi}{12} + k \cdot \dfrac{2\pi}{3} \bigm| k \in \mathbb{Z} \right\}}$
 
-```{jsxgraph} exemple-cos
+```{jsxgraph} exempleCos
 :style: width: 100%; border: none;
 ```
 
@@ -312,7 +330,7 @@ $\sin(x)$ a une période de $2\pi$, il y a donc deux équations possibles:
 $S = {\color{darkmagenta}\left\{\dfrac{\pi}{3} + k \cdot 2\pi \bigm| k \in \mathbb{Z} \right\}} \cup
 {\color{darkgreen}\left\{\dfrac{5\pi}{3} + k \cdot 2\pi \bigm| k \in \mathbb{Z} \right\}}$
 
-```{jsxgraph} exemple-sin
+```{jsxgraph} exempleSin
 :style: width: 100%; border: none;
 ```
 
@@ -380,7 +398,7 @@ $S = {\color{darkmagenta}\left\{\dfrac{\pi}{6} + k \cdot \dfrac{2\pi}{3} \bigm| 
 {\color{darkgreen}\left\{\dfrac{\pi}{2} + k \cdot 2\pi \bigm| k \in \mathbb{Z}\right\}}$
 
 
-```{jsxgraph} exemple-sin-2
+```{jsxgraph} exempleSin2
 :style: width: 100%; border: none;
 ```
 
@@ -420,7 +438,7 @@ deux équations possibles:
 $S = {\color{darkmagenta}\left\{\dfrac{\pi}{12} + k \cdot \dfrac{2\pi}{3} \bigm| k \in \mathbb{Z}\right\}} \cup
 {\color{darkgreen}\left\{\dfrac{\pi}{4} + k \cdot 2\pi \bigm| k \in \mathbb{Z}\right\}}$
 
-```{jsxgraph} exemple-sin-3
+```{jsxgraph} exempleSin3
 :style: width: 100%; border: none;
 ```
 
@@ -474,6 +492,6 @@ $S = {\color{darkmagenta}\left\{-\dfrac{\pi}{6} + k \cdot 2\pi \bigm| k \in \mat
 {\color{skyblue}\left\{\dfrac{\pi}{2} + k \cdot 2\pi \bigm| k \in \mathbb{Z}\right\}} =
 \left\{\dfrac{\pi}{2} + k \cdot \dfrac{2\pi}{3} \bigm| k \in \mathbb{Z}\right\}$
 
-```{jsxgraph} exemple-sin-cos
+```{jsxgraph} exempleSinCos
 :style: width: 100%; border: none;
 ```

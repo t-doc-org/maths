@@ -30,7 +30,7 @@ $\vec{v} = \begin{pmatrix} 3\\ 2\\ \end{pmatrix}$
 
 En effet, ils ont tous la même longueur, la même direction et le même sens.
 
-```{jsxgraph} vecteurs-1
+```{jsxgraph} vecteurs1
 :style: width: 50%;
 ```
 
@@ -38,12 +38,12 @@ En effet, ils ont tous la même longueur, la même direction et le même sens.
 
 Les vecteurs suivants sont colinéaires, car ils ont tous la même direction.
 
-```{jsxgraph} vecteurs-2
+```{jsxgraph} vecteurs2
 :style: width: 50%;
 ```
 
 <script type="module">
-const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
 const battrs = [attrs.screen, {
   boundingBox: [-5, 5, 4, -2],
   pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
@@ -54,24 +54,28 @@ const battrs = [attrs.screen, {
     },
   },
 }];
-initBoard('vecteurs-1', battrs, board => {
-  board.create('arrow', [[0, 0], [3,2]], {name: `\\(\\vec{v_1}\\)`});
-  board.create('arrow', [[-4,-1], [-1,1]], {name: `\\(\\vec{v_2}\\)`});
-  board.create('arrow', [[-5, 1], [-2,3]], {name: `\\(\\vec{v_3}\\)`});
-  board.create('arrow', [[-2,2], [1,4]], {name: `\\(\\vec{v_4}\\)`});
-});
-initBoard('vecteurs-2', battrs, board => {
-  board.create('arrow', [[0, 0], [3,2]], {name: `\\(\\vec{v_1}\\)`});
-  board.create('arrow', [[-4,1], [-2.5,2]], {
+render.vecteurs1 = el => {
+  return initBoard(el, battrs, board => {
+    board.create('arrow', [[0, 0], [3,2]], {name: `\\(\\vec{v_1}\\)`});
+    board.create('arrow', [[-4,-1], [-1,1]], {name: `\\(\\vec{v_2}\\)`});
+    board.create('arrow', [[-5, 1], [-2,3]], {name: `\\(\\vec{v_3}\\)`});
+    board.create('arrow', [[-2,2], [1,4]], {name: `\\(\\vec{v_4}\\)`});
+  });
+};
+render.vecteurs2 = el => {
+  return initBoard(el, battrs, board => {
+    board.create('arrow', [[0, 0], [3,2]], {name: `\\(\\vec{v_1}\\)`});
+    board.create('arrow', [[-4,1], [-2.5,2]], {
       name: `\\(\\vec{v_2}\\)`, label: {offset: [-35, -5]},
-  });
-  board.create('arrow', [[3, 3], [-3,-1]], {
+    });
+    board.create('arrow', [[3, 3], [-3,-1]], {
       name: `\\(\\vec{v_3}\\)`, label: {offset: [-130, -60]},
-  });
-  board.create('arrow', [[-2,4], [-3.5,3]], {
+    });
+    board.create('arrow', [[-2,4], [-3.5,3]], {
       name: `\\(\\vec{v_4}\\)`, label: {offset: [-35, -5]},
+    });
   });
-});
+};
 </script>
 
 ````{admonition} Définition
@@ -135,19 +139,18 @@ $\vec{v} = 3 \cdot \vec{e_1} + 2 \cdot \vec{e_2} = \begin{pmatrix} 3\\ 2\\ \end{
 
 ````{list-grid}
 :style: grid-template-columns: 1fr 1fr;
--   # Base du plan
-    ```{jsxgraph} base
-    :style: width: 80%;
-    ```
-
--   # Base orthonormée du plan
-    ```{jsxgraph} base-orthonormée
-    :style: width: 80%;
-    ```
+- # Base du plan
+  ```{jsxgraph} base
+  :style: width: 80%;
+  ```
+- # Base orthonormée du plan
+  ```{jsxgraph} baseOrthonormée
+  :style: width: 80%;
+  ```
 ````
 
 <script type="module">
-const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
 const battrs = [attrs.screen, attrs.nonInteractive, {
   boundingBox: [-2, 4, 4, -2],
   pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
@@ -161,43 +164,46 @@ const battrs = [attrs.screen, attrs.nonInteractive, {
     parallel: {strokeOpacity: 0.1},
   },
 }];
-initBoard('base', battrs, board => {
-  const incl = 6;
-  const Ox = board.create('axis', [[0, 0], [incl, 1]], {
-    ticks: {
-      drawLabels: false, insertTicks: false, ticksDistance: 0, minorTicks: 0,
-    },
-  });
-  const Oy = board.create('axis', [[0, 0], [1, incl]], {
-    ticks: {
-      drawLabels: false, insertTicks: false, ticksDistance: 0, minorTicks: 0},
-  });
-  const alpha = Math.atan(1/incl);
-  const beta = Math.PI/2 - alpha;
-  const a = 1;
-  const b = 1;
-  const e1 = [a * Math.cos(alpha), a * Math.sin(alpha)];
-  const e2 = [b * Math.cos(beta), b * Math.sin(beta)];
+render.base = el => {
+  return initBoard(el, battrs, board => {
+    const incl = 6;
+    const Ox = board.create('axis', [[0, 0], [incl, 1]], {
+      ticks: {
+        drawLabels: false, insertTicks: false, ticksDistance: 0, minorTicks: 0,
+      },
+    });
+    const Oy = board.create('axis', [[0, 0], [1, incl]], {
+      ticks: {
+        drawLabels: false, insertTicks: false, ticksDistance: 0, minorTicks: 0},
+    });
+    const alpha = Math.atan(1/incl);
+    const beta = Math.PI/2 - alpha;
+    const a = 1;
+    const b = 1;
+    const e1 = [a * Math.cos(alpha), a * Math.sin(alpha)];
+    const e2 = [b * Math.cos(beta), b * Math.sin(beta)];
 
-  for (let i = -3; i < 5; i ++) {
-    board.create('parallel', [Ox, [e1[0] + i * e2[0], e1[1] + i * e2[1]]]);
-    board.create('parallel', [Oy, [i * e1[0] + e2[0], i * e1[1] +e2[1]]]);
-  }
+    for (let i = -3; i < 5; i ++) {
+      board.create('parallel', [Ox, [e1[0] + i * e2[0], e1[1] + i * e2[1]]]);
+      board.create('parallel', [Oy, [i * e1[0] + e2[0], i * e1[1] +e2[1]]]);
+    }
 
-  board.create('arrow', [[0, 0], [e1[0],e1[1]]], {
-    name: `\\(\\vec{e_1}\\)`,
-    label: {position: '0.4fr right', offset: [0, -3]},
+    board.create('arrow', [[0, 0], [e1[0],e1[1]]], {
+      name: `\\(\\vec{e_1}\\)`,
+      label: {position: '0.4fr right', offset: [0, -3]},
+    });
+    board.create('arrow', [[0,0], [e2[0], e2[1]]], {
+      name: `\\(\\vec{e_2}\\)`, label: {offset: [-3, 0]},
+    });
+    board.create('arrow', [[0,0], [3*e1[0]+2*e2[0], 3*e1[1]+2*e2[1]]], {
+      name: `\\(\\vec{v}\\)`,
+    });
   });
-  board.create('arrow', [[0,0], [e2[0], e2[1]]], {
-    name: `\\(\\vec{e_2}\\)`, label: {offset: [-3, 0]},
-  });
-  board.create('arrow', [[0,0], [3*e1[0]+2*e2[0], 3*e1[1]+2*e2[1]]], {
-    name: `\\(\\vec{v}\\)`});
-   });
+};
 </script>
 
 <script type="module">
-const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
 const battrs = [attrs.screen, attrs.nonInteractive, {
   boundingBox: [-2, 4, 4, -2],
   pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
@@ -222,16 +228,18 @@ const battrs = [attrs.screen, attrs.nonInteractive, {
     },
   },
 }];
-initBoard('base-orthonormée', battrs, board => {
-  board.create('arrow', [[0, 0], [1,0]], {
-    name: `\\(\\vec{e_1}\\)`,
-    label: {position: '0.4fr right', offset: [0, -3]},
+render.baseOrthonormée = el => {
+  return initBoard(el, battrs, board => {
+    board.create('arrow', [[0, 0], [1,0]], {
+      name: `\\(\\vec{e_1}\\)`,
+      label: {position: '0.4fr right', offset: [0, -3]},
+    });
+    board.create('arrow', [[0,0], [0,1]], {
+      name: `\\(\\vec{e_2}\\)`, label: {offset: [-3, 0]},
+    });
+    board.create('arrow', [[0,0], [3,2]], {name: `\\(\\vec{v}\\)`});
   });
-  board.create('arrow', [[0,0], [0,1]], {
-    name: `\\(\\vec{e_2}\\)`, label: {offset: [-3, 0]},
-  });
-  board.create('arrow', [[0,0], [3,2]], {name: `\\(\\vec{v}\\)`});
-});
+};
 </script>
 
 ````{admonition} Théorème
@@ -373,7 +381,7 @@ Soient trois points $A$, $B$ et $C$ du plan.
 ````
 
 <script type="module">
-const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
 const battrs = [attrs.screen, {
   boundingBox: [-1, 8, 8, -1],
   pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
@@ -406,47 +414,53 @@ const battrs = [attrs.screen, {
     },
   },
 }];
-initBoard('chasle', battrs, board => {
-  const p1 = board.create('point', [0, 1]);
-  const p2 = board.create('point', [4, 7]);
-  const p3 = board.create('point', [6, 0]);
-  board.create('arrow', [p1, p2], {
-    name: `\\(\\overrightarrow{AB}\\)`, label: {offset: [0, 0]},
+render.chasle = el => {
+  return initBoard(el, battrs, board => {
+    const p1 = board.create('point', [0, 1]);
+    const p2 = board.create('point', [4, 7]);
+    const p3 = board.create('point', [6, 0]);
+    board.create('arrow', [p1, p2], {
+      name: `\\(\\overrightarrow{AB}\\)`, label: {offset: [0, 0]},
+    });
+    board.create('arrow', [p2, p3], {
+      name: `\\(\\overrightarrow{BC}\\)`, label: {offset: [0, 0]},
+    });
+    board.create('arrow', [p1, p3], {
+      name: `\\(\\overrightarrow{AC}\\)`, label: {offset: [0, 0]},
+    });
   });
-  board.create('arrow', [p2, p3], {
-    name: `\\(\\overrightarrow{BC}\\)`, label: {offset: [0, 0]},
+};
+render.oppose = el => {
+  return initBoard(el, battrs, board => {
+    const p1 = board.create('point', [0, 3]);
+    const p2 = board.create('point', [6, 7]);
+    board.create('arrow', [p1, p2], {
+      name: `\\(\\overrightarrow{AB}\\)`, label: {offset: [0, 0]},
+    });
+    const d = [1, -2];
+    board.create('arrow', [() => [p2.X() + d[0], p2.Y() + d[1]],
+                           () => [p1.X() + d[0], p1.Y() + d[1]]], {
+      name: `\\(\\overrightarrow{BA}\\)`, label: {offset: [0, 0]},
+    });
   });
-  board.create('arrow', [p1, p3], {
-    name: `\\(\\overrightarrow{AC}\\)`, label: {offset: [0, 0]},
+};
+render.vecteur = el => {
+  return initBoard(el, [battrs, {
+    axis: true,
+    defaults: {arrow: {label: {position: '0.5fr right'}}},
+  }], board => {
+    const p1 = board.create('point', [0, 0], {size: 0, fixed: true});
+    const p2 = board.create('point', [7, 1]);
+    const p3 = board.create('point', [3, 6]);
+    board.create('arrow', [p2, p1], {
+      name: `\\(\\overrightarrow{AO}\\)`, label: {offset: [0, 0]},
+    });
+    board.create('arrow', [p1, p3], {
+      name: `\\(\\overrightarrow{OB}\\)`, label: {offset: [0, 0]},
+    });
+    board.create('arrow', [p2, p3], {
+      name: `\\(\\overrightarrow{AB}\\)`, label: {offset: [0, 0]},
+    });
   });
-});
-initBoard('oppose', battrs, board => {
-  const p1 = board.create('point', [0, 3]);
-  const p2 = board.create('point', [6, 7]);
-  board.create('arrow', [p1, p2], {
-    name: `\\(\\overrightarrow{AB}\\)`, label: {offset: [0, 0]},
-  });
-  const d = [1, -2];
-  board.create('arrow', [() => [p2.X() + d[0], p2.Y() + d[1]],
-                         () => [p1.X() + d[0], p1.Y() + d[1]]], {
-    name: `\\(\\overrightarrow{BA}\\)`, label: {offset: [0, 0]},
-  });
-});
-initBoard('vecteur', [battrs, {
-  axis: true,
-  defaults: {arrow: {label: {position: '0.5fr right'}}},
-}], board => {
-  const p1 = board.create('point', [0, 0], {size: 0, fixed: true});
-  const p2 = board.create('point', [7, 1]);
-  const p3 = board.create('point', [3, 6]);
-  board.create('arrow', [p2, p1], {
-    name: `\\(\\overrightarrow{AO}\\)`, label: {offset: [0, 0]},
-  });
-  board.create('arrow', [p1, p3], {
-    name: `\\(\\overrightarrow{OB}\\)`, label: {offset: [0, 0]},
-  });
-  board.create('arrow', [p2, p3], {
-    name: `\\(\\overrightarrow{AB}\\)`, label: {offset: [0, 0]},
-  });
-});
+};
 </script>

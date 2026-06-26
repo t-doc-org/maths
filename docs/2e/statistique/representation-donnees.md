@@ -183,7 +183,7 @@ x_i & n_i & f_i \\
 Un **diagramme en barres** ou à bâtons est un diagramme dans lequel sont
 représentés les effectifs ou les fréquences des modalités.
 
-```{chartjs} template:chart
+```{chartjs} chart
 :style: width: 60%;
 type: 'bar',
 data: {
@@ -213,7 +213,7 @@ options: {
 Un **diagramme circulaire** ou à secteurs est un diagramme dans lequel sont
 représentés les fréquences des modalités d'une variable statistique.
 
-```{chartjs} template:chart
+```{chartjs} chart
 :style: width: 50%; aspect-ratio: 3 / 2;
 type: 'pie',
 data: {
@@ -289,7 +289,7 @@ x_i & n_i & f_i & F_i \\
 Une **fonction de répartition** est une fonction discontinue, en escalier, qui
 représente les fréquences cumulées d'une variable statistique discrète.
 
-```{chartjs} template:cumulative-distribution-function
+```{chartjs} cumulativeDistributionFunction
 :style: width: 80%;
 sample: [
   3, 4.5, 4, 3.5, 5, 6, 6, 4, 4.5, 5, 5, 4, 4.5, 5.5, 5, 6, 5.5, 4.5, 2, 4.5,
@@ -395,7 +395,7 @@ x_i & c_i & n_i & f_i & F_i \\
 Un **histogramme** est un diagramme dans lequel sont représentés les effectifs
 ou les fréquences des classes d'une variable statistique continue.
 
-```{chartjs} template:histogram
+```{chartjs} histogram
 :style: width: 80%;
 uniform: {min: 40, max: 95, width: 5},
 options: {
@@ -560,7 +560,7 @@ Reprenez la donnée de l'{numref}`exercice %s<exercice:transports>`.
     \hline
     \end{array}
     ```
-2.  ```{chartjs} template:chart
+2.  ```{chartjs} chart
     :class: align-left
     :style: width: 70%;
     type: 'bar',
@@ -586,7 +586,7 @@ Reprenez la donnée de l'{numref}`exercice %s<exercice:transports>`.
       },
     },
     ```
-3.  ```{chartjs} template:chart
+3.  ```{chartjs} chart
     :class: align-left
     :style: width: 50%; aspect-ratio: 3 / 2;
     type: 'pie',
@@ -633,7 +633,7 @@ Reprenez la donnée de l'{numref}`exercice %s<exercice:sang>`.
     \hline
     \end{array}
     ```
-2.  ```{chartjs} template:chart
+2.  ```{chartjs} chart
     :class: align-left
     :style: width: 60%;
     type: 'bar',
@@ -708,7 +708,7 @@ Sainte-Croix en 2021-2022.
     \hline
     \end{array}
     ```
-5.  ```{chartjs} template:cumulative-distribution-function
+5.  ```{chartjs} cumulativeDistributionFunction
     :class: align-left
     :style: width: 70%;
     sample: [
@@ -779,7 +779,7 @@ Un groupe d'élèves sont classés selon la pointure de leurs pieds.
     \hline
     \end{array}
     ```
-5.  ```{chartjs} template:chart
+5.  ```{chartjs} chart
     :class: align-left
     :style: width: 70%;
     type: 'bar',
@@ -803,7 +803,7 @@ Un groupe d'élèves sont classés selon la pointure de leurs pieds.
       },
     },
     ```
-6.  ```{chartjs} template:cumulative-distribution-function
+6.  ```{chartjs} cumulativeDistributionFunction
     :class: align-left
     :style: width: 70%;
     step: 1,
@@ -875,7 +875,7 @@ minutes.
     \hline
     \end{array}
     ```
-5.  ```{chartjs} template:histogram
+5.  ```{chartjs} histogram
     :class: align-left
     :style: width: 80%;
     uniform: {min: 60, max: 120, width: 10},

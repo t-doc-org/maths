@@ -20,7 +20,7 @@ Les deux ensembles de données ont la même moyenne $ \overline{x} = 34$.
 Toutefois les deux populations sont bien différentes, car les données
 recueillies par Bob sont beaucoup plus **dispersées** que celles d'Alice.
 
-```{chartjs} template:density-function
+```{chartjs} densityFunction
 :style: width: 50%;
 min: 5, max: 65, step: 5,
 sample: [10, 12, 14, 52, 56, 60],
@@ -44,7 +44,7 @@ annotations: [{
 }],
 ```
 
-```{chartjs} template:density-function
+```{chartjs} densityFunction
 :style: width: 50%;
 min: 5, max: 65, step: 5,
 sample: [28, 29, 33, 35, 38, 41],
@@ -165,7 +165,7 @@ La **boîte à moustaches** d'une variable statistique discrète ou continue est
 graphique qui représente l'étendue et les différents quartiles:
 $Q_0 = 9$, $Q_1 = 18$, $Q_2 = 22$, $Q_3 = 27$ et $Q_4 = 33$.
 
-```{chartjs} template:chart
+```{chartjs} chart
 :style: width: 70%; aspect-ratio: 5;
 type: 'boxplot',
 data: {
@@ -204,7 +204,7 @@ haute obtenue.
 
 Les quartiles permettent de représenter la boîte à moustache de cet exemple:
 
-```{chartjs} template:chart
+```{chartjs} chart
 :style: width: 70%; aspect-ratio: 4;
 type: 'boxplot',
 data: {
@@ -304,7 +304,7 @@ Calcul de l'écart type:
 $s = \sqrt{v} = \sqrt{0.86} = 0.93$
 
 
-```{chartjs} template:density-function
+```{chartjs} densityFunction
 min: 1.5, max: 6.5, step: 0.5,
 sample: [
   3, 4.5, 4, 3.5, 5, 6, 6, 4, 4.5, 5, 5, 4, 4.5, 5.5, 5, 6, 5.5, 4.5, 2, 4.5,
@@ -407,7 +407,7 @@ difficulté comparable.
 {.lower-alpha-paren}
 1.  Classe 1: étendue = $3.5$; $EI = 2.5$; $\overline{x} = 4.09$, $v = 1.72$; $s = 1.31$<br>
     Classe 2: étendue = $3.5$; $EI = 2$; $\overline{x} = 4.09$, $v = 1.54$; $s = 1.24$
-2.  ```{chartjs} template:chart
+2.  ```{chartjs} chart
     :class: align-left
     :style: width: 70%; aspect-ratio: 3;
     type: 'boxplot',
@@ -588,7 +588,7 @@ croissant.
 {.lower-alpha-paren}
 1. $\tilde{x} = Q_2 = 303$; $Q_1 = 289$; $Q_3 = 313$; $D_1 = 284$; $D_9 = 320$.
 2. $\overline{x} = 301.7$, $v = 201.81$; $s = 14.206$.
-3.  ```{chartjs} template:chart
+3.  ```{chartjs} chart
     :class: align-left
     :style: width: 70%; aspect-ratio: 4.5;
     type: 'boxplot',

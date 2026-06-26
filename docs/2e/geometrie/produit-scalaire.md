@@ -35,45 +35,47 @@ Dans un repère orthonormé,
 :class: align-center
 \cos(\varphi) = \dfrac{\vec{u} \cdot \vec{v}}{\| \vec{u} \| \cdot \| \vec{v} \|}
 ```
-```{jsxgraph} angle-vect
+```{jsxgraph} angleVect
 :style: width: 50%; border: none;
 ```
 ````
 
 <script type="module">
-const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
-initBoard('angle-vect', [attrs.screen, {
-  boundingbox: [-2, 6, 9, -2],
-  pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
-  axis: false, grid: true,
-  defaults: {
-    arrow: {
-      highlight: false, fixed: true, withLabel: true,
-      label: {anchorX: 'middle', anchorY: 'middle', offset: [-60, -20]}},
-    point: {
-      size: 8, strokewidth: 0, fillOpacity: 0, highlightStrokeWidth: 0,
-      withLabel: false, highlightFillOpacity: 0.5, showInfobox: false,
+const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
+render.angleVect = el => {
+  return initBoard(el, [attrs.screen, {
+    boundingbox: [-2, 6, 9, -2],
+    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
+    axis: false, grid: true,
+    defaults: {
+      arrow: {
+        highlight: false, fixed: true, withLabel: true,
+        label: {anchorX: 'middle', anchorY: 'middle', offset: [-60, -20]}},
+      point: {
+        size: 8, strokewidth: 0, fillOpacity: 0, highlightStrokeWidth: 0,
+        withLabel: false, highlightFillOpacity: 0.5, showInfobox: false,
+      },
+      angle: {
+        withLabel: true, radius: 1, strokeColor: JXG.palette.black,
+        fillColor: JXG.palette.black, fillOpacity: 0,
+        label: {strokeColor: JXG.palette.black},
+      },
     },
-    angle: {
-      withLabel: true, radius: 1, strokeColor: JXG.palette.black,
-      fillColor: JXG.palette.black, fillOpacity: 0,
-      label: {strokeColor: JXG.palette.black},
-    },
-  },
-}], board => {
-  const A = board.create('point', [7, 2]);
-  const B = board.create('point', [3, 5]);
-  const O = board.create('point', [0, 0], {size: 0, fixed: true});
-  const u = board.create('arrow', [O, A], {
-    name: '\\(\\vec{u}\\)', label: {position: '0.5fr right', offset: [0, 0],
-  }});
-  const v = board.create('arrow', [O, B], {
-    name: '\\(\\vec{v}\\)', label: {position: '0.5fr left', offset: [-5, 5]},
+  }], board => {
+    const A = board.create('point', [7, 2]);
+    const B = board.create('point', [3, 5]);
+    const O = board.create('point', [0, 0], {size: 0, fixed: true});
+    const u = board.create('arrow', [O, A], {
+      name: '\\(\\vec{u}\\)', label: {position: '0.5fr right', offset: [0, 0],
+    }});
+    const v = board.create('arrow', [O, B], {
+      name: '\\(\\vec{v}\\)', label: {position: '0.5fr left', offset: [-5, 5]},
+    });
+    board.create('angle', [A, O, B], {
+      name: '\\(\\varphi\\)', label: {offset: [-5, -5]},
+    });
   });
-  board.create('angle', [A, O, B], {
-    name: '\\(\\varphi\\)', label: {offset: [-5, -5]},
-  });
-});
+};
 </script>
 
 ### Exemple {num2}`exemple`
@@ -179,37 +181,39 @@ $P'$ de $d$ tel que le segment $PP'$ soit perpendiculaire à $d$.
 ````
 
 <script type="module">
-const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
-initBoard('projection', [attrs.screen, {
-  boundingbox: [-1, 6, 8, -0.5],
-  pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
-  axis: false, grid: false,
-  defaults: {
-    line: {
-      highlight: false, withLabel: true, fixed: true,
-      strokeColor: JXG.palette.black, strokeWidth: 2,
+const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
+render.projection = el => {
+  return initBoard(el, [attrs.screen, {
+    boundingbox: [-1, 6, 8, -0.5],
+    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
+    axis: false, grid: false,
+    defaults: {
+      line: {
+        highlight: false, withLabel: true, fixed: true,
+        strokeColor: JXG.palette.black, strokeWidth: 2,
+      },
+      point: {
+        withLabel: true, size: 1, label: {anchorY:'top'}, showInfobox: false,
+      },
+      angle: {
+        highlight: false, withLabel: false, radius: 0.3,
+        strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
+        fillOpacity: 0,
+      },
     },
-    point: {
-      withLabel: true, size: 1, label: {anchorY:'top'}, showInfobox: false,
-    },
-    angle: {
-      highlight: false, withLabel: false, radius: 0.3,
-      strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
-      fillOpacity: 0,
-    },
-  },
-}], board => {
-  const O = board.create('point', [0,0], {size: 0, withLabel: false});
-  const P = board.create('point', [2, 5], {name: `\\(P\\)`});
-  const d = board.create('line', [[0, 0], [3,1]], {name: `\\(d\\)`});
-  const Pd = board.create('orthogonalprojection', [P, d], {
-    fixed: true, whithLabel: true, name: '\\(P\'\\)', label: {offset: [0, -5]},
+  }], board => {
+    const O = board.create('point', [0,0], {size: 0, withLabel: false});
+    const P = board.create('point', [2, 5], {name: `\\(P\\)`});
+    const d = board.create('line', [[0, 0], [3,1]], {name: `\\(d\\)`});
+    const Pd = board.create('orthogonalprojection', [P, d], {
+      fixed: true, whithLabel: true, name: '\\(P\'\\)', label: {offset: [0, -5]},
+    });
+    board.create('segment', [P, Pd], {
+      dash: 3, withLabel: false, fixed: false,
+    });
+    board.create('angle', [P, Pd, O]);
   });
-  board.create('segment', [P, Pd], {
-    dash: 3, withLabel: false, fixed: false,
-  });
-  board.create('angle', [P, Pd, O]);
-});
+};
 </script>
 
 ````{admonition} Théorème
@@ -258,67 +262,69 @@ $\implies P'(-\frac{41}{58};\frac{59}{58})$
 ```
 
 <script type="module">
-const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
-initBoard('exemple', [attrs.screen, {
-  boundingbox: [-8, 10, 10, -2],
-  pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
-  axis: false, grid: true,
-  defaults: {
-    arrow: {
-      highlight: false, fixed: true, withLabel: true,
-      strokeColor: JXG.palette.black,
-      label: {
-        anchorX: 'middle', anchorY: 'middle', position: '0.5fr left',
-        offset: [5, 0],
+const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
+render.exemple = el => {
+  return initBoard(el, [attrs.screen, {
+    boundingbox: [-8, 10, 10, -2],
+    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
+    axis: false, grid: true,
+    defaults: {
+      arrow: {
+        highlight: false, fixed: true, withLabel: true,
+        strokeColor: JXG.palette.black,
+        label: {
+          anchorX: 'middle', anchorY: 'middle', position: '0.5fr left',
+          offset: [5, 0],
+        },
+      },
+      segment: {
+        highlight: false, withLabel: false, dash: 2,
+        strokeColor: JXG.palette.black,
+      },
+      line: {
+        highlight: false, fixed: true, withLabel: false,
+        strokeColor: JXG.palette.black,
+      },
+      point: {
+        size: 8, strokewidth: 0, fillOpacity: 0, highlightStrokeWidth: 0,
+        withLabel: true, highlightFillOpacity: 0.5, showInfobox: false,
+      },
+      angle: {
+        highlight: false, withLabel: false, strokewidth: 1, radius: 0.3,
+        strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
+        fillOpacity: 0,
       },
     },
-    segment: {
-      highlight: false, withLabel: false, dash: 2,
-      strokeColor: JXG.palette.black,
-    },
-    line: {
-      highlight: false, fixed: true, withLabel: false,
-      strokeColor: JXG.palette.black,
-    },
-    point: {
-      size: 8, strokewidth: 0, fillOpacity: 0, highlightStrokeWidth: 0,
-      withLabel: true, highlightFillOpacity: 0.5, showInfobox: false,
-    },
-    angle: {
-      highlight: false, withLabel: false, strokewidth: 1, radius: 0.3,
-      strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
-      fillOpacity: 0,
-    },
-  },
-}], board => {
-  const A = board.create('point', [-3,2], {
-    name: `\\(A\\)`, label: {offset: [-10, 20]},
+  }], board => {
+    const A = board.create('point', [-3,2], {
+      name: `\\(A\\)`, label: {offset: [-10, 20]},
+    });
+    const B = board.create('point', [4, -1], {
+      name: `\\(B\\)`, label: {offset: [-10, 20]},
+    });
+    const P = board.create('point', [1, 5], {
+      name: `\\(P\\)`, label: {offset: [0, 10]},
+    });
+    board.create('line', [A, B], {dash: 3});
+    const AB = board.create('arrow', [A, B], {
+      name: `\\(\\overrightarrow{AB}\\)`,
+    });
+    const AP = board.create('arrow', [A, P], {
+      name: `\\(\\overrightarrow{AP}\\)`, strokeColor: JXG.palette.red,
+      label: {strokeColor: JXG.palette.red},
+    });
+    const Pd = board.create('orthogonalprojection', [P, AB], {
+      whithLabel: true, name: '\\(P\'\\)', fixed: true,
+      size: 1, strokewidth: 1, fillOpacity: 1,  label: {offset: [-10, -20]},
+    });
+    const APd = board.create('arrow', [A, Pd], {
+      name: `\\(\\overrightarrow{AP'}\\)`, strokeColor: JXG.palette.red,
+      label: {strokeColor: JXG.palette.red},
+    });
+    board.create('segment', [P, Pd], {
+      dash: 3, withLabel: false
+    });
+    board.create('angle', [P, Pd, A]);
   });
-  const B = board.create('point', [4, -1], {
-    name: `\\(B\\)`, label: {offset: [-10, 20]},
-  });
-  const P = board.create('point', [1, 5], {
-    name: `\\(P\\)`, label: {offset: [0, 10]},
-  });
-  board.create('line', [A, B], {dash: 3});
-  const AB = board.create('arrow', [A, B], {
-    name: `\\(\\overrightarrow{AB}\\)`,
-  });
-  const AP = board.create('arrow', [A, P], {
-    name: `\\(\\overrightarrow{AP}\\)`, strokeColor: JXG.palette.red,
-    label: {strokeColor: JXG.palette.red},
-  });
-  const Pd = board.create('orthogonalprojection', [P, AB], {
-    whithLabel: true, name: '\\(P\'\\)', fixed: true,
-    size: 1, strokewidth: 1, fillOpacity: 1,  label: {offset: [-10, -20]},
-  });
-  const APd = board.create('arrow', [A, Pd], {
-    name: `\\(\\overrightarrow{AP'}\\)`, strokeColor: JXG.palette.red,
-    label: {strokeColor: JXG.palette.red},
-  });
-  board.create('segment', [P, Pd], {
-    dash: 3, withLabel: false
-  });
-  board.create('angle', [P, Pd, A]);
-});
+};
 </script>

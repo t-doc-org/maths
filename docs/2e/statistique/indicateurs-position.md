@@ -130,7 +130,7 @@ mêmes résultats.
 
 Pour la représentation graphique, un diagramme en bâtons est utilisé:
 
-```{chartjs} template:density-function
+```{chartjs} densityFunction
 min: 1.5, max: 6.5, step: 0.5,
 sample: [
   3, 4.5, 4, 3.5, 5, 6, 6, 4, 4.5, 5, 5, 4, 4.5, 5.5, 5, 6, 5.5, 4.5, 2, 4.5,
@@ -208,7 +208,7 @@ $N = 140 \implies \tilde{x} = \dfrac{x_{\frac{N}{2}} + x_{\frac{N}{2}+1}}{2} = \
 Pour la représentation graphique, un histogramme est utilisé avec des classes de
  largeur 5:
 
-```{chartjs} template:histogram
+```{chartjs} histogram
 uniform: {min: 40, max: 100, width: 5},
 annotations: [{
   median: {label: 'médiane'},
@@ -461,7 +461,7 @@ Pour chacune de ces variables statistiques,
     \hline
     \end{array}
     ```
-3.  ```{chartjs} template:density-function
+3.  ```{chartjs} densityFunction
     min: 1.5, max: 6.5, step: 0.5,
     sample: [
       2.5, 2.5, 2.5, 2.5, 2.5, 3, 3, 3, 3, 3, 3, 3.5, 3.5, 3.5,
@@ -490,7 +490,7 @@ Pour chacune de ces variables statistiques,
       },
     }],
     ```
-4.  ```{chartjs} template:cumulative-distribution-function
+4.  ```{chartjs} cumulativeDistributionFunction
     :style: aspect-ratio: 3;
     min: 1.5, max: 6.5, step: 0.5,
     sample: [
@@ -521,7 +521,7 @@ Pour chacune de ces variables statistiques,
     \hline
     \end{array}
     ```
-3.  ```{chartjs} template:density-function
+3.  ```{chartjs} densityFunction
     min: 1.5, max: 6.5, step: 0.5,
     sample: [
       6, 6, 6, 6, 6, 6, 5, 5, 4.5, 4.5, 4.5, 4.5, 4, 4,
@@ -550,7 +550,7 @@ Pour chacune de ces variables statistiques,
       },
     }],
     ```
-4.  ```{chartjs} template:cumulative-distribution-function
+4.  ```{chartjs} cumulativeDistributionFunction
     :style: aspect-ratio: 3;
     min: 1.5, max: 6.5, step: 0.5,
     sample: [

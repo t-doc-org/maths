@@ -36,7 +36,7 @@ L'équation développée est de la forme:
 ```
 ````
 
-```{jsxgraph} def-cercle
+```{jsxgraph} defCercle
 :style: width: 40%; border: none;
 ```
 
@@ -168,7 +168,7 @@ rayon $r > 0$ au point $T(x_1; y_1)$ est donnée par
 ```
 ````
 
-```{jsxgraph} def-tangente
+```{jsxgraph} defTangente
 :style: width: 80%; border: none;
 ```
 
@@ -191,7 +191,7 @@ $$
 L'équation de la tangente au cercle au point $T(2; 1)$ est $4x - 3y - 5 = 0$.
 
 <script type="module">
-const {attrs, initBoard, JXG} = await tdoc.import('jsxgraph.js');
+const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
 
 function cercle(board) {
   const r = 3;
@@ -230,73 +230,80 @@ attrs.page = [attrs.screen, {
     },
 }];
 
-initBoard('def-cercle', [attrs.nonInteractive, attrs.page], board => {
-  const c = cercle(board);
-  board.create('point', [3, 0], {
-    name: `\\(P\\)`, label: {offset: [10, 10]},
+render.defCercle = el => {
+  return initBoard(el, [attrs.nonInteractive, attrs.page], board => {
+    const c = cercle(board);
+    board.create('point', [3, 0], {name: `\\(P\\)`, label: {offset: [10, 10]}});
   });
-});
+};
 
-initBoard('intersection1', [attrs.nonInteractive, attrs.page], board => {
-  const c = cercle(board);
-  const d = board.create('line', [[-2, 1.5], [3, -1]], {
-    name: `\\(d\\)`, label: {offset: [0, 0]},
+render.intersection1 = el => {
+  return initBoard(el, [attrs.nonInteractive, attrs.page], board => {
+    const c = cercle(board);
+    const d = board.create('line', [[-2, 1.5], [3, -1]], {
+      name: `\\(d\\)`, label: {offset: [0, 0]},
+    });
+    board.create('intersection', [c, d, 1], {
+      name: `\\(I_1\\)`, label: {offset: [-16, 5]},
+    });
+    board.create('intersection', [c, d, 0], {
+      name: `\\(I_2\\)`, label: {offset: [5, -5]},
+    });
   });
-  board.create('intersection', [c, d, 1], {
-    name: `\\(I_1\\)`, label: {offset: [-16, 5]},
-  });
-  board.create('intersection', [c, d, 0], {
-    name: `\\(I_2\\)`, label: {offset: [5, -5]},
-  });
-});
+};
 
-initBoard('intersection2', [attrs.nonInteractive, attrs.page], board => {
-  const c = cercle(board);
-  const x = -1;
-  const y = Math.sqrt(3 * 3 - x * x);
-  const T = board.create('point', [x, y], {
-    name: `\\(T\\)`, label: {offset: [0, 20]},
+render.intersection2 = el => {
+  return initBoard(el, [attrs.nonInteractive, attrs.page], board => {
+    const c = cercle(board);
+    const x = -1;
+    const y = Math.sqrt(3 * 3 - x * x);
+    const T = board.create('point', [x, y], {
+      name: `\\(T\\)`, label: {offset: [0, 20]},
+    });
+    const r = board.create('segment', [[0, 0], T], {dash: 3,
+      name: `\\(r\\)`, label: {offset: [10, 0]},
+    });
+    const d = board.create('perpendicular', [r, T], {
+      name: `\\(d\\)`, label: {offset: [0, 0]},
+    });
+    board.create('angle', [d, r, [-3,2.5], [0,0]]);
   });
-  const r = board.create('segment', [[0, 0], T], {dash: 3,
-    name: `\\(r\\)`, label: {offset: [10, 0]},
-  });
-  const d = board.create('perpendicular', [r, T], {
-    name: `\\(d\\)`, label: {offset: [0, 0]},
-  });
-  board.create('angle', [d, r, [-3,2.5], [0,0]]);
-});
+};
 
-initBoard('intersection3', [attrs.nonInteractive, attrs.page], board => {
-  const c = cercle(board);
-  const d = board.create('line', [[-3, 2], [0, 4]], {
-    name: `\\(d\\)`, label: {offset: [0, 0]},
+render.intersection3 = el => {
+  return initBoard(el, [attrs.nonInteractive, attrs.page], board => {
+    const c = cercle(board);
+    const d = board.create('line', [[-3, 2], [0, 4]], {
+      name: `\\(d\\)`, label: {offset: [0, 0]},
+    });
   });
-});
+};
 
-initBoard('def-tangente', [attrs.page, {
-  boundingbox: [-8, 5, 8, -4],
-}], board => {
-  const rayon = 3;
-  const O = board.create('point', [0, 0], {
-    name: `\\(C\\)`,
-    label: {offset: [-5, -5]}, fixed: true,
+render.defTangente = el => {
+  return initBoard(el, [attrs.page, {
+    boundingbox: [-8, 5, 8, -4],
+  }], board => {
+    const rayon = 3;
+    const O = board.create('point', [0, 0], {
+      name: `\\(C\\)`,
+      label: {offset: [-5, -5]}, fixed: true,
+    });
+    const c = board.create('circle', [O, rayon], {
+      name: `\\(\\Gamma\\)`, label: {offset: [5, 5]}, fixed: true,
+    });
+    let T = board.create('glider', [-1, 2, c], {
+      highlight: true, fixed: false,
+      name: `\\(T\\)`, label: {offset: [-15, 15]},
+      size: 8, strokewidth: 0, fillOpacity: 0, highlightStrokeWidth: 0,
+      highlightFillOpacity: 0.5, showInfobox: false,
+    });
+    const r = board.create('segment', [[0, 0], T], {dash: 3,
+      name: `\\(r\\)`, label: {offset: [10, 0]},
+    });
+    const d = board.create('perpendicular', [r, T], {
+      name: `\\(d\\)`, label: {position: '0.1fr left', offset: [0, 0]},
+    });
+    board.create('angle', [d, r, [-3,2.5], [0,0]]);
   });
-  const c = board.create('circle', [O, rayon], {
-    name: `\\(\\Gamma\\)`, label: {offset: [5, 5]}, fixed: true,
-  });
-  let T = board.create('glider', [-1, 2, c], {
-    highlight: true, fixed: false,
-    name: `\\(T\\)`, label: {offset: [-15, 15]},
-    size: 8, strokewidth: 0, fillOpacity: 0, highlightStrokeWidth: 0,
-    highlightFillOpacity: 0.5, showInfobox: false,
-  });
-  const r = board.create('segment', [[0, 0], T], {dash: 3,
-    name: `\\(r\\)`, label: {offset: [10, 0]},
-  });
-  const d = board.create('perpendicular', [r, T], {
-    name: `\\(d\\)`, label: {position: '0.1fr left', offset: [0, 0]},
-  });
-  board.create('angle', [d, r, [-3,2.5], [0,0]]);
-});
+};
 </script>
-
