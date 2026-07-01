@@ -502,68 +502,387 @@ Soient les ensembles $A = \{1;2;3;4;5;6;7;8\}$, $B = \{1;3;5;7\}$ et $C = \{2;4;
     2. Vrai
 ```
 
+### Exercice {num2}`exercice`
 
-<!--
+Soient $D_n$ l'ensemble des diviseurs de $n$ et $M_n$ l'ensemble des multiples
+de $n$. Énumérez les ensembles suivants (définis en extension).
 
-1. Soit $D_n$ l'ensemble des diviseurs de $n$ et $M_n$ l'ensemble des multiples de $n$. Énumérer les ensembles suivants (définis en extension).
-\vspace{-0.4cm}
-\begin{multicols}{4}
-\begin{enumerate}
+{.lower-alpha-paren .columns-4}
 1. $D_{12} \cap D_{18}$
-1. $D_{30} \setminus D_{15}$
-1. $M_2 \cap M_4$
-1. $M_6 \setminus M_9$
-1. $D_{10} \cup D_{35}$
-1. $M_3 \cup M_6$
-1. $D_{24} \cap M_3$
-1. $M_3 \setminus D_{36}$
-\end{enumerate}
-\end{multicols}
+2. $D_{30} \setminus D_{15}$
+3. $M_2 \cap M_4$
+4. $M_6 \setminus M_9$
+5. $D_{10} \cup D_{35}$
+6. $M_3 \cup M_6$
+7. $D_{24} \cap M_3$
+8. $M_3 \setminus D_{36}$
 
-1. Décrire comme un seul intervalle les ensembles suivants.
-\vspace{-0.4cm}
-\begin{multicols}{3}
-\begin{enumerate}
+```{block} solution
+{.lower-alpha-paren .columns-2}
+1. $D_{12} \cap D_{18} = \{ 1; 2; 3; 6\}$
+2. $D_{30} \setminus D_{15} = \{ 2; 6; 10; 30\}$
+3. $M_2 \cap M_4 = \{ 4; 8 ; 12; 16; 20; \dots\}$
+4. $M_6 \setminus M_9 = \{ 6; 12; 24; 30; 42; 48; \dots\}$
+5. $D_{10} \cup D_{35} = \{ 1; 2; 5; 7; 10: 35\}$
+6. $M_3 \cup M_6 = \{ 3; 6; 9; 12; 15; \dots\}$
+7. $D_{24} \cap M_3 = \{ 3; 6; 12; 24;\}$
+8. $M_3 \setminus D_{36} = \{ 15; 21; 24; 27; 30; 33; 39; \dots\}$
+```
+
+### Exercice {num2}`exercice`
+
+Écrivez comme un seul intervalle les ensembles suivants.
+
+{.lower-alpha-paren .columns-3}
 1. $[2; 15] \cup [8; 20]$
-1. $[2; 15] \cap [8; 20]$
-1. $[1; 7[ \cup ]0; 8]$
-1. $[1; 7[ \cap ]0; 8]$
-1. $[7; 14[ \cap [14; 16]$
-1. $[7; 14[ \cup [14; 16]$
-1. $[7; 14[ \setminus [13; 16]$
-1. $]-\infty; 6[ \cap ]-2; 7]$
-1. $\mathbb{R} \setminus ]-5; \infty[$
-\end{enumerate}
-\end{multicols}
+2. $[2; 15] \cap [8; 20]$
+3. $[1; 7[ \cup ]0; 8]$
+4. $[1; 7[ \cap ]0; 8]$
+5. $[7; 14[ \cap [14; 16]$
+6. $[7; 14[ \cup [14; 16]$
+7. $[7; 14[ \setminus [13; 16]$
+8. $]-\infty; 6[ \cap ]-2; 7]$
+9. $\mathbb{R} \setminus ]-5; \infty[$
 
-1. Écrire les ensembles suivants sous forme (de réunion) d'intervalles.
-\vspace{-0.4cm}
-\begin{multicols}{2}
-\begin{enumerate}
+```{block} solution
+{.lower-alpha-paren .columns-5}
+1. $[2; 20]$
+2. $[8; 15]$
+3. $]0; 8]$
+4. $[1; 7[$
+5. $\varnothing$
+6. $[7; 16]$
+7. $[7; 13[$
+8. $]-2; 6[$
+9. $]-\infty; -5]$
+```
+
+### Exercice {num2}`exercice`
+
+Écrivez les ensembles suivants sous forme (de réunion) d'intervalles.
+
+{.lower-alpha-paren .columns-2}
 1. $[-10; 10] \setminus [0; 5]$
 1. $[0; 19] \setminus ]6; 12[$
 1. $[-5; 5] \setminus [-1; 8]$
 1. $[12; 25[ \setminus [15; 20[$
-\end{enumerate}
-\end{multicols}
 
+```{block} solution
+{.lower-alpha-paren .columns-4}
+1. $[-10; 0[ \cup ]5; 10]$
+2. $[0; 6] \cup [12; 19]$
+3. $[-5; -1[$
+4. $[12; 15[ \cup [20; 25[$
+```
 
-% 1. Soit l'ensemble de base $M=\{a; b; c; d; e; f; g ; h; i; j; k; l\}$ et les deux sous-ensembles $A=\{b; c; d; f; h\}$ et $B=\{b; h; j\}$. Déterminer $\overline{(A \cup B)}$ et $\overline{A} \cap \overline{B}$ et en déduire que $\overline{(A \cup B)}= \overline{A} \cap \overline{B}$.
+### Exercice {num2}`exercice`
 
-1. Soient $A$, $B$ et $C$ des sous-ensembles de l'ensemble $M$. Représenter les ensembles suivants au moyen d'un diagramme de Venn (un diagramme différent pour chaque exercice).
-\vspace{-0.4cm}
-\begin{multicols}{3}
-\begin{enumerate}
+Soient $A$, $B$ et $C$ des sous-ensembles de l'ensemble $M$. Représentez les
+ensembles suivants au moyen d'un diagramme de Venn (un diagramme différent pour
+chaque exercice).
+
+{.lower-alpha-paren .columns-3}
 1. $A \cup (B \cap C)$
-1. $A \setminus (B \cap C)$
-1. $A \cap (B \cup C)$
-1. $\overline{B}$
-1. $(B \setminus C) \setminus A$
-1. $\overline{A \cap B}$
-\end{enumerate}
-\end{multicols}
+2. $A \setminus (B \cap C)$
+3. $A \cap (B \cup C)$
+4. $\overline{B}$
+5. $(B \setminus C) \setminus A$
+6. $\overline{A \cap B}$
 
-1. Écrire les ensembles suivants à l'aide des opérations sur les ensembles.
+`````{block} solution
+````{list-grid}
+:style: grid-template-columns: 1fr 1fr 1fr;
+- a)
+  ```{chartjs} chart
+  :style: border: 1px solid var(--pst-color-border); border-radius: 0.25rem;
+  type: 'venn',
+  data: {
+    labels: ['A', 'B', 'C'],
+    datasets: [{
+      data: [
+        {sets: ['A'], value: ''},
+        {sets: ['B'], value: ''},
+        {sets: ['C'], value: ''},
+        {sets: ['A', 'B'], value: ''},
+        {sets: ['A', 'C'], value: ''},
+        {sets: ['B', 'C'], value: ''},
+        {sets: ['A', 'B', 'C'], value: ''},
+      ],
+    }],
+  },
+  options: {
+    borderWidth: 1,
+    borderColor: '#888',
+    backgroundColor: ['#0002', '#fff', '#fff', '#0002', '#0002', '#0002', '#0002'],
+    hoverBackgroundColor: ['#0002', '#fff', '#fff', '#0002', '#0002', '#0002', '#0002'],
+    scales: {
+      x: {ticks: {font: {size: 12}}},
+      y: {ticks: {font: {size: 16}}},
+    },
+    plugins: {
+      tooltip: false,
+      legend: {display: false},
+    },
+  },
+  ```
+- c)
+  ```{chartjs} chart
+  :style: border: 1px solid var(--pst-color-border); border-radius: 0.25rem;
+  type: 'venn',
+  data: {
+    labels: ['A', 'B', 'C'],
+    datasets: [{
+      data: [
+        {sets: ['A'], value: ''},
+        {sets: ['B'], value: ''},
+        {sets: ['C'], value: ''},
+        {sets: ['A', 'B'], value: ''},
+        {sets: ['A', 'C'], value: ''},
+        {sets: ['B', 'C'], value: ''},
+        {sets: ['A', 'B', 'C'], value: ''},
+      ],
+    }],
+  },
+  options: {
+    borderWidth: 1,
+    borderColor: '#888',
+    backgroundColor: ['#fff', '#fff', '#fff', '#0002', '#fff', '#fff', '#fff'],
+    hoverBackgroundColor: ['#fff', '#fff', '#fff', '#0002', '#fff', '#fff', '#fff'],
+    scales: {
+      x: {ticks: {font: {size: 12}}},
+      y: {ticks: {font: {size: 16}}},
+    },
+    plugins: {
+      tooltip: false,
+      legend: {display: false},
+    },
+  },
+  ```
+- b)
+  ```{chartjs} chart
+  :style: border: 1px solid var(--pst-color-border); border-radius: 0.25rem;
+  type: 'venn',
+  data: {
+    labels: ['A', 'B', 'C'],
+    datasets: [{
+      data: [
+        {sets: ['A'], value: ''},
+        {sets: ['B'], value: ''},
+        {sets: ['C'], value: ''},
+        {sets: ['A', 'B'], value: ''},
+        {sets: ['A', 'C'], value: ''},
+        {sets: ['B', 'C'], value: ''},
+        {sets: ['A', 'B', 'C'], value: ''},
+      ],
+    }],
+  },
+  options: {
+    borderWidth: 1,
+    borderColor: '#888',
+    backgroundColor: ['#fff', '#0002', '#0002', '#fff', '#fff', '#0002', '#fff'],
+    hoverBackgroundColor: ['#fff', '#0002', '#0002', '#fff', '#fff', '#0002', '#fff'],
+    scales: {
+      x: {ticks: {font: {size: 12}}},
+      y: {ticks: {font: {size: 16}}},
+    },
+    plugins: {
+      tooltip: false,
+      legend: {display: false},
+    },
+  },
+  ```
+
+- d)
+  ```{chartjs} chart
+  :style: border: 1px solid var(--pst-color-border); border-radius: 0.25rem;
+  type: 'venn',
+  data: {
+    labels: ['A', 'B', 'C'],
+    datasets: [{
+      data: [
+        {sets: ['A'], value: ''},
+        {sets: ['B'], value: ''},
+        {sets: ['C'], value: ''},
+        {sets: ['A', 'B'], value: ''},
+        {sets: ['A', 'C'], value: ''},
+        {sets: ['B', 'C'], value: ''},
+        {sets: ['A', 'B', 'C'], value: ''},
+      ],
+    }],
+  },
+  options: {
+    borderWidth: 1,
+    borderColor: '#888',
+    backgroundColor: ['#fff', '#0002', '#fff', '#0002', '#0002', '#fff', '#0002'],
+    hoverBackgroundColor: ['#fff', '#0002', '#fff', '#0002', '#0002', '#fff', '#0002'],
+    scales: {
+      x: {ticks: {font: {size: 12}}},
+      y: {ticks: {font: {size: 16}}},
+    },
+    plugins: {
+      tooltip: false,
+      legend: {display: false},
+    },
+  },
+  ```
+````
+`````
+
+### Exercice {num2}`exercice`
+
+Écrivez les ensembles suivants à l'aide des opérations sur les ensembles.
+
+````{list-grid}
+:style: grid-template-columns: 1fr 1fr;
+- a)
+  ```{chartjs} chart
+  :style: border: 1px solid var(--pst-color-border); border-radius: 0.25rem;
+  type: 'venn',
+  data: {
+    labels: ['A', 'B', 'C'],
+    datasets: [{
+      data: [
+        {sets: ['A'], value: ''},
+        {sets: ['B'], value: ''},
+        {sets: ['C'], value: ''},
+        {sets: ['A', 'B'], value: ''},
+        {sets: ['A', 'C'], value: ''},
+        {sets: ['B', 'C'], value: ''},
+        {sets: ['A', 'B', 'C'], value: ''},
+      ],
+    }],
+  },
+  options: {
+    borderWidth: 1,
+    borderColor: '#888',
+    backgroundColor: ['#0002', '#0002', '#0002'],
+    hoverBackgroundColor: ['#0002', '#0002', '#0002'],
+    scales: {
+      x: {ticks: {font: {size: 12}}},
+      y: {ticks: {font: {size: 16}}},
+    },
+    plugins: {
+      tooltip: false,
+      legend: {display: false},
+    },
+  },
+  ```
+- c)
+  ```{chartjs} chart
+  :style: border: 1px solid var(--pst-color-border); border-radius: 0.25rem;
+  type: 'venn',
+  data: {
+    labels: ['A', 'B', 'C'],
+    datasets: [{
+      data: [
+        {sets: ['A'], value: ''},
+        {sets: ['B'], value: ''},
+        {sets: ['C'], value: ''},
+        {sets: ['A', 'B'], value: ''},
+        {sets: ['A', 'C'], value: ''},
+        {sets: ['B', 'C'], value: ''},
+        {sets: ['A', 'B', 'C'], value: ''},
+      ],
+    }],
+  },
+  options: {
+    borderWidth: 1,
+    borderColor: '#888',
+    backgroundColor: ['#fff', '#fff', '#fff', '#0002', '#fff', '#fff', '#fff'],
+    hoverBackgroundColor: ['#fff', '#fff', '#fff', '#0002', '#fff', '#fff', '#fff'],
+    scales: {
+      x: {ticks: {font: {size: 12}}},
+      y: {ticks: {font: {size: 16}}},
+    },
+    plugins: {
+      tooltip: false,
+      legend: {display: false},
+    },
+  },
+  ```
+- b)
+  ```{chartjs} chart
+  :style: border: 1px solid var(--pst-color-border); border-radius: 0.25rem;
+  type: 'venn',
+  data: {
+    labels: ['A', 'B', 'C'],
+    datasets: [{
+      data: [
+        {sets: ['A'], value: ''},
+        {sets: ['B'], value: ''},
+        {sets: ['C'], value: ''},
+        {sets: ['A', 'B'], value: ''},
+        {sets: ['A', 'C'], value: ''},
+        {sets: ['B', 'C'], value: ''},
+        {sets: ['A', 'B', 'C'], value: ''},
+      ],
+    }],
+  },
+  options: {
+    borderWidth: 1,
+    borderColor: '#888',
+    backgroundColor: ['#fff', '#0002', '#0002', '#fff', '#fff', '#0002', '#fff'],
+    hoverBackgroundColor: ['#fff', '#0002', '#0002', '#fff', '#fff', '#0002', '#fff'],
+    scales: {
+      x: {ticks: {font: {size: 12}}},
+      y: {ticks: {font: {size: 16}}},
+    },
+    plugins: {
+      tooltip: false,
+      legend: {display: false},
+    },
+  },
+  ```
+
+- d)
+  ```{chartjs} chart
+  :style: border: 1px solid var(--pst-color-border); border-radius: 0.25rem;
+  type: 'venn',
+  data: {
+    labels: ['A', 'B', 'C'],
+    datasets: [{
+      data: [
+        {sets: ['A'], value: ''},
+        {sets: ['B'], value: ''},
+        {sets: ['C'], value: ''},
+        {sets: ['A', 'B'], value: ''},
+        {sets: ['A', 'C'], value: ''},
+        {sets: ['B', 'C'], value: ''},
+        {sets: ['A', 'B', 'C'], value: ''},
+      ],
+    }],
+  },
+  options: {
+    borderWidth: 1,
+    borderColor: '#888',
+    backgroundColor: ['#fff', '#0002', '#fff', '#0002', '#0002', '#fff', '#0002'],
+    hoverBackgroundColor: ['#fff', '#0002', '#fff', '#0002', '#0002', '#fff', '#0002'],
+    scales: {
+      x: {ticks: {font: {size: 12}}},
+      y: {ticks: {font: {size: 16}}},
+    },
+    plugins: {
+      tooltip: false,
+      legend: {display: false},
+    },
+  },
+  ```
+````
+
+
+```{block} solution
+{.lower-alpha-paren .columns-4}
+1. $A \cup B \cup C$
+2. $(B \cup C) \setminus A$
+3. $(A \cap B) \setminus C$
+4. $(B \setminus C) \cup (A \cap C)$
+```
+
+<!--
+
+
+
+1.
 \vspace{-0.4cm}
 \begin{multicols}{2}
 \begin{enumerate}
