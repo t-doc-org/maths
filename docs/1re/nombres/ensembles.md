@@ -944,72 +944,127 @@ chaque exercice).
 4. $(B \setminus C) \cup (A \cap C)$
 ```
 
+### Exercice {num2}`exercice`
+
+Dans un hôpital, il y a 200 patients. 50 ont des problèmes respiratoires, 60 des
+problèmes cardiaques et 30 du rhumatisme. 15 patients ont des problèmes
+cardiaques et respiratoires, 10 patients ont du rhumatisme et des problèmes
+cardiaques. Parmi les patients avec du rhumatisme, 5 ont aussi un problème
+respiratoire. Aucune personne ne souffre des trois maladies. Résolvez le
+problème suivant à l'aide d'un diagramme de Venn et répondez aux questions
+suivantes.
+
+{.lower-alpha-paren}
+1. Combien de patients n'ont qu'une seule maladie? Laquelle?
+2. Combien de patients sont dans cet hôpital pour d'autres raisons?
+
+
+```{block} solution
+{.lower-alpha-paren}
+1. Il y a 35 patients avec que des problèmes cardiaques, 30 patients avec que
+   des problèmes respiratoires et 15 avec que du rhumatisme.
+2. 90 patients sont dans cet hôpital pour d'autres maladies.
+```
+
+### Exercice {num2}`exercice`
+
+Lors d'une étude sur les voyages des collégiens en Europe, 363 élèves ont été
+interrogés sur leurs voyages en Espagne, en Angleterre et en Italie.
+
+180 élèves ont séjourné en Espagne, 192 en Angleterre et 199 en Italie. 103
+élèves ont au moins séjourné en Espagne et en Angleterre, 105 au moins en Italie
+et en Angleterre et 123 au moins en Italie et en Espagne. 73 élèves ont déjà
+séjourné dans les 3 pays. Résolvez le problème suivant à l'aide d'un diagramme
+de Venn et répondez aux questions suivantes.
+
+{.lower-alpha-paren}
+1. Combien d'élèves ont séjourné uniquement en Espagne?
+1. Combien d'élèves ont séjourné uniquement en Italie et en Angleterre?
+1. Combien d'élèves n'ont séjourné dans aucun de ces 3 pays.
+
+
+```{block} solution
+{.lower-alpha-paren}
+1. 27 élèves ont séjourné uniquement en Espagne.
+2. 32 élèves ont séjourné uniquement en Italie et en Angleterre.
+3. 50 élèves n'ont séjourné dans aucun de ces 3 pays.
+```
+
+### Exercice {num2}`exercice`
+
+Dans une classe de 28 élèves, 12 élèves ont un chat, 11 élèves ont un chien et 6
+élèves ont des poissons. 3 élèves ont au moins un chien et un chat. Aucun élève
+n'a qu'un chat et des poissons. 1 seul élève a un chat, un chien et des poissons.
+5 élèves n'ont aucun des trois animaux.
+
+{.lower-alpha-paren}
+1. Combien d'élèves n'ont qu'un chat?
+2. Combien d'élèves ont qu'un chien et des poissons?
+3. Combien d'élèves n'ont qu'un chien?
+
+
+```{block} solution
+{.lower-alpha-paren}
+1. 9 élèves n'ont qu'un chat.
+2. 2 élèves n'ont qu'un chien et des poissons.
+3. 6 élèves n'ont qu'un chien.
+```
+
+### Challenge
+
+Lors d'une exposition, des bijoux ont été volés. La police interroge 18
+personnes et pose deux questions auxquelles les personnes doivent répondre par
+"Oui" ou par "Non". Les questions sont:
+
+1. Avez-vous entendu du verre se casser?
+2. Avez-vous vu fuir quelqu'un ?
+
+Dix personnes ont répondu "Oui" à la première question, six personnes ont
+répondu "Non" à la deuxième question et 5 personnes ont répondu "Non" aux deux
+questions.
+
+Dessinez un diagramme de Venn qui illustre cette situation et déterminez
+combien de personnes ont répondu "Oui" aux deux questions.
+
+
+````{solution}
+```{chartjs} chart
+:style: border: 1px solid var(--pst-color-border); border-radius: 0.25rem; width: 30%;
+type: 'venn',
+data: {
+  labels: ['Q1', 'Q2', 'A ∩ B'],
+  datasets: [{
+    data: [
+      {sets: ['Q1'], value: '1'},
+      {sets: ['Q2'], value: '3'},
+      {sets: ['Q1', 'Q2'], value: '9'},
+    ],
+  }],
+},
+options: {
+  borderWidth: 1,
+  borderColor: '#888',
+  backgroundColor: '#fff',
+  hoverBackgroundColor: '#fff',
+  scales: {
+    x: {ticks: {font: {size: 12}}},
+    y: {ticks: {font: {size: 16}}},
+  },
+  plugins: {
+    tooltip: false,
+    legend: {display: false},
+  },
+},
+```
+9 personnes ont répondu "oui" aux deux questions.
+````
+
+
+
 <!--
 
 
 
-1.
-\vspace{-0.4cm}
-\begin{multicols}{2}
-\begin{enumerate}
-1.$ $
-\raisebox{1ex-\height}{\includegraphics[width=0.3\textwidth]{ensemble1.png}}
-1.$ $
-\raisebox{1ex-\height}{\includegraphics[width=0.3\textwidth]{ensemble2.png}}
-1.$ $
-\raisebox{1ex-\height}{\includegraphics[width=0.3\textwidth]{ensemble3.png}}
-1.$ $
-\raisebox{1ex-\height}{\includegraphics[width=0.3\textwidth]{ensemble4.png}}
-\end{enumerate}
-\end{multicols}
-
-\newpage
-
-% 1. Soit $G$ l'ensemble de tous les habitants d'une ville, $H$ l'ensemble de tous les hommes, $V$ l'ensemble des habitants de plus de 60 ans (les "vieux") et $A$ l'ensemble de tous les habitants dont les parents habitaient déjà dans cette ville (les "autochtones").
-% \vspace{-0.1cm}
-% \begin{enumerate}
-% 1. Écrire les ensembles suivants à l'aide des opérations sur les ensembles.
-% \begin{enumerate}[label=\arabic*)]
-% 1. L'ensemble des habitants qui sont vieux, mais pas autochtones.
-% 1. L'ensemble des habitants qui sont des femmes.
-% 1. L'ensemble des habitants de moins de 60 ans.
-% 1. L'ensemble des habitants qui sont des hommes autochtones.
-% 1. L'ensemble des habitants qui sont des hommes vieux.
-% \end{enumerate}
-% 1. Décrire les ensembles suivants avec des mots.
-% \vspace{-0.4cm}
-% \begin{multicols}{3}
-% \begin{enumerate}[label=\arabic*)]
-% 1. $V \cap H$
-% 1. $V\setminus H$
-% 1. $A \cap H$
-% 1. $V \cup (A \setminus H)$
-% 1. $V \cup H$
-% 1. $H \setminus(V \cap A)$
-% \end{enumerate}
-% \end{multicols}
-% \end{enumerate}
-
-1. Dans un hôpital, il y a 200 patients. 50 ont des problèmes respiratoires, 60 des problèmes cardiaques et 30 du rhumatisme. 15 patients ont des problèmes cardiaques et respiratoires, 10 patients ont du rhumatisme et des problèmes cardiaques. Parmi les patients avec du rhumatisme, 5 ont aussi un problème respiratoire. Aucune personne ne souffre des trois maladies. Résoudre le problème suivant à l'aide d'un diagramme de Venn et répondre aux questions suivantes.
-\begin{enumerate}
-1. Combien de patients n'ont qu'une seule maladie? Laquelle?
-1. Combien de patients sont dans cet hôpital pour d'autres raisons?
-\end{enumerate}
-
-1. Lors d'une étude sur les voyages des collégiens en Europe, 363 élèves ont été interrogés sur leurs voyages en Espagne, en Angleterre et en Italie. \\
-180 élèves ont séjourné en Espagne, 192 en Angleterre et 199 en Italie. 103 élèves ont au moins séjourné en Espagne et en Angleterre, 105 au moins en Italie et en Angleterre et 123 au moins en Italie et en Espagne. 73 élèves ont déjà séjourné dans les 3 pays. Établis un diagramme de Venn et réponds aux questions suivantes:
-\begin{enumerate}
-1. Déterminer le nombre d'élèves qui ont séjourné uniquement en Espagne.
-1. Déterminer le nombre d'élèves qui ont séjourné uniquement en Italie et en Angleterre.
-1. Déterminer le nombre d'élèves qui n'ont séjourné dans aucun de ces 3 pays.
-\end{enumerate}
-
-1. Dans une classe de 28 élèves, 12 élèves ont un chat, 11 élèves ont un chien et 6 élèves ont des poissons. 3 élèves ont au moins un chien et un chat. Aucun élève n'a qu'un chat et des poissons. 1 seul élève a un chat, un chien et des poissons. 5 élèves n'ont aucun des trois animaux.
-\begin{enumerate}
-1. Combien d'élèves n'ont qu'un chat?
-1. Combien d'élèves ont qu'un chien et des poissons?
-1. Combien d'élèves n'ont qu'un chien?
-\end{enumerate}
 
 1. \textbf{Challenge}\\
 Lors d'une exposition, des bijoux ont été volés. La police interroge 18 personnes et pose deux questions auxquelles les personnes doivent répondre par "Oui" ou par "Non". Les questions sont:
