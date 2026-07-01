@@ -78,7 +78,6 @@ nombres réels délimité par deux bornes.
     compris.
 ````
 
-
 ```{admonition} Définition
 :class: note
 L'**ensemble vide** est l'ensemble ne contenant aucun élément. Il est noté
@@ -103,13 +102,12 @@ est également élément de $B$, noté $A \subset B$.
 
 ### Quelques remarques
 
--   L'ordre dans lequel les éléments d'un ensemble sont énumérés ne joue aucun
-    rôle.
--   Un élément ne peut figurer qu'une seule fois dans un ensemble.
--   L'ensemble vide est un sous-ensemble de tout ensemble.
--   Un ensemble est toujours sous-ensemble de lui-même.
--   Les accolades sont réservées pour décrire les ensembles.
-
+- L'ordre dans lequel les éléments d'un ensemble sont énumérés ne joue aucun
+  rôle.
+- Un élément ne peut figurer qu'une seule fois dans un ensemble.
+- L'ensemble vide est un sous-ensemble de tout ensemble.
+- Un ensemble est toujours sous-ensemble de lui-même.
+- Les accolades sont réservées pour décrire les ensembles.
 
 ```{admonition} Définition
 :class: note
@@ -117,15 +115,21 @@ Soit $a, b \in \mathbb{R}$ tels que $a < b$. Les **intervalles d'extrémités a 
 b** sont les sous-ensembles suivants de $\mathbb{R}$:
 
 {.lower-alpha-paren}
-1. **Intervalle fermé**: $[a;b]=\{x \in \mathbb{R} \, \mid \, a \leq x \leq b\}$<br>
-L'ensemble de tous les nombres réels entre $a$ et $b$ avec $a$ et $b$ compris.
-2. **Intervalle ouvert**: $]a;b[=\{x \in \mathbb{R} \, \mid \, a < x < b\}$<br>
-L'ensemble de tous les nombres réels entre $a$ et $b$ avec $a$ et $b$ non compris.
-3. **Intervalles semi-ouverts**:<br>
-    - $[a;b[=\{x \in \mathbb{R} \, \mid \, a \leq x < b\}$ (intervalle fermé à gauche)<br>
-    L'ensemble de tous les nombres réels entre $a$ et $b$ avec $a$ compris et $b$ non compris.
-    - $]a;b]=\{x \in \mathbb{R} \, \mid \, a < x \leq b\}$ (intervalle fermé à droite)<br>
-    L'ensemble de tous les nombres réels entre $a$ et $b$ avec $a$ non compris et $b$ compris.
+1.  **Intervalle fermé**: $[a;b]=\{x \in \mathbb{R} \, \mid \, a \leq x \leq b\}$<br>
+    L'ensemble de tous les nombres réels entre $a$ et $b$ avec $a$ et $b$
+    compris.
+2.  **Intervalle ouvert**: $]a;b[=\{x \in \mathbb{R} \, \mid \, a < x < b\}$<br>
+    L'ensemble de tous les nombres réels entre $a$ et $b$ avec $a$ et $b$ non
+    compris.
+3.  **Intervalles semi-ouverts**:<br>
+    - $[a;b[=\{x \in \mathbb{R} \, \mid \, a \leq x < b\}$ (intervalle fermé à
+      gauche)<br>
+      L'ensemble de tous les nombres réels entre $a$ et $b$ avec $a$ compris et
+      $b$ non compris.
+    - $]a;b]=\{x \in \mathbb{R} \, \mid \, a < x \leq b\}$ (intervalle fermé à
+      droite)<br>
+      L'ensemble de tous les nombres réels entre $a$ et $b$ avec $a$ non compris
+      et $b$ compris.
 
 Il existe quatre autres types de sous-ensembles de $\mathbb{R}$:
 - $[a;+\infty[=\{x \in \mathbb{R} \, \mid \, x \geq a\}$
@@ -135,7 +139,6 @@ Il existe quatre autres types de sous-ensembles de $\mathbb{R}$:
 ```
 
 Les crochets sont toujours tournés vers l'extérieur pour $+\infty$ et $-\infty$.
-
 
 ```{admonition} Définition
 :class: note
@@ -162,24 +165,15 @@ Soient $A$ et $B$ deux sous-ensembles d'un ensemble plus grand $M$.
 ````{list-grid}
 :style: grid-template-columns: 1fr 1fr;
 - # $A \cap B$
-  ```{chartjs} chart
-  :style: border: 1px solid var(--pst-color-border); border-radius: 0.25rem;
-  type: 'venn',
+  ```{chartjs} venn
   data: {
     labels: ['A', 'B', 'A ∩ B'],
-    datasets: [{
-      data: [
-        {sets: ['A'], value: ''},
-        {sets: ['B'], value: ''},
-        {sets: ['A', 'B'], value: 'A ∩ B'},
-      ],
-    }],
+    datasets: [{data: [{}, {}, {value: 'A ∩ B'}]}],
   },
   options: {
-    borderWidth: 1,
-    borderColor: '#888',
-    backgroundColor: ['#fff', '#fff', '#0002'],
-    hoverBackgroundColor: ['#fff', '#fff', '#0002'],
+    borderWidth: 1, borderColor: '#888',
+    backgroundColor: ['#fff', '#fff', '#ddd'],
+    hover: {mode: ''},
     scales: {
       x: {ticks: {font: {size: 12}}},
       y: {ticks: {font: {size: 16}}},
@@ -191,23 +185,14 @@ Soient $A$ et $B$ deux sous-ensembles d'un ensemble plus grand $M$.
   },
   ```
 - # $A \cup B$
-  ```{chartjs} chart
-  :style: border: 1px solid var(--pst-color-border); border-radius: 0.25rem;
-  type: 'venn',
+  ```{chartjs} venn
   data: {
     labels: ['A', 'B', 'A ∪ B'],
-    datasets: [{
-      data: [
-        {sets: ['A'], value: ''},
-        {sets: ['B'], value: ''},
-        {sets: ['A', 'B'], value: 'A ∪ B'},
-      ],
-    }],
+    datasets: [{data: [{}, {}, {value: 'A ∪ B'}]}],
   },
   options: {
-    borderWidth: 1,
-    borderColor: '#888',
-    backgroundColor: '#0002',
+    borderWidth: 1, borderColor: '#888', backgroundColor: '#ddd',
+    hover: {mode: ''},
     scales: {
       x: {ticks: {font: {size: 12}}},
       y: {ticks: {font: {size: 16}}},
@@ -220,24 +205,15 @@ Soient $A$ et $B$ deux sous-ensembles d'un ensemble plus grand $M$.
   ```
 
 - # $A \setminus B$
-  ```{chartjs} chart
-  :style: border: 1px solid var(--pst-color-border); border-radius: 0.25rem;
-  type: 'venn',
+  ```{chartjs} venn
   data: {
     labels: ['A', 'B', 'A \\ B'],
-    datasets: [{
-      data: [
-        {sets: ['A'], value: 'A \\ B'},
-        {sets: ['B'], value: ''},
-        {sets: ['A', 'B'], value: ''},
-      ],
-    }],
+    datasets: [{data: [{value: 'A \\ B'}, {}, {}]}],
   },
   options: {
-    borderWidth: 1,
-    borderColor: '#888',
-    backgroundColor: ['#0002', '#fff', '#fff'],
-    hoverBackgroundColor: ['#0002', '#fff', '#fff'],
+    borderWidth: 1, borderColor: '#888',
+    backgroundColor: ['#ddd', '#fff', '#fff'],
+    hover: {mode: ''},
     scales: {
       x: {ticks: {font: {size: 12}}},
       y: {ticks: {font: {size: 16}}},
@@ -250,29 +226,20 @@ Soient $A$ et $B$ deux sous-ensembles d'un ensemble plus grand $M$.
   ```
 
 - # $\overline{A}$
-  ```{chartjs} chart
-  :style: |
-  : border: 1px solid var(--pst-color-border); border-radius: 0.25rem;
-  : background-color: rgba(0, 0, 0, 0.13);
-  type: 'venn',
+  ```{chartjs} venn
   data: {
     labels: ['A\u0305'],
-    datasets: [{
-      data: [
-        {sets: ['A'], value: ''},
-      ],
-    }],
+    datasets: [{data: [{}]}],
   },
   options: {
-    borderWidth: 1,
-    borderColor: '#888',
-    backgroundColor: '#fff',
-    hoverBackgroundColor: '#fff',
+    borderWidth: 1, borderColor: '#888', backgroundColor: '#fff',
+    hover: {mode: ''},
     scales: {
       x: {ticks: {font: {size: 12}}},
       y: {ticks: {font: {size: 16}}},
     },
     plugins: {
+      background: {color: '#ddd'},
       tooltip: false,
       legend: {display: false},
     },
@@ -305,9 +272,8 @@ hockey et du foot. Combien d'élèves ne pratiquent qu'un seul sport?
 12. Que du tennis: $9 - (4 + 1 + 2) = 9 - 7 = 2$ élèves
 13. Un seul sport: $5 + 7 + 2 = 14$ élèves
 
-```{chartjs} chart
-:style: border: 1px solid var(--pst-color-border); border-radius: 0.25rem;
-type: 'venn',
+```{chartjs} venn
+:style: width: 60%; aspect-ratio: 1.2;
 data: {
   labels: ['Foot', 'Hockey', 'Tennis'],
   datasets: [{
@@ -317,7 +283,7 @@ data: {
       {sets: ['T'], value: '2'},
       {sets: ['F', 'H'], value: '4'},
       {sets: ['F', 'T'], value: '4'},
-      {sets: ['H', 'F'], value: '1'},
+      {sets: ['H', 'T'], value: '1'},
       {sets: ['F', 'H', 'T'], value: '2'},
     ],
   }],
@@ -326,8 +292,9 @@ options: {
   borderWidth: 1,
   borderColor: ['#36a2eb', '#ff6384', '#4bc0c0', '#ff9f40', '#9966ff',
                 '#ffcd56', '#c9cbcf'],
-  backgroundColor: ['#36a2eb33', '#ff638433', '#4bc0c033', '#ff9f4033', '#9966ff33',
-                '#ffcd5633', '#c9cbcf33'],
+  backgroundColor: ['#36a2eb33', '#ff638433', '#4bc0c033', '#ff9f4033',
+                    '#9966ff33', '#ffcd5633', '#c9cbcf33'],
+  layout: {padding: 20},
   scales: {
     x: {ticks: {font: {size: 12}}},
     y: {ticks: {font: {size: 16}}},
@@ -354,7 +321,6 @@ Réponse: 14 élèves ne pratiquent qu'un seul sport.
 3. L'ensemble des nombres entiers de 0 à 10.
 4. L'ensemble des multiples de 3, noté $M_{3}$.
 5. L'ensemble des diviseurs de 24, noté $D_{24}$.
-
 
 ```{block} solution
 {.lower-alpha-paren}
@@ -591,350 +557,209 @@ chaque exercice).
 5. $(B \setminus C) \setminus A$
 6. $\overline{A \cap B}$
 
-`````{block} solution
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr 1fr;
-- a)
-  ```{chartjs} chart
-  :style: border: 1px solid var(--pst-color-border); border-radius: 0.25rem;
-  type: 'venn',
-  data: {
-    labels: ['A', 'B', 'C'],
-    datasets: [{
-      data: [
-        {sets: ['A'], value: ''},
-        {sets: ['B'], value: ''},
-        {sets: ['C'], value: ''},
-        {sets: ['A', 'B'], value: ''},
-        {sets: ['A', 'C'], value: ''},
-        {sets: ['B', 'C'], value: ''},
-        {sets: ['A', 'B', 'C'], value: ''},
-      ],
-    }],
-  },
-  options: {
-    borderWidth: 1,
-    borderColor: '#888',
-    backgroundColor: ['#0002', '#fff', '#fff', '#0002', '#0002', '#0002', '#0002'],
-    hoverBackgroundColor: ['#0002', '#fff', '#fff', '#0002', '#0002', '#0002', '#0002'],
-    scales: {
-      x: {ticks: {font: {size: 12}}},
-      y: {ticks: {font: {size: 16}}},
+````{block} solution
+{.columns-3 .lower-alpha-paren}
+1.  ```{chartjs} venn
+    data: {
+      labels: ['A', 'B', 'C'],
+      datasets: [{data: [{}, {}, {}, {}, {}, {}, {}]}],
     },
-    plugins: {
-      tooltip: false,
-      legend: {display: false},
+    options: {
+      borderWidth: 1, borderColor: '#888',
+      backgroundColor: ['#ddd', '#fff', '#fff', '#ddd', '#ddd', '#ddd', '#ddd'],
+      hover: {mode: ''},
+      scales: {
+        x: {ticks: {font: {size: 12}}},
+        y: {ticks: {font: {size: 16}}},
+      },
+      plugins: {
+        tooltip: false,
+        legend: {display: false},
+      },
     },
-  },
-  ```
-- c)
-  ```{chartjs} chart
-  :style: border: 1px solid var(--pst-color-border); border-radius: 0.25rem;
-  type: 'venn',
-  data: {
-    labels: ['A', 'B', 'C'],
-    datasets: [{
-      data: [
-        {sets: ['A'], value: ''},
-        {sets: ['B'], value: ''},
-        {sets: ['C'], value: ''},
-        {sets: ['A', 'B'], value: ''},
-        {sets: ['A', 'C'], value: ''},
-        {sets: ['B', 'C'], value: ''},
-        {sets: ['A', 'B', 'C'], value: ''},
-      ],
-    }],
-  },
-  options: {
-    borderWidth: 1,
-    borderColor: '#888',
-    backgroundColor: ['#fff', '#fff', '#fff', '#0002', '#0002', '#fff', '#0002'],
-    hoverBackgroundColor: ['#fff', '#fff', '#fff', '#0002', '#0002', '#fff', '#0002'],
-    scales: {
-      x: {ticks: {font: {size: 12}}},
-      y: {ticks: {font: {size: 16}}},
+    ```
+2.  ```{chartjs} venn
+    data: {
+      labels: ['A', 'B', 'C'],
+      datasets: [{data: [{}, {}, {}, {}, {}, {}, {}]}],
     },
-    plugins: {
-      tooltip: false,
-      legend: {display: false},
+    options: {
+      borderWidth: 1, borderColor: '#888',
+      backgroundColor: ['#ddd', '#fff', '#fff', '#ddd', '#ddd', '#fff', '#fff'],
+      hover: {mode: ''},
+      scales: {
+        x: {ticks: {font: {size: 12}}},
+        y: {ticks: {font: {size: 16}}},
+      },
+      plugins: {
+        tooltip: false,
+        legend: {display: false},
+      },
     },
-  },
-  ```
-- e)
-  ```{chartjs} chart
-  :style: border: 1px solid var(--pst-color-border); border-radius: 0.25rem;
-  type: 'venn',
-  data: {
-    labels: ['A', 'B', 'C'],
-    datasets: [{
-      data: [
-        {sets: ['A'], value: ''},
-        {sets: ['B'], value: ''},
-        {sets: ['C'], value: ''},
-        {sets: ['A', 'B'], value: ''},
-        {sets: ['A', 'C'], value: ''},
-        {sets: ['B', 'C'], value: ''},
-        {sets: ['A', 'B', 'C'], value: ''},
-      ],
-    }],
-  },
-  options: {
-    borderWidth: 1,
-    borderColor: '#888',
-    backgroundColor: ['#fff', '#0002', '#fff', '#fff', '#fff', '#fff', '#fff'],
-    hoverBackgroundColor: ['#fff', '#0002', '#fff', '#fff', '#fff', '#fff', '#fff'],
-    scales: {
-      x: {ticks: {font: {size: 12}}},
-      y: {ticks: {font: {size: 16}}},
+    ```
+3.  ```{chartjs} venn
+    data: {
+      labels: ['A', 'B', 'C'],
+      datasets: [{data: [{}, {}, {}, {}, {}, {}, {}]}],
     },
-    plugins: {
-      tooltip: false,
-      legend: {display: false},
+    options: {
+      borderWidth: 1, borderColor: '#888',
+      backgroundColor: ['#fff', '#fff', '#fff', '#ddd', '#ddd', '#fff', '#ddd'],
+      hover: {mode: ''},
+      scales: {
+        x: {ticks: {font: {size: 12}}},
+        y: {ticks: {font: {size: 16}}},
+      },
+      plugins: {
+        tooltip: false,
+        legend: {display: false},
+      },
     },
-  },
-  ```
-- b)
-  ```{chartjs} chart
-  :style: border: 1px solid var(--pst-color-border); border-radius: 0.25rem;
-  type: 'venn',
-  data: {
-    labels: ['A', 'B', 'C'],
-    datasets: [{
-      data: [
-        {sets: ['A'], value: ''},
-        {sets: ['B'], value: ''},
-        {sets: ['C'], value: ''},
-        {sets: ['A', 'B'], value: ''},
-        {sets: ['A', 'C'], value: ''},
-        {sets: ['B', 'C'], value: ''},
-        {sets: ['A', 'B', 'C'], value: ''},
-      ],
-    }],
-  },
-  options: {
-    borderWidth: 1,
-    borderColor: '#888',
-    backgroundColor: ['#0002', '#fff', '#fff', '#0002', '#0002', '#fff', '#fff'],
-    hoverBackgroundColor: ['#0002', '#fff', '#fff', '#0002', '#0002', '#fff', '#fff'],
-    scales: {
-      x: {ticks: {font: {size: 12}}},
-      y: {ticks: {font: {size: 16}}},
+    ```
+4.  ```{chartjs} venn
+    data: {
+      labels: ['B'],
+      datasets: [{data: [{}]}],
     },
-    plugins: {
-      tooltip: false,
-      legend: {display: false},
+    options: {
+      borderWidth: 1, borderColor: '#888', backgroundColor: '#fff',
+      hover: {mode: ''},
+      scales: {
+        x: {ticks: {font: {size: 12}}},
+        y: {ticks: {font: {size: 16}}},
+      },
+      plugins: {
+        background: {color: '#ddd'},
+        tooltip: false,
+        legend: {display: false},
+      },
     },
-  },
-  ```
-
-- d)
-  ```{chartjs} chart
-  :style: |
-  : border: 1px solid var(--pst-color-border); border-radius: 0.25rem;
-  : background-color: rgba(0, 0, 0, 0.13);
-  type: 'venn',
-  data: {
-    labels: ['B'],
-    datasets: [{
-      data: [
-        {sets: ['B'], value: ''},
-      ],
-    }],
-  },
-  options: {
-    borderWidth: 1,
-    borderColor: '#888',
-    backgroundColor: '#fff',
-    hoverBackgroundColor: '#fff',
-    scales: {
-      x: {ticks: {font: {size: 12}}},
-      y: {ticks: {font: {size: 16}}},
+    ```
+5.  ```{chartjs} venn
+    data: {
+      labels: ['A', 'B', 'C'],
+      datasets: [{data: [{}, {}, {}, {}, {}, {}, {}]}],
     },
-    plugins: {
-      tooltip: false,
-      legend: {display: false},
+    options: {
+      borderWidth: 1, borderColor: '#888',
+      backgroundColor: ['#fff', '#ddd', '#fff', '#fff', '#fff', '#fff', '#fff'],
+      hover: {mode: ''},
+      scales: {
+        x: {ticks: {font: {size: 12}}},
+        y: {ticks: {font: {size: 16}}},
+      },
+      plugins: {
+        tooltip: false,
+        legend: {display: false},
+      },
     },
-  },
-  ```
-- f)
-  ```{chartjs} chart
-  :style: |
-  : border: 1px solid var(--pst-color-border); border-radius: 0.25rem;
-  : background-color: rgba(0, 0, 0, 0.13);
-  type: 'venn',
-  data: {
-    labels: ['A', 'B', 'C'],
-    datasets: [{
-      data: [
-        {sets: ['A'], value: ''},
-        {sets: ['B'], value: ''},
-        {sets: ['C'], value: ''},
-        {sets: ['A', 'B'], value: ''},
-        {sets: ['A', 'C'], value: ''},
-        {sets: ['B', 'C'], value: ''},
-        {sets: ['A', 'B', 'C'], value: ''},
-      ],
-    }],
-  },
-  options: {
-    borderWidth: 1,
-    borderColor: '#888',
-    backgroundColor: ['#0002', '#0002', '#0002', '#fff', '#0002', '#0002', '#fff'],
-    hoverBackgroundColor: ['#0002', '#0002', '#0002', '#fff', '#0002', '#0002', '#fff'],
-    scales: {
-      x: {ticks: {font: {size: 12}}},
-      y: {ticks: {font: {size: 16}}},
+    ```
+6.  ```{chartjs} venn
+    data: {
+      labels: ['A', 'B', 'C'],
+      datasets: [{data: [{}, {}, {}, {}, {}, {}, {}]}],
     },
-    plugins: {
-      tooltip: false,
-      legend: {display: false},
+    options: {
+      borderWidth: 1, borderColor: '#888',
+      backgroundColor: ['#ddd', '#ddd', '#ddd', '#fff', '#ddd', '#ddd', '#fff'],
+      hover: {mode: ''},
+      scales: {
+        x: {ticks: {font: {size: 12}}},
+        y: {ticks: {font: {size: 16}}},
+      },
+      plugins: {
+        background: {color: '#ddd'},
+        tooltip: false,
+        legend: {display: false},
+      },
     },
-  },
-  ```
+    ```
 ````
-`````
 
 ### Exercice {num2}`exercice`
 
 Écrivez les ensembles suivants à l'aide des opérations sur les ensembles.
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
-- a)
-  ```{chartjs} chart
-  :style: border: 1px solid var(--pst-color-border); border-radius: 0.25rem;
-  type: 'venn',
-  data: {
-    labels: ['A', 'B', 'C'],
-    datasets: [{
-      data: [
-        {sets: ['A'], value: ''},
-        {sets: ['B'], value: ''},
-        {sets: ['C'], value: ''},
-        {sets: ['A', 'B'], value: ''},
-        {sets: ['A', 'C'], value: ''},
-        {sets: ['B', 'C'], value: ''},
-        {sets: ['A', 'B', 'C'], value: ''},
-      ],
-    }],
-  },
-  options: {
-    borderWidth: 1,
-    borderColor: '#888',
-    backgroundColor: ['#0002', '#0002', '#0002'],
-    hoverBackgroundColor: ['#0002', '#0002', '#0002'],
-    scales: {
-      x: {ticks: {font: {size: 12}}},
-      y: {ticks: {font: {size: 16}}},
+{.columns-2 .lower-alpha-paren}
+1.  ```{chartjs} venn
+    data: {
+      labels: ['A', 'B', 'C'],
+      datasets: [{data: [{}, {}, {}, {}, {}, {}, {}]}],
     },
-    plugins: {
-      tooltip: false,
-      legend: {display: false},
+    options: {
+      borderWidth: 1, borderColor: '#888',
+      backgroundColor: ['#ddd', '#ddd', '#ddd'],
+      hover: {mode: ''},
+      scales: {
+        x: {ticks: {font: {size: 12}}},
+        y: {ticks: {font: {size: 16}}},
+      },
+      plugins: {
+        tooltip: false,
+        legend: {display: false},
+      },
     },
-  },
-  ```
-- c)
-  ```{chartjs} chart
-  :style: border: 1px solid var(--pst-color-border); border-radius: 0.25rem;
-  type: 'venn',
-  data: {
-    labels: ['A', 'B', 'C'],
-    datasets: [{
-      data: [
-        {sets: ['A'], value: ''},
-        {sets: ['B'], value: ''},
-        {sets: ['C'], value: ''},
-        {sets: ['A', 'B'], value: ''},
-        {sets: ['A', 'C'], value: ''},
-        {sets: ['B', 'C'], value: ''},
-        {sets: ['A', 'B', 'C'], value: ''},
-      ],
-    }],
-  },
-  options: {
-    borderWidth: 1,
-    borderColor: '#888',
-    backgroundColor: ['#fff', '#fff', '#fff', '#0002', '#fff', '#fff', '#fff'],
-    hoverBackgroundColor: ['#fff', '#fff', '#fff', '#0002', '#fff', '#fff', '#fff'],
-    scales: {
-      x: {ticks: {font: {size: 12}}},
-      y: {ticks: {font: {size: 16}}},
+    ```
+2.  ```{chartjs} venn
+    data: {
+      labels: ['A', 'B', 'C'],
+      datasets: [{data: [{}, {}, {}, {}, {}, {}, {}]}],
     },
-    plugins: {
-      tooltip: false,
-      legend: {display: false},
+    options: {
+      borderWidth: 1,
+      borderColor: '#888',
+      backgroundColor: ['#fff', '#ddd', '#ddd', '#fff', '#fff', '#ddd', '#fff'],
+      hover: {mode: ''},
+      scales: {
+        x: {ticks: {font: {size: 12}}},
+        y: {ticks: {font: {size: 16}}},
+      },
+      plugins: {
+        tooltip: false,
+        legend: {display: false},
+      },
     },
-  },
-  ```
-- b)
-  ```{chartjs} chart
-  :style: border: 1px solid var(--pst-color-border); border-radius: 0.25rem;
-  type: 'venn',
-  data: {
-    labels: ['A', 'B', 'C'],
-    datasets: [{
-      data: [
-        {sets: ['A'], value: ''},
-        {sets: ['B'], value: ''},
-        {sets: ['C'], value: ''},
-        {sets: ['A', 'B'], value: ''},
-        {sets: ['A', 'C'], value: ''},
-        {sets: ['B', 'C'], value: ''},
-        {sets: ['A', 'B', 'C'], value: ''},
-      ],
-    }],
-  },
-  options: {
-    borderWidth: 1,
-    borderColor: '#888',
-    backgroundColor: ['#fff', '#0002', '#0002', '#fff', '#fff', '#0002', '#fff'],
-    hoverBackgroundColor: ['#fff', '#0002', '#0002', '#fff', '#fff', '#0002', '#fff'],
-    scales: {
-      x: {ticks: {font: {size: 12}}},
-      y: {ticks: {font: {size: 16}}},
+    ```
+3.  ```{chartjs} venn
+    data: {
+      labels: ['A', 'B', 'C'],
+      datasets: [{data: [{}, {}, {}, {}, {}, {}, {}]}],
     },
-    plugins: {
-      tooltip: false,
-      legend: {display: false},
+    options: {
+      borderWidth: 1,
+      borderColor: '#888',
+      backgroundColor: ['#fff', '#fff', '#fff', '#ddd', '#fff', '#fff', '#fff'],
+      hover: {mode: ''},
+      scales: {
+        x: {ticks: {font: {size: 12}}},
+        y: {ticks: {font: {size: 16}}},
+      },
+      plugins: {
+        tooltip: false,
+        legend: {display: false},
+      },
     },
-  },
-  ```
-
-- d)
-  ```{chartjs} chart
-  :style: border: 1px solid var(--pst-color-border); border-radius: 0.25rem;
-  type: 'venn',
-  data: {
-    labels: ['A', 'B', 'C'],
-    datasets: [{
-      data: [
-        {sets: ['A'], value: ''},
-        {sets: ['B'], value: ''},
-        {sets: ['C'], value: ''},
-        {sets: ['A', 'B'], value: ''},
-        {sets: ['A', 'C'], value: ''},
-        {sets: ['B', 'C'], value: ''},
-        {sets: ['A', 'B', 'C'], value: ''},
-      ],
-    }],
-  },
-  options: {
-    borderWidth: 1,
-    borderColor: '#888',
-    backgroundColor: ['#fff', '#0002', '#fff', '#0002', '#0002', '#fff', '#0002'],
-    hoverBackgroundColor: ['#fff', '#0002', '#fff', '#0002', '#0002', '#fff', '#0002'],
-    scales: {
-      x: {ticks: {font: {size: 12}}},
-      y: {ticks: {font: {size: 16}}},
+    ```
+4.  ```{chartjs} venn
+    data: {
+      labels: ['A', 'B', 'C'],
+      datasets: [{data: [{}, {}, {}, {}, {}, {}, {}]}],
     },
-    plugins: {
-      tooltip: false,
-      legend: {display: false},
+    options: {
+      borderWidth: 1,
+      borderColor: '#888',
+      backgroundColor: ['#fff', '#ddd', '#fff', '#ddd', '#ddd', '#fff', '#ddd'],
+      hover: {mode: ''},
+      scales: {
+        x: {ticks: {font: {size: 12}}},
+        y: {ticks: {font: {size: 16}}},
+      },
+      plugins: {
+        tooltip: false,
+        legend: {display: false},
+      },
     },
-  },
-  ```
-````
-
+    ```
 
 ```{block} solution
 {.lower-alpha-paren .columns-4}
@@ -958,12 +783,11 @@ suivantes.
 1. Combien de patients n'ont qu'une seule maladie? Laquelle?
 2. Combien de patients sont dans cet hôpital pour d'autres raisons?
 
-
 ```{block} solution
 {.lower-alpha-paren}
-1. Il y a 35 patients avec que des problèmes cardiaques, 30 patients avec que
-   des problèmes respiratoires et 15 avec que du rhumatisme.
-2. 90 patients sont dans cet hôpital pour d'autres maladies.
+1.  Il y a 35 patients avec que des problèmes cardiaques, 30 patients avec que
+    des problèmes respiratoires et 15 avec que du rhumatisme.
+2.  90 patients sont dans cet hôpital pour d'autres maladies.
 ```
 
 ### Exercice {num2}`exercice`
@@ -979,9 +803,8 @@ de Venn et répondez aux questions suivantes.
 
 {.lower-alpha-paren}
 1. Combien d'élèves ont séjourné uniquement en Espagne?
-1. Combien d'élèves ont séjourné uniquement en Italie et en Angleterre?
-1. Combien d'élèves n'ont séjourné dans aucun de ces 3 pays.
-
+2. Combien d'élèves ont séjourné uniquement en Italie et en Angleterre?
+3. Combien d'élèves n'ont séjourné dans aucun de ces 3 pays.
 
 ```{block} solution
 {.lower-alpha-paren}
@@ -1001,7 +824,6 @@ n'a qu'un chat et des poissons. 1 seul élève a un chat, un chien et des poisso
 1. Combien d'élèves n'ont qu'un chat?
 2. Combien d'élèves ont qu'un chien et des poissons?
 3. Combien d'élèves n'ont qu'un chien?
-
 
 ```{block} solution
 {.lower-alpha-paren}
@@ -1026,26 +848,16 @@ questions.
 Dessinez un diagramme de Venn qui illustre cette situation et déterminez
 combien de personnes ont répondu "Oui" aux deux questions.
 
-
 ````{solution}
-```{chartjs} chart
-:style: border: 1px solid var(--pst-color-border); border-radius: 0.25rem; width: 30%;
-type: 'venn',
+```{chartjs} venn
+:style: width: 30%;
 data: {
-  labels: ['Q1', 'Q2', 'A ∩ B'],
-  datasets: [{
-    data: [
-      {sets: ['Q1'], value: '1'},
-      {sets: ['Q2'], value: '3'},
-      {sets: ['Q1', 'Q2'], value: '9'},
-    ],
-  }],
+  labels: ['Q1', 'Q2'],
+  datasets: [{data: [{value: '1'}, {value: '3'}, {value: '9'}]}],
 },
 options: {
-  borderWidth: 1,
-  borderColor: '#888',
-  backgroundColor: '#fff',
-  hoverBackgroundColor: '#fff',
+  borderWidth: 1, borderColor: '#888', backgroundColor: '#fff',
+  hover: {mode: ''},
   scales: {
     x: {ticks: {font: {size: 12}}},
     y: {ticks: {font: {size: 16}}},
@@ -1060,12 +872,7 @@ options: {
 ````
 
 
-
 <!--
-
-
-
-
 1. \textbf{Challenge}\\
 Lors d'une exposition, des bijoux ont été volés. La police interroge 18 personnes et pose deux questions auxquelles les personnes doivent répondre par "Oui" ou par "Non". Les questions sont:
 \begin{itemize}[label=-]
