@@ -217,6 +217,7 @@ Soient $A$ et $B$ deux sous-ensembles d'un ensemble plus grand $M$.
       legend: {display: false},
     },
   },
+  ```
 
 - # $A \setminus B$
   ```{chartjs} chart
@@ -246,6 +247,7 @@ Soient $A$ et $B$ deux sous-ensembles d'un ensemble plus grand $M$.
       legend: {display: false},
     },
   },
+  ```
 
 - # $\overline{A}$
   ```{chartjs} chart
@@ -275,7 +277,7 @@ Soient $A$ et $B$ deux sous-ensembles d'un ensemble plus grand $M$.
       legend: {display: false},
     },
   },
-
+  ```
 ````
 
 ````{container} frame noprint
@@ -646,8 +648,41 @@ chaque exercice).
   options: {
     borderWidth: 1,
     borderColor: '#888',
-    backgroundColor: ['#fff', '#fff', '#fff', '#0002', '#fff', '#fff', '#fff'],
-    hoverBackgroundColor: ['#fff', '#fff', '#fff', '#0002', '#fff', '#fff', '#fff'],
+    backgroundColor: ['#fff', '#fff', '#fff', '#0002', '#0002', '#fff', '#0002'],
+    hoverBackgroundColor: ['#fff', '#fff', '#fff', '#0002', '#0002', '#fff', '#0002'],
+    scales: {
+      x: {ticks: {font: {size: 12}}},
+      y: {ticks: {font: {size: 16}}},
+    },
+    plugins: {
+      tooltip: false,
+      legend: {display: false},
+    },
+  },
+  ```
+- e)
+  ```{chartjs} chart
+  :style: border: 1px solid var(--pst-color-border); border-radius: 0.25rem;
+  type: 'venn',
+  data: {
+    labels: ['A', 'B', 'C'],
+    datasets: [{
+      data: [
+        {sets: ['A'], value: ''},
+        {sets: ['B'], value: ''},
+        {sets: ['C'], value: ''},
+        {sets: ['A', 'B'], value: ''},
+        {sets: ['A', 'C'], value: ''},
+        {sets: ['B', 'C'], value: ''},
+        {sets: ['A', 'B', 'C'], value: ''},
+      ],
+    }],
+  },
+  options: {
+    borderWidth: 1,
+    borderColor: '#888',
+    backgroundColor: ['#fff', '#0002', '#fff', '#fff', '#fff', '#fff', '#fff'],
+    hoverBackgroundColor: ['#fff', '#0002', '#fff', '#fff', '#fff', '#fff', '#fff'],
     scales: {
       x: {ticks: {font: {size: 12}}},
       y: {ticks: {font: {size: 16}}},
@@ -679,8 +714,8 @@ chaque exercice).
   options: {
     borderWidth: 1,
     borderColor: '#888',
-    backgroundColor: ['#fff', '#0002', '#0002', '#fff', '#fff', '#0002', '#fff'],
-    hoverBackgroundColor: ['#fff', '#0002', '#0002', '#fff', '#fff', '#0002', '#fff'],
+    backgroundColor: ['#0002', '#fff', '#fff', '#0002', '#0002', '#fff', '#fff'],
+    hoverBackgroundColor: ['#0002', '#fff', '#fff', '#0002', '#0002', '#fff', '#fff'],
     scales: {
       x: {ticks: {font: {size: 12}}},
       y: {ticks: {font: {size: 16}}},
@@ -694,7 +729,38 @@ chaque exercice).
 
 - d)
   ```{chartjs} chart
-  :style: border: 1px solid var(--pst-color-border); border-radius: 0.25rem;
+  :style: |
+  : border: 1px solid var(--pst-color-border); border-radius: 0.25rem;
+  : background-color: rgba(0, 0, 0, 0.13);
+  type: 'venn',
+  data: {
+    labels: ['B'],
+    datasets: [{
+      data: [
+        {sets: ['B'], value: ''},
+      ],
+    }],
+  },
+  options: {
+    borderWidth: 1,
+    borderColor: '#888',
+    backgroundColor: '#fff',
+    hoverBackgroundColor: '#fff',
+    scales: {
+      x: {ticks: {font: {size: 12}}},
+      y: {ticks: {font: {size: 16}}},
+    },
+    plugins: {
+      tooltip: false,
+      legend: {display: false},
+    },
+  },
+  ```
+- f)
+  ```{chartjs} chart
+  :style: |
+  : border: 1px solid var(--pst-color-border); border-radius: 0.25rem;
+  : background-color: rgba(0, 0, 0, 0.13);
   type: 'venn',
   data: {
     labels: ['A', 'B', 'C'],
@@ -713,8 +779,8 @@ chaque exercice).
   options: {
     borderWidth: 1,
     borderColor: '#888',
-    backgroundColor: ['#fff', '#0002', '#fff', '#0002', '#0002', '#fff', '#0002'],
-    hoverBackgroundColor: ['#fff', '#0002', '#fff', '#0002', '#0002', '#fff', '#0002'],
+    backgroundColor: ['#0002', '#0002', '#0002', '#fff', '#0002', '#0002', '#fff'],
+    hoverBackgroundColor: ['#0002', '#0002', '#0002', '#fff', '#0002', '#0002', '#fff'],
     scales: {
       x: {ticks: {font: {size: 12}}},
       y: {ticks: {font: {size: 16}}},
