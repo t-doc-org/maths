@@ -7,6 +7,8 @@
 subject: "Mathématiques 1re année"
 ```
 
+## Théorie
+
 ```{admonition} Définition
 :class: note
 Un **ensemble** $E$ est une collection d'objets. Ces objets sont appelés
@@ -19,7 +21,7 @@ Si par contre $x$ n'est pas un élément de $E$, nous notons $x \notin E$.
 ```
 
 ````{container} frame noprint
-## Exemple {num2}`exemple`
+### Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
 1.  Soit $P$ l'ensemble des nombres premiers, alors
@@ -36,7 +38,7 @@ des points de suspension sont ajoutés au début ou à la fin de l'énumération
 ```
 
 ````{container} frame noprint
-## Exemple {num2}`exemple`
+### Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
 1.  L'ensemble des joueurs de tennis ayant gagné au moins 20 tournois du Grand
@@ -51,7 +53,7 @@ défini par ses propriétés caractéristiques.
 ```
 
 ````{container} frame noprint
-## Exemple {num2}`exemple`
+### Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
 1.  $\{x \in \text{ Ensemble des animaux} \, \mid  \, x \text{ a quatre pattes} \}$
@@ -67,7 +69,7 @@ nombres réels délimité par deux bornes.
 ```
 
 ````{container} frame noprint
-## Exemple {num2}`exemple`
+### Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
 1.  $[-3;10]$ représente l'ensemble des nombres de $-3$ compris à $10$ compris.
@@ -90,7 +92,7 @@ est également élément de $B$, noté $A \subset B$.
 ```
 
 ````{container} frame noprint
-## Exemple {num2}`exemple`
+### Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
 1.  L'ensemble des élèves de la classe est un sous-ensemble de l'ensemble des
@@ -99,7 +101,7 @@ est également élément de $B$, noté $A \subset B$.
     nombres.
 ````
 
-## Quelques remarques
+### Quelques remarques
 
 -   L'ordre dans lequel les éléments d'un ensemble sont énumérés ne joue aucun
     rôle.
@@ -275,3 +277,366 @@ Soient $A$ et $B$ deux sous-ensembles d'un ensemble plus grand $M$.
   },
 
 ````
+
+````{container} frame noprint
+### Exemple {num2}`exemple`
+
+Les diagrammes de Venn permettent de résoudre des problèmes:
+
+Une classe est composée de 26 élèves. 17 font du foot, 12 du hockey et 9 du
+tennis. Un seul élève ne fait pas de sport et 2 pratiquent trois sports. 3
+élèves jouent au moins au hockey et au tennis et 6 élèves font au moins du
+hockey et du foot. Combien d'élèves ne pratiquent qu'un seul sport?
+
+{.lower-alpha-paren}
+1. "2 pratiquent trois sports" $\implies$ 3 sports: 2 élèves
+2. "Un seul élève ne fait pas de sport" $\implies$ Aucun sport: 1 élève
+3. Hockey et tennis: $3 - 2 = 1$ élève
+4. Hockey et foot: $6 - 2 = 4$ élèves
+5. Que du Hockey: $12 - (4 + 1 + 2) = 12 - 7 = 5$ élèves
+6. Foot mais pas du hockey: $17 - (4 + 2) = 17 - 6 = 11$ élèves
+7. Tennis mais pas du hockey: $9 - (2 + 1) = 9 - 3 = 6$ élèves
+8. Élèves qui restent à placer $26 - (12 + 1) = 26 - 13 = 13$ élèves
+9. Foot et/ou tennis mais pas de hockey: $11 + 6 = 17$ élèves
+10. Foot et tennis:  $17 - 13 = 4$ élèves
+11. Que du foot: $17 - (4 + 4 + 2) = 17 - 10 = 7$ élèves
+12. Que du tennis: $9 - (4 + 1 + 2) = 9 - 7 = 2$ élèves
+13. Un seul sport: $5 + 7 + 2 = 14$ élèves
+
+```{chartjs} chart
+:style: border: 1px solid var(--pst-color-border); border-radius: 0.25rem;
+type: 'venn',
+data: {
+  labels: ['Foot', 'Hockey', 'Tennis'],
+  datasets: [{
+    data: [
+      {sets: ['F'], value: '7'},
+      {sets: ['H'], value: '5'},
+      {sets: ['T'], value: '2'},
+      {sets: ['F', 'H'], value: '4'},
+      {sets: ['F', 'T'], value: '4'},
+      {sets: ['H', 'F'], value: '1'},
+      {sets: ['F', 'H', 'T'], value: '2'},
+    ],
+  }],
+},
+options: {
+  borderWidth: 1,
+  borderColor: ['#36a2eb', '#ff6384', '#4bc0c0', '#ff9f40', '#9966ff',
+                '#ffcd56', '#c9cbcf'],
+  backgroundColor: ['#36a2eb33', '#ff638433', '#4bc0c033', '#ff9f4033', '#9966ff33',
+                '#ffcd5633', '#c9cbcf33'],
+  scales: {
+    x: {ticks: {font: {size: 12}}},
+    y: {ticks: {font: {size: 16}}},
+  },
+  plugins: {
+    tooltip: false,
+    legend: {display: false},
+  },
+},
+```
+
+Réponse: 14 élèves ne pratiquent qu'un seul sport.
+````
+
+## Exercices
+
+### Exercice {num2}`exercice`
+
+Écrivez les ensembles suivants en extension.
+
+{.lower-alpha-paren}
+1. L'ensemble des jours de la semaine.
+2. L'ensemble des mois de l'année qui ont 31 jours.
+3. L'ensemble des nombres entiers de 0 à 10.
+4. L'ensemble des multiples de 3, noté $M_{3}$.
+5. L'ensemble des diviseurs de 24, noté $D_{24}$.
+
+
+```{block} solution
+{.lower-alpha-paren}
+1. $\{\text{lundi; mardi; mercredi; jeudi; vendredi; samedi; dimanche}\}$
+2. $\{\text{janvier; mars; mai; juin; juillet; août; octobre; décembre}\}$
+3. $\{0; 1; 2; 3; 4; 5; 6; 7; 8; 9; 10\}$
+4. $M_{3} = \{3; 6; 9; 12; 15; 18; \dots\}$
+5. $D_{24} = \{1; 2; 3; 4; 6; 8; 12; 24\}$
+```
+
+### Exercice {num2}`exercice`
+
+Écrivez les ensembles suivants en compréhension.
+
+{.lower-alpha-paren}
+1. L'ensemble des garçons de la classe qui ont des lunettes.
+2. L'ensemble des filles de la classe qui ont 16 ans.
+3. L'ensemble des nombres entiers entre 6 et 12 compris.
+4. L'ensemble des nombres entiers entre -2 et 5 non compris.
+5. L'ensemble des nombres entiers entre -3 non compris et 3 compris.
+
+```{block} solution
+{.lower-alpha-paren}
+1. $\{x \in \text{garçons de la classe} \, \mid \, x \text{ a des lunettes}\}$
+2. $\{x \in \text{filles de la classe} \, \mid \, x \text{ a 16 ans}\}$
+3. $\{ x \in \mathbb{Z} \, \mid \,6 \leq x \leq 12\}$
+4. $\{ x \in \mathbb{Z} \, \mid \,-2 < x < 5\}$
+5. $\{ x \in \mathbb{Z} \, \mid \,-3 < x \leq 3\}$
+```
+
+### Exercice {num2}`exercice`
+
+Écrivez les ensembles de l'exercice précédent en extension.
+
+```{block} solution
+{.lower-alpha-paren}
+1. sans correction
+2. sans correction
+3. $\{ x \in \mathbb{Z} \, \mid \,6 \leq x \leq 12\} = \{6; 7; 8; 9; 10; 11; 12\}$
+4. $\{ x \in \mathbb{Z} \, \mid \,-2 < x < 5\} = \{-1; 0; 1; 2; 3; 4\}$
+5. $\{ x \in \mathbb{Z} \, \mid \,-3 < x \leq 3\} = \{-2; -1; 0; 1; 2; 3\}$
+```
+
+### Exercice {num2}`exercice`
+
+Écrivez les ensembles suivants sous forme d'intervalle.
+
+{.lower-alpha-paren .columns-2}
+1. $\{ x \in \mathbb{R} \, \mid \,0 \leq x \leq 5\}$
+2. $\{ x \in \mathbb{R} \, \mid \,-3 \leq x \leq 2\}$
+3. $\{ x \in \mathbb{R} \, \mid \,9 < x \leq 15\}$
+4. $\{ x \in \mathbb{R} \, \mid \,-10 \leq x < -5\}$
+
+```{block} solution
+{.lower-alpha-paren}
+1. $\{ x \in \mathbb{R} \, \mid \,0 \leq x \leq 5\} = [0; 5]$
+2. $\{ x \in \mathbb{R} \, \mid \,-3 \leq x \leq 2\} = [-3; 2]$
+3. $\{ x \in \mathbb{R} \, \mid \,9 < x \leq 15\} = ]9; 15]$
+4. $\{ x \in \mathbb{R} \, \mid \,-10 \leq x < -5\} = [-10; -5[$
+```
+
+### Exercice {num2}`exercice`
+
+Écrivez les ensembles suivant en extension.
+
+{.lower-alpha-paren .columns-2}
+1. $\{ x \in \mathbb{Z} \, \mid \,0 \leq x \leq 7\}$
+2. $\{ x \in \mathbb{Z} \, \mid \,-2 \leq x \leq 3\}$
+3. $\{ x \in \mathbb{Z} \, \mid \,10 < x \leq 14\}$
+4. $\{ x \in \mathbb{Z} \, \mid \,-8 \leq x < -2\}$
+
+```{block} solution
+{.lower-alpha-paren}
+1. $\{ x \in \mathbb{Z} \, \mid \,0 \leq x \leq 7\} = \{0; 1; 2; 3; 4; 5; 6; 7\}$
+2. $\{ x \in \mathbb{Z} \, \mid \,-2 \leq x \leq 3\} = \{-2; -1; 0; 1; 2; 3\}$
+3. $\{ x \in \mathbb{Z} \, \mid \,10 < x \leq 14\} = \{11; 12; 13; 14\}$
+4. $\{ x \in \mathbb{Z} \, \mid \,-8 \leq x < -2\} = \{-8; -7; -6; -5; -4; -3\}$
+```
+
+### Exercice {num2}`exercice`
+
+Écrivez les ensembles suivants en compréhension.
+
+{.lower-alpha-paren .columns-2}
+1. $\{0; 1; 2; 3\}$
+2. $\{0; 1; 2; 3; ...\}$
+3. $\{ -4; -3; -2; -1\}$
+4. $\{ ...; -4; -3; -2; -1\}$
+5. $\{ 2; 4; 6; 8; 10; 12; ...\}$
+6. $\{ 2; 3; 5; 7; 11; 13; 17; ...\}$
+7. $\{ 1; 2; 3; 6\}$
+8. $\{ 1; 4; 9; 16; 25; \dots \}$
+9. $[4; 9]$
+10. $]-1; 6[$
+11. $[-7; -2[$
+12. $]0; 7]$
+
+```{block} solution
+{.lower-alpha-paren}
+1. $\{0; 1; 2; 3\} = \{ x \in \mathbb{Z} \, \mid \,0 \leq x \leq 3\}$
+2. $\{0; 1; 2; 3; ...\} = \{ x \in \mathbb{Z} \, \mid \,0 \leq x < \infty\}$
+3. $\{ -4; -3; -2; -1\} = \{ x \in \mathbb{Z} \, \mid \,-4 \leq x \leq -1\}$
+4. $\{ ...; -4; -3; -2; -1\} = \{ x \in \mathbb{Z} \, \mid \,-\infty < x \leq -1\}$
+5. $\{ 2; 4; 6; 8; 10; 12; ...\} = \{ x \in \mathbb{N} \, \mid \, x \text{ est pair}\}$
+6. $\{ 2; 3; 5; 7; 11; 13; 17; ...\} = \{ x \in \mathbb{N} \, \mid \, x \text{ est un nombre premier}\}$
+7. $\{ 1; 2; 3; 6\} = \{ x \in \mathbb{N} \, \mid \, x \text{ est un diviseur de 6}\}$
+8. $\{ 1; 4; 9; 16; 25; \dots\} = \{ x \in \mathbb{Z} \, \mid \, x \text{ est un carré}\}$
+9. $[4; 9] = \{ x \in \mathbb{R} \, \mid \,4 \leq x \leq 9\}$
+10. $]-1; 6[ = \{ x \in \mathbb{R} \, \mid \,-1 < x < 6\}$
+11. $[-7; -2[ = \{ x \in \mathbb{R} \, \mid \,-7 \leq x < -2\}$
+12. $]0; 7] = \{ x \in \mathbb{R} \, \mid \,0 < x \leq 7\}$
+```
+
+### Exercice {num2}`exercice`
+
+Soient les ensembles $A = \{1;2;3;4;5;6;7;8\}$, $B = \{1;3;5;7\}$ et $C = \{2;4;8;12\}$.
+
+{.lower-alpha-paren}
+1.  Énumérez les ensembles suivants.
+
+    {.decimal-paren .columns-3}
+    1.  $A\cup C$
+    2. $A \setminus B$
+    3. $A \cap B$
+    4.  $C \cap B$
+    5. $C \cup B$
+    6.  $C \setminus A$
+
+2.  Répondez par vrai ou faux.
+
+    {.decimal-paren .columns-2}
+    1. $C \subset A$
+    2. $B \subset A$
+
+```{block} solution
+{.lower-alpha-paren}
+1.  {.decimal-paren .columns-2}
+    1. $A \cup C=\{1;2;3;4;5;6;7;8;12\}$
+    2. $A\setminus B=\{2;4;6;8\}$
+    3. $ A \cap B=\{1;3;5;7\}$
+    4. $C \cap B= \varnothing$
+    5.  $C \cup B=\{1;2;3;4;5;7;8;12\}$
+    6. $C\setminus A=\{12\}$
+
+2.  {.decimal-paren .columns-2}
+    1. Faux
+    2. Vrai
+```
+
+
+<!--
+
+1. Soit $D_n$ l'ensemble des diviseurs de $n$ et $M_n$ l'ensemble des multiples de $n$. Énumérer les ensembles suivants (définis en extension).
+\vspace{-0.4cm}
+\begin{multicols}{4}
+\begin{enumerate}
+1. $D_{12} \cap D_{18}$
+1. $D_{30} \setminus D_{15}$
+1. $M_2 \cap M_4$
+1. $M_6 \setminus M_9$
+1. $D_{10} \cup D_{35}$
+1. $M_3 \cup M_6$
+1. $D_{24} \cap M_3$
+1. $M_3 \setminus D_{36}$
+\end{enumerate}
+\end{multicols}
+
+1. Décrire comme un seul intervalle les ensembles suivants.
+\vspace{-0.4cm}
+\begin{multicols}{3}
+\begin{enumerate}
+1. $[2; 15] \cup [8; 20]$
+1. $[2; 15] \cap [8; 20]$
+1. $[1; 7[ \cup ]0; 8]$
+1. $[1; 7[ \cap ]0; 8]$
+1. $[7; 14[ \cap [14; 16]$
+1. $[7; 14[ \cup [14; 16]$
+1. $[7; 14[ \setminus [13; 16]$
+1. $]-\infty; 6[ \cap ]-2; 7]$
+1. $\mathbb{R} \setminus ]-5; \infty[$
+\end{enumerate}
+\end{multicols}
+
+1. Écrire les ensembles suivants sous forme (de réunion) d'intervalles.
+\vspace{-0.4cm}
+\begin{multicols}{2}
+\begin{enumerate}
+1. $[-10; 10] \setminus [0; 5]$
+1. $[0; 19] \setminus ]6; 12[$
+1. $[-5; 5] \setminus [-1; 8]$
+1. $[12; 25[ \setminus [15; 20[$
+\end{enumerate}
+\end{multicols}
+
+
+% 1. Soit l'ensemble de base $M=\{a; b; c; d; e; f; g ; h; i; j; k; l\}$ et les deux sous-ensembles $A=\{b; c; d; f; h\}$ et $B=\{b; h; j\}$. Déterminer $\overline{(A \cup B)}$ et $\overline{A} \cap \overline{B}$ et en déduire que $\overline{(A \cup B)}= \overline{A} \cap \overline{B}$.
+
+1. Soient $A$, $B$ et $C$ des sous-ensembles de l'ensemble $M$. Représenter les ensembles suivants au moyen d'un diagramme de Venn (un diagramme différent pour chaque exercice).
+\vspace{-0.4cm}
+\begin{multicols}{3}
+\begin{enumerate}
+1. $A \cup (B \cap C)$
+1. $A \setminus (B \cap C)$
+1. $A \cap (B \cup C)$
+1. $\overline{B}$
+1. $(B \setminus C) \setminus A$
+1. $\overline{A \cap B}$
+\end{enumerate}
+\end{multicols}
+
+1. Écrire les ensembles suivants à l'aide des opérations sur les ensembles.
+\vspace{-0.4cm}
+\begin{multicols}{2}
+\begin{enumerate}
+1.$ $
+\raisebox{1ex-\height}{\includegraphics[width=0.3\textwidth]{ensemble1.png}}
+1.$ $
+\raisebox{1ex-\height}{\includegraphics[width=0.3\textwidth]{ensemble2.png}}
+1.$ $
+\raisebox{1ex-\height}{\includegraphics[width=0.3\textwidth]{ensemble3.png}}
+1.$ $
+\raisebox{1ex-\height}{\includegraphics[width=0.3\textwidth]{ensemble4.png}}
+\end{enumerate}
+\end{multicols}
+
+\newpage
+
+% 1. Soit $G$ l'ensemble de tous les habitants d'une ville, $H$ l'ensemble de tous les hommes, $V$ l'ensemble des habitants de plus de 60 ans (les "vieux") et $A$ l'ensemble de tous les habitants dont les parents habitaient déjà dans cette ville (les "autochtones").
+% \vspace{-0.1cm}
+% \begin{enumerate}
+% 1. Écrire les ensembles suivants à l'aide des opérations sur les ensembles.
+% \begin{enumerate}[label=\arabic*)]
+% 1. L'ensemble des habitants qui sont vieux, mais pas autochtones.
+% 1. L'ensemble des habitants qui sont des femmes.
+% 1. L'ensemble des habitants de moins de 60 ans.
+% 1. L'ensemble des habitants qui sont des hommes autochtones.
+% 1. L'ensemble des habitants qui sont des hommes vieux.
+% \end{enumerate}
+% 1. Décrire les ensembles suivants avec des mots.
+% \vspace{-0.4cm}
+% \begin{multicols}{3}
+% \begin{enumerate}[label=\arabic*)]
+% 1. $V \cap H$
+% 1. $V\setminus H$
+% 1. $A \cap H$
+% 1. $V \cup (A \setminus H)$
+% 1. $V \cup H$
+% 1. $H \setminus(V \cap A)$
+% \end{enumerate}
+% \end{multicols}
+% \end{enumerate}
+
+1. Dans un hôpital, il y a 200 patients. 50 ont des problèmes respiratoires, 60 des problèmes cardiaques et 30 du rhumatisme. 15 patients ont des problèmes cardiaques et respiratoires, 10 patients ont du rhumatisme et des problèmes cardiaques. Parmi les patients avec du rhumatisme, 5 ont aussi un problème respiratoire. Aucune personne ne souffre des trois maladies. Résoudre le problème suivant à l'aide d'un diagramme de Venn et répondre aux questions suivantes.
+\begin{enumerate}
+1. Combien de patients n'ont qu'une seule maladie? Laquelle?
+1. Combien de patients sont dans cet hôpital pour d'autres raisons?
+\end{enumerate}
+
+1. Lors d'une étude sur les voyages des collégiens en Europe, 363 élèves ont été interrogés sur leurs voyages en Espagne, en Angleterre et en Italie. \\
+180 élèves ont séjourné en Espagne, 192 en Angleterre et 199 en Italie. 103 élèves ont au moins séjourné en Espagne et en Angleterre, 105 au moins en Italie et en Angleterre et 123 au moins en Italie et en Espagne. 73 élèves ont déjà séjourné dans les 3 pays. Établis un diagramme de Venn et réponds aux questions suivantes:
+\begin{enumerate}
+1. Déterminer le nombre d'élèves qui ont séjourné uniquement en Espagne.
+1. Déterminer le nombre d'élèves qui ont séjourné uniquement en Italie et en Angleterre.
+1. Déterminer le nombre d'élèves qui n'ont séjourné dans aucun de ces 3 pays.
+\end{enumerate}
+
+1. Dans une classe de 28 élèves, 12 élèves ont un chat, 11 élèves ont un chien et 6 élèves ont des poissons. 3 élèves ont au moins un chien et un chat. Aucun élève n'a qu'un chat et des poissons. 1 seul élève a un chat, un chien et des poissons. 5 élèves n'ont aucun des trois animaux.
+\begin{enumerate}
+1. Combien d'élèves n'ont qu'un chat?
+1. Combien d'élèves ont qu'un chien et des poissons?
+1. Combien d'élèves n'ont qu'un chien?
+\end{enumerate}
+
+1. \textbf{Challenge}\\
+Lors d'une exposition, des bijoux ont été volés. La police interroge 18 personnes et pose deux questions auxquelles les personnes doivent répondre par "Oui" ou par "Non". Les questions sont:
+\begin{itemize}[label=-]
+1. Avez-vous entendu du verre se casser?
+1. Avez-vous vu fuir quelqu'un ?
+\end{itemize}
+Dix personnes ont répondu "Oui" à la première question, six personnes ont répondu "Non" à la deuxième question et 5 personnes ont répondu "Non" aux deux questions. \\
+Dessiner un diagramme de Venn qui illustre cette situation et déterminer combien de personnes ont répondu "Oui" aux deux questions. -->
+
+## Solutions
+
+```{blocks} solution
+:class: allow-break-inside
+```
