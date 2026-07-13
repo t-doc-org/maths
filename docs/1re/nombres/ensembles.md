@@ -72,9 +72,9 @@ nombres réels délimité par deux bornes.
 ### Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
-1.  $[-3;10]$ représente l'ensemble des nombres de $-3$ compris à $10$ compris.
-2.  $]0;7]$ représente l'ensemble des nombres de $0$ non compris à $7$ compris.
-3.  $]-10;-4[$ représente l'ensemble des nombres de $-10$ non compris à $-4$ non
+1.  $[-3;10]$ représente l'ensemble des nombres réels de $-3$ compris à $10$ compris.
+2.  $]0;7]$ représente l'ensemble des nombres réels de $0$ non compris à $7$ compris.
+3.  $]-10;-4[$ représente l'ensemble des nombres réels de $-10$ non compris à $-4$ non
     compris.
 ````
 
@@ -260,11 +260,16 @@ hockey et du foot. Combien d'élèves ne pratiquent qu'un seul sport?
 {.lower-alpha-paren}
 1. "2 pratiquent trois sports" $\implies$ 3 sports: 2 élèves
 2. "Un seul élève ne fait pas de sport" $\implies$ Aucun sport: 1 élève
-3. Hockey et tennis: $3 - 2 = 1$ élève
-4. Hockey et foot: $6 - 2 = 4$ élèves
-5. Que du Hockey: $12 - (4 + 1 + 2) = 12 - 7 = 5$ élèves
-6. Foot mais pas du hockey: $17 - (4 + 2) = 17 - 6 = 11$ élèves
-7. Tennis mais pas du hockey: $9 - (2 + 1) = 9 - 3 = 6$ élèves
+3. "3 élèves jouent au moins au hockey" $\implies$ Hockey et tennis (pas foot):
+    $3 - 2 = 1$ élève
+4. "6 élèves font au moins du hockey et du foot" $\implies$ Hockey et foot (pas
+    tennis): $6 - 2 = 4$ élèves
+5. "12 du hockey" $\implies$ Que du Hockey: $12 - (4 + 1 + 2) = 12 - 7 = 5$
+    élèves
+6. "17 font du foot" $\implies$ Foot mais pas du hockey:
+    $17 - (4 + 2) = 17 - 6 = 11$ élèves
+7. "9 du tennis" $\implies$ Tennis mais pas du hockey: $9 - (2 + 1) = 9 - 3 = 6$
+    élèves
 8. Élèves qui restent à placer $26 - (12 + 1) = 26 - 13 = 13$ élèves
 9. Foot et/ou tennis mais pas de hockey: $11 + 6 = 17$ élèves
 10. Foot et tennis:  $17 - 13 = 4$ élèves
