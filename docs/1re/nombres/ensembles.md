@@ -871,17 +871,6 @@ options: {
 9 personnes ont répondu "oui" aux deux questions.
 ````
 
-
-<!--
-1. \textbf{Challenge}\\
-Lors d'une exposition, des bijoux ont été volés. La police interroge 18 personnes et pose deux questions auxquelles les personnes doivent répondre par "Oui" ou par "Non". Les questions sont:
-\begin{itemize}[label=-]
-1. Avez-vous entendu du verre se casser?
-1. Avez-vous vu fuir quelqu'un ?
-\end{itemize}
-Dix personnes ont répondu "Oui" à la première question, six personnes ont répondu "Non" à la deuxième question et 5 personnes ont répondu "Non" aux deux questions. \\
-Dessiner un diagramme de Venn qui illustre cette situation et déterminer combien de personnes ont répondu "Oui" aux deux questions. -->
-
 ## Solutions
 
 ```{blocks} solution
