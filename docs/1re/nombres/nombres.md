@@ -240,6 +240,276 @@ Complétez le tableau par **vrai** ou **faux**.
 | $x \in \mathbb{R}$ | Vrai | Vrai | Vrai | Vrai | Vrai |
 ```
 
+### Exercice {num2}`exercice`
+
+Corrigez les erreurs dans ce diagramme. (Il y en a 8)
+
+```{figure} images/diagramme-nombres.png
+:width: 50%
+```
+
+````{block} solution
+```{figure} images/diagramme-nombres-sol.png
+:width: 50%
+```
+````
+
+### Exercice {num2}`exercice`
+
+Répondez aux questions suivantes et justifiez.
+
+{.lower-alpha-paren}
+1.  Tous les nombres entiers sont rationnels. Vrai ou faux?
+2.  À quels ensembles de nombres appartient le nombre $1.345$?
+3.  Quels ensembles de nombres contiennent le nombre $-2$?
+4.  $-11$ est un nombre entier naturel. Vrai ou faux?
+5.  $\pi$ est un nombre rationnel. Vrai ou faux?
+6.  $1.\overline{45}$ est un nombre réel? Vrai ou faux?
+
+```{block} solution
+{.lower-alpha-paren .columns-3}
+1. Vrai
+2. $\mathbb{Q}$ et $\mathbb{R}$
+3. $\mathbb{Z}$, $\mathbb{Q}$ et $\mathbb{R}$
+4. Faux
+5. Faux
+6. Vrai
+```
+
+### Exercice {num2}`exercice`
+
+Déterminez si le nombre $\in$ ou $\notin$ à l'ensemble donné.
+
+{.lower-alpha-paren .columns-3}
+1. $-2$ {leader}`.|3em` $\mathbb{N}$
+2. $101$ {leader}`.|3em` $ \mathbb{N}$
+3. $-7$ {leader}`.|3em` $ \mathbb{Z}$
+4. $-\frac{3}{5}$ {leader}`.|3em` $ \mathbb{Z}$
+5. $\sqrt{5}$ {leader}`.|3em` $ \mathbb{R}$
+6. $\frac{3}{4}$ {leader}`.|3em` $ \mathbb{R}$
+7. $1.345$ {leader}`.|3em` $ \mathbb{Q}$
+8. $\sqrt{81}$ {leader}`.|3em` $ \mathbb{Z}$
+9. $4.\overline{234}$ {leader}`.|3em` $\mathbb{Q}$
+10. $\sqrt{3}$ {leader}`.|3em` $\mathbb{Q}$
+11. $\pi$ {leader}`.|3em` $ \mathbb{R}$
+12. $10009$ {leader}`.|3em` $ \mathbb{R}$
+
+```{block} solution
+{.lower-alpha-paren .columns-3}
+1. $-2 \notin \mathbb{N}$
+2. $101 \in \mathbb{N}$
+3. $-7 \in\mathbb{Z}$
+4. $-\frac{3}{5}\notin \mathbb{Z}$
+5. $\sqrt{5} \in \mathbb{R}$
+6. $\frac{3}{4} \in \mathbb{R}$
+7. $1.345 \in \mathbb{Q}$
+8. $\sqrt{81} \in \mathbb{Z}$
+9. $4.\overline{234} \in \mathbb{Q}$
+10. $\sqrt{3} \notin\mathbb{Q}$
+11. $\pi \in \mathbb{R}$
+12. $10009 \in\mathbb{R}$
+```
+
+### Exercice {num2}`exercice`
+
+Écrivez les ensembles suivants en extension.
+
+{.lower-alpha-paren}
+1. $\{x \in \mathbb{Z} \, \mid \, -5 \leq x \leq 5\}$
+2. $\{x \in \mathbb{N} \, \mid \, x \text{ est un multiple de } 6\}$
+3. $\{x \in \mathbb{N} \, \mid \, x \text{ est un diviseur de } 24\}$
+4. $\{x \in \mathbb{Z} \, \mid \, x^2 \leq 18\}$
+
+```{block} solution
+{.lower-alpha-paren}
+1. $\{-5;-4;-3;-2,;-1;0;1;2;3;4;5\}$
+2. $\{6;12;18;24;30; \dots \}$
+3. $\{1;2;3;4;6;8;12;24\}$
+4. $\{-4;-3;-2;-1;0;1;2;3;4\}$
+```
+
+### Exercice {num2}`exercice`
+
+Représentez les ensembles suivants en compréhension.
+
+{.lower-alpha-paren}
+1. L'ensemble des nombres réels qui ne sont pas des nombres entiers.
+2. L'ensemble des nombres entiers relatifs sans $-3$.
+3. L'ensemble des nombres réels qui sont strictement supérieur à $5$.
+4. L'ensemble des nombres réels dont la racine carrée est inférieure ou égale à $20$.
+5. L'ensemble des nombres réels entre $-25$ et $8$.
+
+```{block} solution
+{.lower-alpha-paren .columns-2}
+1. $\mathbb{R} \setminus \mathbb{Z}$
+2. $\mathbb{Z} \setminus \{-3\}$
+3. $\{ x \in  \mathbb{R} \,\mid\, x > 5\}$
+4. $\{ x \in  \mathbb{R} \,\mid\, \sqrt{x} \leq 20\}$
+5. $\{ x \in  \mathbb{R} \,\mid\, -25 \leq x \leq 8\}$
+```
+
+### Exercice {num2}`exercice`
+
+Écrivez les fractions suivantes comme nombres décimaux (sans calculatrice).
+
+{.lower-alpha-paren .columns-3}
+1. $\dfrac{13}{5}=$
+2. $\dfrac{5}{6}=$
+3. $\dfrac{7}{4}=$
+4. $\dfrac{8}{3}=$
+5. $\dfrac{7}{11}=$
+6. $\dfrac{8}{13}=$
+7. $\dfrac{9}{7}=$
+8. $\dfrac{133}{20}=$
+9. $\dfrac{785}{60}=$
+
+```{block} solution
+{.lower-alpha-paren .columns-3}
+1. $2.6$
+2. $0.8\overline{3}$
+3. $1.75$
+4. $2.\overline{6}$
+5. $0.\overline{63}$
+6. $0.\overline{615384}$
+7. $1.\overline{285714}$
+8. $6.65$
+9. $13.08\overline{3}$
+```
+
+### Exercice {num2}`exercice`
+
+Écrivez les nombres décimaux comme fractions simplifiées. (sans calculatrice)
+
+{.lower-alpha-paren .columns-3}
+1. $0.62=$
+2. $2.345=$
+3. $0.\overline{7}=$
+4. $1.0\overline{83}=$
+5. $5.\overline{135}=$
+6. $2.4\overline{2}=$
+
+```{block} solution
+{.lower-alpha-paren .columns-3}
+1. $\dfrac{31}{50}$
+2. $\dfrac{469}{200}$
+3. $\dfrac{7}{9}$
+4. $\dfrac{1073}{990}$
+5. $\dfrac{190}{37}$
+6. $\dfrac{109}{45}$
+```
+
+### Exercice {num2}`exercice`
+
+Calculez (sans calculatrice).
+
+{.lower-alpha-paren .columns-2}
+1. $12+4 \cdot 3 +2=$
+2. $(12+4) \cdot 3 +2=$
+3. $3 \cdot 5 + (2 \cdot 4 -2) \cdot 6=$
+4. $(7-2)^2 :5 \cdot 2^3=$
+5. $3 \cdot (2-7) \cdot (-1) - (6-9)^3-2^3+1=$
+6. $\dfrac{5-(2-8)\cdot 2}{2 \cdot (6+3) -1}=$
+7. $9+3 \cdot (2 \cdot (9-5)-(5-7))=$
+8. $\sqrt{36+64}=$
+9. $\sqrt{36}+\sqrt{64}=$
+
+```{block} solution
+{.lower-alpha-paren .columns-3}
+1. $26$
+2. $50$
+3. $51$
+4. $40$
+5. $35$
+6. $1$
+7. $39$
+8. $10$
+9. $14$
+```
+
+### Exercice {num2}`exercice`
+
+Calculez et répondez sous forme simplifiée (sans calculatrice).
+
+{.lower-alpha-paren .columns-2}
+1. $\dfrac{1}{8}+\dfrac{2}{3}+\dfrac{1}{2}=$
+2. $\dfrac{1}{2}+\dfrac{2}{3}+\dfrac{3}{4}=$
+3. $\dfrac{1}{10}+\dfrac{1}{100}+\dfrac{1}{1000}=$
+4. $\dfrac{3}{2} \cdot \left( \dfrac{2}{5}+\dfrac{5}{2} \right)=$
+5. $1+\dfrac{1}{3} \cdot \dfrac{4}{5}-3=$
+6. $\left( \dfrac{1}{3}+\dfrac{1}{2} \right) : \left( \dfrac{1}{4} + \dfrac{1}{5} \right)=$
+7. $\left( \dfrac{1}{5} +\dfrac{5}{3}\right)^2 =$
+8. $\dfrac{1}{1+\dfrac{1}{2+\frac{1}{3}}} =$
+9. $\dfrac{1}{4-\dfrac{1}{3+\frac{2}{5}}} =$
+
+```{block} solution
+{.lower-alpha-paren .columns-3}
+1. $\dfrac{31}{24}$
+2. $\dfrac{23}{12}$
+3. $\dfrac{111}{1000}$
+4. $\dfrac{87}{20}$
+5. $-\dfrac{26}{15}$
+6. $\dfrac{50}{27}$
+7. $\dfrac{784}{225}$
+8. $\dfrac{7}{10}$
+9. $\dfrac{17}{63}$
+```
+
+### Exercice {num2}`exercice`
+
+Calculez et répondez sous forme simplifiée (sans calculatrice).
+
+{.lower-alpha-paren .columns-2}
+1. $\dfrac{18}{5} : \dfrac{14}{3} - \dfrac{8}{15}=$
+2. $\dfrac{51}{4} : \dfrac{21}{2} - \dfrac{2}{15} \cdot \dfrac{20}{7}=$
+3. $\left( \dfrac{4}{7} - \dfrac{3}{14} \right) \cdot \left( \dfrac{1}{3} + \dfrac{3}{5} \right)=$
+4. $\dfrac{4}{5} : 2 - \dfrac{2}{5} : \dfrac{10}{3}=$
+5. $\dfrac{11}{5} \cdot \left( \dfrac{11}{6} + \dfrac{2}{3} \right)=$
+6. $\dfrac{5}{8} : \dfrac{1}{4} -\dfrac{5}{4}=$
+
+```{block} solution
+{.lower-alpha-paren .columns-3}
+1. $\dfrac{5}{21}$
+2. $\dfrac{5}{6}$
+3. $\dfrac{1}{3}$
+4. $\dfrac{7}{25}$
+5. $\dfrac{11}{2}$
+6. $\dfrac{5}{4}$
+```
+
+### Exercice {num2}`exercice`
+
+Calculez et répondez sous forme simplifiée (sans calculatrice).
+
+{.lower-alpha-paren .columns-4}
+1. $\dfrac{\dfrac{5}{2}+\dfrac{13}{4}}{\dfrac{1}{2}}=$
+2. $\dfrac{\dfrac{7}{5}-\dfrac{5}{7}}{\dfrac{3}{2}-\dfrac{2}{3}}=$
+3. $\dfrac{\dfrac{5}{4}+\dfrac{1}{6}}{\dfrac{5}{12}+1}=$
+4. $\dfrac{\dfrac{42}{5}-\dfrac{2}{3}}{\dfrac{7}{4}+\dfrac{11}{2}}=$
+
+```{block} solution
+{.lower-alpha-paren .columns-4}
+1. $\dfrac{23}{2}$
+2. $\dfrac{144}{175}$
+3. $1$
+4. $\dfrac{16}{15}$
+```
+
+### Exercice {num2}`exercice`
+
+Calculez et répondez sous forme simplifiée (sans calculatrice).
+
+{.lower-alpha-paren}
+1. $\left( 12+\dfrac{7}{4}-1 \right) \left( \dfrac{1}{2}-\dfrac{1}{3} \right)\left( \dfrac{2}{5}-1 \right)- (-3) \left( \dfrac{5}{3}-\dfrac{9}{4} \right) \left( 2+\dfrac{6}{7} \right)=$
+2. $\dfrac{3}{2} - \dfrac{2}{3} \left( -\dfrac{3}{4}- \left( \dfrac{1}{2}-  \left( \dfrac{2}{3}-1 \right)  \right)  \right) =$
+3. $\left( 4-\dfrac{2}{5}+\dfrac{4}{3}-\dfrac{2}{3} \right) : \left( -3-3 \cdot \dfrac{1}{2}-\dfrac{4}{5} +2 \right)=$
+
+```{block} solution
+{.lower-alpha-paren .columns-3}
+1. $-\dfrac{251}{40}$
+2. $\dfrac{23}{9}$
+3. $-\dfrac{128}{99}$
+```
+
 ## Solutions
 
 ```{blocks} solution
