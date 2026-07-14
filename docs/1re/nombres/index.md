@@ -5,6 +5,7 @@
 
 ```{toctree}
 :maxdepth: 1
+ensembles-intro
 ensembles
 nombres
 ```
