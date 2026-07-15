@@ -9,19 +9,31 @@ subject: "Mathématiques 1re année"
 
 ## Théorie
 
-```{admonition} Définition
+````{admonition} Définition
 :class: note
 L'**ensemble des nombres naturels** est l'ensemble des entiers positifs, noté
 $\mathbb{N}$ et défini en extension ainsi:
-$$ \mathbb{N} = \{0; 1; 2; 3; 4; \dots\}$$
-$\mathbb{N^*} = \mathbb{N} \setminus \{0\} = \{1; 2; 3; 4; \dots\}$\par
-L'**ensemble des nombres entiers relatifs** est l'ensemble des entiers positifs et négatifs, noté $\mathbb{Z}$ et défini en extension ainsi:
-$$ \mathbb{Z} = \{\dots; -4; -3; -2; -1; 0; 1; 2; 3; 4; \dots\}$$\par
-L'**ensemble des nombres rationnels** est l'ensemble des nombres qui peuvent être écrit sous forme de fraction, noté $\mathbb{Q}$ et défini en compréhension ainsi:
-$$ \mathbb{Q} = \{\frac{a}{b} \, \mid \, a \text{ et } b \in \mathbb{Z} \text{ et } b \ne 0\}$$\par
-L'**ensemble des nombres réels** est l'ensemble des nombres à virgule (périodique, fini ou infini), noté $\mathbb{R}$.\par
-L'**ensemble des nombres irrationnels** est l'ensemble des nombres réels qui ne sont pas rationnels, c'est-à-dire l'ensemble $\mathbb{R} \setminus \mathbb{Q}$.
+```{math}
+:class: align-center
+ \mathbb{N} = \{0; 1; 2; 3; 4; \dots\}
 ```
+$\mathbb{N^*} = \mathbb{N} \setminus \{0\} = \{1; 2; 3; 4; \dots\}$
+
+L'**ensemble des nombres entiers relatifs** est l'ensemble des entiers positifs et négatifs, noté $\mathbb{Z}$ et défini en extension ainsi:
+```{math}
+:class: align-center
+\mathbb{Z} = \{\dots; -4; -3; -2; -1; 0; 1; 2; 3; 4; \dots\}
+```
+
+L'**ensemble des nombres rationnels** est l'ensemble des nombres qui peuvent être écrit sous forme de fraction, noté $\mathbb{Q}$ et défini en compréhension ainsi:
+```{math}
+:class: align-center
+\mathbb{Q} = \{\frac{a}{b} \, \mid \, a \text{ et } b \in \mathbb{Z} \text{ et } b \ne 0\}
+```
+L'**ensemble des nombres réels** est l'ensemble des nombres à virgule (périodique, fini ou infini), noté $\mathbb{R}$.
+
+L'**ensemble des nombres irrationnels** est l'ensemble des nombres réels qui ne sont pas rationnels, c'est-à-dire l'ensemble $\mathbb{R} \setminus \mathbb{Q}$.
+````
 
 $\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R}$
 
