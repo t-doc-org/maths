@@ -5,6 +5,7 @@
 
 ```{metadata}
 subject: "Mathématiques 1re année"
+page-break-avoid-inside: 2
 ```
 
 Imaginez la classe comme un ensemble et appelons cet ensemble $C$. Chaque élève
@@ -37,11 +38,11 @@ L'ensemble $C$ possède différents sous-ensembles comme par exemple:
 concernés dans les bulles correspondantes.
 
 ```{figure} images/bulle2.png
-:width: 80%
+:width: 75%
 ```
 
 ```{figure} images/bulle3.png
-:width: 80%
+:width: 75%
 ```
 
 ## Exercice {num2}`exercice`
@@ -73,29 +74,39 @@ le nom des enembles $G$, $F$, $X$, $Y$, ...
 
 ## Exercice {num2}`exercice`
 
-En reprenant les 4 ensembles suivants, dessinez ces 4 ensembles afin de pouvoir
-insérer toutes les personnes de la classe en n'inscrivant leur prénom qu'une
-seule fois.
+Comment représenter les 4 ensembles suivants afin de pouvoir y insérer toutes
+les personnes de la classe en n'inscrivant leur prénom qu'une seule fois.
 
 - L'ensemble $C$ représentant tous les élèves de ta classe.
 - L'ensemble $M$ des élèves qui aiment les mathématiques.
 - L'ensemble $A$ des élèves ayant un animal domestique à la maison.
 - L'ensemble $L$ des élèves qui portent des lunettes ou des lentilles.
 
-{vspace}`20lh`
+Représentez les ensembles suivants:
 
-
-Quelles parties du diagramme représentent les ensembles suivants?
-
-{.lower-alpha-paren}
+```{list-grid}
+:style: grid-template-columns: 1fr 1fr;
+- {.lower-alpha-paren}
   1. L'ensemble des élèves qui aiment les mathématiques et qui ont un animal
       domestique.
+- {vspace}`4.5lh`
+- {.lower-alpha-paren}
   2. L'ensemble des élèves qui ont des problèmes de vue ou qui ont un animal
       domestique.
+- {vspace}`4.5lh`
+- {.lower-alpha-paren}
   3. L'ensemble des élèves qui aiment les mathématiques ou qui ont un animal
       domestique, mais qui ne portent pas de lunettes ni de lentilles.
+- {vspace}`4.5lh`
+- {.lower-alpha-paren}
   4. L'ensemble des élèves qui n'aiment pas les mathématiques.
+- {vspace}`4.5lh`
+- {.lower-alpha-paren}
   5. L'ensemble des élèves sans lentilles ou lunettes qui n'aiment pas les
       mathématiques.
+- {vspace}`4.5lh`
+- {.lower-alpha-paren}
   6. L'ensemble des élèves qui n'aiment pas les mathématiques ou qui n'ont pas
       de problème de vue.
+- {vspace}`4.5lh`
+```
