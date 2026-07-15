@@ -8,4 +8,5 @@
 ensembles-intro
 ensembles
 nombres
+puissances
 ```
