@@ -72,6 +72,18 @@ le nom des enembles $G$, $F$, $X$, $Y$, ...
     quatre derniers mois de l'année.
 {vspace}`3lh`
 
+```{solution}
+{.lower-alpha-paren}
+1. $X \cup Y$ ("$X$ ou $Y$")
+2. $\overline{L}$ ou $C \setminus L$ ("pas L" ou "C - L")
+3. $F \cap M$ ("$F$ et $M$")
+4. $G \cap I$ ("$G$ et $I$")
+5. $L \cap \overline{A}$ ou $L \setminus A$ ("$L$ et pas $A$" ou "L - A")
+6. $A \cap \overline{Z}$ ou $A \setminus Z$ ("$A$ et pas $Z$" ou "A - Z")
+7. $X \cup Z$ ("$X$ ou $Z$")
+8. $X \cap Y = \varnothing$ ("$X$ et $Z$" ou impossible)
+```
+
 ## Exercice {num2}`exercice`
 
 Comment représenter les 4 ensembles suivants afin de pouvoir y insérer toutes
@@ -110,3 +122,124 @@ Représentez les ensembles suivants:
       de problème de vue.
 - {vspace}`4.5lh`
 ```
+
+````{solution}
+{.lower-alpha-paren .columns-2}
+1.  ```{chartjs} venn
+    data: {
+      labels: ['M', 'A', 'L'],
+      datasets: [{data: [{}, {}, {}, {}, {}, {}, {}]}],
+    },
+    options: {
+      borderWidth: 1, borderColor: '#888',
+      backgroundColor: ['#fff', '#fff', '#fff', '#ddd', '#fff', '#fff', '#ddd'],
+      hover: {mode: ''},
+      scales: {
+        x: {ticks: {font: {size: 12}}},
+        y: {ticks: {font: {size: 16}}},
+      },
+      plugins: {
+        tooltip: false,
+        legend: {display: false},
+      },
+    },
+    ```
+2.  ```{chartjs} venn
+    data: {
+      labels: ['M', 'A', 'L'],
+      datasets: [{data: [{}, {}, {}, {}, {}, {}, {}]}],
+    },
+    options: {
+      borderWidth: 1, borderColor: '#888',
+      backgroundColor: ['#fff', '#ddd', '#ddd', '#ddd', '#ddd', '#ddd', '#ddd'],
+      hover: {mode: ''},
+      scales: {
+        x: {ticks: {font: {size: 12}}},
+        y: {ticks: {font: {size: 16}}},
+      },
+      plugins: {
+        tooltip: false,
+        legend: {display: false},
+      },
+    },
+    ```
+3.  ```{chartjs} venn
+    data: {
+      labels: ['M', 'A', 'L'],
+      datasets: [{data: [{}, {}, {}, {}, {}, {}, {}]}],
+    },
+    options: {
+      borderWidth: 1, borderColor: '#888',
+      backgroundColor: ['#ddd', '#ddd', '#fff', '#ddd', '#fff', '#fff', '#fff'],
+      hover: {mode: ''},
+      scales: {
+        x: {ticks: {font: {size: 12}}},
+        y: {ticks: {font: {size: 16}}},
+      },
+      plugins: {
+        tooltip: false,
+        legend: {display: false},
+      },
+    },
+    ```
+4.  ```{chartjs} venn
+    data: {
+      labels: ['M', 'A', 'L'],
+      datasets: [{data: [{}, {}, {}, {}, {}, {}, {}]}],
+    },
+    options: {
+      borderWidth: 1, borderColor: '#888',
+      backgroundColor: ['#fff', '#ddd', '#ddd', '#fff', '#fff', '#ddd', '#fff'],
+      hover: {mode: ''},
+      scales: {
+        x: {ticks: {font: {size: 12}}},
+        y: {ticks: {font: {size: 16}}},
+      },
+      plugins: {
+        background: {color: '#ddd'},
+        tooltip: false,
+        legend: {display: false},
+      },
+    },
+    ```
+5.  ```{chartjs} venn
+    data: {
+      labels: ['M', 'A', 'L'],
+      datasets: [{data: [{}, {}, {}, {}, {}, {}, {}]}],
+    },
+    options: {
+      borderWidth: 1, borderColor: '#888',
+      backgroundColor: ['#fff', '#ddd', '#fff', '#fff', '#fff', '#fff', '#fff'],
+      hover: {mode: ''},
+      scales: {
+        x: {ticks: {font: {size: 12}}},
+        y: {ticks: {font: {size: 16}}},
+      },
+      plugins: {
+        background: {color: '#ddd'},
+        tooltip: false,
+        legend: {display: false},
+      },
+    },
+    ```
+6.  ```{chartjs} venn
+    data: {
+      labels: ['M', 'A', 'L'],
+      datasets: [{data: [{}, {}, {}, {}, {}, {}, {}]}],
+    },
+    options: {
+      borderWidth: 1, borderColor: '#888',
+      backgroundColor: ['#ddd', '#ddd', '#ddd', '#ddd', '#fff', '#ddd', '#fff'],
+      hover: {mode: ''},
+      scales: {
+        x: {ticks: {font: {size: 12}}},
+        y: {ticks: {font: {size: 16}}},
+      },
+      plugins: {
+        background: {color: '#ddd'},
+        tooltip: false,
+        legend: {display: false},
+      },
+    },
+    ```
+````
