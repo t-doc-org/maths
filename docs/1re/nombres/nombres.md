@@ -205,7 +205,6 @@ Le nombre $-a$ est appelé l'**opposé** de $a$ et $\dfrac{1}{a}$ est appelé l'
 4.  $\dfrac{1}{1 + \dfrac{3}{4}} = \dfrac{1}{\dfrac{4}{4} + \dfrac{3}{4}} = \dfrac{1}{\dfrac{7}{4}} = 1 : \dfrac{7}{4} = 1 \cdot \dfrac{4}{7} = \dfrac{4}{7}$
 ```
 
-
 ## Exercices
 
 ### Exercice {num2}`exercice`
@@ -213,28 +212,26 @@ Le nombre $-a$ est appelé l'**opposé** de $a$ et $\dfrac{1}{a}$ est appelé l'
 Complétez le tableau par **vrai** ou **faux**.
 
 <style>
+@media screen {
+  .table.reset-print.ensembles :is(th, td):first-child {
+    border-right: 2px solid var(--pst-color-primary);
+  }
+}
 @media print {
-  /* Reset table styles. */
-  table.table.table-reset-print {
-    border: initial;
+  .table.reset-print.ensembles :is(th, td) {
+    border-width: 1px;
+    padding: 0.5rem;
   }
-  table.table.table-reset-print:not(.¶) > :not(caption) > :is(tr, tr:hover) {
-    border: none;
-    background-color: unset;
+  .table.reset-print.ensembles th {
+    border-bottom-width: 2px;
   }
-  table.table.table-reset-print > :not(caption) > * > * {
-    border: none;
-    background-color: unset;
-    box-shadow: initial;
-  }
-
-  table.table.table-reset-print > :not(caption) > * > * {
-    border: 1px solid black;
+  .table.reset-print.ensembles :is(th, td):first-child {
+    border-right-width: 2px;
   }
 }
 </style>
 
-{.table-reset-print}
+{.reset-print .ensembles}
 | | $x=-\frac{2}{3}$ | $x=\sqrt{9}$ | $x=\sqrt{3}$ | $x=0.45324$ | $x=-7$ |
 | :---: | :---: | :---: | :---: | :---: | :---: |
 | $x \in \mathbb{N}$ | |  |  |  |  |
@@ -243,7 +240,7 @@ Complétez le tableau par **vrai** ou **faux**.
 | $x \in \mathbb{R}$ | |  |  |  |  |
 
 ```{block} solution
-{.table-reset-print}
+{.reset-print .ensembles}
 | | $x=-\frac{2}{3}$ | $x=\sqrt{9}$ | $x=\sqrt{3}$ | $x=0.45324$ | $x=-7$ |
 | :---: | :---: | :---: | :---: | :---: | :---: |
 | $x \in \mathbb{N}$ | Faux | Vrai | Faux | Faux | Faux |
