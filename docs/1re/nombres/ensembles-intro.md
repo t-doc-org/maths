@@ -4,7 +4,6 @@
 # Ensembles - Introduction
 
 ```{metadata}
-subject: "Mathématiques 1re année"
 page-break-avoid-inside: 2
 ```
 

@@ -1,10 +1,6 @@
 % Copyright 2026 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-```{metadata}
-subject: "Mathématiques 2e année"
-```
-
 # Fonctions exponentielles et logarithmes
 
 Les objectifs des autres thèmes sur les fonctions sont considérés comme acquis.
@@ -19,9 +15,9 @@ Les objectifs des autres thèmes sur les fonctions sont considérés comme acqui
 - Savoir ce qu'est une fonction exponentielle et savoir à quoi elle ressemble
   graphiquement.
 - Savoir résoudre des équations exponentielles en
-    - se ramenant à une même base des deux côtés de l'équation,
-    - utilisant une substitution adéquate,
-    - en utilisant le logarithme.
+  - se ramenant à une même base des deux côtés de l'équation,
+  - utilisant une substitution adéquate,
+  - en utilisant le logarithme.
 - Savoir résoudre des équations exponentielles simples sans calculatrice.
 
 ## Fonctions logarithmes
@@ -38,7 +34,6 @@ Les objectifs des autres thèmes sur les fonctions sont considérés comme acqui
 - Connaître le nombre d'Euler et le logarithme naturel et pouvoir les utiliser
   dans des calculs.
 
-
 ##  Problèmes
 
 - Savoir déterminer l'expression algébrique (avec ou sans $e$) d'une fonction
@@ -47,4 +42,3 @@ Les objectifs des autres thèmes sur les fonctions sont considérés comme acqui
   (calcul d'image, résolution d'équation, etc.).
 - Savoir déterminer le temps de doublement d'un processus croissant ou la
   demi-vie d'un processus décroissant.
-

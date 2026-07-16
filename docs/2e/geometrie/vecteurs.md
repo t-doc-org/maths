@@ -5,10 +5,6 @@
 
 # Vecteurs
 
-```{metadata}
-subject: "Mathématiques 2e année"
-```
-
 ## Notion de vecteurs
 
 ```{admonition} Définition

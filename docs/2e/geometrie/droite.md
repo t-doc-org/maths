@@ -5,10 +5,6 @@
 
 # Droite dans le plan
 
-```{metadata}
-subject: "Mathématiques 2e année"
-```
-
 ## Différents types d'équations
 
 ````{admonition} Définition

@@ -3,10 +3,6 @@
 
 # Fonctions polynomiales
 
-```{metadata}
-subject: "Mathématiques 2e année"
-```
-
 ## Monômes, polynômes, degré
 
 ```{admonition} Définition

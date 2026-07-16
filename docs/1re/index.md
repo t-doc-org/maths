@@ -3,6 +3,11 @@
 
 # 1{sup}`re` année
 
+```{metadata}
+:recursive:
+subject: "Mathématiques 1re année"
+```
+
 ```{toctree}
 :maxdepth: 1
 nombres/index

@@ -3,10 +3,6 @@
 
 # Factorisation
 
-```{metadata}
-subject: "Mathématiques 2e année"
-```
-
 ```{admonition} Marche à suivre
 :class: tip
 Pour factoriser un polynôme, il existe plusieurs méthodes:

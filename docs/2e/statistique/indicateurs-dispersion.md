@@ -4,9 +4,6 @@
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 # Indicateurs de dispersion
-```{metadata}
-subject: "Mathématiques 2e année"
-```
 
 ````{container} frame noprint
 # Exemple {num2}`exemple`

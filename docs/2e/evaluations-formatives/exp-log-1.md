@@ -3,13 +3,6 @@
 
 # Fonctions exponentielles et logarithmes - Partie 1
 
-```{metadata}
-subject: "Mathématiques 2e année"
-print-styles: tdoc/print-exam.css
-page-break-force: 1
-page-break-avoid-inside: 2
-```
-
 ```{include} /_import/informatique/_include/entete-examen.export.md
 ```
 ```{class} align-center

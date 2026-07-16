@@ -1,10 +1,6 @@
 % Copyright 2026 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-```{metadata}
-subject: "Mathématiques 2e année"
-```
-
 # Géométrie dans le plan 1
 
 ## Vecteur (révision de 1re année)
@@ -23,14 +19,13 @@ subject: "Mathématiques 2e année"
 - Savoir effectuer des opérations avec des vecteurs algébriquement (addition de
   vecteurs et multiplication par un scalaire).
 
-
 ## Droite dans le plan
 
 - Connaître la notation mathématique des différentes équations d'une droite:
-    - équation cartésienne explicite,
-    - équation cartésienne implicite,
-    - équation vectorielle,
-    - équations paramétriques.
+  - équation cartésienne explicite,
+  - équation cartésienne implicite,
+  - équation vectorielle,
+  - équations paramétriques.
 - Savoir déterminer l'équation cartésienne explicite d'une droite qui passe par
   deux points donnés.
 - Connaître la notion d'un vecteur directeur et savoir le déterminer quand deux
@@ -39,15 +34,14 @@ subject: "Mathématiques 2e année"
   points.
 - Savoir déterminer si un point appartient à un droite.
 - Savoir transformer une équation d'un type à un autre.
-    - équation cartésienne implicite <-> équation cartésienne explicite,
-    - équation vectorielle <-> équations paramétriques,
-    - équation cartésienne explicite/implicite <-> équation vectorielle,
+  - équation cartésienne implicite <-> équation cartésienne explicite,
+  - équation vectorielle <-> équations paramétriques,
+  - équation cartésienne explicite/implicite <-> équation vectorielle,
 - Connaître les positions relatives entre deux droites et leurs propriétés.
 - Savoir déterminer si deux droites sont parallèles, confondues ou sécantes.
 - Savoir calculer le point d'intersection de deux droites sécantes.
 - Savoir déterminer l'équation d'une droite dont certaines propriétés sont
   données (parallèle à, qui passe par, ...).
-
 
 ##  Produit scalaire et angles de deux vecteurs
 
@@ -59,4 +53,3 @@ subject: "Mathématiques 2e année"
 - Savoir déterminer la projection orthogonale d'un vecteur sur un autre vecteur.
 - Savoir calculer les coordonnées de la projection orthogonale d'un point sur
   une droite donnée.
-

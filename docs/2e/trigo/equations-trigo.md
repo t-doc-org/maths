@@ -3,10 +3,6 @@
 
 # Équations trigonométriques
 
-```{metadata}
-subject: "Mathématiques 2e année"
-```
-
 ```{admonition} Définition
 Une **équation trigonométrique** est une équation dans laquelle l'inconnue
 apparaît comme argument d'une fonction trigonométrique.

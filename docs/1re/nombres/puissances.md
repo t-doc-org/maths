@@ -3,10 +3,6 @@
 
 # Puissances
 
-```{metadata}
-subject: "Mathématiques 1re année"
-```
-
 ## Théorie
 
 ````{admonition} Définition

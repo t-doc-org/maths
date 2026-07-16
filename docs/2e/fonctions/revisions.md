@@ -3,10 +3,6 @@
 
 # Fonctions - Révisions
 
-```{metadata}
-subject: "Mathématiques 2e année"
-```
-
 ## Fonctions, domaine de définition, ordonnée à l'origine et zéros
 
 ````{admonition} Définition

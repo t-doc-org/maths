@@ -3,6 +3,12 @@
 
 # Objectifs
 
+```{metadata}
+:recursive:
+page-break-force:
+page-break-avoid-inside: 2
+```
+
 ```{toctree}
 :maxdepth: 1
 revisions-fct-poly

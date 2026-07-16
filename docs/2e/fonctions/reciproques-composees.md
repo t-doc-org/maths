@@ -5,10 +5,6 @@
 
 # Fonctions réciproques et fonctions composées
 
-```{metadata}
-subject: "Mathématiques 2e année"
-```
-
 Références: Cours de David Rueda et Nicolas Martignoni
 
 ## Fonctions réciproques

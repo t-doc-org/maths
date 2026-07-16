@@ -3,10 +3,6 @@
 
 # Fonctions rationnelles
 
-```{metadata}
-subject: "Mathématiques 2e année"
-```
-
 ## Fractions rationnelles
 
 ```{admonition} Définition

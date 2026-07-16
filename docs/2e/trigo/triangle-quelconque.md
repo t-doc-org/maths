@@ -5,10 +5,6 @@
 
 # Triangle quelconque
 
-```{metadata}
-subject: "Mathématiques 2e année"
-```
-
 ## Théorème du sinus
 
 ````{admonition} Théorème du sinus

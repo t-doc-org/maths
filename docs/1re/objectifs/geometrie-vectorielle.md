@@ -1,9 +1,6 @@
 % Copyright 2026 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-```{metadata}
-subject: "Mathématiques 1re année"
-```
 # Géométrie vectorielle
 
 - Connaître la définition d'un vecteur et d'un vecteur position.
@@ -21,8 +18,9 @@ subject: "Mathématiques 1re année"
 - Savoir calculer la norme d'un vecteur.
 - Connaître la définition d'un vecteur unitaire.
 - Savoir déterminer un vecteur unitaire.
-- Savoir déterminer si des vecteurs sont linéairement dépendants ou indépendants.
+- Savoir déterminer si des vecteurs sont linéairement dépendants ou
+  indépendants.
 - Savoir déterminer la combinaison linéaire d'un vecteur à partir de vecteurs
   donnés.
 - Savoir résoudre des problèmes géométriques à l'aide des vecteurs (périmètre et
-   aire d'une figure, milieu d'un segment, distance entre deux points, ...)
+  aire d'une figure, milieu d'un segment, distance entre deux points, ...)

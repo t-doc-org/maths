@@ -3,9 +3,6 @@
 
 # Cercle trigonométrique
 
-```{metadata}
-subject: "Mathématiques 2e année"
-```
 ## Radian
 
 <script type="module">

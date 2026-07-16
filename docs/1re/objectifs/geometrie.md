@@ -1,9 +1,6 @@
 % Copyright 2026 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-```{metadata}
-subject: "Mathématiques 1re année"
-```
 # Géométrie
 
 - Connaître le vocabulaire relatif aux angles.

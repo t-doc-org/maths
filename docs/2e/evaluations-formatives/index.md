@@ -3,6 +3,13 @@
 
 # Évaluations formatives
 
+```{metadata}
+:recursive:
+print-styles: tdoc/print-exam.css
+page-break-force:
+page-break-avoid-inside: 2
+```
+
 ```{toctree}
 :maxdepth: 1
 revisions-fct-polyn

@@ -1,10 +1,6 @@
 % Copyright 2026 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-```{metadata}
-subject: "Mathématiques 2e année"
-```
-
 # Géométrie dans le plan 2
 
 Les objectifs de l'évaluation [](geometrie-1.md) sont considérés comme acquis.
@@ -15,7 +11,6 @@ Les objectifs de l'évaluation [](geometrie-1.md) sont considérés comme acquis
 - Savoir calculer la distance d'un point à une droite dont l'équation est
   donnée sous forme cartésienne ou vectorielle.
 - Savoir calculer les bissectrices de deux droites.
-
 
 ## Cercle
 
@@ -34,4 +29,3 @@ Les objectifs de l'évaluation [](geometrie-1.md) sont considérés comme acquis
 ## Général
 
 - Savoir résoudre des problèmes qui utilisent les notions ci-dessus.
-

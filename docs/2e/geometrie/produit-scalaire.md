@@ -5,10 +5,6 @@
 
 # Produit scalaire et angles de deux vecteurs
 
-```{metadata}
-subject: "Mathématiques 2e année"
-```
-
 ## Angle de deux vecteurs
 
 ````{admonition} Définition

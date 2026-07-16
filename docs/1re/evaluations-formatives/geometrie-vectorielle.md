@@ -3,13 +3,6 @@
 
 # Géométrie vectorielle
 
-```{metadata}
-subject: "Mathématiques 1re année"
-print-styles: tdoc/print-exam.css
-page-break-force: 1
-page-break-avoid-inside: 2
-```
-
 ```{include} /_import/informatique/_include/entete-examen.export.md
 ```
 ```{class} align-center
@@ -44,6 +37,7 @@ Exprimez, si possible, les vecteurs suivants en fonction des vecteurs $\vec{u}$,
 
 En utilisant les vecteurs $\vec{u}$, $\vec{v}$ et $\vec{w}$ de l'exercice 1,
 tracez les vecteurs suivants (sur une feuille quadrillée):
+
 {.lower-alpha-paren}
 1. $\vec{a} = \vec{u} + \vec{v} + \vec{w}$
 2. $\vec{b} = \dfrac{1}{2} \vec{u} - \vec{v}$

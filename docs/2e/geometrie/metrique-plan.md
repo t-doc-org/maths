@@ -5,10 +5,6 @@
 
 # Questions métriques dans le plan
 
-```{metadata}
-subject: "Mathématiques 2e année"
-```
-
 ## Distance d'un point à une droite
 
 ````{admonition} Définition

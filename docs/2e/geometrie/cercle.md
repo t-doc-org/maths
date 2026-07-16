@@ -5,10 +5,6 @@
 
 # Cercle
 
-```{metadata}
-subject: "Mathématiques 2e année"
-```
-
 ## Équation du cercle
 
 ````{admonition} Définition

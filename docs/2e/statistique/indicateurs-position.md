@@ -5,10 +5,6 @@
 
 # Indicateurs de position
 
-```{metadata}
-subject: "Mathématiques 2e année"
-```
-
 ## Indicateurs de tendance centrale
 
 ### Moyenne

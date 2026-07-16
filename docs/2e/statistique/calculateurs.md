@@ -2,9 +2,6 @@
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 # Calculateurs
-```{metadata}
-subject: "Mathématiques 2e année"
-```
 
 Calculer la moyenne, la médiane, la variance ou l'écart type à la main devient
 vite long et fastidieux sur de grands ensembles de données. Pour gagner en

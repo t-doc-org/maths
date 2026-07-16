@@ -3,10 +3,6 @@
 
 # Trigonométrie - Révisions
 
-```{metadata}
-subject: "Mathématiques 2e année"
-```
-
 ## Notation des triangles
 
 <script type="module">

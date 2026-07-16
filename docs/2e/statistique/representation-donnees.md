@@ -5,10 +5,6 @@
 
 # Représentation des données
 
-```{metadata}
-subject: "Mathématiques 2e année"
-```
-
 {.allow-break-inside}
 ## Introduction
 
