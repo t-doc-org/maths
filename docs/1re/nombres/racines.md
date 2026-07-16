@@ -41,7 +41,7 @@ Le nombre $n$ est appelé **indice**.
 3. $\sqrt[5]{32}=2$, car $2^5=32$
 4. $\sqrt[6]{x^{12}}=x^2$, car $\left(x^2\right)^6=x^{12}$
 ```
-
+{.allow-break-inside}
 ### Remarques
 
 {.lower-alpha-paren}
