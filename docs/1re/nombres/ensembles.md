@@ -21,15 +21,15 @@ Si $x$ appartient à $E$, nous notons $x \in E$.
 Si par contre $x$ n'est pas un élément de $E$, nous notons $x \notin E$.
 ```
 
-````{container} frame noprint
-### Exemple {num2}`exemple`
+```{container} frame noprint
+# Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
 1.  Soit $P$ l'ensemble des nombres premiers, alors
     $$7 \in P \, \text{ et } \, 12 \notin P$$
 2.  Soit $A$ l'ensemble de tous les animaux à quatre pattes, alors
     $$\text{Le chien} \in A \, \text{ et } \, \text{La poule} \notin A$$
-````
+```
 
 ```{admonition} Définition
 :class: note
@@ -38,14 +38,14 @@ l'ensemble sont énumérés entre accolades. Si l'ensemble est infini,
 des points de suspension sont ajoutés au début ou à la fin de l'énumération.
 ```
 
-````{container} frame noprint
-### Exemple {num2}`exemple`
+```{container} frame noprint
+# Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
 1.  L'ensemble des joueurs de tennis ayant gagné au moins 20 tournois du Grand
     Chelem: \{Federer, Nadal, Djokovic\}
 2.  L'ensemble des nombres naturels impairs: \{1;3;5;7;9;...\}
-````
+```
 
 ```{admonition} Définition
 :class: note
@@ -53,15 +53,15 @@ Un ensemble peut être défini **en compréhension**, c'est-à-dire qu'il est
 défini par ses propriétés caractéristiques.
 ```
 
-````{container} frame noprint
-### Exemple {num2}`exemple`
+```{container} frame noprint
+# Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
 1.  $\{x \in \text{ Ensemble des animaux} \, \mid  \, x \text{ a quatre pattes} \}$
     représente l'ensemble des animaux à 4 pattes.
 2.  $\{x \in \mathbb{Z} \, \mid \, -4 \leqslant x \leqslant 4\}$ représente
     l'ensemble des nombres entiers entre $-4$ et $4$.
-````
+```
 
 ```{admonition} Définition
 :class: note
@@ -69,15 +69,15 @@ Un ensemble peut être défini par un **intervalle**, c'est-à-dire un ensemble 
 nombres réels délimité par deux bornes.
 ```
 
-````{container} frame noprint
-### Exemple {num2}`exemple`
+```{container} frame noprint
+# Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
 1.  $[-3;10]$ représente l'ensemble des nombres réels de $-3$ compris à $10$ compris.
 2.  $]0;7]$ représente l'ensemble des nombres réels de $0$ non compris à $7$ compris.
 3.  $]-10;-4[$ représente l'ensemble des nombres réels de $-10$ non compris à $-4$ non
     compris.
-````
+```
 
 ```{admonition} Définition
 :class: note
@@ -91,17 +91,18 @@ Un ensemble $A$ est **sous-ensemble** d'un ensemble $B$, si tout élément de $A
 est également élément de $B$, noté $A \subset B$.
 ```
 
-````{container} frame noprint
-### Exemple {num2}`exemple`
+```{container} frame noprint
+# Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
 1.  L'ensemble des élèves de la classe est un sous-ensemble de l'ensemble des
     élèves du collège.
 2.  L'ensemble des nombres pairs est un sous-ensemble de l'ensemble de tous les
     nombres.
-````
+```
 
-### Quelques remarques
+```{container} avoid-break-inside
+# Remarques
 
 - L'ordre dans lequel les éléments d'un ensemble sont énumérés ne joue aucun
   rôle.
@@ -109,6 +110,7 @@ est également élément de $B$, noté $A \subset B$.
 - L'ensemble vide est un sous-ensemble de tout ensemble.
 - Un ensemble est toujours sous-ensemble de lui-même.
 - Les accolades sont réservées pour décrire les ensembles.
+```
 
 ```{admonition} Définition
 :class: note
@@ -249,7 +251,7 @@ Soient $A$ et $B$ deux sous-ensembles d'un ensemble plus grand $M$.
 ````
 
 ````{container} frame noprint
-### Exemple {num2}`exemple`
+# Exemple {num2}`exemple`
 
 Les diagrammes de Venn permettent de résoudre des problèmes:
 

@@ -163,11 +163,11 @@ règles de calcul.
 $=\left( x^{\frac{7}{4}-\frac{5}{3}}  y^{\frac{2}{3}-\frac{1}{4}}\right)^{24}=\left( x^{\frac{21}{12}-\frac{20}{12}}  y^{\frac{8}{12}-\frac{3}{12}}\right)^{24}= \left( x^{\frac{1}{12}}  y^{\frac{5}{12}}\right)^{24}=x^2y^{10}$
 ```
 
-````{admonition} Définition
+```{admonition} Définition
 :class: note
 La **rationalisation d'un dénominateur** est un procédé qui permet d'éliminer
 les racines du dénominateur d'une fraction.
-````
+```
 
 ```{container} frame noprint
 # Exemple {num2}`exemple`

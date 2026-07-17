@@ -3,6 +3,11 @@
 
 # Nombres
 
+```{metadata}
+page-break-force: 2
+page-break-avoid-inside: 3
+```
+
 ## Théorie
 
 ````{admonition} Définition
@@ -41,7 +46,7 @@ trouvent les nombres tels que $\pi$, $\sqrt{2}$, $1.010010001\ldots$.
 ```
 
 ````{container} frame noprint
-### Exemple {num2}`exemple`
+# Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
 1.  $\dfrac{4}{3} = 1. \overline{3} = 1.333333\ldots \in \mathbb{Q}$
@@ -60,7 +65,7 @@ nombre décimal fini ou périodique est une fraction.
 ```
 
 ````{container} frame noprint
-### Exemple {num2}`exemple`
+# Exemple {num2}`exemple`
 
 {.lower-alpha-paren .columns-4}
 1. $0.75=\dfrac{3}{4}$
@@ -70,7 +75,7 @@ nombre décimal fini ou périodique est une fraction.
 ````
 
 ````{container} frame noprint
-### Exemple {num2}`exemple`
+# Exemple {num2}`exemple`
 
 Pour transformer une fraction en nombre décimal, il faut effectuer la division
 et s'arrêter:
@@ -102,8 +107,8 @@ $\begin{array}{r|l}
 $\dfrac{264}{7} = 37.\overline{714285}$
 ````
 
-````{container} frame noprint
-### Exemple {num2}`exemple`
+```{container} frame noprint
+# Exemple {num2}`exemple`
 
 Pour transformer un nombre décimal en fraction, il y a deux situations:
 
@@ -141,7 +146,7 @@ Pour transformer un nombre décimal en fraction, il y a deux situations:
             9\,900x &= 17\,775\\
             x &= \dfrac{17\,775}{9\,900}$$
         $1.79\overline{54}  =  \dfrac{17\,775}{9\,900} \overset{\color{red}:25}{=} \dfrac{711}{396} \overset{\color{red}:9}{=} \dfrac{79}{44}$
-````
+```
 
 ```{admonition} Rappel - Critères de divisibilité
 :class: tip, dropdown
@@ -174,7 +179,7 @@ Le nombre $-a$ est appelé l'**opposé** de $a$ et $\dfrac{1}{a}$ est appelé l'
 ```
 
 ```{container} frame noprint
-### Exemple {num2}`exemple`
+# Exemple {num2}`exemple`
 
 {.lower-alpha-paren .columns-2}
 1. $5 + 3 = 5 + 3 = 8$
@@ -186,7 +191,7 @@ Le nombre $-a$ est appelé l'**opposé** de $a$ et $\dfrac{1}{a}$ est appelé l'
 ```
 
 ```{container} frame noprint
-### Exemple {num2}`exemple`
+# Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
 1.  $1 + 2\cdot {\color{red}(5+3)}^2 = 1 + 2\cdot {\color{red}8}^2=1 + {\color{red}2\cdot64}= 1 + 128=129$
@@ -250,12 +255,12 @@ Complétez le tableau par **vrai** ou **faux**.
 Corrigez les erreurs dans ce diagramme. (Il y en a 8)
 
 ```{figure} images/diagramme-nombres.png
-:width: 50%
+:width: 70%
 ```
 
 ````{block} solution
 ```{figure} images/diagramme-nombres-sol.png
-:width: 50%
+:width: 70%
 ```
 ````
 

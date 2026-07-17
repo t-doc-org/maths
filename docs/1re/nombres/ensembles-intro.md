@@ -1,7 +1,7 @@
 % Copyright 2026 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-# Ensembles - Introduction
+# Introduction - Ensembles
 
 ```{metadata}
 page-break-avoid-inside: 2
@@ -31,7 +31,7 @@ L'ensemble $C$ possède différents sous-ensembles comme par exemple:
 - L'ensemble $L$ des élèves qui portent des lunettes ou des lentilles.
 
 
-## Exercice {num2}`exercice`
+## Exercice {nump}`exercice`
 
 Écrivez pour les sous-ensembles ci-dessus les prénoms des élèves de votre groupe
 concernés dans les bulles correspondantes.
@@ -44,7 +44,7 @@ concernés dans les bulles correspondantes.
 :width: 75%
 ```
 
-## Exercice {num2}`exercice`
+## Exercice {nump}`exercice`
 
 Déterminez les élèves qui se trouvent dans les ensembles suivants en utilisant
 le nom des enembles $G$, $F$, $X$, $Y$, ...
@@ -83,7 +83,7 @@ le nom des enembles $G$, $F$, $X$, $Y$, ...
 8. $X \cap Y = \varnothing$ ("$X$ et $Z$" ou impossible)
 ```
 
-## Exercice {num2}`exercice`
+## Exercice {nump}`exercice`
 
 Comment représenter les 4 ensembles suivants afin de pouvoir y insérer toutes
 les personnes de la classe en n'inscrivant leur prénom qu'une seule fois.

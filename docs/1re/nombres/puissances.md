@@ -3,6 +3,12 @@
 
 # Puissances
 
+```{metadata}
+page-break-force: 2
+page-break-avoid-inside: 3
+```
+
+
 ## Théorie
 
 ````{admonition} Définition
@@ -25,7 +31,8 @@ a^0=1 \text{ pour tout }a \neq 0.
 ```
 ````
 
-### Remarques
+```{container}
+# Remarques
 
 {.lower-alpha-paren}
 1.  L'expression $0^0$ n'est pas définie!
@@ -40,16 +47,16 @@ a^0=1 \text{ pour tout }a \neq 0.
     :class: align-center
     -a^n=(-1) \cdot a^n
     ````
+```
 
-
-````{container} frame noprint
-### Exemple {num2}`exemple`
+```{container} frame noprint
+# Exemple {num2}`exemple`
 
 {.lower-alpha-paren .columns-3}
 1.  $(-2)^4=2^4=16$
 2.  $(-3)^3=-3^3=-27$
 3.  $-2^4=-16$
-````
+```
 
 ````{admonition} Théorème - Règles de calcul pour les puissances
 :class: note
@@ -77,7 +84,7 @@ Soient $a, b \in \mathbb{R} \setminus \{0\}$ et $n,m \in\mathbb{Z}$, alors
 ````
 
 ````{container} frame noprint
-### Démonstration
+# Démonstration
 
 {.lower-alpha-paren}
 1. ```{math}
@@ -109,7 +116,7 @@ a^{-n}=\frac{1}{a^n} \quad \text{ et } \quad \frac{1}{a^{-n}}=a^n
 ````
 
 ````{container} frame noprint
-### Démonstration
+# Démonstration
 
 $a^n \cdot a^{-n} = a^{n+(-n)}=a^0=1$
 
@@ -124,15 +131,15 @@ $a^n \cdot a^{-n} = a^{n+(-n)}=a^0=1$
    ```
 ````
 
-````{container} frame noprint
-### Exemple {num2}`exemple`
+```{container} frame noprint
+# Exemple {num2}`exemple`
 
 {.lower-alpha-paren .columns-2}
 1. $2^{-2}=\dfrac{1}{2^2}=\dfrac{1}{4}$
 2. $5 \cdot b^{-3}= 5 \cdot \dfrac{1}{b^3} = \dfrac{5}{b^3}$
 3. $\left( \dfrac{3}{x} \right)^{-1}= \dfrac{x}{3}$ (inverse d'une fraction)
 4. $\dfrac{2}{6^{-2}}= 2 \cdot \dfrac{1}{6^{-2}} = 2 \cdot 6^2=72$
-````
+```
 
 ````{admonition} Définition - Notation scientifique
 :class: note
