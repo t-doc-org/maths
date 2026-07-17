@@ -5,7 +5,6 @@
 
 ```{metadata}
 :recursive:
-page-break-force:
 page-break-avoid-inside: 2
 ```
 
