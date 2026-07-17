@@ -8,6 +8,7 @@
 ensembles-intro
 ensembles
 nombres
+puissances-racines-intro
 puissances
 racines
 ```
