@@ -7,6 +7,7 @@
 :maxdepth: 1
 ensembles-intro
 ensembles
+revisions-fractions
 nombres
 puissances-racines-intro
 puissances
