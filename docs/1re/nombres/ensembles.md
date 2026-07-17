@@ -3,6 +3,11 @@
 
 # Ensembles
 
+```{metadata}
+page-break-force: 2
+page-break-avoid-inside: 3
+```
+
 ## Théorie
 
 ```{admonition} Définition

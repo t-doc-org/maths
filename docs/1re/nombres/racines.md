@@ -3,6 +3,11 @@
 
 # Racines
 
+```{metadata}
+page-break-force: 2
+page-break-avoid-inside: 3
+```
+
 ## Théorie
 
 ````{admonition} Définition
@@ -29,7 +34,7 @@ Le nombre $n$ est appelé **indice**.
 ````
 
 ```{container} frame noprint
-### Exemple {num2}`exemple`
+# Exemple {num2}`exemple`
 
 {.lower-alpha-paren .columns-2}
 1. $\sqrt{16}=4$, car $4^2=16$
@@ -37,8 +42,9 @@ Le nombre $n$ est appelé **indice**.
 3. $\sqrt[5]{32}=2$, car $2^5=32$
 4. $\sqrt[6]{x^{12}}=x^2$, car $\left(x^2\right)^6=x^{12}$
 ```
-{.allow-break-inside}
-### Remarques
+
+```{container}
+# Remarques
 
 {.lower-alpha-paren}
 1.  Dans le cas de la racine carrée, l'indice n'est pas noté:
@@ -52,9 +58,10 @@ Le nombre $n$ est appelé **indice**.
         l'élevant à une puissance paire.
       - Si $a < 0$ et $n$ est impair, alors $\sqrt[n]{a}$ est définie et elle
         est inférieure à 0.
+```
 
 ```{container} frame noprint
-### Exemple {num2}`exemple`
+# Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
 1. $\sqrt[4]{-16}=\varnothing$ aucun nombre élevé à la puissance 4 n'est négatif
@@ -89,7 +96,7 @@ sont des nombres impairs.
 ````
 
 ```{container} frame noprint
-### Exemple {num2}`exemple`
+# Exemple {num2}`exemple`
 
 Pour effectuez un extraction de racine, il faut écrire, si possible, la valeur
 sous la racine sous forme de carré.
@@ -110,7 +117,7 @@ a^{\frac{1}{n}}=\sqrt[n]{a}
 ````
 
 ```{container} frame noprint
-### Exemple {num2}`exemple`
+# Exemple {num2}`exemple`
 
 {.lower-alpha-paren .columns-2}
 1. $5^{\frac{1}{2}} = \sqrt{5}$
@@ -130,7 +137,7 @@ a^{\frac{m}{n}}=\left( a^m\right)^{\frac{1}{n}}=\sqrt[n]{a^m} \text{ \quad ou  \
 ````
 
 ```{container} frame noprint
-### Exemple {num2}`exemple`
+# Exemple {num2}`exemple`
 
 {.lower-alpha-paren .columns-2}
 1. $27^{\frac{2}{3}}=\left( \sqrt[3]{27} \right)^2=3^2=9$
@@ -140,7 +147,7 @@ a^{\frac{m}{n}}=\left( a^m\right)^{\frac{1}{n}}=\sqrt[n]{a^m} \text{ \quad ou  \
 ```
 
 ```{container} frame noprint
-### Exemple {num2}`exemple`
+# Exemple {num2}`exemple`
 
 Dans un calcul avec des puissances et des racines, il faut commencer par
 convertir les racines en puissances, ensuite il est possible d'appliquer les
@@ -163,7 +170,7 @@ les racines du dénominateur d'une fraction.
 ````
 
 ```{container} frame noprint
-### Exemple {num2}`exemple`
+# Exemple {num2}`exemple`
 
 Il suffit de multiplier le numérateur et le dénominateur par la racine.
 
@@ -172,8 +179,6 @@ Il suffit de multiplier le numérateur et le dénominateur par la racine.
 2. $\dfrac{36}{\sqrt{6}} = \dfrac{36}{\sqrt{6}} \cdot \dfrac{\sqrt{6}}{\sqrt{6}} = \dfrac{36 \sqrt{6}}{6} = 6 \sqrt{6}$
 3. $\dfrac{\sqrt{2}}{\sqrt{3}} = \dfrac{\sqrt{2}}{\sqrt{3}} \cdot \dfrac{\sqrt{3}}{\sqrt{3}} = \dfrac{\sqrt{6}}{3}$
 ```
-
-
 
 ## Exercices
 
@@ -437,9 +442,9 @@ Rendez rationnel le dénominateur des fractions suivantes:
 
 Simplifiez le plus possible.
 
-{.lower-alpha-paren}
-1. $\sqrt{\dfrac{\sqrt[4]{a^{\frac{1}{3}}} \cdot \sqrt{a^{-8}}}{\sqrt[3]{a^{-5}}}} : \dfrac{\sqrt[6]{a^{\frac{3}{4}}}}{\sqrt[3]{a^2}}=$
-2. $\dfrac{\sqrt{\sqrt[3]{\left( \dfrac{1}{b^2}\right)^{-4}}\cdot \sqrt{b \cdot \sqrt[3]{b^2}}}}{b \cdot \sqrt[6]{b \sqrt{b}}\cdot \sqrt{b^{-1} \cdot \sqrt[3]{b^2}} }=$
+{.lower-alpha-paren .columns-2}
+1. $\sqrt{\dfrac{\sqrt[4]{a^{\frac{1}{3}}} \cdot \sqrt{a^{-8}}}{\sqrt[3]{a^{-5}}}} : \dfrac{\sqrt[6]{a^{\frac{3}{4}}}}{\sqrt[3]{a^2}}$
+2. $\dfrac{\sqrt{\sqrt[3]{\left( \dfrac{1}{b^2}\right)^{-4}}\cdot \sqrt{b \cdot \sqrt[3]{b^2}}}}{b \cdot \sqrt[6]{b \sqrt{b}}\cdot \sqrt{b^{-1} \cdot \sqrt[3]{b^2}} }$
 
 ```{solution}
 {.lower-alpha-paren .columns-2}
