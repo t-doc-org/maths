@@ -4,7 +4,6 @@
 # Fonctions
 
 ```{toctree}
-:maxdepth: 1
 factorisation
 revisions
 polynomiales

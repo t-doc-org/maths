@@ -4,7 +4,6 @@
 # Statistique descriptive
 
 ```{toctree}
-:maxdepth: 1
 representation-donnees
 indicateurs-position
 indicateurs-dispersion

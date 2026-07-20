@@ -9,7 +9,6 @@ subject: "Mathématiques 2e année"
 ```
 
 ```{toctree}
-:maxdepth: 1
 fonctions/index
 trigo/index
 geometrie/index

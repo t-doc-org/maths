@@ -4,7 +4,6 @@
 # Trigonométrie
 
 ```{toctree}
-:maxdepth: 1
 revisions
 cercle
 fonctions-trigo

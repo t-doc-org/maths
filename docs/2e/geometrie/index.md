@@ -4,7 +4,6 @@
 # Géométrie dans le plan
 
 ```{toctree}
-:maxdepth: 1
 vecteurs
 droite
 produit-scalaire
