@@ -9,6 +9,7 @@ ensembles
 ensembles-quiz
 revisions-fractions
 nombres
+nombres-challenges
 puissances-racines-intro
 puissances
 racines
