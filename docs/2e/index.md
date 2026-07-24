@@ -9,8 +9,8 @@ subject: "Mathématiques 2e année"
 ```
 
 ```{toctree}
-fonctions/index
 trigo/index
+fonctions/index
 geometrie/index
 statistique/index
 objectifs/index

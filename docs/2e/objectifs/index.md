@@ -9,12 +9,12 @@ page-break-avoid-inside: 2
 ```
 
 ```{toctree}
-revisions-fct-poly
-fct-rationnnelles-reciproques-composees
 trigo-1
+revisions-fct-poly
 trigo-equations
 trigo-thm-sin-cos
-exp-log
 geometrie-1
+fct-rationnnelles-reciproques-composees
 geometrie-2
+exp-log
 ```
