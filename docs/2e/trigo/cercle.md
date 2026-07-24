@@ -437,9 +437,9 @@ $Y_T$ du point $T$.
 -   Pour les angles plus grands qu'un tour complet ($2\pi$ ou $360^\circ$),
     ```{math}
     :class: align-center
-    sin(\varphi) = sin(\varphi + k \cdot 2\pi) = sin(\varphi + k \cdot 360^\circ)\\
-    cos(\varphi) = cos(\varphi + k \cdot 2\pi) = cos(\varphi + k \cdot 360^\circ)\\
-    tan(\varphi) = tan(\varphi + k \cdot \pi) = cos(\varphi + k \cdot 180^\circ)\\
+    \sin(\varphi) = \sin(\varphi + k \cdot 2\pi) = \sin(\varphi + k \cdot 360^\circ)\\
+    \cos(\varphi) = \cos(\varphi + k \cdot 2\pi) = \cos(\varphi + k \cdot 360^\circ)\\
+    \tan(\varphi) = \tan(\varphi + k \cdot \pi) = \tan(\varphi + k \cdot 180^\circ)\\
     ```
 ````
 
