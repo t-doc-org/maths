@@ -898,6 +898,87 @@ calculatrice.
 6. $\cos\left(\frac{\pi}{6}\right)=0.866$
 ```
 
+### Exercice {num2}`exercice`
+
+Déterminez les valeurs suivantes sans calculatrice.
+
+{.lower-alpha-paren .columns-4}
+1. $\cos(0^\circ)$
+2. $\tan(30^\circ)$
+3. $\sin(60^\circ)$
+4. $\sin\left(\frac{3\pi}{2}\right)$
+5. $\tan\left(\frac{5\pi}{4}\right)$
+6. $\cos\left(-\frac{\pi}{6}\right)$
+7. $\sin(300^\circ)$
+8. $\cos(240^\circ)$
+9. $2\tan(225^\circ)$
+10. $\tan\left(\frac{14\pi}{3}\right)$
+11. $\sin\left(-\frac{\pi}{6}\right)$
+12. $\cos\left(\frac{7\pi}{6}\right)$
+
+
+```{block} solution
+{.lower-alpha-paren .columns-4}
+1. $1$
+2. $\frac{\sqrt{3}}{3}$
+3. $\frac{\sqrt{3}}{2}$
+4. $-1$
+5. $1$
+6. $\frac{\sqrt{3}}{2}$
+7. $-\frac{\sqrt{3}}{2}$
+8. $-\frac{1}{2}$
+9. $2$
+10. $-\sqrt{3}$
+11. $-\frac{1}{2}$
+12. $-\frac{\sqrt{3}}{2}$
+```
+
+### Exercice {num2}`exercice`
+
+Donnez l'ensemble des solutions des équations suivantes.
+
+{.lower-alpha-paren}
+1. En degrés.
+
+    {.decimal-paren .columns-3}
+    1. $\cos(x) = 0$
+    2. $\tan(x) = \sqrt{3}$
+    3. $\sin(x) = \frac{1}{2}$
+    4. $\sin(x) = -\frac{\sqrt{2}}{2}$
+    5. $\tan(x) = -\frac{\sqrt{3}}{3}$
+    6. $\cos(x) = -\frac{\sqrt{3}}{2}$
+2. En radians.
+
+    {.decimal-paren .columns-3}
+    1. $\cos(x) = -1$
+    2. $\tan(x) = \frac{\sqrt{3}}{3}$
+    3. $\sin(x) = \frac{\sqrt{2}}{2}$
+    4. $\sin(x) = -\frac{\sqrt{3}}{2}$
+    5. $\tan(x) = -1$
+    6. $\cos(x) = -\frac{1}{2}$
+
+
+
+```{block} solution
+{.lower-alpha-paren}
+1. {.decimal-paren}
+    1. $S = \{90^\circ + k \cdot 360^\circ | k \in \mathbb{Z}\} \cup \{-90^\circ + k \cdot 360^\circ | k \in \mathbb{Z}\}$
+    2. $S = \{60^\circ + k \cdot 180^\circ | k \in \mathbb{Z}\}$
+    3. $S = \{30^\circ + k \cdot 360^\circ | k \in \mathbb{Z}\} \cup \{150^\circ + k \cdot 360^\circ | k \in \mathbb{Z}\}$
+    4. $S = \{-45^\circ + k \cdot 360^\circ | k \in \mathbb{Z}\} \cup \{225^\circ + k \cdot 360^\circ | k \in \mathbb{Z}\}$
+    5. $S = \{-30^\circ + k \cdot 180^\circ | k \in \mathbb{Z}\}$
+    6. $S = \{150^\circ + k \cdot 360^\circ | k \in \mathbb{Z}\} \cup \{-150^\circ + k \cdot 360^\circ | k \in \mathbb{Z}\}$
+2. En radians.
+
+    {.decimal-paren}
+    1. $S = \{\pi + k \cdot 2\pi | k \in \mathbb{Z}\}$
+    2. $S = \{\frac{\pi}{6} + k \cdot \pi | k \in \mathbb{Z}\}$
+    3. $S = \{\frac{\pi}{4} + k \cdot 2\pi | k \in \mathbb{Z}\} \cup \{\frac{3\pi}{4} + k \cdot 2\pi | k \in \mathbb{Z}\}$
+    4. $S = \{-\frac{\pi}{3} + k \cdot 2\pi | k \in \mathbb{Z}\} \cup \{\frac{4\pi}{3} + k \cdot 2\pi | k \in \mathbb{Z}\}$
+    5. $S = \{-\frac{\pi}{4} + k \cdot \pi | k \in \mathbb{Z}\}$
+    6. $S = \{\frac{2\pi}{3} + k \cdot 2\pi | k \in \mathbb{Z}\} \cup \{-\frac{2\pi}{3} + k \cdot 2\pi | k \in \mathbb{Z}\}$
+```
+
 
 
 ## Solutions
