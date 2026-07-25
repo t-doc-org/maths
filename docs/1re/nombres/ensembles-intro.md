@@ -5,6 +5,9 @@
 
 ```{metadata}
 page-break-avoid-inside: 2
+scripts:
+  - src: chart.js
+    type: module
 ```
 
 Imaginez la classe comme un ensemble et appelons cet ensemble $C$. Chaque élève
@@ -124,121 +127,28 @@ Représentez les ensembles suivants:
 
 ````{solution}
 {.lower-alpha-paren .columns-2}
-1.  ```{chartjs} venn
-    data: {
-      labels: ['M', 'A', 'L'],
-      datasets: [{data: [{}, {}, {}, {}, {}, {}, {}]}],
-    },
-    options: {
-      borderWidth: 1, borderColor: '#888',
-      backgroundColor: ['#fff', '#fff', '#fff', '#ddd', '#fff', '#fff', '#ddd'],
-      hover: {mode: ''},
-      scales: {
-        x: {ticks: {font: {size: 12}}},
-        y: {ticks: {font: {size: 16}}},
-      },
-      plugins: {
-        tooltip: false,
-        legend: {display: false},
-      },
-    },
+1.  ```{chartjs} vennOperations
+    labels: ['M', 'A', 'L'],
+    areas: ['11x'],
     ```
-2.  ```{chartjs} venn
-    data: {
-      labels: ['M', 'A', 'L'],
-      datasets: [{data: [{}, {}, {}, {}, {}, {}, {}]}],
-    },
-    options: {
-      borderWidth: 1, borderColor: '#888',
-      backgroundColor: ['#fff', '#ddd', '#ddd', '#ddd', '#ddd', '#ddd', '#ddd'],
-      hover: {mode: ''},
-      scales: {
-        x: {ticks: {font: {size: 12}}},
-        y: {ticks: {font: {size: 16}}},
-      },
-      plugins: {
-        tooltip: false,
-        legend: {display: false},
-      },
-    },
+2.  ```{chartjs} vennOperations
+    labels: ['M', 'A', 'L'],
+    areas: ['x1x', 'xx1'],
     ```
-3.  ```{chartjs} venn
-    data: {
-      labels: ['M', 'A', 'L'],
-      datasets: [{data: [{}, {}, {}, {}, {}, {}, {}]}],
-    },
-    options: {
-      borderWidth: 1, borderColor: '#888',
-      backgroundColor: ['#ddd', '#ddd', '#fff', '#ddd', '#fff', '#fff', '#fff'],
-      hover: {mode: ''},
-      scales: {
-        x: {ticks: {font: {size: 12}}},
-        y: {ticks: {font: {size: 16}}},
-      },
-      plugins: {
-        tooltip: false,
-        legend: {display: false},
-      },
-    },
+3.  ```{chartjs} vennOperations
+    labels: ['M', 'A', 'L'],
+    areas: ['1x0', 'x10',],
     ```
-4.  ```{chartjs} venn
-    data: {
-      labels: ['M', 'A', 'L'],
-      datasets: [{data: [{}, {}, {}, {}, {}, {}, {}]}],
-    },
-    options: {
-      borderWidth: 1, borderColor: '#888',
-      backgroundColor: ['#fff', '#ddd', '#ddd', '#fff', '#fff', '#ddd', '#fff'],
-      hover: {mode: ''},
-      scales: {
-        x: {ticks: {font: {size: 12}}},
-        y: {ticks: {font: {size: 16}}},
-      },
-      plugins: {
-        background: {color: '#ddd'},
-        tooltip: false,
-        legend: {display: false},
-      },
-    },
+4.  ```{chartjs} vennOperations
+    labels: ['M', 'A', 'L'],
+    areas: ['0xx'],
     ```
-5.  ```{chartjs} venn
-    data: {
-      labels: ['M', 'A', 'L'],
-      datasets: [{data: [{}, {}, {}, {}, {}, {}, {}]}],
-    },
-    options: {
-      borderWidth: 1, borderColor: '#888',
-      backgroundColor: ['#fff', '#ddd', '#fff', '#fff', '#fff', '#fff', '#fff'],
-      hover: {mode: ''},
-      scales: {
-        x: {ticks: {font: {size: 12}}},
-        y: {ticks: {font: {size: 16}}},
-      },
-      plugins: {
-        background: {color: '#ddd'},
-        tooltip: false,
-        legend: {display: false},
-      },
-    },
+5.  ```{chartjs} vennOperations
+    labels: ['M', 'A', 'L'],
+    areas: ['000', '010'],
     ```
-6.  ```{chartjs} venn
-    data: {
-      labels: ['M', 'A', 'L'],
-      datasets: [{data: [{}, {}, {}, {}, {}, {}, {}]}],
-    },
-    options: {
-      borderWidth: 1, borderColor: '#888',
-      backgroundColor: ['#ddd', '#ddd', '#ddd', '#ddd', '#fff', '#ddd', '#fff'],
-      hover: {mode: ''},
-      scales: {
-        x: {ticks: {font: {size: 12}}},
-        y: {ticks: {font: {size: 16}}},
-      },
-      plugins: {
-        background: {color: '#ddd'},
-        tooltip: false,
-        legend: {display: false},
-      },
-    },
+6.  ```{chartjs} vennOperations
+    labels: ['M', 'A', 'L'],
+    areas: ['0xx', 'xx0'],
     ```
 ````
