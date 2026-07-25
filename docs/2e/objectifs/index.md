@@ -11,8 +11,7 @@ page-break-avoid-inside: 2
 ```{toctree}
 trigo-1
 revisions-fct-poly
-trigo-equations
-trigo-thm-sin-cos
+trigo-2
 geometrie-1
 fct-rationnnelles-reciproques-composees
 geometrie-2
