@@ -10,6 +10,31 @@ page-break-avoid-inside: 3
 
 ## Théorie
 
+````{container} frame noprint instructor
+```{admonition} Origine degrés et radians
+:class: attention, dropdown
+# Degrés
+
+- Un tour complet -> $360^\circ$
+- $360^\circ$ vient du système sexagécimal (base 60) utilisé par les Sumériens
+  et les Babyloniens (3'000 avant JC).
+    - 60 a beaucoups de diviseurs (1, 2, 3, 4, 5, 6, 10, 12, 15, ...) ce qui
+      facilite les calculs.
+- Calendrier babylonien basé sur $360^\circ$:
+    - une année = temps que prend la terre pour faire le tour du soleil
+    - un degré = déplacement des étoiles dans le ciel en une nuit
+
+# Radian
+
+La longueur de l'arc est utilisé depuis très longtemps pour définir les angles,
+mais le mot radian apparaît seulement en 1873.
+- un tour complet: $2\pi$ -> lié à $\pi$ et indépendant de toutes conventions
+  humaines.
+- le radian est un rapport et ne dépend donc pas d'une unité (pas de conversion
+  nécessaire) -> facilite les calculs (fct trigo).
+```
+````
+
 ### Radian
 
 <script type="module">
@@ -207,6 +232,10 @@ Un angle de 5.13 rad vaut en degré $\qquad \dfrac{5.13}{2\pi} \cdot 360^\circ \
 -   Le "rad" n'est en général pas noté, car c'est un rapport de deux longueurs
     (l'arc de cercle et le rayon). Les angles sans unité sont toujours des
     radians.
+```
+
+```{container} frame noprint instructor
+-> ex 9 à ex 13. [Attention: degrés ($\varphi$) ou radians ($x$)]
 ```
 
 <script type="module">
@@ -431,6 +460,7 @@ $Y_T$ du point $T$.
 :class: note
 -   La tangente n'est pas définie si $\varphi = \dfrac{\pi}{2} = 90^\circ$ et si
     $\varphi = \dfrac{3\pi}{2} = 270^\circ$.
+-   $\tan{\alpha} = \dfrac{\sin(\alpha)}{\cos(\alpha)}$
 -   Pour déterminer la tangente de l'ange $\varphi$ situé dans le deuxième ou le
     troisième quadrant, il faut prolonger la demi-droite $OP$ dans l'autre
     direction pour trouver l'intersection T de l'angle avec l'axe des tangentes.
@@ -443,6 +473,16 @@ $Y_T$ du point $T$.
     ```
 ````
 
+```{container} frame noprint
+# Démonstration
+
+Les triangles rectangles formés avec $P$ et $T$ sont semblables, les longueurs
+de leurs côtés sont donc proportionnelles deux à deux.
+
+$\dfrac{\sin(\alpha)}{\cos(\alpha)} = \dfrac{\tan(\alpha)}{1} \implies
+\tan{\alpha} = \dfrac{\sin(\alpha)}{\cos(\alpha)}$
+```
+
 ```{tip}
 **Changement de degrés en radians (et vice-versa) sur la calculatrice**
 
@@ -453,6 +493,18 @@ $Y_T$ du point $T$.
 4.  Sortez du menu en appuyant sur {kbd}`2nd` suivi de {kbd}`quit`.
 
 Le mode **DEG** ou **RAD** est affiché en haut de l'écran.
+```
+
+````{container} frame noprint
+# Exemple {num2}`exemple`
+
+Mode DEG: $\cos(36^\circ) = 0.809$
+
+Mode RAD: $\cos(36) = -0.128$
+````
+
+```{container} frame noprint instructor
+-> ex 14 à ex 22. [Attention: degrés ($\varphi$) ou radians ($x$)]
 ```
 
 ## Exercices

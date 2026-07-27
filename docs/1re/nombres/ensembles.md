@@ -28,9 +28,11 @@ Si par contre $x$ n'est pas un élément de $E$, nous notons $x \notin E$.
 # Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
-1.  Soit $P$ l'ensemble des nombres premiers, alors
+1.  Soit l'ensemble $E$, l'ensemble des classes du collège Sainte-Croix.<br/>
+    Voici quelques éléments de $E$: 1F1, 1F2, 1D1, 2F2, 3F4, 4F1, ...
+2.  Soit $P$ l'ensemble des nombres premiers, alors
     $$7 \in P \, \text{ et } \, 12 \notin P$$
-2.  Soit $A$ l'ensemble de tous les animaux à quatre pattes, alors
+3.  Soit $A$ l'ensemble de tous les animaux à quatre pattes, alors
     $$\text{Le chien} \in A \, \text{ et } \, \text{La poule} \notin A$$
 ```
 
@@ -115,6 +117,10 @@ est également élément de $B$, noté $A \subset B$.
 - Les accolades sont réservées pour décrire les ensembles.
 ```
 
+```{container} frame noprint instructor
+-> ex 1 à ex 3.
+```
+
 ```{admonition} Définition
 :class: note
 Soit $a, b \in \mathbb{R}$ tels que $a < b$. Les **intervalles d'extrémités a et
@@ -145,6 +151,10 @@ Il existe quatre autres types de sous-ensembles de $\mathbb{R}$:
 ```
 
 Les crochets sont toujours tournés vers l'extérieur pour $+\infty$ et $-\infty$.
+
+```{container} frame noprint instructor
+-> ex 4 à ex 6.
+```
 
 ```{admonition} Définition
 :class: note
@@ -253,6 +263,10 @@ Soient $A$ et $B$ deux sous-ensembles d'un ensemble plus grand $M$.
   ```
 ````
 
+```{container} frame noprint instructor
+-> ex 7 à ex 12.
+```
+
 ````{container} frame noprint
 # Exemple {num2}`exemple`
 
@@ -319,6 +333,10 @@ options: {
 
 Réponse: 14 élèves ne pratiquent qu'un seul sport.
 ````
+
+```{container} frame noprint instructor
+-> ex 13 à ex 15.
+```
 
 ## Exercices
 
@@ -569,6 +587,7 @@ chaque exercice).
 6. $\overline{A \cap B}$
 
 ````{block} solution
+{.avoid-break-inside}
 {.columns-3 .lower-alpha-paren}
 1.  ```{chartjs} vennOperations
     labels: ['A', 'B', 'C'],

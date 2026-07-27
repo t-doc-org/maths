@@ -95,6 +95,10 @@ Si $a, b < 0$, ces règles de calcul ne pourront être appliquées que si m et n
 sont des nombres impairs.
 ````
 
+```{container} frame noprint instructor
+-> ex 37.
+```
+
 ```{container} frame noprint
 # Exemple {num2}`exemple`
 
@@ -104,6 +108,10 @@ sous la racine sous forme de carré.
 {.lower-alpha-paren}
 1. $\sqrt{18}=\sqrt{9 \cdot 2}=\sqrt{3^2 \cdot 2}=\sqrt{3^2} \cdot \sqrt{2}=3\sqrt{2}$
 2. $\sqrt{800}=\sqrt{100 \cdot 4 \cdot 2}=\sqrt{10^2 \cdot 2^2 \cdot 2}=\sqrt{10^2} \cdot \sqrt{2^2} \cdot \sqrt{2}=10 \cdot 2 \cdot \sqrt{2} = 20\sqrt{2}$
+```
+
+```{container} frame noprint instructor
+-> ex 38.
 ```
 
 ````{admonition} Définition
@@ -146,6 +154,10 @@ a^{\frac{m}{n}}=\left( a^m\right)^{\frac{1}{n}}=\sqrt[n]{a^m} \text{ \quad ou  \
 4. $8^{-\frac{1}{3}}= \dfrac{1}{8^{\frac{1}{3}}}=\dfrac{1}{\sqrt[3]{8}}=\dfrac{1}{2}$
 ```
 
+```{container} frame noprint instructor
+-> ex 39 à ex 42.
+```
+
 ```{container} frame noprint
 # Exemple {num2}`exemple`
 
@@ -163,6 +175,10 @@ règles de calcul.
 $=\left( x^{\frac{7}{4}-\frac{5}{3}}  y^{\frac{2}{3}-\frac{1}{4}}\right)^{24}=\left( x^{\frac{21}{12}-\frac{20}{12}}  y^{\frac{8}{12}-\frac{3}{12}}\right)^{24}= \left( x^{\frac{1}{12}}  y^{\frac{5}{12}}\right)^{24}=x^2y^{10}$
 ```
 
+```{container} frame noprint instructor
+-> ex 43 à ex 44.
+```
+
 ```{admonition} Définition
 :class: note
 La **rationalisation d'un dénominateur** est un procédé qui permet d'éliminer
@@ -178,6 +194,10 @@ Il suffit de multiplier le numérateur et le dénominateur par la racine.
 1. $\dfrac{1}{\sqrt{2}} = \dfrac{1}{\sqrt{2}} \cdot \dfrac{\sqrt{2}}{\sqrt{2}} = \dfrac{\sqrt{2}}{2}$
 2. $\dfrac{36}{\sqrt{6}} = \dfrac{36}{\sqrt{6}} \cdot \dfrac{\sqrt{6}}{\sqrt{6}} = \dfrac{36 \sqrt{6}}{6} = 6 \sqrt{6}$
 3. $\dfrac{\sqrt{2}}{\sqrt{3}} = \dfrac{\sqrt{2}}{\sqrt{3}} \cdot \dfrac{\sqrt{3}}{\sqrt{3}} = \dfrac{\sqrt{6}}{3}$
+```
+
+```{container} frame noprint instructor
+-> ex 45.
 ```
 
 ## Exercices

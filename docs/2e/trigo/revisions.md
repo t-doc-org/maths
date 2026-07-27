@@ -151,6 +151,10 @@ $\sin(\alpha) = \dfrac{\text{opp}}{\text{hyp}} \implies \sin(24.1^\circ) = \dfra
 Remarque: Le côté $c$ peut aussi être calculé avec le théorème de Pythagore.
 ``` -->
 
+```{container} frame noprint instructor
+-> ex 1 à ex 8.
+```
+
 ````{container} noprint
 # Vidéos
 
@@ -638,11 +642,11 @@ render.triangleRectangleC = el => {
       name: '\\(\\alpha\\)', label: {anchorX: 'middle', offset: [25, -16]}
     });
     const beta = board.create('angle', [C, B, A], {
-      name: '\\(\\beta\\)', label: {anchorX: 'middle', offset: [-18, 32]}
+      name: '\\(\\beta\\)', label: {anchorX: 'middle', offset: [-15, 25]}
     });
     const gamma = board.create('angle', [A, C, B], {
       name: '\\(90^\\circ\\)', radius: 0.6,
-      label: {anchorX: 'middle', offset: [-15, -15]}
+      label: {anchorX: 'middle', offset: [-14, -15]}
     });
   });
 };
@@ -673,13 +677,13 @@ render.triangleRectangleA = el => {
     });
     const alpha = board.create('angle', [B, A, C], {
       name: '\\(90^\\circ\\)',  radius: 0.6,
-        label: {anchorX: 'middle', offset: [-15, -15]}
+        label: {anchorX: 'middle', offset: [-14, -15]}
     });
     const beta = board.create('angle', [C, B, A], {
       name: '\\(\\beta\\)', label: {anchorX: 'middle', offset: [25, -20]}
     });
     const gamma = board.create('angle', [A, C, B], {
-      name: '\\(30^\\circ\\)', label: {anchorX: 'middle', offset: [-12, 25]}
+      name: '\\(30^\\circ\\)', label: {anchorX: 'middle', offset: [-10, 22]}
     });
   });
 };

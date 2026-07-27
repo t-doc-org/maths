@@ -140,6 +140,10 @@ $a^n \cdot a^{-n} = a^{n+(-n)}=a^0=1$
 4. $\dfrac{2}{6^{-2}}= 2 \cdot \dfrac{1}{6^{-2}} = 2 \cdot 6^2=72$
 ```
 
+```{container} frame noprint instructor
+-> ex 29 à ex 32.
+```
+
 ````{admonition} Définition - Notation scientifique
 :class: note
 Tout nombre $x$ peut être écrit comme le produit d'un nombre $a$ entre $1$ et
@@ -169,6 +173,10 @@ x=a \cdot 10^n \text{ avec } 1\leq|a|<10 \text{ et } n \in \mathbb{Z}
 1. $5\,200\,000 \cdot 0.0006=5.2 \cdot 10^6 \cdot 6\cdot 10^{-4}=5.2 \cdot 6 \cdot 10^6 \cdot 10^{-4}=31.2 \cdot 10^2=3\,120$
 2. $\dfrac{20\,000^2}{0.01^3}=\dfrac{(2 \cdot 10^4)^2}{(1 \cdot 10^{-2})^3}= \dfrac{4 \cdot 10^8}{1 \cdot 10^{-6}}=\dfrac{4}{1} \cdot \dfrac{10^8}{10^{-6}}=4 \cdot 10^{8-(-6)}=4 \cdot 10^{14}$
 ````
+
+```{container} frame noprint instructor
+-> ex 33 à ex 36.
+```
 
 
 ## Exercices
@@ -279,56 +287,6 @@ Calculez (sans calculatrice).
 7. $-15$
 ```
 
-### Exercice {num2}`exercice`
-
-Calculez à l'aide de la notation scientifique et des règles de calcul des
-puissances (réponse en notation scientifique).
-
-{.lower-alpha-paren .columns-2}
-1. $0.004 \cdot 500=$
-2. $60\,000\,000\,000 : 2\,000=$
-3. $4 \cdot 10^{10} \cdot 4 \cdot 10^{-19}=$
-4. $6 \cdot 10^1 \cdot 7 \cdot 10^{12} \cdot 4 \cdot 10^{-5}=$
-5. $3\,000 \cdot 0.00000005 \cdot 20\,000=$
-6. $1 \cdot 10^{-5} \cdot 9 \cdot 10^5 \cdot 2=$
-7. $10 \cdot 10^{-5} \cdot 10^3 \cdot 10^5 \cdot 19 =$
-8. $\left(2 \cdot 10^3\right)^4 \cdot \left(9 \cdot 10^5\right)^2=$
-9. $200^4 \cdot 1\,000^2=$
-10. $0.0003^4 : 0.0001^5=$
-
-
-```{block} solution
-{.lower-alpha-paren .columns-4}
-1. $2$
-2. $3 \cdot 10^7$
-3. $1.6 \cdot 10^{-8}$
-4. $1.68 \cdot 10^{10}$
-5. $3$
-6. $1.8 \cdot 10^1$
-7. $1.9 \cdot 10^{5}$
-8. $1.296 \cdot 10^{25}$
-9. $1.6 \cdot 10^{15}$
-10. $8.1 \cdot 10^{5}$
-```
-
-### Exercice {num2}`exercice`
-
-Transformez dans l'unité demandée (réponse en notation scientifique).
-
-{.lower-alpha-paren .columns-2}
-1. $400 \, dm^2$ en $mm^2$.
-2. $6 \, mm^3$ en $km^3$.
-3. $78\,000\,000$ litres en $km^3$.
-4. $9\,000\,cm^2$ en $m^2$.
-
-
-```{block} solution
-{.lower-alpha-paren .columns-4}
-1. $4 \cdot 10^6\,mm^2$
-2. $6 \cdot 10^{-18}\,km^3$
-3. $7.8 \cdot 10^{-5}\,km^3$
-4. $9 \cdot 10^{-1}\,m^2$
-```
 
 ### Exercice {num2}`exercice`
 
@@ -379,6 +337,57 @@ Simplifiez le plus possible.
 18. $ u^{-20} v^{32} x^{-4}$
 19. $\dfrac{16}{9}$
 20. $\dfrac{16}{625}$
+```
+
+### Exercice {num2}`exercice`
+
+Calculez à l'aide de la notation scientifique et des règles de calcul des
+puissances (réponse en notation scientifique).
+
+{.lower-alpha-paren .columns-2}
+1. $0.004 \cdot 500=$
+2. $60\,000\,000\,000 : 2\,000=$
+3. $4 \cdot 10^{10} \cdot 4 \cdot 10^{-19}=$
+4. $6 \cdot 10^1 \cdot 7 \cdot 10^{12} \cdot 4 \cdot 10^{-5}=$
+5. $3\,000 \cdot 0.00000005 \cdot 20\,000=$
+6. $1 \cdot 10^{-5} \cdot 9 \cdot 10^5 \cdot 2=$
+7. $10 \cdot 10^{-5} \cdot 10^3 \cdot 10^5 \cdot 19 =$
+8. $\left(2 \cdot 10^3\right)^4 \cdot \left(9 \cdot 10^5\right)^2=$
+9. $200^4 \cdot 1\,000^2=$
+10. $0.0003^4 : 0.0001^5=$
+
+
+```{block} solution
+{.lower-alpha-paren .columns-4}
+1. $2$
+2. $3 \cdot 10^7$
+3. $1.6 \cdot 10^{-8}$
+4. $1.68 \cdot 10^{10}$
+5. $3$
+6. $1.8 \cdot 10^1$
+7. $1.9 \cdot 10^{5}$
+8. $1.296 \cdot 10^{25}$
+9. $1.6 \cdot 10^{15}$
+10. $8.1 \cdot 10^{5}$
+```
+
+### Exercice {num2}`exercice`
+
+Transformez dans l'unité demandée (réponse en notation scientifique).
+
+{.lower-alpha-paren .columns-2}
+1. $400 \, dm^2$ en $mm^2$.
+2. $6 \, mm^3$ en $km^3$.
+3. $78\,000\,000$ litres en $km^3$.
+4. $9\,000\,cm^2$ en $m^2$.
+
+
+```{block} solution
+{.lower-alpha-paren .columns-4}
+1. $4 \cdot 10^6\,mm^2$
+2. $6 \cdot 10^{-18}\,km^3$
+3. $7.8 \cdot 10^{-5}\,km^3$
+4. $9 \cdot 10^{-1}\,m^2$
 ```
 
 ### Exercice {num2}`exercice`

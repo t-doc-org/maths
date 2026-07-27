@@ -58,6 +58,10 @@ trouvent les nombres tels que $\pi$, $\sqrt{2}$, $1.010010001\ldots$.
     $6 = \dfrac{6}{1} \in \mathbb{Q} \quad$ et  $\quad 6 = 6.0 \in \mathbb{R}$
 ````
 
+```{container} frame noprint instructor
+-> ex 16 à ex 21.
+```
+
 ```{admonition} Théorème
 :class: note
 Toute fraction est un nombre décimal fini ou périodique. Réciproquement, tout
@@ -107,6 +111,10 @@ $\begin{array}{r|l}
 $\dfrac{264}{7} = 37.\overline{714285}$
 ````
 
+```{container} frame noprint instructor
+-> ex 22.
+```
+
 ```{container} frame noprint
 # Exemple {num2}`exemple`
 
@@ -121,16 +129,16 @@ Pour transformer un nombre décimal en fraction, il y a deux situations:
     période.
 
     {.lower-alpha-paren}
-    1.  $x = 0.\overline{2} \qquad \qquad$ Multipliez par $10$, car la période est de 1
-        chiffre.
+    1.  $x = 0.\overline{2}$<br>
+        Multipliez par $10$, car la période est de 1 chiffre.
         $$ 10x &= 2.\overline{2}\\
             -x &= 0.\overline{2}\\
             9x &= 2\\
             x &= \dfrac{2}{9}$$
         $0.\overline{2} =  \dfrac{2}{9}$
 
-    2.  $x = 5.\overline{412} \qquad \qquad$ Multipliez par $1000$, car la période est de 3
-        chiffres.
+    2.  $x = 5.\overline{412}$<br>
+         Multipliez par $1000$, car la période est de 3 chiffres.
         $$ 1000x &= 5412.\overline{412}\\
             -x &= \phantom{000}5.\overline{412}\\
             999x &= 5407\\
@@ -138,14 +146,19 @@ Pour transformer un nombre décimal en fraction, il y a deux situations:
         $5.\overline{412} =  \dfrac{5407}{999}$
     3.  Si la période n'est pas directement après la virgule, il faut se ramenez
         au cas a).<br>
-        $x = 1.79\overline{54} \qquad \qquad$ Multipliez la première valeur par
-        $10\,000$, car il y a 4 chiffres après la virgule et la seconde par
-        $100$ afin de ramener la période directement après la virgule.
-        $$ 10000x &= 17954.\overline{54}\\
+        $x = 1.79\overline{54}$<br>
+        Multipliez la première valeur par $10\,000$, car il y a 4 chiffres après
+        la virgule et la seconde par $100$ afin de ramener la période
+        directement après la virgule.
+        $$ 10\,000x &= 17954.\overline{54}\\
             -100x &= \phantom{00}179.\overline{54}\\
             9\,900x &= 17\,775\\
             x &= \dfrac{17\,775}{9\,900}$$
         $1.79\overline{54}  =  \dfrac{17\,775}{9\,900} \overset{\color{red}:25}{=} \dfrac{711}{396} \overset{\color{red}:9}{=} \dfrac{79}{44}$
+```
+
+```{container} frame noprint instructor
+-> ex 23.
 ```
 
 ```{admonition} Rappel - Critères de divisibilité
@@ -204,6 +217,10 @@ Le nombre $-a$ est appelé l'**opposé** de $a$ et $\dfrac{1}{a}$ est appelé l'
 
     $\left(\dfrac{4}{3}\right)^3 =\dfrac{4^3}{3^3}=\dfrac{64}{27}$
 4.  $\dfrac{1}{1 + \dfrac{3}{4}} = \dfrac{1}{\dfrac{4}{4} + \dfrac{3}{4}} = \dfrac{1}{\dfrac{7}{4}} = 1 : \dfrac{7}{4} = 1 \cdot \dfrac{4}{7} = \dfrac{4}{7}$
+```
+
+```{container} frame noprint instructor
+-> ex 24 à ex 28.
 ```
 
 ## Exercices
@@ -331,7 +348,7 @@ Déterminez si le nombre $\in$ ou $\notin$ à l'ensemble donné.
 4. $\{x \in \mathbb{Z} \, \mid \, x^2 \leq 18\}$
 
 ```{block} solution
-{.lower-alpha-paren}
+{.lower-alpha-paren .columns-2}
 1. $\{-5;-4;-3;-2,;-1;0;1;2;3;4;5\}$
 2. $\{6;12;18;24;30; \dots \}$
 3. $\{1;2;3;4;6;8;12;24\}$
