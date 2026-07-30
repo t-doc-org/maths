@@ -23,7 +23,7 @@ résultat obtenu et de comparer avec la donnée initiale!
 ### Mise en évidence
 
 ```{admonition} Mise en évidence
-:class: tip
+:class: note
 Pour la mise en évidence, il faut:
 1. trouver le facteur commun à chaque monôme qui compose le polynôme,
 2. mettre en évidence ce facteur commun.
@@ -90,13 +90,13 @@ cela devient faisable en les regroupant judicieusement.
 `````
 
 ```{container} frame instructor noprint
--> ex ... à ...
+-> ex 54 et ex 55
 ```
 
 ### Identités remarquables
 
 ````{admonition} Identités remarquables
-:class: tipp
+:class: note
 Il faut connaître les identités remarquables suivantes par coeur et les
 appliquer. Certaines sont très faciles à reconnaître.
 
@@ -145,6 +145,10 @@ Remarque: $a^2+b^2$ n'est pas factorisable.
 ````
 `````
 
+```{container} frame instructor noprint
+-> ex 56 et ex 57
+```
+
 ### Décomposition du trinôme de deuxième degré
 
 ```{admonition} Définition
@@ -155,7 +159,7 @@ factorisés grâce à une simple astuce.
 ```
 
 ```{admonition} Trinômes avec $a=1$
-:class: tip
+:class: note
 $x^2+bx+c$\
 Il faut trouver les deux nombres tel que:
 $$ \dots \:\: \cdot \:\, \dots &= c\\
@@ -193,7 +197,7 @@ source: (<https://gomaths.edu-vd.ch/alg_calc_litt.php>)
 ```
 
 ```{admonition} Trinômes avec $a \neq 1$
-:class: tip
+:class: note
 $ax^2+bx+c$\
 Si $a \neq 1$, la méthode est la suivante:
 1. Trouvez les deux nombres tel que:
@@ -255,18 +259,22 @@ source: (<https://gomaths.edu-vd.ch/alg_calc_litt.php>)
 # Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
-1.  Posons $x^2 = y$.
+1.  Posez $x^2 = y$.
     $$
     x^4-5x^2-6 &= y^2-5y-6 \qquad && \textrm{remplacez } x^2 \textrm{ par } y\\
                 &=(y+1)(y-6) \qquad && \textrm{factorisez}\\
                 &=(x^2+1)(x^2-6) \qquad && \textrm{remplacez } y \textrm{ par } x^2
     $$
-2.  Posons $x^3 = y$.
+2.  Posez $x^3 = y$.
     $$
     x^6-7x^3+12 &=y^2-7y+12 \qquad && \textrm{remplacez } x^3 \textrm{ par } y\\
                 &=(y-3)(y-4) \qquad && \textrm{factorisez}\\
                 &=(x^3-3)(x^3-4) \qquad && \textrm{remplacez } y \textrm{ par } x^3
     $$
+```
+
+```{container} frame instructor noprint
+-> ex 58 et ex 59
 ```
 
 ### Combinaison de méthodes
@@ -303,6 +311,10 @@ méthodes à la suite.
     &= 3x(x+1)^2-(x+1)^2 && \textrm{identités algébriques}\\
     &= (3x-1)(x+1)^2 && \textrm{mise en évidence}
     $$
+```
+
+```{container} frame instructor noprint
+-> ex 60 et ex 61
 ```
 
 
@@ -378,7 +390,7 @@ Mettez en évidence par regroupement.
 
 ### Exercice {num2}`exercice`
 
-Factorisez à l'aide des produits remarquables.
+Factorisez à l'aide des identités remarquables.
 
 {.lower-alpha-paren .columns-2}
 1. $x^{2}+2x+1=$
@@ -474,46 +486,6 @@ Complétez le tableau ci-dessous.
 
 ### Exercice {num2}`exercice`
 
-Factorisez les trinômes suivants.
-
-{.lower-alpha-paren .columns-2}
-1. $x^2-7x+6=$
-2. $x^2+7x+6=$
-3. $x^2-14x-15=$
-4. $x^2+8x+15=$
-5. $x^2-9x+20=$
-6. $x^2+7x+12=$
-7. $x^2-13x+12=$
-8. $2x^2+14x+20=$
-9. $44+x^2-15x=$
-10. $x^{4}-13x^2+36=$
-11. $x^{6}+11x^{3}+18=$
-12. $2x^2-5x-3=$
-13. $3x^2+14x+8=$
-14. $2x^2+x-15=$
-
-```{block} solution
-{.avoid-break-inside}
-
-{.lower-alpha-paren .columns-2}
-1. $ (x-1)(x-6)$
-2. $ (x+1)(x+6)$
-3. $ (x-15)(x+1)$
-4. $ (x+3)(x+5)$
-5. $ (x-4)(x-5)$
-6. $ (x+3)(x+4)$
-7. $ (x-1)(x-12)$
-8. $ 2(x+2)(x+5)$
-9. $ (x-4)(x-11)$
-10. $ (x-2)(x+2)(x-3)(x+3)$
-11. $ (x^3+9)(x^3+2)$
-12. $ (2x+1)(x-3)$
-13. $ (3x+2)(x+4)$
-14. $ (2x-5)(x+3)$
-```
-
-### Exercice {num2}`exercice`
-
 Complétez le tableau ci-dessous.
 
 ````{list-grid}
@@ -569,6 +541,46 @@ Complétez le tableau ci-dessous.
     ```
 ````
 `````
+
+### Exercice {num2}`exercice`
+
+Factorisez les trinômes suivants.
+
+{.lower-alpha-paren .columns-2}
+1. $x^2-7x+6=$
+2. $x^2+7x+6=$
+3. $x^2-14x-15=$
+4. $x^2+8x+15=$
+5. $x^2-9x+20=$
+6. $x^2+7x+12=$
+7. $x^2-13x+12=$
+8. $2x^2+14x+20=$
+9. $44+x^2-15x=$
+10. $x^{4}-13x^2+36=$
+11. $x^{6}+11x^{3}+18=$
+12. $2x^2-5x-3=$
+13. $3x^2+14x+8=$
+14. $2x^2+x-15=$
+
+```{block} solution
+{.avoid-break-inside}
+
+{.lower-alpha-paren .columns-2}
+1. $ (x-1)(x-6)$
+2. $ (x+1)(x+6)$
+3. $ (x-15)(x+1)$
+4. $ (x+3)(x+5)$
+5. $ (x-4)(x-5)$
+6. $ (x+3)(x+4)$
+7. $ (x-1)(x-12)$
+8. $ 2(x+2)(x+5)$
+9. $ (x-4)(x-11)$
+10. $ (x-2)(x+2)(x-3)(x+3)$
+11. $ (x^3+9)(x^3+2)$
+12. $ (2x+1)(x-3)$
+13. $ (3x+2)(x+4)$
+14. $ (2x-5)(x+3)$
+```
 
 ### Exercice {num2}`exercice`
 

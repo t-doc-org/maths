@@ -166,13 +166,24 @@ convertir les racines en puissances, ensuite il est possible d'appliquer les
 règles de calcul.
 
 {.lower-alpha-paren}
-1.  $\left( x^{\frac{5}{6}} \cdot \sqrt[4]{x} \right) : \sqrt[3]{x^2}=\left(x^{\frac{5}{6}} \cdot x^{\frac{1}{4}} \right):x^{\frac{2}{3}}=x^{\frac{10}{12}+\frac{3}{12}-\frac{8}{12}}=x^{\frac{5}{12}}$
+1.  $$\left( x^{\frac{5}{6}} \cdot \sqrt[4]{x} \right) : \sqrt[3]{x^2}&=\left(x^{\frac{5}{6}} \cdot x^{\frac{1}{4}} \right):x^{\frac{2}{3}}\\
+    &=x^{\frac{10}{12}+\frac{3}{12}-\frac{8}{12}}\\
+    &=x^{\frac{5}{12}}$$
 
 
-2.  $\left( \sqrt[4]{a \cdot \sqrt[3]{a}}\right)^3= \left( \sqrt[4]{a \cdot a^{\frac{1}{3}}}\right)^3=\left( \sqrt[4]{a^{\frac{3}{3}+\frac{1}{3}}}\right)^3=\left( \sqrt[4]{a^{\frac{4}{3}}}\right)^3=\left( \left(a^{\frac{4}{3}} \right)^{\frac{1}{4}} \right)^3=a^{\frac{12}{12}}=a$
+2.  $$\left( \sqrt[4]{a \cdot \sqrt[3]{a}}\right)^3&= \left( \sqrt[4]{a \cdot a^{\frac{1}{3}}}\right)^3\\
+    &=\left( \sqrt[4]{a^{\frac{3}{3}+\frac{1}{3}}}\right)^3\\
+    &=\left( \sqrt[4]{a^{\frac{4}{3}}}\right)^3\\
+    &=\left( \left(a^{\frac{4}{3}} \right)^{\frac{1}{4}} \right)^3\\
+    &= a^{\frac{4}{3} \cdot \frac{1}{4} \cdot 3} = a^{\frac{12}{12}}=a$$
 
-3.  $\left( \dfrac{x^{\frac{7}{4}} \cdot y^{\frac{2}{3}}}{\sqrt[4]{y} \cdot \sqrt[3]{x^5}} \right)^{24}=\left( \dfrac{x^{\frac{7}{4}} \cdot y^{\frac{2}{3}}}{y^{\frac{1}{4}} \cdot x^{\frac{5}{3}}} \right)^{24}=\left( \dfrac{x^{\frac{7}{4}} \cdot y^{\frac{2}{3}}}{{x^{\frac{5}{3}} \cdot y^\frac{1}{4}}} \right)^{24} = \left( \dfrac{x^{\frac{7}{4}}}{x^{\frac{5}{3}}} \cdot \dfrac{y^{\frac{2}{3}}}{y^\frac{1}{4}} \right)^{24}$
-$=\left( x^{\frac{7}{4}-\frac{5}{3}}  y^{\frac{2}{3}-\frac{1}{4}}\right)^{24}=\left( x^{\frac{21}{12}-\frac{20}{12}}  y^{\frac{8}{12}-\frac{3}{12}}\right)^{24}= \left( x^{\frac{1}{12}}  y^{\frac{5}{12}}\right)^{24}=x^2y^{10}$
+3.  $$\left( \dfrac{x^{\frac{7}{4}} \cdot y^{\frac{2}{3}}}{\sqrt[4]{y} \cdot \sqrt[3]{x^5}} \right)^{24}&=\left( \dfrac{x^{\frac{7}{4}} \cdot y^{\frac{2}{3}}}{y^{\frac{1}{4}} \cdot x^{\frac{5}{3}}} \right)^{24}\\
+    &=\left( \dfrac{x^{\frac{7}{4}} \cdot y^{\frac{2}{3}}}{{x^{\frac{5}{3}} \cdot y^\frac{1}{4}}} \right)^{24}\\
+    &= \left( \dfrac{x^{\frac{7}{4}}}{x^{\frac{5}{3}}} \cdot \dfrac{y^{\frac{2}{3}}}{y^\frac{1}{4}} \right)^{24}\\
+    &=\left( x^{\frac{7}{4}-\frac{5}{3}}  y^{\frac{2}{3}-\frac{1}{4}}\right)^{24}\\
+    &=\left( x^{\frac{21}{12}-\frac{20}{12}}  y^{\frac{8}{12}-\frac{3}{12}}\right)^{24}\\
+    &= \left( x^{\frac{1}{12}}  y^{\frac{5}{12}}\right)^{24}\\
+    &= x^{\frac{1}{12} \cdot 24}  y^{\frac{5}{12} \cdot 24}=x^2y^{10}$$
 ```
 
 ```{container} frame noprint instructor
@@ -190,10 +201,10 @@ les racines du dénominateur d'une fraction.
 
 Il suffit de multiplier le numérateur et le dénominateur par la racine.
 
-{.lower-alpha-paren .columns-2}
-1. $\dfrac{1}{\sqrt{2}} = \dfrac{1}{\sqrt{2}} \cdot \dfrac{\sqrt{2}}{\sqrt{2}} = \dfrac{\sqrt{2}}{2}$
-2. $\dfrac{36}{\sqrt{6}} = \dfrac{36}{\sqrt{6}} \cdot \dfrac{\sqrt{6}}{\sqrt{6}} = \dfrac{36 \sqrt{6}}{6} = 6 \sqrt{6}$
-3. $\dfrac{\sqrt{2}}{\sqrt{3}} = \dfrac{\sqrt{2}}{\sqrt{3}} \cdot \dfrac{\sqrt{3}}{\sqrt{3}} = \dfrac{\sqrt{6}}{3}$
+{.lower-alpha-paren}
+1. $\dfrac{1}{\sqrt{2}} = \dfrac{1}{\sqrt{2}} \cdot {\color{red}\dfrac{\sqrt{2}}{\sqrt{2}}} = \dfrac{\sqrt{2}}{2}$
+2. $\dfrac{36}{\sqrt{6}} = \dfrac{36}{\sqrt{6}} \cdot {\color{red}\dfrac{\sqrt{6}}{\sqrt{6}}} = \dfrac{36 \sqrt{6}}{6} = 6 \sqrt{6}$
+3. $\dfrac{\sqrt{2}}{\sqrt{3}} = \dfrac{\sqrt{2}}{\sqrt{3}} \cdot {\color{red}\dfrac{\sqrt{3}}{\sqrt{3}}} = \dfrac{\sqrt{6}}{3}$
 ```
 
 ```{container} frame noprint instructor
@@ -463,8 +474,8 @@ Rendez rationnel le dénominateur des fractions suivantes:
 Simplifiez le plus possible.
 
 {.lower-alpha-paren .columns-2}
-1. $\sqrt{\dfrac{\sqrt[4]{a^{\frac{1}{3}}} \cdot \sqrt{a^{-8}}}{\sqrt[3]{a^{-5}}}} : \dfrac{\sqrt[6]{a^{\frac{3}{4}}}}{\sqrt[3]{a^2}}$
-2. $\dfrac{\sqrt{\sqrt[3]{\left( \dfrac{1}{b^2}\right)^{-4}}\cdot \sqrt{b \cdot \sqrt[3]{b^2}}}}{b \cdot \sqrt[6]{b \sqrt{b}}\cdot \sqrt{b^{-1} \cdot \sqrt[3]{b^2}} }$
+1. $$\sqrt{\dfrac{\sqrt[4]{a^{\frac{1}{3}}} \cdot \sqrt{a^{-8}}}{\sqrt[3]{a^{-5}}}} : \dfrac{\sqrt[6]{a^{\frac{3}{4}}}}{\sqrt[3]{a^2}}$$
+2. $$\dfrac{\sqrt{\sqrt[3]{\left( \dfrac{1}{b^2}\right)^{-4}}\cdot \sqrt{b \cdot \sqrt[3]{b^2}}}}{b \cdot \sqrt[6]{b \sqrt{b}}\cdot \sqrt{b^{-1} \cdot \sqrt[3]{b^2}} }$$
 
 ```{solution}
 {.lower-alpha-paren .columns-2}

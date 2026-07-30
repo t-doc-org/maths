@@ -16,4 +16,5 @@ racines
 polynomes-factorisation-intro
 polynomes
 factorisation
+factorisation-applications
 ```

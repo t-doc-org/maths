@@ -100,7 +100,7 @@ a^n \cdot a^m = a^{n+m}
     {.reset-print .puissances}
     |$n$|$-3$|$-2$|$-1$|$0$|$1$|$2$|$3$|
     |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-    |$2^n$| $0.125 = \dfrac{1}{8}$|$0.25 = \dfrac{1}{4}$|$0.5 = \dfrac{1}{2}$|$1$|$2$|$4$|$8$|
+    |$2^n$| $0.125 = \frac{1}{8}$|$0.25 = \frac{1}{4}$|$0.5 = \frac{1}{2}$|$1$|$2$|$4$|$8$|
     ```
 
 2.  Que peut-on dire des puissances de $2$ avec un exposant nul ou négatif?

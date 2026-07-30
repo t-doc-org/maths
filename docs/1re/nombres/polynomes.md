@@ -102,9 +102,9 @@ Les trois équations suivantes sont appelées **identités remarquables**.
 # Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
-1. $(2x-5)^2=4x^2-20x+25$
-2. $(3b+a^2)^2=9b^2+6a^2b+a^4$
-3. $(4f+ \dfrac{1}{2})(4f-\dfrac{1}{2})=16f^2-\dfrac{1}{4}$
+1. $(2x-5)^2=(2x)^2 - 2 \cdot 2x \cdot 5 + 5^2 = 4x^2-20x+25$
+2. $(3b+a^2)^2=(3b)^2 + 2 \cdot 3b \cdot a^2 + (a^2)^2 = 9b^2+6a^2b+a^4$
+3. $(4f+ \dfrac{1}{2})(4f-\dfrac{1}{2})= (4f)^2 - \left(\dfrac{1}{2}\right)^2 = 16f^2-\dfrac{1}{4}$
 ```
 
 ````{admonition} Définition
@@ -122,9 +122,15 @@ Les équations suivantes sont appelées **identités remarquables de degré 3**.
 # Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
-1. $(x+1)^3= x^3 + 3x^2 + 3x + 1$
-1. $(2b+5)^3= 8b^3 + 60b^2 + 150b + 125$
-1. $(a-2)^3= a^3 - 6a^2 + 12a - 8$
+1.  $$(x+1)^3 &= x^3 + 3 \cdot x^2 \cdot 1 + 3 \cdot x \cdot 1^2 + 1^3 \qquad\qquad\qquad &|& \text{appliquez la bonne identité: } (a+b)^3\\
+    &= x^3 + 3 \cdot x^2 \cdot 1 + 3 \cdot x \cdot 1 + 1 &|& \text{effectuez les puissances}\\
+    &= x^3 + 3x^2 + 3x + 1 &|& \text{simplifiez}$$
+2.  $$(2b+5)^3 &= (2b)^3 + 3 \cdot (2b)^2 \cdot 5 + 3 \cdot 2b \cdot 5^2 + 5^3 \qquad\quad &|& \text{appliquez la bonne identité: } (a+b)^3\\
+    &= 8b^3 + 3 \cdot 4b^2 \cdot 5 + 3 \cdot 2b \cdot 25 + 125 &|& \text{effectuez les puissances}\\
+    &= 8b^3 + 60b^2 + 150b + 125 &|& \text{simplifiez}$$
+3.  $$(a-2)^3 &= a^3 - 3 \cdot a^2 \cdot 2 + 3 \cdot a \cdot 2^2 - 2^3 \qquad\qquad\qquad &|& \text{appliquez la bonne identité: } (a-b)^3\\
+    &= a^3 - 3 \cdot a^2 \cdot 2 + 3 \cdot a \cdot 4 - 8 &|& \text{effectuez les puissances}\\
+    &= a^3 - 6a^2 + 12a - 8 &|& \text{simplifiez}$$
 ```
 
 ```{container} frame noprint instructor

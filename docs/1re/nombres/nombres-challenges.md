@@ -15,9 +15,9 @@ Effectuez, sans calculatrice, ces calculs de fractions provenant d'un manuel de
 1990.
 
 {.lower-alpha-paren}
-1. $\dfrac{\left(\dfrac{2}{5} + 1 \right) : \left(\dfrac{1}{3} + 1 + 4 : 6\right)}{\dfrac{\dfrac{2}{7} + \dfrac{1}{2}}{\dfrac{1}{4}} \cdot \left(\dfrac{2}{3} + 4 \right) : 2 - \dfrac{1}{3}} : \left[\dfrac{4}{3} : \left(\dfrac{1}{2} + \dfrac{1}{3}\right) \right] =$
+1. $$\dfrac{\left(\dfrac{2}{5} + 1 \right) : \left(\dfrac{1}{3} + 1 + 4 : 6\right)}{\dfrac{\dfrac{2}{7} + \dfrac{1}{2}}{\dfrac{1}{4}} \cdot \left(\dfrac{2}{3} + 4 \right) : 2 - \dfrac{1}{3}} : \left[\dfrac{4}{3} : \left(\dfrac{1}{2} + \dfrac{1}{3}\right) \right] =$$
     {vspace}`1lh`
-2. $\dfrac{\left[\dfrac{\dfrac{4}{3} + 3}{\dfrac{13}{9}} + \dfrac{7 \cdot \dfrac{1}{343} \cdot \dfrac{1089}{33} + \dfrac{16}{49}}{4 - \left(\dfrac{5}{2} + 1 \right)} \right] \cdot 2}{\left(\dfrac{1}{3} + 4 \right) \cdot \left(\dfrac{1}{13} + 2 \right) + 1} =$
+2. $$\dfrac{\left[\dfrac{\dfrac{4}{3} + 3}{\dfrac{13}{9}} + \dfrac{7 \cdot \dfrac{1}{343} \cdot \dfrac{1089}{33} + \dfrac{16}{49}}{4 - \left(\dfrac{5}{2} + 1 \right)} \right] \cdot 2}{\left(\dfrac{1}{3} + 4 \right) \cdot \left(\dfrac{1}{13} + 2 \right) + 1} =$$
 
 ```{solution}
 {.columns-2 .lower-alpha-paren}
