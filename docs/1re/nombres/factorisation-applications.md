@@ -70,7 +70,7 @@ page-break-avoid-inside: 3
 ````
 
 ```{container} frame instructor noprint
--> ex 66
+-> ex 66 et ex 67
 ```
 
 ```{admonition} Addition/soustraction de fractions rationnelles
@@ -177,7 +177,7 @@ Pour touver le ppmc de $180$ et $2625$, il faut
 ````
 
 ```{container} frame instructor noprint
--> ex 67 à ex 69
+-> ex 68 à ex 70
 ```
 
 
@@ -289,7 +289,29 @@ Simplifiez les fractions suivantes.
 
 ### Exercice {num2}`exercice`
 
-Déterminez l'ensemble des solutions des équations suivantes.
+Résolvez les équations suivantes par factorisation.
+
+{.lower-alpha-paren .columns-2}
+1. $(x+4)(x-3)= 0$
+2. $(x-2)(3x+1)(2x+8)=0$
+3. $x^2-6x=0$
+4. $x^2+2x+1=0$
+5. $x^2+5x+6=0$
+6. $x^3+2x^2-3x=0$
+
+```{block} solution
+{.lower-alpha-paren .columns-3}
+1. $S=\{-4;3\}$
+2. $S=\{-4;\frac{1}{3};2\}$
+3. $S=\{0;6\}$
+4. $S=\{-1\}$
+5. $S=\{-3;-2\}$
+6. $S=\{-3;0;1\}$
+```
+
+### Exercice {num2}`exercice`
+
+Résolvez les équations suivantes par factorisation.
 
 {.lower-alpha-paren .columns-2}
 1. $6x^2+12x=0$
