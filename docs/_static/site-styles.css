@@ -1,2 +1,7 @@
 /* Copyright 2025 Caroline Blank <caro@c-space.org> */
 /* SPDX-License-Identifier: CC-BY-NC-SA-4.0 */
+
+/* TODO(0.88): Remove */
+:is(ol, ul) > li div.math > mjx-container > svg {
+    vertical-align: top !important;
+}
