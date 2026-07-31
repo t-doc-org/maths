@@ -83,7 +83,7 @@ L'exposant le plus élevé d'un polynôme à une variable est appelé **degré**
 ```
 
 ```{container} frame noprint instructor
--> ex 46 à ex 49.
+-> ex 1 à ex 4.
 ```
 
 ````{admonition} Définition
@@ -134,7 +134,7 @@ Les équations suivantes sont appelées **identités remarquables de degré 3**.
 ```
 
 ```{container} frame noprint instructor
--> ex 50 à ex 51.
+-> ex 5 et ex 6.
 ```
 
 ```{container}
@@ -203,7 +203,7 @@ Les équations suivantes sont appelées **identités remarquables de degré 3**.
 ```
 
 ```{container} frame noprint instructor
--> ex 52 à ex 53.
+-> ex 7 et ex 8.
 ```
 
 

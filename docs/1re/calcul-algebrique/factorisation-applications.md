@@ -26,7 +26,7 @@ page-break-avoid-inside: 3
 ```
 
 ```{container} frame instructor noprint
--> ex 62 à ex 65
+-> ex 17 à ex 20
 ```
 
 ````{admonition} Résolution d'équations de degré supérieur ou égal à 2
@@ -70,7 +70,7 @@ page-break-avoid-inside: 3
 ````
 
 ```{container} frame instructor noprint
--> ex 66 et ex 67
+-> ex 21 et ex 22
 ```
 
 ```{admonition} Addition/soustraction de fractions rationnelles
@@ -177,7 +177,7 @@ Pour touver le ppmc de $180$ et $2625$, il faut
 ````
 
 ```{container} frame instructor noprint
--> ex 68 à ex 70
+-> ex 23 à ex 25
 ```
 
 

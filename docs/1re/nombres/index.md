@@ -13,8 +13,4 @@ nombres-challenges
 puissances-racines-intro
 puissances
 racines
-polynomes-factorisation-intro
-polynomes
-factorisation
-factorisation-applications
 ```

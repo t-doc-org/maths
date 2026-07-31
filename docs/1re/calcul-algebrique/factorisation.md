@@ -90,7 +90,7 @@ cela devient faisable en les regroupant judicieusement.
 `````
 
 ```{container} frame instructor noprint
--> ex 54 et ex 55
+-> ex 9 et ex 10
 ```
 
 ### Identités remarquables
@@ -146,7 +146,7 @@ Remarque: $a^2+b^2$ n'est pas factorisable.
 `````
 
 ```{container} frame instructor noprint
--> ex 56 et ex 57
+-> ex 11 et ex 12
 ```
 
 ### Décomposition du trinôme de deuxième degré
@@ -274,7 +274,7 @@ source: (<https://gomaths.edu-vd.ch/alg_calc_litt.php>)
 ```
 
 ```{container} frame instructor noprint
--> ex 58 et ex 59
+-> ex 13 et ex 14
 ```
 
 ### Combinaison de méthodes
@@ -314,7 +314,7 @@ méthodes à la suite.
 ```
 
 ```{container} frame instructor noprint
--> ex 60 et ex 61
+-> ex 15 et ex 16
 ```
 
 
