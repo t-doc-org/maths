@@ -1,4 +1,6 @@
 % Copyright 2025 Caroline Blank <caro@c-space.org>
+% Copyright 2025 Nicolas Martignoni
+% Copyright 2025 David Rueda
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 # Cercle trigonométrique
