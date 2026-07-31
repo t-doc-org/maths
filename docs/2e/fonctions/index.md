@@ -4,7 +4,6 @@
 # Fonctions
 
 ```{toctree}
-factorisation
 revisions
 polynomiales
 rationnelles
