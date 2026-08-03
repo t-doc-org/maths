@@ -118,7 +118,8 @@ est également élément de $B$, noté $A \subset B$.
 ```
 
 ```{container} frame noprint instructor
--> ex 1 à ex 3.
+-> {numref}`exercice %s<exercice:1-ens-ex1>`, {numref}`exercice %s<exercice:1-ens-ex2>` et
+{numref}`exercice %s<exercice:1-ens-ex3>`.
 ```
 
 ```{admonition} Définition
@@ -153,7 +154,8 @@ Il existe quatre autres types de sous-ensembles de $\mathbb{R}$:
 Les crochets sont toujours tournés vers l'extérieur pour $+\infty$ et $-\infty$.
 
 ```{container} frame noprint instructor
--> ex 4 à ex 6.
+-> {numref}`exercice %s<exercice:1-ens-ex4>`, {numref}`exercice %s<exercice:1-ens-ex5>` et
+{numref}`exercice %s<exercice:1-ens-ex6>`.
 ```
 
 ```{admonition} Définition
@@ -264,7 +266,9 @@ Soient $A$ et $B$ deux sous-ensembles d'un ensemble plus grand $M$.
 ````
 
 ```{container} frame noprint instructor
--> ex 7 à ex 12.
+-> {numref}`exercice %s<exercice:1-ens-ex7>`, {numref}`exercice %s<exercice:1-ens-ex8>`,
+{numref}`exercice %s<exercice:1-ens-ex9>`, {numref}`exercice %s<exercice:1-ens-ex10>`,
+{numref}`exercice %s<exercice:1-ens-ex11>` et {numref}`exercice %s<exercice:1-ens-ex12>`.
 ```
 
 ````{container} frame noprint
@@ -335,12 +339,13 @@ Réponse: 14 élèves ne pratiquent qu'un seul sport.
 ````
 
 ```{container} frame noprint instructor
--> ex 13 à ex 15.
+-> {numref}`exercice %s<exercice:1-ens-ex13>`, {numref}`exercice %s<exercice:1-ens-ex14>` et
+{numref}`exercice %s<exercice:1-ens-ex15>`.
 ```
 
 ## Exercices
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-ens-ex1`
 
 Écrivez les ensembles suivants en extension.
 
@@ -360,7 +365,7 @@ Réponse: 14 élèves ne pratiquent qu'un seul sport.
 5. $D_{24} = \{1; 2; 3; 4; 6; 8; 12; 24\}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-ens-ex2`
 
 Écrivez les ensembles suivants en compréhension.
 
@@ -380,7 +385,7 @@ Réponse: 14 élèves ne pratiquent qu'un seul sport.
 5. $\{ x \in \mathbb{Z} \, \mid \,-3 < x \leq 3\}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-ens-ex3`
 
 Écrivez les ensembles de l'exercice précédent en extension.
 
@@ -393,7 +398,7 @@ Réponse: 14 élèves ne pratiquent qu'un seul sport.
 5. $\{ x \in \mathbb{Z} \, \mid \,-3 < x \leq 3\} = \{-2; -1; 0; 1; 2; 3\}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-ens-ex4`
 
 Écrivez les ensembles suivants sous forme d'intervalle.
 
@@ -411,7 +416,7 @@ Réponse: 14 élèves ne pratiquent qu'un seul sport.
 4. $\{ x \in \mathbb{R} \, \mid \,-10 \leq x < -5\} = [-10; -5[$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-ens-ex5`
 
 Écrivez les ensembles suivant en extension.
 
@@ -429,7 +434,7 @@ Réponse: 14 élèves ne pratiquent qu'un seul sport.
 4. $\{ x \in \mathbb{Z} \, \mid \,-8 \leq x < -2\} = \{-8; -7; -6; -5; -4; -3\}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-ens-ex6`
 
 Écrivez les ensembles suivants en compréhension.
 
@@ -463,7 +468,7 @@ Réponse: 14 élèves ne pratiquent qu'un seul sport.
 12. $]0; 7] = \{ x \in \mathbb{R} \, \mid \,0 < x \leq 7\}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-ens-ex7`
 
 Soient les ensembles $A = \{1;2;3;4;5;6;7;8\}$, $B = \{1;3;5;7\}$ et $C = \{2;4;8;12\}$.
 
@@ -499,7 +504,7 @@ Soient les ensembles $A = \{1;2;3;4;5;6;7;8\}$, $B = \{1;3;5;7\}$ et $C = \{2;4;
     2. Vrai
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-ens-ex8`
 
 Soient $D_n$ l'ensemble des diviseurs de $n$ et $M_n$ l'ensemble des multiples
 de $n$. Énumérez les ensembles suivants (définis en extension).
@@ -526,7 +531,7 @@ de $n$. Énumérez les ensembles suivants (définis en extension).
 8. $M_3 \setminus D_{36} = \{ 15; 21; 24; 27; 30; 33; 39; \dots\}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-ens-ex9`
 
 Écrivez comme un seul intervalle les ensembles suivants.
 
@@ -554,7 +559,7 @@ de $n$. Énumérez les ensembles suivants (définis en extension).
 9. $]-\infty; -5]$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-ens-ex10`
 
 Écrivez les ensembles suivants sous forme (de réunion) d'intervalles.
 
@@ -572,7 +577,7 @@ de $n$. Énumérez les ensembles suivants (définis en extension).
 4. $[12; 15[ \cup [20; 25[$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-ens-ex11`
 
 Soient $A$, $B$ et $C$ des sous-ensembles de l'ensemble $M$. Représentez les
 ensembles suivants au moyen d'un diagramme de Venn (un diagramme différent pour
@@ -615,7 +620,7 @@ chaque exercice).
     ```
 ````
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-ens-ex12`
 
 Écrivez les ensembles suivants à l'aide des opérations sur les ensembles.
 
@@ -645,7 +650,7 @@ chaque exercice).
 4. $(B \setminus C) \cup (A \cap C)$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-ens-ex13`
 
 Dans un hôpital, il y a 200 patients. 50 ont des problèmes respiratoires, 60 des
 problèmes cardiaques et 30 du rhumatisme. 15 patients ont des problèmes
@@ -666,7 +671,7 @@ suivantes.
 2.  90 patients sont dans cet hôpital pour d'autres maladies.
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-ens-ex14`
 
 Lors d'une étude sur les voyages des collégiens en Europe, 363 élèves ont été
 interrogés sur leurs voyages en Espagne, en Angleterre et en Italie.
@@ -689,7 +694,7 @@ de Venn et répondez aux questions suivantes.
 3. 50 élèves n'ont séjourné dans aucun de ces 3 pays.
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-ens-ex15`
 
 Dans une classe de 28 élèves, 12 élèves ont un chat, 11 élèves ont un chien et 6
 élèves ont des poissons. 3 élèves ont au moins un chien et un chat. Aucun élève

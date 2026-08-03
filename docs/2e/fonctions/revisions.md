@@ -45,7 +45,7 @@ d'arrivée** de $f$.
 ````
 
 ```{container} frame noprint instructor
--> ex 1.
+-> {numref}`exercice %s<exercice:2-rev-polyn-ex1>`.
 ```
 
 <script type="module">
@@ -233,7 +233,8 @@ $- \dfrac{1}{3}x + 2 = 0 \implies -\dfrac{1}{3}x = -2 \implies x = -2 \cdot (-3)
 `````
 
 ```{container} frame noprint instructor
--> ex 2 à ex 4.
+-> {numref}`exercice %s<exercice:2-rev-polyn-ex2>`, {numref}`exercice %s<exercice:2-rev-polyn-ex3>` et
+ {numref}`exercice %s<exercice:2-rev-polyn-ex4>`.
 ```
 
 ### Fonctions du premier degré
@@ -299,7 +300,7 @@ l'axe des $x$.
 `````
 
 ```{container} frame noprint instructor
--> ex 5 à ex 6.
+-> {numref}`exercice %s<exercice:2-rev-polyn-ex5>` et {numref}`exercice %s<exercice:2-rev-polyn-ex6>`.
 ```
 
 {.allow-break-inside}
@@ -397,7 +398,8 @@ calculés précédemment.
 ````
 
 ```{container} frame noprint instructor
--> ex 7 à ex 9.
+-> {numref}`exercice %s<exercice:2-rev-polyn-ex7>`, {numref}`exercice %s<exercice:2-rev-polyn-ex8>` et
+{numref}`exercice %s<exercice:2-rev-polyn-ex9>`.
 ```
 
 <script type="module">
@@ -539,13 +541,13 @@ $S = ]-\infty; -1[ \: \cup \: ]1; +\infty[$
 ````
 
 ```{container} frame noprint instructor
--> ex 10.
+-> {numref}`exercice %s<exercice:2-rev-polyn-ex10>`.
 ```
 
 
 ## Exercices
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-rev-polyn-ex1`
 
 Les représentations graphiques suivantes sont-elles celles d'une fonction?
 
@@ -624,7 +626,7 @@ render.fct1f = el => {
 6. oui
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-rev-polyn-ex2`
 
 Pour chacune des fonctions suivantes, répondez aux questions ci-dessous:
 
@@ -747,7 +749,7 @@ render. fct2c= el => {
     10. $x \in \left[ -5; 0\right] \cup \left[ 1; 2\right]  $
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-rev-polyn-ex3`
 
 Déterminez le domaine de définition des fonctions suivantes.
 
@@ -771,7 +773,7 @@ Déterminez le domaine de définition des fonctions suivantes.
 7. $D_f = \left] -\infty; \frac{5}{3} \right]$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-rev-polyn-ex4`
 
 Déterminez le domaine de définition et les zéros des fonctions suivantes.
 
@@ -802,7 +804,7 @@ Déterminez le domaine de définition et les zéros des fonctions suivantes.
     $D_f = \left] -\infty;2 \right] \setminus \left\{ -\frac{1}{2}; 0 \right\}$.
 ````
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-rev-polyn-ex5`
 
 Déterminez les expressions algébriques des fonctions dont ces droites sont les
 représentations graphiques.
@@ -853,7 +855,7 @@ render.droites = el => {
 8. N'est pas une fonction
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-rev-polyn-ex6`
 
 Déterminez l'expression algébrique de la fonction dont la représentation
 graphique est une droite...
@@ -879,7 +881,7 @@ graphique est une droite...
 7. $f(x) = x+1$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-rev-polyn-ex7`
 
 Factorisez si possible les expressions algébriques des fonctions suivantes, puis
 calculez les coordonnées du sommet $S$ de leur représentation graphique, en
@@ -927,7 +929,7 @@ précisant s'il s'agit d'un minimum ou d'un maximum.
 18. $f(x) = 3\Bigl(x - \frac{-5-\sqrt{73}}{6}\Bigr)\Bigl(x - \frac{-5+\sqrt{73}}{6}\Bigr)$; $S\Bigl(-\frac{5}{6};-\frac{73}{12}\Bigr)$ minimum
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-rev-polyn-ex8`
 
 Représentez graphiquement les paraboles de l'exercice précédent.
 
@@ -936,7 +938,7 @@ Correction en ligne avec Desmos (<https://www.desmos.com/calculator?lang=fr>) ou
 Geogebra (<https://www.geogebra.org/cas?lang=fr>).
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-rev-polyn-ex9`
 
 Déterminez l'expression fonctionnelle de la parabole qui passe par les points
 $A(2; 9)$, $B(-6; -7)$ et $C(1; 0)$.
@@ -945,7 +947,7 @@ $A(2; 9)$, $B(-6; -7)$ et $C(1; 0)$.
 $f(x) = x^2 + 6x - 7$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-rev-polyn-ex10`
 
 Déterminez à l'aide d'un tableau de signes l'ensemble des solutions des
 inéquations suivantes.

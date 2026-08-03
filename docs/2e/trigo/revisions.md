@@ -154,7 +154,14 @@ Remarque: Le côté $c$ peut aussi être calculé avec le théorème de Pythagor
 ``` -->
 
 ```{container} frame noprint instructor
--> ex 1 à ex 8.
+-> {numref}`exercice %s<exercice:2-trigo-rev-ex1>`,
+{numref}`exercice %s<exercice:2-trigo-rev-ex2>`,
+{numref}`exercice %s<exercice:2-trigo-rev-ex3>`,
+{numref}`exercice %s<exercice:2-trigo-rev-ex4>`,
+{numref}`exercice %s<exercice:2-trigo-rev-ex5>`,
+{numref}`exercice %s<exercice:2-trigo-rev-ex6>`,
+{numref}`exercice %s<exercice:2-trigo-rev-ex7>` et
+{numref}`exercice %s<exercice:2-trigo-rev-ex8>`.
 ```
 
 ````{container} noprint
@@ -245,7 +252,7 @@ source: (<https://gomaths.edu-vd.ch>)
 ## Exercices
 
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-trigo-rev-ex1`
 
 Résolvez les triangles $ABC$ suivants, rectangles en $C$ (arrondis au centième).
 
@@ -263,7 +270,7 @@ Résolvez les triangles $ABC$ suivants, rectangles en $C$ (arrondis au centième
 4.  $\alpha=77.7^\circ$, $c=16.07\,\text{cm}$, $b=3.42\,\text{cm}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-trigo-rev-ex2`
 
 La longueur de l'hypoténuse d'un triangle rectangle vaut $6.2\, \text{cm}$ et un
 de ses angles $27^\circ$. Déterminez la longueur de ses cathètes.
@@ -273,7 +280,7 @@ de ses angles $27^\circ$. Déterminez la longueur de ses cathètes.
 $a = 2.81\, \text{cm}$ et $b = 5.52\, \text{cm}$.
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-trigo-rev-ex3`
 
 Un triangle isocèle a une base de $51.8\, m$ et une aire de
 $130 \, m^2$. Calculez les angles de ce triangle.
@@ -283,7 +290,7 @@ $130 \, m^2$. Calculez les angles de ce triangle.
 Deux angles de $11^\circ$ et un de $158^\circ$.
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-trigo-rev-ex4`
 
 ````{list-grid}
 :style: grid-template-columns:3fr 1fr;
@@ -311,7 +318,7 @@ Deux angles de $11^\circ$ et un de $158^\circ$.
 4.  $45^\circ$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-trigo-rev-ex5`
 
 Pour les angles d'élévation suivants, déterminez la pente en $\%$.
 
@@ -330,7 +337,7 @@ Pour les angles d'élévation suivants, déterminez la pente en $\%$.
 4.  $1143 \%$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-trigo-rev-ex6`
 
 Calculer l'angle $\varphi$ dans le parallélipipède rectangle ci-dessous.
 
@@ -398,7 +405,7 @@ render.angle = el => {
 $\varphi = 15.78^\circ$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-trigo-rev-ex7`
 
 Un triangle isocèle a une base de $10\, cm$ et un angle au sommet de
 $130^\circ$. Déterminez les trois angles obtenus au sommet en divisant la base
@@ -409,7 +416,7 @@ sommet du triangle.
 $29.44^\circ$, $71.12^\circ$, $29.44^\circ$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-trigo-rev-ex8`
 
 La hauteur d'une falaise peut être déterminée à l'aide d'un segment
 $\overline{AB}$ de longueur connue, orienté en direction de la falaise. La

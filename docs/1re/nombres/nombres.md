@@ -59,7 +59,9 @@ trouvent les nombres tels que $\pi$, $\sqrt{2}$, $1.010010001\ldots$.
 ````
 
 ```{container} frame noprint instructor
--> ex 16 à ex 21.
+-> {numref}`exercice %s<exercice:1-nb-ex1>`, {numref}`exercice %s<exercice:1-nb-ex2>`,
+{numref}`exercice %s<exercice:1-nb-ex3>`, {numref}`exercice %s<exercice:1-nb-ex4>`,
+{numref}`exercice %s<exercice:1-nb-ex5>` et {numref}`exercice %s<exercice:1-nb-ex6>`.
 ```
 
 ```{admonition} Théorème
@@ -112,7 +114,7 @@ $\dfrac{264}{7} = 37.\overline{714285}$
 ````
 
 ```{container} frame noprint instructor
--> ex 22.
+-> {numref}`exercice %s<exercice:1-nb-ex7>`.
 ```
 
 ```{container} frame noprint
@@ -158,7 +160,7 @@ Pour transformer un nombre décimal en fraction, il y a deux situations:
 ```
 
 ```{container} frame noprint instructor
--> ex 23.
+-> {numref}`exercice %s<exercice:1-nb-ex8>`.
 ```
 
 ```{admonition} Rappel - Critères de divisibilité
@@ -220,12 +222,14 @@ Le nombre $-a$ est appelé l'**opposé** de $a$ et $\dfrac{1}{a}$ est appelé l'
 ```
 
 ```{container} frame noprint instructor
--> ex 24 à ex 28.
+-> {numref}`exercice %s<exercice:1-nb-ex9>`, {numref}`exercice %s<exercice:1-nb-ex10>`,
+{numref}`exercice %s<exercice:1-nb-ex11>`, {numref}`exercice %s<exercice:1-nb-ex12>`
+et {numref}`exercice %s<exercice:1-nb-ex13>`.
 ```
 
 ## Exercices
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-nb-ex1`
 
 Complétez le tableau par **vrai** ou **faux**.
 
@@ -267,7 +271,7 @@ Complétez le tableau par **vrai** ou **faux**.
 | $x \in \mathbb{R}$ | Vrai | Vrai | Vrai | Vrai | Vrai |
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-nb-ex2`
 
 Corrigez les erreurs dans ce diagramme. (Il y en a 8)
 
@@ -281,7 +285,7 @@ Corrigez les erreurs dans ce diagramme. (Il y en a 8)
 ```
 ````
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-nb-ex3`
 
 Répondez aux questions suivantes et justifiez.
 
@@ -303,7 +307,7 @@ Répondez aux questions suivantes et justifiez.
 6. Vrai
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-nb-ex4`
 
 Déterminez si le nombre $\in$ ou $\notin$ à l'ensemble donné.
 
@@ -337,7 +341,7 @@ Déterminez si le nombre $\in$ ou $\notin$ à l'ensemble donné.
 12. $10009 \in\mathbb{R}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-nb-ex5`
 
 Écrivez les ensembles suivants en extension.
 
@@ -355,7 +359,7 @@ Déterminez si le nombre $\in$ ou $\notin$ à l'ensemble donné.
 4. $\{-4;-3;-2;-1;0;1;2;3;4\}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-nb-ex6`
 
 Représentez les ensembles suivants en compréhension.
 
@@ -375,7 +379,7 @@ Représentez les ensembles suivants en compréhension.
 5. $\{ x \in  \mathbb{R} \,\mid\, -25 \leq x \leq 8\}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-nb-ex7`
 
 Écrivez les fractions suivantes comme nombres décimaux (sans calculatrice).
 
@@ -403,7 +407,7 @@ Représentez les ensembles suivants en compréhension.
 9. $13.08\overline{3}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-nb-ex8`
 
 Écrivez les nombres décimaux comme fractions simplifiées. (sans calculatrice)
 
@@ -425,7 +429,7 @@ Représentez les ensembles suivants en compréhension.
 6. $\dfrac{109}{45}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-nb-ex9`
 
 Calculez (sans calculatrice).
 
@@ -453,7 +457,7 @@ Calculez (sans calculatrice).
 9. $14$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-nb-ex10`
 
 Calculez et répondez sous forme simplifiée (sans calculatrice).
 
@@ -481,7 +485,7 @@ Calculez et répondez sous forme simplifiée (sans calculatrice).
 9. $\dfrac{17}{63}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-nb-ex11`
 
 Calculez et répondez sous forme simplifiée (sans calculatrice).
 
@@ -503,7 +507,7 @@ Calculez et répondez sous forme simplifiée (sans calculatrice).
 6. $\dfrac{5}{4}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-nb-ex12`
 
 Calculez et répondez sous forme simplifiée (sans calculatrice).
 
@@ -521,7 +525,7 @@ Calculez et répondez sous forme simplifiée (sans calculatrice).
 4. $\dfrac{16}{15}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-nb-ex13`
 
 Calculez et répondez sous forme simplifiée (sans calculatrice).
 

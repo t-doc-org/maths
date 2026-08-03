@@ -83,7 +83,10 @@ L'exposant le plus élevé d'un polynôme à une variable est appelé **degré**
 ```
 
 ```{container} frame noprint instructor
--> ex 1 à ex 4.
+-> {numref}`exercice %s<exercice:1-polyn-ex1>`,
+{numref}`exercice %s<exercice:1-polyn-ex2>`,
+{numref}`exercice %s<exercice:1-polyn-ex3>` et
+{numref}`exercice %s<exercice:1-polyn-ex4>`.
 ```
 
 ````{admonition} Définition
@@ -134,7 +137,8 @@ Les équations suivantes sont appelées **identités remarquables de degré 3**.
 ```
 
 ```{container} frame noprint instructor
--> ex 5 et ex 6.
+-> {numref}`exercice %s<exercice:1-polyn-ex5>` et
+{numref}`exercice %s<exercice:1-polyn-ex6>`.
 ```
 
 ```{container}
@@ -203,13 +207,14 @@ Les équations suivantes sont appelées **identités remarquables de degré 3**.
 ```
 
 ```{container} frame noprint instructor
--> ex 7 et ex 8.
+-> {numref}`exercice %s<exercice:1-polyn-ex7>` et
+{numref}`exercice %s<exercice:1-polyn-ex8>`.
 ```
 
 
 ## Exercices
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-polyn-ex1`
 
 Simplifiez.
 
@@ -228,7 +233,7 @@ Simplifiez.
 4. $-2a^4-2a^2+1$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-polyn-ex2`
 
 Calculez
 
@@ -263,7 +268,7 @@ Calculez
 12. $\dfrac{x^2}{2}+\dfrac{17}{8}x +\dfrac{1}{2}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-polyn-ex3`
 
 Calculez et simplifiez.
 
@@ -284,7 +289,7 @@ Calculez et simplifiez.
 5. $-3a^{3}-a^{2}b+ab^{2}+2b^{3}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-polyn-ex4`
 
 Soient les polynômes suivants.
 $$A=\dfrac{1}{2}x^{3}-\dfrac{2}{3}x^{2}+1, \hspace{1cm} B=x^{3}-\dfrac{4}{5}x,  \hspace{1cm} C=\dfrac{5}{2}x-\dfrac{2}{5}$$
@@ -306,7 +311,7 @@ Calculez.
 4. $-2x^{3}-4x^{2}+4x+6$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-polyn-ex5`
 
 Calculez à l'aide des identités remarquables.
 
@@ -345,7 +350,7 @@ Calculez à l'aide des identités remarquables.
 14. $64a^3-240a^2b+300ab^2-125b^3$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-polyn-ex6`
 
 ````{list-grid}
 :style: grid-template-columns: 1fr 1fr;
@@ -368,7 +373,7 @@ Calculez à l'aide des identités remarquables.
 2. $2116\,cm^3$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-polyn-ex7`
 
 Effectuez la division polynomiale avec reste.
 
@@ -389,7 +394,7 @@ Effectuez la division polynomiale avec reste.
 5. $x^3-x^2+x-1$ reste: $1$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-polyn-ex8`
 
 Effectuez la division polynomiale avec reste.
 

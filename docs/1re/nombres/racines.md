@@ -96,7 +96,7 @@ sont des nombres impairs.
 ````
 
 ```{container} frame noprint instructor
--> ex 37.
+-> {numref}`exercice %s<exercice:1-rac-ex1>`.
 ```
 
 ```{container} frame noprint
@@ -111,7 +111,7 @@ sous la racine sous forme de carré.
 ```
 
 ```{container} frame noprint instructor
--> ex 38.
+-> {numref}`exercice %s<exercice:1-rac-ex2>`.
 ```
 
 ````{admonition} Définition
@@ -155,7 +155,10 @@ a^{\frac{m}{n}}=\left( a^m\right)^{\frac{1}{n}}=\sqrt[n]{a^m} \text{ \quad ou  \
 ```
 
 ```{container} frame noprint instructor
--> ex 39 à ex 42.
+-> {numref}`exercice %s<exercice:1-rac-ex3>`,
+{numref}`exercice %s<exercice:1-rac-ex4>`,
+{numref}`exercice %s<exercice:1-rac-ex5>` et
+{numref}`exercice %s<exercice:1-rac-ex6>`.
 ```
 
 ```{container} frame noprint
@@ -187,7 +190,8 @@ règles de calcul.
 ```
 
 ```{container} frame noprint instructor
--> ex 43 à ex 44.
+-> {numref}`exercice %s<exercice:1-rac-ex7>` et
+{numref}`exercice %s<exercice:1-rac-ex8>`.
 ```
 
 ```{admonition} Définition
@@ -208,12 +212,12 @@ Il suffit de multiplier le numérateur et le dénominateur par la racine.
 ```
 
 ```{container} frame noprint instructor
--> ex 45.
+-> {numref}`exercice %s<exercice:1-rac-ex9>`.
 ```
 
 ## Exercices
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-rac-ex1`
 
 Calculez et simplifiez les expressions suivantes à l'aide des règles de calcul
 pour les racines.
@@ -243,7 +247,7 @@ pour les racines.
 9. $-7$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-rac-ex2`
 
 Effectuez l'extraction de racines.
 
@@ -278,7 +282,7 @@ Effectuez l'extraction de racines.
 12. $2\sqrt[3]{4}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-rac-ex3`
 
 Effectuez les calculs sans calculatrice.
 
@@ -306,7 +310,7 @@ Effectuez les calculs sans calculatrice.
 9. $\dfrac{4\sqrt{2}}{9}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-rac-ex4`
 
 Effectuez les calculs. Répondre sous forme de nombre entier ou de fraction
 irréductible.
@@ -341,7 +345,7 @@ irréductible.
 12. $\dfrac{1}{9}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-rac-ex5`
 
 Transformez les puissances avec exposants rationnels en racines.
 
@@ -363,7 +367,7 @@ Transformez les puissances avec exposants rationnels en racines.
 6. $\sqrt[4]{a^6b^9}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-rac-ex6`
 
 Transformez les racines en puissances.
 
@@ -391,7 +395,7 @@ Transformez les racines en puissances.
 9. $a^{\frac{7}{3}}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-rac-ex7`
 
 Écrivez le résultat comme une seule puissance ou une seule racine.
 
@@ -413,7 +417,7 @@ Transformez les racines en puissances.
 6. $b^{\frac{65}{6}}=\sqrt[6]{b^{65}}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-rac-ex8`
 
 Écrivez le résultat comme une seule puissance ou une seule racine.
 
@@ -435,7 +439,7 @@ Transformez les racines en puissances.
 6. $\sqrt[12]{x^{25}}=x^{\frac{25}{12}}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-rac-ex9`
 
 Rendez rationnel le dénominateur des fractions suivantes:
 

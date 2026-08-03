@@ -90,7 +90,8 @@ cela devient faisable en les regroupant judicieusement.
 `````
 
 ```{container} frame instructor noprint
--> ex 9 et ex 10
+-> {numref}`exercice %s<exercice:1-fact-ex1>` et
+{numref}`exercice %s<exercice:1-fact-ex2>`
 ```
 
 ### Identités remarquables
@@ -146,7 +147,8 @@ Remarque: $a^2+b^2$ n'est pas factorisable.
 `````
 
 ```{container} frame instructor noprint
--> ex 11 et ex 12
+-> {numref}`exercice %s<exercice:1-fact-ex3>` et
+{numref}`exercice %s<exercice:1-fact-ex4>`
 ```
 
 ### Décomposition du trinôme de deuxième degré
@@ -274,7 +276,8 @@ source: (<https://gomaths.edu-vd.ch/alg_calc_litt.php>)
 ```
 
 ```{container} frame instructor noprint
--> ex 13 et ex 14
+-> {numref}`exercice %s<exercice:1-fact-ex5>` et
+{numref}`exercice %s<exercice:1-fact-ex6>`
 ```
 
 ### Combinaison de méthodes
@@ -314,7 +317,8 @@ méthodes à la suite.
 ```
 
 ```{container} frame instructor noprint
--> ex 15 et ex 16
+-> {numref}`exercice %s<exercice:1-fact-ex7>` et
+{numref}`exercice %s<exercice:1-fact-ex8>`
 ```
 
 
@@ -330,7 +334,7 @@ méthodes à la suite.
 }
 </style>
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-fact-ex1`
 
 Utilisez la mise en évidence pour factoriser le plus possible.
 
@@ -358,7 +362,7 @@ Utilisez la mise en évidence pour factoriser le plus possible.
 9. $7x^{2}(2x^{3}-x^{2}+3x-5)$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-fact-ex2`
 
 Mettez en évidence par regroupement.
 
@@ -388,7 +392,7 @@ Mettez en évidence par regroupement.
 10. $(x-1)(x^2+2)$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-fact-ex3`
 
 Factorisez à l'aide des identités remarquables.
 
@@ -426,7 +430,7 @@ Factorisez à l'aide des identités remarquables.
 14. $(3y-x)^3$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-fact-ex4`
 
 Complétez le tableau ci-dessous.
 
@@ -484,7 +488,7 @@ Complétez le tableau ci-dessous.
 ````
 `````
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-fact-ex5`
 
 Complétez le tableau ci-dessous.
 
@@ -542,7 +546,7 @@ Complétez le tableau ci-dessous.
 ````
 `````
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-fact-ex6`
 
 Factorisez les trinômes suivants.
 
@@ -582,7 +586,7 @@ Factorisez les trinômes suivants.
 14. $ (2x-5)(x+3)$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-fact-ex7`
 
 Factorisez le plus possible.
 
@@ -618,7 +622,7 @@ Factorisez le plus possible.
 13. $(3x+1)(x+2)$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-fact-ex8`
 
 Factorisez le plus possible en utilisant plusieurs méthodes.
 

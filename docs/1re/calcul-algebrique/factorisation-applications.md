@@ -26,7 +26,10 @@ page-break-avoid-inside: 3
 ```
 
 ```{container} frame instructor noprint
--> ex 17 à ex 20
+-> {numref}`exercice %s<exercice:1-appl-fact-ex1>`,
+{numref}`exercice %s<exercice:1-appl-fact-ex2>`,
+{numref}`exercice %s<exercice:1-appl-fact-ex3>` et
+{numref}`exercice %s<exercice:1-appl-fact-ex4>`.
 ```
 
 ````{admonition} Résolution d'équations de degré supérieur ou égal à 2
@@ -70,7 +73,8 @@ page-break-avoid-inside: 3
 ````
 
 ```{container} frame instructor noprint
--> ex 21 et ex 22
+-> {numref}`exercice %s<exercice:1-appl-fact-ex5>` et
+{numref}`exercice %s<exercice:1-appl-fact-ex6>`.
 ```
 
 ```{admonition} Addition/soustraction de fractions rationnelles
@@ -177,13 +181,15 @@ Pour touver le ppmc de $180$ et $2625$, il faut
 ````
 
 ```{container} frame instructor noprint
--> ex 23 à ex 25
+-> {numref}`exercice %s<exercice:1-appl-fact-ex7>`,
+{numref}`exercice %s<exercice:1-appl-fact-ex8>` et
+{numref}`exercice %s<exercice:1-appl-fact-ex9>`.
 ```
 
 
 ## Exercices
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-appl-fact-ex1`
 
 Simplifiez les fractions suivantes.
 
@@ -217,7 +223,7 @@ Simplifiez les fractions suivantes.
 12. $\frac{a-b}{a+b}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-appl-fact-ex2`
 
 Simplifiez les fractions suivantes.
 
@@ -239,7 +245,7 @@ Simplifiez les fractions suivantes.
 6. $\frac{x(x+3y)}{2(x-3y)}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-appl-fact-ex3`
 
 Écrivez le résultat comme une seule fraction simplifiée.
 
@@ -261,7 +267,7 @@ Simplifiez les fractions suivantes.
 6. $\frac{(w+3)(t-1)}{t}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-appl-fact-ex4`
 
 Simplifiez les fractions suivantes.
 
@@ -287,7 +293,7 @@ Simplifiez les fractions suivantes.
 8. $\frac{1}{4x(x-2)}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-appl-fact-ex5`
 
 Résolvez les équations suivantes par factorisation.
 
@@ -309,7 +315,7 @@ Résolvez les équations suivantes par factorisation.
 6. $S=\{-3;0;1\}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-appl-fact-ex6`
 
 Résolvez les équations suivantes par factorisation.
 
@@ -335,7 +341,7 @@ Résolvez les équations suivantes par factorisation.
 8. $S=\{\frac{1}{2}\}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-appl-fact-ex7`
 
 Écrivez le résultat comme une seule fraction simplifiée.
 
@@ -365,7 +371,7 @@ Résolvez les équations suivantes par factorisation.
 10. $-\frac{1}{2}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-appl-fact-ex8`
 
 Écrivez le résultat comme une seule fraction simplifiée.
 
@@ -391,7 +397,7 @@ Résolvez les équations suivantes par factorisation.
 8. $\frac{3xy}{8(x-4)}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-appl-fact-ex9`
 
 Écrivez le résultat comme une seule fraction simplifiée.
 

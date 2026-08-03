@@ -89,7 +89,7 @@ Le domaine de définition d'une telle fonction est $D_f = \mathbb{R}$.
 ```
 
 ```{container} frame noprint instructor
--> {numref}`exercice %s<exercice:ex1>`
+-> {numref}`exercice %s<exercice:2-polyn-ex11>`
 ```
 
 {.allow-break-inside}
@@ -134,7 +134,7 @@ Une fonction polynomiale de degré $n$ possède au plus $n$ zéros.
 ```
 
 ```{container} frame noprint instructor
--> {numref}`exercice %s<exercice:ex2>` et {numref}`exercice %s<exercice:ex3>`
+-> {numref}`exercice %s<exercice:2-polyn-ex12>` et {numref}`exercice %s<exercice:2-polyn-ex13>`
 ```
 
 ````{admonition} Théorème
@@ -173,7 +173,7 @@ $f(x)=x^3+x^2+x-3 =(x-1)(x^2+2x+3)$
 ```
 
 ```{container} frame noprint instructor
--> {numref}`exercice %s<exercice:ex4>` et {numref}`exercice %s<exercice:ex5>`
+-> {numref}`exercice %s<exercice:2-polyn-ex14>` et {numref}`exercice %s<exercice:2-polyn-ex15>`
 ```
 
 
@@ -339,8 +339,8 @@ Une fonction polynomiale dont tous les exposants sont impairs est impaire.
 ```
 
 ```{container} frame noprint instructor
--> {numref}`exercice %s<exercice:ex6>`, {numref}`exercice %s<exercice:ex7>`
-{numref}`exercice %s<exercice:ex8>`
+-> {numref}`exercice %s<exercice:2-polyn-ex16>`, {numref}`exercice %s<exercice:2-polyn-ex17>`
+{numref}`exercice %s<exercice:2-polyn-ex18>`
 ```
 
 ### Factorisation d'un polynôme de degré supérieur à 2
@@ -409,14 +409,14 @@ $x_3=-1$ et $x_4=-2$.
 
 
 ```{container} frame noprint instructor
--> {numref}`exercice %s<exercice:ex9>`, {numref}`exercice %s<exercice:ex10>`
-{numref}`exercice %s<exercice:ex11>`
+-> {numref}`exercice %s<exercice:2-polyn-ex19>`, {numref}`exercice %s<exercice:2-polyn-ex20>`
+{numref}`exercice %s<exercice:2-polyn-ex21>`
 ```
 
 
 ## Exercices
 
-### Exercice {num2}`exercice:ex1`
+### Exercice {num2}`exercice:2-polyn-ex11`
 
 Indiquez si les fonctions suivantes sont polynomiales. Si oui, donnez leur degré
 et leurs coefficients.
@@ -440,7 +440,7 @@ et leurs coefficients.
 6.  Fonction polynomiale de degré $3$; $a_3=1$, $a_2=-9$, $a_1=15$, $a_0=-7$.
 ```
 
-### Exercice {num2}`exercice:ex2`
+### Exercice {num2}`exercice:2-polyn-ex12`
 
 Calculez les zéros des fonctions suivantes.
 
@@ -458,7 +458,7 @@ Calculez les zéros des fonctions suivantes.
 4. $x_1=0$; $x_2=-2$; $x_3=3$
 ```
 
-### Exercice {num2}`exercice:ex3`
+### Exercice {num2}`exercice:2-polyn-ex13`
 
 Trouvez une fonction polynomiale qui possède les zéros donnés.
 
@@ -476,7 +476,7 @@ Trouvez une fonction polynomiale qui possède les zéros donnés.
 4. $f(x)=(x-2)(x+10)(x-\frac{1}{2})(x-\frac{9}{2})$
 ```
 
-### Exercice {num2}`exercice:ex4`
+### Exercice {num2}`exercice:2-polyn-ex14`
 
 Effectuez les divisions polynomiales de $f(x)$ par $g(x)$.
 
@@ -498,7 +498,7 @@ Effectuez les divisions polynomiales de $f(x)$ par $g(x)$.
 4. $f(x) = (x+2)(x^3-4x-1)$
 ```
 
-### Exercice {num2}`exercice:ex5`
+### Exercice {num2}`exercice:2-polyn-ex15`
 
 Effectuez les divisions polynomiales de $f(x)$ par $g(x)$.
 
@@ -529,7 +529,7 @@ Effectuez les divisions polynomiales de $f(x)$ par $g(x)$.
 7. $x^4 + x^3 - 8x^2 - 3x + 19 = (-x^2 + x + 2)(-x^2 - 2x + 4) - 3x + 11$
 ```
 
-### Exercice {num2}`exercice:ex6`
+### Exercice {num2}`exercice:2-polyn-ex16`
 
 Étudiez la parité des fonctions suivantes.
 
@@ -555,7 +555,7 @@ Effectuez les divisions polynomiales de $f(x)$ par $g(x)$.
 8. Paire
 ```
 
-### Exercice {num2}`exercice:ex7`
+### Exercice {num2}`exercice:2-polyn-ex17`
 
 Tracez soigneusement la représentation graphique d'une fonction $f$ possédant
 les propriétés suivantes:
@@ -590,7 +590,7 @@ render.fonctionSolution = el => {
 };
 </script>
 
-### Exercice {num2}`exercice:ex8`
+### Exercice {num2}`exercice:2-polyn-ex18`
 
 Les affirmations suivantes sont-elles vraies ou fausses? Justifiez les réponses.
 
@@ -617,7 +617,7 @@ Les affirmations suivantes sont-elles vraies ou fausses? Justifiez les réponses
     par rapport à l'origine.
 ```
 
-### Exercice {num2}`exercice:ex9`
+### Exercice {num2}`exercice:2-polyn-ex19`
 
 Déterminez les zéros des fonctions suivantes à l'aide d'une substitution.
 
@@ -633,7 +633,7 @@ Déterminez les zéros des fonctions suivantes à l'aide d'une substitution.
 3. $x_1=-2$; $x_2=3$
 ```
 
-### Exercice {num2}`exercice:ex10`
+### Exercice {num2}`exercice:2-polyn-ex20`
 
 Déterminez un zéro des polynômes suivants, puis factorisez-les entièrement.
 
@@ -667,7 +667,7 @@ Déterminez un zéro des polynômes suivants, puis factorisez-les entièrement.
 12. $35x^4-57x^3-185x^2+129x-18 = (x+2)\cdot(x-3)\cdot(5x-1)\cdot(7x-3)$
 ```
 
-### Exercice {num2}`exercice:ex11`
+### Exercice {num2}`exercice:2-polyn-ex21`
 
 Déterminez l'expression algébrique des fonctions polynomiales ayant les
 propriétés suivantes.

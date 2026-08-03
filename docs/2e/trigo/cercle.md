@@ -12,9 +12,8 @@ page-break-avoid-inside: 3
 
 ## Théorie
 
-````{container} frame noprint instructor
 ```{admonition} Origine degrés et radians
-:class: attention, dropdown
+:class: attention, dropdown, noprint, instructor
 # Degrés
 
 - Un tour complet -> $360^\circ$
@@ -35,7 +34,6 @@ mais le mot radian apparaît seulement en 1873.
 - le radian est un rapport et ne dépend donc pas d'une unité (pas de conversion
   nécessaire) -> facilite les calculs (fct trigo).
 ```
-````
 
 ### Radian
 
@@ -237,7 +235,11 @@ Un angle de 5.13 rad vaut en degré $\qquad \dfrac{5.13}{2\pi} \cdot 360^\circ \
 ```
 
 ```{container} frame noprint instructor
--> ex 9 à ex 13. [Attention: degrés ($\varphi$) ou radians ($x$)]
+-> {numref}`exercice %s<exercice:2-cercle-ex1>`,
+{numref}`exercice %s<exercice:2-cercle-ex2>`,
+{numref}`exercice %s<exercice:2-cercle-ex3>`,
+{numref}`exercice %s<exercice:2-cercle-ex4>` et
+{numref}`exercice %s<exercice:2-cercle-ex5>`. [Attention: degrés ($\varphi$) ou radians ($x$)]
 ```
 
 <script type="module">
@@ -506,12 +508,20 @@ Mode RAD: $\cos(36) = -0.128$
 ````
 
 ```{container} frame noprint instructor
--> ex 14 à ex 22. [Attention: degrés ($\varphi$) ou radians ($x$)]
+-> {numref}`exercice %s<exercice:2-cercle-ex6>`,
+{numref}`exercice %s<exercice:2-cercle-ex7>`,
+{numref}`exercice %s<exercice:2-cercle-ex8>`,
+{numref}`exercice %s<exercice:2-cercle-ex9>`,
+{numref}`exercice %s<exercice:2-cercle-ex10>`,
+{numref}`exercice %s<exercice:2-cercle-ex11>`,
+{numref}`exercice %s<exercice:2-cercle-ex12>`,
+{numref}`exercice %s<exercice:2-cercle-ex13>` et
+{numref}`exercice %s<exercice:2-cercle-ex14>`.  [Attention: degrés ($\varphi$) ou radians ($x$)]
 ```
 
 ## Exercices
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-cercle-ex1`
 
 Complétez le tableau ci-dessous, sans utiliser la calculatrice.
 Les angles en radians sont à donner sous la forme d'un multiple ou d'une
@@ -530,7 +540,7 @@ fraction de $\pi$.
 | radians | $\dfrac{\pi}{5}$  | $\dfrac{\pi}{3}$ | $\dfrac{3\pi}{4}$ | $\dfrac{4\pi}{5}$ | $\dfrac{\pi}{6}$ | $\dfrac{5\pi}{4}$ | $\dfrac{\pi}{30}$ | $\dfrac{3\pi}{10}$ |  $\dfrac{7\pi}{3}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-cercle-ex2`
 
 Transformez les angles ci-dessous en radians. Donnez les résultats en nombres
 décimaux (arrondis au dix-millionième).
@@ -553,7 +563,7 @@ décimaux (arrondis au dix-millionième).
 6. $7.3129$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-cercle-ex3`
 
 Transformez les angles ci-dessous en degrés (arrondis au centième).
 
@@ -575,7 +585,7 @@ Transformez les angles ci-dessous en degrés (arrondis au centième).
 6. $461.8^\circ$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-cercle-ex4`
 
 Calculez la longueur $\ell$ de l'arc intercepté par l'angle $\varphi$ donné en
 degrés sur un cercle de rayon $r$.
@@ -592,7 +602,7 @@ degrés sur un cercle de rayon $r$.
 3. $\ell=126.71$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-cercle-ex5`
 
 Calculez la longueur $\ell$ de l'arc intercepté par l'angle $x$ donné en
 radians sur un cercle de rayon $r$.
@@ -609,7 +619,7 @@ radians sur un cercle de rayon $r$.
 3. $\ell=56.25$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-cercle-ex6`
 
 Dessinez précisément un cercle trigonométrique (1 unité = 10 carrés).
 
@@ -785,7 +795,7 @@ render.exoRadians = el => {
 
 `````
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-cercle-ex7`
 
 Triez les nombres suivants par ordre croissant, en vous aidant du cercle
 trigonométrique et sans utiliser la calculatrice.
@@ -806,7 +816,7 @@ trigonométrique et sans utiliser la calculatrice.
 5. $\cos(190^\circ) < \cos(255^\circ) < \cos(90^\circ) < \cos(400^\circ) < \cos(5^\circ)$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-cercle-ex8`
 
 En vous aidant du cercle trigonométrique et sans utiliser la calculatrice,
 déterminez si les égalités suivantes sont vraies ou fausses.
@@ -833,7 +843,7 @@ déterminez si les égalités suivantes sont vraies ou fausses.
 8. vrai
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-cercle-ex9`
 
 En vous aidant du cercle trigonométrique et sans utiliser la calculatrice,
 déterminez si les nombres suivants sont positifs, négatifs ou nuls.
@@ -862,7 +872,7 @@ déterminez si les nombres suivants sont positifs, négatifs ou nuls.
 9. Positif
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-cercle-ex10`
 
 En vous aidant du cercle trigonométrique et sans utiliser la calculatrice,
 déterminez si les égalités suivantes sont possibles ou non.
@@ -885,7 +895,7 @@ déterminez si les égalités suivantes sont possibles ou non.
 6. Possible
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-cercle-ex11`
 
 À l'aide des symétries dans le cercle trigonométrique, complétez le tableau par
 les **valeurs exactes** des fonctions $\sin$, $\cos$ et $\tan$ dans l'intervalle
@@ -927,7 +937,7 @@ $\left[0^\circ;360^\circ\right[$.
 ```
 ````
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-cercle-ex12`
 
 Soit $\sin\left(\frac{\pi}{3}\right) = 0.866$, déterminez les valeurs ci-dessous
 en utilisant les symétries dans le cercle trigonométrique et sans utiliser la
@@ -952,7 +962,7 @@ calculatrice.
 6. $\cos\left(\frac{\pi}{6}\right)=0.866$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-cercle-ex13`
 
 Déterminez les valeurs suivantes sans calculatrice.
 
@@ -987,7 +997,7 @@ Déterminez les valeurs suivantes sans calculatrice.
 12. $-\frac{\sqrt{3}}{2}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:2-cercle-ex14`
 
 Donnez l'ensemble des solutions des équations suivantes.
 

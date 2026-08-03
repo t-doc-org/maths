@@ -141,7 +141,10 @@ $a^n \cdot a^{-n} = a^{n+(-n)}=a^0=1$
 ```
 
 ```{container} frame noprint instructor
--> ex 29 à ex 32.
+-> {numref}`exercice %s<exercice:1-puis-ex1>`,
+{numref}`exercice %s<exercice:1-puis-ex2>`,
+{numref}`exercice %s<exercice:1-puis-ex3>` et
+{numref}`exercice %s<exercice:1-puis-ex4>`.
 ```
 
 ````{admonition} Définition - Notation scientifique
@@ -175,13 +178,16 @@ x=a \cdot 10^n \text{ avec } 1\leq|a|<10 \text{ et } n \in \mathbb{Z}
 ````
 
 ```{container} frame noprint instructor
--> ex 33 à ex 36.
+-> {numref}`exercice %s<exercice:1-puis-ex5>`,
+{numref}`exercice %s<exercice:1-puis-ex6>`,
+{numref}`exercice %s<exercice:1-puis-ex7>` et
+{numref}`exercice %s<exercice:1-puis-ex8>`.
 ```
 
 
 ## Exercices
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-puis-ex1`
 
 Simplifiez à l'aide des règles de calcul pour les puissances et écrivez le
 résultat comme une seule puissance.
@@ -234,7 +240,7 @@ résultat comme une seule puissance.
 21. $3^4=81$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-puis-ex2`
 
 Transformez pour supprimer les exposants négatifs et les parenthèses.
 
@@ -262,7 +268,7 @@ Transformez pour supprimer les exposants négatifs et les parenthèses.
 9. $\dfrac{n^{12}m^3}{a^6b^9}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-puis-ex3`
 
 Calculez (sans calculatrice).
 
@@ -288,7 +294,7 @@ Calculez (sans calculatrice).
 ```
 
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-puis-ex4`
 
 Simplifiez le plus possible.
 
@@ -339,7 +345,7 @@ Simplifiez le plus possible.
 20. $\dfrac{16}{625}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-puis-ex5`
 
 Calculez à l'aide de la notation scientifique et des règles de calcul des
 puissances (réponse en notation scientifique).
@@ -371,7 +377,7 @@ puissances (réponse en notation scientifique).
 10. $8.1 \cdot 10^{5}$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-puis-ex6`
 
 Transformez dans l'unité demandée (réponse en notation scientifique).
 
@@ -390,7 +396,7 @@ Transformez dans l'unité demandée (réponse en notation scientifique).
 4. $9 \cdot 10^{-1}\,m^2$
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-puis-ex7`
 
 Vitesse de la lumière: $2.998 \cdot 10^8\,m/s$<br>
 Distance moyenne entre la terre et le soleil: $1.495 \cdot 10^8 km$
@@ -413,7 +419,7 @@ Distance moyenne entre la terre et le soleil: $1.495 \cdot 10^8 km$
 3. env. $10\,577$ années.
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {num2}`exercice:1-puis-ex8`
 
 Le corps humain contient environ 5 litres de sang. Il y a 5 millions de globules
 rouges et $7\,000$ globules blancs par $mm^3$ de sang.
