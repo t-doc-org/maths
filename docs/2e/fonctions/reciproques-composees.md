@@ -339,7 +339,7 @@ $f^{-1}(x)=-\dfrac{x}{2x-3}$
 ```
 
 <script type="module">
-const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
+const {attrs, clip, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
 render.bijection4 = el => {
   return initBoard(el, [attrs.screen, attrs.nonInteractive, {
     boundingBox: [-7.5, 7.5, 7.5, -7.5],
@@ -351,11 +351,12 @@ render.bijection4 = el => {
       line: {dash: 2, strokeOpacity: 0.3},
     },
   }], board => {
-    board.create('functiongraph', [x => (3*x)/(2*x+1)], {
+    // TODO: Remove clipping once JSXGraph issue is fixed
+    board.create('functiongraph', [x => clip((3*x)/(2*x+1), {max: 100})], {
       name: `\\(f\\)`, withLabel: true,
       label: {position: '0.1fr left'}
     });
-    board.create('functiongraph', [x => (-1*x)/(2*x-3)], {
+    board.create('functiongraph', [x => clip((-1*x)/(2*x-3), {max: 100})], {
       strokeColor: JXG.palette.red,
       name: `\\(f^{-1}\\)`, withLabel: true,
       label: {position: '0.1fr left', strokeColor: JXG.palette.red}

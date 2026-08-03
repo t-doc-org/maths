@@ -302,7 +302,7 @@ render.cos = el => {
 </script>
 
 <script type="module">
-const {attrs, gcd, initBoard, JXG, render, withAxesLabels} =
+const {attrs, clip, gcd, initBoard, JXG, render, withAxesLabels} =
   await tdoc.import('jsxgraph.js');
 render.tan = el => {
   return initBoard(el, [attrs.screen, withAxesLabels(undefined, [-1, 1]), {
@@ -387,7 +387,9 @@ render.tan = el => {
     const ptan = board.create('point', [alpha, () => Math.tan(alpha())], {
       withLabel: false, fillColor: tanColor, size: 2
     });
-    board.create('curve', [a => a, a => Math.tan(a), 0, 2 * Math.PI], {
+    // TODO: Remove clipping once JSXGraph issue is fixed
+    board.create('curve', [a => a, a => clip(Math.tan(a), {max: 100}),
+                           0, 2 * Math.PI], {
       strokeColor: tanColor,
     });
     board.create('segment', [[0, () => Math.tan(alpha())], ptan], {
@@ -527,8 +529,6 @@ Pour $k \in \mathbb{Z}$.
 ```
 ````
 
-
-
 ## Exemple {num2}`exemple`
 
 Comment la représentation de la fonction $a \cdot \sin(b \cdot x + c) + d$
@@ -557,59 +557,60 @@ change-t-elle en fonction des coefficients $a$, $b$, $c$ et $d$?
 ```
 
 <script type="module">
-const {attrs, gcd, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
+const {attrs, clip, gcd, initBoard, JXG, render} =
+  await tdoc.import('jsxgraph.js');
 
 function sliders(board) {
-    const a = board.create('slider', [[-6.8, 4] , [-3.8, 4], [0, 1, 4]], {
-        name: '\\(a\\)', size: 4, withTicks: false,
-    });
-    const b = board.create('slider', [[-6.8, 3.7] , [-3.8, 3.7], [0, 1, 4]], {
-        name: '\\(b\\)',  size: 4, withTicks: false,
-    });
-    const snaps = [];
-    for (let i = -4; i <= 4; ++i) snaps.push(i * Math.PI / 2);
-    const c = board.create('slider', [[-6.8, 3.4] , [-3.8, 3.4], [- 2*Math.PI, 0, 2*Math.PI]], {
-        name: '\\(c\\)',  size: 4, withTicks: false,
-        snapValues: snaps,
-        snapValueDistance: Math.PI / 12,
-    });
-        const d = board.create('slider', [[-6.8, 3.1] , [-3.8, 3.1], [-3, 0, 3]], {
-        name: '\\(d\\)',  size: 4, withTicks: false,
-    });
-    const sliders = [a, b, c, d];
-    const def = sliders.map(s => s.getParents()[2][1]);
-    const btn = board.create('button', [-2.2, 3.9, "Réinitialiser", () => {
-        for (const [i, s] of sliders.entries()) s.setValue(def[i]);
-        board.update();
-    }]);
-    btn.rendNodeButton.classList.add('tdoc');
-    return sliders;
+  const a = board.create('slider', [[-6.8, 4] , [-3.8, 4], [0, 1, 4]], {
+    name: '\\(a\\)', size: 4, withTicks: false,
+  });
+  const b = board.create('slider', [[-6.8, 3.7] , [-3.8, 3.7], [0, 1, 4]], {
+    name: '\\(b\\)',  size: 4, withTicks: false,
+  });
+  const snaps = [];
+  for (let i = -4; i <= 4; ++i) snaps.push(i * Math.PI / 2);
+  const c = board.create('slider', [[-6.8, 3.4] , [-3.8, 3.4],
+                                    [- 2 * Math.PI, 0, 2 * Math.PI]], {
+    name: '\\(c\\)',  size: 4, withTicks: false,
+    snapValues: snaps, snapValueDistance: Math.PI / 12,
+  });
+  const d = board.create('slider', [[-6.8, 3.1] , [-3.8, 3.1], [-3, 0, 3]], {
+    name: '\\(d\\)',  size: 4, withTicks: false,
+  });
+  const sliders = [a, b, c, d];
+  const def = sliders.map(s => s.getParents()[2][1]);
+  const btn = board.create('button', [-2.2, 3.9, "Réinitialiser", () => {
+    for (const [i, s] of sliders.entries()) s.setValue(def[i]);
+    board.update();
+  }]);
+  btn.rendNodeButton.classList.add('tdoc');
+  return sliders;
 }
 
 const battrs = [attrs.screen, {
-    boundingBox: [-7, 4.2, 7, -4.2],
-    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
-    grid: {majorStep: [Math.PI / 2, 1]},
-    defaultAxes: {
-        x: {
-            ticks: {
-                insertTicks: false,
-                ticksDistance: 1/2, minorTicks: 1,
-                scale: Math.PI, scaleSymbol: 'π',
-                label: { toFraction: true, useMathJax: true },
-            },
-        },
-        y: {ticks: {minorTicks: 1}},
+  boundingBox: [-7, 4.2, 7, -4.2],
+  pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
+  grid: {majorStep: [Math.PI / 2, 1]},
+  defaultAxes: {
+    x: {
+      ticks: {
+        insertTicks: false,
+        ticksDistance: 1/2, minorTicks: 1,
+        scale: Math.PI, scaleSymbol: 'π',
+        label: { toFraction: true, useMathJax: true },
+      },
     },
-    defaults: {
-        slider: {withLabel: true, label: {distance: 1}},
-    },
+    y: {ticks: {minorTicks: 1}},
+  },
+  defaults: {
+    slider: {withLabel: true, label: {distance: 1}},
+  },
 }];
 
 render.sinus = el => {
   return initBoard(el, battrs, board => {
     const [a, b, c, d] = sliders(board);
-    board.create('functiongraph', [function(x) {
+    board.create('functiongraph', [x => {
       return a.Value() * Math.sin(b.Value() * x + c.Value()) + d.Value();
     }]);
     board.create('text', [1, 3.8, () => {
@@ -630,7 +631,7 @@ render.sinus = el => {
 render.cosinus = el => {
   return initBoard(el, battrs, board => {
     const [a, b, c, d] = sliders(board);
-    board.create('functiongraph', [function(x) {
+    board.create('functiongraph', [x => {
       return a.Value() * Math.cos(b.Value() * x + c.Value()) + d.Value();
     }]);
     board.create('text', [1, 3.8, () => {
@@ -651,8 +652,10 @@ render.cosinus = el => {
 render.tangente = el => {
   return initBoard(el, battrs, board => {
     const [a, b, c, d] = sliders(board);
-    board.create('functiongraph', [function(x) {
-      return a.Value() * Math.tan(b.Value() * x + c.Value()) + d.Value();
+    board.create('functiongraph', [x => {
+      // TODO: Remove clipping once JSXGraph issue is fixed
+      return clip(a.Value() * Math.tan(b.Value() * x + c.Value()) + d.Value(),
+                  {max: 100});
     }]);
     board.create('text', [1, 3.8, () => {
       const sc = c.Value() >= 0 ? '+' : '-';
@@ -721,21 +724,21 @@ $\left] -\dfrac{\pi}{2};\dfrac{\pi}{2} \right[$ est appelée **arc tangente**, n
 ````
 
 <script type="module">
-const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
+const {attrs, clip, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
 const battrs = [attrs.screen, {
-    pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
-    grid: {majorStep: [1, Math.PI / 4]},
-    defaultAxes: {
-        x: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0}},
-        y: {
-            ticks: {
-                insertTicks: false,
-                ticksDistance: 1/2, minorTicks: 1, ticksPerLabel: 1,
-                scale: Math.PI, scaleSymbol: 'π',
-                label: { toFraction: true, useMathJax: true },
-            },
-        },
+  pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
+  grid: {majorStep: [1, Math.PI / 4]},
+  defaultAxes: {
+    x: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0}},
+    y: {
+      ticks: {
+        insertTicks: false,
+        ticksDistance: 1/2, minorTicks: 1, ticksPerLabel: 1,
+        scale: Math.PI, scaleSymbol: 'π',
+        label: { toFraction: true, useMathJax: true },
+      },
     },
+  },
 }];
 render.arcsin = el => {
   return initBoard(el, [battrs, {boundingBox: [-4, 2, 4, -2]}], board => {
@@ -767,8 +770,11 @@ render.arccos = el => {
 };
 render.arctan = el => {
   return initBoard(el, [battrs, {boundingBox: [-4, 3, 4, -3]}], board => {
-    board.create('functiongraph', [x => Math.tan(x)], {strokeOpacity: 0.3});
-    board.create('functiongraph', [x => Math.tan(x), -Math.PI/2, Math.PI/2]);
+    // TODO: Remove clipping once JSXGraph issue is fixed
+    board.create('functiongraph', [x => clip(Math.tan(x), {max: 100})],
+      {strokeOpacity: 0.3});
+    board.create('functiongraph', [x => clip(Math.tan(x), {max: 100}),
+                                   -Math.PI/2, Math.PI/2]);
     board.create('functiongraph', [x => Math.atan(x)], {
       name: '\\(\\arctan\\)', withLabel: true,
       label: {
@@ -822,4 +828,3 @@ Comme le sinus a une période de $2\pi$, l'ensemble des solutions est:
 
 $S = \left\{\dfrac{\pi}{4} + k \cdot 2\pi\Bigm| k \in \mathbb{Z}\right\} \cup
 \left\{\dfrac{3\pi}{4} + k \cdot 2\pi\Bigm| k \in \mathbb{Z}\right\}$
-

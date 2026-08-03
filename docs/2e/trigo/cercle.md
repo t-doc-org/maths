@@ -13,7 +13,7 @@ page-break-avoid-inside: 3
 ## Théorie
 
 ```{admonition} Origine degrés et radians
-:class: attention, dropdown, noprint, instructor
+:class: attention dropdown noprint instructor
 # Degrés
 
 - Un tour complet -> $360^\circ$

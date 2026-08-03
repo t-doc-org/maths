@@ -25,7 +25,7 @@ d'équations:
 ````
 
 <script type="module">
-const {attrs, initBoard, JXG, render, withAxesLabels} =
+const {attrs, clip, initBoard, JXG, render, withAxesLabels} =
   await tdoc.import('jsxgraph.js');
 attrs.page = [attrs.screen, attrs.nonInteractive, {
   boundingBox: [-6, 5.5, 6, -2.5],
@@ -48,7 +48,8 @@ attrs.page = [attrs.screen, attrs.nonInteractive, {
 }];
 render.exempleTan = el => {
   return initBoard(el, attrs.page, board => {
-    board.create('functiongraph', [x => Math.tan(x) - 2], {
+    // TODO: Remove clipping once JSXGraph issue is fixed
+    board.create('functiongraph', [x => clip(Math.tan(x) - 2, {max: 100})], {
       name: '\\(\\tan(x)-1\\)', withLabel: true,
       label: {position: '0.5fr right', offset: [-30, 0]},
     });

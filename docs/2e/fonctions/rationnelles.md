@@ -146,7 +146,7 @@ La représentation graphique de $f(x) = \dfrac{x^2-7x+10}{x^2-9}$ est:
 ```
 
 <script type="module">
-const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
+const {attrs, clip, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
 render.fonctionRationnelle = el => {
   return initBoard(el, [attrs.screen, attrs.nonInteractive, {
     boundingBox: [-10.5, 10.5, 10.5, -10.5],
@@ -156,7 +156,8 @@ render.fonctionRationnelle = el => {
       point: {label: {anchorX: 'right', anchorY: 'bottom', offset: [-7, 0]}},
     },
   }], board => {
-    const f = x => (x ** 2 - 7 * x + 10) / (x ** 2 - 9);
+    // TODO: Remove clipping once JSXGraph issue is fixed
+    const f = x => clip((x ** 2 - 7 * x + 10) / (x ** 2 - 9), {max: 100});
     board.create('functiongraph', [f], {
       name: `\\(f\\)`, withLabel: true,
       label: {position: '0.1fr left'}
