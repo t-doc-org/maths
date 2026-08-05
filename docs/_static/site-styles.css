@@ -1,7 +1,23 @@
 /* Copyright 2025 Caroline Blank <caro@c-space.org> */
 /* SPDX-License-Identifier: CC-BY-NC-SA-4.0 */
 
+
 /* TODO(0.88): Remove */
 :is(ol, ul) > li div.math > mjx-container > svg {
     vertical-align: top !important;
+}
+
+.frame.docutils.container.instructor {
+    border-color: var(--pst-color-secondary-bg);
+}
+.admonition.instructor, div.admonition.instructor {
+    border-color: var(--pst-color-secondary-highlight);
+}
+.admonition.instructor > .admonition-title,
+div.admonition.instructor >.admonition-title {
+    background-color: var(--pst-color-secondary-bg);
+}
+.admonition.instructor > .admonition-title:after,
+div.admonition.instructor > .admonition-title:after {
+    color: var(--pst-color-secondary-highlight);
 }
