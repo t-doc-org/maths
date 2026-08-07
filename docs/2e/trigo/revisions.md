@@ -339,7 +339,7 @@ Pour les angles d'élévation suivants, déterminez la pente en $\%$.
 
 ### Exercice {num2}`exercice:2-trigo-rev-ex6`
 
-Calculer l'angle $\varphi$ dans le parallélipipède rectangle ci-dessous.
+Calculez l'angle $\varphi$ dans le parallélipipède rectangle ci-dessous.
 
 ```{jsxgraph} angle
 :style: width: 50%; border: none;
