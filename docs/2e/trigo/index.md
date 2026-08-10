@@ -6,6 +6,7 @@
 ```{toctree}
 revisions
 cercle
+revisions-cercles-exo-supp
 fonctions-trigo
 equations-trigo
 triangle-quelconque
