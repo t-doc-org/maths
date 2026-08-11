@@ -302,7 +302,7 @@ render.cos = el => {
 </script>
 
 <script type="module">
-const {attrs, clip, gcd, initBoard, JXG, render, withAxesLabels} =
+const {attrs, gcd, initBoard, JXG, render, withAxesLabels} =
   await tdoc.import('jsxgraph.js');
 render.tan = el => {
   return initBoard(el, [attrs.screen, withAxesLabels(undefined, [-1, 1]), {
@@ -387,9 +387,7 @@ render.tan = el => {
     const ptan = board.create('point', [alpha, () => Math.tan(alpha())], {
       withLabel: false, fillColor: tanColor, size: 2
     });
-    // TODO: Remove clipping once JSXGraph issue is fixed
-    board.create('curve', [a => a, a => clip(Math.tan(a), {max: 100}),
-                           0, 2 * Math.PI], {
+    board.create('curve', [a => a, a => Math.tan(a), 0, 2 * Math.PI], {
       strokeColor: tanColor,
     });
     board.create('segment', [[0, () => Math.tan(alpha())], ptan], {
@@ -557,8 +555,7 @@ change-t-elle en fonction des coefficients $a$, $b$, $c$ et $d$?
 ```
 
 <script type="module">
-const {attrs, clip, gcd, initBoard, JXG, render} =
-  await tdoc.import('jsxgraph.js');
+const {attrs, gcd, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
 
 function sliders(board) {
   const a = board.create('slider', [[-6.8, 4] , [-3.8, 4], [0, 1, 4]], {
@@ -653,9 +650,7 @@ render.tangente = el => {
   return initBoard(el, battrs, board => {
     const [a, b, c, d] = sliders(board);
     board.create('functiongraph', [x => {
-      // TODO: Remove clipping once JSXGraph issue is fixed
-      return clip(a.Value() * Math.tan(b.Value() * x + c.Value()) + d.Value(),
-                  {max: 100});
+      return a.Value() * Math.tan(b.Value() * x + c.Value()) + d.Value();
     }]);
     board.create('text', [1, 3.8, () => {
       const sc = c.Value() >= 0 ? '+' : '-';
@@ -724,7 +719,7 @@ $\left] -\dfrac{\pi}{2};\dfrac{\pi}{2} \right[$ est appelée **arc tangente**, n
 ````
 
 <script type="module">
-const {attrs, clip, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
+const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
 const battrs = [attrs.screen, {
   pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
   grid: {majorStep: [1, Math.PI / 4]},
@@ -770,11 +765,8 @@ render.arccos = el => {
 };
 render.arctan = el => {
   return initBoard(el, [battrs, {boundingBox: [-4, 3, 4, -3]}], board => {
-    // TODO: Remove clipping once JSXGraph issue is fixed
-    board.create('functiongraph', [x => clip(Math.tan(x), {max: 100})],
-      {strokeOpacity: 0.3});
-    board.create('functiongraph', [x => clip(Math.tan(x), {max: 100}),
-                                   -Math.PI/2, Math.PI/2]);
+    board.create('functiongraph', [x => Math.tan(x)], {strokeOpacity: 0.3});
+    board.create('functiongraph', [x => Math.tan(x), -Math.PI/2, Math.PI/2]);
     board.create('functiongraph', [x => Math.atan(x)], {
       name: '\\(\\arctan\\)', withLabel: true,
       label: {
