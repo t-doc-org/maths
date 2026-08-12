@@ -8,6 +8,57 @@ page-break-force: 2
 page-break-avoid-inside: 3
 ```
 
+```{admonition} Origine des nombres
+:class: attention dropdown noprint instructor
+# Nombres naturels
+
+Les nombres naturels répondent au besoin de compter des animaux, des hommes ou
+des objets, mais aussi de comparer.
+
+[Histoire des nombres](https://nanoo.tv/link/v/xKJvopqZ)
+
+Les premières traces écrites de la notion de nombre datent d'environ 30'000
+avant J.-C notamment sur les os d'animaux:
+[Os d'Ishango](https://fr.wikipedia.org/wiki/Os_d%27Ishango)
+
+Difficile de s'y retrouver sans regrouper les éléments -> notion de base.
+
+Nous utilisons la base 10, car nous avons 10 doigts.
+
+Les Mayas, les Aztèques, les Celtes ou les Basques comptaient en base 20. Ils
+utilisaient aussi leurs orteilles.
+
+Les Babyloniens utilisaient la base 60 qui est encore bien présente chez nous
+pour le partage des heures, minutes, secondes ou les anges.
+[Pourquoi 60 min dans 1h?](https://nanoo.tv/link/v/RBbzcLjs)
+
+Chaque civilation a défini ses propres symboles pour représenter les chiffres:
+
+- Les Babyloniens: clous et chevrons [numération babylonienne](https://lelombrik.net/129302)
+- Les Égyptiens: hiéroglyphes [numération égyptienne](https://fr.wikipedia.org/wiki/Num%C3%A9ration_%C3%A9gyptienne)
+- Les Romains: les lettres majuscules I, V, X, L, C, D et M
+- Les arabes et les indiens: 1, 2, 3, ...
+
+Le chiffre 0 n'est apparu qu'au 7<sup>e</sup> siècle grâce au mathématicien et
+astronome Brahmagypta. Il l'a défini comme la soustraction d'un nombre par
+lui-même. Il est devenu nécessaire des nombres tels que "804". Comment le
+différencier de 84 sans le 0?
+
+## Nombres entiers relatifs
+
+Les nombres entiers relatifs sont apparus avec le commerce: les nombres positifs
+représentent les recettes (ce que j'ai) et les nombres régatifs les dettes
+(ce que je dois). Les premières idées de nombres relatifs apparaissent dans des
+écrits en Inde vers le 6<sup>e</sup> siècle, mais ils n'apparaitront en Europe
+que vers le 16<sup>e</sup> siècle.
+
+## Nombres rationnels
+
+Au 5<sup>e</sup> siècle, les Grecs connaissent déjà les fractions sous forme de
+rapport de longueurs, utilisés dans le théorème de Thalès par exemple.
+```
+
+
 ## Théorie
 
 ````{admonition} Définition

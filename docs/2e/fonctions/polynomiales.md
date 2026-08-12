@@ -321,6 +321,34 @@ render.fctRien = el => {
     });
   });
 };
+render.fctValAbs1 = el => {
+  return initBoard(el, attrs.page, board => {
+    board.create('functiongraph', [x => Math.abs(x)], {
+      name: `\\(f\\)`,
+    });
+  });
+};
+render.fctValAbs2 = el => {
+  return initBoard(el, attrs.page, board => {
+    board.create('functiongraph', [x => Math.abs(x+2)], {
+      name: `\\(g\\)`,
+    });
+  });
+};
+render.fctValAbs3 = el => {
+  return initBoard(el, attrs.page, board => {
+    board.create('functiongraph', [x => Math.abs(-x) - 3], {
+      name: `\\(h\\)`,
+    });
+  });
+};
+render.fctValAbs4 = el => {
+  return initBoard(el, attrs.page, board => {
+    board.create('functiongraph', [x => 2 * Math.abs(x-1) -4], {
+      name: `\\(i\\)`,
+    });
+  });
+};
 </script>
 
 ```{admonition} Théorème
@@ -342,6 +370,155 @@ Une fonction polynomiale dont tous les exposants sont impairs est impaire.
 -> {numref}`exercice %s<exercice:2-polyn-ex16>`, {numref}`exercice %s<exercice:2-polyn-ex17>`
 {numref}`exercice %s<exercice:2-polyn-ex18>`
 ```
+
+### Fonctions valeur absolue
+
+````{admonition} Définition
+:class: note
+La valeur absolue d'un nombre réel $x$, notée $|x|$ est sa valeur numérique sans
+tenir compte de son signe. Elle est définie par
+
+```{math}
+:class: align-center
+|x| =
+\begin{cases}
+  \phantom{-}x & \text{si } x \geq 0 \\
+  -x & \text{si } x < 0
+\end{cases}
+```
+:Remarque: Une valeur absolue est toujours positive ou nulle.
+````
+
+```{container} frame noprint
+# Exemple {num2}`exemple`
+
+{.lower-alpha-paren}
+1.  $|7| = 7$
+2.  $|-5| = 5$
+3.  $$|x - 1| =
+    \begin{cases}
+      \phantom{-(}x - 1 & \text{si } x - 1 \geq 0 \\
+      -(x - 1) & \text{si } x - 1 < 0
+    \end{cases}
+    \implies
+    |x - 1| =
+    \begin{cases}
+      \phantom{-}x - 1 & \text{si } x \geq 1 \\
+      -x + 1 & \text{si } x < 1
+    \end{cases}
+    $$
+3.  $$|-3x| =
+    \begin{cases}
+      \phantom{-}-3x & \text{si } -3x \geq 0 \\
+      -(-3x) & \text{si } -3x < 0
+    \end{cases}
+    \implies
+    |-3x| =
+    \begin{cases}
+      -3x & \text{si } x\: {\color{red}\leq} \:0 \\
+      \phantom{-}3x & \text{si } x\: {\color{red}>} \:0
+    \end{cases}
+    $$
+```
+
+`````{container} frame noprint
+# Exemple {num2}`exemple`
+
+Représentez les fonctions suivantes:
+
+{.lower-alpha-paren}
+1.  ````{list-grid}
+    :style: grid-template-columns: 1fr 1fr;
+    -   $f(x) = |x|$<br>
+        $$\implies f(x) =
+        \begin{cases}
+          \phantom{-}x & \text{si } x \geq 0 \\
+          -x & \text{si } x < 0
+        \end{cases}
+        $$
+        $D_f = \mathbb{R}$<br>
+        $Im_f = [0; +\infty[ = \mathbb{R_+}$<br>
+        Ordonnée à l'origine de $f$: $0$<br>
+        Zéro de $f$ en $x = 0$
+    -   ```{jsxgraph} fctValAbs1
+        :style: width: 80%;
+        ```
+    ````
+2.  ````{list-grid}
+    :style: grid-template-columns: 1fr 1fr;
+    -   $g(x) = |x + 2|$<br>
+        $$\implies g(x) =
+        \begin{cases}
+          \phantom{-(}x + 2 & \text{si } x + 2 \geq 0 \\
+          -(x + 2) & \text{si } x + 2 < 0
+        \end{cases}$$
+        $$ \implies g(x) =
+        \begin{cases}
+          \phantom{-}x + 1 & \text{si } x \geq -2 \\
+          -x - 2 & \text{si } x < -2
+        \end{cases}
+        $$
+        $D_g = \mathbb{R}$<br>
+        $Im_g = [0; +\infty[ = \mathbb{R_+}$<br>
+        Ordonnée à l'origine de $g$: $2$<br>
+        Zéro de $g$ en $x = -2$
+    -   ```{jsxgraph} fctValAbs2
+        :style: width: 80%;
+        ```
+    ````
+3.  ````{list-grid}
+    :style: grid-template-columns: 1fr 1fr;
+    -   $h(x) = |-x| -3$<br>
+        $$\implies h(x) =
+        \begin{cases}
+          -x - 3 & \text{si } -x \geq 0 \\
+          \phantom{-}x - 3 & \text{si } -x < 0
+        \end{cases}$$
+        $$\implies h(x) =
+        \begin{cases}
+          -x - 3 & \text{si } x \leq 0 \\
+          \phantom{-}x - 3 & \text{si } x > 0
+        \end{cases}$$
+        $D_h = \mathbb{R}$<br>
+        $Im_h = [-3; +\infty[$<br>
+        Ordonnée à l'origine de $h$: $-3$<br>
+        Zéros de $h$ en $x_1 = -3$ et en $x_2 = 3$
+    -   ```{jsxgraph} fctValAbs3
+        :style: width: 80%;
+        ```
+    ````
+4.  ````{list-grid}
+    :style: grid-template-columns: 1fr 1fr;
+    -   $i(x) = 2|x - 1| -4$<br>
+        $$\implies i(x) =
+        \begin{cases}
+          \phantom{-0000}2 \cdot (x -1) -4 & \text{si } x - 1 \geq 0 \\
+          2 \cdot (-1) \cdot (x - 1) -4 & \text{si } x- 1 < 0
+        \end{cases}$$
+        $$\implies i(x) =
+        \begin{cases}
+          \phantom{-}2x - 2 -4 & \text{si } x \geq 1 \\
+          -2x + 2 -4 & \text{si } x < 1
+        \end{cases}$$
+                $$\implies i(x) =
+        \begin{cases}
+          \phantom{-}2x -6 & \text{si } x \geq 1 \\
+          -2x -2 & \text{si } x < 1
+        \end{cases}$$
+        $D_i = \mathbb{R}$<br>
+        $Im_i = [-4; +\infty[$<br>
+        Ordonnée à l'origine de $i$: $-2$<br>
+        Zéros de $i$ en $x_1 = -1$ et en $x_2 = 3$
+    -   ```{jsxgraph} fctValAbs4
+        :style: width: 80%;
+        ```
+    ````
+`````
+
+```{container} frame noprint instructor
+-> {numref}`exercice %s<exercice:2-polyn-ex22>`
+```
+
 
 ### Factorisation d'un polynôme de degré supérieur à 2
 
@@ -616,6 +793,76 @@ Les affirmations suivantes sont-elles vraies ou fausses? Justifiez les réponses
 6.  **Vrai:** sans cela la représentation graphique ne peut pas être symétrique
     par rapport à l'origine.
 ```
+
+<script type="module">
+const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
+render.solValAbs = el => {
+  return initBoard(el, [attrs.print, {
+      boundingBox: [-6.5, 5.5, 6.5, -5.5],
+      defaultAxes: {
+        x: {ticks: {ticksDistance: 2, minorTicks: 1}},
+        y: {ticks: {ticksDistance: 2, minorTicks: 1}},
+      },
+      defaults: {
+        functiongraph: {withLabel: true},
+      },
+      grid: {majorStep: 1},
+    }], board => {
+      board.create('functiongraph', [x => Math.abs(-2 * x)], {
+        name: `\\(f\\)`, label: {position: '0.6fr right', offset: [0, 5]}
+      });
+      board.create('functiongraph', [x => Math.abs(x + 3)], {
+        name: `\\(g\\)`, label: {position: '0.1fr right', offset: [0, -5]}
+      });
+      board.create('functiongraph', [x => Math.abs(2 * x) - 5], {
+        name: `\\(h\\)`, label: {position: '0.2fr right'}
+      });
+      board.create('functiongraph', [x => -2 * Math.abs(x + 1)], {
+        name: `\\(i\\)`, label: {position: '0.28fr right'}
+      });
+      board.create('functiongraph', [x => Math.abs(4 - x) - 1], {
+        name: `\\(j\\)`, label: {position: '0.62fr right', offset: [0, -5]}
+      });
+      board.create('functiongraph', [x => 2 * Math.abs(3 - x) - 4], {
+        name: `\\(k\\)`, label: {position: '0.72fr right', offset: [0, 5]}
+      });
+  });
+};
+</script>
+
+### Exercice {num2}`exercice:2-polyn-ex22`
+
+Représentez les fonctions valeur absolues suivantes. Déterminez le domaine de
+définition, l'ensemble des images, les zéros et l'ordonnées à l'origine.
+
+{.lower-alpha-paren .columns-3}
+1. $f(x) = |-2x|$
+2. $g(x) = |x + 3|$
+3. $h(x) = |2x| - 5$
+4. $i(x) = -2|x + 1|$
+5. $j(x) = |4 - x| - 1$
+6. $k(x) = 2|3 - x| -4$
+
+````{block} solution
+
+```{jsxgraph} solValAbs
+:style: width: 58%;
+```
+
+{.lower-alpha-paren .vsep-1}
+1. $D_f = \mathbb{R} \qquad Im_f = [0; +\infty[ = \mathbb{R_+} \qquad
+    \text{O.O: } 0 \qquad \text{zéro: } x = 0$
+2. $D_g = \mathbb{R} \qquad Im_g = [0; +\infty[ = \mathbb{R_+} \qquad
+    \text{O.O: } 3 \qquad \text{zéro: } x = -3$
+3. $D_h = \mathbb{R} \qquad Im_h = [-5; +\infty[ \qquad
+    \text{O.O: } -5 \qquad \text{zéros: } x_1 = -2.5 \text{ et } x_2 = 2.5$
+4. $D_i = \mathbb{R} \qquad Im_i = ]-\infty; 0[ \qquad
+    \text{O.O: } -2 \qquad \text{zéro: } x = -1$
+5. $D_j = \mathbb{R} \qquad Im_j = [-1; +\infty[ \qquad
+    \text{O.O: } 3 \qquad \text{zéro: } x_1 = 3 \text{ et } x_2 = 5$
+6. $D_k = \mathbb{R} \qquad Im_k = [-4; +\infty[ \qquad
+    \text{O.O: } 2 \qquad \text{zéro: } x_1 = 1 \text{ et } x_2 = 5$
+````
 
 ### Exercice {num2}`exercice:2-polyn-ex19`
 
