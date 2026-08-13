@@ -1,5 +1,12 @@
 % Copyright 2025 Caroline Blank <caro@c-space.org>
+% Copyright 2025 Nicolas Martignoni
+% Copyright 2025 David Rueda
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
+
+```{metadata}
+page-break-force: 2
+page-break-avoid-inside: 3
+```
 
 # Fonctions trigonométriques
 
@@ -14,6 +21,10 @@ f(x + k \cdot p) = f(x).
 
 Le nombre $p$ est alors appelé la **période** de la fonction.
 ````
+
+```{container} frame noprint instructor
+-> {numref}`exercice %s<exercice:2-fct-ex1>`
+```
 
 <script type="module">
 const {attrs, gcd, initBoard, JXG, render, withAxesLabels} =
@@ -453,7 +464,8 @@ render.tan = el => {
 };
 </script>
 
-## Fonction $\sin(x)$
+````{container} frame noprint
+# Fonction $\sin(x)$
 
 ```{jsxgraph} sin
 :style: width: 100%; border: none;
@@ -468,8 +480,10 @@ $\sin(x) = \sin(x + k \cdot 2\pi)$, la période de $\sin(x)$ est $2\pi$.
 $\sin(-x) = -\sin(x)$, la fonction $\sin(x)$ est donc impaire.
 
 zéros: $\{k \cdot \pi \; | \; k \in \mathbb{Z}\}$
+````
 
-## Fonction $\cos(x)$
+````{container} frame noprint
+# Fonction $\cos(x)$
 
 ```{jsxgraph} cos
 :style: width: 60%; border: none;
@@ -485,7 +499,10 @@ $\cos(-x) = \cos(x)$, la fonction $\cos(x)$ est donc paire.
 
 zéros: $\left\{\dfrac{\pi}{2} + k \cdot \pi \; | \; k \in \mathbb{Z}\right\}$
 
-## Fonction $\tan(x)$
+````
+
+````{container} frame noprint
+# Fonction $\tan(x)$
 
 ```{jsxgraph} tan
 :style: width: 80%; border: none;
@@ -500,6 +517,7 @@ $\tan(x) = \tan(x + k \cdot \pi)$, la période de $\tan(x)$ est $\pi$.
 $\tan(-x) = -\tan(x)$, la fonction $\tan(x)$ est donc impaire.
 
 zéros: $\{k \cdot \pi \; | \; k \in \mathbb{Z}\}$
+````
 
 <style>
 .angle td {
@@ -527,7 +545,69 @@ Pour $k \in \mathbb{Z}$.
 ```
 ````
 
-## Exemple {num2}`exemple`
+<script type="module">
+const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
+const battrs = [attrs.print, {
+  boundingBox: [-7, 1.5, 7, -1.5],
+  grid: {majorStep: [Math.PI / 4, 0.5]},
+  defaultAxes: {
+    x: {ticks: {scale: Math.PI, scaleSymbol: 'π'}},
+    y: {ticks: {minorTicks: 1}},
+  },
+}];
+render.sinx = el => {
+  return initBoard(el, battrs, board => {
+    board.create('functiongraph', [x => Math.sin(x)], {
+      name: `\\(\\sin(x)\\)`, withlabel: true,
+      label: {position: '0.68fr right', offset: [0, 45]},
+    });
+  });
+};
+render.cosx = el => {
+  return initBoard(el, battrs, board => {
+    board.create('functiongraph', [x => Math.cos(x)], {
+      name: `\\(\\cos(x)\\)`, withlabel: true,
+      label: {position: '0.58fr right', offset: [0, 42]},
+    });
+  });
+};
+render.tanx = el => {
+  return initBoard(el, [battrs, {boundingBox: [-7, 5, 7, -5]}], board => {
+    board.create('functiongraph', [x => Math.tan(x)], {
+      name: `\\(\\tan(x)\\)`, withlabel: true,
+      label: {position: '0.57fr right', offset: [-30, 0]},
+    });
+  });
+};
+</script>
+
+
+````{container} frame
+# Représentation graphique de la fonction $\sin(x)$:
+
+```{jsxgraph} sinx
+:style: width: 100%; border: none;
+```
+````
+
+````{container} frame
+### Représentation graphique de la fonction $\cos(x)$:
+
+```{jsxgraph} cosx
+:style: width: 100%; border: none;
+```
+````
+
+````{container} frame
+### Représentation graphique de la fonction $\tan(x)$:
+
+```{jsxgraph} tanx
+:style: width: 100%; border: none;
+```
+````
+
+````{container} frame noprint
+# Exemple {num2}`exemple`
 
 Comment la représentation de la fonction $a \cdot \sin(b \cdot x + c) + d$
 change-t-elle en fonction des coefficients $a$, $b$, $c$ et $d$?
@@ -535,8 +615,14 @@ change-t-elle en fonction des coefficients $a$, $b$, $c$ et $d$?
 ```{jsxgraph} sinus
 :style: width: 100%; border: none;
 ```
+````
 
-## Exemple {num2}`exemple`
+```{container} frame noprint instructor
+-> {numref}`exercice %s<exercice:2-fct-ex2>`
+```
+
+````{container} frame noprint
+# Exemple {num2}`exemple`
 
 Comment la représentation de la fonction $a \cdot \cos(b \cdot x + c) + d$
 change-t-elle en fonction des coefficients $a$, $b$, $c$ et $d$?
@@ -544,14 +630,25 @@ change-t-elle en fonction des coefficients $a$, $b$, $c$ et $d$?
 ```{jsxgraph} cosinus
 :style: width: 100%; border: none;
 ```
+````
 
-## Exemple {num2}`exemple`
+```{container} frame noprint instructor
+-> {numref}`exercice %s<exercice:2-fct-ex3>`
+```
+
+````{container} frame noprint
+# Exemple {num2}`exemple`
 
 Comment la représentation de la fonction $a \cdot \tan(b \cdot x + c) + d$
 change-t-elle en fonction des coefficients $a$, $b$, $c$ et $d$?
 
 ```{jsxgraph} tangente
 :style: width: 100%; border: none;
+```
+````
+
+```{container} frame noprint instructor
+-> {numref}`exercice %s<exercice:2-fct-ex4>`
 ```
 
 <script type="module">
@@ -737,7 +834,13 @@ const battrs = [attrs.screen, {
 }];
 render.arcsin = el => {
   return initBoard(el, [battrs, {boundingBox: [-4, 2, 4, -2]}], board => {
-    board.create('functiongraph', [x => Math.sin(x)], {strokeOpacity: 0.3});
+    board.create('functiongraph', [x => Math.sin(x)], {
+      name: '\\(\\sin\\)', withLabel: true,
+      label: {
+        position: '0.7fr right', offset: [-8, 0],
+      },
+      strokeOpacity: 0.3}
+      );
     board.create('functiongraph', [x => Math.sin(x), -Math.PI/2, Math.PI/2]);
     board.create('functiongraph', [x => Math.asin(x), -1, 1], {
       name: '\\(\\arcsin\\)', withLabel: true,
@@ -751,7 +854,13 @@ render.arcsin = el => {
 };
 render.arccos = el => {
   return initBoard(el, [battrs, {boundingBox: [-4, 3.5, 4, -1.5]}], board => {
-    board.create('functiongraph', [x => Math.cos(x)], {strokeOpacity: 0.3});
+    board.create('functiongraph', [x => Math.cos(x)], {
+      name: '\\(\\cos\\)', withLabel: true,
+      label: {
+        position: '0.4fr right', offset: [-8, 0],
+      },
+      strokeOpacity: 0.3}
+      );
     board.create('functiongraph', [x => Math.cos(x),0, Math.PI]);
     board.create('functiongraph', [x => Math.acos(x), -1, 1], {
       name: '\\(\\arccos\\)', withLabel: true,
@@ -765,7 +874,13 @@ render.arccos = el => {
 };
 render.arctan = el => {
   return initBoard(el, [battrs, {boundingBox: [-4, 3, 4, -3]}], board => {
-    board.create('functiongraph', [x => Math.tan(x)], {strokeOpacity: 0.3});
+    board.create('functiongraph', [x => Math.tan(x)], {
+      name: '\\(\\tan\\)', withLabel: true,
+      label: {
+        position: '0.62fr right', offset: [-8, 0],
+      },
+      strokeOpacity: 0.3
+    });
     board.create('functiongraph', [x => Math.tan(x), -Math.PI/2, Math.PI/2]);
     board.create('functiongraph', [x => Math.atan(x)], {
       name: '\\(\\arctan\\)', withLabel: true,
@@ -779,25 +894,32 @@ render.arctan = el => {
 };
 </script>
 
-## Représentation de la fonction $\arcsin(x)$
+````{container} frame noprint
+# Représentation de la fonction $\arcsin(x)$
 
 ```{jsxgraph} arcsin
 :style: width: 100%; border: none;
 ```
+````
 
-## Représentation de la fonction $\arccos(x)$
+````{container} frame noprint
+# Représentation de la fonction $\arccos(x)$
 
 ```{jsxgraph} arccos
 :style: width: 100%; border: none;
 ```
+````
 
-## Représentation de la fonction $\arctan(x)$
+````{container} frame noprint
+# Représentation de la fonction $\arctan(x)$
 
 ```{jsxgraph} arctan
 :style: width: 100%; border: none;
 ```
+````
 
-## Exemple {num2}`exemple`
+```{container} frame noprint
+# Exemple {num2}`exemple`
 
 Déterminez tous les angles $\alpha$ en degrés tels que $\tan(\alpha) = 0.8$.
 
@@ -806,8 +928,10 @@ Une solution possible est $\quad \alpha = \arctan(0.8) \approx 38.66^\circ$
 Comme la tangente a une période de $180^\circ$, l'ensemble des solutions est:
 
 $S = \{ 38.66^\circ + k \cdot 180^\circ \Bigm| k \in \mathbb{Z}\}$.
+```
 
-## Exemple {num2}`exemple`
+```{container} frame noprint
+# Exemple {num2}`exemple`
 
 Déterminez tous les angles $\alpha$ en randians tels que $\sin(x) = \dfrac{\sqrt{2}}{2}$.
 
@@ -820,3 +944,271 @@ Comme le sinus a une période de $2\pi$, l'ensemble des solutions est:
 
 $S = \left\{\dfrac{\pi}{4} + k \cdot 2\pi\Bigm| k \in \mathbb{Z}\right\} \cup
 \left\{\dfrac{3\pi}{4} + k \cdot 2\pi\Bigm| k \in \mathbb{Z}\right\}$
+```
+
+```{container} frame noprint instructor
+-> {numref}`exercice %s<exercice:2-fct-ex5>`,
+{numref}`exercice %s<exercice:2-fct-ex6>`,
+{numref}`exercice %s<exercice:2-fct-ex7>
+```
+
+
+## Exercices
+
+### Exercice {num2}`exercice:2-fct-ex1`
+
+Lesquelles des fonctions ci-dessous sont périodiques? Justifiez la réponse et
+déterminez la période, le cas échéant.
+
+{.lower-alpha-paren}
+1. temps $\longrightarrow$ hauteur d'une balle qui rebondit sur le sol
+2. temps $\longrightarrow$ distance entre la Terre et le Soleil
+3. temps $\longrightarrow$ niveau de l'eau le long d'un bord de mer
+
+```{block} solution
+{.lower-alpha-paren}
+1. Non, car la balle rebondit toujours moins haut.
+2. Oui, la période est 1 année.
+3. Oui, l'alternance de la marée haute et de la marée basse est un processus
+    périodique.
+```
+
+### Exercice {num2}`exercice:2-fct-ex2`
+
+Établissez un tableau de correspondance des fonctions données, puis tracez leur
+représentation graphique dans le repère ci-dessous, où la représentation
+graphique de la fonction sinus a déjà été tracée. Que modifie le coefficient
+devant le $\sin(x)$?
+
+{.lower-alpha-paren .columns-3}
+1. $f_1(x)=2\cdot \sin(x)$
+2. $f_2(x)=0.25 \cdot \sin(x)$
+3. $f_3(x)=- \sin(x)$
+
+```{jsxgraph} sinusExo
+:style: width: 100%; border: none;
+```
+
+<script type="module">
+const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
+const battrs = [attrs.print, {
+  boundingBox: [-7, 2.5, 7, -2.5],
+  grid: {majorStep: [Math.PI / 4, 0.5]},
+  defaultAxes: {
+    x: {ticks: {scale: Math.PI, scaleSymbol: 'π'}},
+    y: {ticks: {minorTicks: 1}},
+  },
+}];
+render.sinusExo = el => {
+  return initBoard(el, battrs, board => {
+    board.create('functiongraph', [x => Math.sin(x)]);
+  });
+};
+render.sinusExoSol = el => {
+  return initBoard(el, battrs, board => {
+    board.create('functiongraph', [x => Math.sin(x)], {
+      dash: 3, strokeOpacity: 0.4
+    });
+    board.create('functiongraph', [x => 2 * Math.sin(x)], {
+      name: '\\(f_{1}\\)', withLabel: true,
+      label: {position: '0.8fr right'},
+    });
+    board.create('functiongraph', [x => 0.25 * Math.sin(x)], {
+      name: '\\(f_{2}\\)', withLabel: true,
+      label: {position: '0.76fr right', offset: [2, -1]},
+    });
+    board.create('functiongraph', [x => - Math.sin(x)], {
+      name: '\\(f_{3}\\)', withLabel: true,
+      label: {position: '0.76fr left'},
+    });
+  });
+};
+render.cosinusExo = el => {
+  return initBoard(el, battrs, board => {
+    board.create('functiongraph', [x => Math.cos(x)]);
+  });
+};
+render.cosinusExoSol = el => {
+  return initBoard(el, battrs, board => {
+    board.create('functiongraph', [x => Math.cos(x)], {
+      dash: 3, strokeOpacity: 0.4
+    });
+    board.create('functiongraph', [x => Math.cos(0.5 * x)], {
+      name: '\\(f_{1}\\)', withLabel: true,
+      label: {position: '0.53fr left', offset: [0, -2]},
+    });
+    board.create('functiongraph', [x => Math.cos(2 * x)], {
+      name: '\\(f_{2}\\)', withLabel: true,
+      label: {position: '0.77fr right', offset: [4, -2]},
+    });
+    board.create('functiongraph', [x => Math.cos(4 * x)], {
+      name: '\\(f_{3}\\)', withLabel: true,
+      label: {position: '0.77fr left', offset: [10, 20]},
+    });
+  });
+};
+</script>
+
+````{block} solution
+Le coefficient devant le $\sin(x)$ change l'amplitude de la
+fonction.
+
+```{jsxgraph} sinusExoSol
+:style: width: 100%; border: none;
+````
+
+### Exercice {num2}`exercice:2-fct-ex3`
+
+Établissez un tableau de correspondance des fonctions données, puis tracez leur
+représentation graphique dans le repère ci-dessous, où la représentation
+graphique de la fonction cosinus a déjà été tracée. Que modifie le coefficient
+devant le $x$ d'un $\cos(x)$?
+
+{.lower-alpha-paren .columns-3}
+1. $f_1(x)= \cos(0.5x)$
+2. $f_2(x)= \cos(2x)$
+3. $f_3(x)= \cos(4x)$
+
+```{jsxgraph} cosinusExo
+:style: width: 100%; border: none;
+```
+
+````{block} solution
+Le coefficient devant le $x$ du $\cos(x)$ change la période.
+
+```{jsxgraph} cosinusExoSol
+:style: width: 100%; border: none;
+````
+
+### Exercice {num2}`exercice:2-fct-ex4`
+
+Tracez la représentation graphique des fonctions ci-dessous.
+
+{.lower-alpha-paren .columns-2}
+1. $f_1(x)=2\cos(x+2\pi)-1$
+2. $f_2(x)=\cos(2x)+1$
+3. $f_3(x)=1.5\cos\left(x-\frac{\pi}{4}\right)-0.5$
+4. $f_4(x)=\cos\left(0.5\left(x+\frac{\pi}{2}\right)\right)$
+
+````{block} solution
+```{jsxgraph} fctSol
+:style: width: 100%; border: none;
+```
+````
+
+<script type="module">
+const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
+const battrs = [attrs.print, {
+  boundingBox: [-7, 2.5, 7, -3.5],
+  grid: {majorStep: [Math.PI / 4, 0.5]},
+  defaultAxes: {
+    x: {ticks: {scale: Math.PI, scaleSymbol: 'π'}},
+    y: {ticks: {minorTicks: 1}},
+  },
+}];
+render.fctSol = el => {
+  return initBoard(el, battrs, board => {
+    board.create('functiongraph', [x => 2 * Math.cos(x + 2 * Math.PI)-1], {
+      name: '\\(f_{1}\\)', withLabel: true,
+      label: {position: '0.6fr right', offset: [-10, -10]},
+    });
+    board.create('functiongraph', [x => Math.cos(2 * x) + 1], {
+      name: '\\(f_{2}\\)', withLabel: true,
+      label: {position: '0.7fr left', offset: [2, -1]},
+    });
+    board.create('functiongraph', [x => 1.5 * Math.cos(x - Math.PI/4)-0.5], {
+      name: '\\(f_{3}\\)', withLabel: true,
+      label: {position: '0.76fr right'},
+    });
+    board.create('functiongraph', [x => Math.cos(0.5 * (x + Math.PI/2))], {
+      name: '\\(f_{4}\\)', withLabel: true,
+      label: {position: '0.1fr right'},
+    });
+  });
+};
+</script>
+
+### Exercice {num2}`exercice:2-fct-ex5`
+
+Déterminez tous les angles (en degrés arrondis au centième) tels que:
+
+{.lower-alpha-paren .columns-3}
+1. $\sin(\alpha)=0.82$
+2. $\cos(\beta)=-0.65$
+3. $\tan(\gamma)=1.9$
+
+```{block} solution
+{.lower-alpha-paren}
+1. $\alpha_1=55.08^\circ+k \cdot 360^\circ$, $\alpha_2=124.92^\circ +k \cdot
+    360^\circ$, $k \in \mathbb{Z}$
+2. $\beta_1=130.54^\circ+k \cdot 360^\circ$, $\beta_2=-130.54^\circ +k \cdot
+    360^\circ$, $k \in \mathbb{Z}$
+3. $\gamma=62.24^\circ+k \cdot 180^\circ$, $k \in \mathbb{Z}$
+```
+
+### Exercice {num2}`exercice:2-fct-ex6`
+
+Déterminez tous les angles (en radian arrondis au dix-millionième) tels que:
+
+{.lower-alpha-paren .columns-3}
+1. $\tan(x)=-0.2$
+2. $\sin(y)=-1$
+3. $\cos(z)=0.34$
+
+```{block} solution
+{.lower-alpha-paren}
+1. $x=-0.1974+k \cdot \pi$, $k \in \mathbb{Z}$
+2. $y=-1.5708+k \cdot 2\pi$, $k \in \mathbb{Z}$
+3. $z_1=1.2239+ k \cdot 2\pi$, $z_2=-1.2239+ k \cdot 2\pi$, $k \in \mathbb{Z}$
+```
+
+### Exercice {num2}`exercice:2-fct-ex7`
+
+Une grande roue possédant un diamètre de $60$ m et dont l'axe se trouve à une
+hauteur de $31$ m au dessus du sol nécessite 3 minutes pour faire un tour
+complet. Un passager se trouve dans une cabine de cette grande roue, située tout
+en bas au temps $t=0$.
+
+{.lower-alpha-paren}
+1.  À quelle hauteur le passager se trouve-t-il au temps $t= 1$ min, $t=4.5$ min
+    et $t= 6$ min?
+2.  Tracez la représentation graphique de la fonction qui exprime la hauteur du
+    passager en fonction du temps écoulé en minutes.
+3.  Déterminez l'expression algébrique de cette fonction.
+
+````{block} solution
+{.lower-alpha-paren}
+1.  $46$ m; $61$ m; $1$m
+2.  ```{jsxgraph} grandeRoue
+    :style: width: 50%; border: none;
+    ```
+3.  $f(t) = -30\cos\left(\frac{2\pi}{3}t\right)+31
+    = 30\sin\left(\frac{2\pi}{3}\left(t-\frac{3}{4}\right)\right)+31
+    = 30\sin\left(\frac{2\pi}{3}t-\frac{\pi}{2}\right)+31$
+````
+
+<script type="module">
+const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
+render.grandeRoue = el => {
+  return initBoard(el, [attrs.print, {
+    boundingBox: [-0.9, 65, 11.5, -5], keepAspectRatio: false,
+    defaultAxes: {
+      x: {
+        name: `\\(t[min]\\)`, ticks: {ticksDistance: 1},
+        label: {position: '1fr right'},
+      },
+      y: {name: `\\(h\\)`, ticks: {ticksDistance: 10}},
+    },
+  }], board => {
+    board.create('functiongraph',
+      [t => -30 * Math.cos(2 * t * Math.PI/3) + 31, -0.5, 11.5]);
+  });
+};
+</script>
+
+## Solutions
+
+```{blocks} solution
+:class: allow-break-inside
+```
+
