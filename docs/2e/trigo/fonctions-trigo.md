@@ -949,7 +949,7 @@ $S = \left\{\dfrac{\pi}{4} + k \cdot 2\pi\Bigm| k \in \mathbb{Z}\right\} \cup
 ```{container} frame noprint instructor
 -> {numref}`exercice %s<exercice:2-fct-ex5>`,
 {numref}`exercice %s<exercice:2-fct-ex6>`,
-{numref}`exercice %s<exercice:2-fct-ex7>
+{numref}`exercice %s<exercice:2-fct-ex7>`
 ```
 
 
