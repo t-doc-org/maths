@@ -17,8 +17,9 @@ Les valeurs de l'échantillon sont stockées dans une liste.
 
 ```{exec} python
 :name: notes
-:when: never
-notes = [3, 4.5, 4, 3.5, 5, 6, 6, 4, 4.5, 5, 5, 4, 4.5, 5.5, 5, 6, 5.5, 4.5, 2, 4.5, 5.5, 4, 4, 4, 4.5, 5.5, 4, 5, 3, 5]
+:when:
+notes = [3, 4.5, 4, 3.5, 5, 6, 6, 4, 4.5, 5, 5, 4, 4.5, 5.5, 5, 6, 5.5, 4.5,
+         2, 4.5, 5.5, 4, 4, 4, 4.5, 5.5, 4, 5, 3, 5]
 ```
 
 ```{exec} python
