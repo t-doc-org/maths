@@ -1,7 +1,7 @@
 % Copyright 2025 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-# Fonctions rationnelles, réciproques et composées
+# Fonctions 2
 
 ## Fonctions rationnelles
 

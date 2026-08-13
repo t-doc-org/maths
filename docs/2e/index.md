@@ -9,9 +9,13 @@ subject: "Mathématiques 2e année"
 ```
 
 ```{toctree}
-trigo/index
-fonctions/index
-geometrie/index
+trigo/index-1
+fonctions/index-1
+trigo/index-2
+geometrie/index-1
+fonctions/index-2
+geometrie/index-2
+fonctions/index-3
 statistique/index
 objectifs/index
 evaluations-formatives/index
