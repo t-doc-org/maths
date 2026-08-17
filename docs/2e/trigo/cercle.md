@@ -12,6 +12,8 @@ page-break-avoid-inside: 3
 
 ## Théorie
 
+### Radian
+
 ```{admonition} Origine degrés et radians
 :class: attention dropdown noprint instructor
 # Degrés
@@ -34,8 +36,6 @@ mais le mot radian apparaît seulement en 1873.
 - le radian est un rapport et ne dépend donc pas d'une unité (pas de conversion
   nécessaire) -> facilite les calculs (fct trigo).
 ```
-
-### Radian
 
 <script type="module">
 const {attrs, gcd, initBoard, JXG, render, withAxesLabels} =

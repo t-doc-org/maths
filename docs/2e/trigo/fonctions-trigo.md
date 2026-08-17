@@ -10,6 +10,8 @@ page-break-avoid-inside: 3
 
 # Fonctions trigonométriques
 
+## Théorie
+
 ````{admonition} Définition
 Une fonction réelle $f$ est **périodique** s'il existe un nombre réel $p$ tel
 que, pour tout $k \in \mathbb{Z}$ et tout $x\in D_f$,

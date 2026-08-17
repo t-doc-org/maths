@@ -6,6 +6,7 @@
 ```{toctree}
 fonctions-trigo-intro
 fonctions-trigo
+equations-trigo-intro
 equations-trigo
 triangle-quelconque
 ```
