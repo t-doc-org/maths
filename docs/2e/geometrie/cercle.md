@@ -210,7 +210,7 @@ attrs.page = [attrs.screen, {
     axis: false, grid: false,
     defaults: {
         line: {highlight: false, fixed: true, withLabel: true,
-                strokeColor: JXG.palette.black, withLabel: true, strokeWidth: 2
+                strokeColor: JXG.palette.black, strokeWidth: 2
               },
         point: {highlight: false, fixed: true, withLabel: true, size: 1,
                 label: {anchorY:'top', anchorx: 'middle'}
