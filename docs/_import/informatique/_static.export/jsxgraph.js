@@ -31,6 +31,7 @@ attrs.screen = [{
       strokeWidth: 1, strokeColor: JXG.palette.black,
     },
     point: {
+      // TODO: Add "withLabel: false"
       size: 1.5,
       strokeWidth: 1, strokeColor: JXG.palette.black,
       fillColor: JXG.palette.black,
@@ -48,6 +49,7 @@ attrs.print = [attrs.nonInteractive, {
   defaults: {
     curve: {strokeWidth: 2, strokeColor: JXG.palette.black},
     point: {
+      // TODO: Change "name: ''" to "withLabel: false"
       name: '', size: 2,
       strokeWidth: 1, strokeColor: JXG.palette.black,
       fillColor: JXG.palette.black,
