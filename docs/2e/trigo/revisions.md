@@ -11,7 +11,7 @@ page-break-avoid-inside: 3
 ```
 
 <!-- TODO: à effacer -->
-
+<!--
 ```{jsxgraph} testPrint
 :style: width: 50%; border: none;
 ```
@@ -53,7 +53,7 @@ render.testScreen = el => {
   });
 };
 </script>
-
+ -->
 
 ## Théorie
 
