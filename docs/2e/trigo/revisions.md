@@ -10,6 +10,51 @@ page-break-force: 2
 page-break-avoid-inside: 3
 ```
 
+<!-- TODO: à effacer -->
+
+```{jsxgraph} testPrint
+:style: width: 50%; border: none;
+```
+
+```{jsxgraph} testScreen
+:style: width: 50%; border: none;
+```
+
+<script type="module">
+const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
+render.testPrint = el => {
+  return initBoard(el, [attrs.print, {
+    boundingbox: [-6, 6, 6, -6],
+    axis: false, grid: false,
+    defaults: {
+    },
+  }], board => {
+    const o = board.create('point', [0, 0]);
+    const p = board.create('point', [0, 2]);
+    board.create('segment',  [[0,1], [3, 4]]);
+    board.create('circle', [o, p]);
+    board.create('circle', [[0,2], [2, 5]]);
+  });
+};
+
+render.testScreen = el => {
+  return initBoard(el, [attrs.screen, {
+    boundingbox: [-6, 6, 6, -6],
+    axis: false, grid: false,
+    defaults: {
+    },
+  }], board => {
+    const o = board.create('point', [0, 0]);
+    const x = board.create('point', [1, 0]);
+    const c = board.create('circle', [o, x]);
+    const p = board.create('glider', [Math.cos(Math.PI/4), Math.sin(Math.PI/4), c]);
+    board.create('segment',  [[0,1], [3, 4]]);
+    board.create('circle', [[0,2], [2, 5]]);
+  });
+};
+</script>
+
+
 ## Théorie
 
 ### Trigonométrie dans le triangle rectangle
@@ -438,7 +483,6 @@ render.falaise = el => {
     defaults: {
       segment: {strokeColor: JXG.palette.black, strokeWidth: 2},
       point: {
-        size: 0, withLabel: true,
         label: {anchorX: 'middle', anchorY:'top' ,offset: [0, 0]},
       },
       angle: {

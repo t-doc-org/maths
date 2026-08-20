@@ -190,18 +190,14 @@ L'équation de la tangente au cercle au point $T(2; 1)$ est $4x - 3y - 5 = 0$.
 const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
 
 function cercle(board) {
-  const r = 3;
   const O = board.create('point', [0, 0], {
     name: `\\(C(x_0;y_0)\\)`,
-    label: {offset: [-5, -5]}, fixed: true,
+    label: {offset: [-5, -5]},
   });
-  const c = board.create('circle', [O, r], {
-    name: `\\(\\Gamma\\)`, label: {offset: [5, 5]}, fixed: true,
+  const c = board.create('circle', [O, 3], {
+    name: `\\(\\Gamma\\)`, label: {offset: [5, 5]},
   });
-  board.create('segment', [O, [r, 0]], {dash: 3,
-    name: `\\(r\\)`, label: {offset: [0, 10]},
-  });
-  return c;
+  return {c, O};
 }
 
 attrs.page = [attrs.screen, {
@@ -209,17 +205,17 @@ attrs.page = [attrs.screen, {
     pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
     axis: false, grid: false,
     defaults: {
-        line: {highlight: false, fixed: true, withLabel: true,
+        line: {withLabel: true,
                 strokeColor: JXG.palette.black, strokeWidth: 2
               },
-        point: {highlight: false, fixed: true, withLabel: true, size: 1,
+        point: {withLabel: true, size: 1,
                 label: {anchorY:'top', anchorx: 'middle'}
               },
-        angle: {highlight: false, fixed: true, withLabel: false,
+        angle: {withLabel: false,
                 strokeColor: JXG.palette.black, radius: 0.3,
                 fillColor: JXG.palette.black, fillOpacity: 0
               },
-        circle: {highlight: false, fixed: true, withLabel: true,
+        circle: {withLabel: true,
                   strokeColor: JXG.palette.black,
                   label: {strokeColor: JXG.palette.black}
               },
@@ -227,15 +223,23 @@ attrs.page = [attrs.screen, {
 }];
 
 render.defCercle = el => {
-  return initBoard(el, [attrs.nonInteractive, attrs.page], board => {
-    const c = cercle(board);
-    board.create('point', [3, 0], {name: `\\(P\\)`, label: {offset: [10, 10]}});
+  return initBoard(el, [attrs.screen, attrs.page], board => {
+    const {c, O} = cercle(board);
+    const p = board.create('glider', [Math.cos(0), Math.sin(0), c], {
+      name: `\\(P\\)`, label: {offset: [10, 10]},
+    });
+    board.create('segment', [O, p], {dash: 3,
+    name: `\\(r\\)`, label: {offset: [0, 10]},
   });
+});
 };
 
 render.intersection1 = el => {
   return initBoard(el, [attrs.nonInteractive, attrs.page], board => {
-    const c = cercle(board);
+    const {c, O} = cercle(board);
+    board.create('segment', [O, [3, 0]], {dash: 3,
+      name: `\\(r\\)`, label: {offset: [0, 10]},
+    });
     const d = board.create('line', [[-2, 1.5], [3, -1]], {
       name: `\\(d\\)`, label: {offset: [0, 0]},
     });
@@ -250,7 +254,10 @@ render.intersection1 = el => {
 
 render.intersection2 = el => {
   return initBoard(el, [attrs.nonInteractive, attrs.page], board => {
-    const c = cercle(board);
+    const {c, O} = cercle(board);
+    board.create('segment', [O, [3, 0]], {dash: 3,
+      name: `\\(r\\)`, label: {offset: [0, 10]},
+    });
     const x = -1;
     const y = Math.sqrt(3 * 3 - x * x);
     const T = board.create('point', [x, y], {
@@ -268,7 +275,10 @@ render.intersection2 = el => {
 
 render.intersection3 = el => {
   return initBoard(el, [attrs.nonInteractive, attrs.page], board => {
-    const c = cercle(board);
+    const {c, O} = cercle(board);
+    board.create('segment', [O, [3, 0]], {dash: 3,
+      name: `\\(r\\)`, label: {offset: [0, 10]},
+    });
     const d = board.create('line', [[-3, 2], [0, 4]], {
       name: `\\(d\\)`, label: {offset: [0, 0]},
     });
@@ -282,16 +292,13 @@ render.defTangente = el => {
     const rayon = 3;
     const O = board.create('point', [0, 0], {
       name: `\\(C\\)`,
-      label: {offset: [-5, -5]}, fixed: true,
+      label: {offset: [-5, -5]},
     });
     const c = board.create('circle', [O, rayon], {
-      name: `\\(\\Gamma\\)`, label: {offset: [5, 5]}, fixed: true,
+      name: `\\(\\Gamma\\)`, label: {offset: [5, 5]},
     });
     let T = board.create('glider', [-1, 2, c], {
-      highlight: true, fixed: false,
       name: `\\(T\\)`, label: {offset: [-15, 15]},
-      size: 8, strokewidth: 0, fillOpacity: 0, highlightStrokeWidth: 0,
-      highlightFillOpacity: 0.5, showInfobox: false,
     });
     const r = board.create('segment', [[0, 0], T], {dash: 3,
       name: `\\(r\\)`, label: {offset: [10, 0]},

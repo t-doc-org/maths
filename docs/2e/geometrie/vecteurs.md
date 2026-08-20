@@ -32,7 +32,8 @@ En effet, ils ont tous la même longueur, la même direction et le même sens.
 
 ### Exemple {num2}`exemple`
 
-Les vecteurs suivants sont colinéaires, car ils ont tous la même direction.
+Les vecteurs suivants sont colinéaires, car ils ont tous la même direction, mais
+ils n'ont pas forcément le même sens.
 
 ```{jsxgraph} vecteurs2
 :style: width: 50%;
@@ -45,7 +46,7 @@ const battrs = [attrs.screen, {
   pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
   defaults: {
     arrow: {
-      withLabel: true,
+      withLabel: true, fixed: false,
       label: {anchorX: 'middle', anchorY: 'middle', offset: [-60, -20]},
     },
   },
@@ -398,15 +399,16 @@ const battrs = [attrs.screen, {
   },
   defaults: {
     arrow: {
-      highlight: false, fixed: true, withLabel: true,
+      withLabel: true,
       label: {
         anchorX: 'middle', anchorY: 'middle', position: '0.5fr left',
         distance: 1.2,
       },
     },
     point: {
+      fixed: false, highlight: true,
       size: 8, strokewidth: 0, fillOpacity: 0, highlightStrokeWidth: 0,
-      withLabel: false, highlightFillOpacity: 0.5,
+      withLabel: false, highlightFillOpacity: 0.7,
     },
   },
 }];

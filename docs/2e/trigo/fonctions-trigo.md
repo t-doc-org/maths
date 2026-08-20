@@ -52,15 +52,15 @@ render.sin = el => {
       },
     },
     defaults: {
-      point: {strokeWidth: 0, showInfobox: false},
+      point: {strokeWidth: 0},
       line: {strokeWidth: 1},
     },
   }], board => {
     const ax1 = board.create('point', [1, 0], {
-      fixed: true, visible: false, withLabel: false,
+       visible: false, withLabel: false,
     });
     const o = board.create('point', [0, 0], {
-      fixed: true, visible: false, withLabel: false,
+       visible: false, withLabel: false,
     });
     // Place the circle.
     const c = board.create('circle', [o, 1], {strokeColor: JXG.palette.black});
@@ -79,12 +79,14 @@ render.sin = el => {
     const attractors = angles.map(([n, d]) => {
       const a = n * Math.PI / d;
       return board.create('point', [Math.cos(a), Math.sin(a)], {
-        fixed: true, visible: false, withLabel: false,
+         visible: false, withLabel: false,
       });
     });
     const p = board.create('glider', [0, 0, c], {
       name: '\\(P\\)', label: {strokeColor: alphaColor},
-      fillColor: alphaColor, attractors, attractorDistance: 0.1, size: 3,
+      strokeColor: alphaColor, fillColor: alphaColor,
+      highlightFillColor: alphaColor, highlightStrokeColor: alphaColor,
+      attractors, attractorDistance: 0.1,
     });
     const alpha = () => {
       const a = Math.atan2(p.Y(), p.X());
@@ -100,7 +102,7 @@ render.sin = el => {
       [1, 1.2, () => `\
 \\(\\alpha=${display(alpha())}\\;rad\
 =${(alpha() * 180 / Math.PI).toFixed(1)}\\degree\\)`],
-      {strokeColor: alphaColor, fixed: true});
+      {strokeColor: alphaColor});
 
     // Project the glider point onto the axes.
     const px = [() => p.X(), 0];
@@ -136,7 +138,7 @@ render.sin = el => {
     board.create('text',
       [4, 1.2, () => `\
 \\(\\sin(\\alpha)=${display_value(Math.sin(alpha()))}\\)`],
-      {strokeColor: sinColor, fixed: true});
+      {strokeColor: sinColor});
 
     function almostEqual(a, b) { return Math.abs(a - b) < 1e-6; }
 
@@ -195,15 +197,15 @@ render.cos = el => {
       },
     },
     defaults: {
-      point: {strokeWidth: 0, size: 0, showInfobox: false},
+      point: {strokeWidth: 0, size: 0},
       line: {strokeWidth: 1},
     },
   }], board => {
     const ax1 = board.create('point', [1, 0], {
-      fixed: true, visible: false, withLabel: false,
+       visible: false, withLabel: false,
     });
     const o = board.create('point', [0, 0], {
-      fixed: true, visible: false, withLabel: false,
+       visible: false, withLabel: false,
     });
     // Place the circle.
     const c = board.create('circle', [o, 1], {strokeColor: JXG.palette.black});
@@ -222,12 +224,14 @@ render.cos = el => {
     const attractors = angles.map(([n, d]) => {
       const a = n * Math.PI / d;
       return board.create('point', [Math.cos(a), Math.sin(a)], {
-        fixed: true, visible: false, withLabel: false,
+         visible: false, withLabel: false,
       });
     });
     const p = board.create('glider', [0, 0, c], {
+      strokeColor: alphaColor, fillColor: alphaColor,
+      highlightFillColor: alphaColor, highlightStrokeColor: alphaColor,
       name: '\\(P\\)', label: {strokeColor: alphaColor},
-      fillColor: alphaColor, attractors, attractorDistance: 0.1, size: 3,
+      attractors, attractorDistance: 0.1,
     });
     const alpha = () => {
       const a = Math.atan2(p.Y(), p.X());
@@ -243,7 +247,7 @@ render.cos = el => {
       [-2.5, 5.8, () => `\
 \\(\\alpha=${display(alpha())}\\;rad\
 =${(alpha() * 180 / Math.PI).toFixed(1)}\\degree\\)`],
-      {strokeColor: alphaColor, fixed: true});
+      {strokeColor: alphaColor});
 
     // Project the glider point onto the axes.
     const px = [() => p.X(), 0];
@@ -279,7 +283,7 @@ render.cos = el => {
     board.create('text',
       [-2.5, 5.2, () => `\
 \\(\\cos(\\alpha)=${display_value(Math.cos(alpha()))}\\)`],
-      {strokeColor: cosColor, fixed: true});
+      {strokeColor: cosColor});
 
     function almostEqual(a, b) { return Math.abs(a - b) < 1e-6; }
 
@@ -338,15 +342,15 @@ render.tan = el => {
       },
     },
     defaults: {
-      point: {strokeWidth: 0, size: 0, showInfobox: false},
+      point: {strokeWidth: 0, size: 0},
       line: {strokeWidth: 1},
     },
   }], board => {
     const ax1 = board.create('point', [1, 0], {
-      fixed: true, visible: false, withLabel: false,
+       visible: false, withLabel: false,
     });
     const o = board.create('point', [0, 0], {
-      fixed: true, visible: false, withLabel: false,
+       visible: false, withLabel: false,
     });
     // Place the circle.
     const c = board.create('circle', [o, 1], {strokeColor: JXG.palette.black});
@@ -365,12 +369,14 @@ render.tan = el => {
     const attractors = angles.map(([n, d]) => {
       const a = n * Math.PI / d;
       return board.create('point', [Math.cos(a), Math.sin(a)], {
-        fixed: true, visible: false, withLabel: false,
+         visible: false, withLabel: false,
       });
     });
     const p = board.create('glider', [0, 0, c], {
+      strokeColor: alphaColor, fillColor: alphaColor,
+      highlightFillColor: alphaColor, highlightStrokeColor: alphaColor,
       name: '\\(P\\)', label: {strokeColor: alphaColor},
-      fillColor: alphaColor, attractors, attractorDistance: 0.1, size: 3
+      attractors, attractorDistance: 0.1,
     });
     const alpha = () => {
       const a = Math.atan2(p.Y(), p.X());
@@ -389,7 +395,7 @@ render.tan = el => {
       [2, 6, () => `\
 \\(\\alpha=${display(alpha())}\\;rad\
 =${(alpha() * 180 / Math.PI).toFixed(1)}\\degree\\)`],
-      {strokeColor: alphaColor, fixed: true});
+      {strokeColor: alphaColor});
 
     // Project the glider point onto the axes.
     const px = [() => p.X(), 0];
@@ -431,7 +437,7 @@ render.tan = el => {
       [2, 5.5, () => `\
 \\(\\tan(\\alpha)=${Math.tan(alpha()) > 100 ? `indéfini` :
                       display_value(Math.tan(alpha()))}\\)`],
-      {strokeColor: tanColor, fixed: true});
+      {strokeColor: tanColor});
 
     function almostEqual(a, b) { return Math.abs(a - b) < 1e-6; }
 
@@ -719,7 +725,7 @@ render.sinus = el => {
 \\cdot x ${sc} ${vc}) ${sd} ${vd}\\)`;
       },
     ], {
-      strokeColor: JXG.palette.blue, fixed: true,
+      strokeColor: JXG.palette.blue,
     });
   });
 };
@@ -740,7 +746,7 @@ render.cosinus = el => {
 \\cdot x ${sc} ${vc}) ${sd} ${vd}\\)`;
       },
     ], {
-      strokeColor: JXG.palette.blue, fixed: true,
+      strokeColor: JXG.palette.blue,
     });
   });
 };
@@ -761,7 +767,7 @@ render.tangente = el => {
 \\cdot x ${sc} ${vc}) ${sd} ${vd}\\)`;
       },
     ], {
-      strokeColor: JXG.palette.blue, fixed: true,
+      strokeColor: JXG.palette.blue,
     });
   });
 };

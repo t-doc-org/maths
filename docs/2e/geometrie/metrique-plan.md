@@ -123,30 +123,29 @@ attrs.page = [attrs.screen, {
   axis: false, grid: false,
   defaults: {
     line: {
-      highlight: false, fixed: true, withLabel: false,
+      withLabel: false,
       strokeColor: JXG.palette.black,
     },
     point: {
-      size: 8, strokewidth: 0, fillOpacity: 0, highlightStrokeWidth: 0,
-      withLabel: false, highlightFillOpacity: 0.5, showInfobox: false,
+      withLabel: false, size:0,
       label: {anchorX: 'middle', anchorY: 'top'}
     },
     angle: {
-      highlight: false, withLabel: false, strokewidth: 1, radius: 0.3,
+      withLabel: false, strokewidth: 1, radius: 0.3,
       strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
       fillOpacity: 0,
     },
     arrow: {
-      highlight: false, fixed: true, withLabel: true,
+      withLabel: true,
       strokeColor: JXG.palette.black,
       label: {position: '0.4fr left'}
     },
     segment: {
-      highlight: false, fixed: true, withLabel: true,
+      withLabel: true,
       strokeColor: JXG.palette.black,
     },
     orthogonalprojection: {
-      highlight: false, fixed: true, withLabel: true,
+      withLabel: true,
       strokeColor: JXG.palette.black,
     },
   },
@@ -157,10 +156,15 @@ render.distance = el => {
     boundingbox: [-3, 5, 12, -2],
   }], board => {
     const A = board.create('point', [0, 0], {
-      withLabel: true, name: `\\(A\\)`, fixed: true, highlight: false,
+      withLabel: true, name: `\\(A\\)`,
       label: {offset: [0, 0]},
     });
-    const P = board.create('point', [5, 2], {withLabel: true, name: `\\(P\\)`});
+    const P = board.create('point', [5, 2], {
+      withLabel: true, name: `\\(P\\)`,
+      highlight: true, fixed: false, size: 1, strokewidth: 1,
+      highlightStrokeWidth: 14, highlightStrokeOpacity: 0.2,
+      highlightStrokeColor: JXG.palette.blue, highlightFillColor: JXG.palette.blue
+    });
     const d = board.create('line', [A, [3, -0.5]], {
       name: '\\(d\\)', withLabel: true,
       label: {anchorX: 'middle', anchorY: 'top', position: '0.02fr left'},
@@ -173,7 +177,11 @@ render.distance = el => {
       whithLabel: true, name: '\\(\\delta(P;d)\\)', label: {offset: [5, -5]},
     });
     board.create('angle', [P, Pd, A]);
-    const N1 = board.create('point', [10, 1], {size: 0});
+    const N1 = board.create('point', [10, 1], {
+      fixed: false, highlight: true,
+      size: 8, strokewidth: 0, fillOpacity: 0, highlightStrokeWidth: 0,
+      withLabel: false, highlightFillOpacity: 0.7,
+    });
     const N2 = board.create('orthogonalprojection', [N1, d], {
       size: 0, withLabel: false,
     });

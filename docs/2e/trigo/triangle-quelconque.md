@@ -72,8 +72,7 @@ render.utilisationSinus = el => {
       },
       line: {strokeColor: JXG.palette.black, strokeWidth: 1},
       point: {
-        size: 0, withLabel: true, fixed: true, showInfobox: false,
-        withLabel: false,
+        size: 0, withLabel: true, withLabel: false,
       },
       angle: {
         strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
@@ -132,7 +131,7 @@ function hauteur(fn) {
         },
         line: {strokeColor: JXG.palette.black, strokeWidth: 1},
         point: {
-          size: 0, withLabel: true, fixed: true, showInfobox: false,
+          size: 0, withLabel: true,
           label: {anchorX: 'middle', anchorY:'top' ,offset: [0, 0]},
         },
         angle: {
@@ -213,8 +212,7 @@ function triangle_exemple({a, b, c, alpha, beta, gamma}) {
         },
         line: {strokeColor: JXG.palette.black, strokeWidth: 1},
         point: {
-          size: 0, withLabel: true, fixed: true, showInfobox: false,
-          withLabel: false,
+          size: 0, withLabel: true, withLabel: false,
         },
         angle: {
           strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
@@ -360,8 +358,7 @@ render.sinus2Sol = el => {
       },
       line: {strokeColor: JXG.palette.black, strokeWidth: 1},
       point: {
-        size: 0, withLabel: true, fixed: true, showInfobox: false,
-        withLabel: false,
+        size: 0, withLabel: true, withLabel: false,
       },
       angle: {
         strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
@@ -521,8 +518,7 @@ render.utilisationCosinus = el => {
       },
       line: {strokeColor: JXG.palette.black, strokeWidth: 1},
       point: {
-        size: 0, withLabel: true, fixed: true, showInfobox: false,
-        withLabel: false,
+        size: 0, withLabel: true, withLabel: false,
       },
       angle: {
         strokeColor: JXG.palette.black, fillColor: JXG.palette.black,

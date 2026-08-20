@@ -259,7 +259,7 @@ La fonction $\cos(x)$ est représentée ci-dessous.
 
 <script type="module">
 const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
-const battrs = [attrs.screen, {
+const battrs = [attrs.screen, attrs.nonInteractive, {
     boundingBox: [-10, 3.5, 10, -3.5],
     grid: {majorStep: [Math.PI / 4, 0.5]},
     defaultAxes: {

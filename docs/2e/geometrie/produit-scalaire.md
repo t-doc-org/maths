@@ -45,11 +45,12 @@ render.angleVect = el => {
     axis: false, grid: true,
     defaults: {
       arrow: {
-        highlight: false, fixed: true, withLabel: true,
+        withLabel: true,
         label: {anchorX: 'middle', anchorY: 'middle', offset: [-60, -20]}},
       point: {
-        size: 8, strokewidth: 0, fillOpacity: 0, highlightStrokeWidth: 0,
-        withLabel: false, highlightFillOpacity: 0.5, showInfobox: false,
+        size: 8, strokewidth: 0, fillOpacity: 0,
+        highlight: true, highlightStrokeWidth: 0,
+        withLabel: false, highlightFillOpacity: 0.7,
       },
       angle: {
         withLabel: true, radius: 1, strokeColor: JXG.palette.black,
@@ -58,9 +59,9 @@ render.angleVect = el => {
       },
     },
   }], board => {
-    const A = board.create('point', [7, 2]);
-    const B = board.create('point', [3, 5]);
-    const O = board.create('point', [0, 0], {size: 0, fixed: true});
+    const A = board.create('point', [7, 2], {fixed: false});
+    const B = board.create('point', [3, 5], {fixed: false});
+    const O = board.create('point', [0, 0], {size: 0});
     const u = board.create('arrow', [O, A], {
       name: '\\(\\vec{u}\\)', label: {position: '0.5fr right', offset: [0, 0],
     }});
@@ -185,27 +186,32 @@ render.projection = el => {
     axis: false, grid: false,
     defaults: {
       line: {
-        highlight: false, withLabel: true, fixed: true,
+        withLabel: true,
         strokeColor: JXG.palette.black, strokeWidth: 2,
       },
       point: {
-        withLabel: true, size: 1, label: {anchorY:'top'}, showInfobox: false,
+        withLabel: true, size: 1, label: {anchorY:'top'},
       },
       angle: {
-        highlight: false, withLabel: false, radius: 0.3,
+        withLabel: false, radius: 0.3,
         strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
         fillOpacity: 0,
       },
     },
   }], board => {
     const O = board.create('point', [0,0], {size: 0, withLabel: false});
-    const P = board.create('point', [2, 5], {name: `\\(P\\)`});
+    const P = board.create('point', [2, 5], {
+      name: `\\(P\\)`,
+      highlight: true, fixed: false, size: 1, strokewidth: 1,
+      highlightStrokeWidth: 14, highlightStrokeOpacity: 0.2,
+      highlightStrokeColor: JXG.palette.blue, highlightFillColor: JXG.palette.blue
+    });
     const d = board.create('line', [[0, 0], [3,1]], {name: `\\(d\\)`});
     const Pd = board.create('orthogonalprojection', [P, d], {
-      fixed: true, whithLabel: true, name: '\\(P\'\\)', label: {offset: [0, -5]},
+      whithLabel: true, name: '\\(P\'\\)', label: {offset: [0, -5]},
     });
     board.create('segment', [P, Pd], {
-      dash: 3, withLabel: false, fixed: false,
+      dash: 3, withLabel: false,
     });
     board.create('angle', [P, Pd, O]);
   });
@@ -266,7 +272,7 @@ render.exemple = el => {
     axis: false, grid: true,
     defaults: {
       arrow: {
-        highlight: false, fixed: true, withLabel: true,
+        withLabel: true,
         strokeColor: JXG.palette.black,
         label: {
           anchorX: 'middle', anchorY: 'middle', position: '0.5fr left',
@@ -274,19 +280,20 @@ render.exemple = el => {
         },
       },
       segment: {
-        highlight: false, withLabel: false, dash: 2,
+        withLabel: false, dash: 2,
         strokeColor: JXG.palette.black,
       },
       line: {
-        highlight: false, fixed: true, withLabel: false,
+        withLabel: false,
         strokeColor: JXG.palette.black,
       },
       point: {
-        size: 8, strokewidth: 0, fillOpacity: 0, highlightStrokeWidth: 0,
-        withLabel: true, highlightFillOpacity: 0.5, showInfobox: false,
+        highlight: true, fixed: false, size: 1, strokewidth: 1,
+        highlightStrokeWidth: 14, highlightStrokeOpacity: 0.2,
+        highlightStrokeColor: JXG.palette.blue, highlightFillColor: JXG.palette.blue
       },
       angle: {
-        highlight: false, withLabel: false, strokewidth: 1, radius: 0.3,
+        withLabel: false, strokewidth: 1, radius: 0.3,
         strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
         fillOpacity: 0,
       },

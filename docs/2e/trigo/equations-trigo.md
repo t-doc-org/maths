@@ -97,7 +97,7 @@ render.exempleCos = el => {
 };
 render.exempleSin = el => {
   return initBoard(el, [attrs.page, {
-    boundingBox: [-6, 2.5, 6, -0.5],
+    boundingBox: [-6, 2.8, 6, -0.5],
   }], board => {
     board.create('functiongraph', [x => Math.sin(x - Math.PI / 2) + 1], {
       name: '\\(\\sin(x - \\dfrac{\\pi}{2})+1\\)', withLabel: true,
