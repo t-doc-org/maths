@@ -52,6 +52,7 @@ attrs.page = [attrs.screen, attrs.nonInteractive, {
     y: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0}},
   },
   defaults: {
+      segment: {strokeWidth: 1},
       point: {strokeWidth: 0},
   },
 }];

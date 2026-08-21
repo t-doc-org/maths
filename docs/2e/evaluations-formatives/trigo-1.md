@@ -24,12 +24,7 @@ render.trianIsoRect = el => {
     boundingBox: [-0.5, 4.5, 4.5, -0.5],
     axis: false, grid: false,
     defaults: {
-      segment: {strokeColor: JXG.palette.black, strokeWidth: 2},
-      point: {size: 0, withLabel: false},
-      angle: {
-        strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
-        fillOpacity: 0.2, strokeWidth: 1, label: {strokeColor: JXG.palette.black},
-      },
+      point: {withLabel: false},
     },
   }], board => {
     const A = board.create('point', [0, 0], {
@@ -121,7 +116,7 @@ render.trian = el => {
     board.create('segment', [A, B]);
     board.create('segment', [D, A], {
       name: '\\(\\sqrt{2}\\)', withLabel: true,
-      label: {anchorX: 'right', anchorY: 'middle', offset: [-8, 0]}
+      label: {anchorX: 'right', anchorY: 'middle', offset: [-8, -8]}
     });
     board.create('segment', [B, D], {
       name: '\\(2\\)', withLabel: true,
@@ -275,7 +270,10 @@ render.exCos = el => {
 render.exCosSol = el => {
   return initBoard(el, battrs, board => {
     board.create('functiongraph', [x => Math.cos(x)], {dash: 2});
-    board.create('functiongraph', [x => Math.cos(x / 2)]);
+    board.create('functiongraph', [x => Math.cos(x / 2)], {
+      withLabel: true, name: '\\(\\cos(\\frac{x}{2})\\)',
+      label: {position: '0.75fr right'}
+    });
   });
 };
 </script>

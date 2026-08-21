@@ -67,17 +67,11 @@ render.utilisationSinus = el => {
     pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: false,
     defaults: {
       segment: {
-        strokeColor: JXG.palette.black, strokeWidth: 1,
+        strokeWidth: 1,
         name: {withLabel: false},
       },
-      line: {strokeColor: JXG.palette.black, strokeWidth: 1},
-      point: {
-        size: 0, withLabel: true, withLabel: false,
-      },
-      angle: {
-        strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
-        fillOpacity: 0.2, strokeWidth: 1, withLabel: false, radius: 0.5,
-      },
+      point: {withLabel: false},
+      angle: {withLabel: false},
     },
   }], board => {
     const A = board.create('point', [-4, 0]);
@@ -126,22 +120,12 @@ function hauteur(fn) {
       pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: false,
       defaults: {
         segment: {
-          strokeColor: JXG.palette.black, strokeWidth: 1,
+          strokeWidth: 1,
           label: {anchorX: 'middle',offset: [0, 0]},
         },
-        line: {strokeColor: JXG.palette.black, strokeWidth: 1},
         point: {
-          size: 0, withLabel: true,
+          withLabel: true,
           label: {anchorX: 'middle', anchorY:'top' ,offset: [0, 0]},
-        },
-        angle: {
-          strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
-          fillOpacity: 0.2, strokeWidth: 1,
-          label: {
-            strokeColor: JXG.palette.black,
-            anchorX: 'middle', anchorY: 'middle',
-          },
-          name: {withLabel: true},
         },
       },
       }], board => {
@@ -171,7 +155,7 @@ function hauteur(fn) {
       });
 
       board.create('angle', [B, A, C], {
-        name: '\\(\\alpha\\)', label: {offset: [-23, -5]},
+        name: '\\(\\alpha\\)', radius: 0.5,
       });
       board.create('angle', [B, H, C], {
         withLabel: false, fillOpacity: 0, radius: 0.2,
@@ -186,7 +170,7 @@ render.demoSinus = hauteur((board, A, B, C, H) => {
     name: '\\(c\\)', withLabel: true, label: {anchorY:'top'},
   });
   board.create('angle', [C, B, A], {
-    name: '\\(\\beta\\)', label: {offset: [23, -12]},
+    name: '\\(\\beta\\)', radius: 0.5, label: {offset: [0, 0]},
   });
 });
 
@@ -207,21 +191,13 @@ function triangle_exemple({a, b, c, alpha, beta, gamma}) {
       pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: false,
       defaults: {
         segment: {
-          strokeColor: JXG.palette.black, strokeWidth: 1,
-          name: {withLabel: false},
+          strokeWidth: 1, name: {withLabel: false},
         },
-        line: {strokeColor: JXG.palette.black, strokeWidth: 1},
         point: {
-          size: 0, withLabel: true, withLabel: false,
+          withLabel: false,
         },
         angle: {
-          strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
-          fillOpacity: 0.2, strokeWidth: 1, withLabel: false,
-          radius: 0.5,
-          label: {
-            strokeColor: JXG.palette.black,
-            anchorX: 'middle', anchorY: 'middle',
-          },
+          withLabel: false, radius: 0.5,
         },
       },
     }], board => {

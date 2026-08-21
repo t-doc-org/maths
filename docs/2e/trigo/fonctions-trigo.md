@@ -52,18 +52,19 @@ render.sin = el => {
       },
     },
     defaults: {
-      point: {strokeWidth: 0},
-      line: {strokeWidth: 1},
+      segment: {strokeWidth: 1},
     },
   }], board => {
     const ax1 = board.create('point', [1, 0], {
-       visible: false, withLabel: false,
+      withLabel: false,
     });
     const o = board.create('point', [0, 0], {
-       visible: false, withLabel: false,
+      withLabel: false,
     });
     // Place the circle.
-    const c = board.create('circle', [o, 1], {strokeColor: JXG.palette.black});
+    const c = board.create('circle', [o, 1], {
+      strokeWidth:1, strokeColor: JXG.palette.black
+    });
 
     const angles = [];
     for (let i = 0; i < 4; ++i) {
@@ -95,7 +96,7 @@ render.sin = el => {
     board.create('angle', [ax1, o, p], {
       name: '\\(\\alpha\\)', label: {strokeColor: alphaColor},
       radius: 0.2, orthoType: 'none',
-      strokeColor: alphaColor, fillColor: alphaColor, fillOpacity: 0.3,
+      strokeColor: alphaColor, fillColor: alphaColor,
     });
     board.create('segment', [o, p], {strokeColor: alphaColor});
     board.create('text',
@@ -107,8 +108,8 @@ render.sin = el => {
     // Project the glider point onto the axes.
     const px = [() => p.X(), 0];
     const py = [0, () => p.Y()];
-    board.create('segment', [p, px], {dash: 2, strokeColor: JXG.palette.black});
-    board.create('segment', [p, py], {dash: 2, strokeColor: JXG.palette.black});
+    board.create('segment', [p, px], {dash: 2,});
+    board.create('segment', [p, py], {dash: 2,});
 
     // Place the elements related to the sine.
     const sinColor = JXG.palette.blue;
@@ -118,23 +119,21 @@ render.sin = el => {
         position: '0.5fr left', anchorX: 'right', anchorY: 'middle',
         distance: 0, offset: [-7, 0], strokeColor: sinColor,
       },
-      strokeWidth: 2, strokeColor: sinColor,
+      strokeColor: sinColor,
     });
     board.create('curve', [a => a, a => Math.sin(a), 0, 2 * Math.PI], {
       strokeColor: sinColor,
     });
     const psin = board.create('point', [alpha, () => p.Y()], {
-      withLabel: false, fillColor: sinColor,
+      withLabel: false, fillColor: sinColor, strokeColor: sinColor, size: 2,
     });
     board.create('segment', [p, psin], {
-      dash: 2, strokeColor: JXG.palette.black,
+      dash: 2,
     });
     const ax = board.create('point', [alpha, 0], {
-      name: '\\(\\alpha\\)', size: 0, label: {strokeColor: alphaColor},
+      name: '\\(\\alpha\\)', label: {strokeColor: alphaColor},
     });
-    board.create('segment', [psin, ax], {
-      dash: 2, strokeColor: JXG.palette.black,
-    });
+    board.create('segment', [psin, ax], {dash: 2,});
     board.create('text',
       [4, 1.2, () => `\
 \\(\\sin(\\alpha)=${display_value(Math.sin(alpha()))}\\)`],
@@ -197,19 +196,19 @@ render.cos = el => {
       },
     },
     defaults: {
-      point: {strokeWidth: 0, size: 0},
-      line: {strokeWidth: 1},
+      segment: {strokeWidth: 1},
     },
   }], board => {
     const ax1 = board.create('point', [1, 0], {
-       visible: false, withLabel: false,
+      withLabel: false,
     });
     const o = board.create('point', [0, 0], {
-       visible: false, withLabel: false,
+      withLabel: false,
     });
     // Place the circle.
-    const c = board.create('circle', [o, 1], {strokeColor: JXG.palette.black});
-
+    const c = board.create('circle', [o, 1], {
+      strokeWidth: 1, strokeColor: JXG.palette.black
+    });
     const angles = [];
     for (let i = 0; i < 4; ++i) {
       for (const [n, d] of [[0, 1], [1, 6], [1, 4], [1, 3]]) {
@@ -224,7 +223,7 @@ render.cos = el => {
     const attractors = angles.map(([n, d]) => {
       const a = n * Math.PI / d;
       return board.create('point', [Math.cos(a), Math.sin(a)], {
-         visible: false, withLabel: false,
+        withLabel: false,
       });
     });
     const p = board.create('glider', [0, 0, c], {
@@ -252,8 +251,8 @@ render.cos = el => {
     // Project the glider point onto the axes.
     const px = [() => p.X(), 0];
     const py = [0, () => p.Y()];
-    board.create('segment', [p, px], {dash: 2, strokeColor: JXG.palette.black});
-    board.create('segment', [p, py], {dash: 2, strokeColor: JXG.palette.black});
+    board.create('segment', [p, px], {dash: 2,});
+    board.create('segment', [p, py], {dash: 2,});
 
     // Place the elements related to the cosine.
     const cosColor = JXG.palette.red;
@@ -263,23 +262,19 @@ render.cos = el => {
         position: '0.5fr right', anchorX: 'middle', anchorY: 'top',
         distance: 0, offset: [0, -7], strokeColor: cosColor,
       },
-      strokeWidth: 2, strokeColor: cosColor,
+      strokeColor: cosColor,
     });
     board.create('curve', [a => Math.cos(a), a => a, 0, 2 * Math.PI], {
       strokeColor: cosColor,
     });
     const pcos = board.create('point', [() => p.X(), alpha], {
-      withLabel: false, fillColor: cosColor, size: 2
+      withLabel: false, fillColor: cosColor, strokeColor: cosColor, size: 2
     });
-    board.create('segment', [p, pcos], {
-      dash: 2, strokeColor: JXG.palette.black,
-    });
+    board.create('segment', [p, pcos], {dash: 2,});
     const ay = board.create('point', [0, alpha], {
-      name: '\\(\\alpha\\)', size: 0, label: {strokeColor: alphaColor},
+      name: '\\(\\alpha\\)', label: {strokeColor: alphaColor},
     });
-    board.create('segment', [ay, pcos], {
-      dash: 2, strokeColor: JXG.palette.black,
-    });
+    board.create('segment', [ay, pcos], {dash: 2,});
     board.create('text',
       [-2.5, 5.2, () => `\
 \\(\\cos(\\alpha)=${display_value(Math.cos(alpha()))}\\)`],
@@ -342,18 +337,19 @@ render.tan = el => {
       },
     },
     defaults: {
-      point: {strokeWidth: 0, size: 0},
-      line: {strokeWidth: 1},
+      segment: {strokeWidth: 1},
     },
   }], board => {
     const ax1 = board.create('point', [1, 0], {
-       visible: false, withLabel: false,
+      withLabel: false,
     });
     const o = board.create('point', [0, 0], {
-       visible: false, withLabel: false,
+      withLabel: false,
     });
     // Place the circle.
-    const c = board.create('circle', [o, 1], {strokeColor: JXG.palette.black});
+    const c = board.create('circle', [o, 1], {
+      strokeColor: JXG.palette.black, strokeWidth: 1
+    });
 
     const angles = [];
     for (let i = 0; i < 4; ++i) {
@@ -369,7 +365,7 @@ render.tan = el => {
     const attractors = angles.map(([n, d]) => {
       const a = n * Math.PI / d;
       return board.create('point', [Math.cos(a), Math.sin(a)], {
-         visible: false, withLabel: false,
+        withLabel: false,
       });
     });
     const p = board.create('glider', [0, 0, c], {
@@ -386,7 +382,7 @@ render.tan = el => {
     board.create('angle', [ax1, o, p], {
       name: '\\(\\alpha\\)', label: {strokeColor: alphaColor},
       radius: 0.2, orthoType: 'none',
-      strokeColor: alphaColor, fillColor: alphaColor, fillOpacity: 0.3,
+      strokeColor: alphaColor, fillColor: alphaColor,
     });
     board.create('segment', [o, [1, () => Math.tan(alpha())]],
       {strokeColor: alphaColor, dash: 2});
@@ -404,26 +400,26 @@ render.tan = el => {
     // Place the elements related to the tan.
     const tanColor = JXG.palette.purple;
     const ptan = board.create('point', [alpha, () => Math.tan(alpha())], {
-      withLabel: false, fillColor: tanColor, size: 2
+      withLabel: false, strokeColor: tanColor, fillColor: tanColor, size: 2
     });
     board.create('curve', [a => a, a => Math.tan(a), 0, 2 * Math.PI], {
       strokeColor: tanColor,
     });
     board.create('segment', [[0, () => Math.tan(alpha())], ptan], {
-      dash: 2, strokeColor: JXG.palette.black,
+      dash: 2,
     });
     board.create('segment', [[0, () => Math.tan(alpha())],
                              [1, () => Math.tan(alpha())]], {
-      dash: 2, strokeColor: JXG.palette.black,
+      dash: 2,
     });
     const ax = board.create('point', [alpha, 0], {
-      name: '\\(\\alpha\\)', size: 0, label: {strokeColor: alphaColor},
+      name: '\\(\\alpha\\)', label: {strokeColor: alphaColor},
     });
     board.create('segment', [ptan, ax], {
-      dash: 2, strokeColor: JXG.palette.black,
+      dash: 2,
     });
     board.create('line', [ax1, [1, 1]], {
-      dash: 2, strokeColor: JXG.palette.black
+      dash: 2,
     });
     board.create('arrow', [ax1, [1, () => Math.tan(alpha())]], {
       name: '\\(\\tan(\\alpha)\\)', withLabel: true,

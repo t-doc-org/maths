@@ -136,7 +136,10 @@ const battrs = [attrs.print, {
     },
   },
   defaults: {
-    functiongraph: {withLabel: true},
+    functiongraph: {
+      withLabel: true, strokeColor: JXG.palette.blue,
+      label: {strokeColor: JXG.palette.blue,},
+  },
   },
 }];
 render.templateSin = el => {

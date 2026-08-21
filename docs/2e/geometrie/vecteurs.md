@@ -46,8 +46,8 @@ const battrs = [attrs.screen, {
   pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
   defaults: {
     arrow: {
+      highlight: true,
       withLabel: true, fixed: false,
-      label: {anchorX: 'middle', anchorY: 'middle', offset: [-60, -20]},
     },
   },
 }];
@@ -61,15 +61,17 @@ render.vecteurs1 = el => {
 };
 render.vecteurs2 = el => {
   return initBoard(el, battrs, board => {
-    board.create('arrow', [[0, 0], [3,2]], {name: `\\(\\vec{v_1}\\)`});
+    board.create('arrow', [[0, 0], [3,2]], {
+      name: `\\(\\vec{v_1}\\)`,
+    });
     board.create('arrow', [[-4,1], [-2.5,2]], {
-      name: `\\(\\vec{v_2}\\)`, label: {offset: [-35, -5]},
+      name: `\\(\\vec{v_2}\\)`,
     });
     board.create('arrow', [[3, 3], [-3,-1]], {
-      name: `\\(\\vec{v_3}\\)`, label: {offset: [-130, -60]},
+      name: `\\(\\vec{v_3}\\)`, label: {position: '0.45fr right'},
     });
     board.create('arrow', [[-2,4], [-3.5,3]], {
-      name: `\\(\\vec{v_4}\\)`, label: {offset: [-35, -5]},
+      name: `\\(\\vec{v_4}\\)`, label: {position: '0.6fr right'},
     });
   });
 };
@@ -155,7 +157,6 @@ const battrs = [attrs.screen, attrs.nonInteractive, {
   defaults: {
     arrow: {
       withLabel: true,
-      label: {anchorX: 'middle', anchorY: 'middle', position: '0.3fr left'},
     },
     point: {visible: false},
     parallel: {strokeOpacity: 0.1},
@@ -221,7 +222,6 @@ const battrs = [attrs.screen, attrs.nonInteractive, {
   defaults: {
     arrow: {
       withLabel: true,
-      label: {anchorX: 'middle', anchorY: 'middle', position: '0.3fr left'},
     },
   },
 }];
@@ -229,7 +229,7 @@ render.baseOrthonormée = el => {
   return initBoard(el, battrs, board => {
     board.create('arrow', [[0, 0], [1,0]], {
       name: `\\(\\vec{e_1}\\)`,
-      label: {position: '0.4fr right', offset: [0, -3]},
+      label: {position: '0.5fr right', offset: [0, -3]},
     });
     board.create('arrow', [[0,0], [0,1]], {
       name: `\\(\\vec{e_2}\\)`, label: {offset: [-3, 0]},
@@ -401,7 +401,7 @@ const battrs = [attrs.screen, {
     arrow: {
       withLabel: true,
       label: {
-        anchorX: 'middle', anchorY: 'middle', position: '0.5fr left',
+        position: '0.5fr left',
         distance: 1.2,
       },
     },

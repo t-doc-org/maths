@@ -223,7 +223,7 @@ const battrs = [attrs.screen, attrs.nonInteractive, withAxesLabels([1], [1]), {
     y: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0}},
   },
   defaults: {
-    segment: {dash: 2},
+    segment: {dash: 2, strokeWidth: 1},
   },
 }];
 const f = x => -1 * x ** 2 + 4;

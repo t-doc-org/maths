@@ -16,6 +16,7 @@ attrs.screen = [{
     arrow: {
       fixed: true, highlight: false, showInfobox: false,
       strokeWidth: 2, strokeColor: JXG.palette.black,
+      label: {anchorX: 'middle', anchorY: 'middle', position: '0.4fr left'},
     },
     circle: {
       fixed: true, highlight: false, showInfobox: false,
@@ -39,10 +40,16 @@ attrs.screen = [{
       fixed: true, highlight: false, showInfobox: false,
       strokeWidth: 2, strokeColor: JXG.palette.black,
     },
+    angle: {
+      strokeWidth: 1, strokeColor: JXG.palette.black,
+      fillColor: JXG.palette.black, fillOpacity: 0.2,
+      label: {strokeColor: JXG.palette.black,
+      anchorX: 'middle', anchorY: 'middle'},
+    },
     point: {
-      // TODO: Add "withLabel: false" "size: 0"  fixed: true highlight: false showInfobox: false,
+      // TODO: Add "withLabel: false"
       fixed: true, highlight: false, showInfobox: false,
-      size: 1.5,
+      size: 0,
       strokeWidth: 1, strokeColor: JXG.palette.black,
       fillColor: JXG.palette.black,
     },
@@ -70,10 +77,43 @@ attrs.print = [attrs.nonInteractive, {
       fixed: true, highlight: false, showInfobox: false,
       strokeWidth: 2, strokeColor: JXG.palette.black
     },
+    arrow: {
+      fixed: true, highlight: false, showInfobox: false,
+      strokeWidth: 2, strokeColor: JXG.palette.black,
+      label: {anchorX: 'middle', anchorY: 'middle', position: '0.4fr left'},
+    },
+    circle: {
+      fixed: true, highlight: false, showInfobox: false,
+      strokeWidth: 2, strokeColor: JXG.palette.black,
+      label: {strokeColor: JXG.palette.black},
+    },
+    curve: {
+      fixed: true, highlight: false, showInfobox: false,
+      strokeWidth: 2, strokeColor: JXG.palette.black,
+      label: {strokeColor: JXG.palette.black},
+    },
+    functiongraph: {
+      fixed: true, highlight: false, showInfobox: false,
+      label: {strokeColor: JXG.palette.black},
+    },
+    line: {
+      fixed: true, highlight: false, showInfobox: false,
+      strokeWidth: 1, strokeColor: JXG.palette.black,
+    },
+    segment: {
+      fixed: true, highlight: false, showInfobox: false,
+      strokeWidth: 2, strokeColor: JXG.palette.black,
+    },
+    angle: {
+      strokeWidth: 1, strokeColor: JXG.palette.black,
+      fillColor: JXG.palette.black, fillOpacity: 0.2,
+      label: {strokeColor: JXG.palette.black,
+      anchorX: 'middle', anchorY: 'middle'},
+    },
     point: {
       // TODO: Change "name: ''" to "withLabel: false"
-      //withLabel: false, size: 0,
-      name: '', size: 2,
+      //withLabel: false,
+      name: '', size: 0,
       fixed: true, highlight: false, showInfobox: false,
       strokeWidth: 1, strokeColor: JXG.palette.black,
       fillColor: JXG.palette.black,

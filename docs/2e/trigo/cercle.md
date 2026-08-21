@@ -50,20 +50,7 @@ render.trigCircle = el => {
       y: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0},},
     },
     defaults: {
-      segment: {strokeColor: JXG.palette.black, strokeWidth: 1},
-      point: {
-        strokeWidth: 0, size: 0, label: {anchorY: 'top'},
-        withLabel: false,
-      },
-      angle: {
-        strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
-        fillOpacity: 0.2, strokeWidth: 1,
-        label: {
-          strokeColor: JXG.palette.black, anchorX: 'middle', anchorY: 'middle',
-        },
-      },
-      circle: {strokeColor: JXG.palette.black, strokeWidth: 1},
-      arc: {strokeColor: JXG.palette.red, strokeWidth: 3},
+      point: {label: {anchorY: 'top'}, withLabel: false,},
     },
   }], board => {
     const r = 1;
@@ -76,7 +63,9 @@ render.trigCircle = el => {
     board.create('segment', [o, ax1], {name: '\\(r\\)', withLabel: true});
 
     // Place the circle.
-    const c = board.create('circle', [o, r], {strokeColor: JXG.palette.black});
+    const c = board.create('circle', [o, r], {
+      strokeColor: JXG.palette.black, strokeWidth: 1
+    });
     const angles = [];
     for (let i = 0; i < 4; ++i) {
       for (const [n, d] of [[0, 1], [1, 6], [1, 4], [1, 3]]) {
@@ -115,11 +104,12 @@ render.trigCircle = el => {
     const py = [0, () => p.Y()];
     const ox = board.create('point', [r, 0], {visible: false});
     const arc = board.create('arc', [o, ox, p], {
-        name: '\\(l\\)', withLabel: true,
-        label: {
-          anchorX: 'right', offset: [0, -4],
-          strokeColor: JXG.palette.red,
-        },
+      strokeColor: JXG.palette.red, strokeWidth: 3,
+      name: '\\(l\\)', withLabel: true,
+      label: {
+        anchorX: 'right', offset: [0, -4],
+        strokeColor: JXG.palette.red,
+      },
     });
 
     function almostEqual(a, b) { return Math.abs(a - b) < 1e-6; }
@@ -255,29 +245,17 @@ render.cercleTrigo = el => {
       y: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0}},
     },
     defaults: {
-      segment: {strokeColor: JXG.palette.black, strokeWidth: 1},
-      line: {strokeColor: JXG.palette.black, strokeWidth: 1},
-      point: {
-        strokeWidth: 0, size: 0, label: {anchorY:'top'},
-        withLabel: false,
-      },
-      angle: {
-        strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
-        fillOpacity: 0.2, strokeWidth: 1,
-        label: {strokeColor: JXG.palette.black},
-      },
-      circle: {strokeColor: JXG.palette.black, strokeWidth: 1},
+      segment: {strokeWidth: 1},
+      point: {label: {anchorY:'top'}, withLabel: false,},
     },
   }], board => {
-    const ax1 = board.create('point', [1, 0], {
-      visible: false, withLabel: false,
-    });
-    const o = board.create('point', [0, 0], {
-       visible: false, withLabel: false,
-    });
+    const ax1 = board.create('point', [1, 0], {withLabel: false,});
+    const o = board.create('point', [0, 0], {withLabel: false,});
 
     // Place the circle.
-    const c = board.create('circle', [o, 1], {strokeColor: JXG.palette.black});
+    const c = board.create('circle', [o, 1], {
+      strokeWidth: 1, strokeColor: JXG.palette.black
+    });
     const angles = [];
     for (let i = 0; i < 4; ++i) {
         for (const [n, d] of [[0, 1], [1, 6], [1, 4], [1, 3]]) {
@@ -292,7 +270,7 @@ render.cercleTrigo = el => {
     const attractors = angles.map(([n, d]) => {
       const a = n * Math.PI / d;
       return board.create('point', [Math.cos(a), Math.sin(a)], {
-         visible: false, withLabel: false,
+         withLabel: false,
       });
     });
     const p = board.create('glider', [0.8, 0.6, c], {
@@ -307,7 +285,7 @@ render.cercleTrigo = el => {
     board.create('angle', [ax1, o, p], {
       name: '\\(\\alpha\\)', label: {strokeColor: alphaColor},
       radius: 0.2, orthoType: 'none',
-      strokeColor: alphaColor, fillColor: alphaColor, fillOpacity: 0.3,
+      strokeColor: alphaColor, fillColor: alphaColor,
     });
     board.create('segment', [o, [1, () => Math.tan(alpha())]], {
       strokeColor: alphaColor, dash: 2,
@@ -327,11 +305,9 @@ render.cercleTrigo = el => {
       label: {anchorX: 'right', anchorY: 'middle', offset: [-5, 0]},
       withLabel: true,
     });
-    board.create('segment', [p, px], {dash: 2, strokeColor: JXG.palette.black});
-    board.create('segment', [p, py], {dash: 2, strokeColor: JXG.palette.black});
-    board.create('line', [[1,0], [1, 1]], {
-      dash: 2, strokeColor: JXG.palette.black,
-    });
+    board.create('segment', [p, px], {dash: 2,});
+    board.create('segment', [p, py], {dash: 2,});
+    board.create('line', [[1,0], [1, 1]], {dash: 2,});
 
     // Place the elements related to the sine.
     const sinColor = JXG.palette.blue;
@@ -341,7 +317,7 @@ render.cercleTrigo = el => {
         position: '0.5fr left', anchorX: 'right', anchorY: 'middle',
         distance: 0, offset: [-7, 0], strokeColor: sinColor,
       },
-      strokeWidth: 2, strokeColor: sinColor,
+      strokeColor: sinColor,
     });
     board.create('text',
       [2, 5.7, () => `\\(sin(\\alpha)=${Math.sin(alpha()).toFixed(3)}\\)`],

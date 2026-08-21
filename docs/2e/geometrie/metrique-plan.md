@@ -124,25 +124,17 @@ attrs.page = [attrs.screen, {
   defaults: {
     line: {
       withLabel: false,
-      strokeColor: JXG.palette.black,
     },
     point: {
-      withLabel: false, size:0,
+      withLabel: false,
       label: {anchorX: 'middle', anchorY: 'top'}
     },
     angle: {
-      withLabel: false, strokewidth: 1, radius: 0.3,
-      strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
+      withLabel: false, radius: 0.3,
       fillOpacity: 0,
     },
-    arrow: {
-      withLabel: true,
-      strokeColor: JXG.palette.black,
-      label: {position: '0.4fr left'}
-    },
     segment: {
-      withLabel: true,
-      strokeColor: JXG.palette.black,
+      strokeWidth: 1, withLabel: true,
     },
     orthogonalprojection: {
       withLabel: true,
@@ -186,7 +178,7 @@ render.distance = el => {
       size: 0, withLabel: false,
     });
     board.create('arrow', [N2, N1], {
-      whithLabel: true, name: '\\(\\vec{n}\\)', label: {offset: [15, 0]},
+      withLabel: true, name: '\\(\\vec{n}\\)', label: {position: '0.4fr right'},
     });
   });
 };
@@ -196,14 +188,14 @@ render.bissectrices = el => {
     boundingbox: [-3, 5, 8, -2],
     axis: false, grid: false,
     defaults: {
-      line: {withLabel: true, strokeWidth: 2},
-      point: {size: 1},
+      line: {withLabel: true},
+      orthogonalprojection: {size: 0, withLabel: false},
     },
   }], board => {
-    const O = board.create('point', [0, 0], {size: 0});
-    const A = board.create('point', [-2, 0.3], {size: 0});
-    const B = board.create('point', [-2, -1], {size: 0});
-    const C = board.create('point', [4, -0.6], {size: 0});
+    const O = board.create('point', [0, 0]);
+    const A = board.create('point', [-2, 0.3]);
+    const B = board.create('point', [-2, -1]);
+    const C = board.create('point', [4, -0.6]);
     const d1 = board.create('line', [O, A], {
       name: '\\(d_1\\)', label: {offset: [0, 10]},
     });
@@ -211,28 +203,24 @@ render.bissectrices = el => {
       name: '\\(d_2\\)', label: {offset: [0, -5]},
     });
     const b1 = board.create('bisector', [A, O, B], {
-      dash: 3, name: '\\(b_1\\)', label: {offset: [0, 10]},
+      dash: 3, strokeWidth: 2, name: '\\(b_1\\)', label: {offset: [0, 10]},
     });
     const b2 = board.create('bisector', [B, O, C], {
-      dash: 3, name: '\\(b_2\\)',
+      dash: 3, strokeWidth: 2, name: '\\(b_2\\)',
       label: {position: '0.1fr right', offset: [15, 0]},
     });
     const l = board.create('line', [[5, 0], [4, 4]], {
       strokeWidth: 0, withLabel: false,
     });
     const P = board.create('intersection', [b1, l], {
-      withLabel: true, name: '\\(P\\)', label: {offset: [8, 0]},
+      withLabel: true, size: 1, name: '\\(P\\)', label: {offset: [8, 0]},
     });
-    const Pd1 = board.create('orthogonalprojection', [P, d1], {
-      size: 0, withLabel: false,
-    });
+    const Pd1 = board.create('orthogonalprojection', [P, d1]);
     const l1 = board.create('segment', [P, Pd1], {withLabel: false});
     board.create('ticks', [l1],
                  {ticksDistance: 0.75, face: '|', minorTicks: 0});
     board.create('angle', [P, Pd1, O]);
-    const Pd2 = board.create('orthogonalprojection', [P, d2], {
-      size: 0, withLabel: false,
-    });
+    const Pd2 = board.create('orthogonalprojection', [P, d2]);
     const l2 = board.create('segment', [P, Pd2], {withLabel: false});
     board.create('ticks', [l2], {ticksDistance: 0.75, minorTicks: 0});
     board.create('angle', [O, Pd2, P]);

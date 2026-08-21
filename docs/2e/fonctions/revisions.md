@@ -64,7 +64,7 @@ render.fonction = el => {
 };
 render.nonFonction = el => {
   return initBoard(el, battrs, board => {
-    const c = board.create('point', [0, 4], {visible: false, withLabel: false});
+    const c = board.create('point', [0, 4], {withLabel: false});
     board.create('circle', [c, 3.5]);
   });
 };
@@ -409,6 +409,7 @@ render.fctF = el => {
     boundingBox: [-5, 2.5, 5, -7],
     defaults: {
       point: {
+        size: 2,
         label: {anchorX: 'right', anchorY: 'bottom', offset: [-7, 0]},
       },
     },
@@ -610,8 +611,10 @@ render.fct1f = el => {
     const f1 = x => 1 / (x + 1) + 2;
     const f2 = x => x - 2;
     board.create('functiongraph', [x => x < -1.3 ? f1(x): f2(x)]);
-    board.create('point', [-1.3, f1(-1.3)]);
-    board.create('point', [-1.3, f2(-1.3)], {fillColor: JXG.palette.white});
+    board.create('point', [-1.3, f1(-1.3)], {size: 2});
+    board.create('point', [-1.3, f2(-1.3)], {
+      size: 2, fillColor: JXG.palette.white
+    });
   });
 };
 </script>
@@ -661,6 +664,9 @@ const battrs = [attrs.print, {
   defaultAxes: {
     x: {ticks: {ticksPerLabel: 5}},
     y: {ticks: {ticksPerLabel: 5}},
+  },
+  defaults: {
+    point: {size: 2}
   },
 }];
 render.fct2a = el => {

@@ -11,8 +11,8 @@ page-break-avoid-inside: 3
 ```
 
 <!-- TODO: à effacer -->
-<!--
-```{jsxgraph} testPrint
+
+<!-- ```{jsxgraph} testPrint
 :style: width: 50%; border: none;
 ```
 
@@ -396,15 +396,6 @@ render.angle = el => {
   return initBoard(el, [attrs.print, {
     boundingbox: [-1, 3, 6, -0.5],
     axis: false, grid: false,
-    defaults: {
-      segment: {strokeColor: JXG.palette.black, strokeWidth: 2},
-      point: {size: 0},
-      angle: {
-        strokeWidth: 1, strokeColor: JXG.palette.black,
-        fillColor: JXG.palette.black, fillOpacity: 0.2,
-        label: {strokeColor: JXG.palette.black},
-      },
-    },
   }], board => {
     const a = 4, b = 1.6, c = 3;
     function proj(x, y, z) {
@@ -440,7 +431,6 @@ render.angle = el => {
 
     board.create('angle', [G, A, H], {
       name: '\\(\\varphi\\)', withLabel: true,
-      label: {anchorX: 'middle', offset: [5, -15]}
     });
   });
 };
@@ -481,14 +471,8 @@ render.falaise = el => {
     boundingbox: [-1, 6, 11, -0.5],
     axis: false, grid: false,
     defaults: {
-      segment: {strokeColor: JXG.palette.black, strokeWidth: 2},
       point: {
         label: {anchorX: 'middle', anchorY:'top' ,offset: [0, 0]},
-      },
-      angle: {
-        strokeWidth: 1, strokeColor: JXG.palette.black,
-        fillColor: JXG.palette.black, fillOpacity: 0.2,
-        label: {strokeColor: JXG.palette.black},
       },
     },
   }], board => {
@@ -506,11 +490,9 @@ render.falaise = el => {
 
     board.create('angle', [C, A, B], {
       name: '\\(\\alpha\\)', withLabel: true,
-      label: {anchorX: 'middle', offset: [5, -10]}
     });
     board.create('angle', [C, B, O], {
-        name: '\\(\\beta\\)', withLabel: true,
-        label: {anchorX: 'middle', offset: [5, -15]}
+      name: '\\(\\beta\\)', withLabel: true,
     });
     board.create('angle', [B, O, C], {
       fillColor: JXG.palette.white, withLabel: false, radius: 0.4,
@@ -538,15 +520,6 @@ render.cerfVolant = el => {
   return initBoard(el, [attrs.print, {
     boundingbox: [-10, 6, 6, -6],
     axis: false, grid: false,
-    defaults: {
-      segment: {strokeColor: JXG.palette.black, strokeWidth: 2},
-      point: {size: 0, withLabel: true},
-      angle: {
-        strokeWidth: 1, strokeColor: JXG.palette.black,
-        fillColor: JXG.palette.black, fillOpacity: 0.2,
-        label: {strokeColor: JXG.palette.black},
-      },
-    },
   }], board => {
     const A = board.create('point', [-9, 0], {name: '\\(A\\)', withLabel: true,
       label: {anchorX: 'right', anchorY:'middle' ,offset: [-5, 0]}});
@@ -582,13 +555,7 @@ const {attrs, initBoard, render} = await tdoc.import('jsxgraph.js');
 attrs.page = [attrs.screen, attrs.nonInteractive, {
   axis: false, grid: false,
   defaults: {
-    point: {size: 0, withLabel: false, label: {anchorY: 'top'}},
-    segment: {strokeWidth: 2, strokeColor: JXG.palette.black},
-    angle: {
-      strokeWidth: 1, strokeColor: JXG.palette.black,
-      fillColor: JXG.palette.black, fillOpacity: 0.2,
-      label: {strokeColor: JXG.palette.black},
-    },
+    point: {withLabel: false, label: {anchorY: 'top'}},
   },
 }];
 const withLabels = {

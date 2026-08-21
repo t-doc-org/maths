@@ -153,7 +153,10 @@ render.fonctionRationnelle = el => {
     grid: {majorStep: 1},
     defaults: {
       line: {dash: 2},
-      point: {label: {anchorX: 'right', anchorY: 'bottom', offset: [-7, 0]}},
+      point: {
+        size: 2,
+        label: {anchorX: 'right', anchorY: 'bottom', offset: [-7, 0]}
+      },
     },
   }], board => {
     const f = x => (x ** 2 - 7 * x + 10) / (x ** 2 - 9);

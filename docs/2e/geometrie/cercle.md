@@ -205,20 +205,17 @@ attrs.page = [attrs.screen, {
     pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
     axis: false, grid: false,
     defaults: {
-        line: {withLabel: true,
-                strokeColor: JXG.palette.black, strokeWidth: 2
-              },
-        point: {withLabel: true, size: 1,
-                label: {anchorY:'top', anchorx: 'middle'}
-              },
-        angle: {withLabel: false,
-                strokeColor: JXG.palette.black, radius: 0.3,
-                fillColor: JXG.palette.black, fillOpacity: 0
-              },
-        circle: {withLabel: true,
-                  strokeColor: JXG.palette.black,
-                  label: {strokeColor: JXG.palette.black}
-              },
+        line: {withLabel: true, strokeWidth: 2},
+        segment: {dash: 3},
+        point: {
+          withLabel: true, size: 1,
+          label: {anchorY:'top', anchorx: 'middle'}
+        },
+        angle: {withLabel: false, radius: 0.3, fillOpacity: 0},
+        circle: {
+          withLabel: true, strokeColor: JXG.palette.black,
+              label: {strokeColor: JXG.palette.black}
+        },
     },
 }];
 
@@ -228,8 +225,8 @@ render.defCercle = el => {
     const p = board.create('glider', [Math.cos(0), Math.sin(0), c], {
       name: `\\(P\\)`, label: {offset: [10, 10]},
     });
-    board.create('segment', [O, p], {dash: 3,
-    name: `\\(r\\)`, label: {offset: [0, 10]},
+    board.create('segment', [O, p], {
+      name: `\\(r\\)`, label: {offset: [0, 10]},
   });
 });
 };
@@ -237,7 +234,7 @@ render.defCercle = el => {
 render.intersection1 = el => {
   return initBoard(el, [attrs.nonInteractive, attrs.page], board => {
     const {c, O} = cercle(board);
-    board.create('segment', [O, [3, 0]], {dash: 3,
+    board.create('segment', [O, [3, 0]], {
       name: `\\(r\\)`, label: {offset: [0, 10]},
     });
     const d = board.create('line', [[-2, 1.5], [3, -1]], {
@@ -263,7 +260,7 @@ render.intersection2 = el => {
     const T = board.create('point', [x, y], {
       name: `\\(T\\)`, label: {offset: [0, 20]},
     });
-    const r = board.create('segment', [[0, 0], T], {dash: 3,
+    const r = board.create('segment', [[0, 0], T], {
       name: `\\(r\\)`, label: {offset: [10, 0]},
     });
     const d = board.create('perpendicular', [r, T], {
@@ -276,7 +273,7 @@ render.intersection2 = el => {
 render.intersection3 = el => {
   return initBoard(el, [attrs.nonInteractive, attrs.page], board => {
     const {c, O} = cercle(board);
-    board.create('segment', [O, [3, 0]], {dash: 3,
+    board.create('segment', [O, [3, 0]], {
       name: `\\(r\\)`, label: {offset: [0, 10]},
     });
     const d = board.create('line', [[-3, 2], [0, 4]], {
@@ -300,7 +297,7 @@ render.defTangente = el => {
     let T = board.create('glider', [-1, 2, c], {
       name: `\\(T\\)`, label: {offset: [-15, 15]},
     });
-    const r = board.create('segment', [[0, 0], T], {dash: 3,
+    const r = board.create('segment', [[0, 0], T], {
       name: `\\(r\\)`, label: {offset: [10, 0]},
     });
     const d = board.create('perpendicular', [r, T], {

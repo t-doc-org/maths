@@ -45,17 +45,15 @@ render.angleVect = el => {
     axis: false, grid: true,
     defaults: {
       arrow: {
-        withLabel: true,
-        label: {anchorX: 'middle', anchorY: 'middle', offset: [-60, -20]}},
+        withLabel: true, label: {distance: 2},
+      },
       point: {
         size: 8, strokewidth: 0, fillOpacity: 0,
         highlight: true, highlightStrokeWidth: 0,
         withLabel: false, highlightFillOpacity: 0.7,
       },
       angle: {
-        withLabel: true, radius: 1, strokeColor: JXG.palette.black,
-        fillColor: JXG.palette.black, fillOpacity: 0,
-        label: {strokeColor: JXG.palette.black},
+        withLabel: true, radius: 1,
       },
     },
   }], board => {
@@ -63,14 +61,9 @@ render.angleVect = el => {
     const B = board.create('point', [3, 5], {fixed: false});
     const O = board.create('point', [0, 0], {size: 0});
     const u = board.create('arrow', [O, A], {
-      name: '\\(\\vec{u}\\)', label: {position: '0.5fr right', offset: [0, 0],
-    }});
-    const v = board.create('arrow', [O, B], {
-      name: '\\(\\vec{v}\\)', label: {position: '0.5fr left', offset: [-5, 5]},
-    });
-    board.create('angle', [A, O, B], {
-      name: '\\(\\varphi\\)', label: {offset: [-5, -5]},
-    });
+      name: '\\(\\vec{u}\\)', label: {position: '0.5fr right'}});
+    const v = board.create('arrow', [O, B], {name: '\\(\\vec{v}\\)'});
+    board.create('angle', [A, O, B], {name: '\\(\\varphi\\)'});
   });
 };
 </script>
@@ -186,20 +179,17 @@ render.projection = el => {
     axis: false, grid: false,
     defaults: {
       line: {
-        withLabel: true,
-        strokeColor: JXG.palette.black, strokeWidth: 2,
+        withLabel: true, strokeWidth: 2,
       },
       point: {
-        withLabel: true, size: 1, label: {anchorY:'top'},
+        withLabel: true, label: {anchorY:'top'},
       },
       angle: {
-        withLabel: false, radius: 0.3,
-        strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
-        fillOpacity: 0,
+        withLabel: false, radius: 0.3, fillOpacity: 0,
       },
     },
   }], board => {
-    const O = board.create('point', [0,0], {size: 0, withLabel: false});
+    const O = board.create('point', [0,0], {withLabel: false});
     const P = board.create('point', [2, 5], {
       name: `\\(P\\)`,
       highlight: true, fixed: false, size: 1, strokewidth: 1,
@@ -211,7 +201,7 @@ render.projection = el => {
       whithLabel: true, name: '\\(P\'\\)', label: {offset: [0, -5]},
     });
     board.create('segment', [P, Pd], {
-      dash: 3, withLabel: false,
+      dash: 3, strokewidth: 1, withLabel: false,
     });
     board.create('angle', [P, Pd, O]);
   });
@@ -273,19 +263,12 @@ render.exemple = el => {
     defaults: {
       arrow: {
         withLabel: true,
-        strokeColor: JXG.palette.black,
-        label: {
-          anchorX: 'middle', anchorY: 'middle', position: '0.5fr left',
-          offset: [5, 0],
-        },
       },
       segment: {
         withLabel: false, dash: 2,
-        strokeColor: JXG.palette.black,
       },
       line: {
         withLabel: false,
-        strokeColor: JXG.palette.black,
       },
       point: {
         highlight: true, fixed: false, size: 1, strokewidth: 1,
@@ -293,9 +276,7 @@ render.exemple = el => {
         highlightStrokeColor: JXG.palette.blue, highlightFillColor: JXG.palette.blue
       },
       angle: {
-        withLabel: false, strokewidth: 1, radius: 0.3,
-        strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
-        fillOpacity: 0,
+        withLabel: false, radius: 0.3, fillOpacity: 0,
       },
     },
   }], board => {
@@ -311,6 +292,7 @@ render.exemple = el => {
     board.create('line', [A, B], {dash: 3});
     const AB = board.create('arrow', [A, B], {
       name: `\\(\\overrightarrow{AB}\\)`,
+      label: {position: '0.55fr right', distance: 2.5},
     });
     const AP = board.create('arrow', [A, P], {
       name: `\\(\\overrightarrow{AP}\\)`, strokeColor: JXG.palette.red,
@@ -322,7 +304,7 @@ render.exemple = el => {
     });
     const APd = board.create('arrow', [A, Pd], {
       name: `\\(\\overrightarrow{AP'}\\)`, strokeColor: JXG.palette.red,
-      label: {strokeColor: JXG.palette.red},
+      label: {strokeColor: JXG.palette.red, position: '0.5fr right', distance: 2.5},
     });
     board.create('segment', [P, Pd], {
       dash: 3, withLabel: false
