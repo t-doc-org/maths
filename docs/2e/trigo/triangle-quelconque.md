@@ -66,12 +66,8 @@ render.utilisationSinus = el => {
     axis: false, grid: false,
     pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: false,
     defaults: {
-      segment: {
-        strokeWidth: 1,
-        name: {withLabel: false},
-      },
-      point: {withLabel: false},
-      angle: {withLabel: false},
+      segment: {strokeWidth: 1},
+      angle: {withLabel: false, radius: 0.5},
     },
   }], board => {
     const A = board.create('point', [-4, 0]);
@@ -120,7 +116,7 @@ function hauteur(fn) {
       pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: false,
       defaults: {
         segment: {
-          strokeWidth: 1,
+          strokeWidth: 1, withLabel: true,
           label: {anchorX: 'middle',offset: [0, 0]},
         },
         point: {
@@ -129,28 +125,24 @@ function hauteur(fn) {
         },
       },
       }], board => {
-      const A = board.create('point', [-1, 0], {
-        name: '\\(A\\)', withLabel: true,
-      });
-      const B = board.create('point', [3, 0], {
-        name: '\\(B\\)', withLabel: true,
-      });
+      const A = board.create('point', [-1, 0], {name: '\\(A\\)'});
+      const B = board.create('point', [3, 0], {name: '\\(B\\)'});
       const C = board.create('point', [1.5, 1.5], {
-          name: '\\(C\\)', withLabel: true, label: {anchorY: 'bottom'},
+          name: '\\(C\\)', label: {anchorY: 'bottom'},
       });
       const H = board.create('point', [1.5, 0], {
-        name: '\\(H\\)', withLabel: true, label: {anchorY: 'top'},
+        name: '\\(H\\)', label: {anchorY: 'top'},
       });
 
       board.create('segment', [A, C], {
-        name: '\\(b\\)', withLabel: true, label: {anchorY:'bottom'},
+        name: '\\(b\\)', label: {anchorY:'bottom'},
       });
       board.create('segment', [B, C], {
-        name: '\\(a\\)', withLabel: true,
+        name: '\\(a\\)',
         label: {anchorY:'bottom', offset: [2, 0]},
       });
       board.create('segment', [H, C], {
-        name: '\\(h_c\\)', withLabel: true,
+        name: '\\(h_c\\)',
         label: {anchorX: 'right', anchorY:'middle', offset: [-5, 0]},
       });
 
@@ -167,7 +159,7 @@ function hauteur(fn) {
 
 render.demoSinus = hauteur((board, A, B, C, H) => {
   board.create('segment', [A, B], {
-    name: '\\(c\\)', withLabel: true, label: {anchorY:'top'},
+    name: '\\(c\\)', label: {anchorY:'top'},
   });
   board.create('angle', [C, B, A], {
     name: '\\(\\beta\\)', radius: 0.5, label: {offset: [0, 0]},
@@ -176,10 +168,10 @@ render.demoSinus = hauteur((board, A, B, C, H) => {
 
 render.demoCosinus = hauteur((board, A, B, C, H) => {
   board.create('segment', [A, H], {
-    name: '\\(b_1\\)', withLabel: true, label: {anchorY:'top'},
+    name: '\\(b_1\\)', label: {anchorY:'top'},
   });
   board.create('segment', [H, B], {
-    name: '\\(a_1\\)', withLabel: true, label: {anchorY:'top'},
+    name: '\\(a_1\\)', label: {anchorY:'top'},
   });
 });
 
@@ -190,40 +182,34 @@ function triangle_exemple({a, b, c, alpha, beta, gamma}) {
       axis: false, grid: false,
       pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: false,
       defaults: {
-        segment: {
-          strokeWidth: 1, name: {withLabel: false},
-        },
-        point: {
-          withLabel: false,
-        },
-        angle: {
-          withLabel: false, radius: 0.5,
-        },
+        segment: {strokeWidth: 1, withLabel: true},
+        point: {withLabel: true},
+        angle: {withLabel: false, radius: 0.5},
       },
     }], board => {
       const A = board.create('point', [0, 0], {
-        name: '\\(A\\)', withLabel: true,
+        name: '\\(A\\)',
         label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]},
       });
       const B = board.create('point', [5, 0], {
-        name: '\\(B\\)', withLabel: true,
+        name: '\\(B\\)',
         label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0]},
       });
       const C = board.create('point', [2, 3], {
-        name: '\\(C\\)', withLabel: true,
+        name: '\\(C\\)',
         label: {anchorX: 'middle', anchorY: 'bottom', offset: [0, 0]},
       });
 
       board.create('segment', [A, C], {
-        name: `\\(${b ?? ''}\\)`, withLabel: true,
+        name: `\\(${b ?? ''}\\)`,
         label: {anchorX:'right', anchorY:'middle', offset: [-8, 0]},
       });
       board.create('segment', [A, B], {
-        name: `\\(${c ?? ''}\\)`, withLabel: true,
+        name: `\\(${c ?? ''}\\)`,
         label: {anchorX:'middle', anchorY:'top', offset: [0, 0]},
       });
       board.create('segment', [C, B], {
-        name: `\\(${a ?? ''}\\)`, withLabel: true,
+        name: `\\(${a ?? ''}\\)`,
         label: {anchorX:'left', anchorY:'middle', offset: [10, 0]},
       });
 
@@ -329,20 +315,8 @@ render.sinus2Sol = el => {
     axis: false, grid: false,
     pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: false,
     defaults: {
-      segment: {
-        strokeColor: JXG.palette.black, strokeWidth: 1, name: {withLabel: false},
-      },
-      line: {strokeColor: JXG.palette.black, strokeWidth: 1},
-      point: {
-        size: 0, withLabel: true, withLabel: false,
-      },
-      angle: {
-        strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
-        fillOpacity: 0.2, strokeWidth: 1, withLabel: false, radius: 0.5,
-        label: {
-          strokeColor: JXG.palette.black, anchorX: 'middle', anchorY: 'middle',
-        },
-      },
+      segment: {strokeWidth: 1},
+      angle: {radius: 0.5},
     },
   }], board => {
     const A = board.create('point', [6.8, 0], {
@@ -363,7 +337,7 @@ render.sinus2Sol = el => {
     });
     const l = board.create('line', [A, B], {straightFirst: false});
     board.create('angle', [B, A, C], {
-      name: '\\(23^\\circ\\)', withLabel: true, label: {offset: [0, -2]},
+      name: '\\(23^\\circ\\)', label: {offset: [0, -2]},
     });
     const c1 = board.create('arc', [C, D, E], {dash: 2, strokeWidth: 1});
     const B1 = board.create('intersection', [c1, l, 0], {
@@ -399,12 +373,12 @@ render.sinus2Sol = el => {
       },
     });
     board.create('angle', [C, B1, A], {
-      name: '\\(\\beta_1\\)', withLabel: true,
+      name: '\\(\\beta_1\\)',
       strokeColor: JXG.palette.red, fillColor: JXG.palette.red,
       label: {strokeColor: JXG.palette.red},
     });
     board.create('angle', [C, B2, A], {
-      name: '\\(\\beta_2\\)', withLabel: true,
+      name: '\\(\\beta_2\\)',
       strokeColor: JXG.palette.red, fillColor: JXG.palette.red,
       label: {strokeColor: JXG.palette.red},
     });
@@ -488,27 +462,16 @@ render.utilisationCosinus = el => {
     axis: false, grid: false,
     pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: false,
     defaults: {
-      segment: {
-        strokeColor: JXG.palette.black, strokeWidth: 1,
-        name: {withLabel: false},
-      },
-      line: {strokeColor: JXG.palette.black, strokeWidth: 1},
-      point: {
-        size: 0, withLabel: true, withLabel: false,
-      },
-      angle: {
-        strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
-        fillOpacity: 0.2, strokeWidth: 1, withLabel: false, radius: 0.5,
-      },
+      angle: {radius: 0.5, withLabel: false},
     },
   }], board => {
     const A = board.create('point', [-4, 0]);
     const B = board.create('point', [-4.5, 3]);
     const C = board.create('point', [-1, 1.5]);
 
-    board.create('segment', [A, C], {strokeWidth: 2});
-    board.create('segment', [A, B], {strokeWidth: 2});
-    board.create('segment', [B, C], {dash: 2});
+    board.create('segment', [A, C]);
+    board.create('segment', [A, B]);
+    board.create('segment', [B, C], {dash: 2, strokeWidth: 1});
 
     board.create('angle', [C, A, B]);
 
@@ -516,9 +479,9 @@ render.utilisationCosinus = el => {
     const E = board.create('point', [2.5, 3]);
     const F = board.create('point', [4.5, 0.5]);
 
-    board.create('segment', [E, F], {strokeWidth: 2});
-    board.create('segment', [D, E], {strokeWidth: 2});
-    board.create('segment', [F, D], {strokeWidth: 2});
+    board.create('segment', [E, F]);
+    board.create('segment', [D, E]);
+    board.create('segment', [F, D]);
   });
 };
 </script>

@@ -122,24 +122,9 @@ const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
 attrs.page = [attrs.screen, {
   axis: false, grid: false,
   defaults: {
-    line: {
-      withLabel: false,
-    },
-    point: {
-      withLabel: false,
-      label: {anchorX: 'middle', anchorY: 'top'}
-    },
-    angle: {
-      withLabel: false, radius: 0.3,
-      fillOpacity: 0,
-    },
-    segment: {
-      strokeWidth: 1, withLabel: true,
-    },
-    orthogonalprojection: {
-      withLabel: true,
-      strokeColor: JXG.palette.black,
-    },
+    point: {label: {anchorX: 'middle', anchorY: 'top'}},
+    angle: {withLabel: false, radius: 0.3, fillOpacity: 0},
+    segment: {withLabel: false, strokeWidth: 1},
   },
 }];
 
@@ -166,19 +151,19 @@ render.distance = el => {
       name: '\\(P\'\\)', label: {offset: [0, -5]},
     });
     board.create('segment', [P, Pd], {
-      whithLabel: true, name: '\\(\\delta(P;d)\\)', label: {offset: [5, -5]},
+      withLabel: true, name: '\\(\\delta(P;d)\\)', label: {offset: [5, -5]},
     });
     board.create('angle', [P, Pd, A]);
     const N1 = board.create('point', [10, 1], {
       fixed: false, highlight: true,
       size: 8, strokewidth: 0, fillOpacity: 0, highlightStrokeWidth: 0,
-      withLabel: false, highlightFillOpacity: 0.7,
+      highlightFillOpacity: 0.7,
     });
     const N2 = board.create('orthogonalprojection', [N1, d], {
       size: 0, withLabel: false,
     });
     board.create('arrow', [N2, N1], {
-      withLabel: true, name: '\\(\\vec{n}\\)', label: {position: '0.4fr right'},
+      name: '\\(\\vec{n}\\)', label: {position: '0.4fr right'},
     });
   });
 };
@@ -216,12 +201,12 @@ render.bissectrices = el => {
       withLabel: true, size: 1, name: '\\(P\\)', label: {offset: [8, 0]},
     });
     const Pd1 = board.create('orthogonalprojection', [P, d1]);
-    const l1 = board.create('segment', [P, Pd1], {withLabel: false});
+    const l1 = board.create('segment', [P, Pd1]);
     board.create('ticks', [l1],
                  {ticksDistance: 0.75, face: '|', minorTicks: 0});
     board.create('angle', [P, Pd1, O]);
     const Pd2 = board.create('orthogonalprojection', [P, d2]);
-    const l2 = board.create('segment', [P, Pd2], {withLabel: false});
+    const l2 = board.create('segment', [P, Pd2]);
     board.create('ticks', [l2], {ticksDistance: 0.75, minorTicks: 0});
     board.create('angle', [O, Pd2, P]);
   });

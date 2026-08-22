@@ -171,14 +171,14 @@ rayon $r > 0$ au point $T(x_1; y_1)$ est donnée par
 ### Exemple {num2}`exemple`
 
 Soit le cercle $\Gamma: (x + 2)^2 + (y - 4)^2 = 25$, calculez la droite
-tangente à ce cercle au point $T({\color{blue}2}; {\color{green}1})$.
+tangente à ce cercle au point $T({\color{purple}2}; {\color{green}1})$.
 
 Le centre du cercle est $C(-2; 4)$.
 
 Selon la définition ci-dessus:
 
 $$
-({\color{blue}2} - (-2))(x - (-2)) + ({\color{green}1} - 4)(y - 4) &= 25\\
+({\color{purple}2} - (-2))(x - (-2)) + ({\color{green}1} - 4)(y - 4) &= 25\\
 4(x + 2) - 3(y - 4) &= 25\\
 4x + 8 - 3y + 12 &= 25\\
 4x - 3y - 5 &= 0

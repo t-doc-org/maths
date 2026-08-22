@@ -59,7 +59,9 @@ const battrs = [attrs.screen, attrs.nonInteractive, {
 }];
 render.fonction = el => {
   return initBoard(el, battrs, board => {
-    board.create('functiongraph', [x => x ** 3 / 2 - 3 * x + 5]);
+    board.create('functiongraph', [x => x ** 3 / 2 - 3 * x + 5], {
+      withLabel: false,
+    });
   });
 };
 render.nonFonction = el => {
@@ -106,15 +108,14 @@ const battrs = [attrs.screen, attrs.nonInteractive, withAxesLabels([1], [1]), {
     y: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0}},
   },
   defaults: {
-    segment: {dash: 2, strokeColor: JXG.palette.red},
-    point: {size: 1, withLabel: false,
-      strokeColor: JXG.palette.red, fillColor: JXG.palette.red},
+    segment: {dash: 2, strokeWidth: 1, strokeColor: JXG.palette.red},
+    point: {size: 1, strokeColor: JXG.palette.red, fillColor: JXG.palette.red},
   },
 }];
 render.fonctionRacine = el => {
   return initBoard(el, battrs, board => {
     board.create('functiongraph', [x => Math.sqrt(-x+6)], {
-      name: `\\(f\\)`, withLabel: true,
+      name: `\\(f\\)`,
       label: {position: '0.2fr right', offset: [0, 5]},
     });
     board.create('segment', [[5,0],[5,1]]);
@@ -126,7 +127,7 @@ render.fonctionRacine = el => {
 render.droite = el => {
   return initBoard(el, battrs, board => {
     board.create('functiongraph', [x => -x / 3 + 2], {
-      name: `\\(f\\)`, withLabel: true,
+      name: `\\(f\\)`,
       label: {position: '0.2fr right', offset: [0, 3]},
     });
     board.create('point', [0,2]);
@@ -136,7 +137,7 @@ render.droite = el => {
 render.constante = el => {
   return initBoard(el, battrs, board => {
     board.create('functiongraph', [x => 3/2], {
-      name: `\\(f\\)`, withLabel: true,
+      name: `\\(f\\)`,
       label: {position: '0.2fr right', offset: [0, 3]},
     });
     board.create('point', [0,1.5]);
@@ -416,7 +417,7 @@ render.fctF = el => {
   }], board => {
     const f = x => 4 * x ** 2 - 2 * x -6;
     board.create('functiongraph', [f], {
-      name: `\\(f\\)`, withLabel: true,
+      name: `\\(f\\)`,
       label: {position: '0.635fr right'},
     });
     board.create('point', [0.25, f(0.25)], {
@@ -580,6 +581,9 @@ const battrs = [attrs.print, {
     x: {ticks: {drawLabels: false}},
     y: {ticks: {drawLabels: false}},
   },
+  defaults: {
+    functiongraph: {withLabel: false},
+  },
 }];
 render.fct1a = el => {
   return initBoard(el, battrs, board => {
@@ -666,7 +670,8 @@ const battrs = [attrs.print, {
     y: {ticks: {ticksPerLabel: 5}},
   },
   defaults: {
-    point: {size: 2}
+    point: {size: 2},
+    functiongraph: {withLabel: false},
   },
 }];
 render.fct2a = el => {
@@ -828,6 +833,9 @@ render.droites = el => {
     defaultAxes: {
       x: {ticks: {ticksPerLabel: 5}},
       y: {ticks: {ticksPerLabel: 5}},
+    },
+    defaults: {
+      functiongraph: {withLabel: false},
     },
   }], board => {
     const fns = {

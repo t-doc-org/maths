@@ -50,16 +50,12 @@ render.trigCircle = el => {
       y: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0},},
     },
     defaults: {
-      point: {label: {anchorY: 'top'}, withLabel: false,},
+      point: {label: {anchorY: 'top'}},
     },
   }], board => {
     const r = 1;
-    const ax1 = board.create('point', [1, 0], {
-       visible: false, withLabel: false,
-    });
-    const o = board.create('point', [0, 0], {
-       visible: false, withLabel: false,
-    });
+    const ax1 = board.create('point', [1, 0]);
+    const o = board.create('point', [0, 0]);
     board.create('segment', [o, ax1], {name: '\\(r\\)', withLabel: true});
 
     // Place the circle.
@@ -79,9 +75,7 @@ render.trigCircle = el => {
     const alphaColor = JXG.palette.green;
     const attractors = angles.map(([n, d]) => {
       const a = n * Math.PI / d;
-      return board.create('point', [Math.cos(a), Math.sin(a)], {
-         visible: false, withLabel: false,
-      });
+      return board.create('point', [Math.cos(a), Math.sin(a)]);
     });
     const p = board.create('glider', [Math.cos(1), Math.sin(1), c], {
       strokeColor: alphaColor, fillColor: alphaColor,
@@ -102,7 +96,7 @@ render.trigCircle = el => {
     // Project the glider point onto the axes.
     const px = [() => p.X(), 0];
     const py = [0, () => p.Y()];
-    const ox = board.create('point', [r, 0], {visible: false});
+    const ox = board.create('point', [r, 0]);
     const arc = board.create('arc', [o, ox, p], {
       strokeColor: JXG.palette.red, strokeWidth: 3,
       name: '\\(l\\)', withLabel: true,
@@ -246,11 +240,11 @@ render.cercleTrigo = el => {
     },
     defaults: {
       segment: {strokeWidth: 1},
-      point: {label: {anchorY:'top'}, withLabel: false,},
+      point: {label: {anchorY:'top'}},
     },
   }], board => {
-    const ax1 = board.create('point', [1, 0], {withLabel: false,});
-    const o = board.create('point', [0, 0], {withLabel: false,});
+    const ax1 = board.create('point', [1, 0]);
+    const o = board.create('point', [0, 0]);
 
     // Place the circle.
     const c = board.create('circle', [o, 1], {
@@ -269,9 +263,7 @@ render.cercleTrigo = el => {
     const alphaColor = JXG.palette.green;
     const attractors = angles.map(([n, d]) => {
       const a = n * Math.PI / d;
-      return board.create('point', [Math.cos(a), Math.sin(a)], {
-         withLabel: false,
-      });
+      return board.create('point', [Math.cos(a), Math.sin(a)]);
     });
     const p = board.create('glider', [0.8, 0.6, c], {
       strokeColor: alphaColor, fillColor: alphaColor,
@@ -312,7 +304,7 @@ render.cercleTrigo = el => {
     // Place the elements related to the sine.
     const sinColor = JXG.palette.blue;
     board.create('arrow', [o, py], {
-      name: '\\(\\sin(\\alpha)\\)', withLabel: true,
+      name: '\\(\\sin(\\alpha)\\)',
       label: {
         position: '0.5fr left', anchorX: 'right', anchorY: 'middle',
         distance: 0, offset: [-7, 0], strokeColor: sinColor,
@@ -326,7 +318,7 @@ render.cercleTrigo = el => {
     // Place the elments related to the cosine.
     const cosColor = JXG.palette.red;
     board.create('arrow', [o, px], {
-      name: '\\(\\cos(\\alpha)\\)', withLabel: true,
+      name: '\\(\\cos(\\alpha)\\)',
       label: {
         position: '0.5fr right', anchorX: 'middle', anchorY: 'top',
         distance: 0, offset: [0, -7], strokeColor: cosColor,
@@ -344,7 +336,7 @@ render.cercleTrigo = el => {
     });
     const tanColor = JXG.palette.purple;
     board.create('arrow', [ax1, t], {
-      name: '\\(\\tan(\\alpha)\\)', withLabel: true,
+      name: '\\(\\tan(\\alpha)\\)',
       label: {
         position: '0.5fr right', anchorX: 'left', anchorY: 'middle',
         distance: 0, offset: [7, 0], strokeColor: tanColor,
@@ -629,14 +621,7 @@ const battrs = [attrs.print, {
   boundingBox: [-1.5, 1.5, 1.5, -1.5],
   axis: true, grid: false,
   defaults: {
-    segment: {strokeWidth: 2, strokeColor: JXG.palette.black},
-    line: {strokeWidth: 1, strokeColor: JXG.palette.black},
-    point: {size: 0, label: {anchorY: 'top'}},
-    angle: {
-      strokeWidth: 1, strokeColor: JXG.palette.black,
-      fillColor: JXG.palette.black, fillOpacity: 0.2,
-      label: {strokeColor: JXG.palette.black},
-    },
+    point: {label: {anchorY: 'top'}},
     circle: {strokeWidth: 1, strokeColor: JXG.palette.black},
   },
 }];
@@ -650,28 +635,28 @@ render.exoDegres = el => {
     const a = board.create('point', [Math.cos(alpha), Math.sin(alpha)]);
     board.create('segment', [o, a]);
     board.create('angle', [x, o, a], {
-      name: '\\(45^\\circ\\)', withLabel: true, radius: 0.2,
+      name: '\\(45^\\circ\\)', radius: 0.2,
       label: {anchorX: 'left', anchorY: 'middle', offset: [4, 4]}
     });
     const beta = -440 / 360 * 2 * Math.PI;
     const b = board.create('point', [Math.cos(beta), Math.sin(beta)]);
     board.create('segment', [o, b]);
     board.create('angle', [b, o, x], {
-      name: '\\(-440^\\circ\\)', withLabel: true, radius: 0.3,
+      name: '\\(-440^\\circ\\)', radius: 0.3,
       label: {anchorX: 'middle', anchorY: 'middle', offset: [3, -3]}
     });
     const gamma = 200 / 360 * 2 * Math.PI;
     const c = board.create('point', [Math.cos(gamma), Math.sin(gamma)]);
     board.create('segment', [o, c]);
     board.create('angle', [x, o, c], {
-      name: '\\(200^\\circ\\)', withLabel: true, radius: 0.25,
+      name: '\\(200^\\circ\\)', radius: 0.25,
       label: {anchorX: 'right', anchorY: 'bottom', offset: [0,-15]}
     });
     board.create('line', [[1,0], [1,2]], {
       dash: 3
     });
     const ta = board.create('point', [1, Math.tan(alpha)], {
-      name: '\\(\\tan(45^\\circ)\\)',
+      name: '\\(\\tan(45^\\circ)\\)', withLabel: true,
       label: {anchorX: 'middle', anchorY: 'bottom', offset: [0, 5]},
       size: 1
     });
@@ -679,7 +664,7 @@ render.exoDegres = el => {
       dash: 2, strokeWidth: 1,
     });
     const sb = board.create('point', [0, Math.sin(beta)], {
-      name: '\\(\\sin(-440^\\circ)\\)',
+      name: '\\(\\sin(-440^\\circ)\\)', withLabel: true,
       label: {anchorX: 'left', anchorY: 'top', offset: [3, 0]},
       size: 1
     });
@@ -687,7 +672,7 @@ render.exoDegres = el => {
       dash: 2, strokeWidth: 1,
     });
     const cc = board.create('point', [Math.cos(gamma), 0], {
-      name: '\\(\\cos(200^\\circ)\\)',
+      name: '\\(\\cos(200^\\circ)\\)', withLabel: true,
       label: {anchorX: 'left', anchorY: 'bottom', offset: [0, 5]},
       size: 1
     });
@@ -705,28 +690,28 @@ render.exoRadians = el => {
     const a = board.create('point', [Math.cos(alpha), Math.sin(alpha)]);
     board.create('segment', [o, a]);
     board.create('angle', [x, o, a], {
-      name: '\\(\\dfrac{7\\pi}{3}\\)', withLabel: true, radius: 0.2,
+      name: '\\(\\dfrac{7\\pi}{3}\\)', radius: 0.2,
       label: {anchorX: 'left', anchorY: 'middle', offset: [4, 4]}
     });
     const beta = -5 * Math.PI / 6;
     const b = board.create('point', [Math.cos(beta), Math.sin(beta)]);
     board.create('segment', [o, b]);
     board.create('angle', [b, o, x], {
-      name: '\\(-\\dfrac{5\\pi}{6}\\)', withLabel: true, radius: 0.3,
+      name: '\\(-\\dfrac{5\\pi}{6}\\)', radius: 0.3,
       label: {anchorX: 'middle', anchorY: 'middle', offset: [3, -5]}
     });
     const gamma = 13 * Math.PI;
     const c = board.create('point', [Math.cos(gamma), Math.sin(gamma)]);
     board.create('segment', [o, c]);
     board.create('angle', [x, o, c], {
-      name: '\\(13\\pi\\)', withLabel: true, radius: 0.25,
+      name: '\\(13\\pi\\)', radius: 0.25,
       label: {anchorX: 'right', anchorY: 'bottom', offset: [0,-15]}
     });
         board.create('line', [[1,0], [1,2]], {
       dash: 3
     });
     const tb = board.create('point', [1, Math.tan(beta)], {
-      name: '\\(\\tan(-\\dfrac{5\\pi}{6})\\)',
+      name: '\\(\\tan(-\\dfrac{5\\pi}{6})\\)', withLabel: true,
       label: {anchorX: 'middle', anchorY: 'bottom', offset: [0, 5]},
       size: 1
     });
@@ -734,7 +719,7 @@ render.exoRadians = el => {
       dash: 2, strokeWidth: 1,
     });
     const sa = board.create('point', [0, Math.sin(alpha)], {
-      name: '\\(\\sin(\\dfrac{7\\pi}{3})\\)',
+      name: '\\(\\sin(\\dfrac{7\\pi}{3})\\)', withLabel: true,
       label: {anchorX: 'right', anchorY: 'top', offset: [0, 5]},
       size: 1
     });
@@ -742,7 +727,7 @@ render.exoRadians = el => {
       dash: 2, strokeWidth: 1,
     });
     const cc = board.create('point', [Math.cos(gamma), 0], {
-      name: '\\(\\cos(13\\pi)\\)',
+      name: '\\(\\cos(13\\pi)\\)', withLabel: true,
       label: {anchorX: 'left', anchorY: 'bottom', offset: [5, 0]},
       size: 1
     });

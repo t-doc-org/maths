@@ -10,51 +10,6 @@ page-break-force: 2
 page-break-avoid-inside: 3
 ```
 
-<!-- TODO: à effacer -->
-
-<!-- ```{jsxgraph} testPrint
-:style: width: 50%; border: none;
-```
-
-```{jsxgraph} testScreen
-:style: width: 50%; border: none;
-```
-
-<script type="module">
-const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
-render.testPrint = el => {
-  return initBoard(el, [attrs.print, {
-    boundingbox: [-6, 6, 6, -6],
-    axis: false, grid: false,
-    defaults: {
-    },
-  }], board => {
-    const o = board.create('point', [0, 0]);
-    const p = board.create('point', [0, 2]);
-    board.create('segment',  [[0,1], [3, 4]]);
-    board.create('circle', [o, p]);
-    board.create('circle', [[0,2], [2, 5]]);
-  });
-};
-
-render.testScreen = el => {
-  return initBoard(el, [attrs.screen, {
-    boundingbox: [-6, 6, 6, -6],
-    axis: false, grid: false,
-    defaults: {
-    },
-  }], board => {
-    const o = board.create('point', [0, 0]);
-    const x = board.create('point', [1, 0]);
-    const c = board.create('circle', [o, x]);
-    const p = board.create('glider', [Math.cos(Math.PI/4), Math.sin(Math.PI/4), c]);
-    board.create('segment',  [[0,1], [3, 4]]);
-    board.create('circle', [[0,2], [2, 5]]);
-  });
-};
-</script>
- -->
-
 ## Théorie
 
 ### Trigonométrie dans le triangle rectangle
@@ -430,7 +385,7 @@ render.angle = el => {
     board.create('segment', [G, A], {strokeWidth: 1});
 
     board.create('angle', [G, A, H], {
-      name: '\\(\\varphi\\)', withLabel: true,
+      name: '\\(\\varphi\\)',
     });
   });
 };
@@ -489,10 +444,10 @@ render.falaise = el => {
     board.create('segment', [A, C]);
 
     board.create('angle', [C, A, B], {
-      name: '\\(\\alpha\\)', withLabel: true,
+      name: '\\(\\alpha\\)',
     });
     board.create('angle', [C, B, O], {
-      name: '\\(\\beta\\)', withLabel: true,
+      name: '\\(\\beta\\)',
     });
     board.create('angle', [B, O, C], {
       fillColor: JXG.palette.white, withLabel: false, radius: 0.4,
@@ -555,14 +510,14 @@ const {attrs, initBoard, render} = await tdoc.import('jsxgraph.js');
 attrs.page = [attrs.screen, attrs.nonInteractive, {
   axis: false, grid: false,
   defaults: {
-    point: {withLabel: false, label: {anchorY: 'top'}},
+    point: {label: {anchorY: 'top'}},
+    angle: {radius: 0.7},
   },
 }];
 const withLabels = {
   defaults: {
     point: {withLabel: true},
     segment: {withLabel: true},
-    angle: {withLabel: true},
   },
 };
 render.triangle = el => {
@@ -587,15 +542,9 @@ render.triangle = el => {
     const a = board.create('segment', [B, C], {
       name: '\\(a\\)', label: {anchorX: 'left', offset: [8, 8]}
     });
-    const alpha = board.create('angle', [B, A, C], {
-      name: '\\(\\alpha\\)', label: {anchorX: 'middle', offset: [-28, -6]}
-    });
-    const beta = board.create('angle', [C, B, A], {
-      name: '\\(\\beta\\)', label: {anchorX: 'middle', offset: [30, -26]}
-    });
-    const gamma = board.create('angle', [A, C, B], {
-      name: '\\(\\gamma\\)', label: {anchorX: 'middle', offset: [4, 24]}
-    });
+    const alpha = board.create('angle', [B, A, C], {name: '\\(\\alpha\\)'});
+    const beta = board.create('angle', [C, B, A], {name: '\\(\\beta\\)'});
+    const gamma = board.create('angle', [A, C, B], {name: '\\(\\gamma\\)'});
   });
 };
 render.triangleRectangle = el => {
@@ -622,15 +571,11 @@ render.triangleRectangle = el => {
       name: '\\(a\\)',
       label: {anchorX: 'right', anchorY: 'middle', offset: [-8, 0]}
     });
-    const alpha = board.create('angle', [B, A, C], {
-      name: '\\(\\alpha\\)', label: {anchorX: 'middle', offset: [25, -16]}
-    });
-    const beta = board.create('angle', [C, B, A], {
-      name: '\\(\\beta\\)', label: {anchorX: 'middle', offset: [-18, 32]}
-    });
+    const alpha = board.create('angle', [B, A, C], {name: '\\(\\alpha\\)'});
+    const beta = board.create('angle', [C, B, A], {name: '\\(\\beta\\)'});
     const gamma = board.create('angle', [A, C, B], {
       name: '\\(\\gamma\\)', radius: 0.6,
-      label: {anchorX: 'middle', offset: [-15, -15]}
+      label: {offset: [-15, -15]}
     });
   });
 };
@@ -658,12 +603,8 @@ render.triangleRectangleC = el => {
       name: '\\(18\\,cm\\)',
         label: {anchorX: 'right', anchorY: 'middle', offset: [-8, 0]}
     });
-    const alpha = board.create('angle', [B, A, C], {
-      name: '\\(\\alpha\\)', label: {anchorX: 'middle', offset: [25, -16]}
-    });
-    const beta = board.create('angle', [C, B, A], {
-      name: '\\(\\beta\\)', label: {anchorX: 'middle', offset: [-15, 25]}
-    });
+    const alpha = board.create('angle', [B, A, C], {name: '\\(\\alpha\\)'});
+    const beta = board.create('angle', [C, B, A], {name: '\\(\\beta\\)'});
     const gamma = board.create('angle', [A, C, B], {
       name: '\\(90^\\circ\\)', radius: 0.6,
       label: {anchorX: 'middle', offset: [-14, -15]}
@@ -699,18 +640,11 @@ render.triangleRectangleA = el => {
       name: '\\(90^\\circ\\)',  radius: 0.6,
         label: {anchorX: 'middle', offset: [-14, -15]}
     });
-    const beta = board.create('angle', [C, B, A], {
-      name: '\\(\\beta\\)', label: {anchorX: 'middle', offset: [25, -20]}
-    });
-    const gamma = board.create('angle', [A, C, B], {
-      name: '\\(30^\\circ\\)', label: {anchorX: 'middle', offset: [-10, 22]}
-    });
+    const beta = board.create('angle', [C, B, A], {name: '\\(\\beta\\)'});
+    const gamma = board.create('angle', [A, C, B], {name: '\\(30^\\circ\\)'});
   });
 };
-</script>
 
-<script type="module">
-const {attrs, initBoard, render} = await tdoc.import('jsxgraph.js');
 render.triangleIsoRect = el => {
   return initBoard(el, [attrs.page, {
     boundingBox: [-0.5, 4.5, 4.5, -0.5],
@@ -734,11 +668,11 @@ render.triangleIsoRect = el => {
     board.create('segment', [B, C], {dash: 3});
     board.create('segment', [C, D], {dash: 3});
     board.create('angle', [D, B, A], {
-      name: '\\(45^\\circ\\)', radius: 0.6, withLabel: true,
+      name: '\\(45^\\circ\\)', radius: 0.6,
       label: {anchorX: 'middle', anchorY: 'middle'},
     });
     board.create('angle', [A, D, B], {
-      name: '\\(45^\\circ\\)', radius: 0.6, withLabel: true,
+      name: '\\(45^\\circ\\)', radius: 0.6,
       label: {anchorX: 'middle', anchorY: 'middle', offset: [0, 0]},
     });
     board.create('angle', [B, A, D], {
@@ -749,10 +683,7 @@ render.triangleIsoRect = el => {
     });
   });
 };
-</script>
 
-<script type="module">
-const {attrs, initBoard, render} = await tdoc.import('jsxgraph.js');
 render.triangleEqui = el => {
   return initBoard(el, [attrs.page, {
     boundingBox: [-0.5, 4.5, 4.5, -1],
@@ -776,11 +707,11 @@ render.triangleEqui = el => {
     board.create('segment', [D, B], {dash: 3});
     board.create('segment', [B, C], {dash: 3});
     board.create('angle', [D, A, C], {
-      name: '\\(60^\\circ\\)', radius: 0.6, withLabel: true,
+      name: '\\(60^\\circ\\)', radius: 0.6,
       label: {anchorX: 'middle', anchorY: 'middle'},
     });
     board.create('angle', [A, C, D], {
-      name: '\\(30^\\circ\\)', radius: 0.6, withLabel: true,
+      name: '\\(30^\\circ\\)', radius: 0.6,
       label: {anchorX: 'middle', anchorY: 'middle', offset: [0.5, -6]},
     });
     board.create('angle', [C, D, A], {

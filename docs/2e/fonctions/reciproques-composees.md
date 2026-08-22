@@ -61,15 +61,14 @@ const battrs = [attrs.screen, attrs.nonInteractive, withAxesLabels([1], [1]), {
   },
   defaults: {
     line: {dash: 2, strokeOpacity: 0.3},
-    point: {size: 0.5, withLabel: false},
+    point: {size: 0.5},
   },
 }];
 render.droiteTheorie = el => {
   return initBoard(el, battrs, board => {
     const f = x => 2 * x - 1;
     board.create('functiongraph', [f], {
-      name: `\\(f\\)`, withLabel: true,
-      label: {position: '0.35fr right'}
+      name: `\\(f\\)`, label: {position: '0.35fr right'}
     });
     for (const x of [-3, -2, -1, 0, 1, 2, 3]) {
       board.create('point', [x, f(x)]);
@@ -80,7 +79,7 @@ render.reciproqueTheorie = el => {
   return initBoard(el, battrs, board => {
     const g = x => x / 2 + 1 / 2;
     board.create('functiongraph', [g], {
-      name: `\\(g\\)`, withLabel: true, strokeColor: JXG.palette.red,
+      name: `\\(g\\)`, strokeColor: JXG.palette.red,
       label: {position: '0.1fr left', strokeColor: JXG.palette.red}
     });
     for (const x of [-7, -5, -3, -1, 1, 3, 5]) {
@@ -88,7 +87,7 @@ render.reciproqueTheorie = el => {
     }
     board.create('functiongraph', [x => 2 * x - 1], {
       strokeOpacity: 0.3,
-      name: `\\(f\\)`, withLabel: true,
+      name: `\\(f\\)`,
       label: {position: '0.35fr right'}
     });
     board.create('line', [0, 1, -1]);

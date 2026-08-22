@@ -55,12 +55,8 @@ render.sin = el => {
       segment: {strokeWidth: 1},
     },
   }], board => {
-    const ax1 = board.create('point', [1, 0], {
-      withLabel: false,
-    });
-    const o = board.create('point', [0, 0], {
-      withLabel: false,
-    });
+    const ax1 = board.create('point', [1, 0]);
+    const o = board.create('point', [0, 0]);
     // Place the circle.
     const c = board.create('circle', [o, 1], {
       strokeWidth:1, strokeColor: JXG.palette.black
@@ -79,9 +75,7 @@ render.sin = el => {
     const alphaColor = JXG.palette.green;
     const attractors = angles.map(([n, d]) => {
       const a = n * Math.PI / d;
-      return board.create('point', [Math.cos(a), Math.sin(a)], {
-         visible: false, withLabel: false,
-      });
+      return board.create('point', [Math.cos(a), Math.sin(a)]);
     });
     const p = board.create('glider', [0, 0, c], {
       name: '\\(P\\)', label: {strokeColor: alphaColor},
@@ -125,13 +119,13 @@ render.sin = el => {
       strokeColor: sinColor,
     });
     const psin = board.create('point', [alpha, () => p.Y()], {
-      withLabel: false, fillColor: sinColor, strokeColor: sinColor, size: 2,
+      fillColor: sinColor, strokeColor: sinColor, size: 2,
     });
     board.create('segment', [p, psin], {
       dash: 2,
     });
     const ax = board.create('point', [alpha, 0], {
-      name: '\\(\\alpha\\)', label: {strokeColor: alphaColor},
+      name: '\\(\\alpha\\)', withLabel: true, label: {strokeColor: alphaColor},
     });
     board.create('segment', [psin, ax], {dash: 2,});
     board.create('text',
@@ -199,12 +193,8 @@ render.cos = el => {
       segment: {strokeWidth: 1},
     },
   }], board => {
-    const ax1 = board.create('point', [1, 0], {
-      withLabel: false,
-    });
-    const o = board.create('point', [0, 0], {
-      withLabel: false,
-    });
+    const ax1 = board.create('point', [1, 0]);
+    const o = board.create('point', [0, 0]);
     // Place the circle.
     const c = board.create('circle', [o, 1], {
       strokeWidth: 1, strokeColor: JXG.palette.black
@@ -222,9 +212,7 @@ render.cos = el => {
     const alphaColor = JXG.palette.green;
     const attractors = angles.map(([n, d]) => {
       const a = n * Math.PI / d;
-      return board.create('point', [Math.cos(a), Math.sin(a)], {
-        withLabel: false,
-      });
+      return board.create('point', [Math.cos(a), Math.sin(a)]);
     });
     const p = board.create('glider', [0, 0, c], {
       strokeColor: alphaColor, fillColor: alphaColor,
@@ -268,11 +256,11 @@ render.cos = el => {
       strokeColor: cosColor,
     });
     const pcos = board.create('point', [() => p.X(), alpha], {
-      withLabel: false, fillColor: cosColor, strokeColor: cosColor, size: 2
+      fillColor: cosColor, strokeColor: cosColor, size: 2
     });
     board.create('segment', [p, pcos], {dash: 2,});
     const ay = board.create('point', [0, alpha], {
-      name: '\\(\\alpha\\)', label: {strokeColor: alphaColor},
+      name: '\\(\\alpha\\)', withlabel: true, label: {strokeColor: alphaColor},
     });
     board.create('segment', [ay, pcos], {dash: 2,});
     board.create('text',
@@ -340,12 +328,8 @@ render.tan = el => {
       segment: {strokeWidth: 1},
     },
   }], board => {
-    const ax1 = board.create('point', [1, 0], {
-      withLabel: false,
-    });
-    const o = board.create('point', [0, 0], {
-      withLabel: false,
-    });
+    const ax1 = board.create('point', [1, 0]);
+    const o = board.create('point', [0, 0]);
     // Place the circle.
     const c = board.create('circle', [o, 1], {
       strokeColor: JXG.palette.black, strokeWidth: 1
@@ -364,9 +348,7 @@ render.tan = el => {
     const alphaColor = JXG.palette.green;
     const attractors = angles.map(([n, d]) => {
       const a = n * Math.PI / d;
-      return board.create('point', [Math.cos(a), Math.sin(a)], {
-        withLabel: false,
-      });
+      return board.create('point', [Math.cos(a), Math.sin(a)]);
     });
     const p = board.create('glider', [0, 0, c], {
       strokeColor: alphaColor, fillColor: alphaColor,
@@ -400,7 +382,7 @@ render.tan = el => {
     // Place the elements related to the tan.
     const tanColor = JXG.palette.purple;
     const ptan = board.create('point', [alpha, () => Math.tan(alpha())], {
-      withLabel: false, strokeColor: tanColor, fillColor: tanColor, size: 2
+      strokeColor: tanColor, fillColor: tanColor, size: 2
     });
     board.create('curve', [a => a, a => Math.tan(a), 0, 2 * Math.PI], {
       strokeColor: tanColor,
@@ -413,7 +395,7 @@ render.tan = el => {
       dash: 2,
     });
     const ax = board.create('point', [alpha, 0], {
-      name: '\\(\\alpha\\)', label: {strokeColor: alphaColor},
+      name: '\\(\\alpha\\)', withLabel: true, label: {strokeColor: alphaColor},
     });
     board.create('segment', [ptan, ax], {
       dash: 2,
@@ -562,7 +544,7 @@ const battrs = [attrs.print, {
 render.sinx = el => {
   return initBoard(el, battrs, board => {
     board.create('functiongraph', [x => Math.sin(x)], {
-      name: `\\(\\sin(x)\\)`, withlabel: true,
+      name: `\\(\\sin(x)\\)`,
       label: {position: '0.68fr right', offset: [0, 45]},
     });
   });
@@ -570,7 +552,7 @@ render.sinx = el => {
 render.cosx = el => {
   return initBoard(el, battrs, board => {
     board.create('functiongraph', [x => Math.cos(x)], {
-      name: `\\(\\cos(x)\\)`, withlabel: true,
+      name: `\\(\\cos(x)\\)`,
       label: {position: '0.58fr right', offset: [0, 42]},
     });
   });
@@ -578,7 +560,7 @@ render.cosx = el => {
 render.tanx = el => {
   return initBoard(el, [battrs, {boundingBox: [-7, 5, 7, -5]}], board => {
     board.create('functiongraph', [x => Math.tan(x)], {
-      name: `\\(\\tan(x)\\)`, withlabel: true,
+      name: `\\(\\tan(x)\\)`,
       label: {position: '0.57fr right', offset: [-30, 0]},
     });
   });
@@ -839,15 +821,17 @@ const battrs = [attrs.screen, {
 render.arcsin = el => {
   return initBoard(el, [battrs, {boundingBox: [-4, 2, 4, -2]}], board => {
     board.create('functiongraph', [x => Math.sin(x)], {
-      name: '\\(\\sin\\)', withLabel: true,
+      name: '\\(\\sin\\)',
       label: {
         position: '0.7fr right', offset: [-8, 0],
       },
       strokeOpacity: 0.3}
       );
-    board.create('functiongraph', [x => Math.sin(x), -Math.PI/2, Math.PI/2]);
+    board.create('functiongraph', [x => Math.sin(x), -Math.PI/2, Math.PI/2], {
+      withLabel: false
+    });
     board.create('functiongraph', [x => Math.asin(x), -1, 1], {
-      name: '\\(\\arcsin\\)', withLabel: true,
+      name: '\\(\\arcsin\\)',
       label: {
         position: '1fr right', offset: [-30, 0],
         strokeColor: JXG.palette.red,
@@ -859,15 +843,17 @@ render.arcsin = el => {
 render.arccos = el => {
   return initBoard(el, [battrs, {boundingBox: [-4, 3.5, 4, -1.5]}], board => {
     board.create('functiongraph', [x => Math.cos(x)], {
-      name: '\\(\\cos\\)', withLabel: true,
+      name: '\\(\\cos\\)',
       label: {
         position: '0.4fr right', offset: [-8, 0],
       },
       strokeOpacity: 0.3}
       );
-    board.create('functiongraph', [x => Math.cos(x),0, Math.PI]);
+    board.create('functiongraph', [x => Math.cos(x),0, Math.PI], {
+      withLabel: false
+    });
     board.create('functiongraph', [x => Math.acos(x), -1, 1], {
-      name: '\\(\\arccos\\)', withLabel: true,
+      name: '\\(\\arccos\\)',
       label: {
         position: '0fr right', offset: [-20, 0],
         strokeColor: JXG.palette.red,
@@ -879,15 +865,17 @@ render.arccos = el => {
 render.arctan = el => {
   return initBoard(el, [battrs, {boundingBox: [-4, 3, 4, -3]}], board => {
     board.create('functiongraph', [x => Math.tan(x)], {
-      name: '\\(\\tan\\)', withLabel: true,
+      name: '\\(\\tan\\)',
       label: {
         position: '0.62fr right', offset: [-8, 0],
       },
       strokeOpacity: 0.3
     });
-    board.create('functiongraph', [x => Math.tan(x), -Math.PI/2, Math.PI/2]);
+    board.create('functiongraph', [x => Math.tan(x), -Math.PI/2, Math.PI/2], {
+      withLabel: false
+    });
     board.create('functiongraph', [x => Math.atan(x)], {
-      name: '\\(\\arctan\\)', withLabel: true,
+      name: '\\(\\arctan\\)',
       label: {
         position: '0.8fr right', offset: [-30, 0],
         strokeColor: JXG.palette.red,
@@ -1005,48 +993,48 @@ const battrs = [attrs.print, {
 }];
 render.sinusExo = el => {
   return initBoard(el, battrs, board => {
-    board.create('functiongraph', [x => Math.sin(x)]);
+    board.create('functiongraph', [x => Math.sin(x)], {withlabel: false});
   });
 };
 render.sinusExoSol = el => {
   return initBoard(el, battrs, board => {
     board.create('functiongraph', [x => Math.sin(x)], {
-      dash: 3, strokeOpacity: 0.4
+      dash: 3, strokeOpacity: 0.4, withLabel: false,
     });
     board.create('functiongraph', [x => 2 * Math.sin(x)], {
-      name: '\\(f_{1}\\)', withLabel: true,
+      name: '\\(f_{1}\\)',
       label: {position: '0.8fr right'},
     });
     board.create('functiongraph', [x => 0.25 * Math.sin(x)], {
-      name: '\\(f_{2}\\)', withLabel: true,
+      name: '\\(f_{2}\\)',
       label: {position: '0.76fr right', offset: [2, -1]},
     });
     board.create('functiongraph', [x => - Math.sin(x)], {
-      name: '\\(f_{3}\\)', withLabel: true,
+      name: '\\(f_{3}\\)',
       label: {position: '0.76fr left'},
     });
   });
 };
 render.cosinusExo = el => {
   return initBoard(el, battrs, board => {
-    board.create('functiongraph', [x => Math.cos(x)]);
+    board.create('functiongraph', [x => Math.cos(x)], {withlabel: false});
   });
 };
 render.cosinusExoSol = el => {
   return initBoard(el, battrs, board => {
     board.create('functiongraph', [x => Math.cos(x)], {
-      dash: 3, strokeOpacity: 0.4
+      dash: 3, strokeOpacity: 0.4, withLabel: false,
     });
     board.create('functiongraph', [x => Math.cos(0.5 * x)], {
-      name: '\\(f_{1}\\)', withLabel: true,
+      name: '\\(f_{1}\\)',
       label: {position: '0.53fr left', offset: [0, -2]},
     });
     board.create('functiongraph', [x => Math.cos(2 * x)], {
-      name: '\\(f_{2}\\)', withLabel: true,
+      name: '\\(f_{2}\\)',
       label: {position: '0.77fr right', offset: [4, -2]},
     });
     board.create('functiongraph', [x => Math.cos(4 * x)], {
-      name: '\\(f_{3}\\)', withLabel: true,
+      name: '\\(f_{3}\\)',
       label: {position: '0.77fr left', offset: [10, 20]},
     });
   });
@@ -1113,19 +1101,19 @@ const battrs = [attrs.print, {
 render.fctSol = el => {
   return initBoard(el, battrs, board => {
     board.create('functiongraph', [x => 2 * Math.cos(x + 2 * Math.PI)-1], {
-      name: '\\(f_{1}\\)', withLabel: true,
+      name: '\\(f_{1}\\)',
       label: {position: '0.6fr right', offset: [-10, -10]},
     });
     board.create('functiongraph', [x => Math.cos(2 * x) + 1], {
-      name: '\\(f_{2}\\)', withLabel: true,
+      name: '\\(f_{2}\\)',
       label: {position: '0.7fr left', offset: [2, -1]},
     });
     board.create('functiongraph', [x => 1.5 * Math.cos(x - Math.PI/4)-0.5], {
-      name: '\\(f_{3}\\)', withLabel: true,
+      name: '\\(f_{3}\\)',
       label: {position: '0.76fr right'},
     });
     board.create('functiongraph', [x => Math.cos(0.5 * (x + Math.PI/2))], {
-      name: '\\(f_{4}\\)', withLabel: true,
+      name: '\\(f_{4}\\)',
       label: {position: '0.1fr right'},
     });
   });
@@ -1205,7 +1193,9 @@ render.grandeRoue = el => {
     },
   }], board => {
     board.create('functiongraph',
-      [t => -30 * Math.cos(2 * t * Math.PI/3) + 31, -0.5, 11.5]);
+      [t => -30 * Math.cos(2 * t * Math.PI/3) + 31, -0.5, 11.5], {
+        withlabel: false
+      });
   });
 };
 </script>

@@ -96,7 +96,7 @@ render.fctBijSol = el => {
   return initBoard(el, [attrs.screen, withAxesLabels([1], [1]), {
     boundingBox: [-4.8, 4.8, 4.8, -4.8],
     defaults: {
-      functiongraph: {withLabel: true, label: {distance: 1}},
+      functiongraph: {label: {distance: 1}},
     },
   }], board => {
     board.create('functiongraph', [x => 3*x-4], {

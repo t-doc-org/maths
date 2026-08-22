@@ -120,16 +120,7 @@ const battrs = {
   pan: {enabled: false}, zoom: {enabled: false},
   axis: true, grid: false,
   defaults: {
-    segment: {highlight: false, strokeWidth: 2, strokeColor: JXG.palette.black},
-    line: {highlight: false, strokeWidth: 1, strokeColor: JXG.palette.black},
-    point: {highlight: false, size: 0, fixed: true, withLabel: false},
-    angle: {
-      highlight: false,
-      strokeWidth: 1, strokeColor: JXG.palette.black,
-      fillColor: JXG.palette.black, fillOpacity: 0.2,
-      label: {strokeColor: JXG.palette.black},
-    },
-    circle: {highlight: false, strokeWidth: 1, strokeColor: JXG.palette.black},
+    circle: {strokeWidth: 1, strokeColor: JXG.palette.black},
   },
 };
 
@@ -139,9 +130,7 @@ function cercle(board, alphaVisible, hypVisible) {
   const x = board.create('point', [1, 0]);
   const c = board.create('circle', [o, x]);
   const a = board.create('glider', [Math.cos(alpha), Math.sin(alpha), c], {
-    highlight: true, fixed: false, size: 8, strokewidth: 0, fillOpacity: 0,
-    highlightStrokeWidth: 0, highlightFillOpacity: 0.5, showInfobox: false,
-    strokeColor: JXG.palette.blue, fillColor: JXG.palette.blue
+    strokewidth: 0, fillOpacity: 0,
   });
   const cosa = board.create('point', [() => a.X(), 0]);
   if (hypVisible) {
@@ -156,7 +145,7 @@ function cercle(board, alphaVisible, hypVisible) {
   }
   if (alphaVisible) {
     board.create('angle', [x, o, a], {
-      name: '\\(\\alpha\\)', withLabel: true, radius: 0.2,
+      name: '\\(\\alpha\\)', radius: 0.2,
       label: {anchorX: 'left', anchorY: 'middle', offset: [-10, 0]}
     });
   } else {
@@ -190,18 +179,15 @@ render.exoIntro1 = el => {
     const {o, x, a} = cercle(board, true, false);
     const pcosa = () => a.X();
     const b = board.create('point', [pcosa, () => -a.Y()]);
-    board.create('segment', [[pcosa, 0], a], {
-      dash: 2, strokeWidth: 2
-    });
+    board.create('segment', [[pcosa, 0], a], {dash: 2});
     board.create('segment', [o, b], {strokeColor: JXG.palette.red});
     board.create('angle', [b, o, x], {
-      name: '\\(-\\alpha\\)', withLabel: true, radius: 0.2,
+      name: '\\(-\\alpha\\)', radius: 0.2,
       label: {anchorX: 'left', anchorY: 'middle', offset: [-6, 2],
-      strokeColor: JXG.palette.red},
-      fillColor: JXG.palette.red, fillOpacity: 0.2,
+      strokeColor: JXG.palette.red}, fillColor: JXG.palette.red,
     });
     board.create('segment', [[pcosa, 0], b], {
-      dash: 2, strokeWidth: 2, strokeColor: JXG.palette.red,
+      dash: 2, strokeColor: JXG.palette.red,
     });
   });
 };
@@ -212,18 +198,15 @@ render.exoIntro2 = el => {
     const b = board.create('point',
       [() => Math.cos(beta()), () => Math.sin(beta())]
       );
-    board.create('segment', [[0, () => a.Y()], a], {
-      dash: 2, strokeWidth: 2
-    });
+    board.create('segment', [[0, () => a.Y()], a], {dash: 2});
     board.create('segment', [o, b], {strokeColor: JXG.palette.red});
     board.create('angle', [x, o, b], {
-      name: '\\(180^\\circ-\\alpha\\)', withLabel: true, radius: 0.4,
+      name: '\\(180^\\circ-\\alpha\\)', radius: 0.4,
       label: {anchorX: 'right', anchorY: 'middle', offset: [4, 1],
-      strokeColor: JXG.palette.red},
-      fillColor: JXG.palette.red, fillOpacity: 0.2,
+      strokeColor: JXG.palette.red}, fillColor: JXG.palette.red,
     });
     board.create('segment', [[0, () => Math.sin(beta())], b], {
-      dash: 2, strokeWidth: 2, strokeColor: JXG.palette.red,
+      dash: 2, strokeColor: JXG.palette.red,
     });
   });
 };
@@ -234,18 +217,15 @@ render.exoIntro3 = el => {
     const b = board.create('point',
       [() => Math.cos(beta()), () => Math.sin(beta())]
       );
-    board.create('segment', [[0, () => a.Y()], a], {
-      dash: 2, strokeWidth: 2
-    });
+    board.create('segment', [[0, () => a.Y()], a], {dash: 2});
     board.create('segment', [o, b], {strokeColor: JXG.palette.red});
     board.create('angle', [x, o, b], {
-      name: '\\(90^\\circ-\\alpha\\)', withLabel: true, radius: 0.4,
+      name: '\\(90^\\circ-\\alpha\\)', radius: 0.4,
       label: {anchorX: 'left', anchorY: 'middle', offset: [-12, 0],
-      strokeColor: JXG.palette.red},
-      fillColor: JXG.palette.red, fillOpacity: 0.2,
+      strokeColor: JXG.palette.red}, fillColor: JXG.palette.red
     });
     board.create('segment', [[() => Math.cos(beta()),0], b], {
-      dash: 2, strokeWidth: 2, strokeColor: JXG.palette.red,
+      dash: 2, strokeColor: JXG.palette.red,
     });
   });
 };
@@ -260,28 +240,24 @@ render.exoIntro4 = el => {
     const c = board.create('point',
       [() => Math.cos(gamma()), () => Math.sin(gamma())]
       );
-    board.create('segment', [[() => a.X(), 0], a], {
-      dash: 2, strokeWidth: 2
-    });
+    board.create('segment', [[() => a.X(), 0], a], {dash: 2});
     board.create('segment', [o, b], {strokeColor: JXG.palette.red});
     board.create('angle', [x, o, b], {
-      name: '\\(90^\\circ-\\alpha\\)', withLabel: true, radius: 0.4,
+      name: '\\(90^\\circ-\\alpha\\)', radius: 0.4,
       label: {anchorX: 'left', anchorY: 'middle', offset: [-12, 1],
-      strokeColor: JXG.palette.red},
-      fillColor: JXG.palette.red, fillOpacity: 0.2,
+      strokeColor: JXG.palette.red}, fillColor: JXG.palette.red
     });
     board.create('segment', [[0, () => Math.sin(beta())], b], {
-      dash: 2, strokeWidth: 2, strokeColor: JXG.palette.red,
+      dash: 2, trokeColor: JXG.palette.red,
     });
     board.create('segment', [o, c], {strokeColor: JXG.palette.green});
     board.create('angle', [x, o, c], {
-      name: '\\(90^\\circ-\\alpha\\)', withLabel: true, radius: 0.3,
+      name: '\\(90^\\circ-\\alpha\\)', radius: 0.3,
       label: {anchorX: 'left', anchorY: 'middle', offset: [-45, 1],
-      strokeColor: JXG.palette.green},
-      fillColor: JXG.palette.green, fillOpacity: 0.2,
+      strokeColor: JXG.palette.green}, fillColor: JXG.palette.green,
     });
     board.create('segment', [[0, () => Math.sin(gamma())], c], {
-      dash: 2, strokeWidth: 2, strokeColor: JXG.palette.green,
+      dash: 2, strokeColor: JXG.palette.green,
     });
 
   });
@@ -294,17 +270,16 @@ render.exoIntro5 = el => {
       name: '\\(\\sin(\\alpha)\\)', withLabel: true,
       label: {anchorX: 'left', anchorY: 'middle', offset: [4, 0],
       strokeColor: JXG.palette.red},
-      dash: 2, strokeWidth: 2, strokeColor: JXG.palette.red,
+      dash: 2, strokeColor: JXG.palette.red,
     });
     board.create('segment', [o, cosa], {
       name: '\\(\\cos(\\alpha)\\)', withLabel: true,
       label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0],
       strokeColor: JXG.palette.red},
-      dash: 2, strokeWidth: 2, strokeColor: JXG.palette.red,
+      dash: 2, strokeColor: JXG.palette.red,
     });
     board.create('angle', [a, cosa, o], {
-      withLabel: false, radius: 0.2, radius: 0.1,
-      label: {anchorX: 'left', anchorY: 'middle', offset: [-4, 2]}
+      withLabel: false, radius: 0.1,
     });
   });
 };
@@ -326,21 +301,19 @@ render.exoTan = el => {
       name: '\\(\\sin(\\alpha)\\)', withLabel: true,
       label: {anchorX: 'left', anchorY: 'middle', offset: [4, 0],
       strokeColor: JXG.palette.red},
-      dash: 2, strokeWidth: 2, strokeColor: JXG.palette.red,
+      dash: 2, strokeColor: JXG.palette.red,
     });
     board.create('segment', [[0, 0], cosa], {
       name: '\\(\\cos(\\alpha)\\)', withLabel: true,
       label: {anchorX: 'middle', anchorY: 'top', offset: [0, 0],
       strokeColor: JXG.palette.red},
-      dash: 2, strokeWidth: 2, strokeColor: JXG.palette.red,
+      dash: 2, strokeColor: JXG.palette.red,
     });
     board.create('angle', [a, cosa, o], {
-      withLabel: false, radius: 0.2, radius: 0.1,
-      label: {anchorX: 'left', anchorY: 'middle', offset: [-4, 2]}
+      withLabel: false, radius: 0.1,
     });
         board.create('angle', [tana, [1,0], o], {
-      withLabel: false, radius: 0.2, radius: 0.1,
-      label: {anchorX: 'left', anchorY: 'middle', offset: [-4, 2]}
+      withLabel: false, radius: 0.1,
     });
   });
 };

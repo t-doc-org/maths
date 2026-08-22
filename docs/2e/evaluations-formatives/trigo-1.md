@@ -56,13 +56,11 @@ render.trianIsoRect = el => {
     board.create('segment', [C, D], {dash: 3});
     board.create('angle', [D, B, A], {
       radius: 0.6,
-      name: '\\(45^\\circ\\)', withLabel: true,
-      label: {anchorX: 'middle', anchorY: 'middle'}
+      name: '\\(45^\\circ\\)',
     });
     board.create('angle', [A, D, B], {
       radius: 0.6,
-      name: '\\(45^\\circ\\)', withLabel: true,
-      label: {anchorX: 'middle', anchorY: 'middle', offset: [0, 0]}
+      name: '\\(45^\\circ\\)',
     });
     board.create('angle', [B, A, D], {
       radius: 0.4, fillOpacity: 0,  withLabel: false,
@@ -92,14 +90,6 @@ render.trian = el => {
   return initBoard(el, [attrs.screen, attrs.nonInteractive, {
     boundingBox: [-1.5, 5, 5.5, -1],
     axis: false, grid: false,
-    defaults: {
-      segment: {strokeColor: JXG.palette.black, strokeWidth: 2},
-      point: {size: 0, withLabel: false},
-      angle: {
-        strokeColor: JXG.palette.black, fillColor: JXG.palette.black,
-        fillOpacity: 0.2, strokeWidth: 1, label: {strokeColor: JXG.palette.black},
-      },
-    },
   }], board => {
     const A = board.create('point', [0, 0], {
       name: '\\(B\\)', withLabel: true,
@@ -124,13 +114,11 @@ render.trian = el => {
     });
     board.create('angle', [D, B, A], {
       radius: 0.6,
-      name: '\\(\\gamma\\)', withLabel: true,
-      label: {anchorX: 'middle', anchorY: 'middle'}
+      name: '\\(\\gamma\\)',
     });
     board.create('angle', [A, D, B], {
       radius: 0.6,
-      name: '\\(\\alpha\\)', withLabel: true,
-      label: {anchorX: 'middle', anchorY: 'middle', offset: [0, 0]}
+      name: '\\(\\alpha\\)',
     });
     board.create('angle', [B, A, D], {
       radius: 0.4, fillOpacity: 0,  withLabel: false,
@@ -264,14 +252,16 @@ const battrs = [attrs.screen, attrs.nonInteractive, {
 }];
 render.exCos = el => {
   return initBoard(el, battrs, board => {
-    board.create('functiongraph', [x => Math.cos(x)]);
+    board.create('functiongraph', [x => Math.cos(x)], {withLabel: false});
   });
 };
 render.exCosSol = el => {
   return initBoard(el, battrs, board => {
-    board.create('functiongraph', [x => Math.cos(x)], {dash: 2});
+    board.create('functiongraph', [x => Math.cos(x)], {
+      dash: 2, withLabel: false
+    });
     board.create('functiongraph', [x => Math.cos(x / 2)], {
-      withLabel: true, name: '\\(\\cos(\\frac{x}{2})\\)',
+      name: '\\(\\cos(\\frac{x}{2})\\)',
       label: {position: '0.75fr right'}
     });
   });

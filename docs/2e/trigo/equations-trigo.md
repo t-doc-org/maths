@@ -53,20 +53,21 @@ attrs.page = [attrs.screen, attrs.nonInteractive, {
   },
   defaults: {
       segment: {strokeWidth: 1},
-      point: {strokeWidth: 0},
+      point: {strokeWidth: 0, size: 3},
   },
 }];
 render.exempleTan = el => {
   return initBoard(el, attrs.page, board => {
     board.create('functiongraph', [x => Math.tan(x) - 2], {
-      name: '\\(\\tan(x)-1\\)', withLabel: true,
+      name: '\\(\\tan(x)-1\\)',
       label: {position: '0.5fr right', offset: [-30, 0]},
     });
-    board.create('functiongraph', [x => 3], {strokeColor: JXG.palette.red});
+    board.create('functiongraph', [x => 3], {
+      withLabel: false, strokeColor: JXG.palette.red
+    });
     for (let k = 0; k < 5; ++k) {
       board.create('point', [Math.atan(5) - 2 * Math.PI + k * Math.PI, 3], {
-        fillColor: 'darkmagenta', withLabel: false, size: 3,
-      });
+        fillColor: 'darkmagenta'});
     }
     board.create('segment', [[Math.atan(5), 0],[Math.atan(5), 3]], {dash: 2});
   });
@@ -76,19 +77,19 @@ render.exempleCos = el => {
     boundingBox: [-6, 1.5, 6, -1.5],
   }], board => {
     board.create('functiongraph', [x => Math.cos(3 * x)], {
-      name: '\\(\\cos(3x)\\)', withLabel: true,
+      name: '\\(\\cos(3x)\\)',
       label: {position: '0.7fr right', offset: [-20, 0]},
     });
     board.create('functiongraph', [x => Math.sqrt(2) / 2], {
-      strokeColor: JXG.palette.red,
+      strokeColor: JXG.palette.red, withLabel: false,
     });
     for (let k = 0; k < 7; ++k) {
       board.create('point',
         [Math.PI / 12 - 2 * Math.PI + k * 2 * Math.PI / 3, Math.sqrt(2) / 2],
-        {fillColor: 'darkmagenta', withLabel: false, size: 3});
+        {fillColor: 'darkmagenta'});
       board.create('point',
         [-Math.PI / 12 - 2 * Math.PI + k * 2 * Math.PI / 3, Math.sqrt(2) / 2],
-        {fillColor: 'darkgreen', withLabel: false, size: 3});
+        {fillColor: 'darkgreen'});
     }
     board.create('segment',
       [[Math.PI / 12, 0],[Math.PI / 12, Math.sqrt(2) / 2]], {dash: 2});
@@ -101,17 +102,19 @@ render.exempleSin = el => {
     boundingBox: [-6, 2.8, 6, -0.5],
   }], board => {
     board.create('functiongraph', [x => Math.sin(x - Math.PI / 2) + 1], {
-      name: '\\(\\sin(x - \\dfrac{\\pi}{2})+1\\)', withLabel: true,
+      name: '\\(\\sin(x - \\dfrac{\\pi}{2})+1\\)',
       label: {position: '0.7fr left', offset: [0, 0]},
     });
-    board.create('functiongraph', [x => 1 / 2], {strokeColor: JXG.palette.red});
+    board.create('functiongraph', [x => 1 / 2], {
+      withLabel: false, strokeColor: JXG.palette.red
+    });
     for (let k = 0; k < 2; ++k) {
       board.create('point',
         [Math.PI / 3 - 2 * Math.PI + k * 2 * Math.PI, 1 / 2],
-        {fillColor: 'darkmagenta', withLabel: false, size: 3});
+        {fillColor: 'darkmagenta'});
       board.create('point',
         [5 * Math.PI / 3 - 2 * Math.PI + k * 2 * Math.PI, 1 / 2],
-        {fillColor: 'darkgreen', withLabel: false, size: 3});
+        {fillColor: 'darkgreen'});
     }
     board.create('segment', [[Math.PI / 3, 0],[Math.PI / 3, 1 / 2]], {dash: 2});
     board.create('segment',
@@ -123,11 +126,11 @@ render.exempleSin2 = el => {
     boundingBox: [-6, 1.5, 6, -1.5],
   }], board => {
     board.create('functiongraph', [x => Math.sin(2 *x)], {
-      name: '\\(\\sin(2x)\\)', withLabel: true,
+      name: '\\(\\sin(2x)\\)',
       label: {position: '0.75fr left', offset: [-20, 0]},
     });
     board.create('functiongraph', [x => Math.sin(Math.PI / 2 - x)], {
-      name: '\\(\\sin(\\dfrac{\\pi}{2}-x)\\)', withLabel: true,
+      name: '\\(\\sin(\\dfrac{\\pi}{2}-x)\\)',
       label: {
         position: '0.44fr left', offset: [-30, 0], strokeColor: JXG.palette.red,
       },
@@ -137,9 +140,9 @@ render.exempleSin2 = el => {
       board.create('point',
         [Math.PI / 6 - 2 * Math.PI + k * 2 * Math.PI / 3,
          Math.sin(2 * (Math.PI / 6 - 2 * Math.PI + k * 2 * Math.PI / 3))],
-        {fillColor: 'darkmagenta', withLabel: false, size: 3});
+        {fillColor: 'darkmagenta'});
       board.create('point', [Math.PI / 2 - 2 * Math.PI + k * 2 * Math.PI, 0], {
-        fillColor: 'darkgreen', withLabel: false, size: 3,
+        fillColor: 'darkgreen',
       });
     }
     board.create('segment',
@@ -151,11 +154,11 @@ render.exempleSin3 = el => {
     boundingBox: [-6, 1.5, 6, -1.5],
   }], board => {
     board.create('functiongraph', [x => Math.sin(2 * x + Math.PI / 4)], {
-      name: '\\(\\sin(2x - \\dfrac{\\pi}{2})\\)', withLabel: true,
+      name: '\\(\\sin(2x - \\dfrac{\\pi}{2})\\)',
       label: {position: '0.75fr left', offset: [-40, -10]},
     });
     board.create('functiongraph', [x => Math.cos(x)], {
-      name: '\\(\\cos(x)\\)', withLabel: true,
+      name: '\\(\\cos(x)\\)',
       label: {
         position: '0.44fr left', offset: [-20, 0], strokeColor: JXG.palette.red,
       },
@@ -165,11 +168,11 @@ render.exempleSin3 = el => {
       board.create('point',
         [Math.PI / 12 - 2 * Math.PI + k * 2 * Math.PI / 3,
          Math.cos(Math.PI / 12 - 2 * Math.PI + k * 2 * Math.PI / 3)],
-        {fillColor: 'darkmagenta', withLabel: false, size: 3});
+        {fillColor: 'darkmagenta'});
       board.create('point',
         [Math.PI / 4 - 2 * Math.PI + k * 2 * Math.PI,
          Math.cos(Math.PI / 4 - 2 * Math.PI + k * 2 * Math.PI)],
-        {fillColor: 'darkgreen', withLabel: false, size: 3});
+        {fillColor: 'darkgreen'});
     }
     board.create('segment',
       [[Math.PI / 12, 0],[Math.PI / 12, Math.cos(Math.PI / 12)]], {dash: 2});
@@ -182,19 +185,21 @@ render.exempleSinCos = el => {
     boundingBox: [-6, 2.8, 6, -1.5],
   }], board => {
     board.create('functiongraph', [x => 2 * (Math.cos(x)) ** 2 + Math.sin(x)], {
-      name: '\\(2\\cos^2(x)+ \\sin(x)\\)', withLabel: true,
+      name: '\\(2\\cos^2(x)+ \\sin(x)\\)',
       label: {position: '0.7fr left', offset: [-40, 0]},
     });
-    board.create('functiongraph', [x => 1], {strokeColor: JXG.palette.red,});
+    board.create('functiongraph', [x => 1], {
+      withLabel: false, strokeColor: JXG.palette.red,
+    });
     for (let k = 0; k < 7; ++k) {
       board.create('point',
         [-1 * Math.PI / 6 - 2 * Math.PI + k * 2 * Math.PI, 1],
-        {fillColor: 'darkmagenta', withLabel: false, size: 3});
+        {fillColor: 'darkmagenta'});
       board.create('point',
         [7 * Math.PI / 6 - 2 * Math.PI + k * 2 * Math.PI, 1],
-        {fillColor: 'darkgreen', withLabel: false, size: 3});
+        {fillColor: 'darkgreen'});
       board.create('point', [Math.PI / 2 - 2 * Math.PI + k * 2 * Math.PI, 1],
-        {fillColor: 'skyblue', withLabel: false, size: 3});
+        {fillColor: 'skyblue'});
     }
     board.create('segment', [[-1 * Math.PI / 6, 0], [-1 * Math.PI / 6, 1]],
       {dash: 2});
@@ -684,7 +689,7 @@ render.maree = el => {
     },
   }], board => {
     board.create('functiongraph',
-      [t => 1.2 * Math.sin(0.506 * t + 2) + 5, -1.5, 25]);
+      [t => 1.2 * Math.sin(0.506 * t + 2) + 5, -1.5, 25], {withLabel: false});
   });
 };
 </script>

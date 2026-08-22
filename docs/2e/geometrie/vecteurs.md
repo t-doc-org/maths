@@ -45,10 +45,7 @@ const battrs = [attrs.screen, {
   boundingBox: [-5, 5, 4, -2],
   pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
   defaults: {
-    arrow: {
-      highlight: true,
-      withLabel: true, fixed: false,
-    },
+    arrow: {highlight: true,fixed: false},
   },
 }];
 render.vecteurs1 = el => {
@@ -155,10 +152,6 @@ const battrs = [attrs.screen, attrs.nonInteractive, {
   pan: {enabled: false}, zoom: {enabled: false}, showFullscreen: true,
   axis: false, grid: false,
   defaults: {
-    arrow: {
-      withLabel: true,
-    },
-    point: {visible: false},
     parallel: {strokeOpacity: 0.1},
   },
 }];
@@ -220,9 +213,6 @@ const battrs = [attrs.screen, attrs.nonInteractive, {
     },
   },
   defaults: {
-    arrow: {
-      withLabel: true,
-    },
   },
 }];
 render.baseOrthonormée = el => {
@@ -399,16 +389,12 @@ const battrs = [attrs.screen, {
   },
   defaults: {
     arrow: {
-      withLabel: true,
-      label: {
-        position: '0.5fr left',
-        distance: 1.2,
-      },
+      label: {position: '0.5fr left', distance: 1.2, },
     },
     point: {
-      fixed: false, highlight: true,
+      withLabel: false, fixed: false, highlight: true,
       size: 8, strokewidth: 0, fillOpacity: 0, highlightStrokeWidth: 0,
-      withLabel: false, highlightFillOpacity: 0.7,
+      highlightFillOpacity: 0.7,
     },
   },
 }];

@@ -154,14 +154,14 @@ render.fonctionRationnelle = el => {
     defaults: {
       line: {dash: 2},
       point: {
-        size: 2,
+        withLabel: true, size: 2,
         label: {anchorX: 'right', anchorY: 'bottom', offset: [-7, 0]}
       },
     },
   }], board => {
     const f = x => (x ** 2 - 7 * x + 10) / (x ** 2 - 9);
     board.create('functiongraph', [f], {
-      name: `\\(f\\)`, withLabel: true,
+      name: `\\(f\\)`,
       label: {position: '0.1fr left'}
     });
     board.create('point', [2, f(2)], {name: `\\(x_1\\)`});

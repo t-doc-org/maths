@@ -80,7 +80,7 @@ Complétez le tableau et représentez graphiquement la fonction $\cos(x)$.
 ## Exercice {nump}`exercice`
 
 Qu'est-ce qui est semblable et qu'est-ce qui est différent entre la
-représentation graphique de $/sin(x)$ et de $/cos(x)$
+représentation graphique de $\sin(x)$ et de $\cos(x)$?
 
 ```{solution}
 Les deux fonctions ont la même forme, elles sont juste décalées de
@@ -117,7 +117,7 @@ Complétez le tableau et représentez graphiquement la fonction $\tan(x)$.
 
 <script type="module">
 const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
-const battrs = [attrs.print, {
+const battrs = [attrs.screen, {
   boundingBox: [-6.5, 2, 6.5, -2],
   axis: true, grid: {majorStep: [Math.PI / 6, 0.5]},
   defaultAxes: {
@@ -134,12 +134,6 @@ const battrs = [attrs.print, {
       name: '\\(y\\)',
       ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 1},
     },
-  },
-  defaults: {
-    functiongraph: {
-      withLabel: true, strokeColor: JXG.palette.blue,
-      label: {strokeColor: JXG.palette.blue,},
-  },
   },
 }];
 render.templateSin = el => {

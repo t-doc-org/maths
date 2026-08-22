@@ -14,6 +14,7 @@ attrs.screen = [{
   },
   defaults: {
     arrow: {
+      withlabel: true,
       fixed: true, highlight: false, showInfobox: false,
       strokeWidth: 2, strokeColor: JXG.palette.black,
       label: {anchorX: 'middle', anchorY: 'middle', position: '0.4fr left'},
@@ -29,6 +30,7 @@ attrs.screen = [{
       label: {strokeColor: JXG.palette.blue},
     },
     functiongraph: {
+      withLabel: true,
       fixed: true, highlight: false, showInfobox: false,
       label: {strokeColor: JXG.palette.blue},
     },
@@ -47,9 +49,8 @@ attrs.screen = [{
       anchorX: 'middle', anchorY: 'middle'},
     },
     point: {
-      // TODO: Add "withLabel: false"
-      fixed: true, highlight: false, showInfobox: false,
-      size: 0,
+      withLabel: false, size: 0, fixed: true,
+      highlight: false, showInfobox: false,
       strokeWidth: 1, strokeColor: JXG.palette.black,
       fillColor: JXG.palette.black,
     },
@@ -58,6 +59,10 @@ attrs.screen = [{
       size: 2, strokewidth: 1,
       highlightStrokeWidth: 14, highlightStrokeOpacity: 0.2,
       highlightStrokeColor: JXG.palette.blue, highlightFillColor: JXG.palette.blue
+    },
+    orthogonalprojection: {
+      withLabel: true, highlight: false, showInfobox: false,
+      strokeColor: JXG.palette.black,
     },
     text: {
       fixed: true,
@@ -78,6 +83,7 @@ attrs.print = [attrs.nonInteractive, {
       strokeWidth: 2, strokeColor: JXG.palette.black
     },
     arrow: {
+      withLabel: true,
       fixed: true, highlight: false, showInfobox: false,
       strokeWidth: 2, strokeColor: JXG.palette.black,
       label: {anchorX: 'middle', anchorY: 'middle', position: '0.4fr left'},
@@ -93,6 +99,7 @@ attrs.print = [attrs.nonInteractive, {
       label: {strokeColor: JXG.palette.black},
     },
     functiongraph: {
+      withLabel: true,
       fixed: true, highlight: false, showInfobox: false,
       label: {strokeColor: JXG.palette.black},
     },
@@ -104,6 +111,10 @@ attrs.print = [attrs.nonInteractive, {
       fixed: true, highlight: false, showInfobox: false,
       strokeWidth: 2, strokeColor: JXG.palette.black,
     },
+    orthogonalprojection: {
+      withLabel: true, highlight: false, showInfobox: false,
+      strokeColor: JXG.palette.black,
+    },
     angle: {
       strokeWidth: 1, strokeColor: JXG.palette.black,
       fillColor: JXG.palette.black, fillOpacity: 0.2,
@@ -111,10 +122,8 @@ attrs.print = [attrs.nonInteractive, {
       anchorX: 'middle', anchorY: 'middle'},
     },
     point: {
-      // TODO: Change "name: ''" to "withLabel: false"
-      //withLabel: false,
-      name: '', size: 0,
-      fixed: true, highlight: false, showInfobox: false,
+      withLabel: false, size: 0, fixed: true,
+      highlight: false, showInfobox: false,
       strokeWidth: 1, strokeColor: JXG.palette.black,
       fillColor: JXG.palette.black,
     },

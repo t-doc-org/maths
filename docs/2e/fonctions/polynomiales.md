@@ -297,7 +297,7 @@ const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
 attrs.page = [attrs.screen, {
   boundingBox: [-5.2, 5.2, 5.2, -5.2],
   defaults: {
-    functiongraph: {withLabel: true, label: {position: '0.65fr right'}},
+    functiongraph: {label: {position: '0.65fr right'}},
   },
 }];
 render.fctPaire = el => {
@@ -760,8 +760,7 @@ render.fonctionSolution = el => {
     }], board => {
       board.create('functiongraph',
         [x => 5 / 432 * (100 * x - 29 * x ** 3 + x ** 5)], {
-        name: `\\(f\\)`, withLabel: true,
-        label: {position: '0.32fr right'}
+        name: `\\(f\\)`, label: {position: '0.32fr right'}
       });
     });
 };
@@ -802,9 +801,6 @@ render.solValAbs = el => {
       defaultAxes: {
         x: {ticks: {ticksDistance: 2, minorTicks: 1}},
         y: {ticks: {ticksDistance: 2, minorTicks: 1}},
-      },
-      defaults: {
-        functiongraph: {withLabel: true},
       },
       grid: {majorStep: 1},
     }], board => {
