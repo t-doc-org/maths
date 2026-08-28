@@ -10,6 +10,10 @@ page-break-force: 2
 page-break-avoid-inside: 3
 ```
 
+```{container} frame noprint instructor
+{xopp}`Corrigés détaillés <corriges/revisions.xopp>`
+```
+
 ## Théorie
 
 ### Trigonométrie dans le triangle rectangle
