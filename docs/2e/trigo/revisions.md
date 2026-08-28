@@ -3,12 +3,12 @@
 % Copyright 2025 David Rueda
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-# Trigonométrie - Révisions
-
 ```{metadata}
 page-break-force: 2
 page-break-avoid-inside: 3
 ```
+
+# Trigonométrie - Révisions
 
 ```{container} frame noprint instructor
 {xopp}`Corrigés détaillés <corriges/revisions.xopp>`

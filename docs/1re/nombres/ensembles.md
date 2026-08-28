@@ -1,14 +1,18 @@
 % Copyright 2026 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-# Ensembles
-
 ```{metadata}
 page-break-force: 2
 page-break-avoid-inside: 3
 scripts:
   - src: chart.js
     type: module
+```
+
+# Ensembles
+
+```{container} frame noprint instructor
+{xopp}`Corrigés détaillés <corriges/ensembles.xopp>`
 ```
 
 ## Théorie

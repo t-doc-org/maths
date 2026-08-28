@@ -1,11 +1,15 @@
 % Copyright 2026 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-# Nombres
-
 ```{metadata}
 page-break-force: 2
 page-break-avoid-inside: 3
+```
+
+# Nombres
+
+```{container} frame noprint instructor
+{xopp}`Corrigés détaillés <corriges/nombres.xopp>`
 ```
 
 ```{admonition} Origine des nombres

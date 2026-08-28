@@ -3,11 +3,15 @@
 % Copyright 2025 Nicolas Martignoni
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-# Fonctions polynomiales
-
 ```{metadata}
 page-break-force: 2
 page-break-avoid-inside: 3
+```
+
+# Fonctions polynomiales
+
+```{container} frame noprint instructor
+{xopp}`Corrigés détaillés <corriges/polynomiales.xopp>`
 ```
 
 ## Théorie

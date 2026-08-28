@@ -10,6 +10,10 @@ page-break-avoid-inside: 3
 
 # Équations trigonométriques
 
+```{container} frame noprint instructor
+{xopp}`Corrigés détaillés <corriges/equations-trigo.xopp>`
+```
+
 ## Théorie
 
 ```{admonition} Définition

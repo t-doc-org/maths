@@ -12,6 +12,10 @@ page-break-avoid-inside: 3
 
 ## Théorie
 
+```{container} frame noprint instructor
+{xopp}`Corrigés détaillés <corriges/triangle-quelconque.xopp>`
+```
+
 ### Théorème du sinus
 
 ````{admonition} Théorème du sinus

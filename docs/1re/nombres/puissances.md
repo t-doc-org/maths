@@ -1,11 +1,15 @@
 % Copyright 2026 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-# Puissances
-
 ```{metadata}
 page-break-force: 2
 page-break-avoid-inside: 3
+```
+
+# Puissances
+
+```{container} frame noprint instructor
+{xopp}`Corrigés détaillés <corriges/puissances.xopp>`
 ```
 
 ## Théorie

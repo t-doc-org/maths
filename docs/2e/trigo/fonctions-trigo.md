@@ -10,6 +10,10 @@ page-break-avoid-inside: 3
 
 # Fonctions trigonométriques
 
+```{container} frame noprint instructor
+{xopp}`Corrigés détaillés <corriges/fonctions-trigo.xopp>`
+```
+
 ## Théorie
 
 ````{admonition} Définition
