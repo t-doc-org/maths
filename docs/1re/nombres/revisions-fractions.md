@@ -51,7 +51,7 @@ page-break-avoid-inside: 3
 
 {.lower-alpha-paren}
 1. $\dfrac{2}{3} \cdot \dfrac{5}{7} = \dfrac{2 \cdot 5}{3 \cdot 7} = \dfrac{10}{21}$
-2. $\dfrac{7}{36} \cdot \dfrac{12}{14} = \dfrac{\color{magenta}\cancel{7} \cdot \color{green}\cancel{36}}{\color{green}\cancel{12} \cdot \color{magenta}\cancel{14}} = \dfrac{3}{2}$
+2. $\dfrac{7}{36} \cdot \dfrac{12}{14} = \dfrac{\color{magenta}\cancel{7} \cdot \color{green}\cancel{12}}{\color{green}\cancel{36} \cdot \color{magenta}\cancel{14}} = \dfrac{1 \cdot 1}{3 \cdot 2} = \dfrac{1}{6}$
 ```
 
 ```{admonition} Marche à suivre - Division de fractions
