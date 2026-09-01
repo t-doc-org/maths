@@ -8,4 +8,6 @@ polynomes-factorisation-intro
 polynomes
 factorisation
 factorisation-applications
+equations-intro
+equations
 ```
