@@ -58,11 +58,11 @@ règles d'équivalence sont:
 # Exemple {num2}`exemple`
 
 $$
-3x-7 &= -2x+8 \qquad &|& +2x \quad &\text{(addition du même monôme)}& \\
-5x-7 &= 8 &|& +7  &\text{(addition du même nombre)}&\\
-5x &= 15 &|& :5 &\text{(division par le même nombre)}&\\
+3x-7 &= -2x+8 \qquad &|& +2x \text{ (addition du même monôme)}& \\
+5x-7 &= 8 &|& +7  \text{ (addition du même nombre)}&\\
+5x &= 15 &|& :5 \text{ (division par le même nombre)}&\\
 x &= 3 && &\\
-S &= \{3\}  && &\text{ (noter l'ensemble des solutions)}&
+S &= \{3\}  && \text{ (ensemble des solutions)}&
 $$
 ```
 
@@ -79,18 +79,16 @@ deux cas particuliers:
     2(x+15) &= 8x-6(x-5) \qquad &|& \text{CL (Calcul littéral)} &\\
     2x+30 &= 8x-6x+30 &|& \text{CL (Calcul littéral)} &\\
     2x+30 &= 2x+30 &|& -2x  &\\
-    30 &= 30 &&  \text{Cette équation est toujours vraie}&
+    30 &= 30 &&  \text{Cette équation est toujours vraie!} \implies S = \mathbb{R}
     $$
-    $S = \mathbb{R}$
 
 -   Si on obtient l'équation $0=a \text{, où }a \neq 0$, alors l'équation est
     **impossible**, on écrit $S=\varnothing$.
     $$
     4(1-9x) &= -3(12x+1) \qquad &|& \text{CL (Calcul littéral)} &\\
     4-36x &= -36x-3  &|& +36x  &\\
-    4 &= -3 &&  \text{Cette équation est toujours fausse} &
+    4 &= -3 &&  \text{Cette équation est toujours fausse!} \implies S = \varnothing
     $$
-    $S = \varnothing$
 ```
 
 ```{container} frame noprint

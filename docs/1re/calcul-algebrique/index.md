@@ -10,4 +10,5 @@ factorisation
 factorisation-applications
 equations-intro
 equations
+inequations
 ```
