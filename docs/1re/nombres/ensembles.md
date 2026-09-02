@@ -52,7 +52,7 @@ des points de suspension sont ajoutés au début ou à la fin de l'énumération
 
 {.lower-alpha-paren}
 1.  L'ensemble des joueurs de tennis ayant gagné au moins 20 tournois du Grand
-    Chelem: \{Federer, Nadal, Djokovic\}
+    Chelem: \{Federer; Nadal; Djokovic\}
 2.  L'ensemble des nombres naturels impairs: \{1;3;5;7;9;...\}
 ```
 
@@ -363,7 +363,7 @@ Réponse: 14 élèves ne pratiquent qu'un seul sport.
 ```{block} solution
 {.lower-alpha-paren}
 1. $\{\text{lundi; mardi; mercredi; jeudi; vendredi; samedi; dimanche}\}$
-2. $\{\text{janvier; mars; mai; juin; juillet; août; octobre; décembre}\}$
+2. $\{\text{janvier; mars; mai; juillet; août; octobre; décembre}\}$
 3. $\{0; 1; 2; 3; 4; 5; 6; 7; 8; 9; 10\}$
 4. $M_{3} = \{3; 6; 9; 12; 15; 18; \dots\}$
 5. $D_{24} = \{1; 2; 3; 4; 6; 8; 12; 24\}$
