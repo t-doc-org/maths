@@ -184,6 +184,14 @@ La mesure d'un angle en radians est proportionnelle à sa mesure en degrés.
 1 radian correspond à: $\quad \varphi = \dfrac{360^\circ}{2\pi} \approx 57.3$
 ````
 
+````{container} frame noprint
+# Exemple {num2}`exemple`
+
+En radians, un angle de $37^\circ$ vaut $\qquad \dfrac{37^\circ}{360^\circ} \cdot 2\pi = \dfrac{37\pi}{180} \approx 0.2056$
+
+Un angle de 5.13 rad vaut en degré $\qquad \dfrac{5.13}{2\pi} \cdot 360^\circ \approx 293.93^\circ$
+````
+
 
 ````{admonition} Propriétés
 **Table d'équivalence des angles remarquables:**
@@ -203,14 +211,6 @@ La mesure d'un angle en radians est proportionnelle à sa mesure en degrés.
 | degrés  | $30^\circ$ | $45^\circ$ | $60^\circ$ | $90^\circ$ | $180^\circ$ | $270^\circ$ | $360^\circ$ | $720^\circ$
 | radians | $\dfrac{\pi}{6}$ | $\dfrac{\pi}{4}$ | $\dfrac{\pi}{3}$ | $\dfrac{\pi}{2}$ | $\pi$ | $\dfrac{3\pi}{2}$ | $2\pi$ | $4\pi$
 ```
-````
-
-````{container} frame noprint
-# Exemple {num2}`exemple`
-
-En radians, un angle de $37^\circ$ vaut $\qquad \dfrac{37^\circ}{360^\circ} \cdot 2\pi = \dfrac{37\pi}{180} \approx 0.2056$
-
-Un angle de 5.13 rad vaut en degré $\qquad \dfrac{5.13}{2\pi} \cdot 360^\circ \approx 293.93^\circ$
 ````
 
 ```{container}
