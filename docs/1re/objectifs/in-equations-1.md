@@ -2,7 +2,7 @@
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 (eval-equation-1)=
-# Équations et inéquations du premier et du deuxième degré
+# Équations et inéquations 1
 
 ## Équations et inéquations du premier degré
 

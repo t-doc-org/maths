@@ -11,8 +11,8 @@ page-break-avoid-inside: 2
 
 ```{toctree}
 ensembles-nombres
-puissances-racines-polynomes
-in-equations-1-2
+calcul-algebrique
+in-equations-1
 geometrie
 equations-2
 geometrie-vectorielle

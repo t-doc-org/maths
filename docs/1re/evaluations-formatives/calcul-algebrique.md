@@ -1,7 +1,7 @@
 % Copyright 2025 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-# Puissances, racines, polynômes et fractions rationnelles
+# Calcul algébrique
 
 ```{include} /_import/informatique/_include/entete-examen.export.md
 ```

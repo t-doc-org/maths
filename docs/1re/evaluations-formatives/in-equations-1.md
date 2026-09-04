@@ -1,7 +1,7 @@
 % Copyright 2025 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-# Équations et inéquations du premier et du deuxième degré
+# Équations et inéquations 1
 
 ```{include} /_import/informatique/_include/entete-examen.export.md
 ```
