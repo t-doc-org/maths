@@ -413,7 +413,7 @@ $29.44^\circ$, $71.12^\circ$, $29.44^\circ$
 ### Exercice {num2}`exercice:2-trigo-rev-ex8`
 
 La hauteur d'une falaise peut être déterminée à l'aide d'un segment
-$\overline{AB}$ de longueur connue, orienté en direction de la falaise. La
+$AB$ de longueur connue, orienté en direction de la falaise. La
 distance entre les points $A$ et $B$ vaut $120 \, m$ et les angles d'élévation,
 mesurés à l'aide d'un théodolite, valent $\alpha=35^\circ$ et $\beta=60^\circ$.
 Calculez la hauteur $h$ de la falaise en posant et résolvant deux équations à
@@ -467,7 +467,7 @@ $h = 141\, m$
 ### Challenge
 
 Calculez les angles intérieurs du cerf-volant ci-dessous, sachant que
-$\overline{AB} = 7\,cm$, $\overline{CD} = 5\,cm$ et $\overline{BD} = 7\,cm$.
+$AB = 7\,cm$, $CD = 5\,cm$ et $BD = 7\,cm$.
 
 ```{jsxgraph} cerfVolant
 :style: width: 50%; border: none;

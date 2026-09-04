@@ -10,7 +10,8 @@ subject: "Mathématiques 1re année"
 
 ```{toctree}
 nombres/index
-calcul-algebrique/index
+calcul-algebrique/index-1
+calcul-algebrique/index-2
 objectifs/index
 evaluations-formatives/index
 ```
