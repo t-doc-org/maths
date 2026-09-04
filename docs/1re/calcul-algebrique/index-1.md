@@ -8,6 +8,7 @@ puissances-racines-intro
 puissances
 racines
 polynomes-factorisation-intro
+revisions-calcul-litteral
 polynomes
 factorisation
 factorisation-applications
