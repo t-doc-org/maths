@@ -179,15 +179,15 @@ La mesure d'un angle en radians est proportionnelle à sa mesure en degrés.
 | radians | $2\pi$ | $x$ | $1$
 ```
 {vspace}`0.5lh`
-1 degré correspond à: $\quad x = \dfrac{2\pi}{360^\circ} \approx 0.0175^\circ$
+1 degré correspond à: $\quad x = \dfrac{2\pi}{360^\circ} \approx 0.0175$
 
-1 radian correspond à: $\quad \varphi = \dfrac{360^\circ}{2\pi} \approx 57.3$
+1 radian correspond à: $\quad \varphi = \dfrac{360^\circ}{2\pi} \approx 57.3^\circ$
 ````
 
 ````{container} frame noprint
 # Exemple {num2}`exemple`
 
-En radians, un angle de $37^\circ$ vaut $\qquad \dfrac{37^\circ}{360^\circ} \cdot 2\pi = \dfrac{37\pi}{180} \approx 0.2056$
+En radians, un angle de $37^\circ$ vaut $\qquad \dfrac{37^\circ}{360^\circ} \cdot 2\pi = \dfrac{37\pi}{180} \approx 0.6458$
 
 Un angle de 5.13 rad vaut en degré $\qquad \dfrac{5.13}{2\pi} \cdot 360^\circ \approx 293.93^\circ$
 ````
