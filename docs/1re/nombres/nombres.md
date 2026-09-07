@@ -100,7 +100,7 @@ trouvent les nombres tels que $\pi$, $\sqrt{2}$, $1.010010001\ldots$.
 :width: 40%
 ```
 
-````{container} frame noprint
+````{container} frame avoid-break-inside
 # Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
@@ -125,7 +125,7 @@ Toute fraction est un nombre décimal fini ou périodique. Réciproquement, tout
 nombre décimal fini ou périodique est une fraction.
 ```
 
-````{container} frame noprint
+````{container} frame
 # Exemple {num2}`exemple`
 
 {.lower-alpha-paren .columns-4}
@@ -232,23 +232,21 @@ Un nombre entier naturel est divisible par:
 
 ```{admonition} Propriétés
 :class: note
-- **Commutativité**
-$$a+b=b+a \text{  et  } a \cdot b = b\cdot a$$
-- **Associativité**
-$$(a+b)+c=a+(b+c) \text{  et  } (a\cdot b) \cdot c=a \cdot (b \cdot c) $$
-- **Distributivité}**
-$$a\cdot (b+c) = a \cdot b + a \cdot c $$
-- **Éléments neutres**  $$a+0=a \qquad \text{  et  } \qquad a\cdot 1=a $$
-- **Éléments symétriques** $$a+(-a)=0 \qquad \text{  et  } \qquad a\cdot \frac{1}{a}=1 $$
-Le nombre $-a$ est appelé l'**opposé** de $a$ et $\dfrac{1}{a}$ est appelé l'**inverse** de $a$.
-- **Hiérarchie des opérations**
+
+:Commutativité: $a+b=b+a \text{  et  } a \cdot b = b\cdot a$
+:Associativité: $(a+b)+c=a+(b+c) \text{  et  } (a\cdot b) \cdot c=a \cdot (b \cdot c) $
+:Distributivité: $a\cdot (b+c) = a \cdot b + a \cdot c $
+:Éléments neutres:  $a+0=a \qquad \text{  et  } \qquad a\cdot 1=a $
+:Éléments symétriques: $a+(-a)=0$, le nombre $-a$ est appelé l'**opposé** de $a$ <br>
+$a\cdot \dfrac{1}{a}=1 $, le nombre $\dfrac{1}{a}$ est appelé l'**inverse** de $a$.
+:Hiérarchie des opérations:
     1. Parenthèses
     2. Puissances et racines
     3. Multiplications et divisions
     4. Additions et soustractions
 ```
 
-```{container} frame noprint
+```{container} frame
 # Exemple {num2}`exemple`
 
 {.lower-alpha-paren .columns-2}

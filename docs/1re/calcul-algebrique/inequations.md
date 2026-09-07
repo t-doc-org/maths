@@ -28,7 +28,7 @@ ax + b < 0 \quad \text{ ou } \quad ax + b \leq 0  \quad \text{ ou }
 avec $a \text{, }b \in \mathbb{R} \text{ et } a  \ne 0$.
 ````
 
-```{container} frame noprint
+```{container} frame
 # Exemple {num2}`exemple`
 
 {.lower-alpha-paren}

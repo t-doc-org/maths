@@ -37,7 +37,7 @@ qui, élevé à la n<sup>ième</sup> puissance, donne $a$:
 Le nombre $n$ est appelé **indice**.
 ````
 
-```{container} frame noprint
+```{container} frame
 # Exemple {num2}`exemple`
 
 {.lower-alpha-paren .columns-2}
@@ -64,7 +64,7 @@ Le nombre $n$ est appelé **indice**.
         est inférieure à 0.
 ```
 
-```{container} frame noprint
+```{container} frame
 # Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
@@ -128,7 +128,7 @@ a^{\frac{1}{n}}=\sqrt[n]{a}
 ```
 ````
 
-```{container} frame noprint
+```{container} frame
 # Exemple {num2}`exemple`
 
 {.lower-alpha-paren .columns-2}

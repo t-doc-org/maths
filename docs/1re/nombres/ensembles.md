@@ -28,7 +28,7 @@ Si $x$ appartient à $E$, nous notons $x \in E$.
 Si par contre $x$ n'est pas un élément de $E$, nous notons $x \notin E$.
 ```
 
-```{container} frame noprint
+```{container} frame
 # Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
@@ -47,7 +47,7 @@ l'ensemble sont énumérés entre accolades. Si l'ensemble est infini,
 des points de suspension sont ajoutés au début ou à la fin de l'énumération.
 ```
 
-```{container} frame noprint
+```{container} frame
 # Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
@@ -62,7 +62,7 @@ Un ensemble peut être défini **en compréhension**, c'est-à-dire qu'il est
 défini par ses propriétés caractéristiques.
 ```
 
-```{container} frame noprint
+```{container} frame
 # Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
@@ -78,7 +78,7 @@ Un ensemble peut être défini par un **intervalle**, c'est-à-dire un ensemble 
 nombres réels délimité par deux bornes.
 ```
 
-```{container} frame noprint
+```{container} frame
 # Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
@@ -100,7 +100,7 @@ Un ensemble $A$ est **sous-ensemble** d'un ensemble $B$, si tout élément de $A
 est également élément de $B$, noté $A \subset B$.
 ```
 
-```{container} frame noprint
+```{container} frame
 # Exemple {num2}`exemple`
 
 {.lower-alpha-paren}

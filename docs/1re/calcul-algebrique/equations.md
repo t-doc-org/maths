@@ -28,7 +28,7 @@ La ou les valeurs qui vérifient l'égalité sont appelées solutions de l'équa
 Résoudre une équation, c'est trouver l'**ensemble des solutions**, noté $S$.
 ````
 
-```{container} frame noprint
+```{container} frame
 # Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
@@ -66,7 +66,7 @@ S &= \{3\}  && \text{ (ensemble des solutions)}&
 $$
 ```
 
-```{container} frame
+```{container} frame avoid-break-inside
 # Remarques
 
 Les équations du premier degré peuvent toujours être résolues grâce aux règles

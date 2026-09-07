@@ -27,7 +27,7 @@ additionnant les monômes semblables (de même partie littérale) qui le compose
 ```
 
 
-```{container} frame noprint
+```{container} frame
 # Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
@@ -43,7 +43,7 @@ additionnant les monômes semblables (de même partie littérale) qui le compose
 L'exposant le plus élevé d'un polynôme à une variable est appelé **degré** du polynôme.
 ```
 
-```{container} frame noprint
+```{container} frame
 # Exemple {num2}`exemple`
 
 {.lower-alpha-paren}

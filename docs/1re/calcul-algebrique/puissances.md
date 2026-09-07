@@ -52,7 +52,7 @@ a^0=1 \text{ pour tout }a \neq 0.
     ````
 ```
 
-```{container} frame noprint
+```{container} frame
 # Exemple {num2}`exemple`
 
 {.lower-alpha-paren .columns-3}
@@ -163,7 +163,7 @@ x=a \cdot 10^n \text{ avec } 1\leq|a|<10 \text{ et } n \in \mathbb{Z}
 ```
 ````
 
-````{container} frame noprint
+````{container} frame
 ### Exemple {num2}`exemple`
 
 {.lower-alpha-paren .columns-2}
