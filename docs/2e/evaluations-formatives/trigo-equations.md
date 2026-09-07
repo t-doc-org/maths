@@ -1,7 +1,7 @@
 % Copyright 2026 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-# Équations trigonométriques
+# Fonction et équations trigonométriques
 
 ```{include} /_import/informatique/_include/entete-examen.export.md
 ```
@@ -11,6 +11,58 @@ Réponse sous forme de valeur exacte simplifiée.\
 Calculatrice et formulaires et tables autorisés.**
 ```
 ---
+
+## Question {nump}`question`{points}`4`
+
+La fonction $\cos(x)$ est représentée ci-dessous.
+
+{.lower-alpha-paren}
+1.  Représentez le plus précisément possible $g(x) = \cos(\dfrac{x}{2})$.
+
+    ```{jsxgraph} exCos
+    :style: width: 100%; border: none;
+    ```
+2.  Déterminez la période de $g(x)$
+    {vspace}`2lh`
+3.  Déterminez l'ensemble des zéros de $g(x)$.
+    {vspace}`2lh`
+
+````{solution}
+{.lower-alpha-paren}
+1.  ```{jsxgraph} exCosSol
+    :style: width: 100%; border: none;
+    ```
+2.  La période de $f(x)$ est $4\pi$.
+3.  $S = \left\{\pi + k \cdot 2\pi \mid k \in \mathbb{Z} \right\}$
+````
+
+<script type="module">
+const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
+const battrs = [attrs.screen, attrs.nonInteractive, {
+    boundingBox: [-10, 3.5, 10, -3.5],
+    grid: {majorStep: [Math.PI / 4, 0.5]},
+    defaultAxes: {
+        x: {ticks: {scale: Math.PI, scaleSymbol: 'π'}},
+        y: {ticks: {minorTicks: 1}},
+    },
+}];
+render.exCos = el => {
+  return initBoard(el, battrs, board => {
+    board.create('functiongraph', [x => Math.cos(x)], {withLabel: false});
+  });
+};
+render.exCosSol = el => {
+  return initBoard(el, battrs, board => {
+    board.create('functiongraph', [x => Math.cos(x)], {
+      dash: 2, withLabel: false
+    });
+    board.create('functiongraph', [x => Math.cos(x / 2)], {
+      name: '\\(\\cos(\\frac{x}{2})\\)',
+      label: {position: '0.75fr right'}
+    });
+  });
+};
+</script>
 
 ## Question {nump}`question`{points}`24`
 
