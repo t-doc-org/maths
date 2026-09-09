@@ -259,3 +259,17 @@ faites, en notant tous les calculs et en répondant par une phrase.
 4.  Pour parcourir 550 km, la voiture consomme 44 litres. Avec 12 litres, elle
     peut parcourir 150 km.
 ```
+
+````{container} noprint
+# Exercices supplémentaires
+
+Ces séries d'exercices ont été générée sur le site
+[https://www.mathelot.eu/](https://www.mathelot.eu/).
+
+- [Additions et soustractions de fractions 1](fractions-ex-supp-addition-soustraction-1.pdf)
+- [Additions et soustractions de fractions 2](fractions-ex-supp-addition-soustraction-2.pdf)
+- [Multiplications de fractions](fractions-ex-supp-multiplication.pdf)
+- [Divisions de fractions](fractions-ex-supp-division.pdf)
+- [4 opérations avec les fractions](fractions-ex-supp-4-operations.pdf)
+
+````
