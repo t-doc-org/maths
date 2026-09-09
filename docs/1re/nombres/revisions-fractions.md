@@ -263,7 +263,7 @@ faites, en notant tous les calculs et en répondant par une phrase.
 ````{container} noprint
 # Exercices supplémentaires
 
-Ces séries d'exercices ont été générée sur le site
+Ces séries d'exercices ont été générées sur le site
 [https://www.mathelot.eu/](https://www.mathelot.eu/).
 
 - [Additions et soustractions de fractions 1](fractions-ex-supp-addition-soustraction-1.pdf)
