@@ -113,12 +113,6 @@ trouvent les nombres tels que $\pi$, $\sqrt{2}$, $1.010010001\ldots$.
     $6 = \dfrac{6}{1} \in \mathbb{Q} \quad$ et  $\quad 6 = 6.0 \in \mathbb{R}$
 ````
 
-```{container} frame noprint instructor
--> {numref}`exercice %s<exercice:1-nb-ex1>`, {numref}`exercice %s<exercice:1-nb-ex2>`,
-{numref}`exercice %s<exercice:1-nb-ex3>`, {numref}`exercice %s<exercice:1-nb-ex4>`,
-{numref}`exercice %s<exercice:1-nb-ex5>` et {numref}`exercice %s<exercice:1-nb-ex6>`.
-```
-
 ```{admonition} Théorème
 :class: note
 Toute fraction est un nombre décimal fini ou périodique. Réciproquement, tout
@@ -134,6 +128,12 @@ nombre décimal fini ou périodique est une fraction.
 3. $2.\overline{714285}=\dfrac{19}{7}$
 4. $\dfrac{9}{22}=0.40\overline{90}$
 ````
+
+```{container} frame noprint instructor
+-> {numref}`exercice %s<exercice:1-nb-ex1>`, {numref}`exercice %s<exercice:1-nb-ex2>`,
+{numref}`exercice %s<exercice:1-nb-ex3>`, {numref}`exercice %s<exercice:1-nb-ex4>`,
+{numref}`exercice %s<exercice:1-nb-ex5>` et {numref}`exercice %s<exercice:1-nb-ex6>`.
+```
 
 ````{container} frame noprint
 # Exemple {num2}`exemple`
