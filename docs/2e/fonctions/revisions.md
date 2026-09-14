@@ -151,57 +151,6 @@ render.constante = el => {
 
 ```{admonition} Définition
 :class: note
-Le **domaine de définition** d'une fonction réelle $f$, noté $D_f$, est
-l'ensemble des éléments de l'ensemble de départ qui ont une image par $f$,
-c'est-à-dire l'ensemble des $x$ pour lesquels $f(x)$ est définie.
-```
-
-```{container}
-# Remarques
-
-- Le domaine de définition des fonctions du premier et du deuxième degré est
-  $\mathbb{R}$, car leur expression algébrique est un polynôme et pour toutes
-  valeurs de $x$, $f(x)$ existe.
-
-- Le domaine de définition d'une fonction rationnelle de la forme
-  $f(x) = \dfrac{A(x)}{B(x)}$ est $\mathbb{R}$ auquel il faut enlever les
-  valeurs de $x$ qui posent problème, c'est-à-dire les valeurs pour lesquels
-  $B(x)$ s'annule.
-```
-
-```{container} frame noprint
-# Exemple {num2}`exemple`
-
-Calculez le domaine de définition de $f(x) = \dfrac{2x + 1}{4x + 3}$.
-
-Le dénominateur **ne doit pas être nul**:
-
-$4x + 3 \neq 0 \Longleftrightarrow 4x \neq -3 \Longleftrightarrow x = -\frac{3}{4}$
-
-$\Longrightarrow D_f = \mathbb{R} \setminus \{-\frac{3}{4}\}$
-```
-
-```{container} frame noprint
-# Exemple {num2}`exemple`
-
-Calculez le domaine de définition de $f(x) = \sqrt{7-x}$.
-
-La partie sous la racine **doit être positive ou nulle**:
-
-$$
-7 - x &\geq 0 \qquad &&| -7\\
-   -x &\geq -7 \qquad &&| {\color{red}\cdot (-1)}\\
-    x\, &{\color{red}\leq} \,7
-$$
-
-:Rappel: Lorsqu'on multiplie ou divise une inéquation par un nombre négatif,
-le signe d'inégalité change de sens.
-
-$\Longrightarrow D_f = ] -\infty; 7 ]$
-```
-
-```{admonition} Définition
-:class: note
 L'**ordonnée à l'origine** d'une fonction $f$ est la valeur de $f$ lorsque
 $x=0$, c'est-à-dire $f(0)$.\
 Graphiquement l'ordonnée à l'origine représente l'intersection du graphe de $f$
@@ -238,7 +187,196 @@ $- \dfrac{1}{3}x + 2 = 0 \implies -\dfrac{1}{3}x = -2 \implies x = -2 \cdot (-3)
 `````
 
 ```{container} frame noprint instructor
--> {numref}`exercice %s<exercice:2-rev-polyn-ex2>`, {numref}`exercice %s<exercice:2-rev-polyn-ex3>` et
+-> {numref}`exercice %s<exercice:2-rev-polyn-ex2>`
+```
+
+### Résolution d'inéquations
+
+La résolution d'inéquation du 1<sup>er</sup> degré est identique à la résolution
+d'équation à l'exception de la multiplication ou la division par un nombre
+négatif qui change le sens de l'inégalité.
+
+```{container} frame noprint
+# Exemple {num2}`exemple`
+
+$$
+2x - 7 &< 5x + 4 \qquad &&| -5x\\
+-3x - 7 &< 4 \qquad &&| +7\\
+-3x &< 11 \qquad &&| {\color{red}:(-3)}\\
+x &{\,\color{red}>\,} \dfrac{11}{-3}\\
+x &> -\dfrac{11}{3}
+$$
+
+$S = ]-\dfrac{11}{3}; +\infty[$
+```
+
+Pour résoudre une inéquation du 2<sup>e</sup> degré ou plus, il faut passer par
+la factorisation et faire un tableau de signes.
+
+````{container} frame noprint
+# Exemple {num2}`exemple`
+
+$$
+(7-x)(2x + 3) < 0
+$$
+
+Zéros:\
+$7-x = 0  \quad \text{ou}  \quad 2x + 3 = 0 \qquad \implies \qquad x = 7  \quad \text{ou} \quad  x = -\dfrac{3}{2}$
+
+```{flex-table}
+:class: function-table
+|$x$|{.l .w}$\tiny-\;\infty$|$-\frac{3}{2}$|{.w}|$7$|{.r .w}$\tiny+\;\infty$
+|$7-x$|$+$||$+$|$0$|$-$
+|$2x+3$|$-$|$0$|$+$||$+$
+|$(7-x)(2x + 3) < 0$|$-$|$0$|$+$|$0$|$-$
+```
+$S = ]-\infty; -\frac{3}{2}[ \: \cup \: ]7; +\infty[$
+````
+
+````{container} frame noprint
+# Exemple {num2}`exemple`
+
+$$
+x^2 + 4x - 12 &\leq 0 \qquad &&| \text{factorisation}\\
+(x - 2)(x + 6) &\leq 0
+$$
+
+Zéros:\
+$x - 2 = 0  \quad \text{ou}  \quad x - 6 = 0 \qquad \implies \qquad x = 2  \quad \text{ou} \quad  x = -6$
+
+```{flex-table}
+:class: function-table
+|$x$|{.l .w}$\tiny-\;\infty$|$-6$|{.w}|$2$|{.r .w}$\tiny+\;\infty$
+|$x-2$|$-$||$-$|$0$|$+$
+|$x+6$|$-$|$0$|$+$||$+$
+|$(x - 2)(x + 6) \leq 0$|$+$|$0$|$-$|$0$|$+$
+```
+$S = [-6; 2]$
+````
+
+Pour résoudre une inéquation avec une fraction rationnelle, il faut faire un
+tableau de signes.
+
+````{container} frame noprint
+# Exemple {num2}`exemple`
+
+$\dfrac{2x-1}{2-3x} \leq 0$
+
+Domaine de définition:\
+$2-3x \neq 0 \qquad \implies \qquad 2 \neq 3x \qquad \implies \qquad \dfrac{2}{3} \neq x$\
+$D = \mathbb{R} \setminus \{\dfrac{2}{3}\}$
+
+Zéros:\
+$2x - 1 = 0 \qquad \implies \qquad 2x = 1 \qquad \implies \qquad x = \dfrac{1}{2}$
+
+```{flex-table}
+:class: function-table
+|$x$|{.l .w}$\tiny-\;\infty$|$\frac{1}{2}$|{.w}|$\frac{2}{3}$|{.r .w}$\tiny+\;\infty$
+|$2x-1$|$-$|$0$|$+$||$+$
+|$2-3x$|$+$||$+$|{.g}$0$|$-$
+|$\dfrac{2x-1}{2-3x} \leq 0$|$-$|$0$|$+$|{.g}|$-$
+```
+$S = ]-\infty; \frac{1}{2}] \: \cup \: ]\frac{2}{3}; +\infty[$
+````
+
+````{container} frame noprint
+# Exemple {num2}`exemple`
+
+$\dfrac{-2}{x^2-1} \leq 0$
+
+Domaine de définition:\
+$x^2-1 \neq 0 \qquad \implies \qquad (x+1)(x-1) \neq 0 \qquad \implies \qquad x \neq 1 \text{ et } x \neq -1 $\
+$D = \mathbb{R} \setminus \{-1; 1\}$
+
+Zéro:\
+Le numérateur ne s'annule jamais.
+
+```{flex-table}
+:class: function-table
+|$x$|{.l .w}$\tiny-\;\infty$|$-1$|{.w}|$1$|{.r .w}$\tiny+\;\infty$
+|$-2$|$-$||$-$||$-$
+|$x-1$|$-$||$-$|{.g}$0$|$+$
+|$x+1$|$-$|{.g}$0$|$+$||$+$
+|$\dfrac{-2}{(x+1)(x-1)} \leq 0$|$-$|{.g}|$+$|{.g}|$-$
+```
+$S = ]-\infty; -1[ \: \cup \: ]1; +\infty[$
+````
+
+```{container} frame noprint instructor
+-> {numref}`exercice %s<exercice:2-rev-polyn-ex10>`.
+```
+
+```{admonition} Définition
+:class: note
+Le **domaine de définition** d'une fonction réelle $f$, noté $D_f$, est
+l'ensemble des éléments de l'ensemble de départ qui ont une image par $f$,
+c'est-à-dire l'ensemble des $x$ pour lesquels $f(x)$ est définie.
+```
+
+```{container}
+# Remarques
+
+- Le domaine de définition des fonctions du premier et du deuxième degré est
+  $\mathbb{R}$, car leur expression algébrique est un polynôme et pour toutes
+  valeurs de $x$, $f(x)$ existe.
+
+- Le domaine de définition d'une fonction rationnelle de la forme
+  $f(x) = \dfrac{A(x)}{B(x)}$ est $\mathbb{R}$ auquel il faut enlever les
+  valeurs de $x$ qui posent problème, c'est-à-dire les valeurs pour lesquels
+  $B(x)$ s'annule.
+```
+
+```{container} frame noprint
+# Exemple {num2}`exemple`
+
+{.lower-alpha-paren}
+1.  Calculez le domaine de définition de $f(x) = \dfrac{2x + 1}{4x + 3}$.
+
+    Le dénominateur **ne doit pas être nul**:
+
+    $4x + 3 \neq 0 \Longleftrightarrow 4x \neq -3 \Longleftrightarrow x = -\frac{3}{4}$
+
+    $\Longrightarrow D_f = \mathbb{R} \setminus \{-\frac{3}{4}\}$
+2.  Calculez les zéros de $f(x) = \dfrac{2x + 1}{4x + 3}$.
+
+    Il faut résoudre $f(x) = 0$
+    $$\dfrac{2x + 1}{4x + 3} &= 0 \qquad \text{Pour qu'une fraction soit nulle, son numérateur doit être nul.}\\
+    2x + 1 &= 0\\
+    2x &= -1\\
+    x &= -\frac{1}{2}
+    $$
+    $S = \{-\frac{1}{2}\}$
+```
+
+```{container} frame noprint
+# Exemple {num2}`exemple`
+
+{.lower-alpha-paren}
+1.  Calculez le domaine de définition de $f(x) = \sqrt{7-x}$.
+
+    La partie sous la racine **doit être positive ou nulle**:
+
+    $$
+    7 - x &\geq 0 \qquad &&| -7\\
+       -x &\geq -7 \qquad &&| {\color{red}\cdot (-1)}\\
+        x\, &{\color{red}\leq} \,7
+    $$
+
+    :Rappel: Lorsqu'on multiplie ou divise une inéquation par un nombre négatif,
+    le signe d'inégalité change de sens.
+
+    $\Longrightarrow D_f = ] -\infty; 7 ]$
+2.  Calculez les zéros de $f(x) = \sqrt{7-x}$.
+
+    Il faut résoudre $f(x) = 0$
+    $$\sqrt{7-x} &= 0 \\
+    7 - x &= 0 \\
+    7 &= x$$
+    Vérification: $\sqrt{7-7} = 0 \implies S = \{7\}$
+```
+
+```{container} frame noprint instructor
+-> {numref}`exercice %s<exercice:2-rev-polyn-ex3>` et
  {numref}`exercice %s<exercice:2-rev-polyn-ex4>`.
 ```
 
@@ -433,122 +571,6 @@ render.fctF = el => {
   });
 };
 </script>
-
-### Résolution d'inéquations
-
-La résolution d'inéquation du 1<sup>er</sup> degré est identique à la résolution
-d'équation à l'exception de la multiplication ou la division par un nombre
-négatif qui change le sens de l'inégalité.
-
-```{container} frame noprint
-# Exemple {num2}`exemple`
-
-$$
-2x - 7 &< 5x + 4 \qquad &&| -5x\\
--3x - 7 &< 4 \qquad &&| +7\\
--3x &< 11 \qquad &&| {\color{red}:(-3)}\\
-x &{\,\color{red}>\,} \dfrac{11}{-3}\\
-x &> -\dfrac{11}{3}
-$$
-
-$S = ]-\dfrac{11}{3}; +\infty[$
-```
-
-Pour résoudre une inéquation du 2<sup>e</sup> degré ou plus, il faut passer par
-la factorisation et faire un tableau de signes.
-
-````{container} frame noprint
-# Exemple {num2}`exemple`
-
-$$
-(7-x)(2x + 3) < 0
-$$
-
-Zéros:\
-$7-x = 0  \quad \text{ou}  \quad 2x + 3 = 0 \qquad \implies \qquad x = 7  \quad \text{ou} \quad  x = -\dfrac{3}{2}$
-
-```{flex-table}
-:class: function-table
-|$x$|{.l .w}$\tiny-\;\infty$|$-\frac{3}{2}$|{.w}|$7$|{.r .w}$\tiny+\;\infty$
-|$7-x$|$+$||$+$|$0$|$-$
-|$2x+3$|$-$|$0$|$+$||$+$
-|$(7-x)(2x + 3) < 0$|$-$|$0$|$+$|$0$|$-$
-```
-$S = ]-\infty; -\frac{3}{2}[ \: \cup \: ]7; +\infty[$
-````
-
-````{container} frame noprint
-# Exemple {num2}`exemple`
-
-$$
-x^2 + 4x - 12 &\leq 0 \qquad &&| \text{factorisation}\\
-(x - 2)(x + 6) &\leq 0
-$$
-
-Zéros:\
-$x - 2 = 0  \quad \text{ou}  \quad x - 6 = 0 \qquad \implies \qquad x = 2  \quad \text{ou} \quad  x = -6$
-
-```{flex-table}
-:class: function-table
-|$x$|{.l .w}$\tiny-\;\infty$|$-6$|{.w}|$2$|{.r .w}$\tiny+\;\infty$
-|$x-2$|$-$||$-$|$0$|$+$
-|$x+6$|$-$|$0$|$+$||$+$
-|$(x - 2)(x + 6) \leq 0$|$+$|$0$|$-$|$0$|$+$
-```
-$S = [-6; 2]$
-````
-
-Pour résoudre une inéquation avec une fraction rationnelle, il faut faire un
-tableau de signes.
-
-````{container} frame noprint
-# Exemple {num2}`exemple`
-
-$\dfrac{2x-1}{2-3x} \leq 0$
-
-Domaine de définition:\
-$2-3x \neq 0 \qquad \implies \qquad 2 \neq 3x \qquad \implies \qquad \dfrac{2}{3} \neq x$\
-$D = \mathbb{R} \setminus \{\dfrac{2}{3}\}$
-
-Zéros:\
-$2x - 1 = 0 \qquad \implies \qquad 2x = 1 \qquad \implies \qquad x = \dfrac{1}{2}$
-
-```{flex-table}
-:class: function-table
-|$x$|{.l .w}$\tiny-\;\infty$|$\frac{1}{2}$|{.w}|$\frac{2}{3}$|{.r .w}$\tiny+\;\infty$
-|$2x-1$|$-$|$0$|$+$||$+$
-|$2-3x$|$+$||$+$|{.g}$0$|$-$
-|$\dfrac{2x-1}{2-3x} \leq 0$|$-$|$0$|$+$|{.g}|$-$
-```
-$S = ]-\infty; \frac{1}{2}] \: \cup \: ]\frac{2}{3}; +\infty[$
-````
-
-````{container} frame noprint
-# Exemple {num2}`exemple`
-
-$\dfrac{-2}{x^2-1} \leq 0$
-
-Domaine de définition:\
-$x^2-1 \neq 0 \qquad \implies \qquad (x+1)(x-1) \neq 0 \qquad \implies \qquad x \neq 1 \text{ et } x \neq -1 $\
-$D = \mathbb{R} \setminus \{-1; 1\}$
-
-Zéro:\
-Le numérateur ne s'annule jamais.
-
-```{flex-table}
-:class: function-table
-|$x$|{.l .w}$\tiny-\;\infty$|$-1$|{.w}|$1$|{.r .w}$\tiny+\;\infty$
-|$-2$|$-$||$-$||$-$
-|$x-1$|$-$||$-$|{.g}$0$|$+$
-|$x+1$|$-$|{.g}$0$|$+$||$+$
-|$\dfrac{-2}{(x+1)(x-1)} \leq 0$|$-$|{.g}|$+$|{.g}|$-$
-```
-$S = ]-\infty; -1[ \: \cup \: ]1; +\infty[$
-````
-
-```{container} frame noprint instructor
--> {numref}`exercice %s<exercice:2-rev-polyn-ex10>`.
-```
 
 
 ## Exercices
@@ -764,15 +786,34 @@ render. fct2c= el => {
     10. $x \in \left[ -5; 0\right] \cup \left[ 1; 2\right]  $
 ```
 
+### Exercice {num2}`exercice:2-rev-polyn-ex10`
+
+Déterminez à l'aide d'un tableau de signes l'ensemble des solutions des
+inéquations suivantes.
+
+{.columns-2 .lower-alpha-paren .vsep-2}
+1. $(3x+1)(2x+3) > 0$
+2. $(5-x)(2x+1) < 0$
+3. $\dfrac{5+2x}{4x+1} \leq 0$
+4. $\dfrac{2x+1}{2-x} \geq 0$
+
+```{block} solution
+{.columns-2 .lower-alpha-paren .vsep-2}
+1. $S = \Bigl] -\infty;-\frac{3}{2} \Bigr[ \cup \Bigl] -\frac{1}{3}; +\infty \Bigr[$
+2. $S = \Bigl] -\infty;-\frac{1}{2} \Bigr[ \cup \left] 5; +\infty \right[$
+3. $S = \Bigl[ -\frac{5}{2};-\frac{1}{4} \Bigr[$
+4. $S = \Bigl[ -\frac{1}{2};2 \Bigr[$
+```
+
 ### Exercice {num2}`exercice:2-rev-polyn-ex3`
 
 Déterminez le domaine de définition des fonctions suivantes.
 
 {.columns-2 .lower-alpha-paren .vsep-2}
 1. $f(x)=\dfrac{1}{x^2-4}$
-2. $f(x)=\sqrt{x+4}$
-3. $f(x)=\dfrac{2x+4}{1+x^2}$
-4. $f(x)=\dfrac{4x+7}{x}$
+2. $f(x)=\dfrac{2x+4}{1+x^2}$
+3. $f(x)=\dfrac{4x+7}{x}$
+4. $f(x)=\sqrt{x+4}$
 5. $f(x)=\sqrt{x^2+6x+5}$
 6. $f(x)=\sqrt{6x-4}$
 7. $f(x)=\sqrt{5-3x}$
@@ -780,9 +821,9 @@ Déterminez le domaine de définition des fonctions suivantes.
 ```{block} solution
 {.columns-2 .lower-alpha-paren}
 1. $D_f = \mathbb{R} \setminus \left\{ -2; 2 \right\}$
-2. $D_f = \left[-4; +\infty\right[$
-3. $D_f = \mathbb{R}$
-4. $D_f = \mathbb{R}^* = \mathbb{R} \setminus \left\{ 0 \right\}$
+2. $D_f = \mathbb{R}$
+3. $D_f = \mathbb{R}^* = \mathbb{R} \setminus \left\{ 0 \right\}$
+4. $D_f = \left[-4; +\infty\right[$
 5. $D_f = \left] -\infty; -5\right] \cup \left[ -1; +\infty\right[$
 6. $D_f = \left[ \frac{2}{3}; +\infty \right[$
 7. $D_f = \left] -\infty; \frac{5}{3} \right]$
@@ -795,11 +836,11 @@ Déterminez le domaine de définition et les zéros des fonctions suivantes.
 {.columns-2 .lower-alpha-paren .vsep-2}
 1. $f(x)=5x-1$
 2. $f(t)=t^2+2t$
-3. $g(x)=\dfrac{x-4}{4-2x}$
-4. $h(s)=s^2-4s+3$
+3. $h(s)=s^2-4s+3$
+4. $g(x)=\dfrac{x-4}{4-2x}$
 5. $j(x)=\dfrac{x+3}{2x-4}$
-6. $k(t)=\sqrt{(t+2)(3-t)}$
-7. $m(t)=\dfrac{t^2-3t-4}{t}$
+6. $m(t)=\dfrac{t^2-3t-4}{t}$
+7. $k(t)=\sqrt{(t+2)(3-t)}$
 8. $f(x)=\dfrac{\sqrt{-x+2}}{4x^2+2x}$
 
 {.avoid-break-inside}
@@ -807,13 +848,13 @@ Déterminez le domaine de définition et les zéros des fonctions suivantes.
 {.lower-alpha-paren .columns-2}
 1.  Zéro: $x=\frac{1}{5}$; $D_f=\mathbb{R}$.
 2.  Zéros: $t_1=-2$ et $t_2=0$; $D_f=\mathbb{R}$.
-3.  Zéro: $x=4$; $D_g=\mathbb{R} \setminus \left\{ 2 \right\}$.
-4.  Zéros: $s_1=1$ et $s_2=3$; $D_h=\mathbb{R}$.
+3.  Zéros: $s_1=1$ et $s_2=3$; $D_h=\mathbb{R}$.
+4.  Zéro: $x=4$; $D_g=\mathbb{R} \setminus \left\{ 2 \right\}$.
 5.  Zéro: $x=-3$; $D_j=\mathbb{R} \setminus \left\{ 2 \right\}$.
-6.  Zéros: $t_1=-2$ et $t_2=3$; $D_k=\left[ -2;3 \right]$.
-7.  $m(t)=\dfrac{t^2-3t-4}{t}=\dfrac{(t+1)(t-4)}{t}$<br>
+6.  $m(t)=\dfrac{t^2-3t-4}{t}=\dfrac{(t+1)(t-4)}{t}$<br>
     Zéros: $t_1=-1$ et $t_2=4$;<br>
     $D_m = \mathbb{R}^* = \mathbb{R} \setminus \left\{ 0 \right\}$.
+7.  Zéros: $t_1=-2$ et $t_2=3$; $D_k=\left[ -2;3 \right]$.
 8.  $f(x)=\dfrac{\sqrt{-x+2}}{4x^2+2x} = \dfrac{\sqrt{-x+2}}{2x(2x + 1)}$<br>
     Zéro: $x=2$;<br>
     $D_f = \left] -\infty;2 \right] \setminus \left\{ -\frac{1}{2}; 0 \right\}$.
@@ -963,25 +1004,6 @@ $A(2; 9)$, $B(-6; -7)$ et $C(1; 0)$.
 
 ```{block} solution
 $f(x) = x^2 + 6x - 7$
-```
-
-### Exercice {num2}`exercice:2-rev-polyn-ex10`
-
-Déterminez à l'aide d'un tableau de signes l'ensemble des solutions des
-inéquations suivantes.
-
-{.columns-2 .lower-alpha-paren .vsep-2}
-1. $(3x+1)(2x+3) > 0$
-2. $(5-x)(2x+1) < 0$
-3. $\dfrac{5+2x}{4x+1} \leq 0$
-4. $\dfrac{2x+1}{2-x} \geq 0$
-
-```{block} solution
-{.columns-2 .lower-alpha-paren .vsep-2}
-1. $S = \Bigl] -\infty;-\frac{3}{2} \Bigr[ \cup \Bigl] -\frac{1}{3}; +\infty \Bigr[$
-2. $S = \Bigl] -\infty;-\frac{1}{2} \Bigr[ \cup \left] 5; +\infty \right[$
-3. $S = \Bigl[ -\frac{5}{2};-\frac{1}{4} \Bigr[$
-4. $S = \Bigl[ -\frac{1}{2};2 \Bigr[$
 ```
 
 ## Solutions
