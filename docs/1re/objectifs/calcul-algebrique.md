@@ -15,16 +15,20 @@
 - Savoir effectuer des calculs avec des puissances et des racines mélangées.
 - Savoir rationnaliser un dénominateur.
 
-## Polynômes et fractions rationnelles
+## Polynômes
 
 - Connaître les définitions (monôme, polynôme, degré).
 - Savoir addition, soustraire, multiplier et diviser deux polynômes.
 - Connaître les produits remarquables et savoir les appliquer.
-- Savoir factoriser des polynômes avec les trois méthodes apprises:
+
+## Factorisation et ses applications
+
+- Savoir factoriser des polynômes avec les quatre méthodes apprises:
   - Mise en évidence.
   - Produits remarquables.
   - Décomposition des trinômes.
-- Savoir simplifier des fractions algébriques grâce à la factorisation.
-- Savoir résoudre des équations à l’aide de la factorisation.
+  - Substitution.
+- Savoir simplifier des fractions rationnelles grâce à la factorisation.
+- Savoir résoudre des équations à l'aide de la factorisation.
 - Savoir trouver le plus petit dénominateur commun de fractions algébriques pour
   pouvoir les additionner ou les soustraire.

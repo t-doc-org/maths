@@ -194,6 +194,10 @@ Si $c < 0$, alors les deux nombres cherchés sont de signes différents.
     $x^2+3x-18=(x+6)(x-3)$
 ```
 
+```{container} frame instructor noprint
+-> {numref}`exercice %s<exercice:1-fact-ex5>`
+```
+
 ```{container} frame noprint
 # Exercices supplémentaires
 
@@ -280,8 +284,7 @@ source: (<https://gomaths.edu-vd.ch/alg_calc_litt.php>)
 ```
 
 ```{container} frame instructor noprint
--> {numref}`exercice %s<exercice:1-fact-ex5>` et
-{numref}`exercice %s<exercice:1-fact-ex6>`
+-> {numref}`exercice %s<exercice:1-fact-ex6>`
 ```
 
 ### Combinaison de méthodes
