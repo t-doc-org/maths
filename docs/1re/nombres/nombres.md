@@ -223,7 +223,7 @@ Pour transformer un nombre décimal en fraction, il y a deux situations:
 Un nombre entier naturel est divisible par:
 
 - 2, s'il se termine par $0$, $2$, $4$, $6$ ou $8$.
-- 3, si la somme de ses chiffes est divisible par 3.
+- 3, si la somme de ses chiffres est divisible par 3.
 - 5, s'il se termine par $0$ ou $5$.
 - 9, si la somme de ses chiffres est divisible par 9.
 - 10, s'il se termine par $0$.
