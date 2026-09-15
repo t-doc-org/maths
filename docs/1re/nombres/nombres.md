@@ -179,7 +179,7 @@ Pour transformer un nombre décimal en fraction, il y a deux situations:
 
 1.  Le nombre décimal est fini:<br>
     Le numérateur et le dénominateur doivent être des nombres entiers.<br>
-    $5.0862 = \dfrac{5.0862}{1} \overset{\color{red}\cdot10\,000}{=} \dfrac{50\,862}{10\,000} \overset{\color{red}simplifier}{=} \dfrac{25\,432}{5\,000}$
+    $5.0862 = \dfrac{5.0862}{1} \overset{\color{red}\cdot10\,000}{=} \dfrac{50\,862}{10\,000} \overset{\color{red}simplifier}{=} \dfrac{25\,431}{5\,000}$
 
 2.  Le nombre est périodique:<br>
     Idée: soutraire deux multiples de ce nombre pour faire disparaître la
