@@ -96,7 +96,7 @@ l'ensemble de départ.
 :style: grid-template-columns: 1fr 1fr;
 -   L'image de $5$ est 1, car $f(5)=1$<br>
     La préimage ou l'antécédent de 3 est $-3$, car $f(-3) = 3$.<br>
-    L'ensemble des images est $Im_f = ]-\infty; 6]$
+    L'ensemble des images est $Im_f = [0; +\infty[$
 -   ```{jsxgraph} fonctionRacine
     :style: width: 80%;
     ```
