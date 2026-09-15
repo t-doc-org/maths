@@ -34,7 +34,7 @@ $A$ est appelé l'**ensemble de départ** de $f$ et $B$ est appelé l'**ensemble
 d'arrivée** de $f$.
 ````
 
-````{container} frame noprint
+````{container} frame
 # Exemple {num2}`exemple`
 
 {.columns-2 .lower-alpha-paren}
@@ -89,7 +89,7 @@ L'**ensemble image** par $f$, noté $Im_f$, est l'ensemble des images de
 l'ensemble de départ.
 ```
 
-`````{container} frame noprint
+`````{container} frame
 # Exemple {num2}`exemple`
 
 ````{list-grid}
@@ -165,7 +165,7 @@ Graphiquement les zéros représentent les intersections du graphe de $f$ avec
 l'axe des $x$.
 ```
 
-`````{container} frame noprint
+`````{container} frame
 # Exemple {num2}`exemple`
 
 ````{list-grid}
@@ -461,7 +461,7 @@ Si $a > 0$, la parabole est **convexe** (elle "sourit").\
 Si $a < 0$, la parabole est **concave** (elle "fait la tête").
 ```
 
-```{container} frame noprint
+```{container} frame
 # Exemple {num2}`exemple`
 
 $f(x) = 4x^2 - 2x - 6$ est une fonction quadratique dont les coefficients sont
