@@ -134,7 +134,7 @@ $a^n \cdot a^{-n} = a^{n+(-n)}=a^0=1$
    ```
 ````
 
-```{container} frame noprint
+```{container} frame
 # Exemple {num2}`exemple`
 
 {.lower-alpha-paren .columns-2}
