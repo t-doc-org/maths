@@ -263,15 +263,13 @@ $a\cdot \dfrac{1}{a}=1 $, le nombre $\dfrac{1}{a}$ est appelé l'**inverse** de 
 
 {.lower-alpha-paren}
 1.  $1 + 2\cdot {\color{red}(5+3)}^2 = 1 + 2\cdot {\color{red}8}^2=1 + {\color{red}2\cdot64}= 1 + 128=129$
-2.  Une double fraction n'est rien d'autre qu'une division de fraction.
+2.  $4 - (6 - {\color{red}(3 - 12)}) - 2 \cdot (-3) = 4 - (6 {\color{red} - (-9)}) - 2 \cdot (-3) = 4 - {\color{red}(6 + 9)} - 2 \cdot (-3) = 4 - 15 - {\color{red}2 \cdot (-3)} = 4 - 15 - {\color{red}(-6)} = 4 - 15 + 6 = -5$
+
+
+3.  Une double fraction n'est rien d'autre qu'une division de fraction.
 
     $\dfrac{\dfrac{7}{2}}{\dfrac{6}{5}}=\dfrac{7}{2} : \dfrac{6}{5} = \dfrac{7}{2} \cdot \dfrac{5}{6} =\dfrac{7 \cdot 5}{2 \cdot 6} =\dfrac{35}{12}$
-3.  La puissance d'une fraction n'est rien d'autre que la fraction de
-    puissances.<br>
-    $\left(\dfrac{3}{2}\right)^2 =\dfrac{3^2}{2^2}=\dfrac{9}{4}$
-
-    $\left(\dfrac{4}{3}\right)^3 =\dfrac{4^3}{3^3}=\dfrac{64}{27}$
-4.  $\dfrac{1}{1 + \dfrac{3}{4}} = \dfrac{1}{\dfrac{4}{4} + \dfrac{3}{4}} = \dfrac{1}{\dfrac{7}{4}} = 1 : \dfrac{7}{4} = 1 \cdot \dfrac{4}{7} = \dfrac{4}{7}$
+4.  $\dfrac{\dfrac{\cancel{14}}{5} \cdot \dfrac{1}{\cancel{2}}}{1 + \dfrac{3}{4}} = \dfrac{\dfrac{7}{5}}{\dfrac{4}{4} + \dfrac{3}{4}} =  \dfrac{\dfrac{7}{5}}{\dfrac{7}{4}} = \dfrac{7}{5} : \dfrac{7}{4} = \dfrac{\cancel{7}}{5} \cdot \dfrac{4}{\cancel{7}} = \dfrac{4}{5}$
 ```
 
 ```{container} frame noprint instructor
