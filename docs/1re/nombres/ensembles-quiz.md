@@ -154,7 +154,7 @@ Représentez l'ensemble suivant à l'aide d'un diagramme de Venn.
 
 ```{math}
 :class: align-center
-\overline{A} \cap B
+\overline{A} \cap C
 ```
 
 ````{solution}
