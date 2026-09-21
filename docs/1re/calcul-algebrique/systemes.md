@@ -109,7 +109,7 @@ render.systeme3 = el => {
 </script>
 
 
-`````{container} frame avoid-break-inside
+`````{container} avoid-break-inside
 # Remarque
 
 Résoudre un système de deux équations linéaires à deux inconnues revient à
@@ -277,7 +277,7 @@ Résolvez le système d'équation suivant: $\begin{cases}2x = 5y - 4 \quad &(1)\
 -> {numref}`exercice %s<exercice:1-sys-ex1>`
 ```
 
-```{container} frame
+```{container}
 # Remarque
 
 Comme lors de la résolution d'équations du premier degré, un système peut ne
@@ -506,7 +506,7 @@ $\begin{cases}
     $S=\{({\color{red}5};{\color{magenta}-4};{\color{orange}5})\}$
 ````
 
-```{container} frame
+```{container}
 # Remarque
 
 Avec la méthode ci-dessus, il est possible de résoudre des systèmes linéaires de

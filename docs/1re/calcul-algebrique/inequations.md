@@ -72,8 +72,8 @@ résoudre une équation. Mais il y a deux différences importantes:
     $S = [\dfrac{5}{4}; +\infty[$
 ```
 
-```{container} frame
-# Remarques
+```{container}
+# Remarque
 
 Comme pour les équations, certaines inéquations peuvent être **indéterminées**
 ou **impossibles**:

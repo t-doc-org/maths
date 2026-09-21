@@ -66,7 +66,7 @@ S &= \{3\}  && \text{ (ensemble des solutions)}&
 $$
 ```
 
-```{container} frame avoid-break-inside
+```{container} avoid-break-inside
 # Remarques
 
 Les équations du premier degré peuvent toujours être résolues grâce aux règles
