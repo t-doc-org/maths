@@ -397,7 +397,7 @@ l'origine. Alors qu'une fonction dont $h \neq 0$ est une **fonction affine.**
 ```{container} frame noprint
 # Exemple {num2}`exemple`
 
-Déterminez l'expressions algébrique de la droite $f = mx + h$ qui passe par les
+Déterminez l'expression algébrique de la droite $f = mx + h$ qui passe par les
 points $P(-2;-1)$ et $Q(3;2)$.
 
 Pente:
