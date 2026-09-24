@@ -25,7 +25,8 @@ a^n=\underbrace{a\cdot a\cdot a \cdot  \ldots \cdot a}_{n \text{ facteurs}} \tex
 ```
 
 Le nombre $a$ est appelé **base** et $n$ est appelé **exposant** de la
-puissance. L'expression $a^n$ se lit $a$ puissance $n$.\\
+puissance. L'expression $a^n$ se lit $a$ puissance $n$.
+
 De plus
 
 ```{math}
