@@ -136,14 +136,14 @@ Résolvez les équations suivantes et écrivez le polynôme sous forme factoris�
 ```{block} solution
 {.lower-alpha-paren}
 1. $S=\{5;-5\}$ et $P(x) = 2(x-5)(x+5)$
-2. $S=\left \{0;\dfrac{9}{4} \right\}$ et $P(x) = 4x\left (x-\dfrac{9}{4}\right)= x(4x-9)$
+2. $S= \{0;\frac{9}{4}\}$ et $P(x) = 4x (x-\frac{9}{4})= x(4x-9)$
 3. $S=\{-3\}$  et $P(x) = (x+3)^2$
 4. $S=\varnothing$ et P(x) ne peut pas être factorisé.
 5. $S=\{4;-4\}$ et $P(x) = 3(x-4)(x+4)$
 6. $S=\varnothing$ et P(x) ne peut pas être factorisé.
-7. $S=\left \{-\dfrac{1}{2};\dfrac{2}{3} \right\}$ et $P(x) = 6\left(x+\dfrac{1}{2}\right)\left(x-\dfrac{2}{3}\right) = (2x+1)(3x-2)$
-8. $S=\left \{\dfrac{9}{2} \right\}$  et $P(x) = 4\left(x-\dfrac{9}{2}\right)^2= (2x-9)^2$
-9. $S=\left \{-\dfrac{1}{3}; \dfrac{5}{2}\right \}$ et $P(x) = 6\left(x+\dfrac{1}{3}\right)\left(x-\dfrac{5}{2}\right) = (3x+1)(2x-5)$
+7. $S= \{-\frac{1}{2};\frac{2}{3} \}$ et $P(x) = 6(x+\frac{1}{2})(x-\frac{2}{3}) = (2x+1)(3x-2)$
+8. $S= \{\frac{9}{2} \}$  et $P(x) = 4(x-\frac{9}{2})^2= (2x-9)^2$
+9. $S= \{-\frac{1}{3}; \frac{5}{2} \}$ et $P(x) = 6(x+\frac{1}{3})(x-\frac{5}{2}) = (3x+1)(2x-5)$
 ```
 
 ### Exercice {num2}`exercice:1-equ-quad-ex2`
@@ -164,15 +164,15 @@ Résolvez les équations suivantes.
 
 ```{block} solution
 {.lower-alpha-paren .columns-2}
-1. $S=\left\{-3;\dfrac{2}{5}\right\}$
+1. $S=\{-3;\frac{2}{5}\}$
 2. $S=\varnothing$
-3. $S=\left\{\dfrac{-5 - \sqrt{13}}{6};\dfrac{-5 + \sqrt{13}}{6}\right\}$
-4. $S=\left\{\dfrac{4 - \sqrt{22}}{3};\dfrac{4 + \sqrt{22}}{3}\right\}$
-5. $S=\left\{\dfrac{-9 - \sqrt{21}}{10};\dfrac{-9 + \sqrt{21}}{10}\right\}$
-6. $S=\left\{-\dfrac{7}{15}\right\}$
-7. $S=\left\{\dfrac{2-\sqrt{19}}{3}; \dfrac{2+\sqrt{19}}{3}\right\}$
-8. $S=\left\{\dfrac{3-\sqrt{129}}{12};\dfrac{3+\sqrt{129}}{12}\right\}$
-9. $S=\left\{\dfrac{-1-\sqrt{129}}{8};\dfrac{-1+\sqrt{129}}{8}\right\}$
+3. $S=\{\frac{-5 - \sqrt{13}}{6};\frac{-5 + \sqrt{13}}{6}\}$
+4. $S=\{\frac{4 - \sqrt{22}}{3};\frac{4 + \sqrt{22}}{3}\}$
+5. $S=\{\frac{-9 - \sqrt{21}}{10};\frac{-9 + \sqrt{21}}{10}\}$
+6. $S=\{-\frac{7}{15}\}$
+7. $S=\{\frac{2-\sqrt{19}}{3}; \frac{2+\sqrt{19}}{3}\}$
+8. $S=\{\frac{3-\sqrt{129}}{12};\frac{3+\sqrt{129}}{12}\}$
+9. $S=\{\frac{-1-\sqrt{129}}{8};\frac{-1+\sqrt{129}}{8}\}$
 ```
 
 ### Exercice {num2}`exercice:1-equ-quad-ex3`

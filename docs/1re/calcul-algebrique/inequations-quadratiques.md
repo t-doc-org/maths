@@ -46,7 +46,7 @@ Résolvez $x^2 + 4 \geq 5x$.
     x^2 -5x + 4 &\geq 0$$
 2.  Factorisez le trinôme avec la méthode de décomposition (somme-produit):
     $x^2 -5x + 4 = (x-4)(x-1)$
-3.  Étudiez le signe de $(x-4)(x-1)$
+3.  Étudiez le signe de $(x-4)(x-1)$:
 
     {.lower-alpha-paren}
     1.  Calculez les zéros en résolvant
@@ -182,11 +182,11 @@ remarquables, en décomposant le trinôme (somme-produit) ou en regroupant.
 ```{block} solution
 {.lower-alpha-paren .columns-2}
 1. $S=]-\infty;1] \cup [4;+\infty[$
-2. $S=]-\dfrac{1}{2};\dfrac{5}{3}[$
+2. $S=]-\frac{1}{2};\frac{5}{3}[$
 3. $S=[3; 4]$
-4. $S=]-\infty;-\dfrac{10}{3}[\cup]2; +\infty[$
+4. $S=]-\infty;-\frac{10}{3}[\cup]2; +\infty[$
 5. $S=]-\infty;-3[\cup]0;+3[$
-6. $S=]-\infty;-1]\cup[-\dfrac{1}{2};+\infty[$
+6. $S=]-\infty;-1]\cup[-\frac{1}{2};+\infty[$
 ```
 
 ### Exercice {num2}`exercice:1-inequ-quad-ex3`
@@ -204,8 +204,8 @@ Résolvez les inéquations suivantes.
 
 ```{block} solution
 {.lower-alpha-paren .columns-2}
-1. $S=]-\infty;-2] \cup [\dfrac{1}{4};+\infty[$
-2. $S=]-\infty;-3[ \cup ]\dfrac{2}{5};+\infty[$
+1. $S=]-\infty;-2] \cup [\frac{1}{4};+\infty[$
+2. $S=]-\infty;-3[ \cup ]\frac{2}{5};+\infty[$
 3. $S=[-2-\sqrt{2}; -2+\sqrt{2}]$
 4. $S=]-5; 3[$
 5. $S= \varnothing$
@@ -227,12 +227,12 @@ Résolvez les inéquations suivantes.
 
 ```{block} solution
 {.lower-alpha-paren .columns-2}
-1. $S=[\dfrac{-1-\sqrt{3}}{3};\dfrac{-1+\sqrt{3}}{3}]$
-2. $S=]\dfrac{3-\sqrt{5}}{2};\dfrac{3+\sqrt{5}}{2}[$
-3. $S=\mathbb{R} \setminus \left \{\dfrac{5}{4} \right\} = ]-\infty; \dfrac{5}{4}[ \cup ]\dfrac{5}{4}; +\infty[$
-4. $S=]-\dfrac{2}{7}; 1[$
-5. $S=]-\dfrac{\sqrt{21}}{3};\dfrac{\sqrt{21}}{3}[$
-6. $S=]-\infty; \dfrac{-1-\sqrt{3}}{2}] \cup [\dfrac{-1+\sqrt{3}}{2}; +\infty[$
+1. $S=[\frac{-1-\sqrt{3}}{3};\frac{-1+\sqrt{3}}{3}]$
+2. $S=]\frac{3-\sqrt{5}}{2};\frac{3+\sqrt{5}}{2}[$
+3. $S=\mathbb{R} \setminus \left \{\frac{5}{4} \right\} = ]-\infty; \frac{5}{4}[ \cup ]\frac{5}{4}; +\infty[$
+4. $S=]-\frac{2}{7}; 1[$
+5. $S=]-\frac{\sqrt{21}}{3};\frac{\sqrt{21}}{3}[$
+6. $S=]-\infty; \frac{-1-\sqrt{3}}{2}] \cup [\frac{-1+\sqrt{3}}{2}; +\infty[$
 ```
 
 ### Exercice {num2}`exercice:1-inequ-quad-ex5`
