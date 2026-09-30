@@ -8,4 +8,6 @@ equations-intro
 equations
 inequations
 systemes
+equations-quadratiques
+inequations-quadratiques
 ```

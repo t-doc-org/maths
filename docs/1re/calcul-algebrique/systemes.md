@@ -701,7 +701,7 @@ Résolvez les systèmes suivants
 ```
 
 {.avoid-break-inside}
-### Challenge {num2}`challenge`
+### Challenge {nump}`challenge`
 
 Une grande table de conférence doit être fabriquée en forme de rectangle avec
 deux demi-cercles à ses extrémités (voir la figure). La table doit avoir un
@@ -718,7 +718,7 @@ conférence.
 $l = 3$m und  $b = \dfrac{6}{\pi} \approx 1.91m$
 ```
 
-### Challenge {num2}`challenge`
+### Challenge {nump}`challenge`
 
 Une piscine a une longueur de 12 m, une largueur de 5 m et une profondeur de
 4.5 m. Elle peut être remplie à l'aide de deux conduites d'eau $A$ et $B$. Si on
@@ -737,41 +737,41 @@ $v_A=430\,\frac{litres}{minute}$, $v_B=280\,\frac{litres}{minute}$
 Résolvez les systèmes suivants
 
 {.lower-alpha-paren .columns-2}
-1. $\begin{cases}
- 2x+ 5y+ \phantom{0}z&=-7 &\text{(1)} \\
- 2x-4 y -2 z &= 11 & \text{(2)}\\
- 2x+ 2y + 3z&= 8 & \text{(3)}
-\end{cases}$
+1.  $\begin{cases}
+    2x+ 5y+ \phantom{0}z&=-7 &\text{(1)} \\
+     2x-4 y -2 z &= 11 & \text{(2)}\\
+     2x+ 2y + 3z&= 8 & \text{(3)}
+    \end{cases}$
 
-2. $\begin{cases}
- \phantom{-}4x- \phantom{0}y- \phantom{0}z&=-4  & \text{(1)}\\
- -3x+ 2y + 8z &= \frac{9}{2} & \text{(2)} \\
- 20x-3 y + 3z&= -14 & \text{(3)}
-\end{cases}$
+2.  $\begin{cases}
+    \phantom{-}4x- \phantom{0}y- \phantom{0}z&=-4  & \text{(1)}\\
+    -3x+ 2y + 8z &= \frac{9}{2} & \text{(2)} \\
+    20x-3 y + 3z&= -14 & \text{(3)}
+    \end{cases}$
 
-3. $\begin{cases}
-5x \phantom{+ 0y}+ 2z&= 1 &\text{(1)}\\
-\phantom{0x +} \phantom{0}y - 3z &= 2 &\text{(2)}\\
- 2x+ y &=3 &\text{(3)}
-\end{cases}$
+3.  $\begin{cases}
+    5x \phantom{+ 0y}+ 2z&= 1 &\text{(1)}\\
+    \phantom{0x +} \phantom{0}y - 3z &= 2 &\text{(2)}\\
+     2x+ y &=3 &\text{(3)}
+    \end{cases}$
 
-4. $\begin{cases}
- \phantom{0}6x+ 8y+ 2z&= -7 &\text{(1)} \\
- \phantom{0}2x -2y + 6z &= 4 &\text{(2)} \\
- -3x-3y + z &= 10 &\text{(3)}
-\end{cases}$
+4.  $\begin{cases}
+    \phantom{0}6x+ 8y+ 2z&= -7 &\text{(1)} \\
+    \phantom{0}2x -2y + 6z &= 4 &\text{(2)} \\
+    -3x-3y + z &= 10 &\text{(3)}
+    \end{cases}$
 
-5. $\begin{cases}
- 2x+ 3y - \phantom{0}z&= 4 &\text{(1)}  \\
- 4x \phantom{+ 00y} + \phantom{0}z &= 0 &\text{(2)}\\
- \phantom{00x +} 6y - 5z &= 12 &\text{(3)}
-\end{cases}$
+5.  $\begin{cases}
+    2x+ 3y - \phantom{0}z&= 4 &\text{(1)}  \\
+    4x \phantom{+ 00y} + \phantom{0}z &= 0 &\text{(2)}\\
+    \phantom{00x +} 6y - 5z &= 12 &\text{(3)}
+    \end{cases}$
 
-6. $\begin{cases}
- \phantom{0}3x+ 2y+  1z&= 23 &\text{(1)} \\
- \phantom{0}5x+ 2y + 4z &= 46 &\text{(2)} \\
- 10x+ 5y + 4z&=  75 &\text{(3)}
-\end{cases}$
+6.  $\begin{cases}
+    \phantom{0}3x+ 2y+  1z&= 23 &\text{(1)} \\
+    \phantom{0}5x+ 2y + 4z &= 46 &\text{(2)} \\
+    10x+ 5y + 4z&=  75 &\text{(3)}
+    \end{cases}$
 
 
 ```{block} solution
@@ -827,7 +827,7 @@ vendus.
 460 aller-retour, 60 descentes et 220 montées ont été vendus.
 ```
 
-### Challenge {num2}`challenge`
+### Challenge {nump}`challenge`
 
 Résolvez les systèmes suivants
 
@@ -853,7 +853,7 @@ Résolvez les systèmes suivants
 2. $S=\{(4;-\frac{13}{4};\frac{7}{4};0)\}$
 ```
 
-### Challenge {num2}`challenge`
+### Challenge {nump}`challenge`
 
  La mère, le père, le fils et la fille d'une famille ont ensemble 100 ans. Le
  père a quatre fois l'âge de son fils et ensemble ils ont le même âge que la

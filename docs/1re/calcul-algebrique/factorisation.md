@@ -155,7 +155,7 @@ Remarque: $a^2+b^2$ n'est pas factorisable.
 {numref}`exercice %s<exercice:1-fact-ex4>`
 ```
 
-### Décomposition du trinôme de deuxième degré
+### Décomposition du trinôme de deuxième degré (somme-produit)
 
 ```{admonition} Définition
 :class: note
