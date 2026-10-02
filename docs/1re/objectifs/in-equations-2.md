@@ -5,7 +5,7 @@
 
 Les objectifs de l'évaluation [](#eval-equation-1) sont considérés comme acquis.
 
-## équation avec fractions rationnelles
+## Équation avec fractions rationnelles
 
 - Savoir définir le domaine de définition.
 - Savoir résoudre les équations avec des fractions rationnelles (domaine de
