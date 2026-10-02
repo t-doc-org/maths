@@ -107,7 +107,7 @@ render.triangle = el => {
 };
 render.triangleRectangle = el => {
   return initBoard(el, [attrs.page, withLabels, {
-    boundingBox: [-3.5, 3.5, 3.5, -0.5],
+    boundingBox: [-3.5, 4, 3.5, -0.5],
   }], board => {
     const A = board.create('point', [3, 0], {
       name: '\\(A\\)', label: {anchorX: 'left', offset: [4, 0]}
@@ -134,7 +134,7 @@ render.triangleRectangle = el => {
 };
 render.pythagore = el => {
   return initBoard(el, [attrs.page, withLabels, {
-    boundingBox: [-3.5, 3.5, 3.5, -0.5],
+    boundingBox: [-3.5, 4, 3.5, -0.5],
   }], board => {
     const A = board.create('point', [3, 0], {
       name: '\\(A\\)', label: {anchorX: 'left', offset: [4, 0]}
@@ -224,8 +224,6 @@ Par rapport à l'angle $\alpha$, $a$ est le **côté opposé**, $b$ et $c$ sont 
   ```
 ````
 `````
-
-<!--TODO: Problème: image coupée: envoyer un mail à Rémy avec la page et  -->
 
 <!-- ```{container} frame noprint
 # Exemple {num2}`exemple`
