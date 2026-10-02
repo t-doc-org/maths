@@ -5,12 +5,12 @@
 
 Les objectifs de l'évaluation [](#eval-equation-1) sont considérés comme acquis.
 
-## Fractions algébriques
+## équation avec fractions rationnelles
 
 - Savoir définir le domaine de définition.
-- Savoir résoudre les équations avec des fractions algébriques (domaine de
+- Savoir résoudre les équations avec des fractions rationnelles (domaine de
   définition, résolution, vérification).
-- Savoir résoudre les inéquations avec des fractions algébriques (domaine de
+- Savoir résoudre les inéquations avec des fractions rationnelles (domaine de
   définition, résolution, vérification).
 
 ## Équations irrationnelles
