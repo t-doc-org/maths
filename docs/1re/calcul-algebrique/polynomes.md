@@ -223,18 +223,18 @@ Les équations suivantes sont appelées **identités remarquables de degré 3**.
 Simplifiez.
 
 {.lower-alpha-paren .columns-2}
-1. $a^2+b^2-(a^2-b^2+3ab)-(b^2+a^2b)=$
-2. $5xy+y^2-(3xy-(-y^2-xy))=$
+1. $3a^2+a^4-5a^2-3a^4+a^0$=
+2. $a^2+b^2-(a^2-b^2+3ab)-(b^2+a^2b)=$
 3. $a+b-c-(-(b-3c))=$
-4. $3a^2+a^4-5a^2-3a^4+a^0$=
+4. $5xy+y^2-(3xy-(-y^2-xy))=$
 
 
 ```{block} solution
 {.lower-alpha-paren .columns-4}
-1. $b^2-3ab-a^2b$
-2. $xy$
+1. $-2a^4-2a^2+1$
+2. $b^2-3ab-a^2b$
 3. $a+2b-4c$
-4. $-2a^4-2a^2+1$
+4. $xy$
 ```
 
 ### Exercice {num2}`exercice:1-polyn-ex2`
