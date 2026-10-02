@@ -12,6 +12,7 @@ subject: "Mathématiques 1re année"
 nombres/index
 calcul-algebrique/index-1
 calcul-algebrique/index-2
+geometrie/index
 objectifs/index
 evaluations-formatives/index
 ```
