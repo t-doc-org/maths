@@ -176,11 +176,6 @@ x^3+\phantom{0}x^2+\phantom{0}x-3\phantom{0} & \underline{\phantom{0}x-1\phantom
 $f(x)=x^3+x^2+x-3 =(x-1)(x^2+2x+3)$
 ```
 
-```{container} frame noprint instructor
--> {numref}`exercice %s<exercice:2-polyn-ex14>` et {numref}`exercice %s<exercice:2-polyn-ex15>`
-```
-
-
 ```{admonition} Théorème
 :class: note
 Soit $f(x)$ un polynôme de coefficient dominant $1$ et dont tous les
@@ -212,6 +207,10 @@ x^2 + 3x\phantom{000000} & \\
 \end{array}$
 
 $f(x)=x^3+6x^2+3x−10=(x+5)(x^2+x-2)=(x+5)(x+2)(x-1)$
+```
+
+```{container} frame noprint instructor
+-> {numref}`exercice %s<exercice:2-polyn-ex14>` et {numref}`exercice %s<exercice:2-polyn-ex15>`
 ```
 
 ### Fonctions paires et impaires
