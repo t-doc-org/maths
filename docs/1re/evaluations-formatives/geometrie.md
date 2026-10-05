@@ -31,8 +31,8 @@ Répondez aux questions suivantes le plus précisément possible:
 ```{solution}
 {.lower-alpha-paren}
 1.  alternes-internes / opposés par le sommet
-2.  $\dfrac{\overline{AD}}{\overline{AB}}=\dfrac{\overline{AE}}{\overline{AC}}=\dfrac{\overline{DE}}{\overline{BC}}$ ou
-    $\dfrac{\overline{AB}}{\overline{AD}}=\dfrac{\overline{AC}}{\overline{AE}}=\dfrac{\overline{BC}}{\overline{DE}}$
+2.  $\dfrac{AD}{AB}=\dfrac{AE}{AC}=\dfrac{DE}{BC}$ ou
+    $\dfrac{AB}{AD}=\dfrac{AC}{AE}=\dfrac{BC}{DE}$
 3.  $\sin(\dots) = \dfrac{\text{opp}}{\text{hyp}} \qquad\qquad$
     $\cos(\dots) = \dfrac{\text{adj}}{\text{hyp}} \qquad\qquad$
     $\tan(\dots) = \dfrac{\text{opp}}{\text{adj}}$
@@ -40,7 +40,7 @@ Répondez aux questions suivantes le plus précisément possible:
 
 ## Question {nump}`question`{points}`4`
 
-Soit le triangle $ABC$ rectangle en $A$ et $\overline{AH}$ la hauteur.
+Soit le triangle $ABC$ rectangle en $A$ et $AH$ la hauteur.
 ```{figure} images/thmmetrique.png
 :width: 30%
 :align: center
@@ -49,21 +49,21 @@ Soit le triangle $ABC$ rectangle en $A$ et $\overline{AH}$ la hauteur.
 {.lower-alpha-paren}
 1. Énoncez le théorème de la hauteur en fonction du schéma ci-dessus.
 2. Énoncez le théorème d'Euclide en fonction du schéma ci-dessus.
-3. Sachant que $\overline{BH} = 4\,cm$ et $\overline{BC} = 8\,cm$, calculez $\overline{AB}$.
-4. Sachant que $\overline{BH} = 2\,cm$ et $\overline{AH} = 6\,cm$, calculez $\overline{BC}$.
+3. Sachant que $BH = 4\,cm$ et $BC = 8\,cm$, calculez $AB$.
+4. Sachant que $BH = 2\,cm$ et $AH = 6\,cm$, calculez $BC$.
 
 ```{solution}
 {.lower-alpha-paren}
-1.  $\overline{AH}^2 = \overline{BH} \cdot \overline{HC}$
-2.  $\overline{AB}^2 = \overline{BH} \cdot \overline{BC}$ et $\overline{AC}^2 = \overline{HC} \cdot \overline{BC}$
-3.  $\overline{AB}^2 = \overline{BH} \cdot \overline{BC}$\
-    $$\overline{AB}^2 &= 4 \cdot 8\\
-    \overline{AB} &= \sqrt{32} = 5.7\,cm
+1.  $AH^2 = BH \cdot HC$
+2.  $AB^2 = BH \cdot BC$ et $AC^2 = HC \cdot BC$
+3.  $AB^2 = BH \cdot BC$\
+    $$AB^2 &= 4 \cdot 8\\
+    AB &= \sqrt{32} = 5.7\,cm
     $$
-4.  $\overline{AH}^2 = \overline{BH} \cdot \overline{HC}$\
-    $$6^2 &= 2 \cdot \overline{HC}\\
-    \overline{HC} &= \dfrac{36}{2} = 18\,cm\\
-    \overline{BC} &= 18 + 2 = 20 \,cm
+4.  $AH^2 = BH \cdot HC$\
+    $$6^2 &= 2 \cdot HC\\
+    HC &= \dfrac{36}{2} = 18\,cm\\
+    BC &= 18 + 2 = 20 \,cm
     $$
 ```
 
@@ -135,7 +135,7 @@ mètres de fil?
 ## Question {nump}`question`{points}`5`
 
 $ABCD$ est un rectangle. Sachant que $\alpha = 65^\circ$ et
-$\overline{EC} = 11\,cm$, calculez $\widehat{AEB}$, ainsi que l'aire et le
+$EC = 11\,cm$, calculez $\widehat{AEB}$, ainsi que l'aire et le
 périmètre du triangle $ABE$.
 
 ```{figure} images/problemegeom.png
@@ -152,15 +152,15 @@ Par la trigo:\
 $\sin(65^\circ) = \dfrac{11}{EB} \implies EB = \dfrac{11}{\sin(65^\circ)} = 12.1\,cm$
 
 Par Pythagore:\
-$\overline{EH} = \sqrt{12.1^2-11^2} = 5.1\,cm$
+$EH = \sqrt{12.1^2-11^2} = 5.1\,cm$
 
 Par le thm de la hauteur:\
-$\overline{EH}^2 = \overline{AH} \cdot \overline{HB}$\
-$\overline{AH} = \dfrac{\overline{EH}^2}{HB} = \dfrac{5.1^2}{11} = 2.4\,cm$
+$EH^2 = AH \cdot HB$\
+$AH = \dfrac{EH^2}{HB} = \dfrac{5.1^2}{11} = 2.4\,cm$
 
 Par Pythagore:\
-$\overline{AB} = \overline{AH} + \overline{HB} = 2.4 + 11 = 13.4\,cm$\
-$\overline{AE} = \sqrt{13.4^2 - 12.1^2} = 5.7\,cm$
+$AB = AH + HB = 2.4 + 11 = 13.4\,cm$\
+$AE = \sqrt{13.4^2 - 12.1^2} = 5.7\,cm$
 
 Aire:\
 $A = \dfrac{13.4 \cdot 5.1}{2} = 34.3\,cm^2$
