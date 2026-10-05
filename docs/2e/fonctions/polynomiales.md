@@ -832,7 +832,7 @@ render.solValAbs = el => {
 ### Exercice {num2}`exercice:2-polyn-ex22`
 
 Représentez les fonctions valeur absolues suivantes. Déterminez le domaine de
-définition, l'ensemble des images, les zéros et l'ordonnées à l'origine.
+définition, l'ensemble des images, les zéros et l'ordonnée à l'origine.
 
 {.lower-alpha-paren .columns-3}
 1. $f(x) = |-2x|$
