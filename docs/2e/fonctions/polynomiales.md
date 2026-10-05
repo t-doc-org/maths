@@ -855,7 +855,7 @@ définition, l'ensemble des images, les zéros et l'ordonnée à l'origine.
     \text{O.O: } 3 \qquad \text{zéro: } x = -3$
 3. $D_h = \mathbb{R} \qquad Im_h = [-5; +\infty[ \qquad
     \text{O.O: } -5 \qquad \text{zéros: } x_1 = -2.5 \text{ et } x_2 = 2.5$
-4. $D_i = \mathbb{R} \qquad Im_i = ]-\infty; 0[ \qquad
+4. $D_i = \mathbb{R} \qquad Im_i = ]-\infty; 0] \qquad
     \text{O.O: } -2 \qquad \text{zéro: } x = -1$
 5. $D_j = \mathbb{R} \qquad Im_j = [-1; +\infty[ \qquad
     \text{O.O: } 3 \qquad \text{zéro: } x_1 = 3 \text{ et } x_2 = 5$
