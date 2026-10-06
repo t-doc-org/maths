@@ -67,7 +67,7 @@ L'exposant le plus élevé d'un polynôme à une variable est appelé **degré**
     $={\color{blue}3x^3}+3x{\color{orange}-9}$
 2.  $(x^3+6x^2+3x-10){\color{red}-}(x^3-3x^2+4x-7)$<br>
     $=x^3+6x^2+3x-10{\color{red}-}x^3{\color{red}+}3x^2{\color{red}-}4x{\color{red}+}7$<br>
-    &=9x^2-x-3$
+    $=9x^2-x-3$
 ```
 
 ```{container} frame noprint
