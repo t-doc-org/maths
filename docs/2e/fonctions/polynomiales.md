@@ -297,7 +297,7 @@ $\implies$ La fonction $h$ n'est ni paire, ni impaire.
 
 <script type="module">
 const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
-attrs.page = [attrs.screen, {
+attrs.page = [attrs.screen, attrs.nonInteractive, {
   boundingBox: [-5.2, 5.2, 5.2, -5.2],
   defaults: {
     functiongraph: {label: {position: '0.65fr right'}},
