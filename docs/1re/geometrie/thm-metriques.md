@@ -225,60 +225,331 @@ Par rapport à l'angle $\alpha$, $a$ est le **côté opposé**, $b$ et $c$ sont 
 ````
 `````
 
-<!-- ```{container} frame noprint
-# Exemple {num2}`exemple`
 
-Résolvez l'équation suivante:
+`````{admonition} Théorème de la hauteur
+:class: note
+````{list-grid}
+:style: grid-template-columns: 3fr 2fr;
+- Le carré de la hauteur est égal au produit des segments allant du pied de la
+  hauteur aux sommets adjacents.
+  ```{math}
+  :class: align-center
+  h_c^2 = c_{1} \cdot c_{2}
+  ```
+- ```{figure} images/thm-hauteur.png
+  :width: 100%
+  ```
+````
+`````
 
-$$
-\frac{x}{4}+\frac{1}{2} &= \frac{x-1}{2}-\frac{3x}{2} \qquad \qquad &|& \text{même dénominateur}\\
-\frac{x}{4}+\frac{2}{4} &= \frac{2(x-1)}{4}-\frac{6x}{4} &|& \cdot 4\\
-x + 2 &= 2(x-1) - 6x &|& \text{CL}\\
-x + 2 &= 2x -2 - 6x &|& \text{CL}\\
-x + 2 &= -4x - 2 &|& +4x\\
-5x + 2 &= - 2 &|& -2\\
-5x &= - 4 &|& : 5\\
-x &= -\dfrac{4}{5} && \\
-$$
-$S = \left\{-\dfrac{4}{5}\right\}$
+```{container} noprint frame
+# Démonstation
+
+Le théorème de la hauteur peut être démontré à l'aide du théorème de Pythagore.
+
+Pythagore dans le triangle $HBC$: $a^2 = h_c^2 + c^2 (1)$<br>
+Pythagore dans le triangle $AHC$: $b^2 = c_1^2 + h_c^2 (2)$
+
+$$h_c^2 &= a^2 -c_2^2 &(1)\\
++ h_c^2 &= b^2 - c_1^2 &(2)\\
+2h_c^2 &= a^2-c_2^2+b^2-c_1^2 \quad &(1)+(2)$$
+
+$$2h_c^2 &= a^2-c_2^2+b^2-c_1^2 \qquad \qquad \qquad &|& \text{réarrangement}\\
+&= (a^2+b^2) - c_1^2 - c_2^2  &|& a^2 + b^2 = c^2\\
+&= c^2 - c_1^2 - c_2^2  &|& c = c_1 + c_ 2\\
+&= (c_1 + c_ 2)^2 - c_1^2 - c_2^2  &|& \text{CL}\\
+&= (c_1^2 + 2c_1c_2 + c_ 2^2) - c_1^2 - c_2^2  &|& \text{CL}\\
+&= \cancel{c_1^2} + 2c_1c_2 +\bcancel{c_ 2^2} -\cancel{c_1^2} -\bcancel{c_2^2}  &|& \text{simplification}\\
+&= 2c_1c_2$$
+
+$2h_c^2 = 2c_1c_2 \iff h_c^2 = c_1c_2$
 ```
 
-```{container} frame instructor noprint
+`````{admonition} Théorème d'Euclide
+:class: note
+````{list-grid}
+:style: grid-template-columns: 3fr 2fr;
+- Le carré de la cathète est égal au produit de l'hypoténuse et du segment
+  allant du pied de la hauteur au sommet adjacent.
+  ```{math}
+  :class: align-center
+  a^2 = c \cdot c_{2} \, \, \text{ et } \, \, b^2 = c \cdot c_{1}
+  ```
+- ```{figure} images/thm-euclide.png
+  :width: 100%
+  ```
+````
+`````
+
+````{container} noprint frame
+# Démonstation
+
+Le théorème d'Euclie peut être démontré à l'aide du théorème de Pythagore et du
+théorème de la hauteur.
+
+```{figure} images/triangle-rectangle.png
+:width: 40%
+```
+
+Pythagore dans le triangle $HBC$: $a^2 = h_c^2 + c^2 (1)$<br>
+Théorème de la hauteur: $h_c^2 = c_1 \cdot c_2 (2)$
+
+Substituez (2) dans (1):
+
+$$a^2 &= h_c^2 + c^2 &|& h_c^2 = c_1 \cdot c_2 \\
+&= c_1 \cdot c_2 - c_1^2 &|& \text{mise en évidence}\\
+&= c_2 \cdot (c_1 + c_2) &|& c = c_1 + c_2\\
+&= c_2 \cdot c
+$$
+
+Le raisonnement est le même pour montrer $b^2 = c \cdot c_1$.
+````
+
+
+<!-- ```{container} frame instructor noprint
 -> {numref}`exercice %s<exercice:1-equ-ex1>`,
 {numref}`exercice %s<exercice:1-equ-ex2>`,
 {numref}`exercice %s<exercice:1-equ-ex3>`,
 {numref}`exercice %s<exercice:1-equ-ex4>` et
 {numref}`exercice %s<exercice:1-equ-ex5>`
-``` -->
+```  -->
 
-<!--
+
 ## Exercices
 
 ### Exercice {num2}`exercice:1-tm-met-ex1`
 
-Déterminez l'ensemble des solutions des équations suivantes.
+Soit le triangle rectangle suivants:
 
-{.lower-alpha-paren .columns-2}
-1. $8x-34=5x-13$
-2. $-x+2(x+9)=5x-4(x-\frac{9}{2})$
-3. $12x-(4(42-x)-9(5-x))=7x$
-4. $(9-2x)^2=(4x-1)(5+x)-24$
-5. $x-\frac{1}{2}x-\frac{1}{3}x-\frac{1}{4}x=\frac{5}{6}-\frac{1}{12}x$
-6. $\frac{7x}{3}+\frac{3x-5}{6}=\frac{23x-15}{6}-\frac{9x}{10}+\frac{3}{2}$
-7. $5-(2x+3)=-2(x+1)$
-8. $x+5=2x+3-(x-2)$
+```{figure} images/thm-metrique.png
+:width: 30%
+```
+
+<style>
+@media print {
+  .table.reset-print.longueur :is(th, td) {
+    border-width: 1px;
+    padding: 0.1rem;
+  }
+  .table.reset-print.longueur th {
+    border-bottom-width: 2px;
+  }
+}
+</style>
+
+{.lower-alpha-paren}
+1.  Notez la formule du théorème de la hauteur en fonction du schéma ci-dessus
+    et calculez les valeurs manquantes.
+
+    {.reset-print .longueur}
+    | $AH$ | $BH$ | $CH$ |
+    | :--: | :--: | :--: |
+    | | $78$ | $19$ |
+    | $49.8$ |  | $40$ |
+    | $65.4$ | $91$ |  |
+    | $43.27$ | $39$ |  |
+    | $55.56$ | | $49$  |
+
+2.  Notez les formules du théorème d'Euclide en fonction du schéma ci-dessus et
+    calculez les valeurs manquantes.
+
+    {.reset-print .longueur}
+    | $AB$ | $AC$ | $BC$ | $AH$ | $BH$ | $CH$ |
+    | :--: | :--: | :--: | :--: | :--: | :--: |
+    | - |  | $89$ | - | - | $75$ |
+    |  | - | $93$ | - | $22$ | - |
+    | $59.14$ | - |  | - | $53$ | - |
+    | - | $66.48$ |  | - | - | $52$ |
+    | - | $60.87$ | $65$ | - | - |  |
+
+3.  Calculez les valeurs manquantes en choisissant le théorème adéquat.
+
+    {.reset-print .longueur}
+    | $AB$ | $AC$ | $BC$ | $AH$ | $BH$ | $CH$ |
+    | :--: | :--: | :--: | :--: | :--: | :--: |
+    |  | - | $77$ | - | $45$ | - |
+    | - | $19.21$ |  | - | - | $9$ |
+    | - | - | - | $14.66$ | $5$ |  |
+    | - | - | - | $22.72$ |  | $12$ |
+    | $49.95$ | - |  | - | $29$ | - |
+    | - |  | $46$ | - | - | $31$ |
 
 
 ```{block} solution
-{.lower-alpha-paren .columns-4}
-1. $S=\{7\}$
-2. $S=\mathbb{R}$
-3. $S=\varnothing$
-4. $S=\{2\}$
-5. $S=\varnothing$
-6. $S=\{\frac{5}{3}\}$
-7. $S=\varnothing$
-8. $S=\mathbb{R}$
+{.lower-alpha-paren}
+1.  $AH^2 = BH \cdot CH$
+
+    {.reset-print .longueur}
+    | $AH$ | $BH$ | $CH$ |
+    | :--: | :--: | :--: |
+    | $\mathbf{38.5}$ | $78$ | $19$ |
+    | $49.8$ | $\mathbf{62}$ | $40$ |
+    | $65.4$ | $91$ | $\mathbf{47}$ |
+    | $43.27$ | $39$ | $\mathbf{48}$  |
+    | $55.56$ | $\mathbf{63}$ | $49$  |
+
+2.  $AB^2 = BH \cdot BC$ et $AC^2 = CH \cdot BC$
+
+    {.reset-print .longueur}
+    | $AB$ | $AC$ | $BC$ | $AH$ | $BH$ | $CH$ |
+    | :--: | :--: | :--: | :--: | :--: | :--: |
+    | - | $\mathbf{81.7}$ | $89$ | - | - | $75$ |
+    | $\mathbf{45.23}$ | - | $93$ | - | $22$ | - |
+    | $59.14$ | - | $\mathbf{66}$ | - | $53$ | - |
+    | - | $66.48$ | $\mathbf{85}$ | - | - | $52$ |
+    | - | $60.87$ | $65$ | - | - | $\mathbf{57}$ |
+
+3.  {.reset-print .longueur}
+    | $AB$ | $AC$ | $BC$ | $AH$ | $BH$ | $CH$ |
+    | :--: | :--: | :--: | :--: | :--: | :--: |
+    | $\mathbf{58.86}$ | - | $77$ | - | $45$ | - |
+    | - | $19.21$ | $\mathbf{41}$ | - | - | $9$ |
+    | - | - | - | $14.66$ | $5$ | $\mathbf{43}$ |
+    | - | - | - | $22.72$ | $\mathbf{43}$ | $12$ |
+    | $49.95$ | - | $\mathbf{86}$ | - | $29$ | - |
+    | - | $\mathbf{37.76}$ | $46$ | - | - | $31$ |
+```
+
+### Exercice {num2}`exercice:1-tm-met-ex2`
+
+Soit un triangle rectangle en $C$ avec une partie de l'hypoténuse
+$c_{1} = 9\,cm$ et la cathète $b = 15\,cm$. Déterminez la longueur de la cathète
+$a$, de l'hypoténuse $c$, de l'autre partie de l'hypoténuse $c_{2}$ et la
+hauteur $h_c$.
+
+```{block} solution
+$a=20\,cm$, $c=25\,cm$, $c_{2}=16\,cm$ et $h=12\,cm$
+```
+
+### Exercice {num2}`exercice:1-tm-met-ex3`
+
+Est-ce qu'une planche en bois de $2.4\,m$ de long et $1.9\,m$ de large peut
+passer par une fenêtre haute de $1.4\,m$ et large de $1.2\,m$?
+
+```{block} solution
+Non, la diagonale de la fenêtre vaut que $1.84\,m$ et la planche a une largeur
+de $1.9\,m$.
+```
+
+### Exercice {num2}`exercice:1-tm-met-ex4`
+
+Déterminez $x$, $y$ et $z$.
+
+{.lower-alpha-paren .columns-2}
+1.  ```{figure} images/hauteur1.png
+    :width: 80%
+    ```
+2.  ```{figure} images/hauteur3.png
+    :width: 60%
+    ```
+3.  ```{figure} images/hauteur2.png
+    :width: 80%
+    ```
+4.  ```{figure} images/hauteur4.png
+    :width: 60%
+    ```
+
+```{block} solution
+{.lower-alpha-paren .columns-2}
+1. $x=8.66\,dm$
+2. $x=35.6\,mm$
+3. $x=10.25\,cm$
+4. $x=6\,m$, $y=9.17\,m$, $z=10.95\,m$
+```
+
+### Exercice {num2}`exercice:1-tm-met-ex5`
+
+````{list-grid}
+:style: grid-template-columns: 1fr 1fr;
+- Soit le quadrilatère $ABCD$ ci-contre.<br>
+  Que valent le périmètre et l'aire de ce quadrilatère?
+- ```{figure} images/aireABCD.png
+  :width: 100%
+  ```
+````
+
+```{block} solution
+$P=267.8\,cm$ et $A=4056.1\,cm^2$
+```
+
+### Exercice {num2}`exercice:1-tm-met-ex6`
+
+La pyramide du Louvre a une hauteur de $22\,m$ et une base carré de $35\,m$ de
+côté. Faites un petit croquis de cette pyramide et calculez la facture du
+vitrier qui demande 280 CHF par mètre carré pour recouvrir la pyramide avec du
+nouveau verre.
+
+```{block} solution
+La facture s'élève à $550\,983.16$ CHF.
+```
+
+### Exercice {num2}`exercice:1-tm-met-ex7`
+
+Une montgolfière vole à une hauteur de $500\,m$ au-dessus de la mer
+méditerranée. À quelle distance se trouve l'horizon pour les passagers si le
+rayon de la terre vaut $6400\,km$?
+
+```{block} solution
+La distance est de $80\,km$.
+```
+
+### Exercice {num2}`exercice:1-tm-met-ex8`
+
+Deux randonneurs partent d'une cabane en marchant tout droit vers une rivière
+rectiligne. Le premier atteint la rivière après $112\,m$ et le deuxième après
+$156\,m$. L'angle entre les deux chemins vaut $90^{\circ}$.
+
+{.lower-alpha-paren}
+1.  À quelle distance se trouvent les randonneurs quand ils atteignent la
+    rivière?
+2.  À quelle distance de la rivière se trouve la cabane?
+
+```{block} solution
+{.lower-alpha-paren .columns-2}
+1.  La distance est de ~$192\,m$.
+2.  La distance est de ~$91\,m$.
+```
+
+### Exercice {num2}`exercice:1-tm-met-ex9`
+
+Déterminez l'aire et le périmètre d'un parallélogramme dont nous connaissons
+
+{.lower-alpha-paren}
+1.  la longueur de la diagonale $e=11\,cm$, le côté $b=4\,cm$ et la
+    hauteur $h=3\,cm$.
+2.  la longueur des diagonales $e = 5.5\,cm$ et $f = 4\,cm$ ainsi que la
+    hauteur $h = 2.5\,cm$.
+
+```{figure} images/parallelogramme.png
+:width: 38%
+```
+
+```{block} solution
+{.lower-alpha-paren}
+1.  $P=23.87\,cm$ et $A=23.81\,cm^2$
+2.  $P=13.33\,cm$ et $A=10.03\,cm^2$
+```
+
+### Exercice {num2}`exercice:1-tm-met-ex10`
+
+Les longueurs des côtés d'un rectangle sont $8\,cm$ et $15\,cm$.<br>
+Quelle est la distance entre un sommet et la diagonale ne passant pas par ce
+sommet?
+
+```{block} solution
+$d = \sim 7.1\,cm$
+```
+
+### Challenge
+
+Déterminez l'aire et le périmètre de la surface grise. Chaque demi-cercle a sa
+diagonale sur un côté du triangle. $R=5\,m$ et $r=3\,m$.
+```{figure} images/demicercle.png
+:width: 35%
+```
+
+```{solution}
+$P=37.7\,m$ et $A=24\,m^2$
 ```
 
 
@@ -287,4 +558,4 @@ Déterminez l'ensemble des solutions des équations suivantes.
 ```{blocks} solution
 :class: allow-break-inside
 ```
- -->
+
