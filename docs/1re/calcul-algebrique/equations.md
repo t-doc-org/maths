@@ -202,10 +202,12 @@ Résolvez les problèmes suivants à l'aide d'équations du premier degré.
 2.  Un père a 38 ans et son fils a 11 ans. Après combien d'années le père aura
     exactement le double de l'âge de son fils?
 3.  Un cycliste fait un parcours sur deux jours:
-        -   le 1<sup>er</sup> jour il fait $\frac{1}{5}$ du parcours et encore
-            $70$ km de plus.
-        -   le 2<sup>e</sup> jour il fait $\frac{1}{4}$ du parcours et encore
-            $62$ km de plus.
+
+    -   le 1<sup>er</sup> jour il fait $\frac{1}{5}$ du parcours et encore
+        $70$ km de plus.
+    -   le 2<sup>e</sup> jour il fait $\frac{1}{4}$ du parcours et encore
+        $62$ km de plus.
+
     Quelle est la longueur totale du parcours?
 4.  Si on augmente le côté d'un carré de $5$ cm, alors son aire augmente de
     $225$ cm$^2$. Quelle est la longueur du côté du carré initial?

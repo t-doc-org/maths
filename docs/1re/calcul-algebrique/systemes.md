@@ -37,7 +37,7 @@ a_1 x+b_1 y &= c_1 \quad &(1)\\
 a_2 x+b_2 y &= c_2 &(2)
 \end{cases}
 ```
-avec $a_1 \text{, } a_2 \text{, } b_1 \text{, } b_2 \text{, } c_1 \text{, } c_2 \in \mathbb{R}
+avec $a_1 \text{, } a_2 \text{, } b_1 \text{, } b_2 \text{, } c_1 \text{, } c_2 \in \mathbb{R}$
 
 Une **solution** d'un tel système est un couple $(x;y)$ de nombres qui sont
 solutions des équations $(1)$ et $(2)$.
@@ -277,7 +277,7 @@ Résolvez le système d'équation suivant: $\begin{cases}2x = 5y - 4 \quad &(1)\
 -> {numref}`exercice %s<exercice:1-sys-ex1>`
 ```
 
-```{container}
+```{container} avoid-break-inside
 # Remarque
 
 Comme lors de la résolution d'équations du premier degré, un système peut ne
@@ -374,6 +374,7 @@ Résolvez le système d'équation suivant: $\begin{cases}2x - 4y &=  6 \quad &(1
 {numref}`exercice %s<exercice:1-sys-ex11>`.
 ```
 
+{.page-break}
 ### Systèmes d'équations 3x3 et plus
 
 ````{admonition} Définition
@@ -509,7 +510,7 @@ $\begin{cases}
 ```{container}
 # Remarque
 
-Avec la méthode ci-dessus, il est possible de résoudre des systèmes linéaires de
+Avec la méthode précédente, il est possible de résoudre des systèmes linéaires de
 $n$ équations à $n$ inconnues!
 ```
 
