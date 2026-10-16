@@ -25,7 +25,7 @@
   graphique est donnée.
 - Savoir factoriser une fonction quadratique.
 - Savoir calculer le sommet d'une fonction quadratique.
-- Savoir tracez la représentation d'une fonction en calculant les points
+- Savoir tracer la représentation d'une fonction en calculant les points
   particuliers (ordonnée à l'origine, zéros, sommet, ...)
 - Savoir déterminer l'expression algébrique de la parabole qui passe par trois
   points.
@@ -41,7 +41,7 @@
 - Savoir calculer les zéros d'une fonction polynomiale.
 - Savoir effectuer une division polynomiale.
 - Savoir déterminer si une fonction est paire, impaire ou ni l'un ni l'autre.
-- Savoir tracez une fonction avec valeur absolue.
+- Savoir tracer une fonction avec valeur absolue.
 - Savoir factoriser des polynômes de degré supérieur à deux en utilisant la
   division polynomiale.
 - Savoir déterminer l'expression algébrique d'une fonction polynomiale qui ont

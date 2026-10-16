@@ -43,18 +43,55 @@ Soit la fonction $f(x) = 4x^2 - 28x + 48$.
     $S = ]-\infty; 3[ \;\cup\; ]4; +\infty[$
 ````
 
-## Question {nump}`question`{points}`10`
+## Question {nump}`question`{points}`7`
 
-Soit la fonction $f(x) = x^3+6x^2+3x-10$
+Soit la fonction $g(x) = x^3+6x^2+3x-10$
 
 {.lower-alpha-paren}
-1.  Factorisez entièrement $f$.
-2.  Déterminez les zéros de $f$.
+1.  Factorisez entièrement $g$.
+2.  Déterminez les zéros de $g$.
 
 ```{solution}
 {.lower-alpha-paren}
-1.  $f(x)= (x+2)(x-1)(x+5)$
+1.  $g(x)= (x+2)(x-1)(x+5)$
 2.  $x_1 = 1$, $x_2 = -2$ et $x_3 = -5$
+```
+
+## Question {nump}`question`{points}`8`
+
+Soit la fonction $h(x) = |-x + 3| - 2$
+
+{.lower-alpha-paren}
+1.  Représentez la fonction $h(x)$.
+2.  Déterminez le domaine de définition, l'ensemble des images, les zéros et
+    l'ordonnée à l'origine de $h(x)$.
+
+<script type="module">
+const {attrs, initBoard, JXG, render} = await tdoc.import('jsxgraph.js');
+render.valAbs = el => {
+  return initBoard(el, [attrs.print, {
+      boundingBox: [-4.5, 5.5, 7.5, -3],
+      defaultAxes: {
+        x: {ticks: {ticksDistance: 2, minorTicks: 1}},
+        y: {ticks: {ticksDistance: 2, minorTicks: 1}},
+      },
+      grid: {majorStep: 1},
+    }], board => {
+      board.create('functiongraph', [x => Math.abs(- x + 3) - 2], {
+        name: `\\(h\\)`, label: {position: '0.85fr left', offset: [0, 5]}
+      });
+  });
+};
+</script>
+
+```{solution}
+{.lower-alpha-paren}
+1.  ```{jsxgraph} valAbs
+    :style: width: 58%;
+    ```
+2.  $D_h = \mathbb{R}$, $Im_h = ]-2; + \infty[$, zéros: $x_1 = 1$ et $x_2 = 5$,
+    ordonnée à l'origine: $1$
+
 ```
 
 
