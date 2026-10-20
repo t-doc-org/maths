@@ -188,8 +188,9 @@ source: (<https://gomaths.edu-vd.ch>)
 
 ### Rapports trigonométriques des angles remarquables
 
-`````{container} noprint
-# Démonstration - Triangle rectangle isocèle
+`````{admonition} Démonstration
+:class: attention, dropdown
+# Triangle rectangle isocèle
 
 ````{list-grid}
 :style: grid-template-columns: 5fr 3fr;
@@ -206,8 +207,9 @@ source: (<https://gomaths.edu-vd.ch>)
 ````
 `````
 
-`````{container} noprint
-# Démonstration - Demi-triangle équilatéral
+`````{admonition} Démonstration
+:class: attention, dropdown
+# Demi-triangle équilatéral
 
 ````{list-grid}
 :style: grid-template-columns: 5fr 3fr;

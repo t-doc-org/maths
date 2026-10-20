@@ -28,8 +28,8 @@ et le sinus de l'angle opposé sont égaux:
 ```
 ````
 
-````{container} frame noprint
-# Démonstration
+````{admonition} Démonstration
+:class: attention, dropdown
 
 Dans un triangle quelconque, la hauteur $h_c$ issue de sommet C est abaissée.
 
@@ -434,8 +434,8 @@ Cela donne le théorème de Pythagore.
 ````
 
 
-````{container} frame noprint
-# Démonstration
+````{admonition} Démonstration
+:class: attention, dropdown
 
 Dans un triangle quelconque, la hauteur $h_c$ issue de sommet C est abaissée.
 

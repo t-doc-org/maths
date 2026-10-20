@@ -450,8 +450,8 @@ $Y_T$ du point $T$.
     ```
 ````
 
-```{container} frame noprint
-# Démonstration
+```{admonition} Démonstration
+:class: attention, dropdown
 
 Les triangles rectangles formés avec $P$ et $T$ sont semblables, les longueurs
 de leurs côtés sont donc proportionnelles deux à deux.

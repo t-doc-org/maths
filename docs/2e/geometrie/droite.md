@@ -203,8 +203,8 @@ render.vectDirecteur2 = el => {
 };
 </script>
 
-`````{container} frame noprint
-# Démonstration
+`````{admonition} Démonstration
+:class: attention, dropdown
 
 ```{list-grid}
 :style: grid-template-columns: 1fr 1fr

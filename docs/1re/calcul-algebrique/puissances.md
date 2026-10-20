@@ -87,8 +87,8 @@ Soient $a, b \in \mathbb{R} \setminus \{0\}$ et $n,m \in\mathbb{Z}$, alors
 - $\left( \dfrac{a^4}{b^2}\right)^3=\dfrac{a^{4 \cdot 3}}{b^{ 2 \cdot 3}}=\dfrac{a^{12}}{b^{6}}$
 ````
 
-````{container} frame noprint
-# Démonstration
+````{admonition} Démonstration
+:class: attention, dropdown
 
 {.lower-alpha-paren}
 1. ```{math}
@@ -119,8 +119,8 @@ a^{-n}=\frac{1}{a^n} \quad \text{ et } \quad \frac{1}{a^{-n}}=a^n
 ```
 ````
 
-````{container} frame noprint
-# Démonstration
+````{admonition} Démonstration
+:class: attention, dropdown
 
 $a^n \cdot a^{-n} = a^{n+(-n)}=a^0=1$
 
