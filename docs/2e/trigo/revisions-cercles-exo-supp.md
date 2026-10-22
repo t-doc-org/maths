@@ -18,7 +18,7 @@ Cochez la bonne réponse.
 {.lower-alpha-paren}
 1.  ```{defaults} quiz-check
     :randomize:
-    :class: columns-3
+    :class: grid-3
     :right: width: 60%;
     ```
     ```{quiz-check}
@@ -66,7 +66,7 @@ Cochez la bonne réponse.
 8.  ```{quiz-check}
     - $1$
     - $\frac{\sqrt{3}}{3}$
-    - $:\sqrt{3}$
+    - :$\sqrt{3}$
     ```
     $\tan(60^\circ) =$
 9.  ```{quiz-check}
@@ -87,7 +87,7 @@ Cochez la bonne réponse.
 {.lower-alpha-paren}
 1.  ```{defaults} quiz-check
     :randomize:
-    :class: columns-3
+    :class: grid-3
     :right: width: 60%;
     ```
     ```{quiz-check}
@@ -142,7 +142,7 @@ Cochez la bonne réponse.
 {.lower-alpha-paren}
 1.  ```{defaults} quiz-check
     :randomize:
-    :class: columns-3
+    :class: grid-3
     :right: width: 60%;
     ```
     ```{quiz-check}
@@ -213,7 +213,7 @@ En vous aidant du cercle trigonométrique, cochez les bonnes réponses.
 1.  ```{defaults} quiz-check
     :multi:
     :randomize:
-    :class: columns-3
+    :class: grid-3
     :right: width: 60%;
     ```
     ```{quiz-check}
