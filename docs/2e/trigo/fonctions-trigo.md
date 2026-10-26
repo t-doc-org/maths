@@ -687,7 +687,13 @@ const battrs = [attrs.screen, {
     y: {ticks: {minorTicks: 1}},
   },
   defaults: {
-    slider: {withLabel: true, label: {distance: 1}},
+    slider: {
+      withLabel: true, label: {distance: 1},
+      strokeColor: JXG.palette.black, fillColor: JXG.palette.white,
+      highlightFillColor: JXG.palette.black,
+      highlightStrokeColor: JXG.palette.black,
+    },
+    functiongraph: {withLabel: false},
   },
 }];
 
