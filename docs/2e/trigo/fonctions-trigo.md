@@ -982,7 +982,7 @@ devant le $\sin(x)$?
 3. $f_3(x)=- \sin(x)$
 
 ```{jsxgraph} sinusExo
-:style: width: 100%; border: none;
+:style: width: 95%; border: none;
 ```
 
 <script type="module">
@@ -1050,7 +1050,7 @@ Le coefficient devant le $\sin(x)$ change l'amplitude de la
 fonction.
 
 ```{jsxgraph} sinusExoSol
-:style: width: 100%; border: none;
+:style: width: 95%; border: none;
 ````
 
 ### Exercice {num2}`exercice:2-fct-ex3`
@@ -1066,14 +1066,14 @@ devant le $x$ d'un $\cos(x)$?
 3. $f_3(x)= \cos(4x)$
 
 ```{jsxgraph} cosinusExo
-:style: width: 100%; border: none;
+:style: width: 95%; border: none;
 ```
 
 ````{block} solution
 Le coefficient devant le $x$ du $\cos(x)$ change la période.
 
 ```{jsxgraph} cosinusExoSol
-:style: width: 100%; border: none;
+:style: width: 95%; border: none;
 ````
 
 ### Exercice {num2}`exercice:2-fct-ex4`
