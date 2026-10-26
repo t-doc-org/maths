@@ -1088,7 +1088,7 @@ Tracez la représentation graphique des fonctions ci-dessous.
 
 ````{block} solution
 ```{jsxgraph} fctSol
-:style: width: 100%; border: none;
+:style: width: 90%; border: none;
 ```
 ````
 
