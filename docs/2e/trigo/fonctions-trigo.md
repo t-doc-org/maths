@@ -580,7 +580,7 @@ render.tanx = el => {
 ```
 ````
 
-````{container} frame
+````{container} frame avoid-break-inside
 ### Représentation graphique de la fonction $\cos(x)$:
 
 ```{jsxgraph} cosx
