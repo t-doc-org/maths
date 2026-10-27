@@ -637,6 +637,16 @@ change-t-elle en fonction des coefficients $a$, $b$, $c$ et $d$?
 ```
 ````
 
+```{admonition} Influence des coefficients
+:class: attention dropdown noprint instructor
+- Le coefficient $a$ modifie l'amplitude de la fonction (changement du max et
+  min).
+- Le coefficient $b$ modifie la fréquence (changement de la période).
+- Le coefficient $c$ modifie la phase (déplacement horizontal de la fonction).
+- Le coefficient $d$ modifie l'ordonnée à l'origine (déplacement vertical de la
+  fonction).
+```
+
 ```{container} frame noprint instructor
 -> {numref}`exercice %s<exercice:2-fct-ex4>`
 ```
