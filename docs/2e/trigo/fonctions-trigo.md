@@ -515,7 +515,7 @@ zéros: $\{k \cdot \pi \; | \; k \in \mathbb{Z}\}$
     border-collapse: collapse;
     padding: 10px;
     text-align: center;
-    width: 100px;
+    width: 150px;
 }
 </style>
 
