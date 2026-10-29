@@ -987,10 +987,9 @@ déterminez la période, le cas échéant.
 
 ### Exercice {num2}`exercice:2-fct-ex2`
 
-Établissez un tableau de correspondance des fonctions données, puis tracez leur
-représentation graphique dans le repère ci-dessous, où la représentation
-graphique de la fonction sinus a déjà été tracée. Que modifie le coefficient
-devant le $\sin(x)$?
+Sans faire un tableau de correspondance, tracez la représentation graphique des
+fonctions données dans le repère ci-dessous. La fonction sinus a déjà été
+tracée. Que modifie le coefficient devant le $\sin(x)$?
 
 {.lower-alpha-paren .columns-3}
 1. $f_1(x)=2\cdot \sin(x)$
@@ -1071,10 +1070,9 @@ fonction.
 
 ### Exercice {num2}`exercice:2-fct-ex3`
 
-Établissez un tableau de correspondance des fonctions données, puis tracez leur
-représentation graphique dans le repère ci-dessous, où la représentation
-graphique de la fonction cosinus a déjà été tracée. Que modifie le coefficient
-devant le $x$ d'un $\cos(x)$?
+Sans faire un tableau de correspondance, tracez la représentation graphique des
+fonctions données dans le repère ci-dessous. La fonction cosinus a déjà été
+tracée. Que modifie le coefficient devant le $x$ d'un $\cos(x)$?
 
 {.lower-alpha-paren .columns-3}
 1. $f_1(x)= \cos(0.5x)$
