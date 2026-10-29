@@ -197,7 +197,7 @@ Les équations suivantes sont appelées **identités remarquables de degré 3**.
     {vspace}`1lh`
     $\begin{array}{r|l}
     {\color{magenta}x^5+x^4-7x^3-x^2+10x+7}\phantom{0} & \underline{\phantom{0}{\color{red}x^3-2x}\phantom{00000}} \\
-    \underline{-(x^5 \phantom{0000} + 2x^3)}\phantom{00000000000000} & {\color{green}x^2 + x - 5} \\
+    \underline{-(x^5 \phantom{0000} - 2x^3)}\phantom{00000000000000} & {\color{green}x^2 + x - 5} \\
     x^4 - 5x^3 - x^2\phantom{0000000000} & \\
     \underline{-(x^4  \phantom{00000} - 2x^2)}\phantom{000000000} & \\
     -5x^3 + x^2 + 10x \phantom{00000}& \\
