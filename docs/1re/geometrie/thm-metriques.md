@@ -8,10 +8,10 @@ page-break-avoid-inside: 3
 
 # Théorèmes métriques
 
-<!-- ```{container} frame noprint instructor
+```{container} frame noprint instructor
 {xopp}`Corrigés détaillés <corriges/thm-metriques.xopp>`
 ```
- -->
+
 ## Théorie
 
 `````{admonition} Droites remarquables d'un triangle
@@ -212,7 +212,7 @@ Par rapport à l'angle $\alpha$, $a$ est le **côté opposé**, $b$ et $c$ sont 
 `````{admonition} Théorème de Pythagore
 :class: note
 ````{list-grid}
-:style: grid-template-columns: 3fr 2fr;
+:style: grid-template-columns: 1fr 1fr;
 - Dans un triangle rectangle, la somme des carrés des cathètes est égal au carré
   de l'hypoténuse.
   ```{math}
@@ -220,16 +220,20 @@ Par rapport à l'angle $\alpha$, $a$ est le **côté opposé**, $b$ et $c$ sont 
   a^2 + b^2 =c^2
   ```
 - ```{jsxgraph} pythagore
-  :style: width: 100%; border: none;
+  :style: width: 80%; border: none;
   ```
 ````
 `````
+
+```{container} frame instructor noprint
+-> {numref}`exercice %s<exercice:1-tm-met-ex2>`
+```
 
 
 `````{admonition} Théorème de la hauteur
 :class: note
 ````{list-grid}
-:style: grid-template-columns: 3fr 2fr;
+:style: grid-template-columns: 1fr 1fr;
 - Le carré de la hauteur est égal au produit des segments allant du pied de la
   hauteur aux sommets adjacents.
   ```{math}
@@ -265,10 +269,14 @@ $$2h_c^2 &= a^2-c_2^2+b^2-c_1^2 \qquad \qquad \qquad &|& \text{réarrangement}\\
 $2h_c^2 = 2c_1c_2 \iff h_c^2 = c_1c_2$
 ```
 
+```{container} frame instructor noprint
+-> {numref}`exercice %s<exercice:1-tm-met-ex1>` (partie a)
+```
+
 `````{admonition} Théorème d'Euclide
 :class: note
 ````{list-grid}
-:style: grid-template-columns: 3fr 2fr;
+:style: grid-template-columns: 1fr 1fr;
 - Le carré de la cathète est égal au produit de l'hypoténuse et du segment
   allant du pied de la hauteur au sommet adjacent.
   ```{math}
@@ -305,14 +313,18 @@ $$
 Le raisonnement est le même pour montrer $b^2 = c \cdot c_1$.
 ````
 
+```{container} frame instructor noprint
+-> {numref}`exercice %s<exercice:1-tm-met-ex1>` (parties b et c),
+{numref}`exercice %s<exercice:1-tm-met-ex3>`
+{numref}`exercice %s<exercice:1-tm-met-ex4>`,
+{numref}`exercice %s<exercice:1-tm-met-ex5>`,
+{numref}`exercice %s<exercice:1-tm-met-ex6>`,
+{numref}`exercice %s<exercice:1-tm-met-ex7>`,
+{numref}`exercice %s<exercice:1-tm-met-ex8>`,
+{numref}`exercice %s<exercice:1-tm-met-ex9>` et
+{numref}`exercice %s<exercice:1-tm-met-ex10>`
 
-<!-- ```{container} frame instructor noprint
--> {numref}`exercice %s<exercice:1-equ-ex1>`,
-{numref}`exercice %s<exercice:1-equ-ex2>`,
-{numref}`exercice %s<exercice:1-equ-ex3>`,
-{numref}`exercice %s<exercice:1-equ-ex4>` et
-{numref}`exercice %s<exercice:1-equ-ex5>`
-```  -->
+```
 
 
 ## Exercices
@@ -412,6 +424,16 @@ Soit le triangle rectangle suivants:
 
 ### Exercice {num2}`exercice:1-tm-met-ex2`
 
+Est-ce qu'une planche en bois de $2.4\,m$ de long et $1.9\,m$ de large peut
+passer par une fenêtre haute de $1.4\,m$ et large de $1.2\,m$?
+
+```{block} solution
+Non, la diagonale de la fenêtre vaut que $1.84\,m$ et la planche a une largeur
+de $1.9\,m$.
+```
+
+### Exercice {num2}`exercice:1-tm-met-ex3`
+
 Soit un triangle rectangle en $C$ avec une partie de l'hypoténuse
 $c_{1} = 9\,cm$ et la cathète $b = 15\,cm$. Déterminez la longueur de la cathète
 $a$, de l'hypoténuse $c$, de l'autre partie de l'hypoténuse $c_{2}$ et la
@@ -421,32 +443,22 @@ hauteur $h_c$.
 $a=20\,cm$, $c=25\,cm$, $c_{2}=16\,cm$ et $h=12\,cm$
 ```
 
-### Exercice {num2}`exercice:1-tm-met-ex3`
-
-Est-ce qu'une planche en bois de $2.4\,m$ de long et $1.9\,m$ de large peut
-passer par une fenêtre haute de $1.4\,m$ et large de $1.2\,m$?
-
-```{block} solution
-Non, la diagonale de la fenêtre vaut que $1.84\,m$ et la planche a une largeur
-de $1.9\,m$.
-```
-
 ### Exercice {num2}`exercice:1-tm-met-ex4`
 
 Déterminez $x$, $y$ et $z$.
 
 {.lower-alpha-paren .columns-2}
 1.  ```{figure} images/hauteur1.png
-    :width: 80%
+    :width: 70%
     ```
 2.  ```{figure} images/hauteur3.png
-    :width: 60%
+    :width: 50%
     ```
 3.  ```{figure} images/hauteur2.png
-    :width: 80%
+    :width: 70%
     ```
 4.  ```{figure} images/hauteur4.png
-    :width: 60%
+    :width: 50%
     ```
 
 ```{block} solution
