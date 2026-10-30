@@ -225,6 +225,15 @@ Par rapport à l'angle $\alpha$, $a$ est le **côté opposé**, $b$ et $c$ sont 
 ````
 `````
 
+```{container} frame noprint
+# Exemple {num2}`exemple`
+
+Dans un triangle rectangle en $A$, $a = 7 \text{ cm}$ et $b = 5 \text{ cm}$.
+Déterminez la longueur de $c$.
+
+$c = \sqrt{7^2 - 5^2} = \sqrt{49 - 25} = \sqrt{24} = 2\sqrt{6} \simeq 4.9\text{ cm}$
+```
+
 ```{container} frame instructor noprint
 -> {numref}`exercice %s<exercice:1-tm-met-ex2>`
 ```
@@ -267,6 +276,17 @@ $$2h_c^2 &= a^2-c_2^2+b^2-c_1^2 \qquad \qquad \qquad &|& \text{réarrangement}\\
 &= 2c_1c_2$$
 
 $2h_c^2 = 2c_1c_2 \iff h_c^2 = c_1c_2$
+```
+
+```{container} frame noprint
+# Exemple {num2}`exemple`
+
+Dans un triangle $ABC$ rectangle en $C$, la hauteur $HC$ mesure $6 \text{ cm}$
+et $AH$ mesure $2 \text{ cm}$. Déterminez la longueur $HB$.
+
+$HC^2 = AH \cdot HB \implies HB = \dfrac{HC^2}{AH}$
+
+$HB = \dfrac{6^2}{2} = \dfrac{36}{2} = 18 \text{ cm}$
 ```
 
 ```{container} frame instructor noprint
@@ -312,6 +332,21 @@ $$
 
 Le raisonnement est le même pour montrer $b^2 = c \cdot c_1$.
 ````
+
+```{container} frame noprint
+# Exemple {num2}`exemple`
+
+Dans un triangle $ABC$ rectangle en $C$, $AH$ mesure $2 \text{ cm}$
+et $HB$ mesure $18 \text{ cm}$. Déterminez les longueurs $AC$ et $BC$.
+
+$AC^2 = AB \cdot AH \implies AC = \sqrt{AB \cdot AH}$
+
+$AC = \sqrt{(2 + 18) \cdot 2} = \sqrt{20 \cdot 2} = \sqrt{40} = 2\sqrt{10} \simeq 6.32\text{ cm}$
+
+$BC^2 = AB \cdot HC \implies BC = \sqrt{AB \cdot HC}$
+
+$BC = \sqrt{(2 + 18) \cdot 18} = \sqrt{20 \cdot 18} = \sqrt{360} = 6\sqrt{10} \simeq 18.98\text{ cm}$
+```
 
 ```{container} frame instructor noprint
 -> {numref}`exercice %s<exercice:1-tm-met-ex1>` (parties b et c),
