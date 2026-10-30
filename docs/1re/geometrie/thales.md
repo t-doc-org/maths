@@ -100,20 +100,11 @@ ci-dessous.
     border-bottom-width: 2px;
   }
 }
-a.valign-top {
-  display: block;
-  margin: 1rem auto;
-  text-align: center;
-}
-img.valign-top {
-  vertical-align: top;
-}
 </style>
 
 {.lower-alpha-paren}
-1.  ```{image} images/thales-ex1a.png
+1.  ```{figure} images/thales-ex1a.png
     :width: 40%
-    :class: valign-top
     ```
 
     {.reset-print .longueur}
@@ -125,9 +116,8 @@ img.valign-top {
     || $82.6$ |  | $38.8$ | $45.01$ | $36.67$ |
     |$631$ | | $761$ |  | $310.58$ | $404.02$ |
 
-2.  ```{image} images/thales-ex1b.png
+2.  ```{figure} images/thales-ex1b.png
     :width: 40%
-    :class: valign-top
     ```
 
     {.reset-print .longueur}
