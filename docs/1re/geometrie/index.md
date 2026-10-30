@@ -6,4 +6,5 @@
 ```{toctree}
 geometrie-intro
 thm-metriques
+thales
 ```
