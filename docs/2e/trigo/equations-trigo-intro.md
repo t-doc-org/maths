@@ -38,8 +38,7 @@ solutions de l'équation donnée (arrondir au centième de degré).
 
 Représentez à l'aide du cercle trigonométrique les relations suivantes:
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 - # $\cos(\alpha) = cos(-\alpha)$
   ```{jsxgraph} exoIntro
   :style: width: 85%; border: none;
@@ -67,8 +66,7 @@ Représentez à l'aide du cercle trigonométrique les relations suivantes:
 ````
 
 `````{solution}
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 - # $\cos(\alpha) = cos(-\alpha)$
   ```{jsxgraph} exoIntro1
   :style: width: 85%; border: none;
@@ -102,8 +100,7 @@ En utilisant le théorème de Thalès et le cercle trigonométrique, montrez que
 $\tan(\alpha) = \dfrac{\sin(\alpha)}{\cos(\alpha)}$.
 
 ````{solution}
-````{list-grid}
-:style: grid-template-columns: 1fr 2fr;
+````{list-grid} 1fr 2fr
 - En appliquant le Théorème de Thalès:
   $$\dfrac{\tan(\alpha)}{\sin(\alpha)} &= \dfrac{1}{\cos(\alpha)} \qquad | \cdot \sin(\alpha)\\
   \tan(\alpha) &= \dfrac{\sin(\alpha)}{\cos(\alpha)}$$

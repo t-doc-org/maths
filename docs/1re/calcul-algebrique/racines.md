@@ -77,8 +77,7 @@ Le nombre $n$ est appelé **indice**.
 :class: note
 Soient $a, b > 0$ et $m, n \in\mathbb{Z}$, alors
 
-```{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+```{list-grid} 1fr 1fr
 - # Formules
   {.lower-alpha-paren}
   1. $\sqrt[n]{a\cdot b} =\sqrt[n]{a} \cdot \sqrt[n]{ b}$

@@ -278,8 +278,7 @@ $$
 Par symétrie dans le cercle trigonométrique, $\sin(x)=\sin(\pi-x)$ et, de plus,
 $\sin(x)$ a une période de $2\pi$, il y a donc deux équations possibles:
 
-```{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+```{list-grid} 1fr 1fr
 - $$
   x_1 - \dfrac{\pi}{2}  &= -\dfrac{\pi}{6} {\color{red} + \, k \, \cdot 2\pi} \qquad &|& +\dfrac{\pi}{2} \\
   x_1  &= \dfrac{\pi}{3} + k \cdot 2\pi
@@ -317,8 +316,7 @@ $$
 Par symétrie dans le cercle trigonométrique, $\sin(\alpha)=\sin(180^\circ-\alpha)$ et, de plus,
 $\sin(\alpha)$ a une période de $360^\circ$, il y a donc deux équations possibles:
 
-```{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+```{list-grid} 1fr 1fr
 - $$
   \alpha_1 - 90^\circ  &= -30^\circ {\color{red} + \, k \, \cdot 360^\circ} \qquad &|& +90^\circ \\
   \alpha_1  &= 60^\circ + k \cdot 360^\circ
@@ -348,8 +346,7 @@ $$
 Par symétrie dans le cercle trigonométrique, $\cos(x)=\cos(-x)$ et, de plus,
 $\cos(x)$ a une période de $2\pi$, il y a donc deux équations possibles:
 
-```{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+```{list-grid} 1fr 1fr
 - $$3x_1  &= \dfrac{\pi}{4} {\color{red} \, + \, k \cdot 2\pi} \qquad &|& :3 \\
   x_1  &= \dfrac{\pi}{12} + k \cdot \dfrac{2\pi}{3}
   $$
@@ -383,8 +380,7 @@ $$
 Par symétrie dans le cercle trigonométrique, $\cos(\alpha)=\cos(-\alpha)$ et, de plus,
 $\cos(\alpha)$ a une période de $360^\circ$, il y a donc deux équations possibles:
 
-```{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+```{list-grid} 1fr 1fr
 - $$3\alpha_1  &= 45^\circ {\color{red} \, + \, k \cdot 360^\circ} \qquad &|& :3 \\
   \alpha_1  &= 15^\circ + k \cdot 120^\circ
   $$
@@ -416,8 +412,7 @@ $$
 Comme $\sin(x) = \sin(\pi - x)$ et que le $\sin(x)$ a une période de $2\pi$, il y a
 deux équations possibles:
 
-```{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+```{list-grid} 1fr 1fr
 - $$
   2x_1 &= \dfrac{\pi}{2} - x_1 + k \cdot 2\pi  \qquad &|& +x_1\\
   3x_1 &= \dfrac{\pi}{2} + k \cdot 2\pi &|& :3\\
@@ -455,8 +450,7 @@ $$
 Comme $\sin(x) = \sin(\pi - x)$ et que le $\sin(x)$ a une période de $2\pi$, il y a
 deux équations possibles:
 
-```{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+```{list-grid} 1fr 1fr
 - $$
   2x_1 + \dfrac{\pi}{4} &= \dfrac{\pi}{2} - x_1 + k \cdot 2\pi  \qquad &|& +x_1\\
   3x_1 + \dfrac{\pi}{4} &= \dfrac{\pi}{2} + k \cdot 2\pi &|& -\dfrac{\pi}{4}\\
@@ -513,11 +507,9 @@ $$
 
 $t = -\dfrac{1}{2}$ ou $t = 1$ avec  $t = \sin(x)$ donnent:
 
-````{list-grid}
-:style: grid-template-columns: 2fr 1fr;
+````{list-grid} 2fr 1fr
 - # $\sin(x) = -\frac{1}{2}$
-  ```{list-grid}
-  :style: grid-template-columns: 1fr 1fr;
+  ```{list-grid} 1fr 1fr
   -   $$
       x_1 &= -\dfrac{\pi}{6} + k \cdot 2\pi\\
       $$

@@ -573,17 +573,14 @@ Calculez les grandeurs manquantes des triangles $ABC$ donnés dans le tableau
 ci-dessous.
 
 <style>
-.angle td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding: 5px;
-    text-align: center;
-    width: 100px;
+table.angle td {
+  border: 1px solid black;
+  padding: 5px;
+  width: 100px;
 }
 </style>
 
-```{flex-table}
-:class: angle
+```{flex-table} angle
 |$a$    | $b$   | $c$   | $\alpha$      | $\beta$       | $\gamma$
 |$7.5$  |       |       | $45.76^\circ$ | $110.58^\circ$|
 |       |$8.22$ |       | $39.07^\circ$ |               |$83.96^\circ$
@@ -594,8 +591,7 @@ ci-dessous.
 ```
 
 ````{block} solution
-```{flex-table}
-:class: angle
+```{flex-table} angle
 |$a$    | $b$   | $c$   | $\alpha$      | $\beta$       | $\gamma$
 |$7.5$ | $9.8$ | $4.2$ |  $45.76^\circ$ | $110.58^\circ$ |  $23.66^\circ$
 |$6.18$ | $8.22$ | $9.75$ | $39.07^\circ$ | $56.97^\circ$ | $83.96^\circ$
@@ -608,8 +604,7 @@ ci-dessous.
 
 ### Exercice {num2}`exercice:2-trigo-thm-ex2`
 
-````{list-grid}
-:style: grid-template-columns: 4fr 3fr;
+````{list-grid} 4fr 3fr
 - Sur une rive d'un canal rectiligne, la longueur entre deux points $A$ et $B$
   est de $96$ m. Sur l'autre rive se trouve le point $C$. L'angle $\alpha$
   est l'angle entre les directions $AB$ et $AC$, l'angle $\beta$ est celui
@@ -663,8 +658,7 @@ La largeur est d'environ $55$ m.
 
 ### Exercice {num2}`exercice:2-trigo-thm-ex3`
 
-````{list-grid}
-:style: grid-template-columns: 4fr 3fr;
+````{list-grid} 4fr 3fr
 - Sous quel angle $\alpha$ doit être incliné un rayon lumineux venant du point
   $A$ pour que ce rayon soit reflété vers le point $B$ (voir figure
   ci-contre)? <br>
@@ -677,8 +671,7 @@ La largeur est d'environ $55$ m.
 
 `````{tip}
 :class: dropdown noprint
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 - # Loi de la réflexion
   $\alpha_1 = \alpha^{'}_1$
 - ```{figure} images/reflexion.png
@@ -740,8 +733,7 @@ L'angle formé par les côtés $a$ et $b$ est de $115.4^\circ$.
 
 ### Exercice {num2}`exercice:2-trigo-thm-ex5`
 
-````{list-grid}
-:style: grid-template-columns: 4fr 3fr;
+````{list-grid} 4fr 3fr
 - En se référant à l'illustration ci-contre, calculez les longueurs des
   segments $BC$, $BD$, $AD$ et
   $AC$, sachant que $AB = 42.5$ cm.
@@ -806,8 +798,7 @@ $AC = 88.0$ m.
 
 ### Exercice {num2}`exercice:2-trigo-thm-ex6`
 
-````{list-grid}
-:style: grid-template-columns: 36fr 64fr;
+````{list-grid} 36fr 64fr
 - ```{figure} images/carte-lac-noir.png
   :width: 100%
   ```
@@ -860,8 +851,7 @@ $5.3^\circ$
 
 ### Exercice {num2}`exercice:2-trigo-thm-ex8`
 
-````{list-grid}
-:style: grid-template-columns: 4fr 3fr;
+````{list-grid} 4fr 3fr
 - Un avion parcourt le trajet $ABCD$ suivant: $AB = 30$ km,
   $BC = 50$ km, $CD = 40$ km.<br>
   $\widehat{ABC} = 110^\circ$ et $\widehat{BCD} = 80^\circ$ (voir figure
@@ -940,8 +930,7 @@ $\beta$ sont les angles adjacents à la base et $\gamma$ son angle opposé.
 
 ### Exercice {num2}`exercice:2-trigo-thm-ex10`
 
-````{list-grid}
-:style: grid-template-columns: 4fr 3fr;
+````{list-grid} 4fr 3fr
 - Soient un trapèze isocèle dont la base $a = 5$, les côtés $b = d = 3$ et
   $\alpha=65^\circ$. Les droites $AD$ et $BC$ se coupent en $E$.
 
@@ -1015,8 +1004,7 @@ $h = 2.64$
 
 ### Exercice {num2}`exercice:2-trigo-thm-ex11`
 
-````{list-grid}
-:style: grid-template-columns: 3fr 5fr;
+````{list-grid} 3fr 5fr
 - Déterminez les longueurs $x$ et $y$ dans la figure ci-contre.
 
 - ```{jsxgraph} triangles4Exo

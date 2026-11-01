@@ -135,8 +135,7 @@ Soient deux vecteurs $\vec{u}$ et $\vec{v}$.
 # Exemple {num2}`exemple`
 
 {.lower-alpha-paren}
-1.  ````{list-grid}
-    :style: grid-template-columns: 1fr 1fr
+1.  ````{list-grid} 1fr 1fr
     - Soient les vecteurs $\vec{u} = \begin{pmatrix} -3 \\2 \\ \end{pmatrix}$ et
       $\vec{v} = \begin{pmatrix} 6 \\-4 \\ \end{pmatrix}$.
 
@@ -148,8 +147,7 @@ Soient deux vecteurs $\vec{u}$ et $\vec{v}$.
       :style: width: 80%;
       ```
     ````
-2.  ````{list-grid}
-    :style: grid-template-columns: 1fr 1fr
+2.  ````{list-grid} 1fr 1fr
     - Soient les vecteurs $\vec{u} = \begin{pmatrix} 1\\4 \\ \end{pmatrix}$ et
       $\vec{v} = \begin{pmatrix} 5 \\2 \\ \end{pmatrix}$.
 
@@ -196,8 +194,7 @@ où $a$ et $b$ sont des nombres réels.
 
 $\vec{v} = 3 \cdot \vec{e_1} + 2 \cdot \vec{e_2} = \begin{pmatrix} 3\\ 2\\ \end{pmatrix}$
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 - # Base du plan
   ```{jsxgraph} base
   :style: width: 80%;
@@ -308,8 +305,7 @@ et $B(b_1;b_2)$. Les composantes du vecteur $\overrightarrow{AB}$ sont
 `````{container} frame noprint
 # Exemple {num2}`exemple`
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr
+````{list-grid} 1fr 1fr
 - Soient les points $A(4;1)$ et $B(-2;3)$.
 
   Les composantes des vecteurs positions de $A$ et $B$ sont:
@@ -344,8 +340,7 @@ Soient trois points $A$, $B$ et $C$ du plan.
 `````{container} frame noprint
 # Exemple {num2}`exemple`
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr 1fr;
+````{list-grid} 1fr 1fr 1fr
 -   # $\overrightarrow{AB} + \overrightarrow{BC} = \overrightarrow{AC} \quad$
     ```{jsxgraph} chasles
     :style: width: 80%;
@@ -582,8 +577,7 @@ $\overrightarrow{OC} = \begin{pmatrix} 2\\ 4\\ \end{pmatrix}$
 {.lower-alpha-paren}
 1.  $\overrightarrow{AB} = - \overrightarrow{BA}$
 
-    ````{list-grid}
-    :style: grid-template-columns: 1fr 1fr
+    ````{list-grid} 1fr 1fr
     -   $$\overrightarrow{AB} &= \overrightarrow{OB} - \overrightarrow{OA} \\
         &= \begin{pmatrix} 1\\ 3\\ \end{pmatrix} - \begin{pmatrix} 4\\ -3\\ \end{pmatrix} = \begin{pmatrix} 1 - 4\\ 3 - (-3)\\ \end{pmatrix} = \begin{pmatrix} -3\\ 6\\ \end{pmatrix}$$
 
@@ -599,8 +593,7 @@ $\overrightarrow{OC} = \begin{pmatrix} 2\\ 4\\ \end{pmatrix}$
 
 2.  $\overrightarrow{AB} + \overrightarrow{BC} =  \overrightarrow{AC}$
 
-    ````{list-grid}
-    :style: grid-template-columns: 1fr 1fr
+    ````{list-grid} 1fr 1fr
     -   $$\overrightarrow{AB} + \overrightarrow{BC} &= \begin{pmatrix} -3\\ 6\\ \end{pmatrix} + \left(\begin{pmatrix} 2\\ 4\\ \end{pmatrix} - \begin{pmatrix} 1\\ 3\\ \end{pmatrix}\right)\\
         &= \begin{pmatrix} -3\\ 6\\ \end{pmatrix} + \begin{pmatrix} 1\\ 1\\ \end{pmatrix} \\
         &= \begin{pmatrix} -3 + 1\\ 6 + 1\\ \end{pmatrix} = \begin{pmatrix} -2\\ 7\\ \end{pmatrix}$$

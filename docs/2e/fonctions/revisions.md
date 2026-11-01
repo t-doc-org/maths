@@ -92,8 +92,7 @@ l'ensemble de départ.
 `````{container} frame
 # Exemple {num2}`exemple`
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 -   L'image de $5$ est 1, car $f(5)=1$<br>
     La préimage ou l'antécédent de 3 est $-3$, car $f(-3) = 3$.<br>
     L'ensemble des images est $Im_f = [0; +\infty[$
@@ -168,8 +167,7 @@ l'axe des $x$.
 `````{container} frame
 # Exemple {num2}`exemple`
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 -   $f(x) = - \dfrac{1}{3}x + 2$
 
     L'ordonnée à l'origine est 2.<br>
@@ -223,8 +221,7 @@ $$
 Zéros:\
 $7-x = 0  \quad \text{ou}  \quad 2x + 3 = 0 \qquad \implies \qquad x = 7  \quad \text{ou} \quad  x = -\dfrac{3}{2}$
 
-```{flex-table}
-:class: function-table
+```{flex-table} function-table
 |$x$|{.l .w}$\tiny-\;\infty$|$-\frac{3}{2}$|{.w}|$7$|{.r .w}$\tiny+\;\infty$
 |$7-x$|$+$||$+$|$0$|$-$
 |$2x+3$|$-$|$0$|$+$||$+$
@@ -244,8 +241,7 @@ $$
 Zéros:\
 $x - 2 = 0  \quad \text{ou}  \quad x - 6 = 0 \qquad \implies \qquad x = 2  \quad \text{ou} \quad  x = -6$
 
-```{flex-table}
-:class: function-table
+```{flex-table} function-table
 |$x$|{.l .w}$\tiny-\;\infty$|$-6$|{.w}|$2$|{.r .w}$\tiny+\;\infty$
 |$x-2$|$-$||$-$|$0$|$+$
 |$x+6$|$-$|$0$|$+$||$+$
@@ -269,8 +265,7 @@ $D = \mathbb{R} \setminus \{\dfrac{2}{3}\}$
 Zéros:\
 $2x - 1 = 0 \qquad \implies \qquad 2x = 1 \qquad \implies \qquad x = \dfrac{1}{2}$
 
-```{flex-table}
-:class: function-table
+```{flex-table} function-table
 |$x$|{.l .w}$\tiny-\;\infty$|$\frac{1}{2}$|{.w}|$\frac{2}{3}$|{.r .w}$\tiny+\;\infty$
 |$2x-1$|$-$|$0$|$+$||$+$
 |$2-3x$|$+$||$+$|{.g}$0$|$-$
@@ -291,8 +286,7 @@ $D = \mathbb{R} \setminus \{-1; 1\}$
 Zéro:\
 Le numérateur ne s'annule jamais.
 
-```{flex-table}
-:class: function-table
+```{flex-table} function-table
 |$x$|{.l .w}$\tiny-\;\infty$|$-1$|{.w}|$1$|{.r .w}$\tiny+\;\infty$
 |$-2$|$-$||$-$||$-$
 |$x-1$|$-$||$-$|{.g}$0$|$+$
@@ -429,8 +423,7 @@ l'axe des $x$.
 `````{container} frame noprint
 # Exemple {num2}`exemple`
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 -   $f(x) = \dfrac{3}{2}$
 
     L'ordonnée à l'origine vaut $\dfrac{3}{2}$.<br>

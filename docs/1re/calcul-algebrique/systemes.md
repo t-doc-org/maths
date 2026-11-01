@@ -120,8 +120,7 @@ Soit le même système $\begin{cases}
  x- 3 y &= -7 &(2)
 \end{cases}$
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 -   En isolant $y$ dans les deux équations, nous obtenons
     $$\begin{cases}
     y &= -\dfrac{3}{2}x+\dfrac{1}{2} \quad &(1') \\
@@ -131,7 +130,6 @@ Soit le même système $\begin{cases}
 
     En représentant les deux droites, nous obtenons le point d'intersection
     $(-1; 2)$ qui est la solution du système d'équations.
-
 
 -   ```{jsxgraph} systeme1
     :style: width: 80%;
@@ -296,9 +294,7 @@ pas avoir des solution ou en avoir une infinité:
 Résolvez le système d'équation suivant: $\begin{cases}2x = 4y + 6 \quad &(1)\\
 -x + 2y = 5 &(2)\end{cases}$
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
-
+````{list-grid} 1fr 1fr
 -   # Graphiquement
 
     $\begin{cases}y &= \dfrac{1}{2}x - \dfrac{3}{2}\\
@@ -331,9 +327,7 @@ Résolvez le système d'équation suivant: $\begin{cases}2x = 4y + 6 \quad &(1)\
 Résolvez le système d'équation suivant: $\begin{cases}2x - 4y &=  6 \quad &(1)\\
 -x + 2y &= -3 &(2)\end{cases}$
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
-
+````{list-grid} 1fr 1fr
 -   # Graphiquement
 
     Les deux droites sont confondues, la solution est tous les points de la

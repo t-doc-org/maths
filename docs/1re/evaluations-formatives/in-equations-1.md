@@ -21,8 +21,7 @@ Résolvez les équations suivantes.
 
 
 ```{solution}
-```{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+```{list-grid} 1fr 1fr
 -  a)
     $$8x + 3(4 - 2x) &=& 2x - 21\\
     8x + 12 - 6x &=& 2x - 21\\
@@ -50,8 +49,7 @@ Résolvez les inéquations suivantes.
 2.  $-4 < \dfrac{4x-1}{2} < 5$
 
 ```{solution}
-```{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+```{list-grid} 1fr 1fr
 -  a)
     $$2x -5 &\geq& 7x + 10\\
     -5x &\geq& 15\\
@@ -85,8 +83,7 @@ Résolvez les systèmes d'équations suivants.
     \end{cases}$
 
 ```{solution}
-```{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+```{list-grid} 1fr 1fr
 -   a)
     $\begin{cases}
     \begin{aligned}
@@ -251,8 +248,7 @@ Résolvez les inéquations suivantes.
 
     $2x^2 - x - 3 = 2(x - \dfrac{3}{2})(x - (-1)) = 2(x - \dfrac{3}{2})(x + 1)$
 
-    ```{flex-table}
-    :class: function-table
+    ```{flex-table} function-table
     |$x$|{.l .w}$\tiny-\;\infty$|$-1$|{.w}|$\dfrac{3}{2}$|{.r .w}$\tiny+\;\infty$
     |$2$|$+$||$+$||$+$
     |$x - \dfrac{3}{2}$|$-$||$-$|$0$|$+$
@@ -271,8 +267,7 @@ Résolvez les inéquations suivantes.
 
     $-5x^2 - 8x - 3 = -5(x - (-\dfrac{3}{5})(x - (-1)) = -5(x + \dfrac{3}{5})(x + 1)$
 
-    ```{flex-table}
-    :class: function-table
+    ```{flex-table} function-table
     |$x$|{.l .w}$\tiny-\;\infty$|$-1$|{.w}|$-\dfrac{3}{5}$|{.r .w}$\tiny+\;\infty$
     |$-5$|$-$||$-$||$-$
     |$x + \dfrac{3}{5}$|$-$||$-$|$0$|$+$

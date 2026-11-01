@@ -52,8 +52,7 @@ Résolvez $x^2 + 4 \geq 5x$.
     1.  Calculez les zéros en résolvant
         $(x-4)(x-1) = 0 \implies x_1 = {\color{red}4}$ et $x_2 = {\color{orange}1}$
     2.  Faites un tableau de signes:
-        ```{flex-table}
-        :class: function-table
+        ```{flex-table} function-table
         |$x$|{.l .w}$\tiny-\;\infty$|${\color{orange}1}$|{.w}|${\color{red}4}$|{.r .w}$\tiny+\;\infty$
         |$(x-4)$|$-$||$-$|$0$|$+$
         |$(x-1)$|$-$|$0$|$+$||$+$
@@ -97,8 +96,7 @@ la forme factorisée.
     Factorisation: ${\color{green}5}x^2 -3x - 2 = {\color{green}5}(x - {\color{orange}1})(x - ({\color{magenta}-\dfrac{2}{5}})) = 5(x-1)(x + \dfrac{2}{5})$
 
     Tableau de signes:
-    ```{flex-table}
-    :class: function-table
+    ```{flex-table} function-table
     |$x$|{.l .w}$\tiny-\;\infty$|${\color{magenta}-\dfrac{2}{5}}$|{.w}|${\color{orange}1}$|{.r .w}$\tiny+\;\infty$
     |${\color{green}5}$|$+$||$+$||$+$
     |$(x-1)$|$-$||$-$|$0$|$+$
@@ -120,8 +118,7 @@ la forme factorisée.
     Factorisation: ${\color{green}-9}x^2 -30x -25 = {\color{green}-9}(x - ({\color{orange}-\dfrac{5}{3}}))^2 = -9(x +\dfrac{5}{3})^2$
 
     Tableau de signes:
-    ```{flex-table}
-    :class: function-table
+    ```{flex-table} function-table
     |$x$|{.l .w}$\tiny-\;\infty$|${\color{orange}-\dfrac{5}{3}}$|{.r .w}$\tiny+\;\infty$
     |${\color{green}-9}$|$-$||$-$
     |$(x +\dfrac{5}{3})$|$-$|$0$|$+$
@@ -237,8 +234,7 @@ Résolvez les inéquations suivantes.
 
 ### Exercice {num2}`exercice:1-inequ-quad-ex5`
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 -   Sur la figure ci-contre, $AB=4\,cm$, $M$ est un point mobile sur le segment
     $AB$. $AMNP$ Et $MBQR$ sont des carrés.
 
@@ -255,8 +251,7 @@ $S=[0;1]\cup[3;4]$ et donc $AM$ doit mesurer entre 0 et 1 cm ou entre 3 et 4 cm.
 
 ### Exercice {num2}`exercice:1-inequ-quad-ex6`
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 -   $ABCD$ est un carré dont les coté mesurent $10\,cm$. G est un point du
     segment $AD$. Les points $E$, $F$, $G$, $H$ et $I$ sont placés de telle
     manière que $AEFG$ et $FHCI$ soient des carrés.

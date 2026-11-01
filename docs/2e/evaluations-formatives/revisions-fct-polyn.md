@@ -22,8 +22,6 @@ Soit la fonction $f(x) = 4x^2 - 28x + 48$.
 3.  Calculez les coordonnées du sommet de $f$.
 4.  Résolvez $f(x) > 0$.
 
-
-
 ````{solution}
 {.lower-alpha-paren}
 1.  $f(x) = 4(x^2 -7x + 12) = 4(x-3)(x-4)$
@@ -31,8 +29,7 @@ Soit la fonction $f(x) = 4x^2 - 28x + 48$.
 3.  $x_s = \dfrac{28}{8} = \dfrac{7}{2}$\
     $y_s = f(x_s) = f(\dfrac{7}{2}) = 4 \cdot \left( \dfrac{7}{2} \right)^2 - 28 \cdot \left( \dfrac{7}{2} \right) + 48 = -1$\
     $S = \left(\dfrac{7}{2}; -1 \right)$
-4.  ```{flex-table}
-    :class: function-table
+4.  ```{flex-table} function-table
     |$x$|{.l .w}$\tiny-\;\infty$|$3$|{.w}|$4$|{.r .w}$\tiny+\;\infty$
     |$4$|$+$||$+$||$+$
     |$x-3$|$-$|$0$|$+$||$+$

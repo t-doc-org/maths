@@ -75,8 +75,7 @@ mesure de tous ses angles.
 `````{container} frame noprint
 # Exemple {num2}`exemple`
 
-````{list-grid}
-:style: grid-template-columns: 5fr 3fr;
+````{list-grid} 5fr 3fr
 -   Dans un triangle rectangle en $C$, $c = 30$ cm et $a =18$ cm.<br>
     Résolvez ce triangle.
 
@@ -100,8 +99,7 @@ angles d'un triangle vaut $180^\circ$.
 `````{container} frame noprint
 # Exemple {num2}`exemple`
 
-````{list-grid}
-:style: grid-template-columns: 5fr 3fr;
+````{list-grid} 5fr 3fr
 -   Dans un triangle rectangle en $A$, $\gamma = 30^\circ$ et $b = 18$ cm.\
     Résolvez ce triangle.
 
@@ -192,8 +190,7 @@ source: (<https://gomaths.edu-vd.ch>)
 :class: attention, dropdown
 # Triangle rectangle isocèle
 
-````{list-grid}
-:style: grid-template-columns: 5fr 3fr;
+````{list-grid} 5fr 3fr
 -   Par Pythagore: $c^2 = x^2 + x^2 = 2x^2 \implies c = \sqrt{2x^2} = x\sqrt{2}$
 
     $\sin(45^\circ) = \dfrac{x}{c} = \dfrac{x}{x\sqrt{2}} = \dfrac{1}{\sqrt{2}}= \dfrac{\sqrt{2}}{2}$
@@ -211,8 +208,7 @@ source: (<https://gomaths.edu-vd.ch>)
 :class: attention, dropdown
 # Demi-triangle équilatéral
 
-````{list-grid}
-:style: grid-template-columns: 5fr 3fr;
+````{list-grid} 5fr 3fr
 -   Par Pythagore: $h^2 = x^2 - \left(\dfrac{x}{2} \right)^2 = x^2 - \dfrac{x^2}{4} = \dfrac{3x^2}{4} \implies h = x \dfrac{\sqrt{3}}{2}$
 
     $\sin(30^\circ) = \dfrac{\frac{x}{2}}{x} = \dfrac{1}{2}$
@@ -237,17 +233,15 @@ source: (<https://gomaths.edu-vd.ch>)
 **Rapports trigonométriques des angles remarquables (30°, 45° et 60°)**
 
 <style>
-.angle td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding: 10px;
-    text-align: center;
-    width: 100px;
+table.angle td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
 }
 </style>
 
-```{flex-table}
-:class: angle
+```{flex-table} angle
 |$\varphi$       | $30^\circ$    | $45^\circ$    | $60^\circ$
 |$\sin(\varphi)$ | $\dfrac{1}{2}$        | $\dfrac{\sqrt{2}}{2}$ | $\dfrac{\sqrt{3}}{2}$
 |$\cos(\varphi)$ | $\dfrac{\sqrt{3}}{2}$ | $\dfrac{\sqrt{2}}{2}$ | $\dfrac{1}{2}$
@@ -256,7 +250,6 @@ source: (<https://gomaths.edu-vd.ch>)
 ````
 
 ## Exercices
-
 
 ### Exercice {num2}`exercice:2-trigo-rev-ex1`
 
@@ -281,7 +274,6 @@ Résolvez les triangles $ABC$ suivants, rectangles en $C$ (arrondis au centième
 La longueur de l'hypoténuse d'un triangle rectangle vaut $6.2\, \text{cm}$ et un
 de ses angles $27^\circ$. Déterminez la longueur de ses cathètes.
 
-
 ```{block} solution
 $a = 2.81\, \text{cm}$ et $b = 5.52\, \text{cm}$.
 ```
@@ -291,15 +283,13 @@ $a = 2.81\, \text{cm}$ et $b = 5.52\, \text{cm}$.
 Un triangle isocèle a une base de $51.8\, m$ et une aire de
 $130 \, m^2$. Calculez les angles de ce triangle.
 
-
 ```{block} solution
 Deux angles de $11^\circ$ et un de $158^\circ$.
 ```
 
 ### Exercice {num2}`exercice:2-trigo-rev-ex4`
 
-````{list-grid}
-:style: grid-template-columns:3fr 1fr;
+````{list-grid} 3fr 1fr
 -   Une pente de $x\,\%$ indiquée sur un panneau de signalisation routière
     signifie que la dénivellation de la route vaut $x$ mètres pour une distance
     horizontale de $100 \, m$. Déterminez pour chacune des pentes en $\%$
@@ -333,7 +323,6 @@ Pour les angles d'élévation suivants, déterminez la pente en $\%$.
 2.  $20^\circ$
 3.  $60^\circ$
 4.  $85^\circ$
-
 
 ```{block} solution
 {.lower-alpha-paren .columns-4}

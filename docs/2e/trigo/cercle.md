@@ -173,8 +173,7 @@ x = \frac{\varphi}{360^\circ} \cdot 2\pi \quad \text{et} \quad \varphi = \frac{x
 
 La mesure d'un angle en radians est proportionnelle à sa mesure en degrés.
 
-```{flex-table}
-:class: angle
+```{flex-table} angle
 | degrés  | $360^\circ$ | $1$ | $\varphi$
 | radians | $2\pi$ | $x$ | $1$
 ```
@@ -192,22 +191,19 @@ En radians, un angle de $37^\circ$ vaut $\qquad \dfrac{37^\circ}{360^\circ} \cdo
 Un angle de 5.13 rad vaut en degré $\qquad \dfrac{5.13}{2\pi} \cdot 360^\circ \approx 293.93^\circ$
 ````
 
-
 ````{admonition} Propriétés
 **Table d'équivalence des angles remarquables:**
 
 <style>
-.angle td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding: 10px;
-    text-align: center;
-    width: 100px;
+table.angle td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
 }
 </style>
 
-```{flex-table}
-:class: angle
+```{flex-table} angle
 | degrés  | $30^\circ$ | $45^\circ$ | $60^\circ$ | $90^\circ$ | $180^\circ$ | $270^\circ$ | $360^\circ$ | $720^\circ$
 | radians | $\dfrac{\pi}{6}$ | $\dfrac{\pi}{4}$ | $\dfrac{\pi}{3}$ | $\dfrac{\pi}{2}$ | $\pi$ | $\dfrac{3\pi}{2}$ | $2\pi$ | $4\pi$
 ```
@@ -500,15 +496,13 @@ Complétez le tableau ci-dessous, sans utiliser la calculatrice.
 Les angles en radians sont à donner sous la forme d'un multiple ou d'une
 fraction de $\pi$.
 
-```{flex-table}
-:class: angle
+```{flex-table} angle
 | degrés  | $36^\circ$ |  | $135^\circ$ |  | $30^\circ$ |  | $6^\circ$ | | $420^\circ$
 | radians |  | $\dfrac{\pi}{3}$ || $\dfrac{4\pi}{5}$ | | $\dfrac{5\pi}{4}$ |  | $\dfrac{3\pi}{10}$ |
 ```
 
 ```{block} solution
-```{flex-table}
-:class: angle
+```{flex-table} angle
 | degrés  | $36^\circ$ | $60^\circ$ | $135^\circ$ | $144^\circ$ | $30^\circ$ | $225^\circ$ | $6^\circ$ | $54^\circ$ | $420^\circ$
 | radians | $\dfrac{\pi}{5}$  | $\dfrac{\pi}{3}$ | $\dfrac{3\pi}{4}$ | $\dfrac{4\pi}{5}$ | $\dfrac{\pi}{6}$ | $\dfrac{5\pi}{4}$ | $\dfrac{\pi}{30}$ | $\dfrac{3\pi}{10}$ |  $\dfrac{7\pi}{3}$
 ```
@@ -740,8 +734,7 @@ render.exoRadians = el => {
 </script>
 
 `````{block} solution
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 - ```{jsxgraph} exoDegres
   :style: width: 85%; border: none;
   ```
@@ -867,8 +860,7 @@ déterminez si les égalités suivantes sont possibles ou non.
 les **valeurs exactes** des fonctions $\sin$, $\cos$ et $\tan$ dans l'intervalle
 $\left[0^\circ;360^\circ\right[$.
 
-```{flex-table}
-:class: angle
+```{flex-table} angle
 |$\varphi$ | $0^\circ$ | $30^\circ$ | $45^\circ$ | $60^\circ$ | $90^\circ$ | $120^\circ$ | $135^\circ$ | $150^\circ$
 |$\sin(\varphi)$ | $0$ | $\frac{1}{2}$ | $\frac{\sqrt{2}}{2}$ | $\frac{\sqrt{3}}{2}$||||
 |$\cos(\varphi)$ | $1$ | $\frac{\sqrt{3}}{2}$ | $\frac{\sqrt{2}}{2}$ | $\frac{1}{2}$||||
@@ -876,8 +868,7 @@ $\left[0^\circ;360^\circ\right[$.
 ```
 {vspace}`1lh`
 
-```{flex-table}
-:class: angle
+```{flex-table} angle
 |$\varphi$ | $180^\circ$ | $210^\circ$ | $225^\circ$ | $240^\circ$ | $270^\circ$ | $300^\circ$ | $315^\circ$ | $330^\circ$
 |$\sin(\varphi)$ | | | | ||||
 |$\cos(\varphi)$ | | | | ||||
@@ -885,8 +876,7 @@ $\left[0^\circ;360^\circ\right[$.
 ```
 
 ````{block} solution
-```{flex-table}
-:class: angle
+```{flex-table} angle
 |$\varphi$ | $0^\circ$ | $30^\circ$ | $45^\circ$ | $60^\circ$ | $90^\circ$ | $120^\circ$ | $135^\circ$ | $150^\circ$
 |$\sin(\varphi)$ | $0$ | $\frac{1}{2}$ | $\frac{\sqrt{2}}{2}$ | $\frac{\sqrt{3}}{2}$ | $1$ | $\frac{\sqrt{3}}{2}$ |$\frac{\sqrt{2}}{2}$ |  $\frac{1}{2}$
 |$\cos(\varphi)$ | $1$ | $\frac{\sqrt{3}}{2}$ | $\frac{\sqrt{2}}{2}$ | $\frac{1}{2}$ | $0$ | $-\frac{1}{2}$| $-\frac{\sqrt{2}}{2}$ |  $-\frac{\sqrt{3}}{2}$
@@ -894,8 +884,7 @@ $\left[0^\circ;360^\circ\right[$.
 ```
 {vspace}`1lh`
 
-```{flex-table}
-:class: angle
+```{flex-table} angle
 |$\varphi$ | $180^\circ$ | $210^\circ$ | $225^\circ$ | $240^\circ$ | $270^\circ$ | $300^\circ$ | $315^\circ$ | $330^\circ$
 |$\sin(\varphi)$ | $0$ | $-\frac{1}{2}$ | $-\frac{\sqrt{2}}{2}$ | $-\frac{\sqrt{3}}{2}$ | $-1$ | $-\frac{\sqrt{3}}{2}$ |$-\frac{\sqrt{2}}{2}$ | $-\frac{1}{2}$
 |$\cos(\varphi)$ | $-1$ | $-\frac{\sqrt{3}}{2}$| $-\frac{\sqrt{2}}{2}$ |$-\frac{1}{2}$ | $0$ | $\frac{1}{2}$ | $\frac{\sqrt{2}}{2}$ | $\frac{\sqrt{3}}{2}$
@@ -916,7 +905,6 @@ calculatrice.
 4. $\sin\left(\frac{4\pi}{3}\right)$
 5. $\sin\left(2\pi- \frac{\pi}{3}\right)$
 6. $\cos\left(\frac{\pi}{6}\right)$
-
 
 ```{block} solution
 {.lower-alpha-paren .columns-3}
@@ -945,7 +933,6 @@ Déterminez les valeurs suivantes sans calculatrice.
 10. $\tan\left(\frac{14\pi}{3}\right)$
 11. $\sin\left(-\frac{\pi}{6}\right)$
 12. $\cos\left(\frac{7\pi}{6}\right)$
-
 
 ```{block} solution
 {.lower-alpha-paren .columns-4}
@@ -987,8 +974,6 @@ Donnez l'ensemble des solutions des équations suivantes.
     5. $\tan(x) = -1$
     6. $\cos(x) = -\frac{1}{2}$
 
-
-
 ```{block} solution
 {.lower-alpha-paren}
 1. {.decimal-paren}
@@ -1008,8 +993,6 @@ Donnez l'ensemble des solutions des équations suivantes.
     5. $S = \{-\frac{\pi}{4} + k \cdot \pi | k \in \mathbb{Z}\}$
     6. $S = \{\frac{2\pi}{3} + k \cdot 2\pi | k \in \mathbb{Z}\} \cup \{-\frac{2\pi}{3} + k \cdot 2\pi | k \in \mathbb{Z}\}$
 ```
-
-
 
 ## Solutions
 

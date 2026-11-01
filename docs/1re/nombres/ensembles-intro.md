@@ -98,8 +98,7 @@ les personnes de la classe en n'inscrivant leur prénom qu'une seule fois.
 
 Représentez les ensembles suivants:
 
-```{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+```{list-grid} 1fr 1fr
 - {.lower-alpha-paren}
   1. L'ensemble des élèves qui aiment les mathématiques et qui ont un animal
       domestique.

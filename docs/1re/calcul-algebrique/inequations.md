@@ -162,8 +162,7 @@ Résolvez les inéquations suivantes.
 
 Associez à chaque inéquation son ensemble de solutions pour obtenir une phrase.
 
-```{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+```{list-grid} 1fr 1fr
 -   {.lower-alpha-paren}
     1. $7x+10 < 2x-5$
     2. $-3-\dfrac{3}{4}x \leq \dfrac{1}{4}x$

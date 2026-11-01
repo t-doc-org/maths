@@ -60,8 +60,7 @@ page-break-avoid-inside: 3
 2.  $$x^3+x^2-6x&=0  \quad \quad \quad &|& \text{factorisez}\\
     x(x^2+x-6)&=0 &|& \text{factorisez}\\
     x(x+3)(x-2)&=0 &|& a \cdot b = 0 \iff a = 0 \quad \text{ou} \quad b = 0$$
-    ```{list-grid}
-    :style: grid-template-columns: 3fr 1fr 3fr 1fr 3fr;
+    ```{list-grid} 3fr 1fr 3fr 1fr 3fr
     - $x = 0$
     - ou
     - $(x+3)=0$
@@ -104,8 +103,7 @@ Pour touver le ppmc de $180$ et $2625$, il faut
 
 {.lower-alpha-paren}
 
-1.  ```{list-grid}
-    :style: grid-template-columns: 6fr 4fr;
+1.  ```{list-grid} 6fr 4fr
     - $$\dfrac{x}{2} + \dfrac{3}{2x} &= \dfrac{x}{2} \cdot {\color{red}{\dfrac{x}{x}}} + \dfrac{3}{2x} \\
       &= \dfrac{x^2}{2x} + \dfrac{3}{2x} \\
       &= \dfrac{x^2 + 3}{2x}$$
@@ -113,8 +111,7 @@ Pour touver le ppmc de $180$ et $2625$, il faut
       $2 = {\color{magenta}2}$ et $2x = 2 \cdot {\color{orange}x}$<br>
       $\text{ppmc}(2; 2x) = {\color{magenta}2} \cdot {\color{orange}x} = 2x$
     ```
-2.  ```{list-grid}
-    :style: grid-template-columns: 6fr 4fr;
+2.  ```{list-grid} 6fr 4fr
     - $$\dfrac{1}{a} + \dfrac{1}{b} &= \dfrac{1}{a} \cdot {\color{red}{\dfrac{b}{b}}} + \dfrac{1}{b} \cdot {\color{red}{\dfrac{a}{a}}} \\
       &= \dfrac{b}{ab} + \dfrac{a}{ab} \\
       &= \dfrac{a + b}{ab}$$
@@ -122,8 +119,7 @@ Pour touver le ppmc de $180$ et $2625$, il faut
       $a = {\color{magenta}a}$ et $b = {\color{orange}b}$<br>
       $\text{ppmc}(a; b) = {\color{magenta}a} \cdot {\color{orange}b} = ab$
     ```
-3.  ```{list-grid}
-    :style: grid-template-columns: 6fr 4fr;
+3.  ```{list-grid} 6fr 4fr
     - $$\dfrac{1}{x} + \dfrac{2}{x^2} &= \dfrac{1}{x} \cdot {\color{red}{\dfrac{x}{x}}} + \dfrac{2}{x^2} \\
       &= \dfrac{x}{x^2} + \dfrac{2}{x^2} \\
       &= \dfrac{x + 2}{x^2}$$
@@ -131,8 +127,7 @@ Pour touver le ppmc de $180$ et $2625$, il faut
       $x = x$ et $x^2 = {\color{orange}x^2}$<br>
       $\text{ppmc}(x; x^2) = {\color{orange}x^2}$
     ```
-4.  ```{list-grid}
-    :style: grid-template-columns: 6fr 4fr;
+4.  ```{list-grid} 6fr 4fr
     - $$\dfrac{x}{x + 1} - \dfrac{x + 1}{x} &= \dfrac{x}{x + 1} \cdot {\color{red}{\dfrac{x}{x}}} - \dfrac{x + 1}{x} \cdot {\color{red}{\dfrac{x + 1}{x + 1}}} \\
       &= \dfrac{x^2}{(x + 1)x} - \dfrac{(x + 1)(x + 1)}{x(x + 1)} \\
       &= \dfrac{x^2 -(x + 1)^2}{x(x + 1)} \\
@@ -143,8 +138,7 @@ Pour touver le ppmc de $180$ et $2625$, il faut
       $x+1 = {\color{magenta}x+1}$ (ne peut pas être factorisé) et $x = {\color{orange}x}$<br>
       $\text{ppmc}(x+1; x) = {\color{magenta}(x+1)} \cdot {\color{orange}x} = x(x+1)$
     ```
-5.  ```{list-grid}
-    :style: grid-template-columns: 6fr 4fr;
+5.  ```{list-grid} 6fr 4fr
     - $$\dfrac{n}{m-n}-\dfrac{mn+1}{m^2-mn} &=\dfrac{n}{m-n}-\dfrac{mn+1}{m(m-n)}\\
       &=\dfrac{{\color{red}m}n}{{\color{red}m}(m-n)}-\dfrac{mn+1}{m(m-n)} \\
       &=\dfrac{mn-(mn+1)}{m(m-n)} \\
@@ -155,8 +149,7 @@ Pour touver le ppmc de $180$ et $2625$, il faut
       et $m^2-mn = {\color{orange}m}(m-n)$<br>
       $\text{ppmc}(m-n; m^2-mn) = {\color{magenta}(m-n)} \cdot {\color{orange}m} = m(m-n)$
     ```
-6.  ```{list-grid}
-    :style: grid-template-columns: 6fr 4fr;
+6.  ```{list-grid} 6fr 4fr
     - $\dfrac{a}{a+b}-\dfrac{a^2}{a^2-b^2}+\dfrac{b}{a-b}$<br>
       $$&=\dfrac{a}{a+b}-\dfrac{a^2}{(a+b)(a-b)}+\dfrac{b}{a-b} \\
       &=\dfrac{a{\color{red}(a-b)}}{(a+b){\color{red}(a-b)}}-\dfrac{a^2}{(a+b)(a-b)}+\dfrac{b{\color{red}(a+b)}}{{\color{red}(a+b)}(a-b)}\\
@@ -169,8 +162,7 @@ Pour touver le ppmc de $180$ et $2625$, il faut
       $a-b = a-b$ (ne peut pas être factorisé)<br>
       $\text{ppmc}(a+b; a^2-b^2; a-b) = {\color{magenta}(a+b)} \cdot {\color{orange}(a-b)} = (a+b)(a-b)$
     ```
-7.  ```{list-grid}
-    :style: grid-template-columns: 6fr 4fr;
+7.  ```{list-grid} 6fr 4fr
     - $\dfrac{1}{x}-\dfrac{1}{x^2-2x}+\dfrac{5}{x^2-4x+4}$
       $$&=\dfrac{1}{x}-\dfrac{1}{x(x-2)}+\dfrac{5}{(x-2)^2}\\
       &=\dfrac{1(x-2)^2-1(x-2)+5x}{x(x-2)^2}\\
@@ -189,7 +181,6 @@ Pour touver le ppmc de $180$ et $2625$, il faut
 {numref}`exercice %s<exercice:1-appl-fact-ex8>` et
 {numref}`exercice %s<exercice:1-appl-fact-ex9>`.
 ```
-
 
 ## Exercices
 
@@ -416,7 +407,6 @@ Résolvez les équations suivantes par factorisation.
 2. $\frac{n^2-3mn}{m^2+mn+2n^2}$
 3. $\frac{1-a}{(a+1)(a+5)}$
 ```
-
 
 ## Solutions
 

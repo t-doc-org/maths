@@ -356,8 +356,7 @@ Calculez à l'aide des identités remarquables.
 
 ### Exercice {num2}`exercice:1-polyn-ex6`
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 -   Une boîte rectangulaire avec couvercle peut être construite en coupant les
     parties grisées d'un carton carré comme dans la figure ci-contre et en
     pliant ensuite le long des lignes pointillées.

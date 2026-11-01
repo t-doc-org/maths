@@ -510,12 +510,11 @@ zéros: $\{k \cdot \pi \; | \; k \in \mathbb{Z}\}$
 ````
 
 <style>
-.angle td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding: 10px;
-    text-align: center;
-    width: 150px;
+table.angle td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  width: 150px;
 }
 </style>
 
@@ -524,8 +523,7 @@ zéros: $\{k \cdot \pi \; | \; k \in \mathbb{Z}\}$
 
 Pour $k \in \mathbb{Z}$.
 
-```{flex-table}
-:class: angle
+```{flex-table} angle
 |   | **sin** | **cos** | **tan**
 | **Dom. de déf.**  | $\mathbb{R}$ | $\mathbb{R}$ | $\mathbb{R} \setminus \left\{\dfrac{\pi}{2} + k \cdot \pi\right\}$
 | **Images** | $[-1; 1]$ | $[-1; 1]$ | $\mathbb{R}$

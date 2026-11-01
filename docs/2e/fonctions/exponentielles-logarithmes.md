@@ -19,8 +19,7 @@ apparaît dans l'exposant de la puissance.
 
 Les équations suivantes sont des équations exponentielles:
 
-```{list-grid}
-:style: grid-template-columns: 1fr 1fr 1 fr;
+```{list-grid} 1fr 1fr 1fr
 - $5^x = 125$
 - $4^{2x - 1} = 64$
 - $3^{x + 2} - \dfrac{1}{9} = 0$
@@ -122,8 +121,7 @@ y^2 + y - 6 &= 0 \qquad &&\text{factorisez ou utilisez le discriminant}\\
 (y + 3)(y-2) &= 0
 $$
 
-```{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+```{list-grid} 1fr 1fr
 - $$\text{Soit } y + 3 &= 0\\
   y &= -3 \\
   2^x &= -3  \qquad \text{impossible}
@@ -370,8 +368,7 @@ x^2 - x - 12 &= 0 &|& \text{factorisation}\\
 (x-4)(x+3) &= 0 &|& \text{factorisation}
 $$
 
-```{list-grid}
-:style: grid-template-columns: 2fr 1fr 5fr;
+```{list-grid} 2fr 1fr 5fr
 - $$x- 4 &= 0\\
   x &= 4 \in D_f
   $$

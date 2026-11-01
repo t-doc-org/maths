@@ -296,8 +296,7 @@ $10\%$ des valeurs de l'échantillon lui soient inférieures ou égales.
 
 {.lower-alpha-paren}
 1.  Une entreprise composée de 15 employés paye les salaires suivants:
-    ```{list-grid}
-    :style: grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    ```{list-grid} 1fr 1fr 1fr 1fr 1fr
     - $4\,500$ CHF
     - $1\,000$ CHF
     - $5\,500$ CHF
@@ -315,8 +314,7 @@ $10\%$ des valeurs de l'échantillon lui soient inférieures ou égales.
     - $8\,500$ CHF
     ```
 2.  Une autre entreprise composée de 16 employés paye les salaires suivants:
-    ```{list-grid}
-    :style: grid-template-columns: 1fr 1fr 1fr 1fr;
+    ```{list-grid} 1fr 1fr 1fr 1fr
     - $4\,500$ CHF
     - $1\,000$ CHF
     - $5\,500$ CHF

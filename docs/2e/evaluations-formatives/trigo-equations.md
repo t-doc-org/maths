@@ -82,11 +82,8 @@ Résolvez les équations suivantes (solutions exactes).
 {.lower-alpha-paren .vsep-2}
 1.  $\cos(\alpha) = -\dfrac{\sqrt{3}}{2}$<br>
     $\arccos(\cos(\alpha)) = \arccos(-\dfrac{\sqrt{3}}{2})$
-    ```{list-grid}
-    :style: grid-template-columns: 1fr 1fr;
-
+    ```{list-grid} 1fr 1fr
     -   $\alpha_1  = 150^\circ +  k \cdot 360^\circ$
-
     -   $\alpha_2  = -150^\circ +  k \cdot 360^\circ$
     ```
     $S = \{150^\circ +  k \cdot 360^\circ | k \in \mathbb{Z}\} \cup \{-150^\circ +  k \cdot 360^\circ | k \in \mathbb{Z}\}$
@@ -100,9 +97,7 @@ Résolvez les équations suivantes (solutions exactes).
     $S = \{-15^\circ +  k \cdot 180^\circ | k \in \mathbb{Z}\}$
 3.  $\sin(3x) =  \sin(\dfrac{\pi}{3} + x)$<br>
     $\arcsin(\sin(3x)) =  \arcsin(\sin(\dfrac{\pi}{3} + x))$
-    ```{list-grid}
-    :style: grid-template-columns: 1fr 1fr;
-
+    ```{list-grid} 1fr 1fr
     -   $$3x_1  &= \dfrac{\pi}{3} + x_1 +  k \cdot 2\pi\\
         2x_1  &= \dfrac{\pi}{3} + k \cdot 2\pi\\
         x_1  &= \dfrac{\pi}{6}  + k \cdot \pi
@@ -128,9 +123,7 @@ Résolvez les équations suivantes (solutions exactes).
     $\sin(x) = \cos(3x)$<br>
     $\cos(\dfrac{\pi}{2}-x) = \cos(3x)$<br>
     $\arccos(\cos(\dfrac{\pi}{2}-x)) =  \arccos(\cos(3x))$
-    ```{list-grid}
-    :style: grid-template-columns: 1fr 1fr;
-
+    ```{list-grid} 1fr 1fr
     -   $$\dfrac{\pi}{2}-x_1 &= 3x_1 +  k \cdot 2\pi\\
         -4x_1  &= -\dfrac{\pi}{2} + k \cdot 2\pi\\
         x_1  &= \dfrac{\pi}{8}  + k \cdot \dfrac{\pi}{2}
@@ -149,9 +142,7 @@ Résolvez les équations suivantes (solutions exactes).
     $0 = 2\sin^2(x) + \sin(x) - 1$<br>
     On pose $y = \sin(x)$<br>
     $2y^2 + y - 1 = 0 \implies (2y^2 + 2y - y - 1) = 0 \implies 2y(y + 1) - (y + 1) = 0 \implies (2y -1)(y + 1)=0$<br>
-    ```{list-grid}
-    :style: grid-template-columns: 1fr 1fr;
-
+    ```{list-grid} 1fr 1fr
     -   $$2y -1 &= 0\\
         2\sin(x) -1 &= 0\\
         \sin(x)  &= \dfrac{1}{2}\\

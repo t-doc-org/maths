@@ -131,8 +131,7 @@ render.demoAngle = el => {
 `````{admonition} Démonstration
 :class: attention, dropdown
 
-````{list-grid}
-:style: grid-template-columns: 5fr 4fr
+````{list-grid} 5fr 4fr
 - Théorème du Cosinus dans le triangle $OAB$:
 
   $\|\overrightarrow{AB}\|^2 = \|\overrightarrow{OA}\|^2 + \|\overrightarrow{OB}\|^2 - 2 \cdot \|\overrightarrow{OA}\| \cdot \|\overrightarrow{OB}\| \cdot \cos(\varphi)$
@@ -375,8 +374,7 @@ sur un autre vecteur $\vec{v}$ est le vecteur $\vec{u}'$ donné par
 `````{admonition} Démonstration
 :class: attention, dropdown
 
-````{list-grid}
-:style: grid-template-columns: 5fr 4fr
+````{list-grid} 5fr 4fr
 - Supposons que $\varphi < 90^\circ$.
 
   Par définition:

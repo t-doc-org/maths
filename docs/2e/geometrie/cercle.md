@@ -81,8 +81,7 @@ Le centre est $C({\color{blue}-3}; {\color{green}1})$ et le rayon est de ${\colo
   n'ont aucun point commun.
 ```
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr 1fr;
+````{list-grid} 1fr 1fr 1fr
 - # $\delta(C,d) < r$
   ```{jsxgraph} intersection1
   :style: width: 90%; border: none;

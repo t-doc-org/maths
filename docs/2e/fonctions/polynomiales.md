@@ -430,8 +430,7 @@ tenir compte de son signe. Elle est définie par
 Représentez les fonctions suivantes:
 
 {.lower-alpha-paren}
-1.  ````{list-grid}
-    :style: grid-template-columns: 1fr 1fr;
+1.  ````{list-grid} 1fr 1fr
     -   $f(x) = |x|$<br>
         $$\implies f(x) =
         \begin{cases}
@@ -447,8 +446,7 @@ Représentez les fonctions suivantes:
         :style: width: 80%;
         ```
     ````
-2.  ````{list-grid}
-    :style: grid-template-columns: 1fr 1fr;
+2.  ````{list-grid} 1fr 1fr
     -   $g(x) = |x + 2|$<br>
         $$\implies g(x) =
         \begin{cases}
@@ -469,8 +467,7 @@ Représentez les fonctions suivantes:
         :style: width: 80%;
         ```
     ````
-3.  ````{list-grid}
-    :style: grid-template-columns: 1fr 1fr;
+3.  ````{list-grid} 1fr 1fr
     -   $h(x) = |-x| -3$<br>
         $$\implies h(x) =
         \begin{cases}
@@ -490,8 +487,7 @@ Représentez les fonctions suivantes:
         :style: width: 80%;
         ```
     ````
-4.  ````{list-grid}
-    :style: grid-template-columns: 1fr 1fr;
+4.  ````{list-grid} 1fr 1fr
     -   $i(x) = 2|x - 1| -4$<br>
         $$\implies i(x) =
         \begin{cases}

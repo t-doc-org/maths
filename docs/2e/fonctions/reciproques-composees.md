@@ -19,11 +19,9 @@ que si $f(x) = y$, alors $g(y) = x$.
 
 Soit la fonction $f(x) = 2x - 1$.
 
-````{list-grid}
-:style: grid-template-columns: 4fr 3fr;
+````{list-grid} 4fr 3fr
 - # Tableau de valeurs
-  ```{flex-table}
-  :class: function-table
+  ```{flex-table} function-table
   |$x$|$-3$|$-2$|$-1$|$0$|$1$|$2$|$3$
   |$f(x)=2x-1$|$-7$|$-5$|$-3$|$-1$|$1$|$3$|$5$
   ```
@@ -36,11 +34,9 @@ Soit la fonction $f(x) = 2x - 1$.
 La réciproque de $f$, notée ici $g(x)$, est le symétrique de $f$ par
 rapport à la droite identité $y = x$.
 
-````{list-grid}
-:style: grid-template-columns: 4fr 3fr;
+````{list-grid} 4fr 3fr
 - # Tableau de valeurs
-  ```{flex-table}
-  :class: function-table
+  ```{flex-table} function-table
   |$x$|$-7$|$-5$|$-3$|$-1$|$1$|$3$|$5$
   |$g(x)$|$-3$|$-2$|$-1$|$0$|$1$|$2$|$3$
   ```
@@ -194,8 +190,7 @@ $f$, c'est-à-dire:
 
 ### Exemple {num2}`exemple`
 
-````{list-grid}
-:style: grid-template-columns: 3fr 3fr;
+````{list-grid} 3fr 3fr
 - La fonction $f(x) = -x^2+4$ n'est pas une bijection, car $f(-1)=f(1)=3$.
 - ```{jsxgraph} nonBijection
   :style: width: 50%;
@@ -270,8 +265,7 @@ $f^{-1}$ est parfois notée ${}^r\!f$
 
 ### Exemple {num2}`exemple`
 
-````{list-grid}
-:style: grid-template-columns: 3fr 3fr;
+````{list-grid} 3fr 3fr
 - En reprenant l'{numref}`exemple %s<exemple:reciproque>`, nous constatons que
   la fonction $f(x) = x^2 - 3$ n'est pas bijective, car $f(-2)=f(2)=1$.\
   Nous pouvons restreindre le domaine de définition $D_f=\mathbb{R_+}$ pour

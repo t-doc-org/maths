@@ -120,8 +120,7 @@ mètres de fil?
 
 
 `````{solution}
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 -   ```{figure} images/cerf-volant.jpg
     :width: 100%
     :align: center

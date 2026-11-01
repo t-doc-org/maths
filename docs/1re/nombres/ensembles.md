@@ -184,8 +184,7 @@ Soient $A$ et $B$ deux sous-ensembles d'un ensemble plus grand $M$.
     $$\overline{A}=M \setminus A = \{x \in  M \, \mid \, x \notin A \}$$
 ```
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 - # $A \cap B$
   ```{chartjs} venn
   data: {

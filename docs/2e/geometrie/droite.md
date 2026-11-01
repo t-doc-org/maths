@@ -32,8 +32,7 @@ l'origine**.
 `````{container} frame noprint
 # Exemple {num2}`exemple:2-droites`
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 -   Soit la droite $d$ dont l'équation est donnée par
     ```{math}
     :class: align-center
@@ -134,8 +133,7 @@ tels que $A$ et $B$ sont deux points distincts de $d$.
 `````{container} frame noprint
 # Exemple {num2}`exemple`
 
-```{list-grid}
-:style: grid-template-columns: 1fr 1fr
+```{list-grid} 1fr 1fr
 -   Trouvez un vecteur directeur de la droite $d: y = -\dfrac{2}{3}x + 1$.
     1.  Trouvez deux points $A$ et $B$ qui appartiennent à la droite:<br>
         $A(0; 1)$ et $B(3; -1)$ sont deux points de la droite.
@@ -206,8 +204,7 @@ render.vectDirecteur2 = el => {
 `````{admonition} Démonstration
 :class: attention, dropdown
 
-```{list-grid}
-:style: grid-template-columns: 1fr 1fr
+```{list-grid} 1fr 1fr
 -   $P, A \in d$ et $\vec{d}$ est le vecteur directeur $\implies \overrightarrow{AP} = \lambda \cdot \vec{d}$, car $\overrightarrow{AP} \text{ et } \vec{d}$ sont colinéaires.
 
     $\overrightarrow{AP} = \overrightarrow{AO} + \overrightarrow{OP} \implies \overrightarrow{AO} + \overrightarrow{OP} = \lambda \cdot \vec{d}$
@@ -694,8 +691,7 @@ Les solutions ne sont pas uniques. Voici des solutions possibles.
 
 Montrez que les six équations ci-dessous représentent la même droite.
 
-```{list-grid}
-:style: grid-template-columns: 3fr 3fr 3fr;
+```{list-grid} 3fr 3fr 3fr
 -   $3x+2y=11$
 -   $\dfrac{9-x}{2} = \dfrac{y+8}{3}$
 -   $\begin{pmatrix} x\\ y\\ \end{pmatrix} =\begin{pmatrix} 5\\ -2\\ \end{pmatrix} + \lambda \cdot \begin{pmatrix} -2\\ 3\\ \end{pmatrix}$

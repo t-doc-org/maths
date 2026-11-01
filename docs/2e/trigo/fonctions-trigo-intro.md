@@ -15,9 +15,8 @@ scripts:
 Complétez le tableau et représentez graphiquement la fonction $\sin(x)$.
 
 <style>
-.angle td {
+table.angle td {
   border: 1px solid black;
-  border-collapse: collapse;
   padding: 10px;
   text-align: center;
   width: 100px;
@@ -26,8 +25,7 @@ Complétez le tableau et représentez graphiquement la fonction $\sin(x)$.
 
 {vspace}`1lh`
 
-```{flex-table}
-:class: angle
+```{flex-table} angle
 | $x$ | 0 | $\dfrac{\pi}{6}$ | $\dfrac{\pi}{4}$ | $\dfrac{\pi}{3}$ | $\dfrac{\pi}{2}$ | $\dfrac{2\pi}{3}$ | $\dfrac{3\pi}{4}$ | $\dfrac{5\pi}{6}$ | $\pi$ | $\dfrac{7\pi}{6}$ | $\dfrac{4\pi}{3}$ | $\dfrac{3\pi}{2}$ | $\dfrac{5\pi}{3}$ | $\dfrac{11\pi}{6}$
 | $\sin(x)$ | | |  |  |  |  |  |  |  |  |  |  |  |
 ```
@@ -38,8 +36,7 @@ Complétez le tableau et représentez graphiquement la fonction $\sin(x)$.
 ```
 
 ````{solution}
-```{flex-table}
-:class: angle
+```{flex-table} angle
 | $x$ | 0 | $\dfrac{\pi}{6}$ | $\dfrac{\pi}{4}$ | $\dfrac{\pi}{3}$ | $\dfrac{\pi}{2}$ | $\dfrac{2\pi}{3}$ | $\dfrac{3\pi}{4}$ | $\dfrac{5\pi}{6}$ | $\pi$ | $\dfrac{7\pi}{6}$ | $\dfrac{4\pi}{3}$ | $\dfrac{3\pi}{2}$ | $\dfrac{5\pi}{3}$ | $\dfrac{11\pi}{6}$
 | $\sin(x)$ | $0$ | $\dfrac{1}{2}$ | $\dfrac{\sqrt{2}}{2}$ | $\dfrac{\sqrt{3}}{2}$ | $1$ | $\dfrac{\sqrt{3}}{2}$ | $\dfrac{\sqrt{2}}{2}$ | $\dfrac{1}{2}$ | $0$ | $-\dfrac{1}{2}$ | $-\dfrac{\sqrt{3}}{2}$ | $-1$ | $-\dfrac{\sqrt{3}}{2}$ | $-\dfrac{1}{2}$
 ```
@@ -53,8 +50,7 @@ Complétez le tableau et représentez graphiquement la fonction $\sin(x)$.
 
 Complétez le tableau et représentez graphiquement la fonction $\cos(x)$.
 
-```{flex-table}
-:class: angle
+```{flex-table} angle
 | $x$ | 0 | $\dfrac{\pi}{6}$ | $\dfrac{\pi}{4}$ | $\dfrac{\pi}{3}$ | $\dfrac{\pi}{2}$ | $\dfrac{2\pi}{3}$ | $\dfrac{3\pi}{4}$ | $\dfrac{5\pi}{6}$ | $\pi$ | $\dfrac{7\pi}{6}$ | $\dfrac{4\pi}{3}$ | $\dfrac{3\pi}{2}$ | $\dfrac{5\pi}{3}$ | $\dfrac{11\pi}{6}$
 | $\cos(x)$ | | |  |  |  |  |  |  |  |  |  |  |  |
 ```
@@ -66,8 +62,7 @@ Complétez le tableau et représentez graphiquement la fonction $\cos(x)$.
 ```
 
 ````{solution}
-```{flex-table}
-:class: angle
+```{flex-table} angle
 | $x$ | 0 | $\dfrac{\pi}{6}$ | $\dfrac{\pi}{4}$ | $\dfrac{\pi}{3}$ | $\dfrac{\pi}{2}$ | $\dfrac{2\pi}{3}$ | $\dfrac{3\pi}{4}$ | $\dfrac{5\pi}{6}$ | $\pi$ | $\dfrac{7\pi}{6}$ | $\dfrac{4\pi}{3}$ | $\dfrac{3\pi}{2}$ | $\dfrac{5\pi}{3}$ | $\dfrac{11\pi}{6}$
 | $\cos(x)$ | $1$ | $\dfrac{\sqrt{3}}{2}$ | $\dfrac{\sqrt{2}}{2}$ | $\dfrac{1}{2}$ | $0$ | $-\dfrac{1}{2}$ | $-\dfrac{\sqrt{2}}{2}$ | $-\dfrac{\sqrt{3}}{2}$ | $-1$ | $-\dfrac{\sqrt{3}}{2}$ | $-\dfrac{1}{2}$ | $0$ | $\dfrac{1}{2}$ | $\dfrac{\sqrt{3}}{2}$
 ```
@@ -92,8 +87,7 @@ $\dfrac{\pi}{2}$.
 
 Complétez le tableau et représentez graphiquement la fonction $\tan(x)$.
 
-```{flex-table}
-:class: angle
+```{flex-table} angle
 | $x$ | 0 | $\dfrac{\pi}{6}$ | $\dfrac{\pi}{4}$ | $\dfrac{\pi}{3}$ | $\dfrac{\pi}{2}$ | $\dfrac{2\pi}{3}$ | $\dfrac{3\pi}{4}$ | $\dfrac{5\pi}{6}$ | $\pi$ | $\dfrac{7\pi}{6}$ | $\dfrac{4\pi}{3}$ | $\dfrac{3\pi}{2}$ | $\dfrac{5\pi}{3}$ | $\dfrac{11\pi}{6}$
 | $\tan(x)$ | | |  |  |  |  |  |  |  |  |  |  |  |
 ```
@@ -104,8 +98,7 @@ Complétez le tableau et représentez graphiquement la fonction $\tan(x)$.
 ```
 
 ````{solution}
-```{flex-table}
-:class: angle
+```{flex-table} angle
 | $x$ | 0 | $\dfrac{\pi}{6}$ | $\dfrac{\pi}{4}$ | $\dfrac{\pi}{3}$ | $\dfrac{\pi}{2}$ | $\dfrac{2\pi}{3}$ | $\dfrac{3\pi}{4}$ | $\dfrac{5\pi}{6}$ | $\pi$ | $\dfrac{7\pi}{6}$ | $\dfrac{4\pi}{3}$ | $\dfrac{3\pi}{2}$ | $\dfrac{5\pi}{3}$ | $\dfrac{11\pi}{6}$
 | $\tan(x)$ | $0$ | $\dfrac{\sqrt{3}}{3}$ | $1$ | $\sqrt{3}$ | - | $-\sqrt{3}$ | $-1$| $-\dfrac{\sqrt{3}}{3}$ | $0$ | $\dfrac{\sqrt{3}}{3}$ | $\sqrt{3}$ | - | $-\sqrt{3}$ | $-\dfrac{\sqrt{3}}{3}$
 ```

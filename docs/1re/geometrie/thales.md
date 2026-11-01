@@ -21,8 +21,7 @@ Soit deux droites $g$ et $h$ qui se coupent en un point $S$. Soit deux
 droites parallèles $a$ et $b$ qui coupent $h$ et $g$ en $A_1$ et $A_2$,
 respectivement $B_1$ et $B_2$.
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 - # Première construction
   ```{figure} images/thales1.png
   :width: 80%
@@ -176,8 +175,7 @@ $SA=4 \text{ cm}$ et $BC = 6 \text{ cm}$
 Pour déterminer la largeur $x$ d'une rivière, la construction suivante a été
 utilisée. Quelle est la largeur de la rivière?
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 -   ```{figure} images/thales-riviere.png
     :width: 80%
     ```
@@ -205,8 +203,7 @@ La lune se trouve à $382\,360 \text{ km}$ de la terre.
 
 ### Exercice {num2}`exercice:1-thales-ex5`
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 - Quelle est la longueur $x$ du côté du carré dans la figure ci-contre?
 
 - ```{figure} images/thales-ex5.png

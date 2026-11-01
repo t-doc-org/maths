@@ -17,8 +17,7 @@ page-break-avoid-inside: 3
 `````{admonition} Droites remarquables d'un triangle
 :class: note
 # Les médianes
-````{list-grid}
-:style: grid-template-columns: 3fr 2fr;
+````{list-grid} 3fr 2fr
 - Les médianes sont les segments qui relient un sommet et le milieu du côté
   opposé à ce sommet.
 
@@ -29,8 +28,7 @@ page-break-avoid-inside: 3
   ```
 ````
 # Les médiatrices
-````{list-grid}
-:style: grid-template-columns: 3fr 2fr;
+````{list-grid} 3fr 2fr
 - Les médiatrices sont les droites perpendiculaires aux côtés qui passent par
   leur milieu.
 
@@ -41,8 +39,7 @@ page-break-avoid-inside: 3
   ```
 ````
 # Les bissectrices
-````{list-grid}
-:style: grid-template-columns: 3fr 2fr;
+````{list-grid} 3fr 2fr
 - Les bissectrices sont les droites qui passent par les sommets et qui coupent
   les angles du triangle en deux angles isométriques.
 
@@ -53,8 +50,7 @@ page-break-avoid-inside: 3
   ```
 ````
 # Les hauteurs
-````{list-grid}
-:style: grid-template-columns: 3fr 2fr;
+````{list-grid} 3fr 2fr
 - Les hauteurs sont les segments qui relient un sommet au côté opposé, et qui
   sont perpendiculaires à ce côté opposé.
 - ```{figure} images/hauteurs.png
@@ -199,8 +195,7 @@ Par rapport à l'angle $\alpha$, $a$ est le **côté opposé**, $b$ et $c$ sont 
 
 `````{admonition} Définition
 :class: note
-````{list-grid}
-:style: grid-template-columns: 3fr 2fr;
+````{list-grid} 3fr 2fr
 - Dans un triangle rectangle, l'**hypoténuse** est le côté opposé à l'angle
   droit et les **cathètes** sont les côtés adjacents à l'angle droit.
 - ```{jsxgraph} triangleRectangle
@@ -211,8 +206,7 @@ Par rapport à l'angle $\alpha$, $a$ est le **côté opposé**, $b$ et $c$ sont 
 
 `````{admonition} Théorème de Pythagore
 :class: note
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 - Dans un triangle rectangle, la somme des carrés des cathètes est égal au carré
   de l'hypoténuse.
   ```{math}
@@ -241,8 +235,7 @@ $c = \sqrt{7^2 - 5^2} = \sqrt{49 - 25} = \sqrt{24} = 2\sqrt{6} \simeq 4.9\text{ 
 
 `````{admonition} Théorème de la hauteur
 :class: note
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 - Le carré de la hauteur est égal au produit des segments allant du pied de la
   hauteur aux sommets adjacents.
   ```{math}
@@ -295,8 +288,7 @@ $HB = \dfrac{6^2}{2} = \dfrac{36}{2} = 18 \text{ cm}$
 
 `````{admonition} Théorème d'Euclide
 :class: note
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 - Le carré de la cathète est égal au produit de l'hypoténuse et du segment
   allant du pied de la hauteur au sommet adjacent.
   ```{math}
@@ -506,8 +498,7 @@ Déterminez $x$, $y$ et $z$.
 
 ### Exercice {num2}`exercice:1-tm-met-ex5`
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 - Soit le quadrilatère $ABCD$ ci-contre.<br>
   Que valent le périmètre et l'aire de ce quadrilatère?
 - ```{figure} images/aireABCD.png

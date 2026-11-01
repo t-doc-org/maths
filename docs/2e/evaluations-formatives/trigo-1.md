@@ -73,8 +73,7 @@ render.trianIsoRect = el => {
 </script>
 
 `````{solution}
-````{list-grid}
-:style: grid-template-columns: 5fr 3fr;
+````{list-grid} 5fr 3fr
 - Par Pythagore: $a^2 = x^2 + x^2 = 2x^2 \implies a = \sqrt{2x^2} = x\sqrt{2}$
 
   $\sin(45^\circ) = \dfrac{x}{a} = \dfrac{x}{x\sqrt{2}} = \dfrac{1}{\sqrt{2}}= \dfrac{\sqrt{2}}{2}$
@@ -133,8 +132,7 @@ Résolvez le triangle $ABC$ rectangle en $B$, sachant que $c = \sqrt{2}$ et
 $b = 2$.
 
 `````{solution}
-````{list-grid}
-:style: grid-template-columns: 5fr 3fr;
+````{list-grid} 5fr 3fr
 - $\sin(\gamma) = \dfrac{\sqrt{2}}{2} \implies \gamma = \sin^{-1}\left(\dfrac{\sqrt{2}}{2}\right)= 45^\circ$
 
   $\alpha = 180^\circ - 90^\circ - 45^\circ = 45^\circ$
@@ -151,8 +149,7 @@ $b = 2$.
 
 Transformez les angles suivants en radians.
 
-```{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+```{list-grid} 1fr 1fr
 - $90^\circ =$
 - $720^\circ =$
 - $120^\circ =$
@@ -160,8 +157,7 @@ Transformez les angles suivants en radians.
 ```
 
 ````{solution}
-```{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+```{list-grid} 1fr 1fr
 - $90^\circ = \dfrac{\pi}{2}$
 - $720^\circ = 4\pi$
 - $120^\circ = \dfrac{2\pi}{3}$
@@ -173,8 +169,7 @@ Transformez les angles suivants en radians.
 
 Transformez les angles suivants en degrés.
 
-```{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+```{list-grid} 1fr 1fr
 - $\pi =$
 - $\dfrac{\pi}{3} =$
 - $\dfrac{5\pi}{4} =$
@@ -182,8 +177,7 @@ Transformez les angles suivants en degrés.
 ```
 
 ````{solution}
-```{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+```{list-grid} 1fr 1fr
 - $\pi = 180^\circ$
 - $\dfrac{\pi}{3} = 60^\circ$
 - $\dfrac{5\pi}{4} = 225^\circ$

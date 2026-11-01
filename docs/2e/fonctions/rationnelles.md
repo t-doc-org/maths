@@ -129,8 +129,7 @@ le domaine de définition et les zéros calculés dans les exemples précédents
 
 $f(x) = \dfrac{x^2-7x+10}{x^2-9}=\dfrac{(x-2)(x-5)}{(x+3)(x-3)}$
 
-```{flex-table}
-:class: function-table
+```{flex-table} function-table
 |$x$|{.l .w}$\tiny-\;\infty$|$-3$|{.w}|$2$|{.w}|$3$|{.w}|$5$|{.r .w}$\tiny+\;\infty$
 |$x-2$|$-$||$-$|$0$|$+$||$+$||$+$
 |$x-5$|$-$||$-$||$-$||$-$|$0$|$+$

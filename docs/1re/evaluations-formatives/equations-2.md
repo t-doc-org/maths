@@ -38,8 +38,7 @@ Résolvez les inéquations suivantes:
 {.lower-alpha-paren}
 1.  Domaine de définition: $D = \mathbb{R} \setminus \{-4; 4\}$<br>
     Zéros du numérateur: $x=0$<br>
-    ```{flex-table}
-    :class: function-table
+    ```{flex-table} function-table
     |$x$|{.l .w}$\tiny-\;\infty$|$-4$|{.w}|$0$|{.w}|$4$|{.r .w}$\tiny+\;\infty$
     |$-3x$|$+$||$+$|$0$|$-$||$-$
     |$x-4$|$-$||$-$||$-$|{.g}$0$|$+$
@@ -50,8 +49,7 @@ Résolvez les inéquations suivantes:
 2.  Domaine de définition: $D = \mathbb{R} \setminus \left\{\dfrac{1}{2}\right\}$<br>
     Bonne forme: $\dfrac{-2x+13}{6(2x-1)} > 0$<br>
     Zéros du numérateur: $x=\dfrac{13}{2}$<br>
-    ```{flex-table}
-    :class: function-table
+    ```{flex-table} function-table
     |$x$|{.l .w}$\tiny-\;\infty$|$\dfrac{1}{2}$|{.w}|$\dfrac{13}{2}$|{.r .w}$\tiny+\;\infty$
     |$-2x+13$|$+$||$+$|$0$|$-$
     |$6$|$+$||$+$||$+$

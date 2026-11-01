@@ -44,8 +44,7 @@ Pour la mise en évidence, il faut:
 ```
 
 `````{container} frame noprint
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 -   # Vidéo - Théorie
     ```{youtube} r3AzqvgLcI8
     ```
@@ -83,8 +82,7 @@ cela devient faisable en les regroupant judicieusement.
 ```
 
 `````{container} frame noprint
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 -   # Vidéo - Théorie
     ```{youtube} 5dCsR85qd3k
     ```
@@ -120,8 +118,8 @@ Remarque: $a^2+b^2$ n'est pas factorisable.
 ````{container} frame noprint
 # Exemple {num2}`exemple`
 
-```{list-grid}
-:style: grid-template-columns: 4fr 1fr 4fr; gap: 0.3rem; padding-left: 1rem;
+```{list-grid} 4fr 1fr 4fr
+:style: gap: 0.3rem; padding-left: 1rem;
 - a) $\; a^2+8a+16=(a+4)^2$
 - utilisez
 - $a^2+2ab+b^2 = (a+b)^2$
@@ -138,8 +136,7 @@ Remarque: $a^2+b^2$ n'est pas factorisable.
 ````
 
 `````{container} frame noprint
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 -   # Vidéo - Théorie
     ```{youtube} T9T4IeYGEe4
     ```
@@ -328,16 +325,14 @@ méthodes à la suite.
 {numref}`exercice %s<exercice:1-fact-ex8>`
 ```
 
-
 ## Exercices
 
 <style>
-.factorisation td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
+table.factorisation td {
+  border: 1px solid black;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
 }
 </style>
 
@@ -441,10 +436,8 @@ Factorisez à l'aide des identités remarquables.
 
 Complétez le tableau ci-dessous.
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
--   ```{flex-table}
-    :class: factorisation
+````{list-grid} 1fr 1fr
+-   ```{flex-table} factorisation
     || $x^2-64$
     |$(x+5)(x-5)$ |
     |$(x+1)^2$ |
@@ -454,8 +447,7 @@ Complétez le tableau ci-dessous.
     || $x^2-6x+9$
     || $x^2-169$
     ```
--   ```{flex-table}
-    :class: factorisation
+-   ```{flex-table} factorisation
     || $x^2-100$
     |$(x+8)^2$ |
     || $x^2+6x+9$
@@ -468,10 +460,8 @@ Complétez le tableau ci-dessous.
 ````
 
 `````{block} solution
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
--   ```{flex-table}
-    :class: factorisation
+````{list-grid} 1fr 1fr
+-   ```{flex-table} factorisation
     |$(x+8)(x-8)$| $x^2-64$
     |$(x+5)(x-5)$ | $x^2-25$
     |$(x+1)^2$ | $x^2 +2x +1$
@@ -481,8 +471,7 @@ Complétez le tableau ci-dessous.
     |$(x-3)^2$| $x^2-6x+9$
     |$(x+13)(x-13)$| $x^2-169$
     ```
--   ```{flex-table}
-    :class: factorisation
+-   ```{flex-table} factorisation
     |$(x+10)(x-10)$| $x^2-100$
     |$(x+8)^2$ | $x^2+16x+64$
     |$(x+3)^2$| $x^2+6x+9$
@@ -499,10 +488,8 @@ Complétez le tableau ci-dessous.
 
 Complétez le tableau ci-dessous.
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
--   ```{flex-table}
-    :class: factorisation
+````{list-grid} 1fr 1fr
+-   ```{flex-table} factorisation
     | | $x^2+7x-8$
     | $(x-9)(x+10)$ |
     | $(x-3)(x+6)$ |
@@ -512,8 +499,7 @@ Complétez le tableau ci-dessous.
     | | $x^2+14x+45$
     | | $x^2+3x-28$
     ```
--   ```{flex-table}
-    :class: factorisation
+-   ```{flex-table} factorisation
     | | $x^2+3x-10$
     | $(x-1)(x-2)$ |
     | | $x^2-12x+35$
@@ -526,10 +512,8 @@ Complétez le tableau ci-dessous.
 ````
 
 `````{block} solution
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
--   ```{flex-table}
-    :class: factorisation
+````{list-grid} 1fr 1fr
+-   ```{flex-table} factorisation
     | $(x+8)(x-1)$ | $x^2+7x-8$
     | $(x-9)(x+10)$ | $x^2+x-90$
     | $(x-3)(x+6)$ | $x^2+3x-18$
@@ -539,8 +523,7 @@ Complétez le tableau ci-dessous.
     | $(x+9)(x+5)$ | $x^2+14x+45$
     | $(x+7)(x-4)$ | $x^2+3x-28$
     ```
--   ```{flex-table}
-    :class: factorisation
+-   ```{flex-table} factorisation
     | $(x+5)(x-2)$ | $x^2+3x-10$
     | $(x-1)(x-2)$ | $x^2-3x+2$
     | $(x-7)(x-5)$ | $x^2-12x+35$

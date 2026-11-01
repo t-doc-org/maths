@@ -66,8 +66,7 @@ a^0=1 \text{ pour tout }a \neq 0.
 :class: note
 Soient $a, b \in \mathbb{R} \setminus \{0\}$ et $n,m \in\mathbb{Z}$, alors
 
-```{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+```{list-grid} 1fr 1fr
 - # Formules
   {.lower-alpha-paren}
   1. $a^n \cdot a^m =a^{n+m}$

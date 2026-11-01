@@ -11,8 +11,7 @@ page-break-avoid-inside: 3
 `````{container} noprint
 # Réduire une expression
 
-``` {list-grid}
-:style: grid-template-columns: 1fr 1fr;
+``` {list-grid} 1fr 1fr
 -   Théorie
     ```{youtube} qEUb4IU-HiY
     ```
@@ -25,8 +24,7 @@ page-break-avoid-inside: 3
 `````{container} noprint
 # Développer une expression
 
-```{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+```{list-grid} 1fr 1fr
 -   Théorie
     ```{youtube} URNld8xsXgM
     ```
@@ -39,8 +37,7 @@ page-break-avoid-inside: 3
 `````{container} noprint
 # Développer et réduire une expression
 
-```{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+```{list-grid} 1fr 1fr
 -   Théorie
     ```{youtube} 4PTioyfnmqc
     ```

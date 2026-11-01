@@ -38,8 +38,7 @@ Zéros: $x_1 = 3$ et $x_2 = 4$
 
 Ordonnée à l'origine: $f(0) = \dfrac{0^2 - 7 \cdot 0 + 12}{0^3+27} = \dfrac{12}{27} = \dfrac{4}{9}$
 
-```{flex-table}
-:class: function-table
+```{flex-table} function-table
 |$x$|{.l .w}$\tiny-\;\infty$|$-3$|{.w}|$3$|{.w}|$4$|{.r .w}$\tiny+\;\infty$
 |$x-3$|$-$||$-$|$0$|$+$||$+$
 |$x-4$|$-$||$-$||$-$|$0$|$+$
