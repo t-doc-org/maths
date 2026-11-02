@@ -86,7 +86,7 @@ render.valAbs = el => {
 1.  ```{jsxgraph} valAbs
     :style: width: 58%;
     ```
-2.  $D_h = \mathbb{R}$, $Im_h = ]-2; + \infty[$, zéros: $x_1 = 1$ et $x_2 = 5$,
+2.  $D_h = \mathbb{R}$, $Im_h = [-2; + \infty[$, zéros: $x_1 = 1$ et $x_2 = 5$,
     ordonnée à l'origine: $1$
 
 ```
