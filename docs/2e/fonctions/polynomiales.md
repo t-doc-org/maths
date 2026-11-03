@@ -272,7 +272,7 @@ $g(x) = x^5-2x^3-3x$ est-elle une fonction paire, une fonction impaire, ni l'une
 ni l'autre?
 
 $g(-x) = (-x)^5-2\cdot(-x)^3-3\cdot(-x)=-x^5+2x^3+3x=-(x^5-2x^3-3\cdot x)=-g(x)$<br>
-$\implies$ La fonction $g$ est une fonction paire.
+$\implies$ La fonction $g$ est une fonction impaire.
 
 La fonction $g$ est symétrique par rapport à l'origine $O$.
 
@@ -827,8 +827,9 @@ render.solValAbs = el => {
 
 ### Exercice {num2}`exercice:2-polyn-ex22`
 
-Représentez les fonctions valeur absolues suivantes. Déterminez le domaine de
-définition, l'ensemble des images, les zéros et l'ordonnée à l'origine.
+Notez l'expression algébrique de la fonction sans valeur absolue, représentez
+les fonctions valeur absolues suivantes et déterminez le domaine de définition,
+l'ensemble des images, les zéros et l'ordonnée à l'origine.
 
 {.lower-alpha-paren .columns-3}
 1. $f(x) = |-2x|$
