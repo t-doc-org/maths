@@ -842,21 +842,51 @@ l'ensemble des images, les zéros et l'ordonnée à l'origine.
 ````{block} solution
 
 ```{jsxgraph} solValAbs
-:style: width: 58%;
+:style: width: 45%;
 ```
 
 {.lower-alpha-paren .vsep-1}
-1. $D_f = \mathbb{R} \qquad Im_f = [0; +\infty[ = \mathbb{R_+} \qquad
+1.  $|-2x| =
+    \begin{cases}
+      -2x & \text{si } x \leq 0 \\
+      2x & \text{si } x > 0
+    \end{cases}$<br>
+    $D_f = \mathbb{R} \qquad Im_f = [0; +\infty[ = \mathbb{R_+} \qquad
     \text{O.O: } 0 \qquad \text{zéro: } x = 0$
-2. $D_g = \mathbb{R} \qquad Im_g = [0; +\infty[ = \mathbb{R_+} \qquad
+2.  $|x+3| =
+    \begin{cases}
+      x+3 & \text{si } x \geq -3 \\
+      -x-3 & \text{si } x < -3
+    \end{cases}$<br>
+    $D_g = \mathbb{R} \qquad Im_g = [0; +\infty[ = \mathbb{R_+} \qquad
     \text{O.O: } 3 \qquad \text{zéro: } x = -3$
-3. $D_h = \mathbb{R} \qquad Im_h = [-5; +\infty[ \qquad
+3.  $|2x| - 5=
+    \begin{cases}
+      2x-5 & \text{si } x \geq 0 \\
+      -2x-5 & \text{si } x < 0
+    \end{cases}$<br>
+    $D_h = \mathbb{R} \qquad Im_h = [-5; +\infty[ \qquad
     \text{O.O: } -5 \qquad \text{zéros: } x_1 = -2.5 \text{ et } x_2 = 2.5$
-4. $D_i = \mathbb{R} \qquad Im_i = ]-\infty; 0] \qquad
+4.  $-2|x+1| =
+    \begin{cases}
+      -2x-1 & \text{si } x \geq -1 \\
+      2x+2 & \text{si } x < -1
+    \end{cases}$<br>
+    $D_i = \mathbb{R} \qquad Im_i = ]-\infty; 0] \qquad
     \text{O.O: } -2 \qquad \text{zéro: } x = -1$
-5. $D_j = \mathbb{R} \qquad Im_j = [-1; +\infty[ \qquad
+5.  $|4 - x| - 1 =
+    \begin{cases}
+      -x + 3 & \text{si } x \leq 4 \\
+      x - 5 & \text{si } x > 4
+    \end{cases}$<br>
+    $D_j = \mathbb{R} \qquad Im_j = [-1; +\infty[ \qquad
     \text{O.O: } 3 \qquad \text{zéro: } x_1 = 3 \text{ et } x_2 = 5$
-6. $D_k = \mathbb{R} \qquad Im_k = [-4; +\infty[ \qquad
+6.  $2|3 - x| -4 =
+    \begin{cases}
+      -2x+ 2 & \text{si } x \geq 3 \\
+      2x- 10 & \text{si } x < 3
+    \end{cases}$<br>
+    $D_k = \mathbb{R} \qquad Im_k = [-4; +\infty[ \qquad
     \text{O.O: } 2 \qquad \text{zéro: } x_1 = 1 \text{ et } x_2 = 5$
 ````
 
@@ -870,7 +900,7 @@ Déterminez les zéros des fonctions suivantes à l'aide d'une substitution.
 3. $f(x) = x^6-19x^3-216$
 
 ```{block} solution
-{.lower-alpha-paren .vsep-1}
+{.columns-2 .lower-alpha-paren .vsep-1}
 1. $x_1=-3$; $x_2=3$; $x_3=-2$; $x_4=2$
 2. $x_1=-\frac{3}{2}$; $x_2=\frac{3}{2}$; $x_3=-\frac{1}{2}$; $x_4=\frac{1}{2}$
 3. $x_1=-2$; $x_2=3$
