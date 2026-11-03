@@ -59,8 +59,9 @@ Soit la fonction $g(x) = x^3+6x^2+3x-10$
 Soit la fonction $h(x) = |-x + 3| - 2$
 
 {.lower-alpha-paren}
-1.  Représentez la fonction $h(x)$.
-2.  Déterminez le domaine de définition, l'ensemble des images, les zéros et
+1.  Notez l'expression algébrique simplifiée de la fonction sans valeur absolue.
+2.  Représentez la fonction $h(x)$.
+3.  Déterminez le domaine de définition, l'ensemble des images, les zéros et
     l'ordonnée à l'origine de $h(x)$.
 
 <script type="module">
@@ -83,10 +84,15 @@ render.valAbs = el => {
 
 ```{solution}
 {.lower-alpha-paren}
-1.  ```{jsxgraph} valAbs
+1.  $$|-x + 3| - 2 =
+    \begin{cases}
+      -x + 1 & \text{si } x \leq 3 \\
+      x - 5 & \text{si } x > 3
+    \end{cases}$$
+2.  ```{jsxgraph} valAbs
     :style: width: 58%;
     ```
-2.  $D_h = \mathbb{R}$, $Im_h = [-2; + \infty[$, zéros: $x_1 = 1$ et $x_2 = 5$,
+3.  $D_h = \mathbb{R}$, $Im_h = [-2; + \infty[$, zéros: $x_1 = 1$ et $x_2 = 5$,
     ordonnée à l'origine: $1$
 
 ```
