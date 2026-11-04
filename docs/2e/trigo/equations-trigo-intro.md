@@ -67,7 +67,7 @@ Représentez à l'aide du cercle trigonométrique les relations suivantes:
 
 `````{solution}
 ````{list-grid} 1fr 1fr
-- # $\cos(\alpha) = cos(-\alpha)$
+- # $\cos(\alpha) = \cos(-\alpha)$
   ```{jsxgraph} exoIntro1
   :style: width: 85%; border: none;
   ```
