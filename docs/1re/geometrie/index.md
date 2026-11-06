@@ -9,4 +9,5 @@ thm-metriques
 thales
 trigo
 trigo-quiz
+trigo-angles-remarquables
 ```

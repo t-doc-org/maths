@@ -209,7 +209,8 @@ source: (<https://gomaths.edu-vd.ch>)
 # Demi-triangle équilatéral
 
 ````{list-grid} 5fr 3fr
--   Par Pythagore: $h^2 = x^2 - \left(\dfrac{x}{2} \right)^2 = x^2 - \dfrac{x^2}{4} = \dfrac{3x^2}{4} \implies h = x \dfrac{\sqrt{3}}{2}$
+-   Par Pythagore:
+    $h^2 = x^2 - \left(\dfrac{x}{2} \right)^2 = x^2 - \dfrac{x^2}{4} = \dfrac{3x^2}{4} \implies h = x \dfrac{\sqrt{3}}{2}$
 
     $\sin(30^\circ) = \dfrac{\frac{x}{2}}{x} = \dfrac{1}{2}$
 
@@ -223,7 +224,7 @@ source: (<https://gomaths.edu-vd.ch>)
 
     $\tan(60^\circ) = \dfrac{h}{\frac{x}{2}} = \dfrac{x\frac{\sqrt{3}}{2}}{\frac{x}{2}} = \sqrt{3}$
 -   ```{jsxgraph} triangleEqui
-    :style: width: 100%; border: none;
+    :style: width: 90%; border: none;
     ```
 ````
 `````
