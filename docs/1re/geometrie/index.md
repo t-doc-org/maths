@@ -7,4 +7,5 @@
 geometrie-intro
 thm-metriques
 thales
+trigo
 ```

@@ -350,7 +350,6 @@ $BC = \sqrt{(2 + 18) \cdot 18} = \sqrt{20 \cdot 18} = \sqrt{360} = 6\sqrt{10} \s
 {numref}`exercice %s<exercice:1-tm-met-ex8>`,
 {numref}`exercice %s<exercice:1-tm-met-ex9>` et
 {numref}`exercice %s<exercice:1-tm-met-ex10>`
-
 ```
 
 
