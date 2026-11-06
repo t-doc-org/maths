@@ -8,4 +8,5 @@ geometrie-intro
 thm-metriques
 thales
 trigo
+trigo-quiz
 ```
