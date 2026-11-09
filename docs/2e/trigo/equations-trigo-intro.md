@@ -39,7 +39,7 @@ solutions de l'équation donnée (arrondir au centième de degré).
 Représentez à l'aide du cercle trigonométrique les relations suivantes:
 
 ````{list-grid} 1fr 1fr
-- # $\cos(\alpha) = cos(-\alpha)$
+- # $\cos(\alpha) = \cos(-\alpha)$
   ```{jsxgraph} exoIntro
   :style: width: 85%; border: none;
   ```
