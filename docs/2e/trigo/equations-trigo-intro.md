@@ -249,7 +249,7 @@ render.exoIntro4 = el => {
     });
     board.create('segment', [o, c], {strokeColor: JXG.palette.green});
     board.create('angle', [x, o, c], {
-      name: '\\(90^\\circ-\\alpha\\)', radius: 0.3,
+      name: '\\(90^\\circ+\\alpha\\)', radius: 0.3,
       label: {anchorX: 'left', anchorY: 'middle', offset: [-45, 1],
       strokeColor: JXG.palette.green}, fillColor: JXG.palette.green,
     });
