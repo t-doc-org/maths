@@ -73,7 +73,7 @@ Soit un triangle équilatéral, dont les côtés valent $1$.
 
     $\cos(30^\circ) = \dfrac{h}{1} = h = \dfrac{\sqrt{3}}{2}$
 
-    $\tan(30^\circ) = \dfrac{\frac{1}{2}}{h} = \dfrac{\frac{1}{2}}{\frac{\sqrt{3}}{2}} = \dfrac{1}{2} \cdot \dfrac{2}{\sqrt{3}}  = \dfrac{1}{\sqrt{3}} = \dfrac{\sqrt{3}}{3}$
+    $\tan(30^\circ) = \dfrac{\frac{1}{2}}{h} = \dfrac{\frac{1}{2}}{\frac{\sqrt{3}}{2}} = \dfrac{1}{2} \cdot \dfrac{2}{\sqrt{3}}  = \dfrac{1}{\sqrt{3}} \cdot \dfrac{\sqrt{3}}{\sqrt{3}} = \dfrac{\sqrt{3}}{3}$
 
     $\sin(60^\circ) = \dfrac{h}{1} =  h = \dfrac{\sqrt{3}}{2}$
 
