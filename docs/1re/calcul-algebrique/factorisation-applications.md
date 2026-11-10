@@ -303,7 +303,7 @@ Résolvez les équations suivantes par factorisation.
 ```{block} solution
 {.lower-alpha-paren .columns-3}
 1. $S=\{-4;3\}$
-2. $S=\{-4;\frac{1}{3};2\}$
+2. $S=\{-4;-\frac{1}{3};2\}$
 3. $S=\{0;6\}$
 4. $S=\{-1\}$
 5. $S=\{-3;-2\}$
