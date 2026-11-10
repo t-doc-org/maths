@@ -63,7 +63,7 @@ attrs.page = [attrs.screen, attrs.nonInteractive, {
 render.exempleTan = el => {
   return initBoard(el, attrs.page, board => {
     board.create('functiongraph', [x => Math.tan(x) - 2], {
-      name: '\\(\\tan(x)-1\\)',
+      name: '\\(\\tan(x)-2\\)',
       label: {position: '0.5fr right', offset: [-30, 0]},
     });
     board.create('functiongraph', [x => 3], {
