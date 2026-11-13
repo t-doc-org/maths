@@ -13,6 +13,7 @@ nombres/index
 calcul-algebrique/index-1
 calcul-algebrique/index-2
 geometrie/index
+calcul-algebrique/index-3
 objectifs/index
 evaluations-formatives/index
 ```
