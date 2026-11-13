@@ -16,8 +16,6 @@ Les objectifs de l'évaluation [](trigo-1.md) sont considérés comme acquis.
   (domaine de définition, images, période, zéros et parité).
 - Savoir représenter graphiquement les fonctions trigonométriques (simples
   et/ou avec les coefficients $a$, $b$, $c$ et $d$ qui changent).
-- Connaître les fonctions réciproques, $\arcsin$, $\arccos$ et $\arctan$, et
-  pouvoir les représenter graphiquement.
 - Savoir déterminer **tous les angles** d'un rapport trigonométrique donné en
   degrés ou en radians.
 
