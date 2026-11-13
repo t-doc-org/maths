@@ -453,6 +453,7 @@ et donc $\bigl( g \circ f \bigr)(x) = g\bigl(f(x)\bigr)$.
 ```{container} frame noprint
 # Exemple {num2}`exemple`
 
+{.lower-alpha-paren}
 1.  Soient les fonctions $f(x) = x + 1$ et $g(x) = 3x$, calculez $(f \circ g)(x)$.
     $$
     (f \circ g)(x)  &= f(g(x))  \qquad \qquad &&\text{remplacez } g(x) \text{ par sa valeur} \\
@@ -584,6 +585,7 @@ g(x) = f^{-1}(x) \Longleftrightarrow f\bigl(g(x)\bigr) = g\bigl(f(x)\bigr) = x.
 ```{container} frame noprint
 # Exemple {num2}`exemple`
 
+{.lower-alpha-paren}
 1.  Soient les fonctions $f(x) = 3x+1$ et $g(x) = \dfrac{1}{3}x-\dfrac{1}{3}$.\
     $g$ est-elle la fonction réciproque de $f$?
 
