@@ -573,33 +573,43 @@ Calculez les grandeurs manquantes des triangles $ABC$ donnés dans le tableau
 ci-dessous.
 
 <style>
-table.angle td {
-  border: 1px solid black;
-  padding: 5px;
-  width: 100px;
+.table.reset-print.longueur {
+  table-layout: fixed;
+}
+@media print {
+  .table.reset-print.longueur :is(th, td) {
+    border-width: 1px;
+    padding: 0.1rem;
+  }
+  .table.reset-print.longueur th {
+    border-bottom-width: 2px;
+  }
 }
 </style>
 
-```{flex-table} angle
-|$a$    | $b$   | $c$   | $\alpha$      | $\beta$       | $\gamma$
-|$7.5$  |       |       | $45.76^\circ$ | $110.58^\circ$|
-|       |$8.22$ |       | $39.07^\circ$ |               |$83.96^\circ$
-|$15.83$|$12.41$|       | $75.59^\circ$ |               |
-|$13.6$ |       |$24.35$| $30.28^\circ$ |               |
-|       |$11.24$|$6.03$ | $15.62^\circ$ |               |
-|$13$   |$14$   |$15$   |               |               |
-```
+
+{.reset-print .longueur}
+|$a$    | $b$   | $c$   | $\alpha$      | $\beta$       | $\gamma$|
+| :--: | :--: | :--: | :--: | :--: | :--: |
+|$7.5$  |       |       | $45.76^\circ$ | $110.58^\circ$| |
+|       |$8.22$ |       | $39.07^\circ$ |               |$83.96^\circ$|
+|$15.83$|$12.41$|       | $75.59^\circ$ |               | |
+|$13.6$ |       |$24.35$| $30.28^\circ$ |               | |
+|       |$11.24$|$6.03$ | $15.62^\circ$ |               | |
+|$13$   |$14$   |$15$   |               |               | |
+
 
 ````{block} solution
-```{flex-table} angle
-|$a$    | $b$   | $c$   | $\alpha$      | $\beta$       | $\gamma$
-|$7.5$ | $9.8$ | $4.2$ |  $45.76^\circ$ | $110.58^\circ$ |  $23.66^\circ$
-|$6.18$ | $8.22$ | $9.75$ | $39.07^\circ$ | $56.97^\circ$ | $83.96^\circ$
-|$15.83$ | $12.41$ | $13.39$ | $75.59^\circ$ | $49.4^\circ$ | $55.01^\circ$
-|$13.6$ | $26.88$ ou $15.18$ | $24.35$ | $30.28^\circ$ | $85.19^\circ$ ou $34.25^\circ$ | $64.53^\circ$ ou $115.47^\circ$
-|$5.67$ | $11.24$ | $6.03$ | $15.62^\circ$ | $147.74^\circ$ | $16.64^\circ$
-|$13$ | $14$ | $15$ | $53.13^\circ$ | $59.49^\circ$ | $67.38^\circ$
-```
+{.reset-print .longueur}
+|$a$    | $b$   | $c$   | $\alpha$      | $\beta$       | $\gamma$|
+| :--: | :--: | :--: | :--: | :--: | :--: |
+|| $9.8$ | $4.2$ | | |  $23.66^\circ$|
+|$6.18$ | | $9.75$ |  | $56.97^\circ$ | |
+| | | $13.39$ | | $49.4^\circ$ | $55.01^\circ$|
+| | $26.88$ ou $15.18$ | | | $85.19^\circ$ ou $34.25^\circ$ | $64.53^\circ$ ou $115.47^\circ$|
+|$5.67$ |  |  |  | $147.74^\circ$ | $16.64^\circ$|
+| | | | $53.13^\circ$ | $59.49^\circ$ | $67.38^\circ$|
+
 ````
 
 ### Exercice {num2}`exercice:2-trigo-thm-ex2`
