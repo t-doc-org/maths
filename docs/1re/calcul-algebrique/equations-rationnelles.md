@@ -196,15 +196,132 @@ Résolvez les équations suivantes.
     $\implies S = \{{\color{orange}-7}\}$
 ```
 
+```{container} frame instructor noprint
+-> {numref}`exercice %s<exercice:1-equ-rat-ex3>`,
+{numref}`exercice %s<exercice:1-equ-rat-ex4>` et
+{numref}`exercice %s<exercice:1-equ-rat-ex5>`.
+```
+
 
 ## Exercices
 
 ### Exercice {num2}`exercice:1-equ-rat-ex1`
 
+Déterminez le domaine de définition.
+
+{.lower-alpha-paren .columns-3 .vsep-1}
+1. $2x + 1$
+2. $\dfrac{4x - 2}{3x - 7}$
+3. $\dfrac{5x - 2}{x^2 -9}$
+4. $\dfrac{9 - 6x}{x^2 - 4x + 4}$
+5. $\dfrac{x^2 - 25}{14}$
+6. $\dfrac{3x + 2}{x^3 - 7x^2 + 12x}$
+
+```{block} solution
+{.lower-alpha-paren .columns-3 .vsep-1}
+1. $D= \mathbb{R}$
+2. $D= \mathbb{R} \setminus \{\frac{7}{3}\}$
+3. $D= \mathbb{R} \setminus \{-3; 3\}$
+4. $D= \mathbb{R} \setminus \{2\}$
+5. $D= \mathbb{R}$
+6. $D= \mathbb{R} \setminus \{0; 3; 4\}$
+```
 
 ### Exercice {num2}`exercice:1-equ-rat-ex2`
 
+Résolvez les équations suivantes.
 
+{.lower-alpha-paren .columns-2 .vsep-1}
+1. $\dfrac{2x-5}{x+7}=0$
+2. $\dfrac{5-4x}{3x-2}=0$
+3. $x + \dfrac{8}{x}=6$
+4. $\dfrac{x^2-9}{x+4}=x-2$
+5. $\dfrac{x+3}{x-1}=\dfrac{2x-7}{x-1}$
+6. $\dfrac{x^2+3}{x-8}=x$
+
+```{block} solution
+{.lower-alpha-paren .columns-2 .vsep-1}
+1. $D= \mathbb{R} \setminus \{-7\}$ et  $S=\{\frac{5}{2}\}$
+2. $D= \mathbb{R} \setminus \{\frac{2}{3}\}$ et $S=\{\frac{5}{4}\}$
+3. $D= \mathbb{R} \setminus \{0\}$ et $S=\{2; 4\}$
+4. $D= \mathbb{R} \setminus \{-4\}$ et $S=\{-\frac{1}{2}\}$
+5. $D= \mathbb{R} \setminus \{1\}$ et $S=\{10\}$
+6. $D= \mathbb{R} \setminus \{8\}$ et $S=\{-\frac{3}{8}\}$
+```
+
+### Exercice {num2}`exercice:1-equ-rat-ex3`
+
+Résolvez les équations suivantes.
+
+{.lower-alpha-paren .columns-2 .vsep-1}
+1. $\dfrac{2x-1}{x-1}=3$
+2. $\dfrac{5}{5x+2}=\dfrac{2}{2x-3}$
+3. $\dfrac{8}{x^2-1} -\dfrac{4}{x+1}=\dfrac{2}{x-1}$
+4. $\dfrac{5}{x-5}+6=\dfrac{x}{x-5}$
+5. $\dfrac{2}{x^2-9}+\dfrac{5}{x-3}=\dfrac{3}{x+3}$
+6. $\dfrac{2x}{x-4}=\dfrac{8}{x-4}-3$
+
+```{block} solution
+{.lower-alpha-paren .columns-2 .vsep-1}
+1. $D= \mathbb{R} \setminus \{1\}$ et  $S=\{2\}$
+2. $D= \mathbb{R} \setminus \{-\frac{2}{5}; \frac{3}{2}\}$ et $S=\varnothing$
+3. $D= \mathbb{R} \setminus \{-1; 1\}$ et $S=\{\frac{5}{3}\}$
+4. $D= \mathbb{R} \setminus \{5\}$ et $S=\varnothing$
+5. $D= \mathbb{R} \setminus \{-3; 3\}$ et $S=\{-13\}$
+6. $D= \mathbb{R} \setminus \{4\}$ et $S=\varnothing$
+```
+
+### Exercice {num2}`exercice:1-equ-rat-ex4`
+
+Résolvez les équations suivantes.
+
+{.lower-alpha-paren .columns-2 .vsep-1}
+1. $\dfrac{x-1}{2x+1}=\dfrac{3x+2}{x+18}$
+2. $\dfrac{x^2+12x+13}{x^2+10x+9}=0$
+3. $\dfrac{3x+3}{x^2+5x}+\dfrac{x+4}{x+5}=\dfrac{x+1}{x}$
+4. $\dfrac{2}{x}-\dfrac{1}{x-1}=1$
+5. $\dfrac{12}{x}=7+\dfrac{12}{1-x}$
+6. $\dfrac{1}{x}+\dfrac{1}{x+5}=\dfrac{1}{6}$
+
+```{block} solution
+{.lower-alpha-paren .vsep-1}
+1. $D= \mathbb{R} \setminus \{-18;-\frac{1}{2}\}$ et $S=\varnothing$
+2. $D= \mathbb{R} \setminus \{-9; -1\}$ et $S=\{-6-\sqrt{23};-6+\sqrt{23}\}$
+3. $D= \mathbb{R} \setminus \{-5; 0\}$ et $S=\{2\}$
+4. $D= \mathbb{R} \setminus \{0; 1\}$ et $S=\varnothing$
+5. $D= \mathbb{R} \setminus \{0; 1\}$ et $S=\{\frac{3}{7};4\}$
+6. $D= \mathbb{R} \setminus \{-5; 0\}$ et $S=\{-3;10\}$
+```
+
+### Exercice {num2}`exercice:1-equ-rat-ex5`
+
+Résolvez les équations suivantes.
+
+{.lower-alpha-paren .columns-2 .vsep-1}
+1. $\dfrac{4}{2x+1}=\dfrac{3}{2x}$
+2. $\dfrac{x}{x-3}=\dfrac{x+1}{9-3x}$
+3. $\dfrac{x+1}{2(x-1)}+\dfrac{5x-8}{2x-2}=\dfrac{3(x-4)}{2(x-1)}$
+4. $\dfrac{x-2}{x^2-x}=\dfrac{x}{x^2-1}$
+5. $\dfrac{14}{x-14}=\dfrac{x-14}{14}$
+6. $\dfrac{x+1}{x}-\dfrac{x}{x-8}=\dfrac{11}{8-x}$
+7. $\dfrac{x+3}{x-2}-\dfrac{x+2}{x-3}=\dfrac{x-5}{x^2-5x+6}$
+8. $\dfrac{x-1}{x+3}-\dfrac{x-4}{x+5}=\dfrac{7x+13}{x^2+8x+15}$
+9. $\dfrac{3}{x-2}-\dfrac{1}{x+2}=\dfrac{2x+8}{x^2-4}$
+10. $\dfrac{4(x-2)}{x-3}+\dfrac{3}{x}=-\dfrac{3}{x^2-3x}$
+
+```{block} solution
+{.lower-alpha-paren .columns-2 .vsep-1}
+1. $D= \mathbb{R} \setminus \{-\frac{1}{2}; 0\}$ et $S=\{\frac{3}{2}\}$
+2. $D= \mathbb{R} \setminus \{3\}$ et $S=\{-\frac{1}{4}\}$
+3. $D= \mathbb{R} \setminus \{1\}$ et $S=\{-\frac{5}{3}\}$
+4. $D= \mathbb{R} \setminus \{-1;0;1\}$ et $S=\{-2\}$
+5. $D= \mathbb{R} \setminus \{14\}$ et $S=\{0;28\}$
+6. $D= \mathbb{R} \setminus \{0; 8\}$ et $S=\{2\}$
+7. $D= \mathbb{R} \setminus \{2; 3\}$ et $S=\{0\}$
+8. $D= \mathbb{R} \setminus \{-5; -3\}$ et $S=\varnothing$
+9. $D= \mathbb{R} \setminus \{-2; 2\}$ et $S=\mathbb{R} \setminus \{-2;2\}$
+10. $D= \mathbb{R} \setminus \{0; 3\}$ et $S=\{-\frac{3}{4};2\}$
+```
 
 ## Solutions
 
