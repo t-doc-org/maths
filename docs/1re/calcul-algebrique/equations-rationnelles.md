@@ -8,9 +8,9 @@ page-break-avoid-inside: 3
 
 # Équations avec fractions rationnelles
 
-<!-- ```{container} frame noprint instructor
+```{container} frame noprint instructor
 {xopp}`Corrigés détaillés <corriges/equations-rationnelles.xopp>`
-``` -->
+```
 
 ## Théorie
 
