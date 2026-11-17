@@ -622,14 +622,14 @@ Résolvez les équations suivantes en utilisant une substitution pour obtenir un
 
 {.lower-alpha-paren .columns-2}
 1.  $2 \cdot \sin^2(x)-5 \cdot \sin(x)+2=0$
-2.  $\tan^4(x)-4 \cdot \tan^2(x)=-3$
+2.  $\tan^2(x)-4 \cdot \tan(x)=-3$
 3.  $3 \cdot \cos^2(\alpha)- 3 \cdot \cos(\alpha)+1=0$
 4.  $1- \sin(\alpha) = 2 \cdot \cos^2(\alpha)$
 
 ```{block} solution
 {.lower-alpha-paren}
 1.  $S = \left\{ \dfrac{\pi}{6} +k \cdot 2\pi \Bigm| k \in \mathbb{Z} \right\} \cup \left\{ \dfrac{5\pi}{6} +k \cdot 2\pi\Bigm| k \in \mathbb{Z} \right\}$
-2.  $S = \left\{ \dfrac{\pi}{4} +k \cdot \dfrac{\pi}{2} \Bigm| k \in \mathbb{Z} \right\} \cup \left\{ \dfrac{\pi}{3} +k \cdot \pi \Bigm| k \in \mathbb{Z} \right\} \cup \left\{ \dfrac{2\pi}{3} +k \cdot \pi \Bigm| k \in \mathbb{Z} \right\}$
+2.  $S = \left\{ \dfrac{\pi}{4} +k \cdot \pi \Bigm| k \in \mathbb{Z} \right\} \cup \{1.249 +k \cdot \pi \Bigm| k \in \mathbb{Z} \right\}$
 3.  $S=\emptyset$
 4.  $S = \left\{ 90^\circ +k \cdot 360^\circ \mid k \in \mathbb{Z} \right\} \cup \left\{ -30^\circ+k \cdot 360^\circ \mid k \in \mathbb{Z} \right\} \cup \left\{ 210^\circ+k \cdot 360^\circ \mid k \in \mathbb{Z} \right\}$
 ```
