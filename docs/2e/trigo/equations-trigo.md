@@ -629,7 +629,7 @@ Résolvez les équations suivantes en utilisant une substitution pour obtenir un
 ```{block} solution
 {.lower-alpha-paren}
 1.  $S = \left\{ \dfrac{\pi}{6} +k \cdot 2\pi \Bigm| k \in \mathbb{Z} \right\} \cup \left\{ \dfrac{5\pi}{6} +k \cdot 2\pi\Bigm| k \in \mathbb{Z} \right\}$
-2.  $S = \left\{ \dfrac{\pi}{4} +k \cdot \pi \Bigm| k \in \mathbb{Z} \right\} \cup \{1.249 +k \cdot \pi \Bigm| k \in \mathbb{Z} \right\}$
+2.  $S = \left\{ \dfrac{\pi}{4} + k \cdot \pi \Bigm| k \in \mathbb{Z} \right\}  \cup \{1.249 + k \cdot \pi \Bigm| k \in \mathbb{Z} \}$
 3.  $S=\emptyset$
 4.  $S = \left\{ 90^\circ +k \cdot 360^\circ \mid k \in \mathbb{Z} \right\} \cup \left\{ -30^\circ+k \cdot 360^\circ \mid k \in \mathbb{Z} \right\} \cup \left\{ 210^\circ+k \cdot 360^\circ \mid k \in \mathbb{Z} \right\}$
 ```
