@@ -44,7 +44,7 @@ $\square \quad x=\dfrac{100+10}{5}$
 $\square \quad x+3x+(x-10)=100$
 
 ```{solution}
-Inconnue: soit $s$ le nombre de BD de Ben
+Inconnue: soit $x$ le nombre de BD de Ben
 
 $x=\dfrac{100+10}{5}$ et $x+3x+(x-10)=100$
 ```
