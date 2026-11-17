@@ -22,7 +22,7 @@ Une **équation du premier degré à une inconnue** $x$ est une équation du typ
 :class: align-center
 ax + b = 0
 ```
-avec $a \text{, }b \in \mathbb{R} \text{ et } a  \ne 0
+avec $a \text{, }b \in \mathbb{R} \text{ et } a  \ne 0$
 
 La ou les valeurs qui vérifient l'égalité sont appelées solutions de l'équation.<br>
 Résoudre une équation, c'est trouver l'**ensemble des solutions**, noté $S$.
