@@ -6,13 +6,15 @@ page-break-force: 2
 page-break-avoid-inside: 3
 ```
 
-# Équations avec fractions rationnelles
+# Fractions rationnelles
 
 ```{container} frame noprint instructor
 {xopp}`Corrigés détaillés <corriges/equations-rationnelles.xopp>`
 ```
 
 ## Théorie
+
+### Équations avec fractions rationnelles
 
 ````{admonition} Définition
 :class: note
@@ -202,6 +204,128 @@ Résolvez les équations suivantes.
 {numref}`exercice %s<exercice:1-equ-rat-ex5>`.
 ```
 
+### Inéquations avec fractions rationnelles
+
+```{admonition} Marche à suivre - Inéquation
+:class: note
+Pour résoudre une inéquation contenant des fractions rationnelles, il faut:
+1.  Utiliser les règles d'équivalence pour regrouper tous les termes dans le
+    membre de gauche afin que celui de droite soit égal à 0.
+2.  Mettre au même dénominateur.
+3.  Calculer et simplifier le numérateur.
+    Factoriser le dénominateur.
+4.  Déterminer le domaine de définition. (Déterminer les racines du
+    dénominateur).
+5.  Déterminer les racines (zéros) du numérateur.
+6.  Étudier le signe du numérateur et de chaques facteurs du dénominateur dans
+    un tableau de signes.
+7.  Déterminer le signe du polynôme en appliquant la règle des signes.
+8.  En déduire l'ensemble des solutions S de l'inéquation.
+```
+
+
+```{container} frame noprint
+# Exemple {num2}`exemple`
+
+Résolvez les équations suivantes.
+
+{.lower-alpha-paren}
+1.  $\dfrac{4 - x}{2x + 3} \geq 0$
+
+    Domaine de définition:<br>
+    $2x + 3 \neq 0 \implies 2x \neq -3 \implies x \neq {\color{magenta}-\dfrac{3}{2}} \implies D = \mathbb{R} \setminus \left\{{\color{magenta}-\dfrac{3}{2}}\right\}$
+
+    Racines du numérateur:<br>
+    $4-x = 0 \implies x = {\color{orange}4}$
+
+    Tableau de signes:
+
+    ```{flex-table} function-table
+    |$x$|{.l .w}$\tiny-\;\infty$|${\color{magenta}-\frac{3}{2}}$|{.w}|${\color{orange}4}$|{.r .w}$\tiny+\;\infty$
+    |$4-x$|$+$||$+$|$0$|$-$
+    |$2x+3$|$-$|{.g}$0$|$+$||$+$
+    |$\dfrac{4 - x}{2x + 3} \geq 0$|$-$|{.g}|${\color{red}+}$|${\color{red}0}$|$-$
+    ```
+
+    Solution:<br>
+    $S = \left]-\dfrac{3}{2};4 \right]$
+
+
+    ```{container} frame instructor noprint
+    -> {numref}`exercice %s<exercice:1-equ-rat-ex6>` a) -> d)
+    ```
+2.  $\dfrac{-14x + 7}{x^2 - x -20} \leq 0$
+
+    Factorisation du dénominateur:<br>
+    $\dfrac{-14x + 7}{(x-5)(x+4)} \leq 0$
+
+    Domaine de définition:<br>
+    $(x-5)(x+4) \neq 0$<br>
+    $\implies x - 5 \neq 0 \implies x \neq {\color{magenta}5}$<br>
+    $\implies x + 4 \neq 0 \implies x \neq {\color{violet}-4}$<br>
+    $\implies D = \mathbb{R} \setminus \{{\color{violet}-4}, {\color{magenta}5}\}$
+
+    Racines du numérateur:<br>
+    $$-14x + 7 &= 0 \qquad &|& + 14x\\
+    7 &= 14x  &|& :14\\
+    \dfrac{7}{14} &= x  &|& \text{ simplification}\\
+    x &= {\color{orange}\dfrac{1}{2}}$$
+
+    Tableau de signes:
+
+    ```{flex-table} function-table
+    |$x$|{.l .w}$\tiny-\;\infty$|${\color{violet}-4}$|{.w}|${\color{orange}\frac{1}{2}}$|{.w}|${\color{magenta}5}$|{.r .w}$\tiny+\;\infty$
+    |$-14x+7$|$+$||$+$|$0$|$-$||$-$
+    |$x-5$|$-$||$-$||$-$|{.g}$0$|$+$
+    |$x+4$|$-$|{.g}$0$|$+$||$+$||$+$
+    |$\dfrac{-14x + 7}{x^2 - x -20} \leq 0$|$+$|{.g}|${\color{red}-}$|${\color{red}0}$|$+$|{.g}|${\color{red}-}$
+    ```
+
+    Solution:<br>
+    $S = \left]-4;\dfrac{1}{2} \right] \cup ]5; +\infty[$
+
+
+    ```{container} frame instructor noprint
+    -> {numref}`exercice %s<exercice:1-equ-rat-ex6>` e) -> i)
+    ```
+3.  $\dfrac{2x + 5}{x + 1} > 3$
+
+    Mise sous la bonne forme:
+
+    $$\dfrac{2x + 5}{x + 1} &> 3 \qquad &|& -3 \text{ tout mettre dans le même membre}\\
+    \dfrac{2x + 5}{x + 1} - 3 &> 0  &|& -3\\
+    \dfrac{2x + 5}{x + 1} - 3 \cdot \dfrac{x+1}{x+1} &> 0  &|& \text{ mettre au même dénominateur}\\
+    \dfrac{2x + 5 - 3(x+1)}{x + 1} &> 0  &|& \text{ CL}\\
+    \dfrac{2x + 5 - 3x - 3}{x + 1} &> 0  &|& \text{ CL}\\
+    \dfrac{-x + 2}{x + 1} &> 0
+    $$
+
+    Maintenant qu'il y à $0$ dans un des membres et une fraction simplifiée
+    dans l'autre, résolvez l'inéquation.
+
+    Domaine de définition:<br>
+    $x+1 \neq 0 \implies x \neq {\color{magenta}-1} \implies D = \mathbb{R} \setminus \{{\color{magenta}-1}\}$
+
+    Racines du numérateur:<br>
+    $-x + 2 = 0 \implies x = {\color{orange}2}$
+
+    Tableau de signes:
+
+    ```{flex-table} function-table
+    |$x$|{.l .w}$\tiny-\;\infty$|${\color{magenta}-1}$|{.w}|${\color{orange}2}$|{.r .w}$\tiny+\;\infty$
+    |$-x+2$|$+$||$+$|$0$|$-$
+    |$x+1$|$-$|{.g}$0$|$+$||$+$
+    |$\dfrac{-x + 2}{x + 1}>0$|$-$|{.g}|${\color{red}+}$|$0$|$-$
+    ```
+
+    Solution:<br>
+    $S = ]-1;2[$
+
+
+```{container} frame instructor noprint
+-> {numref}`exercice %s<exercice:1-equ-rat-ex7>`
+```
+
 
 ## Exercices
 
@@ -321,6 +445,63 @@ Résolvez les équations suivantes.
 8. $D= \mathbb{R} \setminus \{-5; -3\}$ et $S=\varnothing$
 9. $D= \mathbb{R} \setminus \{-2; 2\}$ et $S=\mathbb{R} \setminus \{-2;2\}$
 10. $D= \mathbb{R} \setminus \{0; 3\}$ et $S=\{-\frac{3}{4};2\}$
+```
+
+### Exercice {num2}`exercice:1-equ-rat-ex6`
+
+Résolvez les inéquations suivantes.
+
+{.lower-alpha-paren .columns-2 .vsep-1}
+1. $\dfrac{x}{x + 5} \leq 0$
+2. $\dfrac{3x-4}{x+2} < 0$
+3. $\dfrac{2x-1}{2-3x} \geq 0$
+4. $\dfrac{5 - 3x}{x+3} > 0$
+5. $\dfrac{1}{(x-2)(x-6)} > 0$
+6. $\dfrac{4}{x^2-8x+15} \geq 0$
+7. $\dfrac{-3}{x^2+5} < 0$
+8. $\dfrac{x^2 - 2x - 15}{4x^2-16} \geq 0$
+9. $\dfrac{x^2 - 25}{x^2 - x -2} > 0$
+
+
+```{block} solution
+{.lower-alpha-paren .vsep-1}
+1. $D= \mathbb{R} \setminus \{-5\}$ et $S=]-5; 0]$
+2. $D= \mathbb{R} \setminus \{-2\}$ et $S=]-2; \dfrac{4}{3}[$
+3. $D= \mathbb{R} \setminus \{\dfrac{2}{3}\}$ et $S=[\dfrac{1}{2};\dfrac{2}{3}[$
+4. $D= \mathbb{R} \setminus \{-3\}$ et $S=]-3;\dfrac{5}{3}[$
+5. $D= \mathbb{R} \setminus \{2; 6\}$ et $S=]-\infty;2[ \cup ]6; +\infty[$
+6. $D= \mathbb{R} \setminus \{3;5\}$ et $S=]-\infty;3[ \cup ]5;+\infty[$
+7. $D= \mathbb{R}$ et $S=\mathbb{R}$
+8. $D= \mathbb{R} \setminus \{-2;2\}$ et $S=]-\infty;-3] \cup ]-2;2[ \cup [5; +\infty[$
+9. $D= \mathbb{R} \setminus \{-1;2\}$ et $S=]-\infty;-5[ \cup ]-1;2[ \cup ]5; +\infty[$
+```
+
+### Exercice {num2}`exercice:1-equ-rat-ex7`
+
+Résolvez les inéquations suivantes.
+
+{.lower-alpha-paren .columns-2 .vsep-1}
+1. $\dfrac{6}{x-5} > \dfrac{1}{2}$
+2. $\dfrac{1}{x} \geq 4$
+3. $\dfrac{x+1}{x-8} < 4$
+4. $\dfrac{3x}{x+1} \leq 3$
+5. $\dfrac{2x-1}{2x+1}> \dfrac{7}{6}$
+6. $\dfrac{x-3}{x+3} \geq 3$
+7. $\dfrac{x+1}{x-2} \geq 1$
+8. $\dfrac{x}{x+1} < \dfrac{x-1}{x-2}$
+9. $\dfrac{x+1}{x+2} \geq \dfrac{x+3}{x+4}$
+
+```{block} solution
+{.lower-alpha-paren .vsep-1}
+1. $D= \mathbb{R} \setminus \{5\}$ et $S=]5;17[$
+2. $D= \mathbb{R} \setminus \{0\}$ et $S=]0;\dfrac{1}{4}]$
+3. $D= \mathbb{R} \setminus \{8\}$ et $S=]-\infty;8[ \cup ]11; +\infty[$
+4. $D= \mathbb{R} \setminus \{-1\}$ et $S=]-1; +\infty[$
+5. $D= \mathbb{R} \setminus \{-\dfrac{1}{2}\}$ et $S=]-\dfrac{13}{2};-\dfrac{1}{2}[$
+6. $D= \mathbb{R} \setminus \{-3\}$ et $S=[-6; -3[$
+7. $D= \mathbb{R} \setminus \{2\}$ et $S=]2;+\infty[$
+8. $D= \mathbb{R} \setminus \{-1;2\}$ et $S=]-1;\dfrac{1}{2}[ \cup ]2; +\infty[$
+9. $D= \mathbb{R} \setminus \{-4; -2\}$ et $S=]-4;-2[$
 ```
 
 ## Solutions
