@@ -3,7 +3,7 @@
 
 # Cours de mathématiques
 
-[![Publish](https://github.com/t-doc-org/maths/actions/workflows/publish.yml/badge.svg)](https://github.com/t-doc-org/maths/actions/workflows/publish.yml)
+[![Publish](https://github.com/t-doc-org/maths/actions/workflows/publish.yml/badge.svg)](https://github.com/t-doc-org/maths/actions/workflows/publish.yml) [![Fixes](https://maths.t-doc.org/tdoc-fixes.svg)](https://github.com/t-doc-org/maths/actions/workflows/publish.yml) [![Version](https://maths.t-doc.org/tdoc-version.svg)](https://common.t-doc.org/release-notes.html)
 
 Ce projet contient des documents pour l'enseignement des mathématiques au
 secondaire supérieur en Suisse.
