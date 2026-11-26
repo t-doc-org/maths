@@ -5,4 +5,5 @@
 
 ```{toctree}
 equations-rationnelles
+equations-irrationnelles
 ```
