@@ -29,7 +29,7 @@ Effectuez l'extraction de racine:
 
 Calculez et répondez en notation scientifique:
 
-$400\,000\,000 \cdot 0,000\,000\,6=$
+$400\,000\,000 \cdot 0.000\,000\,6=$
 
 ```{solution}
 $4 \cdot 10^8 \cdot 6 \cdot 10^{-7}=(4 \cdot 6) \cdot (10^8 \cdot 10^{-7})= 24 \cdot 10^{8-7}=24 \cdot 10^1=2.4 \cdot 10^1 \cdot 10=2.4 \cdot 10^2$
