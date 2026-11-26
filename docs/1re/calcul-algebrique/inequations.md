@@ -33,7 +33,7 @@ avec $a \text{, }b \in \mathbb{R} \text{ et } a  \ne 0$.
 
 {.lower-alpha-paren}
 1. $3x+ 2 > 6$ est une inéquation du premier degré.
-2. $7-2x \leq 5$ est une inéquation du deuxième degré.
+2. $7-2x^2 \leq 5$ est une inéquation du deuxième degré.
 ```
 
 ```{admonition} Propriétés
