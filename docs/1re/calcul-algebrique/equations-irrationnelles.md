@@ -14,8 +14,6 @@ page-break-avoid-inside: 3
 
 ## Théorie
 
-### Équations avec fractions rationnelles
-
 ````{admonition} Définition
 :class: note
 Une équation où l'inconnue se trouve sous une racine est appelée **équation
@@ -111,108 +109,101 @@ Résolvez les équations irrationnelles suivantes.
 {.lower-alpha-paren}
 1.  $\sqrt{x - 9}=0$
 
-    Domaine de définition:
+    - Domaine de définition:
 
-    $x-9 \geq 0 \implies x \leq 9 \implies D = [9; +\infty[$
+      $x-9 \geq 0 \implies x \leq 9 \implies D = [9; +\infty[$
 
-    Résolution:
+    - Résolution:
 
-    $$\sqrt{x - 9} &= 0 \quad &|& \text{ élevation au carré de chaque membre}\\
-    (\sqrt{x - 9})^2 &= 0^2 \quad &|& \text{ CL}\\
-    x - 9 &= 0 \quad &|& + 9\\
-    x = 9 \in D
-    $$
+      $$\sqrt{x - 9} &= 0 \qquad \qquad &|& \text{ élevation au carré de chaque membre}\\
+      (\sqrt{x - 9})^2 &= 0^2  &|& \text{ CL}\\
+      x - 9 &= 0 \quad &|& + 9\\
+      x &= 9 \in D
+      $$
 
-    Vérification:
+    - Vérification:
 
-    Remplacez les solutions dans l'équation l'équation de départ.<br>
-    $x = 9$<br>
-    $$\sqrt{9 - 9} &= 0 \quad &&\text{ ?}\\
-    0 &= 0  &&\text{ l'équation est vérifiée}$$
+      Remplacez la solution dans l'équation l'équation de départ.<br>
+      $x = 9$<br>
+      $$\sqrt{9 - 9} &= 0 \quad &&\text{ ?}\\
+      0 &= 0  &&\text{ l'équation est vérifiée}$$
 
-    Solution:
-
-    $S = \{9\}$
-
-
+    - Solution: $S = \{9\}$
 
 2.  $\sqrt{x + 1} - \sqrt{4 - 3x} = 0$
 
-    Domaine de définition:
+    - Domaine de définition:
 
-    Il faut traiter chaque racine carrée.
+      Il faut traiter chaque racine carrée.
 
-    $x + 1 \geq 0 \implies x \geq -1$<br>
-    et<br>
-    $4 - 3x 0 \implies 4 \geq 3x \implies \dfrac{4}{3} \geq 3x \implies x \leq \dfrac{4}{3}$
+      $x + 1 \geq 0 \implies x \geq -1$<br>
+      et<br>
+      $4 - 3x \geq 0 \implies 4 \geq 3x \implies \dfrac{4}{3} \geq x \implies x \leq \dfrac{4}{3}$
 
-    $\implies D = \left[-1; \dfrac{4}{3}\right]$
+      $\implies D = \left[-1; \dfrac{4}{3}\right]$
 
-    Résolution:
+    - Résolution:
 
-    Lorsqu'il y a deux racines carrés, il faut en mettre une dans chaque membre.
+      Lorsqu'il y a deux racines carrés, il faut en mettre une dans chaque membre.
 
-    $$\sqrt{x + 1} - \sqrt{4 - 3x} &= 0 \quad &|& +\sqrt{4 - 3x}\\
-    \sqrt{x + 1} &= \sqrt{4 - 3x}  &|& \text{ élevation au carré}\\
-    (\sqrt{x + 1})^2 &= (\sqrt{4 - 3x})^2  &|& \text{ CL}\\
-    x + 1 &= 4 - 3x  &|& +3x - 1\\
-    4x &= 3 &|& :4\\
-    x = \dfrac{3}{4} \in D
-    $$
+      $$\sqrt{x + 1} - \sqrt{4 - 3x} &= 0 \qquad \qquad \qquad &|& +\sqrt{4 - 3x}\\
+      \sqrt{x + 1} &= \sqrt{4 - 3x}  &|& \text{ élevation au carré}\\
+      (\sqrt{x + 1})^2 &= (\sqrt{4 - 3x})^2  &|& \text{ CL}\\
+      x + 1 &= 4 - 3x  &|& +3x - 1\\
+      4x &= 3 &|& :4\\
+      x &= \dfrac{3}{4} \in D
+      $$
 
-    Vérification:
+    - Vérification:
 
-    Remplacez les solutions dans l'équation l'équation de départ.<br>
-    $x = \dfrac{3}{4}$<br>
-    $$\sqrt{\dfrac{3}{4} + 1} - \sqrt{4 - 3 \cdot \dfrac{3}{4}} &= 0 \quad &&\text{ ?}\\
-    \sqrt{\dfrac{7}{4}} - \sqrt{4 - \dfrac{9}{4}} &= 0 \quad &&\text{ ?}\\
-    \sqrt{\dfrac{7}{4}} - \sqrt{\dfrac{16}{4} - \dfrac{9}{4}} &= 0 \quad &&\text{ ?}\\
-     \sqrt{\dfrac{7}{4}} - \sqrt{\dfrac{7}{4}} &= 0 \quad &&\text{ ?}\\
-    0 &= 0  &&\text{ l'équation est vérifiée}$$
+      Remplacez la solution dans l'équation l'équation de départ.<br>
+      $x = \dfrac{3}{4}$<br>
+      $$\sqrt{\dfrac{3}{4} + 1} - \sqrt{4 - 3 \cdot \dfrac{3}{4}} &= 0 \quad &&\text{ ?}\\
+      \sqrt{\dfrac{7}{4}} - \sqrt{4 - \dfrac{9}{4}} &= 0 \quad &&\text{ ?}\\
+      \sqrt{\dfrac{7}{4}} - \sqrt{\dfrac{16}{4} - \dfrac{9}{4}} &= 0 \quad &&\text{ ?}\\
+       \sqrt{\dfrac{7}{4}} - \sqrt{\dfrac{7}{4}} &= 0 \quad &&\text{ ?}\\
+      0 &= 0  &&\text{ l'équation est vérifiée}$$
 
-    Solution:
-
-    $S = \left\{\dfrac{3}{4}\right\}$
+    - Solution: $S = \left\{\dfrac{3}{4}\right\}$
 
 3.  $\sqrt{8-x}=2x -1$
 
-    Domaine de définition:
+    - Domaine de définition:
 
-    $8-x \geq 0 \implies 8 \geq x \implies x \leq 8 \implies D = ]-\infty; 8]$
+      $8-x \geq 0 \implies 8 \geq x \implies x \leq 8 \implies D = ]-\infty; 8]$
 
-    Résolution:
+    - Résolution:
 
-    $$\sqrt{8-x} &= 2x -1 \quad &|& \text{ élevation au carré de chaque membre}\\
-    (\sqrt{8-x})^2 &= (2x -1)^2 \quad &|& \text{ CL}\\
-    8-x &= 4x^2 -4x + 1 \quad &|& -8 + x\\
-    0 &= 4x^2 - 3x - 7
-    $$
+      $$\sqrt{8-x} &= 2x -1 \qquad \qquad &|& \text{ élevation au carré de chaque membre}\\
+      (\sqrt{8-x})^2 &= (2x -1)^2 \quad &|& \text{ CL}\\
+      8-x &= 4x^2 -4x + 1 \quad &|& -8 + x\\
+      0 &= 4x^2 - 3x - 7
+      $$
 
-    $\Delta = (-3)^2 - 4 \cdot 4 \cdot (-7) = 121$
+      $\Delta = (-3)^2 - 4 \cdot 4 \cdot (-7) = 121$
 
-    $x_{1, 2} = \dfrac{3 \pm \sqrt{121}}{2 \cdot 4} = \dfrac{3 \pm 11}{8}$
+      $x_{1, 2} = \dfrac{3 \pm \sqrt{121}}{2 \cdot 4} = \dfrac{3 \pm 11}{8}$
 
-    $x_1 = \dfrac{14}{8} = \dfrac{7}{4}  \in D$ et $x_2 = -\dfrac{8}{8} = -1 \in D$.
+      $x_1 = \dfrac{14}{8} = \dfrac{7}{4}  \in D$ et $x_2 = -\dfrac{8}{8} = -1 \in D$.
 
-    Vérification:
+    - Vérification:
 
-    Remplacez les solutions dans l'équation l'équation de départ.<br>
-    ```{list-grid} 1fr 1fr
-    -   $x = \dfrac{7}{4}$<br>
-        $$\sqrt{8-\dfrac{7}{4}} &=2 \cdot \dfrac{7}{4} -1 \quad &&\text{ ?}\\
-        \sqrt{\dfrac{32}{4}-\dfrac{7}{4}} &= \dfrac{7}{2} - \dfrac{2}{2} \quad &&\text{ ?}\\
-        \sqrt{\dfrac{25}{4}} &= \dfrac{5}{2} \quad &&\text{ ?}\\
-        \dfrac{\sqrt{25}}{\sqrt{4}} &= \dfrac{5}{2} \quad &&\text{ ?}\\
-        \dfrac{5}{2} &= \dfrac{5}{2}  &&\text{ l'équation est vérifiée}$$
-    -   $x = -1$<br>
-        $$\sqrt{8-(-1)} &=2 \cdot (-1) -1 \quad &&\text{ ?}\\
-        \sqrt{9} &= -2 - 1 \quad &&\text{ ?}\\
-        3 &\neq -3 \quad &&\text{ l'équation n'est pas vérifiée}$$
-    ```
+      Remplacez les solutions dans l'équation l'équation de départ.<br>
+      ```{list-grid} 1fr 1fr
+      -   $x = \dfrac{7}{4}$<br>
+          $$\sqrt{8-\dfrac{7}{4}} &=2 \cdot \dfrac{7}{4} -1 \quad &&\text{ ?}\\
+          \sqrt{\dfrac{32}{4}-\dfrac{7}{4}} &= \dfrac{7}{2} - \dfrac{2}{2} \quad &&\text{ ?}\\
+          \sqrt{\dfrac{25}{4}} &= \dfrac{5}{2} \quad &&\text{ ?}\\
+          \dfrac{\sqrt{25}}{\sqrt{4}} &= \dfrac{5}{2} \quad &&\text{ ?}\\
+          \dfrac{5}{2} &= \dfrac{5}{2}  &&\text{ vrai}$$
+      -   $x = -1$<br>
+          $$\sqrt{8-(-1)} &=2 \cdot (-1) -1 \quad &&\text{ ?}\\
+          \sqrt{9} &= -2 - 1 \quad &&\text{ ?}\\
+          3 &\neq -3 \quad &&\text{ faux}$$
+          $x = -1$ n'est donc pas une solution de l'équation
+      ```
 
-    Solution:
-
-    $S = \left\{\dfrac{7}{4}\right\}$
+    - Solution: $S = \left\{\dfrac{7}{4}\right\}$
 ```
 
 ```{container} frame instructor noprint
